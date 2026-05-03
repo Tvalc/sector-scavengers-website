@@ -1,8 +1,12 @@
 # Sector Scavengers — marketing site
 
-Static HTML/CSS/JS. Deploy to **GitHub Pages** with the included workflow.
+Static HTML/CSS/JS. Deployed with **GitHub Pages** (GitHub Actions).
 
-## One-time setup
+**Live site:** https://tvalc.github.io/sector-scavengers-website/
+
+Large **`.mp4`** files are tracked with **Git LFS** (GitHub rejects blobs over 100MB without it). Install [Git LFS](https://git-lfs.com/) and run `git lfs install` before cloning if videos are missing locally.
+
+## One-time setup (already done for this repo)
 
 1. **Create a new empty repository** on GitHub (e.g. `sector-scavengers-website`). Do not add a README if you will push this folder as the root.
 
