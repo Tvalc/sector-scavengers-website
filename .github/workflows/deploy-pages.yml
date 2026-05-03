@@ -23,7 +23,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      # Must fetch Git LFS objects — otherwise *.mp4 in the artifact are tiny pointer files and videos won't play.
       - uses: actions/checkout@v4
+        with:
+          lfs: true
 
       - uses: actions/configure-pages@v4
 
