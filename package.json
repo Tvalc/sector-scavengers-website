@@ -1,0 +1,15 @@
+{
+  "name": "sector-scavengers-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preview": "node scripts/preview.mjs",
+    "sync:hero-videos": "node scripts/sync-hero-videos.mjs",
+    "build:backgrounds": "node scripts/bake-site-backgrounds.mjs",
+    "build:assets": "node scripts/extract-promo-frames.mjs",
+    "build:site-assets": "npm run build:backgrounds && npm run build:assets"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
+  }
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sector Scavengers: Signal & Salvage. Three-card hand, energy meter, every play can scar the hull, random rooms you scout with cards and tools, extract or die on the threshold, every three raids pay 20% of debt miss three and you are out, void XP unlocks cards, smuggle credits to build the hub. Pay the debt to win.">
+  <meta property="og:title" content="Sector Scavengers: Signal &amp; Salvage">
+  <title>Sector Scavengers: Signal &amp; Salvage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="atmosphere" aria-hidden="true">
+    <div class="atmosphere__grid"></div>
+    <div class="atmosphere__vignette"></div>
+    <div class="atmosphere__grain"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="index.html">
+        <span class="logo__mark" aria-hidden="true">◈</span>
+        <span class="logo__text">Sector Scavengers</span>
+      </a>
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="#how">How it plays</a>
+        <a href="#lore">Lore</a>
+        <a href="#cta" class="nav__cta">Wishlist</a>
+      </nav>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="hero__noise" aria-hidden="true"></div>
+
+      <div class="hero__layout">
+        <div class="hero__rail" aria-hidden="true">
+          <span>FILE</span>
+          <span>SS-Ω</span>
+          <span>SIG</span>
+        </div>
+
+        <div class="hero__column">
+          <header class="hero__masthead reveal" data-reveal>
+            <h1 id="hero-title" class="hero__masthead-title">
+              <span class="hero__masthead-line hero__title">Sector Scavengers</span>
+              <span class="hero__masthead-sub hero__subtitle">Signal <span class="hero__amp">&amp;</span> Salvage</span>
+            </h1>
+          </header>
+
+          <div class="hero__video-stage reveal" data-reveal>
+            <div class="hero__video-frame">
+              <div class="hero__video-hud" aria-hidden="true">
+                <span>FEED</span><span class="hero__video-hud-blink">●</span>
+              </div>
+              <figure class="hero__figure">
+                <div class="hero__figure-inner hero__figure-inner--cinema">
+                  <video
+                    class="hero__video"
+                    poster="generated/hero-scav.webp"
+                    muted
+                    playsinline
+                    preload="none"
+                    width="1920"
+                    height="1080"
+                    aria-label="Gameplay: website hero, 3-19 trailer, characters, ships showcase."
+                    data-hero-videos="media/website-video/website-hero.mp4,media/website-video/3-19-trailer-ss.mp4,media/website-video/characters.mp4,media/website-video/ships-showcase-final.mp4"
+                  ></video>
+                </div>
+              </figure>
+              <div class="hero__video-toolbar" data-hero-toolbar role="group" aria-label="Hero video controls">
+                <div class="hero__video-toolbar-nav">
+                  <button type="button" class="hero__video-btn" data-hero-prev aria-label="Previous clip">
+                    <span class="hero__video-btn-glyph" aria-hidden="true">◀</span>
+                  </button>
+                  <span class="hero__video-counter" aria-live="polite">
+                    <span data-hero-index>1</span><span class="hero__video-counter-sep" aria-hidden="true">/</span><span data-hero-total>4</span>
+                  </span>
+                  <button type="button" class="hero__video-btn" data-hero-next aria-label="Next clip">
+                    <span class="hero__video-btn-glyph" aria-hidden="true">▶</span>
+                  </button>
+                </div>
+                <button type="button" class="hero__video-btn hero__video-btn--mute" data-hero-mute aria-pressed="true" aria-label="Unmute video">
+                  <span class="hero__video-btn-label" data-hero-mute-text>Unmute</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__video-cta reveal" data-reveal>
+            <a
+              class="btn btn--primary hero__video-wishlist"
+              href="https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Wishlist on Steam</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="rules" aria-labelledby="hero-title how-title">
+      <div class="rules__veil" aria-hidden="true"></div>
+      <div class="rules__noise" aria-hidden="true"></div>
+      <div class="rules__layout">
+        <div class="rules__rail" aria-hidden="true">
+          <span>FILE</span>
+          <span>SS-Ω</span>
+          <span>RULE</span>
+        </div>
+        <div class="rules__split">
+          <div class="hero__main reveal" data-reveal>
+            <p class="hero__eyebrow">Severance bought you sleep. Sleep sold you forward.</p>
+            <h2 class="hero__title">Sector Scavengers</h2>
+            <p class="hero__hook">
+              You wore the lanyard until AI ate the roadmap and your badge stopped scanning. The exit packet
+              was almost kind: cryo until abundance, skip the ugly middle, wake into a gentle future. The future never
+              arrived. Your contract did, touring balance sheets while you stayed on ice. Centuries later you are not an alum.
+              You are debt, markdown, unhealthy inventory shuffled dock to dock until someone needed sinew in vacuum and
+              your tab already had interest.
+            </p>
+            <p class="hero__story">
+              They wake you to a screen that already hates you: a number with too many zeroes before your knees unlock. Your job is
+              derelicts in the black while company droids hang in the feed, snarky as a helpdesk and precise as tax law. They only
+              love what you declare. Everything else is yours to smuggle, spend, or explain later. None of their paperwork keeps your
+              hull closed when a card decides today is the day the metal screams.
+              The next panel states the rules in plain language. Same truth, just louder.
+            </p>
+            <div class="hero__actions">
+              <a
+                class="btn btn--primary"
+                href="https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Wishlist on Steam</a>
+              <a class="btn btn--ghost" href="#lore">Lore</a>
+            </div>
+          </div>
+          <div class="rules__panel reveal rules__panel--delay" data-reveal>
+            <p class="rules__eyebrow">How it plays</p>
+            <h2 id="how-title" class="rules__title">Laws of the loop</h2>
+            <p class="rules__lead">
+              You stage every salvage run from the hub. Inside a derelict the run is a card game with teeth: a fixed hand size, a fuel gauge,
+              and a hull that does not care about your intent. The bullets below are the non-negotiables. Card text, events, and toys color inside those lines.
+            </p>
+            <ul class="rules__list">
+              <li>You always hold three cards. Not two, not four. Three.</li>
+              <li>Energy is what you spend to play a card out of that hand. When the tank is empty, so are your options. And you must end your turn.</li>
+              <li>
+                Each wreck rolls its own room count in secret. You learn how deep it goes by spending real actions: cards, skills, and tools can reveal rooms until the map stops lying.
+                <ul class="rules__sublist">
+                  <li>If you walk into the end of the last room and still have not extracted, the game counts that as death. No overtime.</li>
+                </ul>
+              </li>
+              <li>Every card carries a chance to damage the ship you are standing in. Stack enough hits on the hull and you die; the run ends there.</li>
+              <li>The campaign win is blunt: pay off the debt.</li>
+              <li>Declared credits go to the boss to pay off your debt.</li>
+              <li>
+                Smuggled credits never touch the boss ledger. Off-book money builds the hub itself: new construction,
+                crew pulled from cryo, research into tools, and ships upgraded or patched so the next breach is someone else's problem.
+              </li>
+              <li>Every 3 ships you raid triggers a debt payment equal to 20% of your total debt. Miss 3 payments, and the corporation recycles your salvage skiff with you in it.</li>
+              <li>Any death feeds the void: you earn void experience that unlocks new cards for the next attempt.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lore" class="home-lore reveal" data-reveal aria-labelledby="lore-module-title">
+      <div class="home-lore__layout">
+        <div class="home-lore__rail" aria-hidden="true">
+          <span>ARCH</span>
+          <span>SS-Ω</span>
+          <span>IVE</span>
+        </div>
+        <div class="home-lore__inner">
+          <h2 id="lore-module-title" class="sr-only">Lore</h2>
+          <a class="hero__lore-strip" href="lore/beer-friday.html">
+            <span class="hero__lore-strip-tag">Live in archive</span>
+            <span class="hero__lore-strip-main">
+              <span class="hero__lore-strip-kicker">Lore</span>
+              <span class="hero__lore-strip-title">Beer Friday</span>
+              <span class="hero__lore-strip-desc">Building B, Employee Number Two, and the rooftop that outranked Corporate Risk.</span>
+            </span>
+            <span class="hero__lore-strip-arrow" aria-hidden="true">Open</span>
+          </a>
+          <p class="home-lore__more">
+            <a class="home-lore__more-link" href="lore/index.html">Browse the full lore archive</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="uplink reveal" data-reveal aria-labelledby="cta-title">
+      <div class="uplink__layout">
+        <div class="uplink__rail" aria-hidden="true">
+          <span>PING</span>
+          <span>SS-Ω</span>
+          <span>LIST</span>
+        </div>
+        <div class="uplink__content">
+          <div class="uplink__panel">
+            <div class="uplink__flare" aria-hidden="true"></div>
+            <p class="section-eyebrow section-eyebrow--center">Ping the storefront</p>
+            <h2 id="cta-title" class="section-title section-title--center">Wishlist if you like your odds salty</h2>
+            <p class="uplink__text">
+              Steam reads interest the way droids read forms: coldly and in your favor if the numbers move. Tap wishlist if you want the build notes
+              while we keep stacking hub debt, hull risk, and smuggled hope into the same loop you just read about.
+            </p>
+            <div class="uplink__actions">
+              <a
+                class="btn btn--primary"
+                href="https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Wishlist on Steam</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__grid">
+      <div>
+        <p class="site-footer__brand">Sector Scavengers</p>
+        <p class="site-footer__tag">Signal &amp; Salvage</p>
+      </div>
+      <div class="site-footer__links">
+        <a href="#how">How it plays</a>
+        <a href="#lore">Lore</a>
+        <a href="#cta">Wishlist</a>
+      </div>
+      <p class="site-footer__copy">© <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+</body>
+</html>
