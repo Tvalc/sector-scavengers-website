@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -28,8 +28,14 @@
       </a>
       <nav id="site-nav" class="nav" aria-label="Primary">
         <a href="#how">How it plays</a>
+        <a href="crew/index.html">Crew</a>
         <a href="#lore">Lore</a>
-        <a href="#cta" class="nav__cta">Wishlist</a>
+        <a
+          href="https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/"
+          class="nav__cta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Wishlist</a>
       </nav>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"></button>
     </div>
@@ -55,41 +61,45 @@
             </h1>
           </header>
 
-          <div class="hero__video-stage reveal" data-reveal>
-            <div class="hero__video-frame">
-              <div class="hero__video-hud" aria-hidden="true">
-                <span>FEED</span><span class="hero__video-hud-blink">●</span>
-              </div>
-              <figure class="hero__figure">
-                <div class="hero__figure-inner hero__figure-inner--cinema">
-                  <video
-                    class="hero__video"
-                    poster="generated/hero-scav.webp"
-                    muted
-                    playsinline
-                    preload="none"
-                    width="1920"
-                    height="1080"
-                    aria-label="Gameplay: website hero, 3-19 trailer, characters, ships showcase."
-                    data-hero-videos="media/website-video/website-hero.mp4,media/website-video/3-19-trailer-ss.mp4,media/website-video/characters.mp4,media/website-video/ships-showcase-final.mp4"
-                  ></video>
+          <div class="hero__comic-shell reveal" data-reveal>
+            <span class="rules-comic__tag hero__comic-tag">Cover · Field feed</span>
+            <div class="rules-comic__frame hero__comic-frame" aria-hidden="true"></div>
+            <div class="hero__video-stage">
+              <div class="hero__video-frame">
+                <div class="hero__video-hud" aria-hidden="true">
+                  <span>FEED</span><span class="hero__video-hud-blink">●</span>
                 </div>
-              </figure>
-              <div class="hero__video-toolbar" data-hero-toolbar role="group" aria-label="Hero video controls">
-                <div class="hero__video-toolbar-nav">
-                  <button type="button" class="hero__video-btn" data-hero-prev aria-label="Previous clip">
-                    <span class="hero__video-btn-glyph" aria-hidden="true">◀</span>
-                  </button>
-                  <span class="hero__video-counter" aria-live="polite">
-                    <span data-hero-index>1</span><span class="hero__video-counter-sep" aria-hidden="true">/</span><span data-hero-total>4</span>
-                  </span>
-                  <button type="button" class="hero__video-btn" data-hero-next aria-label="Next clip">
-                    <span class="hero__video-btn-glyph" aria-hidden="true">▶</span>
+                <figure class="hero__figure">
+                  <div class="hero__figure-inner hero__figure-inner--cinema">
+                    <video
+                      class="hero__video"
+                      poster="generated/hero-scav.webp"
+                      muted
+                      playsinline
+                      preload="none"
+                      width="1920"
+                      height="1080"
+                      aria-label="Gameplay: website hero, 3-19 trailer, characters, ships showcase."
+                      data-hero-videos="media/website-video/website-hero.mp4,media/website-video/3-19-trailer-ss.mp4,media/website-video/characters.mp4,media/website-video/ships-showcase-final.mp4"
+                    ></video>
+                  </div>
+                </figure>
+                <div class="hero__video-toolbar" data-hero-toolbar role="group" aria-label="Hero video controls">
+                  <div class="hero__video-toolbar-nav">
+                    <button type="button" class="hero__video-btn" data-hero-prev aria-label="Previous clip">
+                      <span class="hero__video-btn-glyph" aria-hidden="true">◀</span>
+                    </button>
+                    <span class="hero__video-counter" aria-live="polite">
+                      <span data-hero-index>1</span><span class="hero__video-counter-sep" aria-hidden="true">/</span><span data-hero-total>4</span>
+                    </span>
+                    <button type="button" class="hero__video-btn" data-hero-next aria-label="Next clip">
+                      <span class="hero__video-btn-glyph" aria-hidden="true">▶</span>
+                    </button>
+                  </div>
+                  <button type="button" class="hero__video-btn hero__video-btn--mute" data-hero-mute aria-pressed="true" aria-label="Unmute video">
+                    <span class="hero__video-btn-label" data-hero-mute-text>Unmute</span>
                   </button>
                 </div>
-                <button type="button" class="hero__video-btn hero__video-btn--mute" data-hero-mute aria-pressed="true" aria-label="Unmute video">
-                  <span class="hero__video-btn-label" data-hero-mute-text>Unmute</span>
-                </button>
               </div>
             </div>
           </div>
@@ -106,69 +116,347 @@
       </div>
     </section>
 
-    <section id="how" class="rules" aria-labelledby="hero-title how-title">
+    <section id="how" class="rules" aria-labelledby="story-heading how-title">
       <div class="rules__veil" aria-hidden="true"></div>
       <div class="rules__noise" aria-hidden="true"></div>
       <div class="rules__layout">
         <div class="rules__rail" aria-hidden="true">
           <span>FILE</span>
           <span>SS-Ω</span>
-          <span>RULE</span>
+          <span>STRIP</span>
         </div>
-        <div class="rules__split">
-          <div class="hero__main reveal" data-reveal>
+        <div class="rules__strip">
+          <p class="rules-comic__narrator rules__strip-narrator" aria-hidden="true">
+            <span class="rules-comic__narrator-k">SS-Ω</span>
+            <span class="rules-comic__narrator-t">Serial strip · Signal <span class="hero__amp">&amp;</span> salvage</span>
+          </p>
+
+          <div class="strip-story reveal" data-reveal>
             <p class="hero__eyebrow">Severance bought you sleep. Sleep sold you forward.</p>
-            <h2 class="hero__title">Sector Scavengers</h2>
-            <p class="hero__hook">
-              You wore the lanyard until AI ate the roadmap and your badge stopped scanning. The exit packet
-              was almost kind: cryo until abundance, skip the ugly middle, wake into a gentle future. The future never
-              arrived. Your contract did, touring balance sheets while you stayed on ice. Centuries later you are not an alum.
-              You are debt, markdown, unhealthy inventory shuffled dock to dock until someone needed sinew in vacuum and
-              your tab already had interest.
-            </p>
-            <p class="hero__story">
-              They wake you to a screen that already hates you: a number with too many zeroes before your knees unlock. Your job is
-              derelicts in the black while company droids hang in the feed, snarky as a helpdesk and precise as tax law. They only
-              love what you declare. Everything else is yours to smuggle, spend, or explain later. None of their paperwork keeps your
-              hull closed when a card decides today is the day the metal screams.
-              The next panel states the rules in plain language. Same truth, just louder.
-            </p>
-            <div class="hero__actions">
+            <h2 id="story-heading" class="rules__title">Wake debt</h2>
+
+            <div class="rules-comic rules-comic--arc">
+              <div class="rules-comic__grid rules-comic__grid--arc">
+                <article class="rules-comic__panel">
+                  <span class="rules-comic__tag">Prologue · The lanyard</span>
+                  <div class="rules-comic__frame" aria-hidden="true"></div>
+                  <figure class="rules-comic__figure">
+                    <img
+                      class="rules-comic__art"
+                      src="generated/bg-bridge.webp"
+                      width="640"
+                      height="360"
+                      loading="lazy"
+                      decoding="async"
+                      alt=""
+                    />
+                  </figure>
+                  <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t">
+                    <p>You wore the lanyard until AI ate the roadmap and your badge stopped scanning.</p>
+                  </blockquote>
+                  <div class="rules-comic__caption">
+                    <p>
+                      <span class="rules-comic__kicker">Caption</span>
+                      The exit packet was almost kind: cryo until abundance, skip the ugly middle, wake into a gentle future. The future never
+                      arrived. Your contract did, touring balance sheets while you stayed on ice.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="rules-comic__panel">
+                  <span class="rules-comic__tag">Prologue · Inventory</span>
+                  <div class="rules-comic__frame" aria-hidden="true"></div>
+                  <figure class="rules-comic__figure rules-comic__figure--hud">
+                    <img
+                      class="rules-comic__art"
+                      src="generated/bg-cryo.webp"
+                      width="640"
+                      height="360"
+                      loading="lazy"
+                      decoding="async"
+                      alt=""
+                    />
+                  </figure>
+                  <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t">
+                    <p>Centuries later you are not an alum. You are debt, markdown, unhealthy inventory.</p>
+                  </blockquote>
+                  <div class="rules-comic__caption">
+                    <p>
+                      <span class="rules-comic__kicker">Caption</span>
+                      Shuffled dock to dock until someone needed sinew in vacuum and your tab already had interest.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="rules-comic__panel rules-comic__panel--span rules-comic__panel--arc-wide">
+                  <span class="rules-comic__tag">Prologue · The feed</span>
+                  <div class="rules-comic__frame" aria-hidden="true"></div>
+                  <figure class="rules-comic__figure rules-comic__figure--hud">
+                    <img
+                      class="rules-comic__art"
+                      src="generated/bg-terminal.webp"
+                      width="640"
+                      height="360"
+                      loading="lazy"
+                      decoding="async"
+                      alt=""
+                    />
+                  </figure>
+                  <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t rules-comic__bubble--wide">
+                    <p>They wake you to a screen that already hates you: a number with too many zeroes before your knees unlock.</p>
+                  </blockquote>
+                  <div class="rules-comic__caption">
+                    <p>
+                      <span class="rules-comic__kicker">Caption</span>
+                      Your job is derelicts in the black while company droids hang in the feed, snarky as a helpdesk and precise as tax law. They only
+                      love what you declare. Everything else is yours to smuggle, spend, or explain later. None of their paperwork keeps your
+                      hull closed when a card decides today is the day the metal screams.
+                    </p>
+                    <p>
+                      <span class="rules-comic__kicker">Turn the page</span>
+                      The strips below restate the non-negotiables in briefing form, same mechanics, louder line.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="hero__actions strip-story__actions">
               <a
                 class="btn btn--primary"
                 href="https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/"
                 target="_blank"
                 rel="noopener noreferrer"
               >Wishlist on Steam</a>
+              <a class="btn btn--ghost" href="crew/index.html">Crew</a>
               <a class="btn btn--ghost" href="#lore">Lore</a>
             </div>
           </div>
+
           <div class="rules__panel reveal rules__panel--delay" data-reveal>
             <p class="rules__eyebrow">How it plays</p>
             <h2 id="how-title" class="rules__title">Laws of the loop</h2>
             <p class="rules__lead">
               You stage every salvage run from the hub. Inside a derelict the run is a card game with teeth: a fixed hand size, a fuel gauge,
-              and a hull that does not care about your intent. The bullets below are the non-negotiables. Card text, events, and toys color inside those lines.
+              and a hull that does not care about your intent. The panels below restate the non-negotiables in briefing form, same mechanics, louder line.
             </p>
-            <ul class="rules__list">
-              <li>You always hold three cards. Not two, not four. Three.</li>
-              <li>Energy is what you spend to play a card out of that hand. When the tank is empty, so are your options. And you must end your turn.</li>
-              <li>
-                Each wreck rolls its own room count in secret. You learn how deep it goes by spending real actions: cards, skills, and tools can reveal rooms until the map stops lying.
-                <ul class="rules__sublist">
-                  <li>If you walk into the end of the last room and still have not extracted, the game counts that as death. No overtime.</li>
-                </ul>
-              </li>
-              <li>Every card carries a chance to damage the ship you are standing in. Stack enough hits on the hull and you die; the run ends there.</li>
-              <li>The campaign win is blunt: pay off the debt.</li>
-              <li>Declared credits go to the boss to pay off your debt.</li>
-              <li>
-                Smuggled credits never touch the boss ledger. Off-book money builds the hub itself: new construction,
-                crew pulled from cryo, research into tools, and ships upgraded or patched so the next breach is someone else's problem.
-              </li>
-              <li>Every 3 ships you raid triggers a debt payment equal to 20% of your total debt. Miss 3 payments, and the corporation recycles your salvage skiff with you in it.</li>
-              <li>Any death feeds the void: you earn void experience that unlocks new cards for the next attempt.</li>
-            </ul>
+
+            <div class="rules-comic">
+              <p class="rules-comic__narrator" aria-hidden="true">
+                <span class="rules-comic__narrator-k">SS-Ω</span>
+                <span class="rules-comic__narrator-t">Field strip · Laws of the loop</span>
+              </p>
+
+              <div class="rules-comic__grid">
+                <article class="rules-comic__panel">
+                  <span class="rules-comic__tag">Beat 01 · Hand</span>
+                  <div class="rules-comic__frame" aria-hidden="true"></div>
+                  <figure class="rules-comic__figure">
+                    <img
+                      class="rules-comic__art"
+                      src="generated/hero-scav.webp"
+                      width="640"
+                      height="360"
+                      loading="lazy"
+                      decoding="async"
+                      alt=""
+                    />
+                  </figure>
+                  <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t">
+                    <p>Three in the hand. That is the whole deal. Count them again if you need drama.</p>
+                  </blockquote>
+                  <div class="rules-comic__caption">
+                    <p>
+                      <span class="rules-comic__kicker">Mechanic</span>
+                      You always hold three cards. Not two, not four. Three.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="rules-comic__panel">
+                  <span class="rules-comic__tag">Beat 02 · Energy</span>
+                  <div class="rules-comic__frame" aria-hidden="true"></div>
+                  <figure class="rules-comic__figure rules-comic__figure--hud">
+                    <img
+                      class="rules-comic__art"
+                      src="generated/bg-comms.webp"
+                      width="640"
+                      height="360"
+                      loading="lazy"
+                      decoding="async"
+                      alt=""
+                    />
+                  </figure>
+                  <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t">
+                    <p>Tank reads empty, you are done spending for the turn. No stalling, no miracles off-meter.</p>
+                  </blockquote>
+                  <div class="rules-comic__caption">
+                    <p>
+                      <span class="rules-comic__kicker">Mechanic</span>
+                      Energy is what you spend to play a card out of that hand. When the tank is empty, so are your options. And you must end your turn.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="rules-comic__panel rules-comic__panel--span rules-comic__panel--wide">
+                  <span class="rules-comic__tag">Beat 03 · Map depth</span>
+                  <div class="rules-comic__frame" aria-hidden="true"></div>
+                  <figure class="rules-comic__figure">
+                    <img
+                      class="rules-comic__art"
+                      src="generated/bg-gallery.webp"
+                      width="640"
+                      height="360"
+                      loading="lazy"
+                      decoding="async"
+                      alt=""
+                    />
+                  </figure>
+                  <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t rules-comic__bubble--wide">
+                    <p>The wreck does not show you its depth for free. You spend real actions until the map stops lying.</p>
+                  </blockquote>
+                  <div class="rules-comic__caption">
+                    <p>
+                      <span class="rules-comic__kicker">Mechanic</span>
+                      Each wreck rolls its own room count in secret. You learn how deep it goes by spending real actions: cards, skills, and tools can reveal rooms until the map stops lying.
+                    </p>
+                    <ul class="rules-comic__sublist">
+                      <li>If you walk into the end of the last room and still have not extracted, the game counts that as death. No overtime.</li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="rules-comic__panel">
+                  <span class="rules-comic__tag">Beat 04 · Hull</span>
+                  <div class="rules-comic__frame" aria-hidden="true"></div>
+                  <figure class="rules-comic__figure rules-comic__figure--hud">
+                    <img
+                      class="rules-comic__art"
+                      src="generated/bg-hull.webp"
+                      width="640"
+                      height="360"
+                      loading="lazy"
+                      decoding="async"
+                      alt=""
+                    />
+                  </figure>
+                  <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t">
+                    <p>Cards bite the hull you are standing in. Stack enough hits and the run ends in the black.</p>
+                  </blockquote>
+                  <div class="rules-comic__caption">
+                    <p>
+                      <span class="rules-comic__kicker">Mechanic</span>
+                      Every card carries a chance to damage the ship you are standing in. Stack enough hits on the hull and you die; the run ends there.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="rules-comic__panel">
+                  <span class="rules-comic__tag">Beat 05 · Debt</span>
+                  <div class="rules-comic__frame" aria-hidden="true"></div>
+                  <figure class="rules-comic__figure rules-comic__figure--hud">
+                    <img
+                      class="rules-comic__art"
+                      src="generated/bg-terminal.webp"
+                      width="640"
+                      height="360"
+                      loading="lazy"
+                      decoding="async"
+                      alt=""
+                    />
+                  </figure>
+                  <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t">
+                    <p>Win condition is ugly and honest: zero the debt or stay a line item.</p>
+                  </blockquote>
+                  <div class="rules-comic__caption">
+                    <p>
+                      <span class="rules-comic__kicker">Mechanic</span>
+                      The campaign win is blunt: pay off the debt.
+                    </p>
+                    <p>
+                      <span class="rules-comic__kicker">Declared credits</span>
+                      Declared credits go to the boss to pay off your debt.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="rules-comic__panel rules-comic__panel--span">
+                  <span class="rules-comic__tag">Beat 06 · Smuggled ledger</span>
+                  <div class="rules-comic__frame" aria-hidden="true"></div>
+                  <figure class="rules-comic__figure rules-comic__figure--hud">
+                    <img
+                      class="rules-comic__art"
+                      src="generated/bg-airlock.webp"
+                      width="640"
+                      height="360"
+                      loading="lazy"
+                      decoding="async"
+                      alt=""
+                    />
+                  </figure>
+                  <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t rules-comic__bubble--wide">
+                    <p>What you do not declare stays yours, hub concrete, cryo keys, tools, hull patches. The company never sees that stack.</p>
+                  </blockquote>
+                  <div class="rules-comic__caption">
+                    <p>
+                      <span class="rules-comic__kicker">Mechanic</span>
+                      Smuggled credits never touch the boss ledger. Off-book money builds the hub itself: new construction,
+                      crew pulled from cryo, research into tools, and ships upgraded or patched so the next breach is someone else's problem.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="rules-comic__panel rules-comic__panel--span">
+                  <span class="rules-comic__tag">Beat 07 · Three-raid clock</span>
+                  <div class="rules-comic__frame" aria-hidden="true"></div>
+                  <figure class="rules-comic__figure rules-comic__figure--hud">
+                    <img
+                      class="rules-comic__art"
+                      src="generated/bg-comms.webp"
+                      width="640"
+                      height="360"
+                      loading="lazy"
+                      decoding="async"
+                      alt=""
+                    />
+                  </figure>
+                  <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t rules-comic__bubble--wide">
+                    <p>Every third raid the ledger screams for twenty percent. Miss three of those payments and they scrap the skiff with you still in the harness.</p>
+                  </blockquote>
+                  <div class="rules-comic__caption">
+                    <p>
+                      <span class="rules-comic__kicker">Mechanic</span>
+                      Every 3 ships you raid triggers a debt payment equal to 20% of your total debt. Miss 3 payments, and the corporation recycles your salvage skiff with you in it.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="rules-comic__panel rules-comic__panel--span">
+                  <span class="rules-comic__tag">Beat 08 · Void XP</span>
+                  <div class="rules-comic__frame" aria-hidden="true"></div>
+                  <figure class="rules-comic__figure rules-comic__figure--void">
+                    <img
+                      class="rules-comic__art"
+                      src="generated/bg-brig.webp"
+                      width="640"
+                      height="360"
+                      loading="lazy"
+                      decoding="async"
+                      alt=""
+                    />
+                  </figure>
+                  <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t rules-comic__bubble--wide">
+                    <p>Die once, feed the void once. It remembers. Next thaw you get new angles.</p>
+                  </blockquote>
+                  <div class="rules-comic__caption">
+                    <p>
+                      <span class="rules-comic__kicker">Mechanic</span>
+                      Any death feeds the void: you earn void experience that unlocks new cards for the next attempt.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -237,6 +525,7 @@
       </div>
       <div class="site-footer__links">
         <a href="#how">How it plays</a>
+        <a href="crew/index.html">Crew</a>
         <a href="#lore">Lore</a>
         <a href="#cta">Wishlist</a>
       </div>

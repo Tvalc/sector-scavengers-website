@@ -1,5 +1,5 @@
-/**
- * Minimal static server (Node only) — avoids Windows EMFILE issues seen with
+﻿/**
+ * Minimal static server (Node only), avoids Windows EMFILE issues seen with
  * `npx serve` when the hero <video> triggers many ranged MP4 reads.
  */
 import http from "node:http";
@@ -62,13 +62,27 @@ const server = http.createServer((req, res) => {
   }
 
   fs.stat(filePath, (err, st) => {
-    if (err || !st.isFile()) {
+    let fp = filePath;
+    let stUse = st;
+    if (!err && st.isDirectory()) {
+      fp = path.join(filePath, "index.html");
+      try {
+        stUse = fs.statSync(fp);
+      } catch {
+        res.writeHead(404).end("Not found");
+        return;
+      }
+      if (!stUse.isFile()) {
+        res.writeHead(404).end("Not found");
+        return;
+      }
+    } else if (err || !st.isFile()) {
       res.writeHead(404).end("Not found");
       return;
     }
 
-    const size = st.size;
-    const ext = path.extname(filePath).toLowerCase();
+    const size = stUse.size;
+    const ext = path.extname(fp).toLowerCase();
     const type = MIME[ext] || "application/octet-stream";
     const range = req.headers.range;
 
@@ -91,7 +105,7 @@ const server = http.createServer((req, res) => {
         res.end();
         return;
       }
-      const stream = fs.createReadStream(filePath, { start, end });
+      const stream = fs.createReadStream(fp, { start, end });
       stream.on("error", () => res.destroy());
       res.on("close", () => stream.destroy());
       stream.pipe(res);
@@ -108,13 +122,33 @@ const server = http.createServer((req, res) => {
       res.end();
       return;
     }
-    const stream = fs.createReadStream(filePath);
+    const stream = fs.createReadStream(fp);
     stream.on("error", () => res.destroy());
     res.on("close", () => stream.destroy());
     stream.pipe(res);
   });
 });
 
+/** Best-effort: warn when hero MP4s are Git LFS pointers (bytes), not fetched blobs. */
+function warnIfLfsPointerSample() {
+  const sample = path.join(ROOT, "media", "website-video", "website-hero.mp4");
+  try {
+    const fd = fs.openSync(sample, "r");
+    const buf = Buffer.alloc(64);
+    const n = fs.readSync(fd, buf, 0, 64, 0);
+    fs.closeSync(fd);
+    const head = buf.slice(0, n).toString("utf8", 0, n);
+    if (head.includes("git-lfs.github.com/spec/v1")) {
+      console.warn(
+        "\n[WARN] media/*.mp4 look like Git LFS pointers, run: git lfs pull\n",
+      );
+    }
+  } catch {
+    /* missing file */
+  }
+}
+
 server.listen(PORT, "127.0.0.1", () => {
+  warnIfLfsPointerSample();
   console.log(`Preview: http://127.0.0.1:${PORT}/`);
 });

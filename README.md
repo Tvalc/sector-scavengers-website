@@ -1,4 +1,4 @@
-# Sector Scavengers — marketing site
+﻿# Sector Scavengers, marketing site
 
 Static HTML/CSS/JS. Deployed with **GitHub Pages** (GitHub Actions).
 
@@ -42,6 +42,15 @@ npm run preview
 ```
 
 Then open `http://127.0.0.1:4173/`.
+
+**Videos look broken (black feed, spinner, or Codec error)?** Large `.mp4` files live in **Git LFS**. If they were never fetched, disk only has tiny **pointer text files** (about 130 bytes), not video, the hero `<video>` still requests them, but browsers cannot decode that. Fix:
+
+```bash
+git lfs install
+git lfs pull
+```
+
+The preview script also prints a reminder on startup when it detects LFS pointers instead of real media.
 
 ## Refresh hero videos from the redo export
 

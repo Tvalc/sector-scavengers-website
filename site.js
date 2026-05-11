@@ -22,8 +22,7 @@
     });
   }
 
-  var heroVideo = document.querySelector(".hero__video");
-  if (heroVideo) {
+  document.querySelectorAll(".hero__video[data-hero-videos]").forEach(function (heroVideo) {
     var raw = heroVideo.getAttribute("data-hero-videos");
     var sources = raw
       ? raw
@@ -78,64 +77,64 @@
       syncMuteUi();
     }
 
-    if (sources.length) {
-      if (reduceMotion) {
-        heroVideo.removeAttribute("src");
-        heroVideo.load();
-        syncHeroToolbar();
-      } else {
-        if (sources.length > 1) {
-          heroVideo.removeAttribute("loop");
-          heroVideo.addEventListener("ended", function () {
-            playAt(idx + 1);
-          });
-        } else {
-          heroVideo.setAttribute("loop", "");
-        }
-        playAt(0);
+    if (!sources.length) return;
 
-        if (btnPrev) {
-          btnPrev.addEventListener("click", function () {
-            playAt(idx - 1);
-          });
-        }
-        if (btnNext) {
-          btnNext.addEventListener("click", function () {
-            playAt(idx + 1);
-          });
-        }
-        if (btnMute) {
-          btnMute.addEventListener("click", function () {
-            heroVideo.muted = !heroVideo.muted;
-            syncMuteUi();
-          });
-        }
-        heroVideo.addEventListener("volumechange", syncMuteUi);
-
-        /* Pausing when the tab or hero is hidden reduces background range requests on the video. */
-        var heroSection = heroVideo.closest("section");
-        var heroInView = true;
-        function syncHeroPlayback() {
-          if (!heroVideo.getAttribute("src")) return;
-          if (document.hidden || !heroInView) heroVideo.pause();
-          else heroVideo.play().catch(function () {});
-        }
-        document.addEventListener("visibilitychange", syncHeroPlayback);
-        if (heroSection && "IntersectionObserver" in window) {
-          var heroVis = new IntersectionObserver(
-            function (entries) {
-              entries.forEach(function (e) {
-                heroInView = e.isIntersecting;
-              });
-              syncHeroPlayback();
-            },
-            { rootMargin: "120px 0px", threshold: 0.01 },
-          );
-          heroVis.observe(heroSection);
-        }
-      }
+    if (reduceMotion) {
+      heroVideo.removeAttribute("src");
+      heroVideo.load();
+      syncHeroToolbar();
+      return;
     }
-  }
+
+    if (sources.length > 1) {
+      heroVideo.removeAttribute("loop");
+      heroVideo.addEventListener("ended", function () {
+        playAt(idx + 1);
+      });
+    } else {
+      heroVideo.setAttribute("loop", "");
+    }
+    playAt(0);
+
+    if (btnPrev) {
+      btnPrev.addEventListener("click", function () {
+        playAt(idx - 1);
+      });
+    }
+    if (btnNext) {
+      btnNext.addEventListener("click", function () {
+        playAt(idx + 1);
+      });
+    }
+    if (btnMute) {
+      btnMute.addEventListener("click", function () {
+        heroVideo.muted = !heroVideo.muted;
+        syncMuteUi();
+      });
+    }
+    heroVideo.addEventListener("volumechange", syncMuteUi);
+
+    var heroSection = heroVideo.closest("section.hero, section.crew-visual, section");
+    var heroInView = true;
+    function syncHeroPlayback() {
+      if (!heroVideo.getAttribute("src")) return;
+      if (document.hidden || !heroInView) heroVideo.pause();
+      else heroVideo.play().catch(function () {});
+    }
+    document.addEventListener("visibilitychange", syncHeroPlayback);
+    if (heroSection && "IntersectionObserver" in window) {
+      var heroVis = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (e) {
+            heroInView = e.isIntersecting;
+          });
+          syncHeroPlayback();
+        },
+        { rootMargin: "120px 0px", threshold: 0.01 },
+      );
+      heroVis.observe(heroSection);
+    }
+  });
 
   document.querySelectorAll(".promo-img").forEach(function (img) {
     img.addEventListener("error", function () {

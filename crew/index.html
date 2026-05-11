@@ -1,0 +1,735 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sector Scavengers crew roster, eight leads, three doctrines, passives, signature cards, hub bonuses, and doctrine endings.">
+  <title>Crew &amp; recruits, Sector Scavengers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="crew-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="atmosphere" aria-hidden="true">
+    <div class="atmosphere__grid"></div>
+    <div class="atmosphere__vignette"></div>
+    <div class="atmosphere__grain"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="../index.html">
+        <span class="logo__mark" aria-hidden="true">◈</span>
+        <span class="logo__text">Sector Scavengers</span>
+      </a>
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="../index.html#how">How it plays</a>
+        <a href="index.html" aria-current="page">Crew</a>
+        <a href="../lore/index.html">Lore</a>
+        <a
+          href="https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/"
+          class="nav__cta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Wishlist</a>
+      </nav>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"></button>
+    </div>
+  </header>
+
+  <main id="main" class="crew-main">
+    <nav class="lore-breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span aria-hidden="true">/</span><span>Crew</span>
+    </nav>
+
+    <header class="crew-hero">
+      <p class="crew-hero__eyebrow">Cryo ledger · Personnel</p>
+      <h1 class="crew-hero__title">Crew dossier</h1>
+      <p class="crew-hero__lead">
+        Pick your <strong>lead</strong> before a run, that crew member is who you are playing as. <strong>Max</strong> (cooperative engineer) is the baseline face and listed first; the other seven dossiers sit under <strong>doctrine</strong> headers (Corporate, Cooperative, Smuggler).
+      </p>
+      <nav class="crew-quick" aria-label="Jump to crew member">
+        <a class="crew-quick__pill" href="#max">Max</a>
+        <a class="crew-quick__pill" href="#roger">Roger</a>
+        <a class="crew-quick__pill" href="#maxine">Maxine</a>
+        <a class="crew-quick__pill" href="#munch">Munch</a>
+        <a class="crew-quick__pill" href="#gwen">Gwen</a>
+        <a class="crew-quick__pill" href="#olivia">Olivia</a>
+        <a class="crew-quick__pill" href="#rupert">Rupert</a>
+        <a class="crew-quick__pill" href="#oliver">Oliver</a>
+      </nav>
+    </header>
+
+    <section class="crew-visual reveal" data-reveal aria-labelledby="crew-visual-title">
+      <div class="crew-visual__intro">
+        <p class="crew-visual__eyebrow">Archive feed</p>
+        <h2 id="crew-visual-title" class="crew-visual__title">Roster reels</h2>
+        <p class="crew-visual__desc">
+          Character moments, rigs, and field footage, cycle the feed or unmute when you thaw the audio lock.
+        </p>
+      </div>
+      <div class="crew-visual__stage">
+        <div class="hero__video-stage">
+          <div class="hero__video-frame">
+            <div class="hero__video-hud" aria-hidden="true">
+              <span>CASEFILE</span><span class="hero__video-hud-blink">●</span>
+            </div>
+            <figure class="hero__figure">
+              <div class="hero__figure-inner hero__figure-inner--cinema hero__figure-inner--crew-panel">
+                <video
+                  class="hero__video"
+                  muted
+                  playsinline
+                  preload="none"
+                  width="1920"
+                  height="1080"
+                  aria-label="Crew showcase video, characters excerpt."
+                  data-hero-videos="../media/website-video/characters.mp4"
+                  poster="../generated/hero-scav.webp"
+                ></video>
+              </div>
+            </figure>
+            <div class="hero__video-toolbar" data-hero-toolbar role="group" aria-label="Dossier video controls">
+              <div class="hero__video-toolbar-nav">
+                <button type="button" class="hero__video-btn" data-hero-prev aria-label="Previous clip">
+                  <span class="hero__video-btn-glyph" aria-hidden="true">◀</span>
+                </button>
+                <span class="hero__video-counter" aria-live="polite">
+                  <span data-hero-index>1</span><span class="hero__video-counter-sep" aria-hidden="true">/</span><span data-hero-total>1</span>
+                </span>
+                <button type="button" class="hero__video-btn" data-hero-next aria-label="Next clip">
+                  <span class="hero__video-btn-glyph" aria-hidden="true">▶</span>
+                </button>
+              </div>
+              <button type="button" class="hero__video-btn hero__video-btn--mute" data-hero-mute aria-pressed="true" aria-label="Unmute video">
+                <span class="hero__video-btn-label" data-hero-mute-text>Unmute</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="crew-grid">
+
+      <article id="max" class="crew-card crew-card--coop reveal" data-reveal>
+        <header class="crew-card__header">
+          <div class="crew-card__orbit" aria-hidden="true"><span>M</span></div>
+          <div class="crew-card__id">
+            <h2 class="crew-card__name">Max</h2>
+            <p class="crew-card__role">Engineer · <span class="crew-tag crew-tag--coop">Cooperative doctrine</span></p>
+          </div>
+          <p class="crew-lock"><span class="crew-lock__tag">Unlock</span> Choose the <strong>Duty Claim</strong> opening path</p>
+        </header>
+        <div class="crew-card__sprite-stage" aria-label="Max in-engine idle (sprite sheet from build manifest)">
+          <canvas
+            class="makko-sprite-canvas"
+            width="220"
+            height="258"
+            role="img"
+            alt="Animated Max scavenger idle with visor HUD"
+            data-makko-json="https://api.makko.ai/storage/v1/object/public/sprite-sheets/81782f40-2137-4535-8def-b01260c47b5f/space_scav_1_idle_visor_hud_default.json"
+            data-makko-image="https://api.makko.ai/storage/v1/object/public/sprite-sheets/81782f40-2137-4535-8def-b01260c47b5f/space_scav_1_idle_visor_hud_default.webp"
+          ></canvas>
+        </div>
+        <div class="crew-card__spectral" aria-hidden="true"></div>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Background</h3>
+          <p class="crew-passive">Structural engineer on Meridian orbital platform. Said no to Nexus three times before they restructured the platform&apos;s debt and he became collateral. Does not hold grudges. Just fixes things. Wants to fix one thing that stays fixed.</p>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Passives (levels with runs participated)</h3>
+          <p class="crew-block__hint">Matches the passive line on their hub / cryo card (Lv1–Lv3). Values change with this person&apos;s <strong>crew level</strong>, which rises from <strong>runs participated</strong> while they are on your roster.</p>
+          <table class="crew-data-table">
+            <thead><tr><th scope="col">Level</th><th scope="col">Effect</th></tr></thead>
+            <tbody>
+              <tr><td>L1</td><td>+5 hull restored at the start of each round</td></tr>
+              <tr><td>L2</td><td>+8 hull per round</td></tr>
+              <tr><td>L3</td><td>+12 hull per round</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Archetypes</h3>
+          <ul class="crew-build-list">
+            <li><strong>Iron Hull</strong>, Stack hull regen on top of Max&apos;s passive to create an effectively unkillable ship. Tank through every danger.</li>
+            <li><strong>Emergency Response</strong>, React to low-hull crises with repair bursts and danger skips. Play scared, play precise.</li>
+          </ul>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Signature card pool</h3>
+          <p class="crew-block__hint">These ids are their <strong>signature pool</strong>. When they are your <strong>lead</strong>, in-run <strong>loot</strong> heavily favors these cards (about <strong>4×</strong> vs a generic pick), same ids you see on drops.</p>
+          <p class="crew-block__note">Weighted 4× in loot.</p>
+          <div class="crew-chip-wall" aria-label="Signature cards">
+<span class="crew-chip">repair</span><span class="crew-chip">patch_and_hold</span><span class="crew-chip">hull_patch</span><span class="crew-chip">shared_repair</span><span class="crew-chip">field_repair</span><span class="crew-chip">emergency_repair</span><span class="crew-chip">structural_reinforce</span><span class="crew-chip">emergency_overhaul</span><span class="crew-chip">hull_buffer</span><span class="crew-chip">hull_fortress</span><span class="crew-chip">adaptive_defense</span><span class="crew-chip">triage</span><span class="crew-chip">field_medicine</span><span class="crew-chip">mutual_aid</span><span class="crew-chip">collective_hull</span><span class="crew-chip">group_effort</span><span class="crew-chip">crew_solidarity</span><span class="crew-chip">mass_healing</span><span class="crew-chip">collective_recovery</span>
+          </div>
+        </section>
+        <section class="crew-block crew-block--milestones">
+          <h3 class="crew-block__title">Run unlock milestones</h3>
+          <p class="crew-block__hint">Account-wide <strong>successful run count</strong> (1 / 3 / 6). Crossing each bar unlocks the listed cards for this person&apos;s <strong>meta dossier</strong>, not the same thing as the signature loot bias above.</p>
+          <ol class="crew-mile-grid">
+            <li><span class="crew-mile__k">1 run</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">emergency_repair</span><span class="crew-chip crew-chip--sm">triage</span></div></li>
+            <li><span class="crew-mile__k">3 runs</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">structural_reinforce</span><span class="crew-chip crew-chip--sm">field_medicine</span><span class="crew-chip crew-chip--sm">hull_buffer</span></div></li>
+            <li><span class="crew-mile__k">6 runs</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">hull_fortress</span><span class="crew-chip crew-chip--sm">collective_recovery</span><span class="crew-chip crew-chip--sm">mass_healing</span></div></li>
+          </ol>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Level unlocks (permanent cards)</h3>
+          <p class="crew-block__hint">When this crew member hits <strong>L2</strong> or <strong>L3</strong> in meta (their <strong>crew level</strong> from runs on them: L2 after <strong>3</strong> runs participated, L3 after <strong>8</strong>), these ids are added <strong>permanently</strong> to your account unlock pool.</p>
+          <ul class="crew-build-list">
+            <li><strong>L2</strong>, <span class="crew-chip crew-chip--sm">emergency_repair</span></li>
+            <li><strong>L3</strong>, <span class="crew-chip crew-chip--sm">structural_reinforce</span></li>
+          </ul>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">How Max plays</h3>
+          <p class="crew-prose">Max is the attrition tank. His passive means every single round you passively gain hull, at L3 that is +12 before you even play a card. Stack repair cards on top and you can face-tank dangers that would kill any other lead. Hull Fortress (+40 hull, +15 max hull) combined with Max&apos;s regen creates a ceiling that danger can barely dent. The Emergency Response path is more reactive, Crisis Repair heals 25 and skips a danger if you are below 30 hull, Field Medic heals 30 if below 40. Effectively you let danger chip you down then recover hard. Best paired with Cooperative doctrine for crew-scaling cards like Crew Unity.</p>
+        </section>
+      </article>
+
+      <h2 class="crew-doctrine-title reveal" data-reveal id="doctrine-corporate">Corporate doctrine</h2>
+      <p class="crew-doctrine-lead reveal" data-reveal>Build toward efficient debt reduction, danger scanning, and systemic control.</p>
+
+      <article id="roger" class="crew-card crew-card--corp reveal" data-reveal>
+        <header class="crew-card__header">
+          <div class="crew-card__orbit" aria-hidden="true"><span>R</span></div>
+          <div class="crew-card__id">
+            <h2 class="crew-card__name">Roger</h2>
+            <p class="crew-card__role">Analyst · <span class="crew-tag crew-tag--corp">Corporate doctrine</span></p>
+          </div>
+          <p class="crew-lock"><span class="crew-lock__tag">Unlock</span> Complete 3 successful extracts</p>
+        </header>
+        <div class="crew-card__spectral" aria-hidden="true"></div>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Background</h3>
+          <p class="crew-passive">Former risk modeler for corporate debt restructuring. Ended up as a line item in one of her own events. She ran the probability on her own cryo revival, she did not model for centuries. Wants one true piece of accurate information about what is actually happening.</p>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Passives (levels with runs participated)</h3>
+          <p class="crew-block__hint">Matches the passive line on their hub / cryo card (Lv1–Lv3). Values change with this person&apos;s <strong>crew level</strong>, which rises from <strong>runs participated</strong> while they are on your roster.</p>
+          <table class="crew-data-table">
+            <thead><tr><th scope="col">Level</th><th scope="col">Effect</th></tr></thead>
+            <tbody>
+              <tr><td>L1</td><td>Reduces all danger chances by −20%</td></tr>
+              <tr><td>L2</td><td>Unlocks Overcharge, shift-click cards for +50% effects at +1⚡ cost</td></tr>
+              <tr><td>L3</td><td>Danger chances cut by −50%</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Archetypes</h3>
+          <ul class="crew-build-list">
+            <li><strong>Danger Analyst</strong>, Scan and preview incoming dangers before they hit. Maximize intel so you never take a hit blind.</li>
+            <li><strong>Overcharge Specialist</strong>, Once Roger hits L2, every card in your deck becomes a two-mode tool. Pay more energy for dramatically bigger effects.</li>
+          </ul>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Signature card pool</h3>
+          <p class="crew-block__hint">These ids are their <strong>signature pool</strong>. When they are your <strong>lead</strong>, in-run <strong>loot</strong> heavily favors these cards (about <strong>4×</strong> vs a generic pick), same ids you see on drops.</p>
+          <p class="crew-block__note">Weighted 4× in loot.</p>
+          <div class="crew-chip-wall" aria-label="Signature cards">
+<span class="crew-chip">analyze</span><span class="crew-chip">protocol_scan</span><span class="crew-chip">deep_scan</span><span class="crew-chip">emergency_telemetry</span><span class="crew-chip">tactical_assessment</span><span class="crew-chip">risk_assessment</span><span class="crew-chip">threat_analysis</span><span class="crew-chip">diagnostic</span><span class="crew-chip">corporate_override</span><span class="crew-chip">sector_lockdown</span><span class="crew-chip">audit_immunity</span><span class="crew-chip">corporate_lockdown</span><span class="crew-chip">efficiency_burst</span><span class="crew-chip">efficiency_drive</span><span class="crew-chip">corporate_incentive</span><span class="crew-chip">efficiency_protocol</span><span class="crew-chip">executive_order</span><span class="crew-chip">corporate_espionage</span><span class="crew-chip">full_audit</span><span class="crew-chip">premonition</span>
+          </div>
+        </section>
+        <section class="crew-block crew-block--milestones">
+          <h3 class="crew-block__title">Run unlock milestones</h3>
+          <p class="crew-block__hint">Account-wide <strong>successful run count</strong> (1 / 3 / 6). Crossing each bar unlocks the listed cards for this person&apos;s <strong>meta dossier</strong>, not the same thing as the signature loot bias above.</p>
+          <ol class="crew-mile-grid">
+            <li><span class="crew-mile__k">1 run</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">threat_analysis</span><span class="crew-chip crew-chip--sm">corporate_override</span></div></li>
+            <li><span class="crew-mile__k">3 runs</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">audit_immunity</span><span class="crew-chip crew-chip--sm">sector_lockdown</span><span class="crew-chip crew-chip--sm">corporate_lockdown</span></div></li>
+            <li><span class="crew-mile__k">6 runs</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">executive_order</span><span class="crew-chip crew-chip--sm">corporate_espionage</span><span class="crew-chip crew-chip--sm">full_audit</span></div></li>
+          </ol>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Level unlocks (permanent cards)</h3>
+          <p class="crew-block__hint">When this crew member hits <strong>L2</strong> or <strong>L3</strong> in meta (their <strong>crew level</strong> from runs on them: L2 after <strong>3</strong> runs participated, L3 after <strong>8</strong>), these ids are added <strong>permanently</strong> to your account unlock pool.</p>
+          <ul class="crew-build-list">
+            <li><strong>L2</strong>, <span class="crew-chip crew-chip--sm">threat_assessment</span></li>
+            <li><strong>L3</strong>, <span class="crew-chip crew-chip--sm">danger_profit</span></li>
+          </ul>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">How Roger plays</h3>
+          <p class="crew-prose">Roger is a control and information lead. The core loop is scan early (Protocol Scan, Deep Scan, Analyze), strip danger damage down to nothing, then extract cleanly with full intel on every node. At L2 Roger becomes one of the most flexible leads, Overcharge turns cheap 1⚡ scans into comprehensive situation reports and turns mid-tier extraction cards into strong finishers. L3 halves all danger, which effectively makes dangerous nodes feel optional. Best paired with Corporate doctrine locked in for Mandate plays and audit-immunity stacking.</p>
+        </section>
+      </article>
+
+      <article id="rupert" class="crew-card crew-card--corp reveal" data-reveal>
+        <header class="crew-card__header">
+          <div class="crew-card__orbit" aria-hidden="true"><span>U</span></div>
+          <div class="crew-card__id">
+            <h2 class="crew-card__name">Rupert</h2>
+            <p class="crew-card__role">Scrap Tech · <span class="crew-tag crew-tag--corp">Corporate doctrine</span></p>
+          </div>
+          <p class="crew-lock"><span class="crew-lock__tag">Unlock</span> Lock any doctrine (<code>doctrine_locked</code>)</p>
+        </header>
+        <div class="crew-card__spectral" aria-hidden="true"></div>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Background</h3>
+          <p class="crew-passive">Built things from salvage that should not work but did. Too good at solving problems corporations preferred unsolved. Went into a cryo unit tagged &ldquo;DO NOT USE, PENDING INSPECTION.&rdquo; Has memory gaps. Wants to build something they cannot take apart.</p>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Passives (levels with runs participated)</h3>
+          <p class="crew-block__hint">Matches the passive line on their hub / cryo card (Lv1–Lv3). Values change with this person&apos;s <strong>crew level</strong>, which rises from <strong>runs participated</strong> while they are on your roster.</p>
+          <table class="crew-data-table">
+            <thead><tr><th scope="col">Level</th><th scope="col">Effect</th></tr></thead>
+            <tbody>
+              <tr><td>L1</td><td>On extract: +₡1,500 per bot deployed this run</td></tr>
+              <tr><td>L2</td><td>On extract: +₡2,500 per bot deployed this run</td></tr>
+              <tr><td>L3</td><td>On extract: +₡4,000 per bot deployed this run</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Archetypes</h3>
+          <ul class="crew-build-list">
+            <li><strong>Bot Empire</strong>, Deploy as many bots as possible, overclock them, extract late for a massive payout multiplied by bot count.</li>
+            <li><strong>Mandate Control</strong>, Use corporate mandates for debt reduction and danger control alongside the bot economy.</li>
+          </ul>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Signature card pool</h3>
+          <p class="crew-block__hint">These ids are their <strong>signature pool</strong>. When they are your <strong>lead</strong>, in-run <strong>loot</strong> heavily favors these cards (about <strong>4×</strong> vs a generic pick), same ids you see on drops.</p>
+          <p class="crew-block__note">Weighted 4× in loot.</p>
+          <div class="crew-chip-wall" aria-label="Signature cards">
+<span class="crew-chip">bot_swarm</span><span class="crew-chip">bot_army</span><span class="crew-chip">overclock_bots</span><span class="crew-chip">reinforced_bots</span><span class="crew-chip">bot_empire</span><span class="crew-chip">calculated_scrap</span><span class="crew-chip">salvage_sweep</span><span class="crew-chip">scavenge</span><span class="crew-chip">risky_scavenge</span><span class="crew-chip">quick_loot</span><span class="crew-chip">salvage_grab</span><span class="crew-chip">precision_scavenge</span><span class="crew-chip">salvage_beacon</span><span class="crew-chip">efficiency_drive</span><span class="crew-chip">efficiency_burst</span><span class="crew-chip">corporate_incentive</span><span class="crew-chip">profit_margin</span><span class="crew-chip">credit_forecast</span><span class="crew-chip">routine_extract</span><span class="crew-chip">mass_extraction</span>
+          </div>
+        </section>
+        <section class="crew-block crew-block--milestones">
+          <h3 class="crew-block__title">Run unlock milestones</h3>
+          <p class="crew-block__hint">Account-wide <strong>successful run count</strong> (1 / 3 / 6). Crossing each bar unlocks the listed cards for this person&apos;s <strong>meta dossier</strong>, not the same thing as the signature loot bias above.</p>
+          <ol class="crew-mile-grid">
+            <li><span class="crew-mile__k">1 run</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">bot_swarm</span><span class="crew-chip crew-chip--sm">overclock_bots</span></div></li>
+            <li><span class="crew-mile__k">3 runs</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">bot_army</span><span class="crew-chip crew-chip--sm">reinforced_bots</span><span class="crew-chip crew-chip--sm">calculated_scrap</span></div></li>
+            <li><span class="crew-mile__k">6 runs</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">bot_empire</span><span class="crew-chip crew-chip--sm">profit_margin</span><span class="crew-chip crew-chip--sm">mass_extraction</span></div></li>
+          </ol>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Level unlocks (permanent cards)</h3>
+          <p class="crew-block__hint">When this crew member hits <strong>L2</strong> or <strong>L3</strong> in meta (their <strong>crew level</strong> from runs on them: L2 after <strong>3</strong> runs participated, L3 after <strong>8</strong>), these ids are added <strong>permanently</strong> to your account unlock pool.</p>
+          <ul class="crew-build-list">
+            <li><strong>L2</strong>, <span class="crew-chip crew-chip--sm">bot_swarm</span></li>
+            <li><strong>L3</strong>, <span class="crew-chip crew-chip--sm">overclock_bots</span></li>
+          </ul>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">How Rupert plays</h3>
+          <p class="crew-prose">Rupert is a snowball economy lead. Early rounds you spend energy deploying bots (Bot Swarm, Bot Army, Bot Empire), each bot does nothing immediately but stacks into a massive extraction payout. The longer you survive, the more bots you have, and the bigger the final number. Calculated Scrap becomes excellent with 3+ bots active. Reinforced Bots and Overclock Bots amplify each unit. The key tension is staying alive long enough to make the payout worth it, you need hull survival tools since bots do not protect you directly. L3 passive at ₡4,000/bot means a 5-bot run is a ₡20,000 extraction bonus on top of everything else.</p>
+        </section>
+      </article>
+
+      <article id="gwen" class="crew-card crew-card--corp reveal" data-reveal>
+        <header class="crew-card__header">
+          <div class="crew-card__orbit" aria-hidden="true"><span>G</span></div>
+          <div class="crew-card__id">
+            <h2 class="crew-card__name">Gwen</h2>
+            <p class="crew-card__role">Guard · <span class="crew-tag crew-tag--corp">Corporate doctrine</span></p>
+          </div>
+          <p class="crew-lock"><span class="crew-lock__tag">Unlock</span> Choose the <strong>Duty Claim</strong> opening path</p>
+        </header>
+        <div class="crew-card__spectral" aria-hidden="true"></div>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Background</h3>
+          <p class="crew-passive">Security contractor across fifteen years, twelve stations, three corporate restructurings. &ldquo;I have seen this play out before. My fault. I should have gotten out faster.&rdquo; Wants everyone on the ship to still be alive when it is over.</p>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Passives (levels with runs participated)</h3>
+          <p class="crew-block__hint">Matches the passive line on their hub / cryo card (Lv1–Lv3). Values change with this person&apos;s <strong>crew level</strong>, which rises from <strong>runs participated</strong> while they are on your roster.</p>
+          <table class="crew-data-table">
+            <thead><tr><th scope="col">Level</th><th scope="col">Effect</th></tr></thead>
+            <tbody>
+              <tr><td>L1</td><td>Start each dive with +1 shield charge</td></tr>
+              <tr><td>L2</td><td>Start each dive with +2 shield charges</td></tr>
+              <tr><td>L3</td><td>Start each dive with +3 shield charges</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Archetypes</h3>
+          <ul class="crew-build-list">
+            <li><strong>Iron Fortress</strong>, Stack as many shield charges as possible and keep them up. Dangers cannot touch you if every hit is absorbed.</li>
+            <li><strong>Shield Wall</strong>, Use high shield counts as a resource: trigger Fort Protocol bonuses, Shield Wall skips, and Fort Lock chains.</li>
+          </ul>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Signature card pool</h3>
+          <p class="crew-block__hint">These ids are their <strong>signature pool</strong>. When they are your <strong>lead</strong>, in-run <strong>loot</strong> heavily favors these cards (about <strong>4×</strong> vs a generic pick), same ids you see on drops.</p>
+          <p class="crew-block__note">Weighted 4× in loot.</p>
+          <div class="crew-chip-wall" aria-label="Signature cards">
+<span class="crew-chip">shield</span><span class="crew-chip">team_shield</span><span class="crew-chip">reinforced_shield</span><span class="crew-chip">preemptive_shield</span><span class="crew-chip">shield_bash</span><span class="crew-chip">mass_shields</span><span class="crew-chip">shield_wall</span><span class="crew-chip">shield_wall_prep</span><span class="crew-chip">last_bastion</span><span class="crew-chip">perimeter</span><span class="crew-chip">fortress_protocol</span><span class="crew-chip">fortress_lockdown</span><span class="crew-chip">bulwark_surge</span><span class="crew-chip">ablative_screen</span><span class="crew-chip">iron_covenant</span><span class="crew-chip">patch_and_hold</span><span class="crew-chip">hull_patch</span><span class="crew-chip">collective_hull</span><span class="crew-chip">group_effort</span><span class="crew-chip">hull_buffer</span>
+          </div>
+        </section>
+        <section class="crew-block crew-block--milestones">
+          <h3 class="crew-block__title">Run unlock milestones</h3>
+          <p class="crew-block__hint">Account-wide <strong>successful run count</strong> (1 / 3 / 6). Crossing each bar unlocks the listed cards for this person&apos;s <strong>meta dossier</strong>, not the same thing as the signature loot bias above.</p>
+          <ol class="crew-mile-grid">
+            <li><span class="crew-mile__k">1 run</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">preemptive_shield</span><span class="crew-chip crew-chip--sm">shield_wall</span></div></li>
+            <li><span class="crew-mile__k">3 runs</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">fortress_protocol</span><span class="crew-chip crew-chip--sm">mass_shields</span><span class="crew-chip crew-chip--sm">shield_wall_prep</span></div></li>
+            <li><span class="crew-mile__k">6 runs</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">last_bastion</span><span class="crew-chip crew-chip--sm">perimeter</span><span class="crew-chip crew-chip--sm">fortress_lockdown</span></div></li>
+          </ol>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Level unlocks (permanent cards)</h3>
+          <p class="crew-block__hint">When this crew member hits <strong>L2</strong> or <strong>L3</strong> in meta (their <strong>crew level</strong> from runs on them: L2 after <strong>3</strong> runs participated, L3 after <strong>8</strong>), these ids are added <strong>permanently</strong> to your account unlock pool.</p>
+          <ul class="crew-build-list">
+            <li><strong>L2</strong>, <span class="crew-chip crew-chip--sm">preemptive_shield</span></li>
+            <li><strong>L3</strong>, <span class="crew-chip crew-chip--sm">shield_wall</span></li>
+          </ul>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">How Gwen plays</h3>
+          <p class="crew-prose">Gwen is the bunker build. She starts every dive ahead, at L3 that is 3 free shields before round 1 even begins. The Iron Fortress path is about maintaining that buffer: Strong Shield, Perimeter (+4 shields), Mass Shields (scales with missing hull), and Shield Prep (+3 shields, sacrifice next round). Fort Protocol rewards you with ₡2,000 per round you end with 5+ shields, passive income from playing defense. Shield Wall spends 3 shields to skip all dangers in a round, making a single card an invincibility button. Fort Lock chains that, if you had 5+ shields when you used it, the next round&apos;s danger is also skipped. Last Bastion gives +3 shields if you are above 80 hull (once/run), the ultimate healthy-state reward.</p>
+        </section>
+      </article>
+
+      <h2 class="crew-doctrine-title reveal" data-reveal id="doctrine-cooperative">Cooperative doctrine</h2>
+      <p class="crew-doctrine-lead reveal" data-reveal>Build toward hull sustain, crew support, and endurance. <strong>Max</strong> is already above, <strong>Munch</strong> is the other Cooperative dossier here.</p>
+
+      <article id="munch" class="crew-card crew-card--coop reveal" data-reveal>
+        <header class="crew-card__header">
+          <div class="crew-card__orbit" aria-hidden="true"><span>N</span></div>
+          <div class="crew-card__id">
+            <h2 class="crew-card__name">Munch</h2>
+            <p class="crew-card__role">Medic · <span class="crew-tag crew-tag--coop">Cooperative doctrine</span></p>
+          </div>
+          <p class="crew-lock"><span class="crew-lock__tag">Unlock</span> Choose the <strong>Duty Claim</strong> opening path</p>
+        </header>
+        <div class="crew-card__spectral" aria-hidden="true"></div>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Background</h3>
+          <p class="crew-passive">Trauma medic on a high-accident-rate industrial station. Was listed as &ldquo;non-essential infrastructure&rdquo; when it was decommissioned. Has opinions about whoever wrote that. Everybody gets home. That is the rule.</p>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Passives (levels with runs participated)</h3>
+          <p class="crew-block__hint">Matches the passive line on their hub / cryo card (Lv1–Lv3). Values change with this person&apos;s <strong>crew level</strong>, which rises from <strong>runs participated</strong> while they are on your roster.</p>
+          <table class="crew-data-table">
+            <thead><tr><th scope="col">Level</th><th scope="col">Effect</th></tr></thead>
+            <tbody>
+              <tr><td>L1</td><td>+₡800 banked on every successful extract</td></tr>
+              <tr><td>L2</td><td>+₡1,500 on extract</td></tr>
+              <tr><td>L3</td><td>+₡2,500 on extract</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Archetypes</h3>
+          <ul class="crew-build-list">
+            <li><strong>Full Medic</strong>, Hull-gated heals that are strongest when you are most desperate. Let hull drop, trigger the big heals.</li>
+            <li><strong>Shield–Heal Hybrid</strong>, Maintain a buffer of shields and hull, never letting either bottom out.</li>
+          </ul>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Signature card pool</h3>
+          <p class="crew-block__hint">These ids are their <strong>signature pool</strong>. When they are your <strong>lead</strong>, in-run <strong>loot</strong> heavily favors these cards (about <strong>4×</strong> vs a generic pick), same ids you see on drops.</p>
+          <p class="crew-block__note">Weighted 4× in loot.</p>
+          <div class="crew-chip-wall" aria-label="Signature cards">
+<span class="crew-chip">repair</span><span class="crew-chip">field_medicine</span><span class="crew-chip">triage</span><span class="crew-chip">emergency_repair</span><span class="crew-chip">hull_patch</span><span class="crew-chip">shared_repair</span><span class="crew-chip">collective_recovery</span><span class="crew-chip">mass_healing</span><span class="crew-chip">crew_miracle</span><span class="crew-chip">mutual_aid</span><span class="crew-chip">patch_and_hold</span><span class="crew-chip">field_repair</span><span class="crew-chip">emergency_overhaul</span><span class="crew-chip">solidarity</span><span class="crew-chip">group_effort</span><span class="crew-chip">adaptive_defense</span><span class="crew-chip">crew_solidarity</span><span class="crew-chip">structural_reinforce</span><span class="crew-chip">hull_buffer</span>
+          </div>
+        </section>
+        <section class="crew-block crew-block--milestones">
+          <h3 class="crew-block__title">Run unlock milestones</h3>
+          <p class="crew-block__hint">Account-wide <strong>successful run count</strong> (1 / 3 / 6). Crossing each bar unlocks the listed cards for this person&apos;s <strong>meta dossier</strong>, not the same thing as the signature loot bias above.</p>
+          <ol class="crew-mile-grid">
+            <li><span class="crew-mile__k">1 run</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">triage</span><span class="crew-chip crew-chip--sm">field_medicine</span></div></li>
+            <li><span class="crew-mile__k">3 runs</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">emergency_repair</span><span class="crew-chip crew-chip--sm">collective_recovery</span><span class="crew-chip crew-chip--sm">mass_healing</span></div></li>
+            <li><span class="crew-mile__k">6 runs</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">crew_miracle</span><span class="crew-chip crew-chip--sm">hull_fortress</span><span class="crew-chip crew-chip--sm">iron_covenant</span></div></li>
+          </ol>
+          <p class="crew-block__note crew-block__note--tight">Six-run &ldquo;Iron Oath&rdquo; milestone uses card ID <span class="crew-chip crew-chip--sm">iron_covenant</span> in the current build.</p>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Level unlocks (permanent cards)</h3>
+          <p class="crew-block__hint">When this crew member hits <strong>L2</strong> or <strong>L3</strong> in meta (their <strong>crew level</strong> from runs on them: L2 after <strong>3</strong> runs participated, L3 after <strong>8</strong>), these ids are added <strong>permanently</strong> to your account unlock pool.</p>
+          <ul class="crew-build-list">
+            <li><strong>L2</strong>, <span class="crew-chip crew-chip--sm">triage</span></li>
+            <li><strong>L3</strong>, <span class="crew-chip crew-chip--sm">field_medicine</span></li>
+          </ul>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">How Munch plays</h3>
+          <p class="crew-prose">Munch is the crisis medic, her best cards are conditional on being in danger. Field Medic heals 30 if below 40 hull (vs 10 normally). Crew Miracle is a once-per-run full reset from near-death to 80 hull + 2 shields. Crisis Repair gives 25 hull and skips a danger if hull is critical. The Full Medic path is a controlled gamble: you let danger whittle you down, then drop massive heals. Paired with Munch&apos;s extract bonus, every successful run also pays a passive dividend, one of the best leads for early-game debt reduction when money is tight. Her overlap with Max&apos;s pool means they synergize well as a pair.</p>
+        </section>
+      </article>
+
+      <h2 class="crew-doctrine-title reveal" data-reveal id="doctrine-smuggler">Smuggler doctrine</h2>
+      <p class="crew-doctrine-lead reveal" data-reveal>Build toward risky high-yield salvage, system exploitation, and operating off the books.</p>
+
+      <article id="maxine" class="crew-card crew-card--smug reveal" data-reveal>
+        <header class="crew-card__header">
+          <div class="crew-card__orbit" aria-hidden="true"><span>X</span></div>
+          <div class="crew-card__id">
+            <h2 class="crew-card__name">Maxine</h2>
+            <p class="crew-card__role">Scavenger · <span class="crew-tag crew-tag--smug">Smuggler doctrine</span></p>
+          </div>
+          <p class="crew-lock"><span class="crew-lock__tag">Unlock</span> Choose the <strong>Cut and Run</strong> opening path</p>
+        </header>
+        <div class="crew-card__spectral" aria-hidden="true"></div>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Background</h3>
+          <p class="crew-passive">Ran a zero-debt salvage collective on Meridian Station. Eight people, three ships, their own call. Nexus restructured their operating licenses on the third ask. Woke up owing everything to a company that did not exist when he went under. The collective is not a dream, it is a plan that has not happened yet.</p>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Passives (levels with runs participated)</h3>
+          <p class="crew-block__hint">Matches the passive line on their hub / cryo card (Lv1–Lv3). Values change with this person&apos;s <strong>crew level</strong>, which rises from <strong>runs participated</strong> while they are on your roster.</p>
+          <table class="crew-data-table">
+            <thead><tr><th scope="col">Level</th><th scope="col">Effect</th></tr></thead>
+            <tbody>
+              <tr><td>L1</td><td>Scavenge and Risky Loot yield +₡1,500</td></tr>
+              <tr><td>L2</td><td>+₡2,500 scavenge bonus</td></tr>
+              <tr><td>L3</td><td>+₡3,500 scavenge bonus</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Archetypes</h3>
+          <ul class="crew-build-list">
+            <li><strong>Scav Blitz</strong>, Maximize scrap every round. Chain free salvage cards, stack bonuses, extract huge.</li>
+            <li><strong>Bot Swarm</strong>, Deploy scavenge bots for passive income alongside the salvage loop.</li>
+            <li><strong>Ghost Run</strong>, Skip dangers freely and extract big scrap without taking hull damage.</li>
+          </ul>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Signature card pool</h3>
+          <p class="crew-block__hint">These ids are their <strong>signature pool</strong>. When they are your <strong>lead</strong>, in-run <strong>loot</strong> heavily favors these cards (about <strong>4×</strong> vs a generic pick), same ids you see on drops.</p>
+          <p class="crew-block__note">Weighted 4× in loot.</p>
+          <div class="crew-chip-wall" aria-label="Signature cards">
+<span class="crew-chip">scavenge</span><span class="crew-chip">risky_scavenge</span><span class="crew-chip">quick_loot</span><span class="crew-chip">salvage_grab</span><span class="crew-chip">calculated_scrap</span><span class="crew-chip">adrenaline_junkie</span><span class="crew-chip">sector_sweep</span><span class="crew-chip">deep_salvage</span><span class="crew-chip">calculated_risk</span><span class="crew-chip">danger_rush</span><span class="crew-chip">precision_scavenge</span><span class="crew-chip">salvage_beacon</span><span class="crew-chip">salvage_king</span><span class="crew-chip">maximum_risk</span><span class="crew-chip">risk_it</span><span class="crew-chip">off_books</span><span class="crew-chip">street_deal</span><span class="crew-chip">ghost_claim</span><span class="crew-chip">salvage_protocol</span>
+          </div>
+        </section>
+        <section class="crew-block crew-block--milestones">
+          <h3 class="crew-block__title">Run unlock milestones</h3>
+          <p class="crew-block__hint">Account-wide <strong>successful run count</strong> (1 / 3 / 6). Crossing each bar unlocks the listed cards for this person&apos;s <strong>meta dossier</strong>, not the same thing as the signature loot bias above.</p>
+          <ol class="crew-mile-grid">
+            <li><span class="crew-mile__k">1 run</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">calculated_risk</span><span class="crew-chip crew-chip--sm">deep_salvage</span></div></li>
+            <li><span class="crew-mile__k">3 runs</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">ghost_claim</span><span class="crew-chip crew-chip--sm">salvage_protocol</span><span class="crew-chip crew-chip--sm">sector_sweep</span></div></li>
+            <li><span class="crew-mile__k">6 runs</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">salvage_king</span><span class="crew-chip crew-chip--sm">ghost_protocol</span><span class="crew-chip crew-chip--sm">maximum_risk</span></div></li>
+          </ol>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Level unlocks (permanent cards)</h3>
+          <p class="crew-block__hint">When this crew member hits <strong>L2</strong> or <strong>L3</strong> in meta (their <strong>crew level</strong> from runs on them: L2 after <strong>3</strong> runs participated, L3 after <strong>8</strong>), these ids are added <strong>permanently</strong> to your account unlock pool.</p>
+          <ul class="crew-build-list">
+            <li><strong>L2</strong>, <span class="crew-chip crew-chip--sm">calculated_risk</span></li>
+            <li><strong>L3</strong>, <span class="crew-chip crew-chip--sm">deep_salvage</span></li>
+          </ul>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">How Maxine plays</h3>
+          <p class="crew-prose">Maxine is a pure salvage engine. Her passive stacks directly onto Scavenge and Risky Loot, so those 0⚡ free cards become significant earners every single round. The Scav Blitz path is about chaining as many 0-cost salvage cards as possible, Salvage Grab, Quick Loot, Off Books, Street Deal are all free, meaning a good hand draws 8–16 scrap before spending a single energy. Danger Rush (6–14 scrap, but danger +25% for 2 rounds) and Maximum Risk (12–25 scrap, costs hull and shields) are the power ceiling. Ghost Claim is the key card: 5–12 scrap and skips a danger, but next round salvage drops 50%, so you time it for rounds you would scavenge less anyway. L3 Maxine turns every Scavenge into essentially a Risky Loot in value without the risk.</p>
+        </section>
+      </article>
+
+      <article id="olivia" class="crew-card crew-card--smug reveal" data-reveal>
+        <header class="crew-card__header">
+          <div class="crew-card__orbit" aria-hidden="true"><span>O</span></div>
+          <div class="crew-card__id">
+            <h2 class="crew-card__name">Olivia</h2>
+            <p class="crew-card__role">Broker · <span class="crew-tag crew-tag--smug">Smuggler doctrine</span></p>
+          </div>
+          <p class="crew-lock"><span class="crew-lock__tag">Unlock</span> Choose the <strong>Cut and Run</strong> opening path</p>
+        </header>
+        <div class="crew-card__spectral" aria-hidden="true"></div>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Background</h3>
+          <p class="crew-passive">Brokered contracts, resource acquisition, debt instruments, logistics. Excellent at it. Nexus liquidated his firm quietly and he did not see it coming. That still bothers him. Signed cryo terms he negotiated down himself, but there was a sub-clause he missed. He wants one contract, his terms, signed by someone who actually read it.</p>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Passives (levels with runs participated)</h3>
+          <p class="crew-block__hint">Matches the passive line on their hub / cryo card (Lv1–Lv3). Values change with this person&apos;s <strong>crew level</strong>, which rises from <strong>runs participated</strong> while they are on your roster.</p>
+          <table class="crew-data-table">
+            <thead><tr><th scope="col">Level</th><th scope="col">Effect</th></tr></thead>
+            <tbody>
+              <tr><td>L1</td><td>+₡5,000 banked on every successful extract</td></tr>
+              <tr><td>L2</td><td>+₡8,000 on extract</td></tr>
+              <tr><td>L3</td><td>+₡12,000 on extract</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Archetypes</h3>
+          <ul class="crew-build-list">
+            <li><strong>Economy Broker</strong>, Leverage debt as a resource. Take on debt to skip dangers or force extracts, then convert or reduce it with audit cards.</li>
+            <li><strong>Void Rogue</strong>, Use high-risk void cards and smuggler plays for echo and massive extraction scores.</li>
+          </ul>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Signature card pool</h3>
+          <p class="crew-block__hint">These ids are their <strong>signature pool</strong>. When they are your <strong>lead</strong>, in-run <strong>loot</strong> heavily favors these cards (about <strong>4×</strong> vs a generic pick), same ids you see on drops.</p>
+          <p class="crew-block__note">Weighted 4× in loot.</p>
+          <div class="crew-chip-wall" aria-label="Signature cards">
+<span class="crew-chip">debt_audit</span><span class="crew-chip">debt_leveraging</span><span class="crew-chip">debt_conversion</span><span class="crew-chip">mandate_override</span><span class="crew-chip">debt_write_off</span><span class="crew-chip">hostile_extraction</span><span class="crew-chip">routine_extract</span><span class="crew-chip">efficiency_drive</span><span class="crew-chip">profit_margin</span><span class="crew-chip">credit_forecast</span><span class="crew-chip">corporate_incentive</span><span class="crew-chip">sector_monopoly</span><span class="crew-chip">full_audit</span><span class="crew-chip">salvage_sweep</span><span class="crew-chip">black_ops</span><span class="crew-chip">void_smuggler</span><span class="crew-chip">shadow_extraction</span><span class="crew-chip">emergency_extraction</span><span class="crew-chip">risk_assessment</span>
+          </div>
+        </section>
+        <section class="crew-block crew-block--milestones">
+          <h3 class="crew-block__title">Run unlock milestones</h3>
+          <p class="crew-block__hint">Account-wide <strong>successful run count</strong> (1 / 3 / 6). Crossing each bar unlocks the listed cards for this person&apos;s <strong>meta dossier</strong>, not the same thing as the signature loot bias above.</p>
+          <ol class="crew-mile-grid">
+            <li><span class="crew-mile__k">1 run</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">debt_leveraging</span><span class="crew-chip crew-chip--sm">hostile_extraction</span></div></li>
+            <li><span class="crew-mile__k">3 runs</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">mandate_override</span><span class="crew-chip crew-chip--sm">debt_conversion</span><span class="crew-chip crew-chip--sm">credit_forecast</span></div></li>
+            <li><span class="crew-mile__k">6 runs</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">debt_write_off</span><span class="crew-chip crew-chip--sm">sector_monopoly</span><span class="crew-chip crew-chip--sm">full_audit</span></div></li>
+          </ol>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Level unlocks (permanent cards)</h3>
+          <p class="crew-block__hint">When this crew member hits <strong>L2</strong> or <strong>L3</strong> in meta (their <strong>crew level</strong> from runs on them: L2 after <strong>3</strong> runs participated, L3 after <strong>8</strong>), these ids are added <strong>permanently</strong> to your account unlock pool.</p>
+          <ul class="crew-build-list">
+            <li><strong>L2</strong>, <span class="crew-chip crew-chip--sm">debt_leveraging</span></li>
+            <li><strong>L3</strong>, <span class="crew-chip crew-chip--sm">hostile_extraction</span></li>
+          </ul>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">How Olivia plays</h3>
+          <p class="crew-prose">Olivia is the debt manipulation specialist, the most mechanically unusual lead. Instead of avoiding debt, Olivia treats it as currency. Corp Veto skips a danger for +₡5,000 debt. Corp Lock skips two for +₡15,000. Debt Pardon wipes ₡25,000 once per run. Full Audit converts run-debt into credits at 50%. Debt Trade and Debt Convert restructure and reduce. Olivia&apos;s L3 passive (+₡12,000 per extract) means every run pays down the debt in large chunks even if you have been aggressive about taking on danger-skip debt. The Void Rogue path layers in echo and shadow extractions on top, Shadow Exit ends the dive for 4–8 scrap, +30% extraction bonus, and +2 echo, making every clean extract also build the void meta-game. Olivia is the lead for players who want to out-think the debt system rather than avoid it.</p>
+        </section>
+      </article>
+
+      <article id="oliver" class="crew-card crew-card--smug reveal" data-reveal>
+        <header class="crew-card__header">
+          <div class="crew-card__orbit" aria-hidden="true"><span>I</span></div>
+          <div class="crew-card__id">
+            <h2 class="crew-card__name">Oliver</h2>
+            <p class="crew-card__role">Shieldwright · <span class="crew-tag crew-tag--smug">Smuggler doctrine</span></p>
+          </div>
+          <p class="crew-lock"><span class="crew-lock__tag">Unlock</span> Complete 5 successful extracts</p>
+        </header>
+        <div class="crew-card__spectral" aria-hidden="true"></div>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Background</h3>
+          <p class="crew-passive">Designed defensive systems her whole career. Protected other people&apos;s things. Put herself in a cryo unit tagged for disposal and survived. Philosophically views the corporation as the real enemy and the system itself as something to route around. Wants to build something worth protecting that is hers.</p>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Passives (levels with runs participated)</h3>
+          <p class="crew-block__hint">Matches the passive line on their hub / cryo card (Lv1–Lv3). Values change with this person&apos;s <strong>crew level</strong>, which rises from <strong>runs participated</strong> while they are on your roster.</p>
+          <table class="crew-data-table">
+            <thead><tr><th scope="col">Level</th><th scope="col">Effect</th></tr></thead>
+            <tbody>
+              <tr><td>L1</td><td>Each time a shield charge is consumed, restore 5 hull</td></tr>
+              <tr><td>L2</td><td>Gain +1 void echo on every collapse</td></tr>
+              <tr><td>L3</td><td>Each shield consumed restores 12 hull</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Archetypes</h3>
+          <ul class="crew-build-list">
+            <li><strong>Shield-to-Hull</strong>, Convert shield charges into a hull engine. Every hit absorbed also heals you, effectively doubling the value of each charge.</li>
+            <li><strong>Void Communion</strong>, Lean into collapses to accumulate echo for the meta-game, using the void shop and echo cards as a secondary economy.</li>
+          </ul>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Signature card pool</h3>
+          <p class="crew-block__hint">These ids are their <strong>signature pool</strong>. When they are your <strong>lead</strong>, in-run <strong>loot</strong> heavily favors these cards (about <strong>4×</strong> vs a generic pick), same ids you see on drops.</p>
+          <p class="crew-block__note">Weighted 4× in loot.</p>
+          <div class="crew-chip-wall" aria-label="Signature cards">
+<span class="crew-chip">shield</span><span class="crew-chip">team_shield</span><span class="crew-chip">reinforced_shield</span><span class="crew-chip">shield_bash</span><span class="crew-chip">mass_shields</span><span class="crew-chip">shield_wall</span><span class="crew-chip">shield_wall_prep</span><span class="crew-chip">perimeter</span><span class="crew-chip">ablative_screen</span><span class="crew-chip">last_bastion</span><span class="crew-chip">patch_and_hold</span><span class="crew-chip">hull_patch</span><span class="crew-chip">field_medicine</span><span class="crew-chip">emergency_repair</span><span class="crew-chip">triage</span><span class="crew-chip">structural_reinforce</span><span class="crew-chip">hull_buffer</span><span class="crew-chip">fortress_lockdown</span><span class="crew-chip">iron_covenant</span><span class="crew-chip">bulwark_surge</span>
+          </div>
+        </section>
+        <section class="crew-block crew-block--milestones">
+          <h3 class="crew-block__title">Run unlock milestones</h3>
+          <p class="crew-block__hint">Account-wide <strong>successful run count</strong> (1 / 3 / 6). Crossing each bar unlocks the listed cards for this person&apos;s <strong>meta dossier</strong>, not the same thing as the signature loot bias above.</p>
+          <ol class="crew-mile-grid">
+            <li><span class="crew-mile__k">1 run</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">shield_bash</span><span class="crew-chip crew-chip--sm">last_bastion</span></div></li>
+            <li><span class="crew-mile__k">3 runs</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">mass_shields</span><span class="crew-chip crew-chip--sm">shield_wall_prep</span><span class="crew-chip crew-chip--sm">hull_buffer</span></div></li>
+            <li><span class="crew-mile__k">6 runs</span><div class="crew-mile__cards"><span class="crew-chip crew-chip--sm">shield_wall</span><span class="crew-chip crew-chip--sm">fortress_lockdown</span><span class="crew-chip crew-chip--sm">iron_covenant</span></div></li>
+          </ol>
+          <p class="crew-block__note crew-block__note--tight">Six-run &ldquo;Iron Oath&rdquo; milestone uses card ID <span class="crew-chip crew-chip--sm">iron_covenant</span> in the current build.</p>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">Level unlocks (permanent cards)</h3>
+          <p class="crew-block__hint">When this crew member hits <strong>L2</strong> or <strong>L3</strong> in meta (their <strong>crew level</strong> from runs on them: L2 after <strong>3</strong> runs participated, L3 after <strong>8</strong>), these ids are added <strong>permanently</strong> to your account unlock pool.</p>
+          <ul class="crew-build-list">
+            <li><strong>L2</strong>, <span class="crew-chip crew-chip--sm">shield_bash</span></li>
+            <li><strong>L3</strong>, <span class="crew-chip crew-chip--sm">last_bastion</span></li>
+          </ul>
+        </section>
+        <section class="crew-block">
+          <h3 class="crew-block__title">How Oliver plays</h3>
+          <p class="crew-prose">Oliver is a shield economy lead with a twist. Unlike Gwen, who hoards shields, Oliver wants them to be consumed. At L3 each absorbed hit heals 12 hull, stack up shields, let dangers hit, heal off every absorption. Shield Bash synergizes: it destroys 1 shield and heals 15 hull (plus ₡3,000 if you had 5+). Pair that with Oliver&apos;s passive and each shield converts into ~27 total healing. Mass Shields refills based on missing hull, creating a loop where damage feeds new shields which heal you further. The Void Communion path is a parallel progression, L2 gives +1 echo per collapse, so deliberate runs-to-failure become a meta-game strategy to bank echo for the void shop.</p>
+        </section>
+      </article>
+
+    </div>
+
+    <section class="crew-appendix reveal" data-reveal aria-labelledby="crew-ref-title">
+      <h2 id="crew-ref-title" class="crew-appendix__title">Quick reference</h2>
+      <div class="crew-appendix__scroll">
+        <table class="crew-ref-table">
+          <thead>
+            <tr>
+              <th scope="col">Crew</th>
+              <th scope="col">Role</th>
+              <th scope="col">Doctrine</th>
+              <th scope="col">Core mechanic</th>
+              <th scope="col">Best at</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Max</td><td>Engineer</td><td>Cooperative</td><td>Hull regen every round</td><td>Tanking, sustained survival</td></tr>
+            <tr><td>Roger</td><td>Analyst</td><td>Corporate</td><td>Danger reduction + Overcharge</td><td>Control, intel, energy efficiency</td></tr>
+            <tr><td>Maxine</td><td>Scavenger</td><td>Smuggler</td><td>Scavenge bonus on salvage</td><td>Max scrap per run</td></tr>
+            <tr><td>Munch</td><td>Medic</td><td>Cooperative</td><td>Extract bonus + hull-gated heals</td><td>Crisis recovery, early debt</td></tr>
+            <tr><td>Gwen</td><td>Guard</td><td>Corporate</td><td>Starting shields + shield hoarding</td><td>Blocking all damage</td></tr>
+            <tr><td>Olivia</td><td>Broker</td><td>Smuggler</td><td>Massive extract bonus + debt plays</td><td>Debt manipulation, big payouts</td></tr>
+            <tr><td>Rupert</td><td>Scrap Tech</td><td>Corporate</td><td>Extract bonus per bot deployed</td><td>Snowball economy, late-run payouts</td></tr>
+            <tr><td>Oliver</td><td>Shieldwright</td><td>Smuggler</td><td>Hull restored per shield consumed</td><td>Shield-to-heal loop, echo farming</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="crew-appendix reveal" data-reveal aria-labelledby="crew-hub-title">
+      <h2 id="crew-hub-title" class="crew-appendix__title">Crew assignment bonuses (between dives)</h2>
+      <p class="crew-appendix__lead">While not on a dive, crew stationed at hub positions contribute:</p>
+      <div class="crew-appendix__scroll">
+        <table class="crew-ref-table crew-ref-table--compact">
+          <thead>
+            <tr><th scope="col">Station</th><th scope="col">Bonus</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Repair Crew</td><td>+1 hull repair progress per run</td></tr>
+            <tr><td>Scav Prep</td><td>+₡500 scavenge bonus per dive</td></tr>
+            <tr><td>Medbay</td><td>+8 starting hull per dive</td></tr>
+            <tr><td>Market Ops</td><td>+5% salvage sale value, −₡100k starting debt</td></tr>
+            <tr><td>Research Lab</td><td>+1 research point per dive, −₡50k starting debt</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="crew-appendix crew-appendix--endings reveal" data-reveal aria-labelledby="crew-endings-title">
+      <h2 id="crew-endings-title" class="crew-appendix__title">Doctrine endings</h2>
+      <p class="crew-appendix__lead">Reaching ₡0 debt with a <strong>locked doctrine</strong> triggers a unique narrative ending:</p>
+      <ul class="crew-ending-list">
+        <li><strong>Corporate</strong>, &ldquo;You did not escape the machine. You became it. The machine considers this a success.&rdquo;</li>
+        <li><strong>Cooperative</strong>, &ldquo;This is the first debt-free outcome in VALU&apos;s operational history. VALU is going to listen to the remarks.&rdquo;</li>
+        <li><strong>Smuggler</strong>, &ldquo;Your file has been marked PENDING REVIEW. It will remain so. You prefer it that way.&rdquo;</li>
+      </ul>
+    </section>
+
+    <p class="crew-footnote">
+      Card IDs match in-game notation (build keys still use legacy ids: <code>imani</code>, <code>jax</code>, <code>sera</code>, <code>rook</code>, <code>del</code>, <code>vex</code>, <code>nyx</code> for Roger, Maxine, Munch, Gwen, Olivia, Rupert, Oliver). Pools are signature-weighted in loot; milestones and crew levels add specific unlocks across runs.
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__grid">
+      <div>
+        <p class="site-footer__brand">Sector Scavengers</p>
+        <p class="site-footer__tag">Signal &amp; Salvage</p>
+      </div>
+      <div class="site-footer__links">
+        <a href="../index.html#how">How it plays</a>
+        <a href="index.html">Crew</a>
+        <a href="../lore/index.html">Lore</a>
+        <a href="../index.html#cta">Wishlist</a>
+      </div>
+      <p class="site-footer__copy">© <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="../site.js"></script>
+  <script src="../makko-sprite.js" defer></script>
+</body>
+</html>
