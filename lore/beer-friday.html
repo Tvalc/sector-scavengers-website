@@ -322,6 +322,53 @@
               </div>
             </div>
 
+            <div
+              class="lore-showcase hero__comic-shell reveal"
+              data-reveal
+              data-lore-slideshow="../media/beer-friday/SS-Beer-Friday-Panel-1.png,../media/beer-friday/SS-Beer-Friday-Panel-2.png,../media/beer-friday/SS-Beer-Friday-Panel-3.png,../media/beer-friday/SS-Beer-Friday-Panel-4.png,../media/beer-friday/SS-Beer-Friday-Panel-5.png,../media/beer-friday/SS-Beer-Friday-Panel-6.png"
+              data-lore-slideshow-interval="4200"
+              aria-label="Beer Friday strip replay"
+            >
+              <span class="rules-comic__tag hero__comic-tag">Strip replay · Field feed</span>
+              <div class="rules-comic__frame hero__comic-frame" aria-hidden="true"></div>
+              <div class="hero__video-stage">
+                <div class="hero__video-frame">
+                  <div class="hero__video-hud" aria-hidden="true">
+                    <span>REPLAY</span><span class="hero__video-hud-blink">●</span>
+                  </div>
+                  <figure class="hero__figure">
+                    <div class="hero__figure-inner hero__figure-inner--cinema">
+                      <img
+                        class="lore-showcase__img"
+                        src="../media/beer-friday/SS-Beer-Friday-Panel-1.png"
+                        width="1920"
+                        height="1080"
+                        alt=""
+                        decoding="async"
+                        fetchpriority="low"
+                      >
+                    </div>
+                  </figure>
+                  <div class="hero__video-toolbar" data-lore-ss-toolbar role="group" aria-label="Strip replay controls">
+                    <div class="hero__video-toolbar-nav">
+                      <button type="button" class="hero__video-btn" data-lore-ss-prev aria-label="Previous frame">
+                        <span class="hero__video-btn-glyph" aria-hidden="true">◀</span>
+                      </button>
+                      <span class="hero__video-counter" aria-live="polite">
+                        <span data-lore-ss-index>1</span><span class="hero__video-counter-sep" aria-hidden="true">/</span><span data-lore-ss-total>6</span>
+                      </span>
+                      <button type="button" class="hero__video-btn" data-lore-ss-next aria-label="Next frame">
+                        <span class="hero__video-btn-glyph" aria-hidden="true">▶</span>
+                      </button>
+                    </div>
+                    <button type="button" class="hero__video-btn hero__video-btn--mute" data-lore-ss-autoplay aria-pressed="true" aria-label="Pause slideshow">
+                      <span class="hero__video-btn-label" data-lore-ss-autoplay-text>Pause</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="b-letter__prose">
               <p class="b-letter__close">, Hannah</p>
               <footer class="b-letter__sig">
@@ -374,6 +421,7 @@
   </footer>
 
   <script src="../site.js"></script>
+  <script src="../lore-strip-showcase.js" defer></script>
   <script src="../beer-friday.js" defer></script>
 </body>
 </html>
