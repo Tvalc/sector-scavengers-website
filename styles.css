@@ -2744,26 +2744,28 @@ code {
   border-radius: 6px;
 }
 
-/* Origin story: fixed 16:9 art, full bleed, captions 5px under art (overrides Beer Friday tall frames on this page only) */
-.origin-story-page .b-letter__comic {
+/* Origin story: 16:9 canvas inside rules figures (flip / cycle / static art) */
+.origin-story-page .b-letter__comic.rules-comic--lore {
   margin: 0.5rem 0;
   padding: 0;
 }
 
-.origin-story-page .b-strip__frame {
+.origin-story-page .rules-comic--lore .rules-comic__figure {
   min-height: 0;
+}
+
+.origin-story-page .rules-comic__figure--lore-canvas {
   aspect-ratio: 16 / 9;
   width: 100%;
+  margin: 0;
   padding: 0;
   border-radius: 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.origin-story-page .b-strip__img {
-  border-radius: 0;
-}
-
-.origin-story-page .b-strip__frame > .origin-flip,
-.origin-story-page .b-strip__frame > .origin-cycle {
+.origin-story-page .rules-comic__figure--lore-canvas > .origin-flip,
+.origin-story-page .rules-comic__figure--lore-canvas > .origin-cycle {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -2786,24 +2788,32 @@ code {
   object-fit: cover;
 }
 
-.origin-story-page .b-strip__cap {
-  padding: 5px clamp(0.65rem, 2vw, 1.1rem) 0.55rem;
-  gap: 0.45rem 0.65rem;
+.origin-story-page .rules-comic--lore .rules-comic__figure--hud:not(.rules-comic__figure--lore-canvas) {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
 }
 
-.origin-story-page .b-strip__n {
-  font-size: clamp(1.2rem, 3vw, 1.65rem);
+.origin-story-page .rules-comic--lore .rules-comic__figure--hud:not(.rules-comic__figure--lore-canvas) .rules-comic__art {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  border-radius: 0;
 }
 
-.origin-story-page .b-strip__text p {
+.origin-story-page .rules-comic--lore .rules-comic__caption {
+  padding-top: 0.15rem;
+}
+
+.origin-story-page .rules-comic--lore .rules-comic__caption p {
   margin: 0 0 0.4rem;
 }
 
-.origin-story-page .b-strip__text p + p {
+.origin-story-page .rules-comic--lore .rules-comic__caption p + p {
   margin-top: 0.3rem;
 }
 
-.origin-story-page .b-strip__text p:last-child {
+.origin-story-page .rules-comic--lore .rules-comic__caption p:last-child {
   margin-bottom: 0;
 }
 
@@ -3004,31 +3014,37 @@ a.lore-hub__card--live:hover {
   box-shadow: none;
 }
 
-.rules--strip-page .b-strip {
-  border-radius: 10px;
-  border: 1px solid rgba(0, 240, 255, 0.22);
-  background: linear-gradient(165deg, rgba(10, 18, 36, 0.75) 0%, rgba(4, 8, 18, 0.88) 100%);
-  box-shadow:
-    0 16px 40px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+.rules-comic__grid--lore {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2.2vw, 1.35rem);
+}
+
+.rules-comic--lore .rules-comic__narrator {
+  margin-bottom: 0.65rem;
+}
+
+.rules-comic__stinger {
+  margin-top: 0.65rem !important;
+  font-family: var(--font-mono);
+  font-size: 0.68rem !important;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(143, 154, 176, 0.95) !important;
+}
+
+/* Beer Friday lore: 16:9 art in homepage-style figures */
+.beer-page:not(.origin-story-page) .rules--strip-page .rules-comic--lore .rules-comic__figure--hud:not(.rules-comic__figure--lore-canvas) {
+  min-height: 0;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
 }
 
-.rules--strip-page .b-strip + .b-strip {
-  border-top: none;
-  margin-top: clamp(0.85rem, 2vw, 1.15rem);
-}
-
-.beer-page:not(.origin-story-page) .rules--strip-page .b-strip__frame {
+.beer-page:not(.origin-story-page) .rules--strip-page .rules-comic--lore .rules-comic__art {
   min-height: 0;
-  aspect-ratio: 16 / 9;
-}
-
-.rules--strip-page .b-strip__cap {
-  border-top: 1px solid rgba(0, 240, 255, 0.08);
-  background:
-    radial-gradient(circle at 18% 0%, rgba(0, 240, 255, 0.06), transparent 42%),
-    linear-gradient(180deg, rgba(10, 16, 30, 0.96) 0%, rgba(6, 10, 20, 0.98) 100%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .rules--strip-page .b-out {
@@ -3071,7 +3087,7 @@ a.lore-hub__card--live:hover {
   max-width: 44rem;
 }
 
-.rules--crew-page .crew-visual {
+.rules--crew-page .crew-visual:not(.crew-visual--comic) {
   margin-bottom: clamp(2rem, 5vw, 3.5rem);
 }
 
@@ -3234,6 +3250,39 @@ a.lore-hub__card--live:hover {
   position: relative;
   z-index: 1;
   min-width: 0;
+}
+
+.crew-visual.crew-visual--comic {
+  display: block;
+  padding: 0;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.crew-visual.crew-visual--comic::after {
+  display: none;
+}
+
+.rules--crew-page .rules-comic__panel.rules-comic__panel--crew-feed {
+  overflow: visible;
+}
+
+.rules--crew-page .rules-comic__figure--crew-video {
+  margin: 0;
+  min-height: clamp(200px, 36vw, 400px);
+  padding: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.rules--crew-page .rules-comic__figure--crew-video .crew-visual__stage {
+  width: 100%;
+}
+
+.rules--crew-page .rules-comic__figure--crew-video .hero__video-frame {
+  box-shadow: none;
 }
 
 .crew-visual .hero__video-frame {

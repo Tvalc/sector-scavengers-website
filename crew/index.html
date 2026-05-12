@@ -75,52 +75,69 @@
             </nav>
           </header>
 
-    <section class="crew-visual reveal" data-reveal aria-labelledby="crew-visual-title">
-      <div class="crew-visual__intro">
-        <p class="crew-visual__eyebrow">Archive feed</p>
-        <h2 id="crew-visual-title" class="crew-visual__title">Roster reels</h2>
-        <p class="crew-visual__desc">
-          Character moments, rigs, and field footage, cycle the feed or unmute when you thaw the audio lock.
+    <section class="crew-visual crew-visual--comic reveal" data-reveal aria-labelledby="crew-visual-title">
+      <h2 id="crew-visual-title" class="sr-only">Roster reels</h2>
+      <div class="rules-comic rules-comic--lore">
+        <p class="rules-comic__narrator" aria-hidden="true">
+          <span class="rules-comic__narrator-k">SS-Ω</span>
+          <span class="rules-comic__narrator-t">Dossier strip · Roster feed</span>
         </p>
-      </div>
-      <div class="crew-visual__stage">
-        <div class="hero__video-stage">
-          <div class="hero__video-frame">
-            <div class="hero__video-hud" aria-hidden="true">
-              <span>CASEFILE</span><span class="hero__video-hud-blink">●</span>
-            </div>
-            <figure class="hero__figure">
-              <div class="hero__figure-inner hero__figure-inner--cinema hero__figure-inner--crew-panel">
-                <video
-                  class="hero__video"
-                  muted
-                  playsinline
-                  preload="none"
-                  width="1920"
-                  height="1080"
-                  aria-label="Crew showcase video, characters excerpt."
-                  data-hero-videos="../media/website-video/characters.mp4"
-                  poster="../generated/hero-scav.webp"
-                ></video>
+        <div class="rules-comic__grid rules-comic__grid--lore">
+          <article class="rules-comic__panel rules-comic__panel--span rules-comic__panel--crew-feed">
+            <span class="rules-comic__tag">Archive · Roster reels</span>
+            <div class="rules-comic__frame" aria-hidden="true"></div>
+            <figure class="rules-comic__figure rules-comic__figure--hud rules-comic__figure--crew-video">
+              <div class="crew-visual__stage">
+                <div class="hero__video-stage">
+                  <div class="hero__video-frame">
+                    <div class="hero__video-hud" aria-hidden="true">
+                      <span>CASEFILE</span><span class="hero__video-hud-blink">●</span>
+                    </div>
+                    <div class="hero__figure">
+                      <div class="hero__figure-inner hero__figure-inner--cinema hero__figure-inner--crew-panel">
+                        <video
+                          class="hero__video"
+                          muted
+                          playsinline
+                          preload="none"
+                          width="1920"
+                          height="1080"
+                          aria-label="Crew showcase video, characters excerpt."
+                          data-hero-videos="../media/website-video/characters.mp4"
+                          poster="../generated/hero-scav.webp"
+                        ></video>
+                      </div>
+                    </div>
+                    <div class="hero__video-toolbar" data-hero-toolbar role="group" aria-label="Dossier video controls">
+                      <div class="hero__video-toolbar-nav">
+                        <button type="button" class="hero__video-btn" data-hero-prev aria-label="Previous clip">
+                          <span class="hero__video-btn-glyph" aria-hidden="true">◀</span>
+                        </button>
+                        <span class="hero__video-counter" aria-live="polite">
+                          <span data-hero-index>1</span><span class="hero__video-counter-sep" aria-hidden="true">/</span><span data-hero-total>1</span>
+                        </span>
+                        <button type="button" class="hero__video-btn" data-hero-next aria-label="Next clip">
+                          <span class="hero__video-btn-glyph" aria-hidden="true">▶</span>
+                        </button>
+                      </div>
+                      <button type="button" class="hero__video-btn hero__video-btn--mute" data-hero-mute aria-pressed="true" aria-label="Unmute video">
+                        <span class="hero__video-btn-label" data-hero-mute-text>Unmute</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </figure>
-            <div class="hero__video-toolbar" data-hero-toolbar role="group" aria-label="Dossier video controls">
-              <div class="hero__video-toolbar-nav">
-                <button type="button" class="hero__video-btn" data-hero-prev aria-label="Previous clip">
-                  <span class="hero__video-btn-glyph" aria-hidden="true">◀</span>
-                </button>
-                <span class="hero__video-counter" aria-live="polite">
-                  <span data-hero-index>1</span><span class="hero__video-counter-sep" aria-hidden="true">/</span><span data-hero-total>1</span>
-                </span>
-                <button type="button" class="hero__video-btn" data-hero-next aria-label="Next clip">
-                  <span class="hero__video-btn-glyph" aria-hidden="true">▶</span>
-                </button>
-              </div>
-              <button type="button" class="hero__video-btn hero__video-btn--mute" data-hero-mute aria-pressed="true" aria-label="Unmute video">
-                <span class="hero__video-btn-label" data-hero-mute-text>Unmute</span>
-              </button>
+            <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t rules-comic__bubble--wide">
+              <p>Casefile clip: cycle the feed, thaw the audio lock, see who you are when the air gets thin.</p>
+            </blockquote>
+            <div class="rules-comic__caption">
+              <p>
+                <span class="rules-comic__kicker">Field note</span>
+                Character moments, rigs, and field footage—the same leads as the dossiers below, different light.
+              </p>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
