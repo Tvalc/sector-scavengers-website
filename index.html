@@ -3,9 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Sector Scavengers: Signal & Salvage. Three-card hand, energy meter, every play can scar the hull, random rooms you scout with cards and tools, extract or die on the threshold, every three raids pay 20% of debt miss three and you are out, void XP unlocks cards, smuggle credits to build the hub. Pay the debt to win.">
-  <meta property="og:title" content="Sector Scavengers: Signal &amp; Salvage">
-  <title>Sector Scavengers: Signal &amp; Salvage</title>
+  <meta name="description" content="Sector Scavengers is a roguelike deck-builder built entirely with Makko AI. No drawing. No coding. See how the art and game logic were made, then build your own.">
+  <link rel="canonical" href="https://tvalc.github.io/sector-scavengers-website/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tvalc.github.io/sector-scavengers-website/">
+  <meta property="og:title" content="How to Make a Roguelike With AI | Sector Scavengers">
+  <meta property="og:description" content="Sector Scavengers is a roguelike deck-builder built entirely with Makko AI. No drawing. No coding. See how the art and game logic were made, then build your own.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Make a Roguelike With AI | Sector Scavengers">
+  <meta name="twitter:description" content="Sector Scavengers is a roguelike deck-builder built entirely with Makko AI. No drawing. No coding. See how the art and game logic were made, then build your own.">
+  <title>How to Make a Roguelike With AI | Sector Scavengers</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What can I use to make a roguelike game without coding?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Makko AI is an AI-powered 2D game studio where you describe game logic in plain English and the AI builds it. Sector Scavengers, a roguelike deck-builder with hull damage, debt mechanics, and void XP progression, was built using Makko AI's Art Studio and Code Studio. No coding required at any point. Try it free at makko.ai."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you keep art consistent across a roguelike with many rooms and characters?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Makko AI's Collections system lets you set a visual style once through concept art and every character, background, and room generated after that inherits the same style automatically. Sector Scavengers uses Collections to keep all its derelict ship environments and crew characters visually consistent without re-prompting the style for each asset."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to build a roguelike with AI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Sector Scavengers devlog documents how to make a roguelike with AI from concept to playable game using Makko AI. The art pipeline and game logic were built without drawing skills or coding knowledge. Most creators reach a playable state within their first session at makko.ai."
+        }
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
@@ -32,6 +71,7 @@
         <a href="lore/index.html">Lore</a>
         <a href="lore/origin-story.html">Origin</a>
         <a href="lore/beer-friday.html">Beer Friday</a>
+        <a href="#makko">Built with Makko</a>
         <a
           href="https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/"
           class="nav__cta"
@@ -439,6 +479,45 @@
       </div>
     </section>
 
+    <section id="makko" class="uplink reveal" data-reveal aria-labelledby="makko-title">
+      <div class="uplink__layout">
+        <div class="uplink__rail" aria-hidden="true">
+          <span>BUILT</span>
+          <span>SS-Ω</span>
+          <span>AI</span>
+        </div>
+        <div class="uplink__content">
+          <div class="uplink__panel">
+            <div class="uplink__flare" aria-hidden="true"></div>
+            <p class="section-eyebrow section-eyebrow--center">How it was made</p>
+            <h2 id="makko-title" class="section-title section-title--center">Built With Makko AI</h2>
+            <h2 class="section-title section-title--center" style="font-size:1.05rem; opacity:0.78; margin-top:0.25rem; letter-spacing:0.1em; text-transform:uppercase; color:#3b8edf;">How to make a roguelike with AI</h2>
+            <p class="uplink__text">
+              Sector Scavengers was <a href="https://www.makko.ai" target="_blank" rel="noopener noreferrer" style="color:#3b8edf;">built with Makko AI</a>, an AI 2D game studio where you describe what you want and the AI builds it. This page is also a working answer to how to make a roguelike with AI: a complete AI roguelike game, shipped without an art team. The entire art pipeline (every crew member, derelict ship environment, and UI element) was generated through Makko's Art Studio and Collections system. Collections sets the visual foundation once and every asset generated after that inherits it. No art background needed. No style re-prompting between sessions.
+            </p>
+            <p class="uplink__text">
+              The game logic, debt mechanics, and card system were built using Makko's Code Studio. Plain English descriptions. Playable result in a browser. The same loop you just read about was built without writing a line of code, real no-code game development that lets you build a roguelike without coding any of the systems by hand.
+            </p>
+            <p class="uplink__text">
+              If you want to build your own roguelike with AI, Makko is free to start. It works as a full roguelike game maker: art, characters, environments, and game logic in one tool. The devlog for Sector Scavengers covers the full build process from concept to playable game.
+            </p>
+            <div class="uplink__actions">
+              <a
+                class="btn btn--primary"
+                href="https://www.makko.ai/auth"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="background:#3b8edf; background-image:none; color:#ffffff; border-color:#3b8edf; box-shadow:0 0 28px rgba(59,142,223,0.32);"
+              >Build your own roguelike free</a>
+            </div>
+            <p class="uplink__text" style="text-align:center; margin-top:1rem;">
+              <a href="https://www.makko.ai/blog/no-code-roguelike-how-i-shipped-a-full-ai-generated-game-in-10-days-devlog-1/" target="_blank" rel="noopener noreferrer" style="color:#3b8edf;">Read the Sector Scavengers devlog</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="lore" class="home-lore reveal" data-reveal aria-labelledby="lore-module-title">
       <div class="home-lore__layout">
         <div class="home-lore__rail" aria-hidden="true">
@@ -487,7 +566,7 @@
             <h2 id="cta-title" class="section-title section-title--center">Wishlist if you like your odds salty</h2>
             <p class="uplink__text">
               Steam reads interest the way droids read forms: coldly and in your favor if the numbers move. Tap wishlist if you want the build notes
-              while we keep stacking hub debt, hull risk, and smuggled hope into the same loop you just read about.
+              while we keep stacking hub debt, hull risk, and smuggled hope into the same loop you just read about, <a href="https://www.makko.ai" target="_blank" rel="noopener noreferrer" style="color:#3b8edf;">built with Makko AI</a>.
             </p>
             <div class="uplink__actions">
               <a
@@ -517,7 +596,7 @@
         <a href="lore/beer-friday.html">Beer Friday</a>
         <a href="#cta">Wishlist</a>
       </div>
-      <p class="site-footer__copy">© <span id="year"></span></p>
+      <p class="site-footer__copy">© <span id="year"></span> · <a href="https://www.makko.ai" target="_blank" rel="noopener noreferrer" style="color:#3b8edf;">Built with Makko AI</a></p>
     </div>
   </footer>
 

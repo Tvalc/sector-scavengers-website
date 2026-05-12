@@ -1,24 +1,50 @@
 /**
  * Plays MAKKO Sprite Studio JSON + WebP atlases (same format as sector-scavengers/sprites-manifest.json).
  * Use: <canvas data-makko-json="…json" data-makko-image="…webp" width="200" height="234"></canvas>
+ * Optional: data-makko-frame-tag="Idle" — pick that frame tag by name (case-insensitive); default is first tag.
  */
 (function () {
+  function frameSortIndex(key) {
+    var m = /(\d+)(?=\.(png|webp)$)/i.exec(key);
+    return m ? parseInt(m[1], 10) : -1;
+  }
+
   function sortedFrameKeys(framesObj) {
-    return Object.keys(framesObj).sort(function (a, b) {
-      var ma = /_(\d+)\.png$/i.exec(a);
-      var mb = /_(\d+)\.png$/i.exec(b);
-      return (ma ? parseInt(ma[1], 10) : 0) - (mb ? parseInt(mb[1], 10) : 0);
+    var keys = Object.keys(framesObj);
+    return keys.sort(function (a, b) {
+      var ia = frameSortIndex(a);
+      var ib = frameSortIndex(b);
+      if (ia >= 0 && ib >= 0) return ia - ib;
+      if (ia >= 0) return -1;
+      if (ib >= 0) return 1;
+      return a.localeCompare(b);
     });
   }
 
-  function buildFrameList(data) {
+  function pickFrameTag(tags, preferredName) {
+    if (!tags || !tags.length) return null;
+    if (!preferredName) return tags[0];
+    var want = String(preferredName).trim().toLowerCase();
+    if (!want) return tags[0];
+    for (var i = 0; i < tags.length; i++) {
+      var n = tags[i] && tags[i].name;
+      if (n && String(n).toLowerCase() === want) return tags[i];
+    }
+    return tags[0];
+  }
+
+  function buildFrameList(data, preferredTagName) {
     var keys = sortedFrameKeys(data.frames);
     var tags = data.meta && data.meta.frameTags;
-    if (tags && tags.length && tags[0]) {
-      var t = tags[0];
-      var from = typeof t.from === "number" ? t.from : 0;
-      var to = typeof t.to === "number" ? t.to : keys.length - 1;
-      keys = keys.slice(from, to + 1);
+    if (tags && tags.length) {
+      var t = pickFrameTag(tags, preferredTagName);
+      if (t) {
+        var from = typeof t.from === "number" ? t.from : 0;
+        var to = typeof t.to === "number" ? t.to : keys.length - 1;
+        from = Math.max(0, Math.min(from, keys.length - 1));
+        to = Math.max(from, Math.min(to, keys.length - 1));
+        keys = keys.slice(from, to + 1);
+      }
     }
     return keys.map(function (k) {
       var f = data.frames[k];
@@ -38,8 +64,14 @@
     canvas.height = Math.floor(cssH * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, cssW, cssH);
-    var sw = frame.sw;
-    var sh = frame.sh;
+    var sw0 = frame.sw;
+    var sh0 = frame.sh;
+    var iw = img.naturalWidth || img.width;
+    var ih = img.naturalHeight || img.height;
+    var sx = Math.max(0, Math.min(frame.sx, Math.max(0, iw - 1)));
+    var sy = Math.max(0, Math.min(frame.sy, Math.max(0, ih - 1)));
+    var sw = Math.max(1, Math.min(sw0, iw - sx));
+    var sh = Math.max(1, Math.min(sh0, ih - sy));
     var scale = Math.min(cssW / sw, cssH / sh);
     var dw = sw * scale;
     var dh = sh * scale;
@@ -47,7 +79,17 @@
     var footY = cssH - 2;
     var dx = footX - anchor.x * scale;
     var dy = footY - anchor.y * scale;
-    ctx.drawImage(img, frame.sx, frame.sy, sw, sh, dx, dy, dw, dh);
+    ctx.drawImage(img, sx, sy, sw, sh, dx, dy, dw, dh);
+  }
+
+  function shouldUseCrossOrigin(imgUrl) {
+    try {
+      if (!/^https?:\/\//i.test(imgUrl)) return false;
+      var u = new URL(imgUrl, window.location.href);
+      return u.origin !== window.location.origin;
+    } catch (e) {
+      return false;
+    }
   }
 
   function boot(canvas) {
@@ -59,18 +101,20 @@
     var ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    var preferredTag = canvas.getAttribute("data-makko-frame-tag") || canvas.getAttribute("data-makko-tag");
+
     fetch(jsonUrl)
       .then(function (r) {
         if (!r.ok) throw new Error("json");
         return r.json();
       })
       .then(function (data) {
-        var frames = buildFrameList(data);
+        var frames = buildFrameList(data, preferredTag);
         if (!frames.length) return;
         var anchor = (data.meta && data.meta.anchor) || { x: 0, y: 0 };
 
         var img = new Image();
-        img.crossOrigin = "anonymous";
+        if (shouldUseCrossOrigin(imgUrl)) img.crossOrigin = "anonymous";
         img.onload = function () {
           function cssSize() {
             var r = canvas.getBoundingClientRect();
@@ -118,7 +162,28 @@
       });
   }
 
+  function bootWhenVisible(canvas) {
+    if (canvas.getAttribute("data-makko-booted") === "1") return;
+    if (!("IntersectionObserver" in window)) {
+      canvas.setAttribute("data-makko-booted", "1");
+      boot(canvas);
+      return;
+    }
+    var io = new IntersectionObserver(
+      function (entries, obs) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          obs.unobserve(canvas);
+          canvas.setAttribute("data-makko-booted", "1");
+          boot(canvas);
+        });
+      },
+      { rootMargin: "80px 0px", threshold: 0.05 },
+    );
+    io.observe(canvas);
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll("canvas[data-makko-json][data-makko-image]").forEach(boot);
+    document.querySelectorAll("canvas[data-makko-json][data-makko-image]").forEach(bootWhenVisible);
   });
 })();

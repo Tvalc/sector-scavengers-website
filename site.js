@@ -136,6 +136,51 @@
     }
   });
 
+  /** Crew dossier loops: prefer MP4 over GIF (smaller decode cost, `preload="none"`, lazy src). */
+  document.querySelectorAll("video.crew-card__loop[data-src]").forEach(function (crewVideo) {
+    var dataSrc = crewVideo.getAttribute("data-src");
+    if (!dataSrc) return;
+    var crewReduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (crewReduce) {
+      crewVideo.hidden = true;
+      crewVideo.removeAttribute("data-src");
+      return;
+    }
+    var card = crewVideo.closest(".crew-card");
+    var inView = false;
+    var loaded = false;
+    function bindPlayPause() {
+      if (!loaded || !crewVideo.getAttribute("src")) return;
+      if (document.hidden || !inView) crewVideo.pause();
+      else crewVideo.play().catch(function () {});
+    }
+    function loadAndPlay() {
+      if (!loaded) {
+        loaded = true;
+        crewVideo.src = dataSrc;
+        crewVideo.removeAttribute("data-src");
+        crewVideo.load();
+      }
+      bindPlayPause();
+    }
+    document.addEventListener("visibilitychange", bindPlayPause);
+    if ("IntersectionObserver" in window && card) {
+      var vis = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (e) {
+            inView = e.isIntersecting;
+          });
+          if (inView) loadAndPlay();
+          else bindPlayPause();
+        },
+        { rootMargin: "100px 0px", threshold: 0.08 },
+      );
+      vis.observe(card);
+    } else {
+      loadAndPlay();
+    }
+  });
+
   document.querySelectorAll(".promo-img").forEach(function (img) {
     img.addEventListener("error", function () {
       const slot =
