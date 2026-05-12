@@ -2428,7 +2428,385 @@ code {
   justify-content: center;
 }
 
-/* Lore hub index */
+/* Origin story lore page (shares beer strip shell; art in media/origin-story/) */
+.origin-flip {
+  position: relative;
+  width: 100%;
+  max-width: min(100%, 1100px);
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.origin-flip__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.origin-flip__img--a {
+  animation: originFlipA 3.2s ease-in-out infinite;
+}
+
+.origin-flip__img--b {
+  animation: originFlipB 3.2s ease-in-out infinite;
+}
+
+@keyframes originFlipA {
+  0%,
+  44% {
+    opacity: 1;
+  }
+
+  50%,
+  94% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes originFlipB {
+  0%,
+  44% {
+    opacity: 0;
+  }
+
+  50%,
+  94% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Full-bleed cycling stacks (same slot as panel 6 flip) */
+.origin-cycle {
+  position: relative;
+  width: 100%;
+  max-width: min(100%, 1100px);
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  overflow: hidden;
+}
+
+.origin-cycle__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.origin-cycle--2 .origin-cycle__img:nth-child(1) {
+  animation: originFlipA 3.2s ease-in-out infinite;
+}
+
+.origin-cycle--2 .origin-cycle__img:nth-child(2) {
+  animation: originFlipB 3.2s ease-in-out infinite;
+}
+
+@keyframes ocCycle3a {
+  0%,
+  2% {
+    opacity: 0;
+  }
+
+  4%,
+  31% {
+    opacity: 1;
+  }
+
+  33%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ocCycle3b {
+  0%,
+  33% {
+    opacity: 0;
+  }
+
+  35%,
+  64% {
+    opacity: 1;
+  }
+
+  66%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ocCycle3c {
+  0%,
+  66% {
+    opacity: 0;
+  }
+
+  68%,
+  97% {
+    opacity: 1;
+  }
+
+  99%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.origin-cycle--3 .origin-cycle__img:nth-child(1) {
+  animation: ocCycle3a 9s ease-in-out infinite;
+}
+
+.origin-cycle--3 .origin-cycle__img:nth-child(2) {
+  animation: ocCycle3b 9s ease-in-out infinite;
+}
+
+.origin-cycle--3 .origin-cycle__img:nth-child(3) {
+  animation: ocCycle3c 9s ease-in-out infinite;
+}
+
+@keyframes ocCycle4a {
+  0%,
+  1.5% {
+    opacity: 0;
+  }
+
+  3%,
+  22% {
+    opacity: 1;
+  }
+
+  24%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ocCycle4b {
+  0%,
+  24% {
+    opacity: 0;
+  }
+
+  26%,
+  47% {
+    opacity: 1;
+  }
+
+  49%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ocCycle4c {
+  0%,
+  49% {
+    opacity: 0;
+  }
+
+  51%,
+  72% {
+    opacity: 1;
+  }
+
+  74%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ocCycle4d {
+  0%,
+  74% {
+    opacity: 0;
+  }
+
+  76%,
+  97% {
+    opacity: 1;
+  }
+
+  99%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.origin-cycle--4 .origin-cycle__img:nth-child(1) {
+  animation: ocCycle4a 12s ease-in-out infinite;
+}
+
+.origin-cycle--4 .origin-cycle__img:nth-child(2) {
+  animation: ocCycle4b 12s ease-in-out infinite;
+}
+
+.origin-cycle--4 .origin-cycle__img:nth-child(3) {
+  animation: ocCycle4c 12s ease-in-out infinite;
+}
+
+.origin-cycle--4 .origin-cycle__img:nth-child(4) {
+  animation: ocCycle4d 12s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .origin-flip__img--a,
+  .origin-flip__img--b {
+    animation: none;
+  }
+
+  .origin-flip__img--a {
+    opacity: 1;
+  }
+
+  .origin-flip__img--b {
+    opacity: 0;
+  }
+
+  .origin-cycle__img {
+    animation: none !important;
+    opacity: 0;
+  }
+
+  .origin-cycle__img:first-child {
+    opacity: 1;
+  }
+}
+
+.origin-story-page .b-rail__label {
+  color: rgba(255, 176, 120, 0.55);
+}
+
+.origin-strip-quad {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.65rem;
+  width: 100%;
+  max-width: min(100%, 1100px);
+  margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+  .origin-strip-quad {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.origin-strip-triple {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.65rem;
+  width: 100%;
+  max-width: min(100%, 1100px);
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .origin-strip-triple {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.origin-strip-pair {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.65rem;
+  width: 100%;
+  max-width: min(100%, 1100px);
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .origin-strip-pair {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.origin-strip-quad__img,
+.origin-strip-triple__img,
+.origin-strip-pair__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Origin story: fixed 16:9 art, full bleed, captions 5px under art (overrides Beer Friday tall frames on this page only) */
+.origin-story-page .b-letter__comic {
+  margin: 0.5rem 0;
+  padding: 0;
+}
+
+.origin-story-page .b-strip__frame {
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  padding: 0;
+  border-radius: 0;
+}
+
+.origin-story-page .b-strip__img {
+  border-radius: 0;
+}
+
+.origin-story-page .b-strip__frame > .origin-flip,
+.origin-story-page .b-strip__frame > .origin-cycle {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+  border-radius: 0;
+}
+
+.origin-story-page .origin-cycle {
+  aspect-ratio: unset;
+}
+
+.origin-story-page .origin-flip {
+  aspect-ratio: unset;
+  background: #000;
+}
+
+.origin-story-page .origin-flip__img {
+  object-fit: cover;
+}
+
+.origin-story-page .b-strip__cap {
+  padding: 5px clamp(0.65rem, 2vw, 1.1rem) 0.55rem;
+  gap: 0.45rem 0.65rem;
+}
+
+.origin-story-page .b-strip__n {
+  font-size: clamp(1.2rem, 3vw, 1.65rem);
+}
+
+.origin-story-page .b-strip__text p {
+  margin: 0 0 0.4rem;
+}
+
+.origin-story-page .b-strip__text p + p {
+  margin-top: 0.3rem;
+}
+
+.origin-story-page .b-strip__text p:last-child {
+  margin-bottom: 0;
+}
+
 .lore-hub__main {
   max-width: 56rem;
   margin: 0 auto;

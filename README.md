@@ -83,6 +83,18 @@ If the smuggle panel is not in your **Origin Story** folder, add that file under
 
 If these files are missing from the repo, the page **still shows** the older `generated/*.webp` placeholders (via `site.js`) until you add the PNGs, **commit**, and push. Putting art only on your machine outside this folder (or only in another repo) will not update the live site.
 
+### Lore / Wake into ledger (full origin strip page)
+
+The longform origin comic lives at **`lore/origin-story.html`**. Art paths are **`media/origin-story/*.png`**.
+
+Use the same **Origin Story** export folder as `build:lore` (or `LORE_SRC`), then run:
+
+```bash
+npm run build:origin-media
+```
+
+That resizes and writes every panel the page expects into **`media/origin-story/`**. Caption copy and beat order live in **`lore/origin-story-plan.md`**.
+
 **Strip still blank and `generated/` empty locally?** The home page also falls back to baked art under `generated/*.webp` (from `npm run build:site-assets`). That script expects the Makko export `Backgrounds/Backgrounds` path in `scripts/bake-site-backgrounds.mjs`—adjust `BG_DIR` if your export lives elsewhere, then run:
 
 ```bash
