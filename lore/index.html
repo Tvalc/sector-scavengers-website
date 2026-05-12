@@ -42,16 +42,26 @@
     </div>
   </header>
 
-  <main id="main" class="lore-hub__main">
-    <header class="lore-hub__masthead">
-      <p class="lore-hub__eyebrow">Archive</p>
-      <h1 class="lore-hub__title">Lore</h1>
-      <p class="lore-hub__lede">
-        Rainforest-era files, alumni-list mythology, and the corporate weather that hardened long before <em>Signal &amp; Salvage</em>. More entries ship as we finish the web versions.
-      </p>
-    </header>
+  <main id="main">
+    <section class="rules rules--lore-hub" aria-label="Lore archive">
+      <div class="rules__veil" aria-hidden="true"></div>
+      <div class="rules__noise" aria-hidden="true"></div>
+      <div class="rules__layout">
+        <div class="rules__rail" aria-hidden="true">
+          <span>FILE</span>
+          <span>SS-Ω</span>
+          <span>ARCH</span>
+        </div>
+        <div class="rules__strip lore-hub__strip">
+          <header class="lore-hub__masthead strip-page__masthead reveal" data-reveal aria-labelledby="lore-hub-title">
+            <p class="rules__eyebrow lore-hub__eyebrow">Archive</p>
+            <h1 id="lore-hub-title" class="rules__title lore-hub__title">Lore</h1>
+            <p class="rules__lead lore-hub__lede">
+              Rainforest-era files, alumni-list mythology, and the corporate weather that hardened long before <em>Signal &amp; Salvage</em>. More entries ship as we finish the web versions.
+            </p>
+          </header>
 
-    <ul class="lore-hub__list">
+          <ul class="lore-hub__list">
       <li>
         <a class="lore-hub__card lore-hub__card--live" href="origin-story.html">
           <span class="lore-hub__card-tag">Live</span>
@@ -94,11 +104,14 @@
           <p class="lore-hub__card-desc">Launch readiness, one burning document, and “how we invest in quality.”</p>
         </div>
       </li>
-    </ul>
+          </ul>
 
-    <p class="lore-hub__footnote">
-      Source markdown for the vault titles lives in the <span class="lore-hub__mono">sector-scavengers</span> repo; web editions rotate in as art and layout land.
-    </p>
+          <p class="lore-hub__footnote">
+            Source markdown for the vault titles lives in the <span class="lore-hub__mono">sector-scavengers</span> repo; web editions rotate in as art and layout land.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">

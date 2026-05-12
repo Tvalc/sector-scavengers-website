@@ -42,28 +42,38 @@
     </div>
   </header>
 
-  <main id="main" class="crew-main">
-    <nav class="lore-breadcrumb" aria-label="Breadcrumb">
-      <a href="../index.html">Home</a><span aria-hidden="true">/</span><span>Crew</span>
-    </nav>
+  <main id="main" class="crew-page-main">
+    <section class="rules rules--crew-page" aria-label="Crew dossier">
+      <div class="rules__veil" aria-hidden="true"></div>
+      <div class="rules__noise" aria-hidden="true"></div>
+      <div class="rules__layout">
+        <div class="rules__rail" aria-hidden="true">
+          <span>FILE</span>
+          <span>SS-Ω</span>
+          <span>CREW</span>
+        </div>
+        <div class="rules__strip">
+          <nav class="lore-breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a><span aria-hidden="true">/</span><span>Crew</span>
+          </nav>
 
-    <header class="crew-hero">
-      <p class="crew-hero__eyebrow">Cryo ledger · Personnel</p>
-      <h1 class="crew-hero__title">Crew dossier</h1>
-      <p class="crew-hero__lead">
-        Pick your <strong>lead</strong> before a run, that crew member is who you are playing as. <strong>Max</strong> (cooperative engineer) is the baseline face and listed first; the other seven dossiers sit under <strong>doctrine</strong> headers (Corporate, Cooperative, Smuggler).
-      </p>
-      <nav class="crew-quick" aria-label="Jump to crew member">
-        <a class="crew-quick__pill" href="#max">Max</a>
-        <a class="crew-quick__pill" href="#roger">Roger</a>
-        <a class="crew-quick__pill" href="#maxine">Maxine</a>
-        <a class="crew-quick__pill" href="#munch">Munch</a>
-        <a class="crew-quick__pill" href="#gwen">Gwen</a>
-        <a class="crew-quick__pill" href="#olivia">Olivia</a>
-        <a class="crew-quick__pill" href="#rupert">Rupert</a>
-        <a class="crew-quick__pill" href="#oliver">Oliver</a>
-      </nav>
-    </header>
+          <header class="strip-page__masthead crew-page__masthead reveal" data-reveal aria-labelledby="crew-page-title">
+            <p class="rules__eyebrow crew-page__eyebrow">Cryo ledger · Personnel</p>
+            <h1 id="crew-page-title" class="rules__title">Crew dossier</h1>
+            <p class="rules__lead crew-page__lead">
+              Pick your <strong>lead</strong> before a run, that crew member is who you are playing as. <strong>Max</strong> (cooperative engineer) is the baseline face and listed first; the other seven dossiers sit under <strong>doctrine</strong> headers (Corporate, Cooperative, Smuggler).
+            </p>
+            <nav class="crew-quick" aria-label="Jump to crew member">
+              <a class="crew-quick__pill" href="#max">Max</a>
+              <a class="crew-quick__pill" href="#roger">Roger</a>
+              <a class="crew-quick__pill" href="#maxine">Maxine</a>
+              <a class="crew-quick__pill" href="#munch">Munch</a>
+              <a class="crew-quick__pill" href="#gwen">Gwen</a>
+              <a class="crew-quick__pill" href="#olivia">Olivia</a>
+              <a class="crew-quick__pill" href="#rupert">Rupert</a>
+              <a class="crew-quick__pill" href="#oliver">Oliver</a>
+            </nav>
+          </header>
 
     <section class="crew-visual reveal" data-reveal aria-labelledby="crew-visual-title">
       <div class="crew-visual__intro">
@@ -713,6 +723,9 @@
     <p class="crew-footnote">
       Card IDs match in-game notation (build keys still use legacy ids: <code>imani</code>, <code>jax</code>, <code>sera</code>, <code>rook</code>, <code>del</code>, <code>vex</code>, <code>nyx</code> for Roger, Maxine, Munch, Gwen, Olivia, Rupert, Oliver). Pools are signature-weighted in loot; milestones and crew levels add specific unlocks across runs.
     </p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">

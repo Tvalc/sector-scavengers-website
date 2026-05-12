@@ -62,37 +62,35 @@
     </ol>
   </aside>
 
-  <main id="main" class="beer">
-    <div class="beer__veil" aria-hidden="true"></div>
-    <div class="beer__noise" aria-hidden="true"></div>
-    <div class="beer__scan beer__scan--slow" aria-hidden="true"></div>
+  <main id="main" class="strip-page">
+    <section class="rules rules--strip-page" aria-label="Origin story comic strip">
+      <div class="rules__veil" aria-hidden="true"></div>
+      <div class="rules__noise" aria-hidden="true"></div>
+      <div class="rules__layout">
+        <div class="rules__rail" aria-hidden="true">
+          <span>FILE</span>
+          <span>SS-Ω</span>
+          <span>LORE</span>
+        </div>
+        <div class="rules__strip">
+          <nav class="lore-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Lore</a>
+            <span aria-hidden="true">/</span>
+            <span>Wake into ledger</span>
+          </nav>
 
-    <nav class="lore-breadcrumb" aria-label="Breadcrumb">
-      <a href="index.html">Lore</a>
-      <span aria-hidden="true">/</span>
-      <span>Wake into ledger</span>
-    </nav>
+          <header class="strip-page__masthead reveal" data-reveal aria-labelledby="strip-page-title">
+            <p class="strip-page__tags">
+              <span class="strip-page__tag">LOR-ARCH</span>
+              <span class="strip-page__tag">Cryo debt</span>
+              <span class="strip-page__tag">Fiction</span>
+            </p>
+            <p class="strip-page__subject">Re: Orientation attachment (origin strip)</p>
+            <h1 id="strip-page-title" class="rules__title">Wake into ledger</h1>
+            <p class="rules__lead strip-page__lead">From layoff deck to debris field. Internal panels, not HR approved.</p>
+          </header>
 
-    <header class="b-gate" id="b-gate">
-      <div class="b-gate__grid" aria-hidden="true"></div>
-      <div class="b-gate__inner">
-        <p class="b-gate__meta">
-          <span class="b-gate__meta-tag">LOR-ARCH</span>
-          <span class="b-gate__meta-tag">Cryo debt</span>
-          <span class="b-gate__meta-tag">Fiction</span>
-        </p>
-        <p class="b-gate__subject">Re: Orientation attachment (origin strip)</p>
-        <h1 class="b-gate__title">Wake into ledger</h1>
-        <p class="b-gate__lede">From layoff deck to debris field. Internal panels, not HR approved.</p>
-        <p class="b-gate__hint">Scroll to open the file.</p>
-      </div>
-      <a class="b-gate__jump" href="#b-letter">
-        <span class="b-gate__jump-line" aria-hidden="true"></span>
-        <span class="sr-only">Skip to message</span>
-      </a>
-    </header>
-
-    <article class="b-story">
+          <article class="b-story strip-page__story">
       <div class="b-letter" id="b-letter">
         <div class="b-letter__shell">
           <div class="b-letter__toolbar" aria-hidden="true">
@@ -390,7 +388,10 @@
           >Wishlist on Steam</a>
         </div>
       </footer>
-    </article>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
