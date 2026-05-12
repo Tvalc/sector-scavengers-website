@@ -1227,6 +1227,17 @@ code {
   object-position: center 28%;
 }
 
+/* Lore / long-form strips: full-width panel art (not homepage thumbnail crop) */
+.rules-comic--lore .rules-comic__art {
+  max-height: none;
+  min-height: 0;
+  object-position: center center;
+}
+
+.rules-comic--lore .rules-comic__figure--hud:not(.rules-comic__figure--crew-video) {
+  min-height: 0;
+}
+
 .rules-comic__panel--wide .rules-comic__art {
   max-height: 220px;
 }
