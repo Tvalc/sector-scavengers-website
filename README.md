@@ -43,6 +43,52 @@ npm run preview
 
 Then open `http://127.0.0.1:4173/`.
 
+### Lore / origin comic PNGs (home page strip)
+
+The prologue and “Laws of the loop” panels load **only** from this folder (repo root):
+
+`lore/origin/`
+
+**Get the NEW strip on disk (one command):** put the six PNGs in **`lore/origin-source/`** (same repo, folder next to `origin/`) with the **exact names** in the table below — *or* leave them in your Makko **Backgrounds/Backgrounds** export if that path still exists — then run:
+
+```bash
+npm run build:lore
+```
+
+That writes **`lore/origin/*.png`** (max width 2200px) **and** matching **`lore/origin/*.webp`** for faster loads. The site uses **WebP first** with **PNG fallback** (`<picture>`).
+
+If your redo export is on disk next to this repo as **`..\Sector-Scavengers-SS-Redo\<stamp>\Sector Scavengers\Lore\Origin Story`** (for example `sector-scavengers-2026-04-30T1144`), **`npm run build:lore`** picks that folder automatically—no `LORE_SRC` needed. If you add a newer `<stamp>` folder, the script tries the newest name first.
+
+If your art lives under **`Sector Scavengers\Lore\Origin Story`** inside **`sector-scavengers`** instead, that path is also checked.
+
+**Or** point at any folder on your machine:
+
+```bash
+# PowerShell
+$env:LORE_SRC="C:\full\path\to\Origin Story"; npm run build:lore
+```
+
+**Exact filenames** (all `.png`; GitHub Pages is case-sensitive—use lowercase `.png`):
+
+| File |
+|------|
+| `SS-Background-Origin-Story-Panel-1.png` |
+| `SS-Background-Origin-Warehouse-Panel-6b.png` |
+| `SS-Background-Origin-ShipLoad-Panel-8b.png` |
+| `PlayArea.png` |
+| `SS-Website-Explore-Panel.png` |
+| `SS-Background-Website-Panel-Smuggle.png` |
+
+If the smuggle panel is not in your **Origin Story** folder, add that file under the same name to **Origin Story**, **`lore/origin-source/`**, or your `LORE_SRC` folder so `build:lore` can copy it; otherwise that panel is skipped and the old `generated/` fallback still applies.
+
+If these files are missing from the repo, the page **still shows** the older `generated/*.webp` placeholders (via `site.js`) until you add the PNGs, **commit**, and push. Putting art only on your machine outside this folder (or only in another repo) will not update the live site.
+
+**Strip still blank and `generated/` empty locally?** The home page also falls back to baked art under `generated/*.webp` (from `npm run build:site-assets`). That script expects the Makko export `Backgrounds/Backgrounds` path in `scripts/bake-site-backgrounds.mjs`—adjust `BG_DIR` if your export lives elsewhere, then run:
+
+```bash
+npm run build:site-assets
+```
+
 **Videos look broken (black feed, spinner, or Codec error)?** Large `.mp4` files live in **Git LFS**. If they were never fetched, disk only has tiny **pointer text files** (about 130 bytes), not video, the hero `<video>` still requests them, but browsers cannot decode that. Fix:
 
 ```bash

@@ -146,6 +146,20 @@
     });
   });
 
+  /** Comic strip: load `lore/origin/*.png` when present; otherwise one swap to `generated/*.webp`. */
+  document.querySelectorAll("img[data-comic-fallback]").forEach(function (img) {
+    var fb = img.getAttribute("data-comic-fallback");
+    if (!fb) return;
+    img.addEventListener("error", function onComicArtErr() {
+      if (img.getAttribute("data-comic-fallback-used") === "1") {
+        img.removeEventListener("error", onComicArtErr);
+        return;
+      }
+      img.setAttribute("data-comic-fallback-used", "1");
+      img.src = fb;
+    });
+  });
+
   const revealEls = document.querySelectorAll("[data-reveal]");
   const motionOk = window.matchMedia("(prefers-reduced-motion: no-preference)").matches;
   if (!motionOk || !("IntersectionObserver" in window)) {

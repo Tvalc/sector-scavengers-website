@@ -6,6 +6,7 @@
     "preview": "node scripts/preview.mjs",
     "sync:hero-videos": "node scripts/sync-hero-videos.mjs",
     "build:backgrounds": "node scripts/bake-site-backgrounds.mjs",
+    "build:lore": "node scripts/bake-lore-origin.mjs",
     "build:assets": "node scripts/extract-promo-frames.mjs",
     "build:site-assets": "npm run build:backgrounds && npm run build:assets"
   },

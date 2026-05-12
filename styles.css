@@ -1151,6 +1151,10 @@ code {
   overflow: hidden;
 }
 
+.rules-comic__panel--play-duo {
+  overflow: visible;
+}
+
 .rules-comic__tag {
   position: relative;
   z-index: 6;
@@ -1194,6 +1198,17 @@ code {
     linear-gradient(180deg, rgba(6, 10, 22, 0.9), rgba(2, 4, 10, 0.95));
 }
 
+/* Prologue · Your future: show lower third of art (cover crop was hiding the deck) */
+.rules-comic__figure--arc-future .rules-comic__art {
+  object-position: center bottom;
+}
+
+@media (min-width: 700px) {
+  .rules-comic__panel--arc-wide .rules-comic__figure--arc-future .rules-comic__art {
+    max-height: 220px;
+  }
+}
+
 .rules-comic__figure--void {
   min-height: clamp(100px, 18vw, 140px);
   background:
@@ -1214,6 +1229,145 @@ code {
 
 .rules-comic__panel--wide .rules-comic__art {
   max-height: 220px;
+}
+
+/* Beat 01+02: full-width playfield, uncropped; bubbles + captions sit below art */
+.rules-comic__panel--play-duo .rules-comic__figure--play-duo {
+  min-height: 0;
+  max-height: none;
+  flex-shrink: 0;
+}
+
+.rules-comic__panel--play-duo .rules-comic__figure--play-duo .rules-comic__art {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.rules-comic__play-duo-stage {
+  position: relative;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* Beat 02 bubble: over SYSTEMS / energy bars, tail aims down at the tank UI */
+.rules-comic__bubble--play-systems {
+  position: absolute;
+  z-index: 5;
+  left: clamp(0.1rem, 1.1vw, 0.55rem);
+  top: auto;
+  bottom: clamp(10%, 5.5rem, 34%);
+  max-width: min(17.5rem, 52%);
+  margin: 0;
+  padding: 0.55rem 0.7rem;
+  font-size: clamp(0.82rem, 1.85vw, 0.98rem);
+  /* Sit on the playfield UI band, then lift ~200px onto the art (chevron toward orange bars) */
+  transform: translateY(calc(50px + clamp(-240px, -28vw, -120px)));
+  box-shadow:
+    0 3px 0 rgba(0, 0, 0, 0.28),
+    0 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.rules-comic__panel--play-duo .rules-comic__bubble--play-hand {
+  transform: translateY(-100px);
+}
+
+.rules-comic__panel--play-duo .rules-comic__bubble--play-systems {
+  margin: 0;
+}
+
+.rules-comic__bubble--tail-b::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -11px;
+  width: 0;
+  height: 0;
+  transform: translateX(-50%);
+  border: 9px solid transparent;
+  border-top-color: rgba(0, 240, 255, 0.55);
+  border-bottom: 0;
+}
+
+.rules-comic__bubble--tail-b::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(248, 250, 252, 0.96);
+  border-bottom: 0;
+}
+
+.rules-comic__bubble--play-systems.rules-comic__bubble--tail-b::after,
+.rules-comic__bubble--play-systems.rules-comic__bubble--tail-b::before {
+  left: 22%;
+  transform: translateX(-50%);
+}
+
+.rules-comic__panel--play-duo .rules-comic__play-duo-cols {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: 0.55rem;
+  padding: 0.3rem 0.45rem 0.4rem;
+  border-top: 1px solid rgba(0, 240, 255, 0.12);
+}
+
+@media (min-width: 700px) {
+  .rules-comic__panel--play-duo .rules-comic__play-duo-cols {
+    padding: 0.3rem 0.7rem 0.4rem;
+  }
+}
+
+.rules-comic__play-duo-mechanics {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.55rem;
+  align-items: start;
+}
+
+@media (min-width: 700px) {
+  .rules-comic__play-duo-mechanics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem 0.9rem;
+  }
+}
+
+.rules-comic__panel--play-duo .rules-comic__play-duo-mechanics .rules-comic__caption {
+  margin-top: 0;
+  padding: 0.55rem 0.7rem 0.6rem;
+}
+
+.rules-comic__panel--play-duo .rules-comic__bubble {
+  margin: 0 0.85rem 0;
+}
+
+/* Beat 06 · Smuggled ledger: full SS-Background-Website-Panel-Smuggle art, uncropped */
+.rules-comic__panel--beat-smuggle .rules-comic__figure--hud {
+  min-height: 0;
+  max-height: none;
+  flex-shrink: 0;
+}
+
+.rules-comic__panel--beat-smuggle .rules-comic__art {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.rules-comic__panel--beat-smuggle .rules-comic__bubble {
+  margin: 0.65rem 0.85rem 0;
 }
 
 .rules-comic__bubble {
