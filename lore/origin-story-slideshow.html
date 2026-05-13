@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Auto-playing slideshow of the Wake into ledger origin strip. Record for social, or share the link.">
+  <title>Origin strip slideshow · Lore · Sector Scavengers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .origin-ss-page {
+      margin: 0;
+      min-height: 100vh;
+      background: #0a0c10;
+      color: #e8ecf1;
+      font-family: "DM Sans", system-ui, sans-serif;
+    }
+    .origin-ss__topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(0, 0, 0, 0.35);
+    }
+    .origin-ss__topbar a {
+      color: #7eb8ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .origin-ss__topbar a:hover {
+      text-decoration: underline;
+    }
+    .origin-ss__title {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      opacity: 0.92;
+    }
+    .origin-ss {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem 1rem 1.5rem;
+      box-sizing: border-box;
+    }
+    .origin-ss__stage-wrap {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #11151c;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+    }
+    .origin-ss__ratio {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+    .origin-ss__img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .origin-ss__tag {
+      position: absolute;
+      top: 0.65rem;
+      left: 0.65rem;
+      margin: 0;
+      padding: 0.25rem 0.55rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #0a0c10;
+      background: #e8d84a;
+      border-radius: 4px;
+    }
+    .origin-ss__caption {
+      margin: 0;
+      padding: 1rem 1.15rem 1.15rem;
+      font-size: clamp(0.95rem, 2.1vw, 1.15rem);
+      line-height: 1.45;
+      font-weight: 500;
+      background: linear-gradient(180deg, #141a22 0%, #0f1318 100%);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .origin-ss__progress-track {
+      height: 3px;
+      background: rgba(255, 255, 255, 0.08);
+      transform-origin: left;
+    }
+    .origin-ss__progress-bar {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, #3b8edf, #7eb8ff);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: none;
+    }
+    .origin-ss__hud {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-top: 0.85rem;
+    }
+    .origin-ss__hud-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .origin-ss__btn {
+      font: inherit;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.06);
+      color: #fff;
+      padding: 0.45rem 0.85rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    .origin-ss__btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+    .origin-ss__btn--primary {
+      background: #3b8edf;
+      border-color: #3b8edf;
+      color: #fff;
+    }
+    .origin-ss__btn--primary:hover {
+      filter: brightness(1.06);
+    }
+    .origin-ss__counter {
+      font-size: 0.85rem;
+      font-variant-numeric: tabular-nums;
+      opacity: 0.85;
+      min-width: 4.5rem;
+      text-align: center;
+    }
+    .origin-ss__help {
+      margin: 0.75rem 0 0;
+      font-size: 0.78rem;
+      line-height: 1.5;
+      opacity: 0.65;
+      max-width: 52rem;
+    }
+    .origin-ss__help kbd {
+      font: 0.78rem ui-monospace, monospace;
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.06);
+    }
+    body.origin-ss--clean .origin-ss__topbar,
+    body.origin-ss--clean .origin-ss__hud,
+    body.origin-ss--clean .origin-ss__help,
+    body.origin-ss--clean .origin-ss__progress-track {
+      display: none !important;
+    }
+    body.origin-ss--clean .origin-ss {
+      padding: 0;
+      max-width: none;
+    }
+    body.origin-ss--clean .origin-ss__stage-wrap {
+      border-radius: 0;
+      border: none;
+      max-height: 100vh;
+    }
+    body.origin-ss--clean .origin-ss__ratio {
+      aspect-ratio: 16 / 9;
+      max-height: 100vh;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body class="origin-ss-page">
+  <header class="origin-ss__topbar">
+    <a href="origin-story.html">← Wake into ledger</a>
+    <h1 class="origin-ss__title">Origin strip · Slideshow</h1>
+    <a href="index.html">Lore hub</a>
+  </header>
+
+  <main
+    class="origin-ss"
+    id="origin-ss-root"
+    data-interval="4200"
+    aria-label="Origin story slideshow"
+  >
+    <div class="origin-ss__stage-wrap">
+      <div class="origin-ss__progress-track" aria-hidden="true">
+        <div class="origin-ss__progress-bar" data-origin-ss-progress></div>
+      </div>
+      <div class="origin-ss__ratio">
+        <img
+          class="origin-ss__img"
+          data-origin-ss-img
+          src="../media/origin-story/SS-Background-Origin-Story-Panel-1.png"
+          width="1200"
+          height="675"
+          alt=""
+          decoding="async"
+          fetchpriority="high"
+        >
+        <p class="origin-ss__tag" data-origin-ss-tag>01 · Layoffs</p>
+      </div>
+      <blockquote class="origin-ss__caption" data-origin-ss-caption>
+        In 2026 the layoffs stop pretending to be temporary.
+      </blockquote>
+    </div>
+
+    <div class="origin-ss__hud" data-origin-ss-hud>
+      <div class="origin-ss__hud-nav">
+        <button type="button" class="origin-ss__btn" data-origin-ss-prev aria-label="Previous slide">◀ Prev</button>
+        <span class="origin-ss__counter" aria-live="polite">
+          <span data-origin-ss-index>1</span> / <span data-origin-ss-total>20</span>
+        </span>
+        <button type="button" class="origin-ss__btn" data-origin-ss-next aria-label="Next slide">Next ▶</button>
+      </div>
+      <div class="origin-ss__hud-nav">
+        <button type="button" class="origin-ss__btn origin-ss__btn--primary" data-origin-ss-play aria-pressed="true">Pause</button>
+        <button type="button" class="origin-ss__btn" data-origin-ss-fs type="button">Fullscreen</button>
+      </div>
+    </div>
+
+    <p class="origin-ss__help" data-origin-ss-help>
+      <strong>Recording:</strong> use <kbd>Fullscreen</kbd> then your OS screen recorder. Add <code>?record=1</code> to the URL to hide this chrome from the first frame.
+      Press <kbd>H</kbd> to toggle clean mode (image + caption only). <kbd>Space</kbd> / arrow keys advance. Optional <code>?interval=5000</code> sets milliseconds per slide (minimum 1200).
+    </p>
+  </main>
+
+  <script src="../origin-story-slideshow.js" defer></script>
+</body>
+</html>

@@ -2311,6 +2311,11 @@ code {
   color: rgba(143, 154, 176, 0.95);
 }
 
+/* CTA above origin strip comic grid */
+.b-letter__slideshow-cta {
+  margin: 0 0 0.65rem;
+}
+
 /* In-story “Xeroxed strip”, edge-to-edge inside the email shell (comic page gutters) */
 .b-letter__comic {
   position: relative;
