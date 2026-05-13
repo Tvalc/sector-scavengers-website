@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Comic panel placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1218"/>
+      <stop offset="55%" style="stop-color:#0d1824"/>
+      <stop offset="100%" style="stop-color:#061018"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="rgba(0,255,170,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+  <rect x="32" y="32" width="1136" height="611" rx="10" fill="none" stroke="rgba(0,240,255,0.25)" stroke-width="2" stroke-dasharray="12 8"/>
+  <text x="600" y="318" text-anchor="middle" fill="rgba(0,240,255,0.32)" font-family="JetBrains Mono,Consolas,monospace" font-size="12">Wireframe underlay · full prompt layered in HTML</text>
+  <text x="600" y="352" text-anchor="middle" fill="rgba(200,220,235,0.38)" font-family="system-ui,Segoe UI,sans-serif" font-size="13">BOOK 1 / DEBT PROTOCOL / WEB LORE</text>
+</svg>

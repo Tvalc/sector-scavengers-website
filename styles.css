@@ -1120,7 +1120,7 @@ code {
 }
 
 .rules-comic__panel--arc-wide .rules-comic__bubble--wide,
-.rules-comic__panel--arc-wide .rules-comic__caption {
+.rules-comic__panel--arc-wide .rules-comic__strip-note {
   align-self: center;
   max-width: 40rem;
   width: calc(100% - 1.7rem);
@@ -1129,7 +1129,7 @@ code {
 }
 
 .rules-comic__panel--wide .rules-comic__bubble--wide,
-.rules-comic__panel--wide .rules-comic__caption {
+.rules-comic__panel--wide .rules-comic__strip-note {
   align-self: center;
   max-width: 40rem;
   width: calc(100% - 1.7rem);
@@ -1242,7 +1242,7 @@ code {
   max-height: 220px;
 }
 
-/* Beat 01+02: full-width playfield, uncropped; bubbles + captions sit below art */
+/* Beat 01+02: full-width playfield, uncropped; bubbles + strip notes sit below art */
 .rules-comic__panel--play-duo .rules-comic__figure--play-duo {
   min-height: 0;
   max-height: none;
@@ -1352,7 +1352,7 @@ code {
   }
 }
 
-.rules-comic__panel--play-duo .rules-comic__play-duo-mechanics .rules-comic__caption {
+.rules-comic__panel--play-duo .rules-comic__play-duo-mechanics .rules-comic__strip-note {
   margin-top: 0;
   padding: 0.55rem 0.7rem 0.6rem;
 }
@@ -1433,7 +1433,7 @@ code {
   border-top: 0;
 }
 
-.rules-comic__caption {
+.rules-comic__strip-note {
   margin-top: auto;
   padding: 0.85rem 0.95rem 1rem;
   font-family: var(--font-sans);
@@ -1445,11 +1445,11 @@ code {
   background: rgba(0, 0, 0, 0.28);
 }
 
-.rules-comic__caption p {
+.rules-comic__strip-note p {
   margin: 0 0 0.65rem;
 }
 
-.rules-comic__caption p:last-child {
+.rules-comic__strip-note p:last-child {
   margin-bottom: 0;
 }
 
@@ -2812,19 +2812,19 @@ code {
   border-radius: 0;
 }
 
-.origin-story-page .rules-comic--lore .rules-comic__caption {
+.origin-story-page .rules-comic--lore .rules-comic__strip-note {
   padding-top: 0.15rem;
 }
 
-.origin-story-page .rules-comic--lore .rules-comic__caption p {
+.origin-story-page .rules-comic--lore .rules-comic__strip-note p {
   margin: 0 0 0.4rem;
 }
 
-.origin-story-page .rules-comic--lore .rules-comic__caption p + p {
+.origin-story-page .rules-comic--lore .rules-comic__strip-note p + p {
   margin-top: 0.3rem;
 }
 
-.origin-story-page .rules-comic--lore .rules-comic__caption p:last-child {
+.origin-story-page .rules-comic--lore .rules-comic__strip-note p:last-child {
   margin-bottom: 0;
 }
 
@@ -4001,4 +4001,476 @@ a.lore-hub__card--live:hover {
 .crew-ending-list strong {
   color: var(--cyan);
   font-weight: 700;
+}
+
+/* —— Novel lore (Debt Protocol chapter pages) —— */
+.novel-inline-code {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.88em;
+  color: rgba(0, 255, 200, 0.92);
+  background: rgba(0, 0, 0, 0.35);
+  padding: 0.08em 0.35em;
+  border-radius: 4px;
+}
+
+.novel-chapter__pager {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem 1rem;
+}
+
+.novel-pager__edge {
+  display: inline-block;
+  min-width: 2.75rem;
+  text-align: center;
+  font-weight: 600;
+  color: rgba(200, 220, 240, 0.35);
+  user-select: none;
+}
+
+.novel-hub__section .lore-hub__lede {
+  max-width: 40rem;
+}
+
+.novel-hub__list .lore-hub__card-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.novel-hub__footnote {
+  margin-top: 0.5rem;
+}
+
+.novel-chapter-page .b-rail__label {
+  letter-spacing: 0.06em;
+}
+
+/* Novel comic page: mixed single / multi-panel grids (12-col like print tiers) */
+.novel-comic__grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(0.85rem, 2.2vw, 1.35rem);
+  width: 100%;
+  align-items: stretch;
+}
+
+.novel-comic__grid > .novel-panel {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+@media (min-width: 720px) {
+  .novel-comic__grid > .novel-panel--span-12 {
+    grid-column: span 12;
+  }
+
+  .novel-comic__grid > .novel-panel--span-8 {
+    grid-column: span 8;
+  }
+
+  .novel-comic__grid > .novel-panel--span-6 {
+    grid-column: span 6;
+  }
+
+  .novel-comic__grid > .novel-panel--span-4 {
+    grid-column: span 4;
+  }
+
+  .novel-comic__grid > .novel-panel--span-3 {
+    grid-column: span 3;
+  }
+}
+
+/* Wide “splash” panels: cinematic */
+.beer-page.novel-chapter-page .rules--strip-page .novel-comic__grid .novel-panel--span-12 .rules-comic__figure--hud:not(.rules-comic__figure--lore-canvas) {
+  aspect-ratio: 2 / 1;
+}
+
+@media (min-width: 900px) {
+  .beer-page.novel-chapter-page .rules--strip-page .novel-comic__grid .novel-panel--span-12 .rules-comic__figure--hud:not(.rules-comic__figure--lore-canvas) {
+    aspect-ratio: 21 / 9;
+  }
+}
+
+/* Tier / half / third beats: slightly taller frame (print comic rhythm) */
+.beer-page.novel-chapter-page .rules--strip-page .novel-comic__grid .novel-panel--span-6 .rules-comic__figure--hud:not(.rules-comic__figure--lore-canvas),
+.beer-page.novel-chapter-page .rules--strip-page .novel-comic__grid .novel-panel--span-4 .rules-comic__figure--hud:not(.rules-comic__figure--lore-canvas),
+.beer-page.novel-chapter-page .rules--strip-page .novel-comic__grid .novel-panel--span-3 .rules-comic__figure--hud:not(.rules-comic__figure--lore-canvas),
+.beer-page.novel-chapter-page .rules--strip-page .novel-comic__grid .novel-panel--span-8 .rules-comic__figure--hud:not(.rules-comic__figure--lore-canvas) {
+  aspect-ratio: 4 / 5;
+}
+
+.novel-panel .rules-comic__art {
+  display: block;
+}
+
+.novel-chapter-page .novel-chapter__text {
+  margin-top: clamp(1.35rem, 3vw, 2rem);
+  scroll-margin-top: 6rem;
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(1rem, 1.05vw + 0.92rem, 1.08rem);
+  line-height: 1.72;
+  color: rgba(215, 226, 245, 0.96);
+}
+
+.novel-chapter-page .novel-chapter__text p {
+  margin: 0 0 1.05em;
+}
+
+.novel-chapter-page .novel-chapter__text p:last-child {
+  margin-bottom: 0;
+}
+
+.novel-chapter-page .novel-chapter__text strong {
+  color: rgba(240, 248, 255, 0.98);
+  font-weight: 700;
+}
+
+.novel-chapter-page .novel-chapter__text em {
+  font-style: italic;
+  color: rgba(230, 240, 255, 0.96);
+}
+
+.novel-chapter-page .novel-chapter__pre {
+  margin: 1.15em 0;
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 240, 255, 0.18);
+  background: rgba(4, 10, 22, 0.88);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: rgba(180, 210, 230, 0.98);
+}
+
+.novel-chapter-page .novel-chapter__pre code {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: transparent;
+  padding: 0;
+}
+
+.novel-chapter-page .novel-chapter__rule {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid rgba(0, 240, 255, 0.16);
+}
+
+.novel-chapter-page #novel-comic {
+  scroll-margin-top: 5rem;
+}
+
+.novel-comic-book {
+  width: 100%;
+}
+
+.novel-comic-page {
+  margin: 0 0 clamp(1.75rem, 4vw, 2.75rem);
+  padding: clamp(0.85rem, 2vw, 1.15rem) clamp(0.65rem, 1.5vw, 1rem) clamp(1.1rem, 2.5vw, 1.5rem);
+  border-radius: 14px;
+  border: 1px solid rgba(0, 240, 255, 0.28);
+  background: linear-gradient(180deg, rgba(8, 14, 28, 0.55) 0%, rgba(4, 8, 18, 0.35) 100%);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.35),
+    0 18px 48px rgba(0, 0, 0, 0.42);
+  scroll-margin-top: 5.5rem;
+}
+
+.novel-comic-page__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+  padding: 0 0.15rem 0.5rem;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.14);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(160, 190, 220, 0.88);
+}
+
+.novel-comic-page__num {
+  color: rgba(0, 255, 220, 0.75);
+}
+
+.novel-comic-page__panels {
+  padding: clamp(0.5rem, 1.5vw, 0.85rem);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 240, 255, 0.12);
+}
+
+.novel-comic-page__panels .novel-comic__grid {
+  gap: clamp(1rem, 2.4vw, 1.5rem);
+}
+
+.novel-comic-page__panels .novel-comic__grid--balloon-chain {
+  column-gap: clamp(0.35rem, 1vw, 0.7rem);
+}
+
+/* Split beat across panels: first balloon → second (detected via trailing … from generator). */
+.novel-chapter-page .novel-comic-page .novel-comic__balloon--chain-next.rules-comic__bubble--tail-b::after {
+  left: auto;
+  right: -10px;
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 10px solid transparent;
+  border-left-color: rgba(0, 240, 255, 0.55);
+  border-right: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+.novel-chapter-page .novel-comic-page .novel-comic__balloon--chain-next.rules-comic__bubble--tail-b::before {
+  left: auto;
+  right: -6px;
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 7px solid transparent;
+  border-left-color: rgba(248, 250, 252, 0.96);
+  border-right: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+.novel-chapter-page .novel-comic-page .novel-comic__balloon--chain-prev {
+  border-left: 3px solid rgba(0, 255, 210, 0.55);
+  box-shadow:
+    inset 8px 0 14px -12px rgba(0, 255, 220, 0.28),
+    0 4px 0 rgba(0, 0, 0, 0.28);
+}
+
+.novel-chapter-page .novel-comic-page .novel-comic__balloon--chain-prev.novel-comic__balloon--chain-next {
+  border-right: 3px solid rgba(0, 240, 255, 0.42);
+}
+
+@media (max-width: 719px) {
+  .novel-chapter-page .novel-comic-page .novel-comic__balloon--chain-next.rules-comic__bubble--tail-b::after {
+    left: 50%;
+    right: auto;
+    bottom: -11px;
+    top: auto;
+    transform: translateX(-50%);
+    border: 9px solid transparent;
+    border-top-color: rgba(0, 240, 255, 0.55);
+    border-bottom: 0;
+    border-left-color: transparent;
+    border-right-color: transparent;
+  }
+
+  .novel-chapter-page .novel-comic-page .novel-comic__balloon--chain-next.rules-comic__bubble--tail-b::before {
+    left: 50%;
+    right: auto;
+    bottom: -7px;
+    top: auto;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: rgba(248, 250, 252, 0.96);
+    border-bottom: 0;
+    border-left-color: transparent;
+    border-right-color: transparent;
+  }
+
+  .novel-comic-page__panels .novel-comic__grid--balloon-chain {
+    column-gap: clamp(1rem, 2.4vw, 1.5rem);
+  }
+}
+
+.novel-chapter-page .novel-comic-page .novel-panel:not(.novel-panel--sys) {
+  min-height: 100%;
+}
+
+.novel-chapter-page .novel-comic-page .novel-panel:not(.novel-panel--sys) .rules-comic__bubble.novel-comic__balloon {
+  margin-top: auto;
+  max-height: none;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.novel-chapter-page .novel-comic-page .novel-panel--span-4 .novel-comic__balloon {
+  font-size: clamp(0.8rem, 1.15vw, 0.93rem);
+  line-height: 1.48;
+}
+
+.novel-chapter-page .novel-comic-page .novel-panel--span-6 .novel-comic__balloon {
+  font-size: clamp(0.84rem, 1.25vw, 0.98rem);
+  line-height: 1.48;
+}
+
+.novel-chapter-page .novel-comic-page .novel-panel--span-12 .novel-comic__balloon {
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+  line-height: 1.5;
+}
+
+.novel-chapter-page .novel-panel--sys .rules-comic__strip-note--novel-sys {
+  max-height: min(52vh, 22rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.novel-comic-script {
+  margin-top: clamp(1.5rem, 3.5vw, 2.5rem);
+  scroll-margin-top: 6rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 240, 255, 0.16);
+  background: rgba(4, 10, 22, 0.45);
+}
+
+.novel-comic-script__summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(0, 255, 220, 0.88);
+}
+
+.novel-comic-script__summary::-webkit-details-marker {
+  display: none;
+}
+
+.novel-comic-script[open] .novel-comic-script__summary {
+  border-bottom: 1px solid rgba(0, 240, 255, 0.12);
+}
+
+.novel-comic-script .novel-chapter__text {
+  margin-top: 0;
+  padding: clamp(1rem, 2.5vw, 1.35rem);
+  max-width: none;
+}
+
+.novel-chapter-page .rules-comic__strip-note--novel-sys {
+  margin-top: auto;
+}
+
+.novel-chapter-page .novel-panel__sys {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: rgba(185, 215, 235, 0.96);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.novel-chapter-page .novel-panel__sys code {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: transparent;
+  padding: 0;
+}
+
+.novel-chapter-page .novel-panel__sys-label {
+  margin: 0 0 0.4rem;
+}
+
+.novel-chapter-page .novel-panel--prose-hud .rules-comic__figure--novel-readout-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+  min-height: clamp(9.5rem, 26vw, 15rem);
+  background: linear-gradient(165deg, rgba(6, 12, 26, 0.97) 0%, rgba(3, 8, 18, 0.94) 100%);
+  border-bottom: 1px solid rgba(0, 240, 255, 0.14);
+}
+
+.novel-chapter-page .novel-panel--prose-hud .novel-panel__readout-as-art {
+  width: min(34rem, 92%);
+}
+
+.novel-chapter-page .novel-panel--prose-hud .novel-panel__sys--in-figure {
+  margin: 0;
+  padding: 1rem 1.15rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  box-shadow:
+    0 0 24px rgba(0, 240, 255, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  font-size: clamp(0.68rem, 1.15vw, 0.82rem);
+  line-height: 1.42;
+}
+
+.novel-chapter-page .novel-comic__figure--with-prompt:not(.rules-comic__figure--novel-readout-art) {
+  position: relative;
+}
+
+.novel-chapter-page .novel-comic__figure--with-prompt:not(.rules-comic__figure--novel-readout-art) .rules-comic__art--prompt-underlay {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.novel-chapter-page .novel-comic__figure--with-prompt:not(.rules-comic__figure--novel-readout-art) .novel-comic__art-prompt {
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 0.55rem 0.65rem 0.65rem;
+  background: rgba(4, 10, 20, 0.9);
+  border-bottom: 1px solid rgba(0, 240, 255, 0.14);
+  -webkit-overflow-scrolling: touch;
+}
+
+.novel-chapter-page .novel-comic__art-prompt-k {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(0, 255, 210, 0.75);
+}
+
+.novel-chapter-page .novel-comic__art-prompt-text {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: clamp(0.68rem, 1.05vw, 0.8rem);
+  font-weight: 500;
+  line-height: 1.42;
+  color: rgba(210, 225, 240, 0.94);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.novel-chapter-page .novel-panel--prose-hud .rules-comic__figure--novel-readout-art.novel-comic__figure--with-prompt {
+  display: flex;
+  flex-direction: column;
+  min-height: clamp(11rem, 30vw, 17rem);
+}
+
+.novel-chapter-page .novel-panel--prose-hud .rules-comic__figure--novel-readout-art.novel-comic__figure--with-prompt .novel-panel__readout-as-art {
+  flex: 0 0 auto;
+}
+
+.novel-chapter-page .novel-panel--prose-hud .rules-comic__figure--novel-readout-art.novel-comic__figure--with-prompt .novel-comic__art-prompt {
+  position: static;
+  flex: 1 1 auto;
+  min-height: 5rem;
+  max-height: min(42vh, 16rem);
+  border-bottom: none;
+  border-top: 1px solid rgba(0, 240, 255, 0.12);
+}
+
+.novel-chapter-page #novel-script {
+  scroll-margin-top: 6rem;
 }

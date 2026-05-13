@@ -93,7 +93,7 @@ Use the same **Origin Story** export folder as `build:lore` (or `LORE_SRC`), the
 npm run build:origin-media
 ```
 
-That resizes and writes every panel the page expects into **`media/origin-story/`**. Caption copy and beat order live in **`lore/origin-story-plan.md`**.
+That resizes and writes every panel the page expects into **`media/origin-story/`**. Strip note copy and beat order live in **`lore/origin-story-plan.md`**.
 
 **Strip still blank and `generated/` empty locally?** The home page also falls back to baked art under `generated/*.webp` (from `npm run build:site-assets`). That script expects the Makko export `Backgrounds/Backgrounds` path in `scripts/bake-site-backgrounds.mjs`—adjust `BG_DIR` if your export lives elsewhere, then run:
 

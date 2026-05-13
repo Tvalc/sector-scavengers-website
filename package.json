@@ -9,7 +9,9 @@
     "build:lore": "node scripts/bake-lore-origin.mjs",
     "build:origin-media": "node scripts/bake-origin-story-media.mjs",
     "build:assets": "node scripts/extract-promo-frames.mjs",
-    "build:site-assets": "npm run build:backgrounds && npm run build:assets"
+    "build:site-assets": "npm run build:backgrounds && npm run build:assets",
+    "generate:novel": "node scripts/generate-novel-lore-pages.mjs",
+    "export:novel-art-prompts": "node scripts/export-novel-art-prompts.mjs"
   },
   "devDependencies": {
     "sharp": "^0.34.5"

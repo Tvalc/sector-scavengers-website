@@ -1,12 +1,12 @@
 # Origin story comic: beat sheet (canonical)
 
-Strip art comes from the Makko **Origin Story** export. A few baked files also live in `lore/origin/` for the homepage. This doc lists **panel order**, **filenames**, and **caption copy** for the lore page `origin-story.html`.
+Strip art comes from the Makko **Origin Story** export. A few baked files also live in `lore/origin/` for the homepage. This doc lists **panel order**, **filenames**, and **strip note copy** for the lore page `origin-story.html`.
 
 ---
 
 ## 1 `SS-Background-Origin-Story-Panel-1`
 
-**Caption**
+**Strip note**
 
 In 2026 the layoffs stop pretending to be temporary.
 
@@ -16,7 +16,7 @@ Internal tools already draft the decks, file the tickets, and answer the standup
 
 ## 2 `SS-Background-Origin-Story-Panel-2`
 
-**Caption**
+**Strip note**
 
 HR calls the packet an exit path.
 
@@ -26,7 +26,7 @@ Cryo sits in the same row as COBRA on a benefits table nobody reads until they a
 
 ## 3 `SS-Background-Origin-Panel-3`
 
-**Caption**
+**Strip note**
 
 The vaults turn into something you photograph.
 
@@ -36,7 +36,7 @@ Glass towers full of frost and money. Living heirs stand beside sleeping ancesto
 
 ## 4 `SS-Background-BudgetCryo-Origin-Panel-4`
 
-**Caption**
+**Strip note**
 
 Scarcity does not vanish. It only learns new paperwork.
 
@@ -46,7 +46,7 @@ Brochure ink fades. The utopia date keeps moving. What used to be sold as a suit
 
 ## 5 `SS-Background-Origin-Warehouse-Panel-5`
 
-**Caption**
+**Strip note**
 
 Someone notices a shelf can hold a person the same way it holds a crate.
 
@@ -56,7 +56,7 @@ Pods stack where overflow inventory used to sit. Labels list names the way they 
 
 ## 6 `SS-Background-Origin-Warehouse-Panel-6` and `SS-Background-Origin-Warehouse-Panel-6b`
 
-**Caption**
+**Strip note**
 
 The count goes wrong slowly, then all at once.
 
@@ -68,7 +68,7 @@ Mold in a gasket line. A coolant loop that never gets funded. Fees for power, fo
 
 ## 7 `SS-Background-Origin-ShipLoad-Panel-7`, `7b`, `7c`, `7d`
 
-**Caption**
+**Strip note**
 
 **7.** A broker prints a lot that includes warm bodies still under contract.
 
@@ -84,7 +84,7 @@ Mold in a gasket line. A coolant loop that never gets funded. Fees for power, fo
 
 ## 8 `SS-Background-Origin-Wakeup-Panel-8` and `SS-Background-Origin-ShipLoad-Panel-8b`
 
-**Caption**
+**Strip note**
 
 **8.** Thaw alarms go off in batches. Millions sit up into the same bright UI, same total, same due date.
 
@@ -96,7 +96,7 @@ Mold in a gasket line. A coolant loop that never gets funded. Fees for power, fo
 
 ## 9 `SS-Background-Origin-SalvageRun-Panel-9`, `9b`, `9c`
 
-**Caption**
+**Strip note**
 
 **9.** The bus run drops them at the junk tide line. The first wreck is a wall of bent metal and old paint.
 
@@ -110,7 +110,7 @@ Mold in a gasket line. A coolant loop that never gets funded. Fees for power, fo
 
 ## 10 `SS-Background-Origin-Boarding-Panel-10`, `10b`, `10c`
 
-**Caption**
+**Strip note**
 
 **10.** The derelict’s mouth is a dark rectangle cut into a hull that used to belong to someone proud.
 
@@ -124,7 +124,7 @@ Mold in a gasket line. A coolant loop that never gets funded. Fees for power, fo
 
 ## 11 `SS-Website-Explore-Panel`
 
-**Caption**
+**Strip note**
 
 The map lies until you pay it in actions.
 
