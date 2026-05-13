@@ -95,9 +95,14 @@ function proseSegmentToHtml(segment) {
   return out.join("\n");
 }
 
-function novelMarkdownToHtml(md) {
+/**
+ * Same paragraph/code unit counting the comic generator uses so panel
+ * indexes line up: each non-empty prose paragraph and each code fence
+ * is one unit, in source order. Returned units are in source order.
+ */
+function novelUnitsFromMd(md) {
   const s = md.replace(/\r\n/g, "\n");
-  if (!s.trim()) return "";
+  if (!s.trim()) return [];
   const segments = [];
   let i = 0;
   while (i < s.length) {
@@ -116,14 +121,58 @@ function novelMarkdownToHtml(md) {
     segments.push({ type: "code", content: inner });
     i = close + 3;
   }
-  return segments
-    .map((seg) =>
-      seg.type === "code"
-        ? `<pre class="read-hud"><code>${esc(seg.content)}</code></pre>`
-        : proseSegmentToHtml(seg.content),
-    )
-    .filter(Boolean)
-    .join("\n");
+  const units = [];
+  for (const seg of segments) {
+    if (seg.type === "code") {
+      const t = seg.content.trim();
+      if (t) units.push({ kind: "code", text: seg.content });
+      continue;
+    }
+    const cleaned = stripArtDirectives(seg.content);
+    const paras = cleaned.split(/\n\n+/);
+    for (const raw of paras) {
+      const t = raw.trim();
+      if (!t) continue;
+      if (/^-{3,}\s*$/.test(t)) {
+        units.push({ kind: "rule" });
+        continue;
+      }
+      units.push({ kind: "prose", text: t });
+    }
+  }
+  return units;
+}
+
+function panelImgRelSrc(chapterN, gid) {
+  const chPad = String(chapterN).padStart(2, "0");
+  const gidPad = String(gid).padStart(2, "0");
+  const fsPath = path.join(websiteRoot, "media", "novel", `ch${chPad}`, `panel-${gidPad}.webp`);
+  if (!fs.existsSync(fsPath)) return null;
+  return `../../../media/novel/ch${chPad}/panel-${gidPad}.webp`;
+}
+
+function panelFigureHtml(src, gid) {
+  return `<figure class="read-panel"><img src="${src}" alt="Panel ${gid}" loading="lazy" decoding="async"><figcaption>Panel ${gid}</figcaption></figure>`;
+}
+
+function unitsToHtml(units, chapterN) {
+  const out = [];
+  let gid = 0;
+  for (const u of units) {
+    if (u.kind === "rule") {
+      out.push('<hr class="read-rule" />');
+      continue;
+    }
+    gid += 1;
+    const src = panelImgRelSrc(chapterN, gid);
+    if (src) out.push(panelFigureHtml(src, gid));
+    if (u.kind === "code") {
+      out.push(`<pre class="read-hud"><code>${esc(u.text)}</code></pre>`);
+    } else {
+      out.push(proseSegmentToHtml(u.text));
+    }
+  }
+  return out.filter(Boolean).join("\n");
 }
 
 function parseChapter(file) {
@@ -136,7 +185,8 @@ function parseChapter(file) {
   const titleMatch = new RegExp(`^## Chapter ${n}:\\s*(.+)$`, "m").exec(body);
   const title = titleMatch ? titleMatch[1].trim() : humanizeSlug(rawSlug);
   const bodyMd = extractChapterBody(body, n);
-  const bodyHtml = novelMarkdownToHtml(bodyMd);
+  const units = novelUnitsFromMd(bodyMd);
+  const bodyHtml = unitsToHtml(units, n);
   const firstPara = bodyMd
     .split(/\n\n+/)
     .map((p) => stripArtDirectives(p).trim())
@@ -263,6 +313,26 @@ function chapterPageHtml(ch, prev, next) {
     border-top: 1px solid var(--rule);
     margin: 2.25rem auto;
     width: 4rem;
+  }
+  .read-panel {
+    margin: 1.75rem -0.5rem;
+    text-align: center;
+  }
+  .read-panel img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--rule);
+    background: #000;
+  }
+  .read-panel figcaption {
+    margin-top: 0.45rem;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
   }
   .read-nav {
     display: grid;

@@ -415,6 +415,19 @@ function panelFigureDims(span) {
   return { w: 800, h: 1000 };
 }
 
+/**
+ * Returns a relative src (for use inside lore/novel/chNN.html) when
+ * an imported panel image exists at media/novel/ch{nn}/panel-{gid}.webp.
+ * Returns null when only the placeholder should be used.
+ */
+function realPanelArtSrc(chapterN, gid) {
+  const chPad = String(chapterN).padStart(2, "0");
+  const gidPad = String(gid).padStart(2, "0");
+  const fsPath = path.join(websiteRoot, "media", "novel", `ch${chPad}`, `panel-${gidPad}.webp`);
+  if (!fs.existsSync(fsPath)) return null;
+  return `../../media/novel/ch${chPad}/panel-${gidPad}.webp`;
+}
+
 function railDotsComic(pageCount) {
   const items = [
     '<li><a class="b-rail__dot" href="#b-letter"><span class="sr-only">Top</span></a></li>',
@@ -479,6 +492,12 @@ function figureWithPlaceholderAndPrompt(ch, cell, pageNum, w, h) {
   const prompt = panelArtPromptForCell(ch, cell, pageNum);
   const altFlat = prompt.replace(/\s+/g, " ").trim();
   const alt = altFlat.length > 220 ? `${altFlat.slice(0, 217)}…` : altFlat;
+  const realSrc = realPanelArtSrc(ch.n, cell.gid);
+  if (realSrc) {
+    return `                        <figure class="rules-comic__figure rules-comic__figure--art novel-comic__figure--with-art">
+                          <img class="rules-comic__art" src="${realSrc}" width="${w}" height="${h}" alt="${esc(alt)}" loading="lazy" decoding="async">
+                        </figure>`;
+  }
   return `                        <figure class="rules-comic__figure rules-comic__figure--hud novel-comic__figure--with-prompt">
                           <img class="rules-comic__art rules-comic__art--prompt-underlay" src="../../media/novel/chapter-placeholder.svg" width="${w}" height="${h}" alt="${esc(alt)}" decoding="async">
 ${novelComicArtPromptOverlay(prompt)}
@@ -487,6 +506,14 @@ ${novelComicArtPromptOverlay(prompt)}
 
 function proseHudFigureWithPrompt(ch, cell, pageNum) {
   const prompt = panelArtPromptForCell(ch, cell, pageNum);
+  const realSrc = realPanelArtSrc(ch.n, cell.gid);
+  if (realSrc) {
+    const altFlat = prompt.replace(/\s+/g, " ").trim();
+    const alt = altFlat.length > 220 ? `${altFlat.slice(0, 217)}…` : altFlat;
+    return `                        <figure class="rules-comic__figure rules-comic__figure--art novel-comic__figure--with-art">
+                          <img class="rules-comic__art" src="${realSrc}" width="1600" height="900" alt="${esc(alt)}" loading="lazy" decoding="async">
+                        </figure>`;
+  }
   return `                        <figure class="rules-comic__figure rules-comic__figure--hud rules-comic__figure--novel-readout-art novel-comic__figure--with-prompt">
                           <div class="novel-panel__readout-as-art" aria-hidden="true">
                             <pre class="novel-panel__sys novel-panel__sys--in-figure"><code>${esc(cell.hudCode)}</code></pre>
