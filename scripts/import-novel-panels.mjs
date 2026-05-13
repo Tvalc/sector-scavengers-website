@@ -6,6 +6,7 @@
  *   SS-Novel-CH{n}-Page-{p}-Panel-{k}.png  (PNG, multi-MB)
  *   SS-Novel-CH{n}-Page-{p}-Panel-{k}-left.png  /  ...-right.png  (side-by-side spread)
  *   ...-Panel-{k}-bottomleft.png  /  ...-bottomright.png  (second row under the same page panel)
+ *   The hyphen between {k} and the side is optional: Panel-10left.png also matches.
  *
  * We map the source files by their numeric order across (page, panel, side) to
  * the chapter's global panel index (gid) used by the comic generator, so
@@ -91,9 +92,11 @@ function sideOrderFromSuffix(suffix) {
   return 0;
 }
 
+/* Side suffix accepts either "Panel-10-left" or "Panel-10left" forms. */
+const PANEL_FILE_RE = /Page-(\d+)-Panel-(\d+)(?:-?(left|right|bottomleft|bottomright))?\.png$/i;
+
 function sortKeyFromName(name) {
-  // SS-Novel-CH#-Page-#-Panel-#.png  or  ...-left / -right / -bottomleft / -bottomright
-  const m = /Page-(\d+)-Panel-(\d+)(?:-(left|right|bottomleft|bottomright))?\.png$/i.exec(name);
+  const m = PANEL_FILE_RE.exec(name);
   if (!m) return [Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, 99, name];
   const page = parseInt(m[1], 10);
   const panel = parseInt(m[2], 10);
@@ -113,9 +116,9 @@ async function main() {
 
   const sourceEntries = fs
     .readdirSync(sourceDir)
-    .filter((f) => /Page-\d+-Panel-\d+(?:-(left|right|bottomleft|bottomright))?\.png$/i.test(f))
+    .filter((f) => PANEL_FILE_RE.test(f))
     .map((f) => {
-      const m = /Page-(\d+)-Panel-(\d+)(?:-(left|right|bottomleft|bottomright))?\.png$/i.exec(f);
+      const m = PANEL_FILE_RE.exec(f);
       if (!m) return { name: f, key: sortKeyFromName(f), panel: -1, side: null };
       const page = parseInt(m[1], 10);
       const panel = parseInt(m[2], 10);
