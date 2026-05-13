@@ -4560,3 +4560,26 @@ a.lore-hub__card--live:hover {
   font-size: clamp(1.2rem, 2.1vw, 1.7rem);
   line-height: 1.14;
 }
+
+/* Hide the thin decorative gradient bar above every comic figure
+   so there is no weird empty rectangle sitting between the art and the
+   yellow narrator caption box. */
+.rules-comic__frame {
+  display: none !important;
+}
+
+/* Snap the caption flush to the bottom of the image instead of letting
+   the panel column push it to the bottom of the cell (which left a dark
+   gap above the yellow box when the image was shorter than the column). */
+.novel-chapter-page .novel-comic-page .novel-panel:not(.novel-panel--sys) .rules-comic__bubble.novel-comic__balloon {
+  margin-top: 0.6rem;
+}
+
+/* Drop the dark panel chrome on the comic strips so the image meets the
+   yellow caption box with no visible dark band between them. */
+.rules-comic--lore .rules-comic__panel,
+.novel-chapter-page .rules-comic__panel {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
