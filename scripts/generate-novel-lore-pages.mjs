@@ -161,11 +161,11 @@ function parseChapter(file) {
 function layoutSpansForPage(ch, pageIndex) {
   /* Ch. 1 cold open: splash mid-scream, then splash for the scream-interior beat before tier strips resume. */
   if (ch.n === 1 && pageIndex === 1) return ["12"];
-  /* Ch. 1: full-width BOOTSTRAP readout (real art carries the code text in-image). */
+  /* Ch. 1: full-width BOOTSTRAP readout. Real art carries the code text in-image
+     and absorbs the next prose beat ("His mouth tasted like copper...") as the
+     panel's caption bubble. */
   if (ch.n === 1 && pageIndex === 3) return ["12"];
-  /* Ch. 1: full-width "His mouth tasted like copper" prose sits below the readout panel. */
-  if (ch.n === 1 && pageIndex === 4) return ["12"];
-  /* Ch. 1: [SYSTEM] Good morning, Max paired with "Max slapped at the air"—half-width pair. */
+  /* Ch. 1: [SYSTEM] Good morning, Max paired with "Max slapped at the air". */
   if (ch.n === 1 && pageIndex === 5) return ["6", "6"];
   if (pageIndex % 2 === 0) return ["12"];
   const multi = [
@@ -370,7 +370,16 @@ function buildComicPages(ch) {
       if (head.code !== undefined) {
         queue.shift();
         gid += 1;
-        row.push({ span: span0, kind: "code", code: head.code, gid });
+        const codeCell = { span: span0, kind: "code", code: head.code, gid };
+        /* When real panel art exists for this beat, the rendered art already
+           carries the code text. Absorb the next prose unit as the panel's
+           caption bubble and bump gid so downstream panels keep their numbers. */
+        if (realPanelArtSrc(ch.n, gid) && queue[0]?.prose !== undefined) {
+          const absorbed = queue.shift();
+          codeCell.bubbleMd = absorbed.prose;
+          gid += 1;
+        }
+        row.push(codeCell);
         continue;
       }
       if (head.proseHud !== undefined) {
@@ -547,9 +556,15 @@ function renderComicBookHtml(ch) {
                           <p class="novel-panel__sys-label"><span class="rules-comic__kicker">Readout</span></p>
                           <pre class="novel-panel__sys"><code>${esc(cell.code)}</code></pre>
                         </div>`;
+          const bubbleBlock = cell.bubbleMd
+            ? `
+                        <blockquote class="${bubbleCls}">
+                          <p>${inlineMdToHtml(cell.bubbleMd)}</p>
+                        </blockquote>`
+            : "";
           return `                      <article class="rules-comic__panel novel-panel novel-panel--span-${cell.span} novel-panel--sys" id="novel-p${cell.gid}">
                         <div class="rules-comic__frame" aria-hidden="true"></div>
-${figureWithPlaceholderAndPrompt(ch, cell, pageNum, w, h)}${readoutBlock}
+${figureWithPlaceholderAndPrompt(ch, cell, pageNum, w, h)}${readoutBlock}${bubbleBlock}
                       </article>`;
         }
         if (cell.kind === "proseHud") {
