@@ -4583,3 +4583,21 @@ a.lore-hub__card--live:hover {
   border-color: transparent;
   box-shadow: none;
 }
+
+/* Ch1 Page 10 (the only 4+8 layout in the novel): the left "Somewhere in
+   the wall..." panel uses portrait art while the right robot-helper panel
+   is landscape. Force both figures to the same 3:2 aspect (matches the
+   right image) so the left shortens to match the right and the two images
+   align on the top edge. object-fit: cover (inherited from .rules-comic__art)
+   center-crops the portrait art to fill the shorter box.
+
+   Scoped with :has() so only a grid that contains BOTH a span-4 and a span-8
+   panel matches. Other chapters' page-10 layouts (4+4+4, 6+6, 12) are
+   untouched. */
+.novel-comic__grid:has(.novel-panel--span-4):has(.novel-panel--span-8) {
+  align-items: start;
+}
+.novel-comic__grid:has(.novel-panel--span-4):has(.novel-panel--span-8) .novel-panel--span-4 .rules-comic__figure,
+.novel-comic__grid:has(.novel-panel--span-4):has(.novel-panel--span-8) .novel-panel--span-8 .rules-comic__figure {
+  aspect-ratio: 3 / 2;
+}
