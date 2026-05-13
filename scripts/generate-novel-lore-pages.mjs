@@ -488,18 +488,27 @@ function railDotsComic(pageCount) {
 function panelArtPromptForCell(ch, cell, pageNum) {
   const isSys = cell.kind === "code";
   const isProseHud = cell.kind === "proseHud";
-  let beat = "";
-  if (cell.kind === "code") beat = String(cell.code || "").trim() || "(system readout)";
-  else if (cell.kind === "proseHud")
-    beat = `${markdownToPlainSpan(cell.prose)} / HUD readout: ${String(cell.hudCode || "").trim()}`;
-  else beat = markdownToPlainSpan(cell.chunkMd);
+  let actionBeat = "";
+  let hudReadout = "";
+  if (cell.kind === "code") {
+    hudReadout = String(cell.code || "").trim();
+    /* If a prose beat was absorbed into this code panel as its caption bubble,
+       that prose is the action being depicted. */
+    if (cell.bubbleMd) actionBeat = markdownToPlainSpan(cell.bubbleMd);
+  } else if (cell.kind === "proseHud") {
+    actionBeat = markdownToPlainSpan(cell.prose);
+    hudReadout = String(cell.hudCode || "").trim();
+  } else {
+    actionBeat = markdownToPlainSpan(cell.chunkMd);
+  }
   return buildPanelArtPrompt({
     chapterN: ch.n,
     title: ch.title,
     panelGid: cell.gid,
     pageNum,
     span: cell.span,
-    beat,
+    actionBeat,
+    hudReadout,
     isSys,
     isProseHud,
     artDirective: cell.artDirective || null,

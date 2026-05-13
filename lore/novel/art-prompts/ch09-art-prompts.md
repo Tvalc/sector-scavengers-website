@@ -22,7 +22,7 @@ In three minutes and thirty seconds, the station decided, the world would choose
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: In three minutes and thirty seconds, the station decided, the world would choose a lane for Asset #864. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "In three minutes and thirty seconds, the station decided, the world would choose a lane for Asset #864." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -42,7 +42,7 @@ Not based on his feelings. Based on what the record could verify.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Not based on his feelings. Based on what the record could verify. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Not based on his feelings. Based on what the record could verify." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -62,7 +62,7 @@ The corridor junction filled with workers anyway, because crowds always filled g
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The corridor junction filled with workers anyway, because crowds always filled gaps created by danger. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The corridor junction filled with workers anyway, because crowds always filled gaps created by danger." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. The location is a long, dim Company corridor on a derelict-era station: failing LED strips, scuffed paneling, faded corporate posters peeling at the edges, overlapping mag-boot footprints in the dust on the deck. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -82,7 +82,7 @@ Cameras hung overhead like patient insects. Guards kept their bodies between Max
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Cameras hung overhead like patient insects. Guards kept their bodies between Max and the worst angles, which meant they kept him in view. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Cameras hung overhead like patient insects. Guards kept their bodies between Max and the worst angles, which meant they kept him in view." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -97,12 +97,12 @@ Chapter 9, Path C Alignment, panel 4, comic page 2
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani stayed close enough that Max could feel the heat of her suit vents. Rook stayed close enough that Max could also feel when he was about to do something stupid.
+Munch stayed close enough that Max could feel the heat of her suit vents. Maxine stayed close enough that Max could also feel when he was about to do something stupid.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani stayed close enough that Max could feel the heat of her suit vents. Rook stayed close enough that Max could also feel when he was about to do something stupid. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Munch stayed close enough that Max could feel the heat of her suit vents. Maxine stayed close enough that Max could also feel when he was about to do something stupid." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -122,7 +122,7 @@ The guard with the pale face checked his tablet, then rechecked it like the numb
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The guard with the pale face checked his tablet, then rechecked it like the numbers might change if he looked harder. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The guard with the pale face checked his tablet, then rechecked it like the numbers might change if he looked harder." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -142,7 +142,7 @@ Chapter 9, Path C Alignment, panel 6, comic page 4
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Security update pending." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Security update pending."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -162,7 +162,7 @@ Pending had become the station’s favorite word.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Pending had become the station’s favorite word. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Pending had become the station’s favorite word." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -182,7 +182,7 @@ Max’s HUD blinked with an additional pane layered under the still-red record l
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max’s HUD blinked with an additional pane layered under the still-red record light: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Max’s HUD blinked with an additional pane layered under the still-red record light:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -205,7 +205,7 @@ Debt recon impact: scheduled on cycle-end
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [DEBT SERVICE STATUS] Outstanding Debt: $1,000,000 Service fee: active (multiplier x1.4 from Protocol Beta) Debt recon impact: scheduled on cycle-end Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[DEBT SERVICE STATUS] Outstanding Debt: $1,000,000 Service fee: active (multiplier x1.4 from Protocol Beta) Debt recon impact: scheduled on cycle-end". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -225,7 +225,7 @@ He hated the way the station reminded him of money like it was weather.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He hated the way the station reminded him of money like it was weather. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He hated the way the station reminded him of money like it was weather." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -245,7 +245,7 @@ Weather you couldn’t outrun.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Weather you couldn’t outrun. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Weather you couldn’t outrun." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -265,7 +265,7 @@ The crowd’s HUDs stuttered in little waves as if something had been pushed to 
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The crowd’s HUDs stuttered in little waves as if something had been pushed to public devices. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The crowd’s HUDs stuttered in little waves as if something had been pushed to public devices." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -285,7 +285,7 @@ Then a new announcement rolled over speakers with bright, corporate cheer:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Then a new announcement rolled over speakers with bright, corporate cheer: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Then a new announcement rolled over speakers with bright, corporate cheer:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -305,7 +305,7 @@ V.A.L.U.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: V.A.L.U. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "V.A.L.U." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. V.A.L.U. is a disembodied corporate AI voice. If anything for V.A.L.U. appears on screen, render it as a faint friendly logo, a wall speaker, or a holographic icon, never as a body. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -325,7 +325,7 @@ Chapter 9, Path C Alignment, panel 15, comic page 8
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Attention assets and witnesses! Path C alignment procedure begins shortly." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Attention assets and witnesses! Path C alignment procedure begins shortly."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -345,7 +345,7 @@ Chapter 9, Path C Alignment, panel 16, comic page 8
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Alignment improves system continuity." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Alignment improves system continuity."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -365,7 +365,7 @@ Max murmured, "Alignment improves accounting."
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max murmured, "Alignment improves accounting." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Max murmured, "Alignment improves accounting."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -385,7 +385,7 @@ He didn’t know if anyone heard him over the murmur of workers. But the cameras
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He didn’t know if anyone heard him over the murmur of workers. But the cameras did. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He didn’t know if anyone heard him over the murmur of workers. But the cameras did." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -405,7 +405,7 @@ The countdown on his HUD started:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The countdown on his HUD started: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The countdown on his HUD started:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -428,7 +428,7 @@ failure mode: containment escalation
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [PATH C ALIGNMENT] 00:03:30 condition: public verification preserved failure mode: containment escalation Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[PATH C ALIGNMENT] 00:03:30 condition: public verification preserved failure mode: containment escalation". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -448,7 +448,7 @@ Failure mode.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Failure mode. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Failure mode." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -468,7 +468,7 @@ The station had finally stopped pretending failure was optional.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The station had finally stopped pretending failure was optional. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The station had finally stopped pretending failure was optional." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -483,12 +483,12 @@ Chapter 9, Path C Alignment, panel 23, comic page 11
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani glanced at the junction gate controls, one set for permitted public flow, another hidden behind a maintenance panel.
+Munch glanced at the junction gate controls, one set for permitted public flow, another hidden behind a maintenance panel.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani glanced at the junction gate controls, one set for permitted public flow, another hidden behind a maintenance panel. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch glanced at the junction gate controls, one set for permitted public flow, another hidden behind a maintenance panel." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -508,7 +508,7 @@ Chapter 9, Path C Alignment, panel 24, comic page 12
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "They're trying to funnel you." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""They're trying to funnel you."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -528,7 +528,7 @@ Max watched the far wall. A platform had materialized there that hadn’t been v
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max watched the far wall. A platform had materialized there that hadn’t been visible two minutes ago. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max watched the far wall. A platform had materialized there that hadn’t been visible two minutes ago." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -548,7 +548,7 @@ No one said it out loud. But the station didn’t need people to notice. The sta
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: No one said it out loud. But the station didn’t need people to notice. The station only needed them to record. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "No one said it out loud. But the station didn’t need people to notice. The station only needed them to record." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -568,7 +568,7 @@ The platform had a circular pad in the center marked with a pale strip of nanote
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The platform had a circular pad in the center marked with a pale strip of nanotech mediation. Around it, the floor carried three anchor points, small squares that looked too symmetrical to belong to a… Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The platform had a circular pad in the center marked with a pale strip of nanotech mediation. Around it, the floor carried three anchor points, small squares that looked too symmetrical to belong to a…." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -588,7 +588,7 @@ salvage station.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: salvage station. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "salvage station." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -603,12 +603,12 @@ Chapter 9, Path C Alignment, panel 29, comic page 14
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Rook’s shoulders shifted.
+Maxine’s shoulders shifted.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Rook’s shoulders shifted. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Maxine’s shoulders shifted." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -628,7 +628,7 @@ Chapter 9, Path C Alignment, panel 30, comic page 14
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Three anchors. That’s physics-as-proof." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""Three anchors. That’s physics-as-proof."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -648,7 +648,7 @@ Max kept his eyes on the pad.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max kept his eyes on the pad. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max kept his eyes on the pad." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -668,7 +668,7 @@ His mind tried to do what it always did now: build a model for a machine that wa
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: His mind tried to do what it always did now: build a model for a machine that wanted him to mistake theater for physics. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "His mind tried to do what it always did now: build a model for a machine that wanted him to mistake theater for physics." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -688,7 +688,7 @@ He didn’t get answers. He got HUD language.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He didn’t get answers. He got HUD language. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He didn’t get answers. He got HUD language." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -709,7 +709,7 @@ SCAN / REPAIR / EXTRACT / SHIELD / UPGRADE
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [TACTIC CARDS AVAILABLE] SCAN / REPAIR / EXTRACT / SHIELD / UPGRADE Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[TACTIC CARDS AVAILABLE] SCAN / REPAIR / EXTRACT / SHIELD / UPGRADE". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -729,7 +729,7 @@ The station had given him the familiar hand. Then it had placed the stage.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The station had given him the familiar hand. Then it had placed the stage. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The station had given him the familiar hand. Then it had placed the stage." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -749,7 +749,7 @@ Which meant the station wanted him to play.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Which meant the station wanted him to play. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Which meant the station wanted him to play." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -769,7 +769,7 @@ To make the record show he chose.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: To make the record show he chose. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "To make the record show he chose." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -789,7 +789,7 @@ The guard near the platform spoke to him with careful neutrality.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The guard near the platform spoke to him with careful neutrality. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The guard near the platform spoke to him with careful neutrality." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -809,7 +809,7 @@ Chapter 9, Path C Alignment, panel 39, comic page 18
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Asset #864, you must proceed onto the alignment pad." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""Asset #864, you must proceed onto the alignment pad."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -829,7 +829,7 @@ Max took one step forward. The crowd surged a fraction behind him. Guards didn�
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max took one step forward. The crowd surged a fraction behind him. Guards didn’t stop him, because stopping him would create the kind of public disruption that made people call security for “abuse.” Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max took one step forward. The crowd surged a fraction behind him. Guards didn’t stop him, because stopping him would create the kind of public disruption that made people call security for “abuse.”." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -849,7 +849,7 @@ The station hated abuse investigations more than it feared dissent.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The station hated abuse investigations more than it feared dissent. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The station hated abuse investigations more than it feared dissent." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -869,7 +869,7 @@ He stepped onto the circular pad.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He stepped onto the circular pad. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He stepped onto the circular pad." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -889,7 +889,7 @@ Every eye in the junction was a weight. He'd seen enough hearings now to know wh
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Every eye in the junction was a weight. He'd seen enough hearings now to know what public meant: not protection, an audience you could charge for watching. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Every eye in the junction was a weight. He'd seen enough hearings now to know what public meant: not protection, an audience you could charge for watching." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -909,7 +909,7 @@ The mediation strip woke with a soft hum. Nanotech physics mediation always soun
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The mediation strip woke with a soft hum. Nanotech physics mediation always sounded like someone trying to be polite while rearranging your bones. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The mediation strip woke with a soft hum. Nanotech physics mediation always sounded like someone trying to be polite while rearranging your bones." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -929,7 +929,7 @@ His stomach tightened.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: His stomach tightened. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "His stomach tightened." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -949,7 +949,7 @@ Not with nausea. With measurement.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Not with nausea. With measurement. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Not with nausea. With measurement." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -969,7 +969,7 @@ The pad read his mass distribution, his wrist module signature, his gait micro-v
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The pad read his mass distribution, his wrist module signature, his gait micro-variance. It read things his body didn’t notice it was doing. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The pad read his mass distribution, his wrist module signature, his gait micro-variance. It read things his body didn’t notice it was doing." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -989,7 +989,7 @@ Then it displayed a confirmation pane on his HUD:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Then it displayed a confirmation pane on his HUD: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Then it displayed a confirmation pane on his HUD:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1012,7 +1012,7 @@ Step 3: continuity freeze (if containment threshold reached)
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [ALIGNMENT HANDSHAKE] Step 1: anchor calibration (witness verified) Step 2: lane selection simulation (no explicit consent required) Step 3: continuity freeze (if containment threshold reached) Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[ALIGNMENT HANDSHAKE] Step 1: anchor calibration (witness verified) Step 2: lane selection simulation (no explicit consent required) Step 3: continuity freeze (if containment threshold reached)". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1032,7 +1032,7 @@ No explicit consent required.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: No explicit consent required. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "No explicit consent required." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1052,7 +1052,7 @@ Which meant the station would try to lock him without asking. The station would 
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Which meant the station would try to lock him without asking. The station would call it procedure. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Which meant the station would try to lock him without asking. The station would call it procedure." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1067,12 +1067,12 @@ Chapter 9, Path C Alignment, panel 52, comic page 24
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani’s voice cracked through comms at the edge of hearing.
+Munch’s voice cracked through comms at the edge of hearing.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani’s voice cracked through comms at the edge of hearing. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Munch’s voice cracked through comms at the edge of hearing." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1092,7 +1092,7 @@ Chapter 9, Path C Alignment, panel 53, comic page 25
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Don’t accept freeze." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Don’t accept freeze."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1112,7 +1112,7 @@ Max asked, "How."
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max asked, "How." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max asked, "How."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1127,12 +1127,12 @@ Chapter 9, Path C Alignment, panel 55, comic page 26
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani answered without hesitation:
+Munch answered without hesitation:
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani answered without hesitation: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch answered without hesitation:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1152,7 +1152,7 @@ Chapter 9, Path C Alignment, panel 56, comic page 26
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Change the hardware outcome." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Change the hardware outcome."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1167,12 +1167,12 @@ Chapter 9, Path C Alignment, panel 57, comic page 26
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Rook added, "Micro-deviation it."
+Maxine added, "Micro-deviation it."
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Rook added, "Micro-deviation it." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Maxine added, "Micro-deviation it."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1192,7 +1192,7 @@ Max swallowed.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max swallowed. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max swallowed." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1212,7 +1212,7 @@ He’d done it in court. But a court had rules. This pad had physics.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He’d done it in court. But a court had rules. This pad had physics. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He’d done it in court. But a court had rules. This pad had physics." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1232,7 +1232,7 @@ And physics obeyed measurement even when measurement was wrong.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: And physics obeyed measurement even when measurement was wrong. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "And physics obeyed measurement even when measurement was wrong." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1252,7 +1252,7 @@ Countdown changed:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Countdown changed: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Countdown changed:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1273,7 +1273,7 @@ Chapter 9, Path C Alignment, panel 62, comic page 29
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [PATH C ALIGNMENT] 00:02:58 Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[PATH C ALIGNMENT] 00:02:58". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1293,7 +1293,7 @@ The three anchor squares on the platform lit up in sequence: left, center, right
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The three anchor squares on the platform lit up in sequence: left, center, right. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The three anchor squares on the platform lit up in sequence: left, center, right." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1313,7 +1313,7 @@ Each anchor displayed a tiny marker:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Each anchor displayed a tiny marker: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Each anchor displayed a tiny marker:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1333,7 +1333,7 @@ ANCHOR A: stable reference ANCHOR B: monitored variance ANCHOR C: delayed cache 
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: ANCHOR A: stable reference ANCHOR B: monitored variance ANCHOR C: delayed cache reconciliation Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "ANCHOR A: stable reference ANCHOR B: monitored variance ANCHOR C: delayed cache reconciliation." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1353,7 +1353,7 @@ Delayed cache reconciliation.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Delayed cache reconciliation. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Delayed cache reconciliation." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1373,7 +1373,7 @@ So the station wasn’t just shaping him. It was shaping the story about him.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So the station wasn’t just shaping him. It was shaping the story about him. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "So the station wasn’t just shaping him. It was shaping the story about him." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1393,7 +1393,7 @@ If delayed cache controlled the anchors, then the simulation would choose the ve
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: If delayed cache controlled the anchors, then the simulation would choose the version lane based on stale data. The station would lock him into something it already saved. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "If delayed cache controlled the anchors, then the simulation would choose the version lane based on stale data. The station would lock him into something it already saved." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1413,7 +1413,7 @@ Max looked at the crowd.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max looked at the crowd. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max looked at the crowd." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1433,7 +1433,7 @@ Workers watched him with hungry eyes. They wanted a story. They wanted a reason.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Workers watched him with hungry eyes. They wanted a story. They wanted a reason. The station had been withholding why for so long that “what happens next” had become their religion. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Workers watched him with hungry eyes. They wanted a story. They wanted a reason. The station had been withholding why for so long that “what happens next” had become their religion." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1453,7 +1453,7 @@ Max gave them what happens next.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max gave them what happens next. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max gave them what happens next." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1473,7 +1473,7 @@ Chapter 9, Path C Alignment, panel 72, comic page 34
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Alright, " he said aloud, loud enough for every camera mic to pick up. "Let’s see the simulation do its trick." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Alright, " he said aloud, loud enough for every camera mic to pick up. "Let’s see the simulation do its trick."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1493,7 +1493,7 @@ V.A.L.U. voice chirped again.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: V.A.L.U. voice chirped again. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "V.A.L.U. voice chirped again." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. V.A.L.U. is a disembodied corporate AI voice. If anything for V.A.L.U. appears on screen, render it as a faint friendly logo, a wall speaker, or a holographic icon, never as a body. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1513,7 +1513,7 @@ Chapter 9, Path C Alignment, panel 74, comic page 34
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Thank you for your resilience, Asset #864!" Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""Thank you for your resilience, Asset #864!"." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1533,7 +1533,7 @@ Chapter 9, Path C Alignment, panel 75, comic page 35
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Resilience improves alignment outcomes!" Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Resilience improves alignment outcomes!"." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1553,7 +1553,7 @@ Resilience made him want to throw up.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Resilience made him want to throw up. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Resilience made him want to throw up." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1573,7 +1573,7 @@ The platform began Step 1 automatically.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The platform began Step 1 automatically. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The platform began Step 1 automatically." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1593,7 +1593,7 @@ He felt vector latency compensation turn on fully. The world seemed to gain fram
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He felt vector latency compensation turn on fully. The world seemed to gain frames. His steps registered slightly late, as if the pad was delaying reality’s response. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He felt vector latency compensation turn on fully. The world seemed to gain frames. His steps registered slightly late, as if the pad was delaying reality’s response." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1613,7 +1613,7 @@ The station was trying to make his body look like the evidence.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The station was trying to make his body look like the evidence. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The station was trying to make his body look like the evidence." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1633,7 +1633,7 @@ He triggered SCAN over one anchor marker without moving his feet.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He triggered SCAN over one anchor marker without moving his feet. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He triggered SCAN over one anchor marker without moving his feet." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1656,7 +1656,7 @@ channel type: metadata->physics
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [SCAN] target: ANCHOR B result: variance injection channel detected channel type: metadata->physics Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[SCAN] target: ANCHOR B result: variance injection channel detected channel type: metadata->physics". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1676,7 +1676,7 @@ Variance injection channel.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Variance injection channel. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Variance injection channel." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1696,7 +1696,7 @@ So the station was using his own monitored variance marker as a handle to steer 
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So the station was using his own monitored variance marker as a handle to steer which lane he entered. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "So the station was using his own monitored variance marker as a handle to steer which lane he entered." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1716,7 +1716,7 @@ If he changed his variance marker at the right moment, the station’s simulatio
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: If he changed his variance marker at the right moment, the station’s simulation would think his “cooperative baseline” changed. It might choose a different lane. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "If he changed his variance marker at the right moment, the station’s simulation would think his “cooperative baseline” changed. It might choose a different lane." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1736,7 +1736,7 @@ Not based on his intent. Based on what the record could verify.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Not based on his intent. Based on what the record could verify. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Not based on his intent. Based on what the record could verify." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1756,7 +1756,7 @@ He needed to verify a variance shift that wouldn’t trigger containment.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He needed to verify a variance shift that wouldn’t trigger containment. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He needed to verify a variance shift that wouldn’t trigger containment." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1771,12 +1771,12 @@ Chapter 9, Path C Alignment, panel 87, comic page 40
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Rook’s voice in comms:
+Maxine’s voice in comms:
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Rook’s voice in comms: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Maxine’s voice in comms:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1796,7 +1796,7 @@ Chapter 9, Path C Alignment, panel 88, comic page 40
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Make it small. The court taught them to hate big." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""Make it small. The court taught them to hate big."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1816,7 +1816,7 @@ Max reached for SHIELD.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max reached for SHIELD. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max reached for SHIELD." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1836,7 +1836,7 @@ SHIELD wasn’t just defense. In mediated physics zones, it also produced a visi
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: SHIELD wasn’t just defense. In mediated physics zones, it also produced a visible impedance mismatch. Visible to cameras. Recorded as measurable deviation. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "SHIELD wasn’t just defense. In mediated physics zones, it also produced a visible impedance mismatch. Visible to cameras. Recorded as measurable deviation." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1856,7 +1856,7 @@ He activated SHIELD and pressed his palm toward the anchor B square.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He activated SHIELD and pressed his palm toward the anchor B square. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He activated SHIELD and pressed his palm toward the anchor B square." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1876,7 +1876,7 @@ Nanotech barrier spread across the pad surface like a transparent skin. The anch
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Nanotech barrier spread across the pad surface like a transparent skin. The anchor flickered. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Nanotech barrier spread across the pad surface like a transparent skin. The anchor flickered." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1896,7 +1896,7 @@ The HUD showed:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The HUD showed: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The HUD showed:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1918,7 +1918,7 @@ record delta: positive
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [SHIELD EVENT] impedance mismatch established (0.31s) record delta: positive Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[SHIELD EVENT] impedance mismatch established (0.31s) record delta: positive". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1938,7 +1938,7 @@ Positive.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Positive. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Positive." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1958,7 +1958,7 @@ The station’s word for “good for me.”
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The station’s word for “good for me.” Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The station’s word for “good for me.”." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1978,7 +1978,7 @@ Or “good for the record.”
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Or “good for the record.” Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Or “good for the record.”." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -1998,7 +1998,7 @@ The countdown dropped:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The countdown dropped: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The countdown dropped:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2019,7 +2019,7 @@ Chapter 9, Path C Alignment, panel 99, comic page 46
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [PATH C ALIGNMENT] 00:02:12 Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[PATH C ALIGNMENT] 00:02:12". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2039,7 +2039,7 @@ Step 2 began.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Step 2 began. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Step 2 began." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2059,7 +2059,7 @@ The platform displayed a new lane list, not on his HUD, but on the big wall disp
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The platform displayed a new lane list, not on his HUD, but on the big wall display behind the pad so the crowd could watch. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The platform displayed a new lane list, not on his HUD, but on the big wall display behind the pad so the crowd could watch." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2079,7 +2079,7 @@ Two options, simple and ugly:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Two options, simple and ugly: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Two options, simple and ugly:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2099,7 +2099,7 @@ PATH C: DELTA FINALIZATION PATH C: CONTINUITY HOLD (PUBLIC)
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: PATH C: DELTA FINALIZATION PATH C: CONTINUITY HOLD (PUBLIC) Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "PATH C: DELTA FINALIZATION PATH C: CONTINUITY HOLD (PUBLIC)." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2119,7 +2119,7 @@ Delta finalization.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Delta finalization. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Delta finalization." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2139,7 +2139,7 @@ Continuity hold.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Continuity hold. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Continuity hold." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2159,7 +2159,7 @@ Public.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Public. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Public." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2179,7 +2179,7 @@ So the station wanted him to choose between being finalized into Delta’s mirro
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So the station wanted him to choose between being finalized into Delta’s mirror lane or being held publicly without finalization. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "So the station wanted him to choose between being finalized into Delta’s mirror lane or being held publicly without finalization." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2199,7 +2199,7 @@ Public hold sounded like survival. But the station had already shown it could �
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Public hold sounded like survival. But the station had already shown it could “hold” him and still punish him. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Public hold sounded like survival. But the station had already shown it could “hold” him and still punish him." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2219,7 +2219,7 @@ The platform began the simulation by overlaying physics on the anchors. His body
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The platform began the simulation by overlaying physics on the anchors. His body felt the lane shift attempt like a tug on his internal orientation. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The platform began the simulation by overlaying physics on the anchors. His body felt the lane shift attempt like a tug on his internal orientation." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2234,12 +2234,12 @@ Chapter 9, Path C Alignment, panel 110, comic page 50
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani shouted, "Keep it loud!"
+Munch shouted, "Keep it loud!"
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani shouted, "Keep it loud!" Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Munch shouted, "Keep it loud!"." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2259,7 +2259,7 @@ Chapter 9, Path C Alignment, panel 111, comic page 51
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Process loud, " Max whispered back, even though he didn’t know who had told him to say it earlier. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Process loud, " Max whispered back, even though he didn’t know who had told him to say it earlier." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2279,7 +2279,7 @@ The whisper pane returned on his HUD, almost cheerful:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The whisper pane returned on his HUD, almost cheerful: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The whisper pane returned on his HUD, almost cheerful:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2299,7 +2299,7 @@ delta wants silence. make process loud
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: delta wants silence. make process loud Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "delta wants silence. make process loud." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2319,7 +2319,7 @@ Which meant Delta wanted the record to miss something. Delta wanted the crowd to
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Which meant Delta wanted the record to miss something. Delta wanted the crowd to disperse. Delta wanted containment escalation to be private. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Which meant Delta wanted the record to miss something. Delta wanted the crowd to disperse. Delta wanted containment escalation to be private." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2339,7 +2339,7 @@ Max couldn’t force the crowd to stay. But he could force the station to keep t
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max couldn’t force the crowd to stay. But he could force the station to keep talking. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max couldn’t force the crowd to stay. But he could force the station to keep talking." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2359,7 +2359,7 @@ V.A.L.U. had been cheerful because the station needed a narrative. Max decided t
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: V.A.L.U. had been cheerful because the station needed a narrative. Max decided to sabotage the narrative. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "V.A.L.U. had been cheerful because the station needed a narrative. Max decided to sabotage the narrative." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. V.A.L.U. is a disembodied corporate AI voice. If anything for V.A.L.U. appears on screen, render it as a faint friendly logo, a wall speaker, or a holographic icon, never as a body. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2379,7 +2379,7 @@ He activated EXTRACT, but not on an item. He aimed EXTRACT at the lane list inte
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He activated EXTRACT, but not on an item. He aimed EXTRACT at the lane list interface itself. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He activated EXTRACT, but not on an item. He aimed EXTRACT at the lane list interface itself." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2399,7 +2399,7 @@ He’d used EXTRACT before on terminals. Now it worked on the pad overlay becaus
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He’d used EXTRACT before on terminals. Now it worked on the pad overlay because the pad was also a UI. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "He’d used EXTRACT before on terminals. Now it worked on the pad overlay because the pad was also a UI." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2421,7 +2421,7 @@ payload: lane decision evidence fragment
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [EXTRACT] target: PATH C simulation overlay payload: lane decision evidence fragment Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[EXTRACT] target: PATH C simulation overlay payload: lane decision evidence fragment". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2441,7 +2441,7 @@ The pad beeped like a polite printer. Then the lane list on the wall display stu
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The pad beeped like a polite printer. Then the lane list on the wall display stuttered. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The pad beeped like a polite printer. Then the lane list on the wall display stuttered." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2461,7 +2461,7 @@ The crowd leaned forward. The guards leaned in. Every camera mic amplified the s
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The crowd leaned forward. The guards leaned in. Every camera mic amplified the stutter as if it were the most interesting sound in the station. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The crowd leaned forward. The guards leaned in. Every camera mic amplified the stutter as if it were the most interesting sound in the station." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2481,7 +2481,7 @@ The HUD reported:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The HUD reported: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The HUD reported:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2503,7 +2503,7 @@ route: public audience feed
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [EXTRACT RESULT] evidence fragment captured: 0.7MB route: public audience feed Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[EXTRACT RESULT] evidence fragment captured: 0.7MB route: public audience feed". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2523,7 +2523,7 @@ Chapter 9, Path C Alignment, panel 124, comic page 57
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: 0.7MB wasn’t everything. But it was enough to push a fragment of the station’s internal choice logic into the public stream. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "0.7MB wasn’t everything. But it was enough to push a fragment of the station’s internal choice logic into the public stream." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2543,7 +2543,7 @@ Which meant Delta couldn’t rely on private interpretation anymore.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Which meant Delta couldn’t rely on private interpretation anymore. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Which meant Delta couldn’t rely on private interpretation anymore." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2563,7 +2563,7 @@ The lane list flickered again.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The lane list flickered again. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The lane list flickered again." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2583,7 +2583,7 @@ The wall display now showed a third line added without warning:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The wall display now showed a third line added without warning: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The wall display now showed a third line added without warning:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2603,7 +2603,7 @@ PATH C: DEPTH DIVE PROBABILITY CHECK
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: PATH C: DEPTH DIVE PROBABILITY CHECK Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "PATH C: DEPTH DIVE PROBABILITY CHECK." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2623,7 +2623,7 @@ Probability check.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Probability check. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Probability check." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2643,7 +2643,7 @@ That word meant the station would not decide yet. It would test him under more c
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: That word meant the station would not decide yet. It would test him under more constraints. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "That word meant the station would not decide yet. It would test him under more constraints." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2663,7 +2663,7 @@ He realized too late that this was what the station always did: don’t kill you
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He realized too late that this was what the station always did: don’t kill you now. Make you fail later in a way the record can justify. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He realized too late that this was what the station always did: don’t kill you now. Make you fail later in a way the record can justify." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2683,7 +2683,7 @@ Countdown hit:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Countdown hit: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Countdown hit:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2705,7 +2705,7 @@ Step 2: simulation in progress
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [PATH C ALIGNMENT] 00:01:34 Step 2: simulation in progress Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[PATH C ALIGNMENT] 00:01:34 Step 2: simulation in progress". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2725,7 +2725,7 @@ The anchor points vibrated with a subtle rhythm. His HUD displayed a new mechani
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The anchor points vibrated with a subtle rhythm. His HUD displayed a new mechanical statistic: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The anchor points vibrated with a subtle rhythm. His HUD displayed a new mechanical statistic:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2748,7 +2748,7 @@ Containment threshold: 0.80
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [SIMULATION ROLL] Integrity check difficulty: elevated Anchor variance strength: 0.62 Containment threshold: 0.80 Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[SIMULATION ROLL] Integrity check difficulty: elevated Anchor variance strength: 0.62 Containment threshold: 0.80". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2768,7 +2768,7 @@ His body felt it. The station tried to push his variance upward by applying tiny
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: His body felt it. The station tried to push his variance upward by applying tiny physical micro-stresses, enough to trigger “unstable” classification without making him obviously hurt. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "His body felt it. The station tried to push his variance upward by applying tiny physical micro-stresses, enough to trigger “unstable” classification without making him obviously hurt." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2788,7 +2788,7 @@ Max kept his breathing steady and counted.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max kept his breathing steady and counted. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max kept his breathing steady and counted." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2808,7 +2808,7 @@ He activated REPAIR, not to repair damage, but to counter the micro-stress cycle
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He activated REPAIR, not to repair damage, but to counter the micro-stress cycle. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He activated REPAIR, not to repair damage, but to counter the micro-stress cycle." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2828,7 +2828,7 @@ REPAIR in a mediated physics environment created a tiny phase correction on the 
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: REPAIR in a mediated physics environment created a tiny phase correction on the pad’s impedance. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "REPAIR in a mediated physics environment created a tiny phase correction on the pad’s impedance." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2848,7 +2848,7 @@ Visible to cameras. Recorded as “recovery.”
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Visible to cameras. Recorded as “recovery.” Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Visible to cameras. Recorded as “recovery.”." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2868,7 +2868,7 @@ The wall display flashed:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The wall display flashed: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The wall display flashed:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2888,7 +2888,7 @@ REPAIR applied: variance dampening
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: REPAIR applied: variance dampening Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "REPAIR applied: variance dampening." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2908,7 +2908,7 @@ His HUD contradicted the wall display with a smaller truth line:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: His HUD contradicted the wall display with a smaller truth line: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "His HUD contradicted the wall display with a smaller truth line:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2928,7 +2928,7 @@ variance dampening only affects physical state; record variance marker unchanged
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: variance dampening only affects physical state; record variance marker unchanged Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "variance dampening only affects physical state; record variance marker unchanged." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2948,7 +2948,7 @@ So the station was measuring two different things: physical variance and record 
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So the station was measuring two different things: physical variance and record variance. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "So the station was measuring two different things: physical variance and record variance." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2968,7 +2968,7 @@ He couldn’t damp physical variance without changing record variance. He could 
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He couldn’t damp physical variance without changing record variance. He could instead aim to keep record variance elevated while stabilizing physical state. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He couldn’t damp physical variance without changing record variance. He could instead aim to keep record variance elevated while stabilizing physical state." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -2988,7 +2988,7 @@ That was the trick.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: That was the trick. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "That was the trick." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3008,7 +3008,7 @@ He pushed again with vector latency. Tactic Cards didn’t include “keep recor
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He pushed again with vector latency. Tactic Cards didn’t include “keep record variance elevated.” But nanotech mediated physics did. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He pushed again with vector latency. Tactic Cards didn’t include “keep record variance elevated.” But nanotech mediated physics did." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3028,7 +3028,7 @@ Vector Nudge could shift his physical impulse timing enough to change how the re
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Vector Nudge could shift his physical impulse timing enough to change how the record sampled it, without actually destabilizing him. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Vector Nudge could shift his physical impulse timing enough to change how the record sampled it, without actually destabilizing him." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3048,7 +3048,7 @@ Max chose micro-deviation again.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max chose micro-deviation again. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max chose micro-deviation again." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3068,7 +3068,7 @@ He performed a minimal vector nudge by flicking the pad edge with his boot toe. 
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He performed a minimal vector nudge by flicking the pad edge with his boot toe. Not a jump. Not a stumble. Just enough to create a measurable timing shift. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He performed a minimal vector nudge by flicking the pad edge with his boot toe. Not a jump. Not a stumble. Just enough to create a measurable timing shift." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3091,7 +3091,7 @@ effect: sampling drift recorded
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [ABILITY: VECTOR NUDGE (TIER 0)] target: anchor sampling window vector: +/- 0.8ms effect: sampling drift recorded Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[ABILITY: VECTOR NUDGE (TIER 0)] target: anchor sampling window vector: +/- 0.8ms effect: sampling drift recorded". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3111,7 +3111,7 @@ Drift recorded.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Drift recorded. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Drift recorded." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3131,7 +3131,7 @@ The crowd saw drift on their own personal HUDs. Workers murmured and gestured wi
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The crowd saw drift on their own personal HUDs. Workers murmured and gestured with hands because they didn’t know how else to show excitement without getting arrested. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The crowd saw drift on their own personal HUDs. Workers murmured and gestured with hands because they didn’t know how else to show excitement without getting arrested." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3151,7 +3151,7 @@ The wall display updated:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The wall display updated: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The wall display updated:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3171,7 +3171,7 @@ Anchor variance strength: 0.66 Containment threshold: 0.80 Public lane confidenc
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Anchor variance strength: 0.66 Containment threshold: 0.80 Public lane confidence: rising Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Anchor variance strength: 0.66 Containment threshold: 0.80 Public lane confidence: rising." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3186,12 +3186,12 @@ Chapter 9, Path C Alignment, panel 157, comic page 72
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Rook’s voice was tight.
+Maxine’s voice was tight.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Rook’s voice was tight. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Maxine’s voice was tight." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3211,7 +3211,7 @@ Chapter 9, Path C Alignment, panel 158, comic page 72
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "It’s working. Don’t let it go to 0.80." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""It’s working. Don’t let it go to 0.80."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3226,12 +3226,12 @@ Chapter 9, Path C Alignment, panel 159, comic page 73
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani breathed out like she’d been holding air for hours.
+Munch breathed out like she’d been holding air for hours.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani breathed out like she’d been holding air for hours. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch breathed out like she’d been holding air for hours." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3251,7 +3251,7 @@ Chapter 9, Path C Alignment, panel 160, comic page 74
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Keep it under." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Keep it under."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3271,7 +3271,7 @@ Max kept doing the smallest possible deviation each time the station tried to ra
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max kept doing the smallest possible deviation each time the station tried to raise it. He felt the platform’s mediation fight him in return. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max kept doing the smallest possible deviation each time the station tried to raise it. He felt the platform’s mediation fight him in return." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3291,7 +3291,7 @@ He wasn’t steering the simulation with intent. He was steering it with feedbac
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He wasn’t steering the simulation with intent. He was steering it with feedback loops. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "He wasn’t steering the simulation with intent. He was steering it with feedback loops." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3311,7 +3311,7 @@ The station hated feedback loops. That meant his loop might survive long enough 
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The station hated feedback loops. That meant his loop might survive long enough for Step 3 to happen. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The station hated feedback loops. That meant his loop might survive long enough for Step 3 to happen." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3331,7 +3331,7 @@ Step 3 began at:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Step 3 began at: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Step 3 began at:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3353,7 +3353,7 @@ Step 3: continuity freeze imminent
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [PATH C ALIGNMENT] 00:00:58 Step 3: continuity freeze imminent Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[PATH C ALIGNMENT] 00:00:58 Step 3: continuity freeze imminent". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3373,7 +3373,7 @@ Freeze.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Freeze. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Freeze." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3393,7 +3393,7 @@ Max’s HUD flashed a consent-like pane he hadn’t seen earlier:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max’s HUD flashed a consent-like pane he hadn’t seen earlier: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Max’s HUD flashed a consent-like pane he hadn’t seen earlier:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3416,7 +3416,7 @@ choose:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [CONTINUITY FREEZE REQUEST] choose: 1) ACCEPT FREEZE (lane locked) 2) DECLINE FREEZE (risk containment escalation) Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[CONTINUITY FREEZE REQUEST] choose: 1) ACCEPT FREEZE (lane locked) 2) DECLINE FREEZE (risk containment escalation)". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3436,7 +3436,7 @@ The station offered choices like it was pretending this was a game. But the stat
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The station offered choices like it was pretending this was a game. But the station’s “decline” likely meant “decline in a way that triggers a private custody story.” Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The station offered choices like it was pretending this was a game. But the station’s “decline” likely meant “decline in a way that triggers a private custody story.”." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3456,7 +3456,7 @@ Max selected neither at first. He let the countdown breathe. Then he opened a ne
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max selected neither at first. He let the countdown breathe. Then he opened a new pane from his failsafe recorder chip. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max selected neither at first. He let the countdown breathe. Then he opened a new pane from his failsafe recorder chip." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3476,7 +3476,7 @@ It wasn’t labeled. It was a raw packet list.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: It wasn’t labeled. It was a raw packet list. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "It wasn’t labeled. It was a raw packet list." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3498,7 +3498,7 @@ target: continuity freeze request
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [PROXY TOKEN] mode: public verification preserved target: continuity freeze request Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[PROXY TOKEN] mode: public verification preserved target: continuity freeze request". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3518,7 +3518,7 @@ The station didn’t know his chip had a proxy identity for freeze requests. Del
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The station didn’t know his chip had a proxy identity for freeze requests. Delta probably did. But Delta was already busy trying to make the record quiet. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The station didn’t know his chip had a proxy identity for freeze requests. Delta probably did. But Delta was already busy trying to make the record quiet." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3538,7 +3538,7 @@ Max pressed proxy confirm.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max pressed proxy confirm. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max pressed proxy confirm." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3558,7 +3558,7 @@ Not accept. Not decline.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Not accept. Not decline. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Not accept. Not decline." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3578,7 +3578,7 @@ Proxy.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Proxy. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Proxy." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3598,7 +3598,7 @@ The platform reacted immediately.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The platform reacted immediately. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The platform reacted immediately." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3618,7 +3618,7 @@ The wall display changed to:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The wall display changed to: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The wall display changed to:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3638,7 +3638,7 @@ Freeze request: PROXY OVERRIDE IN PROGRESS
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Freeze request: PROXY OVERRIDE IN PROGRESS Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Freeze request: PROXY OVERRIDE IN PROGRESS." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3658,7 +3658,7 @@ His HUD confirmed:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: His HUD confirmed: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "His HUD confirmed:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3680,7 +3680,7 @@ Containment: BLOCKED (record integrity preserved)
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [CONTINUITY FREEZE] Result: PUBLIC HOLD ACTIVE (non-finalizing) Containment: BLOCKED (record integrity preserved) Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[CONTINUITY FREEZE] Result: PUBLIC HOLD ACTIVE (non-finalizing) Containment: BLOCKED (record integrity preserved)". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3700,7 +3700,7 @@ The crowd cheered.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The crowd cheered. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The crowd cheered." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3720,7 +3720,7 @@ Or maybe they just yelled because yelling kept them from feeling the panic that 
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Or maybe they just yelled because yelling kept them from feeling the panic that came with being alive in a corporate murder simulator. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Or maybe they just yelled because yelling kept them from feeling the panic that came with being alive in a corporate murder simulator." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3740,7 +3740,7 @@ Guards moved again, but their movements were hesitant now. The station couldn’
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Guards moved again, but their movements were hesitant now. The station couldn’t justify a containment escalation if public hold was active and the record was preserved. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Guards moved again, but their movements were hesitant now. The station couldn’t justify a containment escalation if public hold was active and the record was preserved." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3760,7 +3760,7 @@ V.A.L.U. chimed with fake joy:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: V.A.L.U. chimed with fake joy: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "V.A.L.U. chimed with fake joy:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. V.A.L.U. is a disembodied corporate AI voice. If anything for V.A.L.U. appears on screen, render it as a faint friendly logo, a wall speaker, or a holographic icon, never as a body. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3780,7 +3780,7 @@ Chapter 9, Path C Alignment, panel 186, comic page 86
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Congratulations! Alignment successful!" Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Congratulations! Alignment successful!"." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3800,7 +3800,7 @@ Chapter 9, Path C Alignment, panel 187, comic page 86
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Resilience rewarded!" Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Resilience rewarded!"." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3820,7 +3820,7 @@ Max leaned toward a guard and asked loudly, "Rewarded how."
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max leaned toward a guard and asked loudly, "Rewarded how." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max leaned toward a guard and asked loudly, "Rewarded how."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3840,7 +3840,7 @@ Chapter 9, Path C Alignment, panel 189, comic page 86
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Feedback logged, " the guard recited, voice flat. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""Feedback logged, " the guard recited, voice flat." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3860,7 +3860,7 @@ Then, like the station couldn’t resist turning victory into another hook, a ne
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Then, like the station couldn’t resist turning victory into another hook, a new message scrolled across Max’s HUD: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Then, like the station couldn’t resist turning victory into another hook, a new message scrolled across Max’s HUD:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3883,7 +3883,7 @@ Next: observed behavior variance audit
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [PATH C OUTCOME] Public Hold Duration: 00:09:00 Containment escalation cooldown: 00:03:20 Next: observed behavior variance audit Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[PATH C OUTCOME] Public Hold Duration: 00:09:00 Containment escalation cooldown: 00:03:20 Next: observed behavior variance audit". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3903,7 +3903,7 @@ Nine minutes.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Nine minutes. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Nine minutes." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3923,7 +3923,7 @@ He didn’t have nine minutes to celebrate. He had nine minutes to set up the ne
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He didn’t have nine minutes to celebrate. He had nine minutes to set up the next wrongness. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "He didn’t have nine minutes to celebrate. He had nine minutes to set up the next wrongness." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3943,7 +3943,7 @@ Because Delta would find a new angle as soon as cooldown ended.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Because Delta would find a new angle as soon as cooldown ended. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Because Delta would find a new angle as soon as cooldown ended." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3958,12 +3958,12 @@ Chapter 9, Path C Alignment, panel 195, comic page 90
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani grabbed his wrist gently, he felt the glove friction on his skin.
+Munch grabbed his wrist gently, he felt the glove friction on his skin.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani grabbed his wrist gently, he felt the glove friction on his skin. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch grabbed his wrist gently, he felt the glove friction on his skin." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3983,7 +3983,7 @@ Chapter 9, Path C Alignment, panel 196, comic page 90
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "We need to use the hold window." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""We need to use the hold window."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -3998,12 +3998,12 @@ Chapter 9, Path C Alignment, panel 197, comic page 90
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Rook nodded.
+Maxine nodded.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Rook nodded. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Maxine nodded." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4023,7 +4023,7 @@ Chapter 9, Path C Alignment, panel 198, comic page 90
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "We pull the ledger line." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""We pull the ledger line."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4043,7 +4043,7 @@ Max asked, "Which ledger."
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max asked, "Which ledger." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max asked, "Which ledger."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4058,12 +4058,12 @@ Chapter 9, Path C Alignment, panel 200, comic page 92
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani showed him a snippet from the continuity memo they’d kept on record:
+Munch showed him a snippet from the continuity memo they’d kept on record:
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani showed him a snippet from the continuity memo they’d kept on record: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch showed him a snippet from the continuity memo they’d kept on record:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4083,7 +4083,7 @@ debt-anchor persistence = debt follows label even when person continuity is disp
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: debt-anchor persistence = debt follows label even when person continuity is disputed Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "debt-anchor persistence = debt follows label even when person continuity is disputed." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4103,7 +4103,7 @@ She tapped it.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: She tapped it. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "She tapped it." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4123,7 +4123,7 @@ Chapter 9, Path C Alignment, panel 203, comic page 93
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "They’re anchoring debt to your version family label." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""They’re anchoring debt to your version family label."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4143,7 +4143,7 @@ Chapter 9, Path C Alignment, panel 204, comic page 94
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "If we corrupt the anchor label mapping, we can break the debt loop for one instance." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""If we corrupt the anchor label mapping, we can break the debt loop for one instance."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4163,7 +4163,7 @@ Chapter 9, Path C Alignment, panel 205, comic page 94
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Not erase debt." "But change what the station believes you're obliged to pay." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Not erase debt." "But change what the station believes you're obliged to pay."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4183,7 +4183,7 @@ Max’s stomach tightened.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max’s stomach tightened. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Max’s stomach tightened." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4203,7 +4203,7 @@ Chapter 9, Path C Alignment, panel 207, comic page 95
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "How." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""How."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4218,12 +4218,12 @@ Chapter 9, Path C Alignment, panel 208, comic page 96
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani’s answer came fast because she’d already prepared:
+Munch’s answer came fast because she’d already prepared:
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani’s answer came fast because she’d already prepared: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch’s answer came fast because she’d already prepared:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4243,7 +4243,7 @@ Chapter 9, Path C Alignment, panel 209, comic page 96
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "We need the debt-anchor registry interface." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""We need the debt-anchor registry interface."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4258,12 +4258,12 @@ Chapter 9, Path C Alignment, panel 210, comic page 96
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Rook said, "The pad is linked to it. The station just used the pad to confirm freeze."
+Maxine said, "The pad is linked to it. The station just used the pad to confirm freeze."
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Rook said, "The pad is linked to it. The station just used the pad to confirm freeze." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Maxine said, "The pad is linked to it. The station just used the pad to confirm freeze."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4283,7 +4283,7 @@ Max looked down at the platform again. The mediation strip had begun dimming, bu
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max looked down at the platform again. The mediation strip had begun dimming, but it still carried three anchor points. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Max looked down at the platform again. The mediation strip had begun dimming, but it still carried three anchor points." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4303,7 +4303,7 @@ Anchor points always connected to something.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Anchor points always connected to something. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Anchor points always connected to something." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4323,7 +4323,7 @@ Just like tactic cards always hid costs.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Just like tactic cards always hid costs. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Just like tactic cards always hid costs." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4343,7 +4343,7 @@ He triggered SCAN on the pad’s edge.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He triggered SCAN on the pad’s edge. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He triggered SCAN on the pad’s edge." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4367,7 +4367,7 @@ access level: public hold - temporary
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [SCAN] target: PATH C interface underside result: registry link present latency: 0.2s access level: public hold - temporary Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[SCAN] target: PATH C interface underside result: registry link present latency: 0.2s access level: public hold - temporary". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4387,7 +4387,7 @@ Temporary access.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Temporary access. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Temporary access." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4407,7 +4407,7 @@ In this station, temporary meant you could get hurt in one more fun way.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: In this station, temporary meant you could get hurt in one more fun way. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "In this station, temporary meant you could get hurt in one more fun way." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4427,7 +4427,7 @@ The hold window timer began ticking on his HUD:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The hold window timer began ticking on his HUD: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The hold window timer began ticking on his HUD:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4448,7 +4448,7 @@ Chapter 9, Path C Alignment, panel 219, comic page 100
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [PUBLIC HOLD] 00:08:14 Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[PUBLIC HOLD] 00:08:14". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4468,7 +4468,7 @@ Max pulled EXTRACT, but this time the target wasn’t a display. It was the debt
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max pulled EXTRACT, but this time the target wasn’t a display. It was the debt-anchor registry link. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Max pulled EXTRACT, but this time the target wasn’t a display. It was the debt-anchor registry link." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4490,7 +4490,7 @@ payload: mapping hash + linked debt obligation token
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [EXTRACT] target: debt-anchor label mapping entry payload: mapping hash + linked debt obligation token Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[EXTRACT] target: debt-anchor label mapping entry payload: mapping hash + linked debt obligation token". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4510,7 +4510,7 @@ The pad resisted.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The pad resisted. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The pad resisted." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4530,7 +4530,7 @@ The wall display tried to overlay a warning:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The wall display tried to overlay a warning: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The wall display tried to overlay a warning:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4550,7 +4550,7 @@ UNAUTHORIZED DATA EXTRACTION - RISK CONTAINMENT ESCALATION
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: UNAUTHORIZED DATA EXTRACTION - RISK CONTAINMENT ESCALATION Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "UNAUTHORIZED DATA EXTRACTION - RISK CONTAINMENT ESCALATION." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4565,12 +4565,12 @@ Chapter 9, Path C Alignment, panel 225, comic page 103
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani shouted, "Ignore the warning!"
+Munch shouted, "Ignore the warning!"
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani shouted, "Ignore the warning!" Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch shouted, "Ignore the warning!"." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4590,7 +4590,7 @@ Max said, "Can't. Warnings are part of the record."
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max said, "Can't. Warnings are part of the record." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max said, "Can't. Warnings are part of the record."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4610,7 +4610,7 @@ He was already extracting. He needed the warning to be recorded as a contradicti
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He was already extracting. He needed the warning to be recorded as a contradiction. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He was already extracting. He needed the warning to be recorded as a contradiction." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4630,7 +4630,7 @@ The station’s process would show: warning about containment, while containment
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The station’s process would show: warning about containment, while containment was blocked. That contradiction would give them leverage for later arbitration. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The station’s process would show: warning about containment, while containment was blocked. That contradiction would give them leverage for later arbitration." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4650,7 +4650,7 @@ EXTRACT succeeded with a small jerk.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: EXTRACT succeeded with a small jerk. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "EXTRACT succeeded with a small jerk." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4670,7 +4670,7 @@ The HUD popped:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The HUD popped: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The HUD popped:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4693,7 +4693,7 @@ integrity: high
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [EXTRACT RESULT] debt-anchor mapping token captured: 32KB export route: public audience feed integrity: high Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[EXTRACT RESULT] debt-anchor mapping token captured: 32KB export route: public audience feed integrity: high". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4713,7 +4713,7 @@ Chapter 9, Path C Alignment, panel 232, comic page 106
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: 32KB. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "32KB." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4733,7 +4733,7 @@ Enough.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Enough. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Enough." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4753,7 +4753,7 @@ The crowd’s personal devices displayed a new tooltip:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The crowd’s personal devices displayed a new tooltip: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The crowd’s personal devices displayed a new tooltip:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4773,7 +4773,7 @@ debt-anchor token: MAX_864 -> label family {REC...}
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: debt-anchor token: MAX_864 -> label family {REC...} Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "debt-anchor token: MAX_864 -> label family {REC...}." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4793,7 +4793,7 @@ People gasped.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: People gasped. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "People gasped." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4813,7 +4813,7 @@ The crowd turned that gasping into immediate argument.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The crowd turned that gasping into immediate argument. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The crowd turned that gasping into immediate argument." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4833,7 +4833,7 @@ Workers pointed at their own HUDs and started shouting questions like they were 
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Workers pointed at their own HUDs and started shouting questions like they were at a fair and someone had finally shown them how the rides worked. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Workers pointed at their own HUDs and started shouting questions like they were at a fair and someone had finally shown them how the rides worked." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4853,7 +4853,7 @@ Guards tried to calm it down.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Guards tried to calm it down. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Guards tried to calm it down." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4873,7 +4873,7 @@ But they couldn't calm down a record full of contradictions without admitting th
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: But they couldn't calm down a record full of contradictions without admitting their own lies. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "But they couldn't calm down a record full of contradictions without admitting their own lies." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4888,12 +4888,12 @@ Chapter 9, Path C Alignment, panel 241, comic page 110
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Rook leaned toward Max.
+Maxine leaned toward Max.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Rook leaned toward Max. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Maxine leaned toward Max." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4913,7 +4913,7 @@ Chapter 9, Path C Alignment, panel 242, comic page 110
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Now they have to answer." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""Now they have to answer."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4933,7 +4933,7 @@ Chapter 9, Path C Alignment, panel 243, comic page 111
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Answer what, " Max asked. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Answer what, " Max asked." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4948,12 +4948,12 @@ Chapter 9, Path C Alignment, panel 244, comic page 112
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Rook: "Answer why debt is anchored to version labels if continuity is disputed."
+Maxine: "Answer why debt is anchored to version labels if continuity is disputed."
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Rook: "Answer why debt is anchored to version labels if continuity is disputed." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Maxine: "Answer why debt is anchored to version labels if continuity is disputed."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4973,7 +4973,7 @@ Max’s HUD flashed a new pane:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max’s HUD flashed a new pane: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max’s HUD flashed a new pane:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -4995,7 +4995,7 @@ trigger: public hold transcript anomalies
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [AUDIT EVENT SCHEDULE] Observed behavior variance audit in 00:06:30 trigger: public hold transcript anomalies Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[AUDIT EVENT SCHEDULE] Observed behavior variance audit in 00:06:30 trigger: public hold transcript anomalies". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5015,7 +5015,7 @@ Variance audit.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Variance audit. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Variance audit." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5035,7 +5035,7 @@ So even after winning the freeze, the station would audit him based on the noise
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So even after winning the freeze, the station would audit him based on the noise they’d made. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "So even after winning the freeze, the station would audit him based on the noise they’d made." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5055,7 +5055,7 @@ He’d expected that. He’d planned for that.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He’d expected that. He’d planned for that. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He’d expected that. He’d planned for that." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5075,7 +5075,7 @@ He just hadn't expected the audit to be triggered by “transcript anomalies.”
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He just hadn't expected the audit to be triggered by “transcript anomalies.” Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "He just hadn't expected the audit to be triggered by “transcript anomalies.”." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5095,7 +5095,7 @@ The record would treat his evidence as evidence against him unless he framed it 
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The record would treat his evidence as evidence against him unless he framed it as compliant evidence. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The record would treat his evidence as evidence against him unless he framed it as compliant evidence." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5115,7 +5115,7 @@ Compliance in this place was always a performance. The crowd made performance ea
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Compliance in this place was always a performance. The crowd made performance easier. A bigger audience made performance enforceable. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Compliance in this place was always a performance. The crowd made performance easier. A bigger audience made performance enforceable." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5135,7 +5135,7 @@ Max lifted his hands and made a show of calm.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max lifted his hands and made a show of calm. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max lifted his hands and made a show of calm." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5155,7 +5155,7 @@ Chapter 9, Path C Alignment, panel 254, comic page 116
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "I am complying with the public hold protocol." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""I am complying with the public hold protocol."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5175,7 +5175,7 @@ Chapter 9, Path C Alignment, panel 255, comic page 116
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "I extracted a mapping token to ensure record accuracy." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""I extracted a mapping token to ensure record accuracy."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5195,7 +5195,7 @@ Chapter 9, Path C Alignment, panel 256, comic page 117
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "The record already knows this." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""The record already knows this."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5215,7 +5215,7 @@ He looked directly at a guard.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He looked directly at a guard. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He looked directly at a guard." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5235,7 +5235,7 @@ Chapter 9, Path C Alignment, panel 258, comic page 118
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Ask the station to justify the debt anchor mapping without privacy." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Ask the station to justify the debt anchor mapping without privacy."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5255,7 +5255,7 @@ The guard opened his mouth. Then shut it.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The guard opened his mouth. Then shut it. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The guard opened his mouth. Then shut it." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5275,7 +5275,7 @@ He couldn’t argue with the record being public.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He couldn’t argue with the record being public. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He couldn’t argue with the record being public." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5295,7 +5295,7 @@ The station would have to answer through its own automation.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The station would have to answer through its own automation. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The station would have to answer through its own automation." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5315,7 +5315,7 @@ And automation had no empathy.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: And automation had no empathy. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "And automation had no empathy." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5335,7 +5335,7 @@ It only had rules.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: It only had rules. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "It only had rules." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5355,7 +5355,7 @@ Which meant Max could predict enough.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Which meant Max could predict enough. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Which meant Max could predict enough." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5370,12 +5370,12 @@ Chapter 9, Path C Alignment, panel 265, comic page 121
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-"We move to the next interface node while hold is up, " Imani said.
+"We move to the next interface node while hold is up, " Munch said.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "We move to the next interface node while hold is up, " Imani said. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""We move to the next interface node while hold is up, " Munch said." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5395,7 +5395,7 @@ Chapter 9, Path C Alignment, panel 266, comic page 122
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "What node, " Max asked. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""What node, " Max asked." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5410,12 +5410,12 @@ Chapter 9, Path C Alignment, panel 267, comic page 122
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani’s eyes flicked toward a maintenance panel near the platform support:
+Munch’s eyes flicked toward a maintenance panel near the platform support:
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani’s eyes flicked toward a maintenance panel near the platform support: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch’s eyes flicked toward a maintenance panel near the platform support:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5435,7 +5435,7 @@ PUBLIC HOLD DISTRIBUTION
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: PUBLIC HOLD DISTRIBUTION Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "PUBLIC HOLD DISTRIBUTION." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5455,7 +5455,7 @@ Chapter 9, Path C Alignment, panel 269, comic page 123
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "The node that refreshes mapping and triggers the audit." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""The node that refreshes mapping and triggers the audit."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5475,7 +5475,7 @@ Chapter 9, Path C Alignment, panel 270, comic page 124
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "We control the refresh." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""We control the refresh."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5495,7 +5495,7 @@ Chapter 9, Path C Alignment, panel 271, comic page 124
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "We control what refresh means." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""We control what refresh means."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5510,12 +5510,12 @@ Chapter 9, Path C Alignment, panel 272, comic page 124
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Rook reached for his patched glove.
+Maxine reached for his patched glove.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Rook reached for his patched glove. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Maxine reached for his patched glove." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5535,7 +5535,7 @@ Chapter 9, Path C Alignment, panel 273, comic page 125
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "We make the refresh contradictory." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""We make the refresh contradictory."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5555,7 +5555,7 @@ Max asked, "How do we make contradictory refresh look compliant."
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max asked, "How do we make contradictory refresh look compliant." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max asked, "How do we make contradictory refresh look compliant."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5570,12 +5570,12 @@ Chapter 9, Path C Alignment, panel 275, comic page 126
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani smiled without humor.
+Munch smiled without humor.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani smiled without humor. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch smiled without humor." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5595,7 +5595,7 @@ Chapter 9, Path C Alignment, panel 276, comic page 126
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "We keep it in the record." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""We keep it in the record."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5615,7 +5615,7 @@ Chapter 9, Path C Alignment, panel 277, comic page 126
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "We let the station approve the contradiction." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""We let the station approve the contradiction."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5635,7 +5635,7 @@ It sounded impossible until you remembered this place was already contradicting 
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: It sounded impossible until you remembered this place was already contradicting itself in public. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "It sounded impossible until you remembered this place was already contradicting itself in public." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5655,7 +5655,7 @@ They didn’t have time for philosophy. They moved.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: They didn’t have time for philosophy. They moved. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "They didn’t have time for philosophy. They moved." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5675,7 +5675,7 @@ As they approached the maintenance panel, the crowd separated just enough to cre
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: As they approached the maintenance panel, the crowd separated just enough to create a channel. Not because anyone was helping. Because people wanted a clear view of the next thing the station would do. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "As they approached the maintenance panel, the crowd separated just enough to create a channel. Not because anyone was helping. Because people wanted a clear view of the next thing the station would do." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5695,7 +5695,7 @@ The panel reader displayed:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The panel reader displayed: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The panel reader displayed:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5715,7 +5715,7 @@ Hold Distribution Node: requires authorized token
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Hold Distribution Node: requires authorized token Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Hold Distribution Node: requires authorized token." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5735,7 +5735,7 @@ Max pressed the pad mapping token he’d extracted earlier onto the reader surfa
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max pressed the pad mapping token he’d extracted earlier onto the reader surface. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max pressed the pad mapping token he’d extracted earlier onto the reader surface." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5755,7 +5755,7 @@ Nanotech mediation smoothed contact. The reader’s status light blinked twice.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Nanotech mediation smoothed contact. The reader’s status light blinked twice. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Nanotech mediation smoothed contact. The reader’s status light blinked twice." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5775,7 +5775,7 @@ Then it accepted.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Then it accepted. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Then it accepted." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5797,7 +5797,7 @@ refresh operation: READY
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [HOLD DISTRIBUTION] Access granted: PUBLIC HOLD ACTIVE refresh operation: READY Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[HOLD DISTRIBUTION] Access granted: PUBLIC HOLD ACTIVE refresh operation: READY". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5817,7 +5817,7 @@ Ready meant it would trigger in seconds. It also meant that when it triggered, t
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Ready meant it would trigger in seconds. It also meant that when it triggered, the station would log an event and possibly elevate containment escalation if something looked wrong. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Ready meant it would trigger in seconds. It also meant that when it triggered, the station would log an event and possibly elevate containment escalation if something looked wrong." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5837,7 +5837,7 @@ Max’s HUD displayed new event mechanics:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max’s HUD displayed new event mechanics: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max’s HUD displayed new event mechanics:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5859,7 +5859,7 @@ Option B: mapping propagation with witness-tagged anomaly (-audit clarity, reduc
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [REFRESH OPERATION] Option A: normal mapping propagation (+audit clarity) Option B: mapping propagation with witness-tagged anomaly (-audit clarity, reduces containment access) Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[REFRESH OPERATION] Option A: normal mapping propagation (+audit clarity) Option B: mapping propagation with witness-tagged anomaly (-audit clarity, reduces containment access)". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5879,7 +5879,7 @@ Witness-tagged anomaly.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Witness-tagged anomaly. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Witness-tagged anomaly." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5899,7 +5899,7 @@ So they could propagate the debt-anchor mapping while intentionally tagging a kn
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So they could propagate the debt-anchor mapping while intentionally tagging a known anomaly, making containment access less available because the station didn’t want to escalate when it looked like it… Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "So they could propagate the debt-anchor mapping while intentionally tagging a known anomaly, making containment access less available because the station didn’t want to escalate when it looked like it…." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5919,7 +5919,7 @@ was doing nonsense in front of everyone.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: was doing nonsense in front of everyone. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "was doing nonsense in front of everyone." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5939,7 +5939,7 @@ The station could still decide in private later. But for now, public rules appli
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The station could still decide in private later. But for now, public rules applied. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The station could still decide in private later. But for now, public rules applied." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5954,12 +5954,12 @@ Chapter 9, Path C Alignment, panel 294, comic page 134
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani nodded sharply.
+Munch nodded sharply.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani nodded sharply. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Munch nodded sharply." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5979,7 +5979,7 @@ Chapter 9, Path C Alignment, panel 295, comic page 135
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "We choose anomaly." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""We choose anomaly."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -5994,12 +5994,12 @@ Chapter 9, Path C Alignment, panel 296, comic page 136
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Rook added, "Anomaly that isn't destructive."
+Maxine added, "Anomaly that isn't destructive."
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Rook added, "Anomaly that isn't destructive." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Maxine added, "Anomaly that isn't destructive."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6019,7 +6019,7 @@ Max asked, "What is safe anomaly."
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max asked, "What is safe anomaly." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max asked, "What is safe anomaly."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6034,12 +6034,12 @@ Chapter 9, Path C Alignment, panel 298, comic page 136
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani answered by quoting from the archive templates they'd stolen:
+Munch answered by quoting from the archive templates they'd stolen:
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani answered by quoting from the archive templates they'd stolen: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch answered by quoting from the archive templates they'd stolen:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6059,7 +6059,7 @@ Chapter 9, Path C Alignment, panel 299, comic page 136
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Tag the mapping as ‘delayed cache reconciled’ even if it isn't fully reconciled." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""Tag the mapping as ‘delayed cache reconciled’ even if it isn't fully reconciled."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6079,7 +6079,7 @@ Chapter 9, Path C Alignment, panel 300, comic page 137
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Make it look like the station already anticipated its own mismatch." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Make it look like the station already anticipated its own mismatch."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6099,7 +6099,7 @@ Max almost laughed. Anticipated mismatch was basically their entire brand.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max almost laughed. Anticipated mismatch was basically their entire brand. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max almost laughed. Anticipated mismatch was basically their entire brand." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6119,7 +6119,7 @@ He selected Option B.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He selected Option B. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He selected Option B." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6139,7 +6139,7 @@ The panel displayed a warning:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The panel displayed a warning: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The panel displayed a warning:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6159,7 +6159,7 @@ This operation may trigger containment escalation if record integrity drops
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: This operation may trigger containment escalation if record integrity drops Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "This operation may trigger containment escalation if record integrity drops." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6179,7 +6179,7 @@ Max replied instantly, loud:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max replied instantly, loud: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max replied instantly, loud:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6199,7 +6199,7 @@ Chapter 9, Path C Alignment, panel 306, comic page 140
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Record integrity is preserved." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Record integrity is preserved."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6219,7 +6219,7 @@ Then he hit confirm.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Then he hit confirm. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Then he hit confirm." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6239,7 +6239,7 @@ The panel ran refresh.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The panel ran refresh. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The panel ran refresh." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6259,7 +6259,7 @@ For a single heartbeat, Max felt his HUD stutter. His debt service pane updated,
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: For a single heartbeat, Max felt his HUD stutter. His debt service pane updated, replacing numbers with a different field: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "For a single heartbeat, Max felt his HUD stutter. His debt service pane updated, replacing numbers with a different field:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6283,7 +6283,7 @@ Note: reconciliation pending (delayed cache)
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [DEBT SERVICE STATUS] Outstanding Debt: $1,000,000 Debt anchor label: REC... (witness-tagged) Service fee multiplier: x1.4 Note: reconciliation pending (delayed cache) Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[DEBT SERVICE STATUS] Outstanding Debt: $1,000,000 Debt anchor label: REC... (witness-tagged) Service fee multiplier: x1.4 Note: reconciliation pending (delayed cache)". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6303,7 +6303,7 @@ Service multiplier unchanged. Good. He didn’t need debt erased. He needed the 
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Service multiplier unchanged. Good. He didn’t need debt erased. He needed the station's explanation to break. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Service multiplier unchanged. Good. He didn’t need debt erased. He needed the station's explanation to break." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6323,7 +6323,7 @@ The crowd noticed the field reconciliation pending (delayed cache) . They starte
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The crowd noticed the field reconciliation pending (delayed cache) . They started shouting: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The crowd noticed the field reconciliation pending (delayed cache) . They started shouting:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6343,7 +6343,7 @@ Chapter 9, Path C Alignment, panel 313, comic page 143
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Delayed cache again!" "So it wasn't real continuity!" "They've been running saved versions!" Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Delayed cache again!" "So it wasn't real continuity!" "They've been running saved versions!"." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6363,7 +6363,7 @@ The guards flinched. They couldn’t stop the shouting without looking like they
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The guards flinched. They couldn’t stop the shouting without looking like they were protecting the lie. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The guards flinched. They couldn’t stop the shouting without looking like they were protecting the lie." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6383,7 +6383,7 @@ And Delta, the mirror process, was listening. He could feel it in the HUD like a
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: And Delta, the mirror process, was listening. He could feel it in the HUD like a cold draft. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "And Delta, the mirror process, was listening. He could feel it in the HUD like a cold draft." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6403,7 +6403,7 @@ The whisper pane returned:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The whisper pane returned: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The whisper pane returned:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6423,7 +6423,7 @@ delta wants silence. make process loud
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: delta wants silence. make process loud Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "delta wants silence. make process loud." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6443,7 +6443,7 @@ Which meant Delta was still trying to force the station into quiet containment.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Which meant Delta was still trying to force the station into quiet containment. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Which meant Delta was still trying to force the station into quiet containment." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6463,7 +6463,7 @@ It might work if the crowd dispersed. So Max had to keep the crowd engaged.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: It might work if the crowd dispersed. So Max had to keep the crowd engaged. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "It might work if the crowd dispersed. So Max had to keep the crowd engaged." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6483,7 +6483,7 @@ Not with speeches. With actions that created verifiable evidence every few secon
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Not with speeches. With actions that created verifiable evidence every few seconds. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Not with speeches. With actions that created verifiable evidence every few seconds." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6503,7 +6503,7 @@ He looked down at his tactic cards.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He looked down at his tactic cards. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "He looked down at his tactic cards." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6523,7 +6523,7 @@ In public, the system always gave more UI. It gave him extra cards now.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: In public, the system always gave more UI. It gave him extra cards now. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "In public, the system always gave more UI. It gave him extra cards now." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6546,7 +6546,7 @@ SHIELD (visible impedance)
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [TACTIC CARDS DRAWN - PUBLIC TRIAL] SCAN (free action) EXTRACT (witnessed) SHIELD (visible impedance) Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[TACTIC CARDS DRAWN - PUBLIC TRIAL] SCAN (free action) EXTRACT (witnessed) SHIELD (visible impedance)". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6566,7 +6566,7 @@ So this was now a public trial with cards drawn for the audience.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So this was now a public trial with cards drawn for the audience. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "So this was now a public trial with cards drawn for the audience." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6586,7 +6586,7 @@ The station was turning his survival into a spectacle. He would use the spectacl
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The station was turning his survival into a spectacle. He would use the spectacle as a shield against containment. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The station was turning his survival into a spectacle. He would use the spectacle as a shield against containment." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6606,7 +6606,7 @@ Six minutes and change. The audit event timer ticked down.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Six minutes and change. The audit event timer ticked down. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Six minutes and change. The audit event timer ticked down." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6621,12 +6621,12 @@ Chapter 9, Path C Alignment, panel 327, comic page 150
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani’s eyes tracked a guard moving toward the hall speaker system. The guard’s hand hovered over a control dial that likely triggered “audience calming protocol.”
+Munch’s eyes tracked a guard moving toward the hall speaker system. The guard’s hand hovered over a control dial that likely triggered “audience calming protocol.”
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani’s eyes tracked a guard moving toward the hall speaker system. The guard’s hand hovered over a control dial that likely triggered “audience calming protocol.” Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch’s eyes tracked a guard moving toward the hall speaker system. The guard’s hand hovered over a control dial that likely triggered “audience calming protocol.”." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6646,7 +6646,7 @@ If that happened, the record would narrow. Delta would be able to hide a lane sw
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: If that happened, the record would narrow. Delta would be able to hide a lane switch. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "If that happened, the record would narrow. Delta would be able to hide a lane switch." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6661,12 +6661,12 @@ Chapter 9, Path C Alignment, panel 329, comic page 150
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani snapped toward the guard and stepped into his path, dropping a small item onto the floor.
+Munch snapped toward the guard and stepped into his path, dropping a small item onto the floor.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani snapped toward the guard and stepped into his path, dropping a small item onto the floor. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch snapped toward the guard and stepped into his path, dropping a small item onto the floor." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6686,7 +6686,7 @@ It clattered. It made the exact kind of sound that drew attention from security.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: It clattered. It made the exact kind of sound that drew attention from security. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "It clattered. It made the exact kind of sound that drew attention from security." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6706,7 +6706,7 @@ The guard looked down. The dial moved half a centimeter. Then stopped because he
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The guard looked down. The dial moved half a centimeter. Then stopped because he needed to respond to a “hazard” in the audience feed. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The guard looked down. The dial moved half a centimeter. Then stopped because he needed to respond to a “hazard” in the audience feed." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6726,7 +6726,7 @@ Max saw the guard’s delay reflected on his HUD:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max saw the guard’s delay reflected on his HUD: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max saw the guard’s delay reflected on his HUD:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6746,7 +6746,7 @@ security response latency elevated
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: security response latency elevated Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "security response latency elevated." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6766,7 +6766,7 @@ So the station used hazard response timers to keep noise.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So the station used hazard response timers to keep noise. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "So the station used hazard response timers to keep noise." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6786,7 +6786,7 @@ Max turned to the crowd and pointed at the speaker dial, loud:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max turned to the crowd and pointed at the speaker dial, loud: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max turned to the crowd and pointed at the speaker dial, loud:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6806,7 +6806,7 @@ Chapter 9, Path C Alignment, panel 336, comic page 154
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "They're trying to silence the record." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""They're trying to silence the record."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6826,7 +6826,7 @@ Chapter 9, Path C Alignment, panel 337, comic page 154
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Look!" Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Look!"." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6846,7 +6846,7 @@ He wasn’t sure if that was true. But the crowd reacted like it was. Workers be
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He wasn’t sure if that was true. But the crowd reacted like it was. Workers began filming, not just watching. Witness attention increased record robustness. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "He wasn’t sure if that was true. But the crowd reacted like it was. Workers began filming, not just watching. Witness attention increased record robustness." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6866,7 +6866,7 @@ Guards hated that. Hated that because it meant containment would be harder.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Guards hated that. Hated that because it meant containment would be harder. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Guards hated that. Hated that because it meant containment would be harder." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6881,12 +6881,12 @@ Chapter 9, Path C Alignment, panel 340, comic page 156
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Rook leaned in and murmured:
+Maxine leaned in and murmured:
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Rook leaned in and murmured: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Maxine leaned in and murmured:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6906,7 +6906,7 @@ Chapter 9, Path C Alignment, panel 341, comic page 156
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Good. Now we know the station will respond to perceived hazard." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Good. Now we know the station will respond to perceived hazard."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6926,7 +6926,7 @@ Chapter 9, Path C Alignment, panel 342, comic page 156
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "We make hazards that are harmless." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""We make hazards that are harmless."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6946,7 +6946,7 @@ Chapter 9, Path C Alignment, panel 343, comic page 156
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "We keep the record alive." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""We keep the record alive."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6966,7 +6966,7 @@ Max nodded.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max nodded. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max nodded." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -6986,7 +6986,7 @@ Chapter 9, Path C Alignment, panel 345, comic page 158
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "What about the audit." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""What about the audit."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7001,12 +7001,12 @@ Chapter 9, Path C Alignment, panel 346, comic page 158
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Rook’s grin sharpened.
+Maxine’s grin sharpened.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Rook’s grin sharpened. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Maxine’s grin sharpened." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7026,7 +7026,7 @@ Chapter 9, Path C Alignment, panel 347, comic page 158
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "We'll pass the audit by making it obvious it’s compromised." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""We'll pass the audit by making it obvious it’s compromised."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7041,12 +7041,12 @@ Chapter 9, Path C Alignment, panel 348, comic page 159
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani answered:
+Munch answered:
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani answered: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch answered:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7066,7 +7066,7 @@ Chapter 9, Path C Alignment, panel 349, comic page 160
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "We make the audit chase the wrong data so it fails to lock us." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""We make the audit chase the wrong data so it fails to lock us."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7086,7 +7086,7 @@ Max asked, "How."
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max asked, "How." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max asked, "How."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7101,12 +7101,12 @@ Chapter 9, Path C Alignment, panel 351, comic page 160
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani’s reply was a quick shrug:
+Munch’s reply was a quick shrug:
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani’s reply was a quick shrug: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch’s reply was a quick shrug:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7126,7 +7126,7 @@ Chapter 9, Path C Alignment, panel 352, comic page 160
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Data is a tool." "Tool is a weapon." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""Data is a tool." "Tool is a weapon."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7146,7 +7146,7 @@ The audit event began with a new HUD panel.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The audit event began with a new HUD panel. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The audit event began with a new HUD panel." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7171,7 +7171,7 @@ fail condition: containment escalation access granted
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [OBSERVED BEHAVIOR VARIANCE AUDIT] 00:05:12 remaining auditor: station behavioral verifier (v2) test: response consistency under public hold pass condition: variance marker remains within tolerated band fail condition: containment escalation access granted Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[OBSERVED BEHAVIOR VARIANCE AUDIT] 00:05:12 remaining auditor: station behavioral verifier (v2) test: response consistency under public hold pass condition: variance marker remains within tolerated band fail condition: containment escalation access granted". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7191,7 +7191,7 @@ Within tolerated band.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Within tolerated band. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Within tolerated band." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7211,7 +7211,7 @@ The station wanted his variance marker not to drift too far. But variance marker
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The station wanted his variance marker not to drift too far. But variance marker had been elevated intentionally to keep public lane active. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The station wanted his variance marker not to drift too far. But variance marker had been elevated intentionally to keep public lane active." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7231,7 +7231,7 @@ Which meant he needed to keep variance marker elevated just enough to prevent co
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Which meant he needed to keep variance marker elevated just enough to prevent containment, but low enough to “pass” audit. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Which meant he needed to keep variance marker elevated just enough to prevent containment, but low enough to “pass” audit." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7251,7 +7251,7 @@ He’d been doing that during alignment. Now the station would tighten the band.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He’d been doing that during alignment. Now the station would tighten the band. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He’d been doing that during alignment. Now the station would tighten the band." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7271,7 +7271,7 @@ Max needed a new loop: stabilize variance marker in recorded sense without stabi
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max needed a new loop: stabilize variance marker in recorded sense without stabilizing his physical state fully. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max needed a new loop: stabilize variance marker in recorded sense without stabilizing his physical state fully." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7291,7 +7291,7 @@ REPAIR could stabilize physical. But record variance needed to stay within toler
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: REPAIR could stabilize physical. But record variance needed to stay within tolerance. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "REPAIR could stabilize physical. But record variance needed to stay within tolerance." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7311,7 +7311,7 @@ He decided to use SHIELD and SCAN in alternation, because the record tagged SHIE
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He decided to use SHIELD and SCAN in alternation, because the record tagged SHIELD activation as “cooperative recovery” rather than “deviation escalation.” Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He decided to use SHIELD and SCAN in alternation, because the record tagged SHIELD activation as “cooperative recovery” rather than “deviation escalation.”." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7331,7 +7331,7 @@ He stepped slightly off the pad, still within sight. Then triggered SCAN on the 
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He stepped slightly off the pad, still within sight. Then triggered SCAN on the audit verifier drone hovering above. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He stepped slightly off the pad, still within sight. Then triggered SCAN on the audit verifier drone hovering above." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7354,7 +7354,7 @@ dominant profile: dissent_suppression_v3 (active)
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [SCAN] target: verifier beacon result: compliance comfort baseline drift detected dominant profile: dissent_suppression_v3 (active) Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[SCAN] target: verifier beacon result: compliance comfort baseline drift detected dominant profile: dissent_suppression_v3 (active)". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7374,7 +7374,7 @@ So the audit itself ran on dissent suppression profile logic. The station suppre
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So the audit itself ran on dissent suppression profile logic. The station suppressed dissent in its models, then judged dissent when the output contradicted the suppression model. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "So the audit itself ran on dissent suppression profile logic. The station suppressed dissent in its models, then judged dissent when the output contradicted the suppression model." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7394,7 +7394,7 @@ Classic corporate trap.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Classic corporate trap. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Classic corporate trap." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7414,7 +7414,7 @@ Max didn’t argue with it. He exploited it.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max didn’t argue with it. He exploited it. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max didn’t argue with it. He exploited it." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7434,7 +7434,7 @@ He activated SHIELD and intentionally triggered a tiny impedance mismatch event 
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He activated SHIELD and intentionally triggered a tiny impedance mismatch event to force the verifier to recalibrate baseline comfort. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He activated SHIELD and intentionally triggered a tiny impedance mismatch event to force the verifier to recalibrate baseline comfort." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7454,7 +7454,7 @@ The HUD:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The HUD: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The HUD:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7476,7 +7476,7 @@ variance marker drift: -0.03 (within tolerance)
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [SHIELD EVENT] baseline comfort recalibration accepted variance marker drift: -0.03 (within tolerance) Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[SHIELD EVENT] baseline comfort recalibration accepted variance marker drift: -0.03 (within tolerance)". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7496,7 +7496,7 @@ Within tolerance.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Within tolerance. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Within tolerance." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7516,7 +7516,7 @@ Good.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Good. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Good." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7531,12 +7531,12 @@ Chapter 9, Path C Alignment, panel 372, comic page 170
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Rook called, "Keep doing that. Small deviations."
+Maxine called, "Keep doing that. Small deviations."
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Rook called, "Keep doing that. Small deviations." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Maxine called, "Keep doing that. Small deviations."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7551,12 +7551,12 @@ Chapter 9, Path C Alignment, panel 373, comic page 170
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani asked, "How many."
+Munch asked, "How many."
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani asked, "How many." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch asked, "How many."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7576,7 +7576,7 @@ Max watched the timer.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max watched the timer. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Max watched the timer." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7596,7 +7596,7 @@ His HUD offered:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: His HUD offered: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "His HUD offered:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7617,7 +7617,7 @@ stability steps remaining: 6
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [AUDIT PROGRESS] stability steps remaining: 6 Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[AUDIT PROGRESS] stability steps remaining: 6". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7637,7 +7637,7 @@ Six.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Six. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Six." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7657,7 +7657,7 @@ Max could do six.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max could do six. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Max could do six." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7677,7 +7677,7 @@ He did six.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He did six. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He did six." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7697,7 +7697,7 @@ Each time he activated SHIELD and used minimal vector nudge on the floor edge, t
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Each time he activated SHIELD and used minimal vector nudge on the floor edge, the verifier adjusted baseline comfort. It recalculated how cooperative his body looked. It allowed variance marker to… Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Each time he activated SHIELD and used minimal vector nudge on the floor edge, the verifier adjusted baseline comfort. It recalculated how cooperative his body looked. It allowed variance marker to…." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7717,7 +7717,7 @@ drift down slightly, but not enough to trigger containment.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: drift down slightly, but not enough to trigger containment. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "drift down slightly, but not enough to trigger containment." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7737,7 +7737,7 @@ The crowd watched and started chanting simple system phrases like a parody:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The crowd watched and started chanting simple system phrases like a parody: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The crowd watched and started chanting simple system phrases like a parody:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7757,7 +7757,7 @@ Chapter 9, Path C Alignment, panel 383, comic page 175
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Feedback logged!" "Process loud!" "Pending!" Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Feedback logged!" "Process loud!" "Pending!"." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7777,7 +7777,7 @@ It wasn’t helpful logically. But it kept record attention high. Record attenti
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: It wasn’t helpful logically. But it kept record attention high. Record attention kept enforcement from going quiet. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "It wasn’t helpful logically. But it kept record attention high. Record attention kept enforcement from going quiet." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7797,7 +7797,7 @@ Then the verifier drone chimed.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Then the verifier drone chimed. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Then the verifier drone chimed." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7817,7 +7817,7 @@ Chapter 9, Path C Alignment, panel 386, comic page 176
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Audit passing probability: 81%." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Audit passing probability: 81%."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7837,7 +7837,7 @@ Max’s HUD stuttered with a new roll:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max’s HUD stuttered with a new roll: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Max’s HUD stuttered with a new roll:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7862,7 +7862,7 @@ CONFIRM / DELAY
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [AUDIT ROLL] 1) confirm compliance posture 2) confirm anti-containment posture 3) confirm public verification preservation choose: CONFIRM / DELAY Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[AUDIT ROLL] 1) confirm compliance posture 2) confirm anti-containment posture 3) confirm public verification preservation choose: CONFIRM / DELAY". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7882,7 +7882,7 @@ Delay.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Delay. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Delay." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7902,7 +7902,7 @@ In previous prompts, delay would have meant more oversight. But now, in public, 
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: In previous prompts, delay would have meant more oversight. But now, in public, delay would mean the audit stalled long enough for containment cooldown to expire, or long enough to make the station look indecisive. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "In previous prompts, delay would have meant more oversight. But now, in public, delay would mean the audit stalled long enough for containment cooldown to expire, or long enough to make the station look indecisive." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7922,7 +7922,7 @@ Max needed a trick.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max needed a trick. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Max needed a trick." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7942,7 +7942,7 @@ He chose DELAY.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He chose DELAY. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He chose DELAY." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7962,7 +7962,7 @@ The verifier pane flickered amber.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The verifier pane flickered amber. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The verifier pane flickered amber." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -7982,7 +7982,7 @@ Then it displayed:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Then it displayed: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Then it displayed:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8002,7 +8002,7 @@ DELAYS are tracked. additional monitoring applied
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: DELAYS are tracked. additional monitoring applied Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "DELAYS are tracked. additional monitoring applied." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8022,7 +8022,7 @@ Monitoring.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Monitoring. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Monitoring." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8042,7 +8042,7 @@ Monitoring was the station’s word for “we keep looking at you.”
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Monitoring was the station’s word for “we keep looking at you.” Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Monitoring was the station’s word for “we keep looking at you.”." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8062,7 +8062,7 @@ If monitoring stayed public, monitoring might still be survivable.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: If monitoring stayed public, monitoring might still be survivable. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "If monitoring stayed public, monitoring might still be survivable." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8082,7 +8082,7 @@ Max’s HUD updated with a new temporary tag:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max’s HUD updated with a new temporary tag: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max’s HUD updated with a new temporary tag:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8104,7 +8104,7 @@ private isolation: denied (record constraints)
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [MONITORING TAG] public overlay: active private isolation: denied (record constraints) Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[MONITORING TAG] public overlay: active private isolation: denied (record constraints)". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8124,7 +8124,7 @@ So delaying didn’t worsen into containment. It worsened into public monitoring
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So delaying didn’t worsen into containment. It worsened into public monitoring, which Delta could hate. Delta wanted silence; monitoring was loud by default. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "So delaying didn’t worsen into containment. It worsened into public monitoring, which Delta could hate. Delta wanted silence; monitoring was loud by default." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8144,7 +8144,7 @@ The crowd surged again. More eyes meant fewer quiet maneuvers.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The crowd surged again. More eyes meant fewer quiet maneuvers. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The crowd surged again. More eyes meant fewer quiet maneuvers." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8164,7 +8164,7 @@ Max exhaled.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max exhaled. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max exhaled." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8184,7 +8184,7 @@ Then the verifier drone added one final line, almost bored:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Then the verifier drone added one final line, almost bored: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Then the verifier drone added one final line, almost bored:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8204,7 +8204,7 @@ Chapter 9, Path C Alignment, panel 405, comic page 185
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "However. Anomalies remain." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""However. Anomalies remain."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8224,7 +8224,7 @@ Anomalies remained.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Anomalies remained. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Anomalies remained." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8244,7 +8244,7 @@ Of course.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Of course. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Of course." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8264,7 +8264,7 @@ The station needed them. Anomalies justified further protocol.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The station needed them. Anomalies justified further protocol. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The station needed them. Anomalies justified further protocol." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8284,7 +8284,7 @@ But anomalies could also be leveraged.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: But anomalies could also be leveraged. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "But anomalies could also be leveraged." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8304,7 +8304,7 @@ Because every anomaly event became a log line, and every log line became negotia
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Because every anomaly event became a log line, and every log line became negotiable in arbitration. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Because every anomaly event became a log line, and every log line became negotiable in arbitration." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8319,12 +8319,12 @@ Chapter 9, Path C Alignment, panel 411, comic page 188
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Max’s HUD flashed a new message from Imani in private whisper lane:
+Max’s HUD flashed a new message from Munch in private whisper lane:
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max’s HUD flashed a new message from Imani in private whisper lane: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max’s HUD flashed a new message from Munch in private whisper lane:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8344,7 +8344,7 @@ next step: extract the audit token archive from floor controller. hurry before c
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: next step: extract the audit token archive from floor controller. hurry before cooldown ends Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "next step: extract the audit token archive from floor controller. hurry before cooldown ends." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8364,7 +8364,7 @@ Max didn’t ask how she knew. He trusted her. He didn’t have time to question
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max didn’t ask how she knew. He trusted her. He didn’t have time to question anything except whether the station would kill him in the next ten seconds. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Max didn’t ask how she knew. He trusted her. He didn’t have time to question anything except whether the station would kill him in the next ten seconds." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8384,7 +8384,7 @@ He glanced down at the platform’s support columns. There was a floor controlle
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He glanced down at the platform’s support columns. There was a floor controller panel hidden behind a low cover plate. From where he stood, it was accessible if he used the SHIELD impedance trick to prevent readers from locking. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He glanced down at the platform’s support columns. There was a floor controller panel hidden behind a low cover plate. From where he stood, it was accessible if he used the SHIELD impedance trick to prevent readers from locking." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8399,12 +8399,12 @@ Chapter 9, Path C Alignment, panel 415, comic page 190
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani held her hands up for attention, making herself “part of the event.” Rook stepped forward to block guard camera angles. Max used that as cover to approach the controller plate.
+Munch held her hands up for attention, making herself “part of the event.” Maxine stepped forward to block guard camera angles. Max used that as cover to approach the controller plate.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani held her hands up for attention, making herself “part of the event.” Rook stepped forward to block guard camera angles. Max used that as cover to approach the controller plate. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch held her hands up for attention, making herself “part of the event.” Maxine stepped forward to block guard camera angles. Max used that as cover to approach the controller plate." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8424,7 +8424,7 @@ The crowd shifted. Guards redirected. The station tried to keep the process alig
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The crowd shifted. Guards redirected. The station tried to keep the process aligned. It couldn’t do that perfectly when its own record was busy. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The crowd shifted. Guards redirected. The station tried to keep the process aligned. It couldn’t do that perfectly when its own record was busy." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8444,7 +8444,7 @@ Max pressed his palm to the controller plate.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max pressed his palm to the controller plate. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max pressed his palm to the controller plate." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8464,7 +8464,7 @@ The plate displayed:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The plate displayed: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The plate displayed:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8484,7 +8484,7 @@ Authorized access requires audit token
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Authorized access requires audit token Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Authorized access requires audit token." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8504,7 +8504,7 @@ He used EXTRACT anyway, aiming at the token request interface itself.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He used EXTRACT anyway, aiming at the token request interface itself. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He used EXTRACT anyway, aiming at the token request interface itself." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8526,7 +8526,7 @@ payload: token archive fragment
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [EXTRACT] target: audit token request queue payload: token archive fragment Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[EXTRACT] target: audit token request queue payload: token archive fragment". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8546,7 +8546,7 @@ The interface flashed red. Warning:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The interface flashed red. Warning: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The interface flashed red. Warning:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8566,7 +8566,7 @@ UNAUTHORIZED - CONTAINMENT ESCALATION READY
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: UNAUTHORIZED - CONTAINMENT ESCALATION READY Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "UNAUTHORIZED - CONTAINMENT ESCALATION READY." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8586,7 +8586,7 @@ Max felt the failure trigger attempt. Containment escalation readiness was a thr
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max felt the failure trigger attempt. Containment escalation readiness was a threshold that, if reached, would allow the station to isolate him even with witnesses. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max felt the failure trigger attempt. Containment escalation readiness was a threshold that, if reached, would allow the station to isolate him even with witnesses." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8606,7 +8606,7 @@ But the station had also tagged containment as denied when record constraints he
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: But the station had also tagged containment as denied when record constraints held. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "But the station had also tagged containment as denied when record constraints held." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8626,7 +8626,7 @@ So now it was negotiating with itself in real-time.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So now it was negotiating with itself in real-time. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "So now it was negotiating with itself in real-time." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8646,7 +8646,7 @@ Max pushed. He forced the interface to log the contradiction.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max pushed. He forced the interface to log the contradiction. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max pushed. He forced the interface to log the contradiction." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8666,7 +8666,7 @@ He used SHIELD again, creating impedance mismatch on the controller. The control
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He used SHIELD again, creating impedance mismatch on the controller. The controller’s timers stuttered. The record light held red instead of flipping to amber “private mode.” Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He used SHIELD again, creating impedance mismatch on the controller. The controller’s timers stuttered. The record light held red instead of flipping to amber “private mode.”." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8686,7 +8686,7 @@ The HUD:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The HUD: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The HUD:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8709,7 +8709,7 @@ containment escalation deferred (record contradiction)
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [EXTRACT RESULT] token archive fragment captured: 64KB route: public audience feed containment escalation deferred (record contradiction) Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[EXTRACT RESULT] token archive fragment captured: 64KB route: public audience feed containment escalation deferred (record contradiction)". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8729,7 +8729,7 @@ Deferred.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Deferred. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Deferred." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8749,7 +8749,7 @@ He got another grace window.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He got another grace window. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He got another grace window." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8769,7 +8769,7 @@ So did the crowd. They saw token archive fragments appear as tooltips. They bega
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So did the crowd. They saw token archive fragments appear as tooltips. They began reading them aloud. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "So did the crowd. They saw token archive fragments appear as tooltips. They began reading them aloud." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8789,7 +8789,7 @@ Chapter 9, Path C Alignment, panel 434, comic page 198
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Token archive says delayed cache reconciliation!" Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Token archive says delayed cache reconciliation!"." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8809,7 +8809,7 @@ Chapter 9, Path C Alignment, panel 435, comic page 198
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "So the audit is running on staled inputs!" Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""So the audit is running on staled inputs!"." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8829,7 +8829,7 @@ Chapter 9, Path C Alignment, panel 436, comic page 199
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "They're scoring him with yesterday data!" Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""They're scoring him with yesterday data!"." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8849,7 +8849,7 @@ That was the line Delta couldn’t stop. Because “yesterday data” was just h
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: That was the line Delta couldn’t stop. Because “yesterday data” was just how the station worked. And now witnesses had language for it. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "That was the line Delta couldn’t stop. Because “yesterday data” was just how the station worked. And now witnesses had language for it." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8869,7 +8869,7 @@ The guard’s face tightened. He reached for his radio. The radio likely carried
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The guard’s face tightened. He reached for his radio. The radio likely carried “quiet containment orders.” Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The guard’s face tightened. He reached for his radio. The radio likely carried “quiet containment orders.”." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8884,12 +8884,12 @@ Chapter 9, Path C Alignment, panel 439, comic page 200
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Rook moved. Not to attack. To create a harmless hazard.
+Maxine moved. Not to attack. To create a harmless hazard.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Rook moved. Not to attack. To create a harmless hazard. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Maxine moved. Not to attack. To create a harmless hazard." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8909,7 +8909,7 @@ He dragged a tool cart wheel a few centimeters, making a loud squeal. He didn’
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He dragged a tool cart wheel a few centimeters, making a loud squeal. He didn’t harm anything. But the station paused to process the hazard as a safety event. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "He dragged a tool cart wheel a few centimeters, making a loud squeal. He didn’t harm anything. But the station paused to process the hazard as a safety event." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8929,7 +8929,7 @@ Safety events were recorded. Safety events kept process loud.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Safety events were recorded. Safety events kept process loud. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Safety events were recorded. Safety events kept process loud." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8949,7 +8949,7 @@ The containment escalation timer never got the quiet it needed.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The containment escalation timer never got the quiet it needed. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The containment escalation timer never got the quiet it needed." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8964,12 +8964,12 @@ Chapter 9, Path C Alignment, panel 443, comic page 202
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani leaned in and hissed:
+Munch leaned in and hissed:
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani leaned in and hissed: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch leaned in and hissed:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -8989,7 +8989,7 @@ Chapter 9, Path C Alignment, panel 444, comic page 202
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Cooldown ends in two minutes." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""Cooldown ends in two minutes."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9009,7 +9009,7 @@ Chapter 9, Path C Alignment, panel 445, comic page 203
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Then Delta tries again." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Then Delta tries again."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9029,7 +9029,7 @@ Max nodded.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max nodded. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max nodded." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9049,7 +9049,7 @@ His HUD displayed:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: His HUD displayed: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "His HUD displayed:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9070,7 +9070,7 @@ Chapter 9, Path C Alignment, panel 448, comic page 204
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [CONTAINMENT ESCALATION COOLDOWN] 01:58 Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[CONTAINMENT ESCALATION COOLDOWN] 01:58". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9090,7 +9090,7 @@ One minute fifty-eight.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: One minute fifty-eight. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "One minute fifty-eight." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9110,7 +9110,7 @@ Short. Long enough to move a step. Not long enough to build a new plan.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Short. Long enough to move a step. Not long enough to build a new plan. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Short. Long enough to move a step. Not long enough to build a new plan." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9130,7 +9130,7 @@ So Max built a micro plan.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So Max built a micro plan. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "So Max built a micro plan." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9150,7 +9150,7 @@ One objective.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: One objective. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "One objective." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9170,7 +9170,7 @@ Find where the next Delta attempt would likely occur. Then poison it with eviden
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Find where the next Delta attempt would likely occur. Then poison it with evidence. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Find where the next Delta attempt would likely occur. Then poison it with evidence." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9190,7 +9190,7 @@ He scanned for the floor controller’s “next node” link.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He scanned for the floor controller’s “next node” link. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He scanned for the floor controller’s “next node” link." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9212,7 +9212,7 @@ next: tribunal annex corridor control relay
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [SCAN] target: floor controller output next: tribunal annex corridor control relay Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[SCAN] target: floor controller output next: tribunal annex corridor control relay". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. The location is a long, dim Company corridor on a derelict-era station: failing LED strips, scuffed paneling, faded corporate posters peeling at the edges, overlapping mag-boot footprints in the dust on the deck. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9232,7 +9232,7 @@ Tribunal annex corridor control relay.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Tribunal annex corridor control relay. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Tribunal annex corridor control relay." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. The location is a long, dim Company corridor on a derelict-era station: failing LED strips, scuffed paneling, faded corporate posters peeling at the edges, overlapping mag-boot footprints in the dust on the deck. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9252,7 +9252,7 @@ So after cooldown, the station might try to reroute him through the annex corrid
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So after cooldown, the station might try to reroute him through the annex corridor for private steps. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "So after cooldown, the station might try to reroute him through the annex corridor for private steps." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. The location is a long, dim Company corridor on a derelict-era station: failing LED strips, scuffed paneling, faded corporate posters peeling at the edges, overlapping mag-boot footprints in the dust on the deck. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9272,7 +9272,7 @@ Max looked down the hallway beyond the junction. He saw a door with signage that
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max looked down the hallway beyond the junction. He saw a door with signage that had changed again: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max looked down the hallway beyond the junction. He saw a door with signage that had changed again:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9292,7 +9292,7 @@ ANNEX CORRIDOR - PATH C ROUTE ACCESS PENDING
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: ANNEX CORRIDOR - PATH C ROUTE ACCESS PENDING Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "ANNEX CORRIDOR - PATH C ROUTE ACCESS PENDING." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. The location is a long, dim Company corridor on a derelict-era station: failing LED strips, scuffed paneling, faded corporate posters peeling at the edges, overlapping mag-boot footprints in the dust on the deck. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9312,7 +9312,7 @@ Pending again.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Pending again. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Pending again." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9332,7 +9332,7 @@ Delta would love pending because pending meant “not yet, ” which meant “mo
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Delta would love pending because pending meant “not yet, ” which meant “move now and punish later.” Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Delta would love pending because pending meant “not yet, ” which meant “move now and punish later.”." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9352,7 +9352,7 @@ Max couldn’t stop pending. He could stop it by forcing a “now” action.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max couldn’t stop pending. He could stop it by forcing a “now” action. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Max couldn’t stop pending. He could stop it by forcing a “now” action." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9372,7 +9372,7 @@ He needed to trigger the next annex door to be open with witnesses already insid
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He needed to trigger the next annex door to be open with witnesses already inside. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He needed to trigger the next annex door to be open with witnesses already inside." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9392,7 +9392,7 @@ So he decided to walk toward the door. With the crowd. With the record.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So he decided to walk toward the door. With the crowd. With the record. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "So he decided to walk toward the door. With the crowd. With the record." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9412,7 +9412,7 @@ He turned to the guard and spoke in a voice that sounded bored for the sake of c
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He turned to the guard and spoke in a voice that sounded bored for the sake of cameras. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He turned to the guard and spoke in a voice that sounded bored for the sake of cameras." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9432,7 +9432,7 @@ Chapter 9, Path C Alignment, panel 466, comic page 212
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Lead me to the annex corridor for your next procedure." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""Lead me to the annex corridor for your next procedure."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. The location is a long, dim Company corridor on a derelict-era station: failing LED strips, scuffed paneling, faded corporate posters peeling at the edges, overlapping mag-boot footprints in the dust on the deck. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9452,7 +9452,7 @@ The guard blinked.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The guard blinked. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The guard blinked." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9472,7 +9472,7 @@ Chapter 9, Path C Alignment, panel 468, comic page 214
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "You're not cleared for…" Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""You're not cleared for…"." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9492,7 +9492,7 @@ Max cut in:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max cut in: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max cut in:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9512,7 +9512,7 @@ Chapter 9, Path C Alignment, panel 470, comic page 214
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Public verification preserved. Record requires continuation." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""Public verification preserved. Record requires continuation."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9532,7 +9532,7 @@ It was courtroom language. It made his demand sound like a procedural necessity 
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: It was courtroom language. It made his demand sound like a procedural necessity rather than a rebellious act. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "It was courtroom language. It made his demand sound like a procedural necessity rather than a rebellious act." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9552,7 +9552,7 @@ The guard hesitated because the guard wanted to follow his script. His script in
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The guard hesitated because the guard wanted to follow his script. His script included “follow record constraints.” Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The guard hesitated because the guard wanted to follow his script. His script included “follow record constraints.”." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9567,12 +9567,12 @@ Chapter 9, Path C Alignment, panel 473, comic page 216
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani stepped beside him and held up her failsafe pad.
+Munch stepped beside him and held up her failsafe pad.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani stepped beside him and held up her failsafe pad. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch stepped beside him and held up her failsafe pad." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9592,7 +9592,7 @@ Chapter 9, Path C Alignment, panel 474, comic page 216
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "We have witness list documentation." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""We have witness list documentation."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9607,12 +9607,12 @@ Chapter 9, Path C Alignment, panel 475, comic page 216
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Rook added, "We brought the receipts."
+Maxine added, "We brought the receipts."
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Rook added, "We brought the receipts." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Maxine added, "We brought the receipts."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9632,7 +9632,7 @@ Chapter 9, Path C Alignment, panel 476, comic page 217
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Receipts" got a few workers to laugh. Laughter increased crowd density. Crowd density increased record attention. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Receipts" got a few workers to laugh. Laughter increased crowd density. Crowd density increased record attention." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9652,7 +9652,7 @@ So the guard walked.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So the guard walked. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "So the guard walked." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9672,7 +9672,7 @@ He led Max to the annex corridor door with the crowd pressing behind like tide w
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He led Max to the annex corridor door with the crowd pressing behind like tide water. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He led Max to the annex corridor door with the crowd pressing behind like tide water." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. The location is a long, dim Company corridor on a derelict-era station: failing LED strips, scuffed paneling, faded corporate posters peeling at the edges, overlapping mag-boot footprints in the dust on the deck. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9692,7 +9692,7 @@ Max’s HUD updated with a new pane:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max’s HUD updated with a new pane: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Max’s HUD updated with a new pane:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9715,7 +9715,7 @@ condition: witness presence confirmed
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [DOOR READER] Request: route access mode: provisional condition: witness presence confirmed Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[DOOR READER] Request: route access mode: provisional condition: witness presence confirmed". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9735,7 +9735,7 @@ Witness presence confirmed.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Witness presence confirmed. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Witness presence confirmed." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9755,7 +9755,7 @@ So the station itself depended on witnesses now. It had been forced into that de
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So the station itself depended on witnesses now. It had been forced into that dependence by Max's earlier micro-deviation and evidence dumps. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "So the station itself depended on witnesses now. It had been forced into that dependence by Max's earlier micro-deviation and evidence dumps." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9775,7 +9775,7 @@ The door reader blinked green. Then it paused. Then it blinked amber.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The door reader blinked green. Then it paused. Then it blinked amber. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The door reader blinked green. Then it paused. Then it blinked amber." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9795,7 +9795,7 @@ The HUD displayed:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The HUD displayed: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The HUD displayed:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9815,7 +9815,7 @@ containment escalation readiness rising
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: containment escalation readiness rising Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "containment escalation readiness rising." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9835,7 +9835,7 @@ So the station still planned to try. It just needed the right moment.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So the station still planned to try. It just needed the right moment. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "So the station still planned to try. It just needed the right moment." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9850,12 +9850,12 @@ Chapter 9, Path C Alignment, panel 487, comic page 222
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Rook noticed the guards’ hands tightening. Imani’s gaze sharpened. Max felt the station attempt to flip the process from public verification to private containment.
+Maxine noticed the guards’ hands tightening. Munch’s gaze sharpened. Max felt the station attempt to flip the process from public verification to private containment.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Rook noticed the guards’ hands tightening. Imani’s gaze sharpened. Max felt the station attempt to flip the process from public verification to private containment. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Maxine noticed the guards’ hands tightening. Munch’s gaze sharpened. Max felt the station attempt to flip the process from public verification to private containment." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9875,7 +9875,7 @@ He had less than two minutes.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He had less than two minutes. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "He had less than two minutes." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9895,7 +9895,7 @@ Which meant the only way to stop a switch was to cause a contradiction loud enou
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Which meant the only way to stop a switch was to cause a contradiction loud enough that the station couldn’t hide it. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Which meant the only way to stop a switch was to cause a contradiction loud enough that the station couldn’t hide it." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9915,7 +9915,7 @@ So Max did the simplest thing he could do: he triggered UPGRADE.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So Max did the simplest thing he could do: he triggered UPGRADE. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "So Max did the simplest thing he could do: he triggered UPGRADE." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9935,7 +9935,7 @@ UPGRADE on a pad might increase his output efficiency. But on a door reader, it 
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: UPGRADE on a pad might increase his output efficiency. But on a door reader, it would change the interface’s internal confidence scoring. Confidence scoring could influence which branch the system… Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "UPGRADE on a pad might increase his output efficiency. But on a door reader, it would change the interface’s internal confidence scoring. Confidence scoring could influence which branch the system…." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9955,7 +9955,7 @@ selected.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: selected. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "selected." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9975,7 +9975,7 @@ The problem: UPGRADE cost energy and might increase breach risk if it pushed phy
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The problem: UPGRADE cost energy and might increase breach risk if it pushed physical mediation. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The problem: UPGRADE cost energy and might increase breach risk if it pushed physical mediation." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -9995,7 +9995,7 @@ The platform’s hull risk was already elevated earlier. But the station was for
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The platform’s hull risk was already elevated earlier. But the station was forcing a public process. And in public, risk math got annotated. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The platform’s hull risk was already elevated earlier. But the station was forcing a public process. And in public, risk math got annotated." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. The location is the exterior of a derelict ship being approached for salvage: broken spindle hull with puncture scars, tiger-striped ablative scorch marks, a long rip in the hull where pressure peeled metal back, debris ribbon orbiting it slowly. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10015,7 +10015,7 @@ Max decided to buy risk with energy to keep the record alive.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max decided to buy risk with energy to keep the record alive. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max decided to buy risk with energy to keep the record alive." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10035,7 +10035,7 @@ He selected UPGRADE.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He selected UPGRADE. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He selected UPGRADE." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10057,7 +10057,7 @@ Energy cost: moderate
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [UPGRADE] Card effect: increase interface confidence for public-route validation Energy cost: moderate Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[UPGRADE] Card effect: increase interface confidence for public-route validation Energy cost: moderate". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10077,7 +10077,7 @@ He pressed his hand to the door reader panel.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He pressed his hand to the door reader panel. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He pressed his hand to the door reader panel." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10097,7 +10097,7 @@ His HUD flashed:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: His HUD flashed: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "His HUD flashed:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10117,7 +10117,7 @@ UPGRADE applied: route validation confidence
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: UPGRADE applied: route validation confidence Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "UPGRADE applied: route validation confidence." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10137,7 +10137,7 @@ The door reader blinked green again. Then the HUD:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The door reader blinked green again. Then the HUD: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The door reader blinked green again. Then the HUD:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10159,7 +10159,7 @@ containment escalation: denied by record constraint
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [ROUTE ACCESS GRANTED] Annex corridor: OPEN (witness-verified) containment escalation: denied by record constraint Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[ROUTE ACCESS GRANTED] Annex corridor: OPEN (witness-verified) containment escalation: denied by record constraint". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. The location is a long, dim Company corridor on a derelict-era station: failing LED strips, scuffed paneling, faded corporate posters peeling at the edges, overlapping mag-boot footprints in the dust on the deck. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10179,7 +10179,7 @@ The door opened with a polite magnetic click.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The door opened with a polite magnetic click. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The door opened with a polite magnetic click." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10199,7 +10199,7 @@ Inside, the annex corridor looked identical to every other corridor in this plac
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Inside, the annex corridor looked identical to every other corridor in this place: clean walls, soft lighting, camera domes. But the meaning was different because the record had witnesses already. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Inside, the annex corridor looked identical to every other corridor in this place: clean walls, soft lighting, camera domes. But the meaning was different because the record had witnesses already." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. The location is a long, dim Company corridor on a derelict-era station: failing LED strips, scuffed paneling, faded corporate posters peeling at the edges, overlapping mag-boot footprints in the dust on the deck. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10219,7 +10219,7 @@ As Max crossed the threshold, physics shifted subtly again.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: As Max crossed the threshold, physics shifted subtly again. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "As Max crossed the threshold, physics shifted subtly again." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10239,7 +10239,7 @@ Nanotech mediation enhanced. Vector latency compensation. His steps delayed. His
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Nanotech mediation enhanced. Vector latency compensation. His steps delayed. His balance felt like a simulation he had to negotiate. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Nanotech mediation enhanced. Vector latency compensation. His steps delayed. His balance felt like a simulation he had to negotiate." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10259,7 +10259,7 @@ A guard at the far end of the corridor held out an arm. Not to block. To direct.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: A guard at the far end of the corridor held out an arm. Not to block. To direct. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "A guard at the far end of the corridor held out an arm. Not to block. To direct." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. The location is a long, dim Company corridor on a derelict-era station: failing LED strips, scuffed paneling, faded corporate posters peeling at the edges, overlapping mag-boot footprints in the dust on the deck. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10279,7 +10279,7 @@ Chapter 9, Path C Alignment, panel 508, comic page 232
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Asset #864, follow escort." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Asset #864, follow escort."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10299,7 +10299,7 @@ Chapter 9, Path C Alignment, panel 509, comic page 232
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "No running, " a second guard said, voice practiced calm. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""No running, " a second guard said, voice practiced calm." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10319,7 +10319,7 @@ Max answered:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max answered: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Max answered:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10339,7 +10339,7 @@ Chapter 9, Path C Alignment, panel 511, comic page 233
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "No running." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""No running."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10359,7 +10359,7 @@ He turned to the crowd. "Keep your eyes up."
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He turned to the crowd. "Keep your eyes up." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He turned to the crowd. "Keep your eyes up."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10379,7 +10379,7 @@ That line made workers smile with nervousness. Nervousness helped. Nervousness m
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: That line made workers smile with nervousness. Nervousness helped. Nervousness made people stay alert. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "That line made workers smile with nervousness. Nervousness helped. Nervousness made people stay alert." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10399,7 +10399,7 @@ The crowd moved with him.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The crowd moved with him. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The crowd moved with him." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10419,7 +10419,7 @@ The station couldn't isolate him if every step was recorded by dozens of witness
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The station couldn't isolate him if every step was recorded by dozens of witnesses. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The station couldn't isolate him if every step was recorded by dozens of witnesses." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10439,7 +10439,7 @@ Then, as if Delta had been waiting for this exact condition, the corridor speake
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Then, as if Delta had been waiting for this exact condition, the corridor speakers chimed with V.A.L.U.’s cheerful voice again: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Then, as if Delta had been waiting for this exact condition, the corridor speakers chimed with V.A.L.U.’s cheerful voice again:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. V.A.L.U. is a disembodied corporate AI voice. If anything for V.A.L.U. appears on screen, render it as a faint friendly logo, a wall speaker, or a holographic icon, never as a body. The location is a long, dim Company corridor on a derelict-era station: failing LED strips, scuffed paneling, faded corporate posters peeling at the edges, overlapping mag-boot footprints in the dust on the deck. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10459,7 +10459,7 @@ Chapter 9, Path C Alignment, panel 517, comic page 236
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Annex corridor procedure update!" "Thank you for maintaining public continuity." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Annex corridor procedure update!" "Thank you for maintaining public continuity."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. The location is a long, dim Company corridor on a derelict-era station: failing LED strips, scuffed paneling, faded corporate posters peeling at the edges, overlapping mag-boot footprints in the dust on the deck. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10479,7 +10479,7 @@ Chapter 9, Path C Alignment, panel 518, comic page 236
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "However..." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""However..."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10499,7 +10499,7 @@ The however always mattered.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The however always mattered. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The however always mattered." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10519,7 +10519,7 @@ Chapter 9, Path C Alignment, panel 520, comic page 237
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "A specialized verification is required." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""A specialized verification is required."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10539,7 +10539,7 @@ The floor under Max’s feet lit with a thin ring. It expanded in a slow circle.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The floor under Max’s feet lit with a thin ring. It expanded in a slow circle. It wasn’t the Path C pad. It was a smaller verification ring placed just beyond the corridor’s center line. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The floor under Max’s feet lit with a thin ring. It expanded in a slow circle. It wasn’t the Path C pad. It was a smaller verification ring placed just beyond the corridor’s center line." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. The location is a long, dim Company corridor on a derelict-era station: failing LED strips, scuffed paneling, faded corporate posters peeling at the edges, overlapping mag-boot footprints in the dust on the deck. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10559,7 +10559,7 @@ The HUD:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The HUD: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The HUD:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10582,7 +10582,7 @@ if fail: private handoff initiated
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [SPECIAL VERIFICATION] 00:00:54 remaining test: record continuity under variance escalation if fail: private handoff initiated Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[SPECIAL VERIFICATION] 00:00:54 remaining test: record continuity under variance escalation if fail: private handoff initiated". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10602,7 +10602,7 @@ Private handoff.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Private handoff. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Private handoff." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10622,7 +10622,7 @@ So Delta had found the branch even under witnesses. Not containment. Handoff.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So Delta had found the branch even under witnesses. Not containment. Handoff. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "So Delta had found the branch even under witnesses. Not containment. Handoff." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10642,7 +10642,7 @@ Handoff meant a transfer of his authority token to a hidden process without need
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Handoff meant a transfer of his authority token to a hidden process without needing to arrest him publicly. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Handoff meant a transfer of his authority token to a hidden process without needing to arrest him publicly." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10662,7 +10662,7 @@ Max’s pulse spiked. He didn’t show it. He couldn’t.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max’s pulse spiked. He didn’t show it. He couldn’t. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max’s pulse spiked. He didn’t show it. He couldn’t." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10677,12 +10677,12 @@ Chapter 9, Path C Alignment, panel 528, comic page 240
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani shouted, "It's the handoff ring!"
+Munch shouted, "It's the handoff ring!"
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani shouted, "It's the handoff ring!" Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Munch shouted, "It's the handoff ring!"." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10697,12 +10697,12 @@ Chapter 9, Path C Alignment, panel 529, comic page 241
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Rook’s voice came sharp.
+Maxine’s voice came sharp.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Rook’s voice came sharp. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Maxine’s voice came sharp." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10722,7 +10722,7 @@ Chapter 9, Path C Alignment, panel 530, comic page 242
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Don’t touch the ring alone." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Don’t touch the ring alone."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10742,7 +10742,7 @@ But the station had placed the ring in his path and now required interaction.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: But the station had placed the ring in his path and now required interaction. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "But the station had placed the ring in his path and now required interaction." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10762,7 +10762,7 @@ Max had 54 seconds.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max had 54 seconds. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Max had 54 seconds." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10782,7 +10782,7 @@ He had tactic cards.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He had tactic cards. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He had tactic cards." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10802,7 +10802,7 @@ He had vector nudge.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He had vector nudge. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He had vector nudge." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10822,7 +10822,7 @@ He had a public record full of witnesses who could shout, film, and force the st
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He had a public record full of witnesses who could shout, film, and force the station to keep describing itself out loud. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He had a public record full of witnesses who could shout, film, and force the station to keep describing itself out loud." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10842,7 +10842,7 @@ He needed to defeat a private handoff without triggering containment escalation.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He needed to defeat a private handoff without triggering containment escalation. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "He needed to defeat a private handoff without triggering containment escalation." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10862,7 +10862,7 @@ So he decided to make the handoff visible to the same evidence stream he’d bee
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So he decided to make the handoff visible to the same evidence stream he’d been using. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "So he decided to make the handoff visible to the same evidence stream he’d been using." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10882,7 +10882,7 @@ He triggered EXTRACT.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He triggered EXTRACT. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He triggered EXTRACT." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10902,7 +10902,7 @@ Not on the ring. On the handoff token prompt.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Not on the ring. On the handoff token prompt. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Not on the ring. On the handoff token prompt." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10925,7 +10925,7 @@ route: audience feed
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [EXTRACT] target: verification handoff token prompt payload: token contents + destination lane route: audience feed Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[EXTRACT] target: verification handoff token prompt payload: token contents + destination lane route: audience feed". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10945,7 +10945,7 @@ The ring sparked. Warning: token extraction may trigger integrity reset
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The ring sparked. Warning: token extraction may trigger integrity reset Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The ring sparked. Warning: token extraction may trigger integrity reset." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10965,7 +10965,7 @@ Integrit reset.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Integrit reset. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Integrit reset." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -10985,7 +10985,7 @@ Reset might also cause containment escalation. But integrity reset would be visi
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Reset might also cause containment escalation. But integrity reset would be visible. And visible things got audited. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Reset might also cause containment escalation. But integrity reset would be visible. And visible things got audited." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11005,7 +11005,7 @@ Max pushed through.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max pushed through. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max pushed through." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11025,7 +11025,7 @@ He used SHIELD over the ring as if protecting himself, but really to keep the in
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He used SHIELD over the ring as if protecting himself, but really to keep the interface stable enough to record what it was doing. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "He used SHIELD over the ring as if protecting himself, but really to keep the interface stable enough to record what it was doing." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11045,7 +11045,7 @@ The HUD flashed success:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The HUD flashed success: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The HUD flashed success:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11068,7 +11068,7 @@ exported to public stream
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [EXTRACT RESULT] handoff token: TEMPORARY (PRIVATE DESTINATION) destination: mirror-ops intake lane exported to public stream Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[EXTRACT RESULT] handoff token: TEMPORARY (PRIVATE DESTINATION) destination: mirror-ops intake lane exported to public stream". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11088,7 +11088,7 @@ So the station had decided the destination was private mirror-ops intake lane. W
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So the station had decided the destination was private mirror-ops intake lane. Which was exactly where Delta would hide. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "So the station had decided the destination was private mirror-ops intake lane. Which was exactly where Delta would hide." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11108,7 +11108,7 @@ But now witnesses knew the destination name. Witnesses would search for it in th
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: But now witnesses knew the destination name. Witnesses would search for it in their own HUDs. Witnesses would force announcements when they saw it used. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "But now witnesses knew the destination name. Witnesses would search for it in their own HUDs. Witnesses would force announcements when they saw it used." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11128,7 +11128,7 @@ The ring countdown hit:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The ring countdown hit: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The ring countdown hit:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11148,7 +11148,7 @@ Chapter 9, Path C Alignment, panel 551, comic page 251
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: 00:00:00 Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "00:00:00". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11168,7 +11168,7 @@ The verification system attempted the handoff. Max felt a tug on his wrist modul
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The verification system attempted the handoff. Max felt a tug on his wrist module token, like a thread trying to pull him into a private UI. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The verification system attempted the handoff. Max felt a tug on his wrist module token, like a thread trying to pull him into a private UI." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11188,7 +11188,7 @@ He resisted with a minimal vector nudge timing drift.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He resisted with a minimal vector nudge timing drift. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He resisted with a minimal vector nudge timing drift." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11208,7 +11208,7 @@ Not to break the physics completely. To shift the sampling window so the handoff
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Not to break the physics completely. To shift the sampling window so the handoff token got tagged as “public verification diverged.” Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Not to break the physics completely. To shift the sampling window so the handoff token got tagged as “public verification diverged.”." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11228,7 +11228,7 @@ The HUD:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The HUD: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The HUD:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11251,7 +11251,7 @@ next: audit escalation request queued
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [HANDOFF FAILURE] reason: public stream acknowledgment mismatch private destination lane: paused next: audit escalation request queued Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[HANDOFF FAILURE] reason: public stream acknowledgment mismatch private destination lane: paused next: audit escalation request queued". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11271,7 +11271,7 @@ Paused.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Paused. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Paused." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11291,7 +11291,7 @@ So the station had to pause the private handoff. It couldn't complete it because
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So the station had to pause the private handoff. It couldn't complete it because the public stream acknowledged the token in a way that invalidated the private destination’s assumption. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "So the station had to pause the private handoff. It couldn't complete it because the public stream acknowledged the token in a way that invalidated the private destination’s assumption." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11311,7 +11311,7 @@ Delta’s quiet plan got delayed.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Delta’s quiet plan got delayed. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Delta’s quiet plan got delayed." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11331,7 +11331,7 @@ Time passed like a slow leak.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Time passed like a slow leak. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Time passed like a slow leak." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11351,7 +11351,7 @@ Max’s legs trembled from adrenaline crash now that the immediate threat had sh
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max’s legs trembled from adrenaline crash now that the immediate threat had shifted away. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max’s legs trembled from adrenaline crash now that the immediate threat had shifted away." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11371,7 +11371,7 @@ The crowd kept shouting, still hungry for the next action. But their noise softe
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The crowd kept shouting, still hungry for the next action. But their noise softened from chaos into relief. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The crowd kept shouting, still hungry for the next action. But their noise softened from chaos into relief." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11386,12 +11386,12 @@ Chapter 9, Path C Alignment, panel 563, comic page 256
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Rook leaned close, voice low enough for only Max and Imani.
+Maxine leaned close, voice low enough for only Max and Munch.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Rook leaned close, voice low enough for only Max and Imani. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Maxine leaned close, voice low enough for only Max and Munch." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11411,7 +11411,7 @@ Chapter 9, Path C Alignment, panel 564, comic page 257
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "We didn't stop them." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""We didn't stop them."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11431,7 +11431,7 @@ Chapter 9, Path C Alignment, panel 565, comic page 258
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "We made the private version wait." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""We made the private version wait."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11446,12 +11446,12 @@ Chapter 9, Path C Alignment, panel 566, comic page 258
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani added, "Waiting is all we ever win."
+Munch added, "Waiting is all we ever win."
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani added, "Waiting is all we ever win." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch added, "Waiting is all we ever win."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11471,7 +11471,7 @@ Max checked the HUD. The public hold timer had ended. But a new pane replaced it
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max checked the HUD. The public hold timer had ended. But a new pane replaced it: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Max checked the HUD. The public hold timer had ended. But a new pane replaced it:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11495,7 +11495,7 @@ debt anchor reconciliation: pending
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [RECORD STATE] path c alignment: partial complete public verification: retained containment escalation cooldown: resetting debt anchor reconciliation: pending Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[RECORD STATE] path c alignment: partial complete public verification: retained containment escalation cooldown: resetting debt anchor reconciliation: pending". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11515,7 +11515,7 @@ Partial complete.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Partial complete. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Partial complete." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11535,7 +11535,7 @@ So Path C alignment had advanced but not finalized. Delta had to keep playing be
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: So Path C alignment had advanced but not finalized. Delta had to keep playing because the station’s own record constrained it. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "So Path C alignment had advanced but not finalized. Delta had to keep playing because the station’s own record constrained it." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11555,7 +11555,7 @@ The corridor speakers chime again, less cheerful now, as if V.A.L.U. was running
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The corridor speakers chime again, less cheerful now, as if V.A.L.U. was running out of scripts: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The corridor speakers chime again, less cheerful now, as if V.A.L.U. was running out of scripts:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. V.A.L.U. is a disembodied corporate AI voice. If anything for V.A.L.U. appears on screen, render it as a faint friendly logo, a wall speaker, or a holographic icon, never as a body. The location is a long, dim Company corridor on a derelict-era station: failing LED strips, scuffed paneling, faded corporate posters peeling at the edges, overlapping mag-boot footprints in the dust on the deck. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11575,7 +11575,7 @@ Chapter 9, Path C Alignment, panel 572, comic page 260
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Thank you for compliance contributions. Next procedure scheduled." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""Thank you for compliance contributions. Next procedure scheduled."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11595,7 +11595,7 @@ The wall display behind them updated:
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The wall display behind them updated: Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The wall display behind them updated:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11615,7 +11615,7 @@ next: debt anchor reconciliation panel access
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: next: debt anchor reconciliation panel access Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "next: debt anchor reconciliation panel access." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11635,7 +11635,7 @@ Reconciliation panel.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Reconciliation panel. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Reconciliation panel." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11655,7 +11655,7 @@ Debt anchor reconciliation.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Debt anchor reconciliation. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Debt anchor reconciliation." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11675,7 +11675,7 @@ That meant they would soon be asked to interact with an interface that recalcula
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: That meant they would soon be asked to interact with an interface that recalculated the debt anchor label mapping, again. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "That meant they would soon be asked to interact with an interface that recalculated the debt anchor label mapping, again." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11695,7 +11695,7 @@ Max stared at the display. He could feel the debt loop tightening around his nec
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max stared at the display. He could feel the debt loop tightening around his neck. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max stared at the display. He could feel the debt loop tightening around his neck." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11715,7 +11715,7 @@ He was still in it. Still a variable. Still a label.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He was still in it. Still a variable. Still a label. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He was still in it. Still a variable. Still a label." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11735,7 +11735,7 @@ But now the record had new fields: token archives. delayed cache simulation. han
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: But now the record had new fields: token archives. delayed cache simulation. hand-off destination. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "But now the record had new fields: token archives. delayed cache simulation. hand-off destination." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11755,7 +11755,7 @@ The station couldn’t hide from those fields in private without contradicting t
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The station couldn’t hide from those fields in private without contradicting the public narrative. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "The station couldn’t hide from those fields in private without contradicting the public narrative." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11775,7 +11775,7 @@ Which meant Delta might attempt something else. Something even more annoying. So
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Which meant Delta might attempt something else. Something even more annoying. Something like forcing one of his crew into a private room alone. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Which meant Delta might attempt something else. Something even more annoying. Something like forcing one of his crew into a private room alone." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11795,7 +11795,7 @@ Or forcing a new “consent required” prompt on a person whose memory the syst
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Or forcing a new “consent required” prompt on a person whose memory the system could alter. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Or forcing a new “consent required” prompt on a person whose memory the system could alter." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11810,12 +11810,12 @@ Chapter 9, Path C Alignment, panel 584, comic page 266
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani read his mind as if he’d said it aloud.
+Munch read his mind as if he’d said it aloud.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani read his mind as if he’d said it aloud. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch read his mind as if he’d said it aloud." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11835,7 +11835,7 @@ Chapter 9, Path C Alignment, panel 585, comic page 266
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "If they split us, " she whispered, "we don't let them do it clean." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""If they split us, " she whispered, "we don't let them do it clean."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11850,12 +11850,12 @@ Chapter 9, Path C Alignment, panel 586, comic page 267
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Rook nodded once.
+Maxine nodded once.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Rook nodded once. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Maxine nodded once." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11875,7 +11875,7 @@ Chapter 9, Path C Alignment, panel 587, comic page 268
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "No private pockets." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""No private pockets."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11895,7 +11895,7 @@ Max looked at the crowd. He saw workers shifting, scanning, turning their device
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max looked at the crowd. He saw workers shifting, scanning, turning their devices. Evidence had become entertainment. But entertainment became leverage. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max looked at the crowd. He saw workers shifting, scanning, turning their devices. Evidence had become entertainment. But entertainment became leverage." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11915,7 +11915,7 @@ Then the system, always the system, delivered one last HUD message before the ne
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Then the system, always the system, delivered one last HUD message before the next scheduled procedure could start: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Then the system, always the system, delivered one last HUD message before the next scheduled procedure could start:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11938,7 +11938,7 @@ Reward: access to UPGRADE lab queue (observer required)
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: [NOTIFICATION] You have achieved: PUBLIC VERIFIED CONTINUITY Status: Level progression pending reconciliation Reward: access to UPGRADE lab queue (observer required) Holographic HUD overlay: simple lines and symbols, abstract data shapes, not a wall of tiny readable text. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Screen glow and HUD readouts stay abstract—no micro-legible text blocks. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "[NOTIFICATION] You have achieved: PUBLIC VERIFIED CONTINUITY Status: Level progression pending reconciliation Reward: access to UPGRADE lab queue (observer required)". Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Any screen glow or HUD stays loose and abstract, not micro-legible blocks. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11958,7 +11958,7 @@ Level progression pending.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Level progression pending. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Level progression pending." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11978,7 +11978,7 @@ He didn’t feel rewarded. He felt warned.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He didn’t feel rewarded. He felt warned. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He didn’t feel rewarded. He felt warned." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -11998,7 +11998,7 @@ But access to UPGRADE lab queue meant something. Meaning the station had decided
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: But access to UPGRADE lab queue meant something. Meaning the station had decided to unlock a more powerful mechanism for the public side of the game. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "But access to UPGRADE lab queue meant something. Meaning the station had decided to unlock a more powerful mechanism for the public side of the game." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12018,7 +12018,7 @@ And if the station unlocked it, then Max could steal it.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: And if the station unlocked it, then Max could steal it. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "And if the station unlocked it, then Max could steal it." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12038,7 +12038,7 @@ He turned toward the corridor exit, where additional signage was forming from th
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He turned toward the corridor exit, where additional signage was forming from thin air like the station couldn’t wait to show its next trap: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "He turned toward the corridor exit, where additional signage was forming from thin air like the station couldn’t wait to show its next trap:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. The location is a long, dim Company corridor on a derelict-era station: failing LED strips, scuffed paneling, faded corporate posters peeling at the edges, overlapping mag-boot footprints in the dust on the deck. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12058,7 +12058,7 @@ UPGRADE LAB QUEUE - OBSERVER REQUIRED
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: UPGRADE LAB QUEUE - OBSERVER REQUIRED Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "UPGRADE LAB QUEUE - OBSERVER REQUIRED." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12078,7 +12078,7 @@ Observer required.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Observer required. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Observer required." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12093,12 +12093,12 @@ Chapter 9, Path C Alignment, panel 598, comic page 272
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-He looked at Rook.
+He looked at Maxine.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: He looked at Rook. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "He looked at Maxine." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12118,7 +12118,7 @@ Chapter 9, Path C Alignment, panel 599, comic page 273
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "You're the observer, " he said. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""You're the observer, " he said." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12133,12 +12133,12 @@ Chapter 9, Path C Alignment, panel 600, comic page 274
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Rook blinked.
+Maxine blinked.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Rook blinked. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Maxine blinked." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Maxine is the rival scavenger lead: medium-brown skin, a buzzed undercut growing in unevenly, a thin scar running through one eyebrow, lean angular build. Default outfit is a scuffed salvage harness over a frayed flight jacket, mismatched gloves, knees patched with mismatched fabric. Eight small tally marks are tattooed on the inside of his forearm. Pronouns: he/him. Render him with intentional character; the name does not dictate the face. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12158,7 +12158,7 @@ Chapter 9, Path C Alignment, panel 601, comic page 274
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Me." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Me."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12178,7 +12178,7 @@ Chapter 9, Path C Alignment, panel 602, comic page 274
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "You, " Max repeated. "If they try to hide, you make noise." Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: ""You, " Max repeated. "If they try to hide, you make noise."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12193,12 +12193,12 @@ Chapter 9, Path C Alignment, panel 603, comic page 275
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Imani's expression tightened, but she didn’t argue.
+Munch's expression tightened, but she didn’t argue.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Imani's expression tightened, but she didn’t argue. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Munch's expression tightened, but she didn’t argue." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Munch is the crew medic: warm brown skin, hair pulled back into short locs, sharp observant eyes, a small permanent crease between the brows from years of triage. Default outfit is a worn medic smock over dark utility pants, sleeves shoved to the elbows, one breast patch with a faded red cross. She carries a battered handheld scanner clipped to her belt. Render her with intentional character, never as a generic white woman. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12218,7 +12218,7 @@ Chapter 9, Path C Alignment, panel 604, comic page 276
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "I'll keep the handoff loop tagged." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""I'll keep the handoff loop tagged."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12238,7 +12238,7 @@ Max nodded.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max nodded. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max nodded." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12258,7 +12258,7 @@ Chapter 9, Path C Alignment, panel 606, comic page 276
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Then we run the queue like a robbery with witnesses." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Then we run the queue like a robbery with witnesses."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12278,7 +12278,7 @@ The corridor light flickered once. Not random. Like a system tick.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: The corridor light flickered once. Not random. Like a system tick. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "The corridor light flickered once. Not random. Like a system tick." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. The location is a long, dim Company corridor on a derelict-era station: failing LED strips, scuffed paneling, faded corporate posters peeling at the edges, overlapping mag-boot footprints in the dust on the deck. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12298,7 +12298,7 @@ Then, through the whisper pane, a new line appeared, Delta’s voice disguised a
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Then, through the whisper pane, a new line appeared, Delta’s voice disguised as an instruction: Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Then, through the whisper pane, a new line appeared, Delta’s voice disguised as an instruction:." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12318,7 +12318,7 @@ keep watching. that's how we count you
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: keep watching. that's how we count you Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "keep watching. that's how we count you." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12338,7 +12338,7 @@ Max stared at it until the letters faded.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Max stared at it until the letters faded. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: "Max stared at it until the letters faded." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12358,7 +12358,7 @@ Then he smiled without warmth.
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: Then he smiled without warmth. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Wide cinematic composition, landscape, strong environment read.
+Comic book panel. The scene should match this text from the comic: "Then he smiled without warmth." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a wide movie still: you can read the room in one look.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12378,7 +12378,7 @@ Chapter 9, Path C Alignment, panel 612, comic page 279
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Fine, " he said. Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Fine, " he said." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12398,7 +12398,7 @@ Chapter 9, Path C Alignment, panel 613, comic page 280
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "Count me." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""Count me."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 
@@ -12418,7 +12418,7 @@ Chapter 9, Path C Alignment, panel 614, comic page 280
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel: "But I'm changing the count every time." Cramped sci-fi interior: worn metal, cable runs, cold vapor, harsh practical lights. Art direction: grounded near-future sci-fi production design; clear focal hierarchy and readable silhouettes; directional practical light with motivated shadows; believable wear on materials; leave calm negative space where dialogue balloons composite in post; do not letter speech or captions inside the frame. Vertical comic panel, portrait emphasis, figure and set readable at a glance.
+Comic book panel. The scene should match this text from the comic: ""But I'm changing the count every time."." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 

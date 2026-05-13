@@ -48,23 +48,28 @@ function aspectBlock(span) {
   return "**Layout:** vertical tier panel (~4:5 portrait). Tight readable focal; leave margin for balloon overlay in post.";
 }
 
-function extractBeat(articleInner, isSys) {
+function extractBeatParts(articleInner, isSys) {
   if (isSys) {
-    const m = /<pre class="novel-panel__sys"><code>([\s\S]*?)<\/code><\/pre>/.exec(articleInner);
-    if (!m) return "(system readout)";
-    return decodeHtml(m[1]).trim();
+    const codeMatch = /<pre class="novel-panel__sys"><code>([\s\S]*?)<\/code><\/pre>/.exec(articleInner);
+    const balloonMatch = /<blockquote[^>]*>[\s\S]*?<p>([\s\S]*?)<\/p>/.exec(articleInner);
+    const balloon = balloonMatch ? stripTags(balloonMatch[1]) : "";
+    const hud = codeMatch ? decodeHtml(codeMatch[1]).trim() : "";
+    return { actionBeat: balloon, hudReadout: hud };
   }
   const inFig = /<pre class="novel-panel__sys novel-panel__sys--in-figure"><code>([\s\S]*?)<\/code><\/pre>/.exec(
     articleInner,
   );
-  const m = /<blockquote[^>]*>[\s\S]*?<p>([\s\S]*?)<\/p>/.exec(articleInner);
-  const balloon = m ? stripTags(m[1]) : "";
+  const balloonMatch = /<blockquote[^>]*>[\s\S]*?<p>([\s\S]*?)<\/p>/.exec(articleInner);
+  const balloon = balloonMatch ? stripTags(balloonMatch[1]) : "";
   if (inFig) {
-    const hud = decodeHtml(inFig[1]).trim();
-    return balloon ? `${balloon} / HUD readout: ${hud}` : hud;
+    return { actionBeat: balloon, hudReadout: decodeHtml(inFig[1]).trim() };
   }
-  if (!m) return "";
-  return balloon;
+  return { actionBeat: balloon, hudReadout: "" };
+}
+
+function beatSummaryForDocs({ actionBeat, hudReadout }) {
+  if (actionBeat && hudReadout) return `${actionBeat} / HUD readout: ${hudReadout}`;
+  return actionBeat || hudReadout || "(no text)";
 }
 
 function chapterTitleFromHtml(html) {
@@ -89,8 +94,8 @@ function extractPanels(html) {
       const span = spanFromClasses(classStr);
       const isSys = classStr.includes("novel-panel--sys");
       const isProseHud = classStr.includes("novel-panel--prose-hud");
-      const beat = extractBeat(inner, isSys);
-      panels.push({ pageNum, id, span, isSys, isProseHud, beat });
+      const { actionBeat, hudReadout } = extractBeatParts(inner, isSys);
+      panels.push({ pageNum, id, span, isSys, isProseHud, actionBeat, hudReadout });
     }
   }
   return panels;
@@ -104,7 +109,8 @@ function promptForPanel(chapterN, title, p) {
     panelGid,
     pageNum: p.pageNum,
     span: p.span,
-    beat: p.beat || "",
+    actionBeat: p.actionBeat || "",
+    hudReadout: p.hudReadout || "",
     isSys: p.isSys,
     isProseHud: p.isProseHud,
   });
@@ -173,7 +179,7 @@ function main() {
       lines.push("**Beat / copy (for you, not necessarily on the art):**");
       lines.push("");
       lines.push("```");
-      lines.push(p.beat || "(no text)");
+      lines.push(beatSummaryForDocs({ actionBeat: p.actionBeat, hudReadout: p.hudReadout }));
       lines.push("```");
       lines.push("");
       lines.push("**Full prompt (paste into generator as one block):**");
