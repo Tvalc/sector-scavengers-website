@@ -4,8 +4,9 @@
  *
  * Source naming convention:
  *   SS-Novel-CH{n}-Page-{p}-Panel-{k}.png  (PNG, multi-MB)
+ *   SS-Novel-CH{n}-Page-{p}-Panel-{k}-left.png  /  ...-right.png  (side-by-side spread)
  *
- * We map the source files by their numeric order across (page, panel) to
+ * We map the source files by their numeric order across (page, panel, side) to
  * the chapter's global panel index (gid) used by the comic generator, so
  * the first 5 incoming files become panel-01..panel-05 of that chapter.
  *
@@ -16,12 +17,13 @@
  *   node scripts/import-novel-panels.mjs --chapter 1
  *   node scripts/import-novel-panels.mjs --chapter 1 --src "C:\\path\\to\\Chapter-1"
  *   node scripts/import-novel-panels.mjs --chapter 1 --limit 5
- *   node scripts/import-novel-panels.mjs --chapter 1 --map "6=8,7=9"
+ *   node scripts/import-novel-panels.mjs --chapter 1 --map "5=6,6=8,7=9,8=10"
  *
- * --map lets you remap the source Panel-N number to a specific output gid when
- * the comic's gid numbering drifts from the source filename (e.g. when bubbles
- * are absorbed into earlier panels). Entries are "<sourcePanelN>=<outputGid>",
- * comma separated. Unlisted source files fall back to their natural gid.
+ * --map remaps source panel numbers to output gids when the comic drifts from
+ * filename order (e.g. absorbed bubbles). Entries:
+ *   "8=10"       one file for panel 8 -> gid 10; two files (8-left + 8-right) -> 10 then 11
+ *   "8-left=10"  explicit side (optional, overrides the pair rule for that file)
+ * Comma separated. Unlisted source files fall back to ordinal position (1-based).
  *
  * Idempotent: existing outputs are overwritten only when --force is set.
  */
@@ -47,9 +49,10 @@ function parseArgs() {
       for (const pair of raw.split(",")) {
         const trimmed = pair.trim();
         if (!trimmed) continue;
-        const m = /^(\d+)\s*=\s*(\d+)$/.exec(trimmed);
-        if (!m) throw new Error(`--map entry must be "src=gid", got: ${trimmed}`);
-        opts.map[parseInt(m[1], 10)] = parseInt(m[2], 10);
+        const m = /^(\d+)(?:-(left|right))?\s*=\s*(\d+)$/i.exec(trimmed);
+        if (!m) throw new Error(`--map entry must be "N=gid" or "N-left=gid", got: ${trimmed}`);
+        const key = m[2] ? `${m[1]}-${m[2].toLowerCase()}` : m[1];
+        opts.map[key] = parseInt(m[3], 10);
       }
     }
   }
@@ -76,10 +79,13 @@ function defaultSourceDir(chapter) {
 }
 
 function sortKeyFromName(name) {
-  // Pull (page, panel) integers from SS-Novel-CH#-Page-#-Panel-#.png
-  const m = /Page-(\d+)-Panel-(\d+)\.png$/i.exec(name);
-  if (!m) return [Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, name];
-  return [parseInt(m[1], 10), parseInt(m[2], 10), name];
+  // SS-Novel-CH#-Page-#-Panel-#.png  or  ...-Panel-#-left.png / -right.png
+  const m = /Page-(\d+)-Panel-(\d+)(?:-(left|right))?\.png$/i.exec(name);
+  if (!m) return [Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, 2, name];
+  const page = parseInt(m[1], 10);
+  const panel = parseInt(m[2], 10);
+  const sideOrder = m[3] ? (m[3].toLowerCase() === "left" ? 0 : 1) : 0;
+  return [page, panel, sideOrder, name];
 }
 
 async function main() {
@@ -94,12 +100,22 @@ async function main() {
 
   const sourceEntries = fs
     .readdirSync(sourceDir)
-    .filter((f) => /Page-\d+-Panel-\d+\.png$/i.test(f))
-    .map((f) => ({ name: f, key: sortKeyFromName(f) }))
+    .filter((f) => /Page-\d+-Panel-\d+(?:-(left|right))?\.png$/i.test(f))
+    .map((f) => {
+      const m = /Page-(\d+)-Panel-(\d+)(?:-(left|right))?\.png$/i.exec(f);
+      if (!m) return { name: f, key: sortKeyFromName(f), panel: -1, side: null };
+      const page = parseInt(m[1], 10);
+      const panel = parseInt(m[2], 10);
+      const side = m[3] ? m[3].toLowerCase() : null;
+      const sideOrder = side === "left" ? 0 : side === "right" ? 1 : 0;
+      const key = [page, panel, sideOrder, f];
+      return { name: f, key, panel, side };
+    })
     .sort((a, b) => {
       if (a.key[0] !== b.key[0]) return a.key[0] - b.key[0];
       if (a.key[1] !== b.key[1]) return a.key[1] - b.key[1];
-      return a.key[2].localeCompare(b.key[2]);
+      if (a.key[2] !== b.key[2]) return a.key[2] - b.key[2];
+      return String(a.key[3]).localeCompare(String(b.key[3]));
     });
 
   const take = limit ? sourceEntries.slice(0, limit) : sourceEntries;
@@ -115,13 +131,24 @@ async function main() {
     console.log(`Source -> gid map: ${Object.entries(map).map(([k, v]) => `${k}=>${v}`).join(", ")}`);
   }
 
+  /** panel number -> count of files already assigned for that panel (for 8=10 -> 10,11) */
+  const panelOrdinal = new Map();
+
+  function gidForSource(entry, index) {
+    const { panel, side } = entry;
+    if (side && map[`${panel}-${side}`] != null) return map[`${panel}-${side}`];
+    if (map[String(panel)] != null) {
+      const ord = panelOrdinal.get(panel) ?? 0;
+      panelOrdinal.set(panel, ord + 1);
+      return map[String(panel)] + ord;
+    }
+    return index + 1;
+  }
+
   for (let i = 0; i < take.length; i += 1) {
     const entry = take[i];
     const srcName = entry.name;
-    /* sourceN is the "Panel-N" number in the filename. Natural gid = ordinal in
-       the sorted list (i+1). --map overrides the natural mapping per sourceN. */
-    const sourceN = entry.key[1];
-    const gid = map[sourceN] != null ? map[sourceN] : i + 1;
+    const gid = gidForSource(entry, i);
     const outName = `panel-${String(gid).padStart(2, "0")}.webp`;
     const outPath = path.join(outDir, outName);
     if (fs.existsSync(outPath) && !force) {
