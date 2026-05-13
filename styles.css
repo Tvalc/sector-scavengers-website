@@ -4303,11 +4303,22 @@ a.lore-hub__card--live:hover {
   min-height: 100%;
 }
 
+/* Stretch every comic caption to fill the remaining article height inside
+   its panel column. Combined with align-items: stretch on .novel-comic__grid
+   and min-height: 100% on the panel, this makes every yellow caption box in
+   a row the same pixel height as its neighbors (the longest caption sets the
+   row height; shorter captions grow into yellow padding to match). */
 .novel-chapter-page .novel-comic-page .novel-panel:not(.novel-panel--sys) .rules-comic__bubble.novel-comic__balloon {
-  margin-top: auto;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-height: none;
   overflow: visible;
-  flex-shrink: 0;
+  min-height: 0;
+}
+.novel-chapter-page .novel-comic-page .novel-panel:not(.novel-panel--sys) .rules-comic__bubble.novel-comic__balloon > p {
+  margin: 0;
 }
 
 .novel-chapter-page .novel-comic-page .novel-panel--span-4 .novel-comic__balloon {
@@ -4613,14 +4624,5 @@ a.lore-hub__card--live:hover {
   max-height: none;
   min-height: 0;
 }
-.novel-chapter-page .novel-comic-page .novel-comic__grid:has(.novel-panel--span-4):has(.novel-panel--span-8) .novel-panel:not(.novel-panel--sys) .novel-comic__balloon.rules-comic__bubble {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-height: 0;
-  margin-top: 0.6rem;
-}
-.novel-chapter-page .novel-comic-page .novel-comic__grid:has(.novel-panel--span-4):has(.novel-panel--span-8) .novel-panel .novel-comic__balloon p {
-  margin: 0;
-}
+/* (Caption stretch+center is handled by the global .novel-panel balloon rule
+   above; no extra balloon overrides needed for the 4+8 grid.) */
