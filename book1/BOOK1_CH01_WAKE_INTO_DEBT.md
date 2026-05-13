@@ -59,6 +59,8 @@ He tried to stand and failed once, twice, on the third try the robot helper reac
 
 A thin line of blood ran from his nose and stopped halfway, as if the nanites couldn't decide whether bleeding was on-brand.
 
+He laughed. It was harsh, strained and full of stress.
+
 ```
 [STABILITY NOTICE]
 Neural bridge calibrating.
@@ -66,9 +68,6 @@ Please avoid sudden existential conclusions for the next 90 seconds.
 ```
 
 Max wiped his face. The blood smeared, and then *retracted*, as if the nanites couldn't stand the mess.
-
-He laughed.
-It was harsh, strained and full of stress.
 
 The room speaker crackled alive.
 

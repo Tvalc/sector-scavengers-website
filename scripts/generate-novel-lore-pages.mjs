@@ -173,6 +173,10 @@ function layoutSpansForPage(ch, pageIndex) {
      robot-helper beat on the right. Marked fixed so the rebalancer doesn't
      collapse it back to 6/6. */
   if (ch.n === 1 && pageIndex === 9) return { spans: ["4", "8"], fixed: true };
+  /* Ch. 1 page 11: blood-line in a wide left panel, nervous-laugh beat in a
+     narrow taller right panel. Mirror of the page-10 split. Fixed so the
+     rebalancer doesn't collapse the 8/4. */
+  if (ch.n === 1 && pageIndex === 10) return { spans: ["8", "4"], fixed: true };
   if (pageIndex % 2 === 0) return ["12"];
   const multi = [
     ["6", "6", "12"],
@@ -387,7 +391,7 @@ function buildComicPages(ch) {
         /* When real panel art exists for this beat, the rendered art already
            carries the code text. Absorb the next prose unit as the panel's
            caption bubble and bump gid so downstream panels keep their numbers. */
-        if (realPanelArtSrc(ch.n, gid) && queue[0]?.prose !== undefined) {
+        if (realPanelArtSrc(ch.n, gid, "../../") && queue[0]?.prose !== undefined) {
           const absorbed = queue.shift();
           codeCell.bubbleMd = absorbed.prose;
           gid += 1;
@@ -404,7 +408,7 @@ function buildComicPages(ch) {
         /* Mirror the code-cell behaviour: when real art exists, the rendered
            image already carries the HUD line, so we can pull the next prose
            beat into the same bubble for a single consolidated panel. */
-        if (realPanelArtSrc(ch.n, cellGid) && queue[0]?.prose !== undefined) {
+        if (realPanelArtSrc(ch.n, cellGid, "../../") && queue[0]?.prose !== undefined) {
           const absorbed = queue.shift();
           proseOut = `${proseOut} ${absorbed.prose}`.trim();
           gid += 1;
@@ -452,16 +456,17 @@ function panelFigureDims(span) {
 }
 
 /**
- * Returns a relative src (for use inside lore/novel/chNN.html) when
- * an imported panel image exists at media/novel/ch{nn}/panel-{gid}.webp.
- * Returns null when only the placeholder should be used.
+ * Returns a relative src when an imported panel image exists at
+ * media/novel/ch{nn}/panel-{gid}.webp. `webToSiteRoot` is the prefix from the
+ * HTML file to the site root (e.g. "../../" from lore/novel/, "../../../" from lore/novel/scroll/).
  */
-function realPanelArtSrc(chapterN, gid) {
+function realPanelArtSrc(chapterN, gid, webToSiteRoot = "../../") {
   const chPad = String(chapterN).padStart(2, "0");
   const gidPad = String(gid).padStart(2, "0");
   const fsPath = path.join(websiteRoot, "media", "novel", `ch${chPad}`, `panel-${gidPad}.webp`);
   if (!fs.existsSync(fsPath)) return null;
-  return `../../media/novel/ch${chPad}/panel-${gidPad}.webp`;
+  const root = webToSiteRoot.replace(/\/?$/, "/");
+  return `${root}media/novel/ch${chPad}/panel-${gidPad}.webp`;
 }
 
 function railDotsComic(pageCount) {
@@ -532,25 +537,26 @@ function novelComicArtPromptOverlay(prompt) {
                         </div>`;
 }
 
-function figureWithPlaceholderAndPrompt(ch, cell, pageNum, w, h) {
+function figureWithPlaceholderAndPrompt(ch, cell, pageNum, w, h, webToSiteRoot = "../../") {
   const prompt = panelArtPromptForCell(ch, cell, pageNum);
   const altFlat = prompt.replace(/\s+/g, " ").trim();
   const alt = altFlat.length > 220 ? `${altFlat.slice(0, 217)}…` : altFlat;
-  const realSrc = realPanelArtSrc(ch.n, cell.gid);
+  const realSrc = realPanelArtSrc(ch.n, cell.gid, webToSiteRoot);
+  const root = webToSiteRoot.replace(/\/?$/, "/");
   if (realSrc) {
     return `                        <figure class="rules-comic__figure rules-comic__figure--art novel-comic__figure--with-art">
                           <img class="rules-comic__art" src="${realSrc}" width="${w}" height="${h}" alt="${esc(alt)}" loading="lazy" decoding="async">
                         </figure>`;
   }
   return `                        <figure class="rules-comic__figure rules-comic__figure--hud novel-comic__figure--with-prompt">
-                          <img class="rules-comic__art rules-comic__art--prompt-underlay" src="../../media/novel/chapter-placeholder.svg" width="${w}" height="${h}" alt="${esc(alt)}" decoding="async">
+                          <img class="rules-comic__art rules-comic__art--prompt-underlay" src="${root}media/novel/chapter-placeholder.svg" width="${w}" height="${h}" alt="${esc(alt)}" decoding="async">
 ${novelComicArtPromptOverlay(prompt)}
                         </figure>`;
 }
 
-function proseHudFigureWithPrompt(ch, cell, pageNum) {
+function proseHudFigureWithPrompt(ch, cell, pageNum, webToSiteRoot = "../../") {
   const prompt = panelArtPromptForCell(ch, cell, pageNum);
-  const realSrc = realPanelArtSrc(ch.n, cell.gid);
+  const realSrc = realPanelArtSrc(ch.n, cell.gid, webToSiteRoot);
   if (realSrc) {
     const altFlat = prompt.replace(/\s+/g, " ").trim();
     const alt = altFlat.length > 220 ? `${altFlat.slice(0, 217)}…` : altFlat;
@@ -822,6 +828,9 @@ const NOVEL_HUB_DESCRIPTIONS = {
    Ch1 is the only one playable right now; everything else is in the pipeline. */
 const NOVEL_HUB_LIVE = new Set([1]);
 
+/* Chapters that get a secondary “Read as scroll” link on the novel hub card. */
+const NOVEL_HUB_SCROLL_LINK = new Set([1]);
+
 function indexHtml(chapters) {
   const cards = chapters
     .map((ch) => {
@@ -837,13 +846,22 @@ function indexHtml(chapters) {
         </div>
       </li>`;
       }
+      const scrollPad = String(ch.n).padStart(2, "0");
+      const scrollRow = NOVEL_HUB_SCROLL_LINK.has(ch.n)
+        ? `
+          <p class="novel-hub__card-links">
+            <a class="novel-hub__card-link" href="scroll/ch${scrollPad}.html">Read as scroll</a>
+          </p>`
+        : "";
       return `
       <li>
-        <a class="lore-hub__card lore-hub__card--live novel-hub__card" href="ch${String(ch.n).padStart(2, "0")}.html">
-          <span class="lore-hub__card-tag">Ch. ${ch.n}</span>
-          <h2 class="lore-hub__card-title">${esc(ch.title)}</h2>
-          <p class="lore-hub__card-desc">${esc(desc)}</p>
-        </a>
+        <div class="lore-hub__card lore-hub__card--live novel-hub__card novel-hub__card--stacked">
+          <a class="novel-hub__card-main" href="ch${scrollPad}.html">
+            <span class="lore-hub__card-tag">Ch. ${ch.n}</span>
+            <h2 class="lore-hub__card-title">${esc(ch.title)}</h2>
+            <p class="lore-hub__card-desc">${esc(desc)}</p>
+          </a>${scrollRow}
+        </div>
       </li>`;
     })
     .join("");
@@ -979,4 +997,25 @@ function main() {
   console.log("Wrote", n, "chapter pages + novel/index.html →", outDir);
 }
 
-main();
+export {
+  websiteRoot,
+  novelDir,
+  esc,
+  inlineMdToHtml,
+  novelMarkdownToHtml,
+  parseChapter,
+  buildComicPages,
+  annotateNovelBubbleChains,
+  realPanelArtSrc,
+  panelFigureDims,
+  panelArtPromptForCell,
+  novelComicArtPromptOverlay,
+  figureWithPlaceholderAndPrompt,
+  proseHudFigureWithPrompt,
+  bubbleClassesForNovelCell,
+  NOVEL_HUB_LIVE,
+};
+
+const thisFile = path.resolve(fileURLToPath(import.meta.url));
+const invokedAsCli = process.argv[1] && path.resolve(process.argv[1]) === thisFile;
+if (invokedAsCli) main();
