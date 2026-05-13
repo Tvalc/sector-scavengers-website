@@ -4584,20 +4584,24 @@ a.lore-hub__card--live:hover {
   box-shadow: none;
 }
 
-/* Ch1 Page 10 (the only 4+8 layout in the novel): the left "Somewhere in
-   the wall..." panel uses portrait art while the right robot-helper panel
-   is landscape. Force both figures to the same 3:2 aspect (matches the
-   right image) so the left shortens to match the right and the two images
-   align on the top edge. object-fit: cover (inherited from .rules-comic__art)
-   center-crops the portrait art to fill the shorter box.
+/* Ch1 Page 10 (the only 4+8 layout in the novel): make the left and right
+   image boxes the SAME pixel height despite their column widths differing
+   2:1. The right panel art is landscape 3:2 (1536x1024); leaving the right
+   figure at that aspect, the right height = (2W/3) / (3/2) = 4W/9. For the
+   left figure (column width W/3) to render at the same 4W/9 pixel height,
+   its aspect-ratio must be (W/3) / (4W/9) = 3/4. The left art is portrait
+   2:3 (1024x1536); object-fit: cover crops a thin sliver top/bottom to
+   fill the 3:4 box.
 
-   Scoped with :has() so only a grid that contains BOTH a span-4 and a span-8
+   Scoped with :has() so only a grid containing BOTH a span-4 and a span-8
    panel matches. Other chapters' page-10 layouts (4+4+4, 6+6, 12) are
    untouched. */
 .novel-comic__grid:has(.novel-panel--span-4):has(.novel-panel--span-8) {
   align-items: start;
 }
-.novel-comic__grid:has(.novel-panel--span-4):has(.novel-panel--span-8) .novel-panel--span-4 .rules-comic__figure,
+.novel-comic__grid:has(.novel-panel--span-4):has(.novel-panel--span-8) .novel-panel--span-4 .rules-comic__figure {
+  aspect-ratio: 3 / 4;
+}
 .novel-comic__grid:has(.novel-panel--span-4):has(.novel-panel--span-8) .novel-panel--span-8 .rules-comic__figure {
   aspect-ratio: 3 / 2;
 }
