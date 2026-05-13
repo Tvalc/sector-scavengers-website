@@ -167,19 +167,55 @@
     body.origin-ss--clean .origin-ss__progress-track {
       display: none !important;
     }
+    body.origin-ss--clean {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     body.origin-ss--clean .origin-ss {
       padding: 0;
       max-width: none;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     body.origin-ss--clean .origin-ss__stage-wrap {
       border-radius: 0;
       border: none;
+      width: 100%;
+      height: 100%;
       max-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: #000;
     }
     body.origin-ss--clean .origin-ss__ratio {
-      aspect-ratio: 16 / 9;
-      max-height: 100vh;
+      aspect-ratio: auto;
+      flex: 1 1 auto;
+      min-height: 0;
+      width: 100%;
+    }
+    body.origin-ss--clean .origin-ss__img {
+      object-fit: contain;
+    }
+    body.origin-ss--clean .origin-ss__caption {
+      flex: 0 0 auto;
+      padding: 0.85rem 1.25rem 1rem;
+      font-size: clamp(1rem, 2.6vh, 1.4rem);
+      line-height: 1.4;
+      text-align: center;
+      max-width: 64rem;
       margin: 0 auto;
+      background: linear-gradient(180deg, rgba(20, 26, 34, 0.92) 0%, rgba(10, 12, 16, 0.96) 100%);
+      width: 100%;
+      box-sizing: border-box;
+    }
+    body.origin-ss--clean .origin-ss__tag {
+      top: 0.85rem;
+      left: 0.85rem;
     }
   </style>
 </head>
