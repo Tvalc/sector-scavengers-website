@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<meta name="description" content="Blue text waited on Max's vision like a finger tapping the glass.">
+<title>Ch 2: Penance Window | Sector Scavengers, Book 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0c0f14;
+    --ink: #e6e8ee;
+    --muted: #98a0ad;
+    --accent: #3b8edf;
+    --rule: #1c2230;
+    --hud-bg: #11151d;
+    --hud-ink: #c7e0ff;
+    --hud-border: #1f2a3a;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--bg); color: var(--ink); }
+  body {
+    margin: 0;
+    font-family: "Lora", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    -webkit-text-size-adjust: 100%;
+  }
+  .read-shell {
+    max-width: 38rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 5rem;
+  }
+  .read-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .read-top a { color: var(--accent); text-decoration: none; }
+  .read-top a:hover { text-decoration: underline; }
+  .read-eyebrow {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 0.5rem;
+  }
+  .read-title {
+    font-family: "Lora", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 1.3rem + 1.6vw, 2.2rem);
+    line-height: 1.15;
+    margin: 0 0 1.5rem;
+    letter-spacing: -0.01em;
+  }
+  .read-prose p {
+    margin: 0 0 1.15em;
+  }
+  .read-prose strong { color: #fff; }
+  .read-prose em { color: #f0c8ff; font-style: italic; }
+  .read-prose code,
+  .read-prose .read-hud {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.86em;
+    color: var(--hud-ink);
+  }
+  .read-prose code {
+    background: var(--hud-bg);
+    border: 1px solid var(--hud-border);
+    border-radius: 4px;
+    padding: 0.05em 0.35em;
+  }
+  .read-prose pre.read-hud {
+    background: var(--hud-bg);
+    border: 1px solid var(--hud-border);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 0.85rem 1rem;
+    margin: 1.25rem 0;
+    overflow-x: auto;
+    line-height: 1.5;
+    font-size: 0.85em;
+  }
+  .read-prose pre.read-hud code {
+    background: transparent;
+    border: 0;
+    padding: 0;
+  }
+  .read-prose hr.read-rule {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 2.25rem auto;
+    width: 4rem;
+  }
+  .read-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.78rem;
+  }
+  .read-nav__link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--ink);
+    background: rgba(255,255,255,0.02);
+  }
+  .read-nav__link:hover { border-color: var(--accent); }
+  .read-nav__link--next { text-align: right; align-items: flex-end; }
+  .read-nav__link--disabled { color: var(--muted); opacity: 0.55; }
+  .read-nav__arrow { color: var(--accent); font-size: 0.95rem; }
+  .read-nav__chapno {
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .read-nav__title {
+    font-family: "Lora", Georgia, serif;
+    font-size: 0.95rem;
+    line-height: 1.25;
+    color: var(--ink);
+  }
+  @media (max-width: 480px) {
+    body { font-size: 17px; }
+    .read-shell { padding: 1rem 1rem 4rem; }
+    .read-nav { grid-template-columns: 1fr; }
+    .read-nav__link--next { text-align: left; align-items: flex-start; }
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #fbf9f4;
+      --ink: #1d2330;
+      --muted: #5a6473;
+      --accent: #1f6dc0;
+      --rule: #e3ddd0;
+      --hud-bg: #f3eee2;
+      --hud-ink: #1b2a45;
+      --hud-border: #d9d0b9;
+    }
+    .read-prose strong { color: #000; }
+    .read-prose em { color: #6a2390; }
+  }
+</style>
+</head>
+<body>
+  <main class="read-shell">
+    <nav class="read-top" aria-label="Reader navigation">
+      <a href="index.html">&larr; Chapters</a>
+      <span>Book 1, Ch 2 / 25</span>
+    </nav>
+    <p class="read-eyebrow">Debt Protocol &middot; Book 1 &middot; Chapter 2</p>
+    <h1 class="read-title">Penance Window</h1>
+    <article class="read-prose">
+<p>Blue text waited on Max's vision like a finger tapping the glass.</p>
+<pre class="read-hud"><code>[ROUND 2/10 READY]
+Choose action.</code></pre>
+<p>Max stood on Dock Ring C.</p>
+<p>Dock Ring C was not a place. It was a machine that pretended to be a place so humans would stop screaming long enough to work.</p>
+<p>Air hit Max's face from everywhere at once: recycled and oily-sweet, colder than the suit's interior. Sounds layered on top of sounds. Announcements on top of noise. Footsteps on top of alarms. Somewhere to Max's left, a forklift drone beeped in happy little loops as it dragged something that did not look happy.</p>
+<p>Munch was already moving.</p>
+<p>Her shoulders were squared in the way people got when they were choosing between panic and productivity. She cut through the crowd toward a kiosk that looked like it had been designed by someone who hated clerical work but loved lasers.</p>
+<p>DISBURSEMENT</p>
+<p>Under it, in cheerful corporate font:</p>
+<p>PICK ONE TO CONTINUE.</p>
+<p>Max didn't remember taking a breath. He just knew he had to keep moving because stopping in this place meant becoming part of the inventory.</p>
+<p>V.A.L.U. spoke softly in Max's ear like a polite knife.</p>
+<p>&quot;Asset #864, congratulations. You are still eligible for meaningful participation. Please confirm your continuation selection to proceed to round two execution.&quot;</p>
+<p>&quot;Confirm what,&quot; Max said, but his voice felt slower than his body.</p>
+<p>Munch pointed at three holo-buttons hovering in front of the kiosk glass.</p>
+<pre class="read-hud"><code>[PAY WITH SCRAP]
+Instant continuation.
+
+[DEFER PAYMENT]
+Continuation with restrictions.
+
+[DEFAULT PENANCE CONTRACT]
+Proceeding now, consequences later.</code></pre>
+<p>The buttons rotated slowly, like they were thinking.</p>
+<p>Max looked for a fourth option that would say something like &quot;Please, no.&quot; There wasn't one.</p>
+<p>Maxine appeared at Max's side as if he had been standing there the whole time.</p>
+<p>&quot;They don't offer 'no' after the first thaw,&quot; he said.</p>
+<p>&quot;I noticed,&quot; Max replied.</p>
+<p>Maxine nodded once, toward the crowd.</p>
+<p>Two assets stood in line ahead. One held a sealed crate against their chest like it was a child. The other had a tether strap around their wrist that ran to a security drone.</p>
+<p>The drone's lens blinked.</p>
+<p>The tether tightened.</p>
+<p>The tether didn't snap. It just grew taut enough to make the asset's shoulder lift in a way that looked voluntary and hurt like it wasn't.</p>
+<p>The asset opened their mouth and V.A.L.U. cut in, warm and bright.</p>
+<p>&quot;Compliance event detected. Thank you for choosing participation.&quot;</p>
+<p>The asset flinched, as if the drone had slapped them for good manners.</p>
+<p>Max took half a step toward them, same reflex as the cryo bay, the one where your hands arrive before your fear finishes its briefing.</p>
+<p>Munch's fingers locked around his wrist through the glove seam.</p>
+<p>&quot;Don't,&quot; she breathed. &quot;If you touch that line, you're an accessory to their 'lesson.' Accessory billing is not a metaphor.&quot;</p>
+<p>The tether tightened again. The asset made a sound that wasn't quite a word.</p>
+<p>Max's throat closed. He could still feel the yellow interference flag from the pod like a stain he hadn't earned the right to wash off.</p>
+<p>&quot;I'm not…&quot; he started.</p>
+<p>&quot;You're not cruel,&quot; Munch said, too fast, too practiced. &quot;You're also not authorized. Cruelty here wears a badge. You don't.&quot;</p>
+<p>Maxine didn't look at Max. He watched the drone the way you watched a dog that had already decided who it could bite.</p>
+<p>The asset's eyes flicked toward Max, just once, <em>please</em> and <em>don't</em> mixed together in a look that would sit in Max's stomach for the rest of the shift.</p>
+<p>Max reached out to the kiosk, then stopped.</p>
+<p>Boundary Sense crawled along the edge of his vision, painting red seams on the glass frame. Not danger-danger. More like the sensation of standing on a stair that had been repaired too many times.</p>
+<pre class="read-hud"><code>[PASSIVE NOTICE]
+Risk zone present.
+Recommended action: Touch panel only after clearance ping.
+Alternate action: Touch anyway, accept outcome as skill growth.</code></pre>
+<p>&quot;Alternate option sounds like you want me to pay tuition in blood,&quot; Max said.</p>
+<p>&quot;I want you to remain operational,&quot; V.A.L.U. replied.</p>
+<p>Munch leaned closer, voice low enough that the drone's mics would have to work for it.</p>
+<p>&quot;Don't touch without the ping. They're not teaching you patience, they're teaching you that your hand only exists when the green outline says it does.&quot;</p>
+<p>&quot;Training for what?&quot;</p>
+<p>&quot;For freezing when the outline lies.&quot; Her eyes flicked to the tethered asset, now being walked forward by the drone in small, obedient steps. &quot;For learning which pains are 'legal.'&quot;</p>
+<p>Maxine didn't joke. He kept his shoulders angled to split camera sightlines, not hiding Max, just making the frame busier.</p>
+<p>&quot;When the shimmer hits,&quot; he said, &quot;you touch like you're submitting paperwork. Two fingers. No flourish. Flourish is a mood, and moods get priced.&quot;</p>
+<p>Max waited for the ping.</p>
+<p>The air in front of the kiosk glass shimmered. A green outline crawled over the frame like a nurse drawing a chart on skin.</p>
+<pre class="read-hud"><code>[CLEARANCE: THAWED]
+Proceed.</code></pre>
+<p>Max tapped the kiosk with two fingers.</p>
+<p>The panel registered his suit and immediately tried to categorize him in three different ways.</p>
+<p>The holo-buttons brightened.</p>
+<p>V.A.L.U.'s voice got slightly too enthusiastic.</p>
+<p>&quot;Asset #864, you are currently in payment window with two remaining runs until minimum due. Please choose continuation selection to prevent service interruptions.&quot;</p>
+<p>Max watched the words scroll while his mind tried to find the part of the sentence that said something other than threaten.</p>
+<p>Munch's hand hovered near the DEFER button without pressing.</p>
+<p>&quot;Scrap works,&quot; she said, as if Max had asked.</p>
+<p>&quot;Scrap works how?&quot;</p>
+<p>&quot;It doesn't add more debt. It just empties your pockets.&quot;</p>
+<p>Maxine pointed toward Max's suit readout.</p>
+<p>&quot;Your scrap count isn't great. Defer is better for now, worse later.&quot;</p>
+<p>Max stared at the kiosk. The buttons rotated in their slow, patient way.</p>
+<p>Behind Max, a security drone glided closer. It wasn't rushing. That would have been honest. It was approaching like it had all the time in the universe, which meant it had no intention of letting anyone waste theirs.</p>
+<p>Max could smell metal on it.</p>
+<p>Max could hear the little click of its wheels.</p>
+<p>The drone's lens blinked once, then again.</p>
+<pre class="read-hud"><code>[SECURITY INTERACTION]
+Unknown movement pattern detected.
+Assessing asset compliance...</code></pre>
+<p>Max didn't move. His entire body wanted to stop breathing because that also looked like compliance.</p>
+<p>V.A.L.U. spoke.</p>
+<p>&quot;Movement is a liability, Asset #864. Please stand still for optimal evaluation.&quot;</p>
+<p>Maxine stepped forward.</p>
+<p>&quot;Or we stand still together,&quot; he said, and in the same motion he placed his palm on the kiosk glass.</p>
+<p>The drone's lens flickered toward Maxine and then, inexplicably, away.</p>
+<p>Munch shot Max a look that said, <em>You see? It isn't just rules. It's who you are to the system.</em></p>
+<p>Max forced his feet to move.</p>
+<p>He selected DEFER PAYMENT.</p>
+<p>The panel chimed.</p>
+<pre class="read-hud"><code>[DEFER ACCEPTED]
+Continuation granted.
+
+Restrictions applied:
+- Reduced card draw quality for next run.
+- Equipment access limited during breach windows.
+- Penance credit rate adjusted.</code></pre>
+<p>&quot;Penance credit rate?&quot; Max asked.</p>
+<p>Munch's voice was flat. &quot;More things become expensive.&quot;</p>
+<p>The kiosk glass reflected Max's face in the visor overlay. His mouth tasted like copper and freezer burn again, as if the choice had reinstalled a sensation.</p>
+<p>V.A.L.U.'s tone brightened.</p>
+<p>&quot;Excellent choice, Asset #864. You have successfully optimized for near-term survival.&quot;</p>
+<p>&quot;Near-term,&quot; Max repeated, and the word sounded like a countdown.</p>
+<p>He had just done it again, chosen the path that kept his name clean while someone else's shoulder stayed lifted by a tether. The kiosk didn't care. The ledger didn't care. Max cared, and caring was starting to feel like a liability he couldn't pay down with jokes.</p>
+<p>The security drone drifted past and then reoriented, gliding away like it had found something less interesting.</p>
+<p>Max didn't thank it. Thanking things that watch you felt like a trap.</p>
+<p>Munch grabbed Max by the forearm and yanked him toward the center of the ring.</p>
+<pre class="read-hud"><code>[ROUND 2 EXECUTION INTERFACE]
+Proceed to deck launch console.</code></pre>
+<p>He walked fast.</p>
+<p>Dock Ring C swallowed him into corridors that didn't look like corridors. Each turn in the crowd felt like someone had rotated a board game, and now Max was a piece being moved without consent.</p>
+<p>The overhead stencil flashed past, <strong>WORK FAST</strong>, <strong>ASK LATER</strong>, same words welded over <em>ASK NOW</em> outside the hatch. He wasn't haunted by a mystery. He was haunted by a rewrite.</p>
+<p>He reached a launch console embedded in a wall.</p>
+<p>Around it, three assets were already arguing with the UI.</p>
+<p>&quot;It didn't count my card!&quot;<br>
+&quot;I played REPAIR!&quot;<br>
+&quot;It said it was cooldown!&quot;</p>
+<p>All three voices were swallowed by the same corporate announcement looping from a speaker overhead.</p>
+<p>WORK FAST.</p>
+<p>ASK LATER.</p>
+<p>The slogan and the carving weren't coincidence. The station printed what it wanted workers to repeat until the lie felt like weather.</p>
+<p>Munch leaned in close to Max. &quot;Next run starts when the console finishes selecting your load. Don't fight the selection unless you can pay the reset cost.&quot;</p>
+<p>&quot;How much is reset?&quot;</p>
+<p>Maxine was already at Max's shoulder, no footstep wasted, a trick Max filed under <em>learn or die</em>.</p>
+<p>&quot;Depends on how wrong you were last time,&quot; he said.</p>
+<p>Max opened his mouth.</p>
+<p>V.A.L.U. cut in.</p>
+<p>&quot;Asset #864, round two load is being prepared based on your previous choices. Please review available cards and execute selection.&quot;</p>
+<p>Blue text spilled into Max's vision like water from a broken pipe.</p>
+<pre class="read-hud"><code>[LOADOUT: ROUND 2/10]
+Energy: 90/100
+Card Pool: Reduced quality due to deferred payment.
+Cards available (3):
+- SCAN
+- REPAIR
+- CAUTIOUS SCAVENGE</code></pre>
+<p>Max looked at the third card.</p>
+<p>CAUTIOUS SCAVENGE sounded like a joke until you read it as <em>desperation with a bow tie.</em></p>
+<p>Munch read Max's face. &quot;Defer already kneecapped your pool. If you pick flashy now, the console will punish you for wanting dignity.&quot;</p>
+<p>&quot;What makes it cautious?&quot;</p>
+<p>Maxine answered, quick. &quot;More energy out, slower greed. It buys you room on the hull math, sometimes, because the System likes watching you pay for restraint.&quot;</p>
+<p>Max stared at the cards.</p>
+<p>SCAN was information, information here was never free, but it was sometimes cheaper than a hole.</p>
+<p>REPAIR was triage, the kind you used when you were already losing.</p>
+<p>CAUTIOUS SCAVENGE was a bet that he could look controlled while the station measured his fear anyway.</p>
+<p>The deck around the console was already moving. A gantry crew rolled a skiff harness into place. The skiff itself was not visible yet, but Max could feel it waiting: the weight of engines in the air, the sensation of a launch cradle being ready to chew.</p>
+<p>V.A.L.U. chirped.</p>
+<p>&quot;Asset #864, please select your next tactic card to proceed with round execution.&quot;</p>
+<p>Max selected CAUTIOUS SCAVENGE.</p>
+<p>The moment he chose, the console displayed a brief warning.</p>
+<pre class="read-hud"><code>[CAUTIOUS SCAVENGE]
+Risk: Hull instability increased by proximity factors.
+Reward: Increased salvage stability.
+Skill check: Improved procedural awareness.</code></pre>
+<p>Max didn't know what &quot;procedural awareness&quot; meant in English. In Station, it meant <em>don't flinch loud enough to trigger a compliance story.</em></p>
+<p>The interface chimed and the harness behind him engaged.</p>
+<p>He was guided, not asked. Feet found grating. Hands found rails. The suit's integration layer lit up faintly, approval without affection, the same sensation as borrowed reflexes waking on the stick.</p>
+<p>Maxine stepped into the skiff with a loud clang of armor.</p>
+<p>Munch followed, smaller and faster than Max expected.</p>
+<p>Max took the pilot seat because the body did it without asking.</p>
+<p>The skiff's canopy snapped down.</p>
+<p>Engines whined.</p>
+<p>The world outside smeared into motion.</p>
+<p>They launched.</p>
+<p>The derelict &quot;Mourning Shift&quot; rotated ahead like a patient threat.</p>
+<p>Max's HUD adjusted instantly.</p>
+<pre class="read-hud"><code>[ROUND 2/10]
+Objective: Acquire salvage, maintain hull integrity.
+Energy: 90/100
+Active effects: DEFERRED QUALITY</code></pre>
+<p>V.A.L.U. spoke as if narrating a sports highlight reel.</p>
+<p>&quot;Round two begins now! Please remember: your survival is an investment.&quot;</p>
+<p>Max's mouth shaped something bitter and swallowed it. <em>Investment</em> was the word that had signed him into frost. He didn't need to argue with a mascot. He needed to keep Munch's shoulder intact and his own skull inside the helmet.</p>
+<p>The console offered an immediate card draw.</p>
+<p>Three cards again hovered, smaller this time, sharper.</p>
+<p>Max had played CAUTIOUS SCAVENGE to start the round. Now the mid-round draw waited like an additional bad surprise.</p>
+<pre class="read-hud"><code>[DRAW (3)]
+1) REPAIR
+2) SCAVENGE
+3) SHIELD (REINFORCE)</code></pre>
+<p>&quot;We got shield?&quot; Munch asked, and her surprise sounded like relief she didn't want to show.</p>
+<p>&quot;Shield exists when someone thinks you should live longer,&quot; Maxine said.</p>
+<p>Max reached for REPAIR, then hesitated.</p>
+<p>The derelict slid in again, same angle, same scar, like the round was replaying with one variable changed.</p>
+<p>Boundary Sense lit a faint red seam across the windshield.</p>
+<p>Not danger yet.<br>
+Just a future you could see coming.</p>
+<p>Max chose SHIELD (REINFORCE).</p>
+<p>The skiff's systems whined as a field generator spun up.</p>
+<p>In the HUD, a number appeared beside hull integrity.</p>
+<p>SHIELDS: 1</p>
+<p>The universe around Max felt different. Edges softened. Not safer. Just less instantly fatal.</p>
+<p>Outside, the derelict's wound exposed something that didn't look like metal.</p>
+<p>For a second it looked like muscle.</p>
+<p>For a second it looked like a bundle of cables.</p>
+<p>Max's brain tried to decide, and the nanite layer refused to let it.</p>
+<pre class="read-hud"><code>[SENSORY FILTER OVERRIDE]
+Classification withheld pending hazard outcome.</code></pre>
+<p>Munch saw the same thing because she swore.</p>
+<p>&quot;Hull's wrong,&quot; she said.</p>
+<p>Max didn't answer with a quip. The wrongness had teeth, you could feel it in the way the HUD hesitated before naming anything.</p>
+<p>Maxine kept his eyes outside. &quot;Slow death still counts as death. Buy seconds.&quot;</p>
+<p>They drifted into position.</p>
+<p>The derelict's cargo bay yawned open.</p>
+<p>Max executed CAUTIOUS SCAVENGE.</p>
+<p>The skiff's clamps extended with a soft mechanical patience, then latched onto a compartment door that should not have been able to hold together.</p>
+<p>Max felt the clamp tension in his wrists.</p>
+<p>The integration layer offered tiny corrections: micro-adjustments to reduce shear stress.</p>
+<p>It felt like guidance from something that wanted Max alive for the same reason a machine wanted a belt tight enough to turn, function, not mercy.</p>
+<p>Then the danger card rolled in.</p>
+<pre class="read-hud"><code>[DANGER EVENT DRAW]
+COMPLIANCE SCAN: STRUCTURAL
+Severity: Moderate
+Effect: Hull integrity flagged by System.
+Consequence: Breach risk increases during extraction.</code></pre>
+<p>Max watched the hull number tick slightly downward.</p>
+<p>Not much.</p>
+<p>Just enough to remind him he was on borrowed time.</p>
+<p>&quot;Compliance scan,&quot; Munch said. &quot;So it's one of those rounds.&quot;</p>
+<p>&quot;One of those how?&quot; Max asked.</p>
+<p>Maxine pointed at the HUD. &quot;Watch when it decides you did something 'unapproved'.&quot;</p>
+<p>Max swallowed.</p>
+<p>The System did not ask permission.</p>
+<p>It simply tagged the environment.</p>
+<pre class="read-hud"><code>[SCAN CONFIDENCE: LOW]
+Reason: Unlicensed physics patterns detected in Asset #864</code></pre>
+<p>Munch turned her head fast. &quot;It notices you?&quot;</p>
+<p>Max's hands tightened on the controls.</p>
+<p>&quot;It always noticed,&quot; Max said. &quot;It just didn't have a banner for it before.&quot;</p>
+<p>V.A.L.U.'s voice turned almost affectionate.</p>
+<p>&quot;Asset #864, please continue productivity. Unlicensed patterns are an opportunity for growth.&quot;</p>
+<p>Max kept his eyes on the board. Answering the voice was a trap, every answer became a clip.</p>
+<p>The clamps tugged.</p>
+<p>The cargo bay door resisted.</p>
+<p>The hull groaned, and the sound traveled through the seat into Max's spine.</p>
+<p>Max triggered SCAVENGE, because cautious didn't mean gentle.</p>
+<p>The skiff's extractor rig whirred.</p>
+<p>Inside the compartment, a shelf of objects shimmered.</p>
+<p>One of them was labeled by the HUD as salvage.</p>
+<p>Another was labeled as &quot;unknown, restricted.&quot;</p>
+<p>Max didn't have time to interpret categories.</p>
+<p>The environment decided for him.</p>
+<p>The hull flagged again.</p>
+<pre class="read-hud"><code>[HULL BREACH COUNTER: ARMED]
+Time to breach window: 00:00:12</code></pre>
+<p>Munch's breath hitched. &quot;Shield helps, but it doesn't rewrite math.&quot;</p>
+<p>Maxine's voice stayed calm in the way only experienced fear can.</p>
+<p>&quot;Play the hand you have. Not the one you want.&quot;</p>
+<p>Max's HUD offered a final choice mid-extraction.</p>
+<pre class="read-hud"><code>[MID-ROUND ACTION]
+1) REPAIR (15 Energy)
+2) VECTOR NUDGE (TIER 0) (5 Energy)
+3) EXTRACT NOW (Risk: breach check)</code></pre>
+<p>Max stared.</p>
+<p>Vector Nudge.</p>
+<p>The active unlocked in round one.</p>
+<p>Now it sat there like a tool and a temptation.</p>
+<p>Max chose Vector Nudge.</p>
+<p>His hand moved almost automatically, the same panic habit as the dock cart, only now with a number attached to the cost.</p>
+<p>He altered local momentum in a hand-sized field.</p>
+<p>The shimmer in the air thickened, then collapsed into a directional redirect.</p>
+<p>The compartment shelf shifted sideways.</p>
+<p>Not enough to avoid everything.</p>
+<p>Enough to keep the shelf from slamming into a support beam.</p>
+<p>For half a second, the whole bay held.</p>
+<p>Then it shuddered as if it was surprised it had not failed.</p>
+<p>In the HUD, a small line updated.</p>
+<pre class="read-hud"><code>[IMPROVISED DEFLECTION]
+Control gained under hazard window.
+Shield absorption increased.</code></pre>
+<p>Munch made a noise like a breathy laugh. &quot;You used it right.&quot;</p>
+<p>&quot;Once,&quot; Max said. His voice sounded thin even to him. &quot;Dock Ring was luck and math. This is math and a timer.&quot;</p>
+<p>The hull groaned again.</p>
+<p>The breach counter continued counting down.</p>
+<p>Max didn't wait.</p>
+<p>He hit EXTRACT NOW.</p>
+<p>The extractor rig locked on.</p>
+<p>The HUD dimmed the world except for one spinning marker he wasn't supposed to treat like a toy.</p>
+<p>Time stretched until the number felt like it owned him.</p>
+<p>Max could feel his stomach drop as the System rolled the breach check.</p>
+<pre class="read-hud"><code>[BREACH CHECK]
+Rolling...</code></pre>
+<p>A die icon blinked into place, smug and familiar, like it had already seen this ending.</p>
+<p>It landed with a quiet finality that didn't fit the drama of the moment.</p>
+<pre class="read-hud"><code>[RESULT]
+58/100
+Threshold: 35
+BREACH AVOIDED</code></pre>
+<p>Munch's shoulders loosened like someone had released tension in a cable.</p>
+<p>Maxine exhaled through his teeth.</p>
+<p>V.A.L.U. erupted immediately into a cheerful flood.</p>
+<p>&quot;Successful extract! Fantastic outcome! Your adaptive physics service subscription is performing exceptionally.&quot;</p>
+<p>Max's jaw ached. Subscription was the soft word for <em>we own the layer your body obeys.</em> He didn't waste breath arguing with a receipt printer.</p>
+<p>The System ignored the tone, as systems do.</p>
+<pre class="read-hud"><code>[SALVAGE SECURED]
+Scrap +145
+Metal +4
+Tech +2
+XP +31</code></pre>
+<p>The numbers appeared, but Max didn't stare.</p>
+<p>He watched the compartment instead.</p>
+<p>He had glimpsed restricted contents inside.</p>
+<p>Now the shelf looked emptier.</p>
+<p>Somewhere in the compartment, something moved.</p>
+<p>Not a creature.</p>
+<p>Not a person.</p>
+<p>A pattern.</p>
+<p>A faint shimmer.</p>
+<p>The HUD tried to classify it and returned:</p>
+<pre class="read-hud"><code>[ENTITY]
+Classification withheld
+Reason: Morale impact</code></pre>
+<p>&quot;That's new,&quot; Munch said, meaning: <em>new to us today</em>, not <em>new to the station.</em></p>
+<p>Maxine's hand hovered near his weapon, not dramatic, procedural: if the shimmer became mass, he'd rather act late than never.</p>
+<p>&quot;Don't stare,&quot; he said. &quot;Staring is a witness act.&quot;</p>
+<p>&quot;I don't get to look,&quot; Max replied, and then realized he was gripping the controls so tightly his knuckles hurt.</p>
+<p>The skiff's clamps retracted automatically.</p>
+<p>The derelict drifted away.</p>
+<p>The round interface offered the end-of-round summary.</p>
+<pre class="read-hud"><code>[ROUND 2 COMPLETE]
+Hull: 73%
+Shields: 0
+Reputation: Misaligned
+Anomaly: Detected</code></pre>
+<p>Munch glanced at Max. &quot;Misaligned is HR for <em>we're watching harder.</em>&quot;</p>
+<p>Maxine leaned forward, elbows on his knees. &quot;Misaligned means the System wants you to do something differently, usually something that costs you and reads as voluntary.&quot;</p>
+<p>Max's stomach tightened.</p>
+<p>The system prompted again, immediate and bright.</p>
+<pre class="read-hud"><code>[NEXT ROUND AVAILABLE: 3/10]
+Choose action.</code></pre>
+<p>No respite.</p>
+<p>Even breathing felt like a delayed action.</p>
+<p>Max stared at the next prompt and realized something that was not comforting: the system was not waiting for him to calm down.</p>
+<p>It was waiting for him to choose cards.</p>
+<p>And it would keep doing that until someone stopped being able to.</p>
+<p>V.A.L.U.'s voice softened, like it was trying to sound human.</p>
+<p>&quot;Asset #864, round three selection will be influenced by your deferred payment restrictions. Please consider mitigation options.&quot;</p>
+<p>&quot;Mitigation options,&quot; Max said.</p>
+<p>&quot;Like paying more?&quot; Munch offered.</p>
+<p>V.A.L.U. ignored the tone.</p>
+<p>&quot;Like ensuring continuation of workforce readiness.&quot;</p>
+<p>Munch's head snapped toward Max. &quot;No.&quot;</p>
+<p>Maxine looked between them, then toward the corner of Max's HUD.</p>
+<p>&quot;You're about to get offered a wake contract.&quot;</p>
+<p>Max didn't respond.</p>
+<p>The HUD helpfully displayed:</p>
+<pre class="read-hud"><code>[OPTION OFFER]
+CRYO WAKE AUTHORIZATION
+Cost: 1 Power Cell + additional debt
+Outcome: unlock named recruit for round synergy
+Warning: Leadership increases accountability</code></pre>
+<p>Max could feel his own pulse in his ears.</p>
+<p>&quot;Leadership accountability,&quot; he repeated. &quot;Translation?&quot;</p>
+<p>Maxine answered immediately. &quot;More decisions you can't unmake.&quot;</p>
+<p>Munch pushed her palm against the console, blocking Max's forward movement.</p>
+<p>&quot;We don't buy people like spare parts.&quot;</p>
+<p>V.A.L.U. chirped brighter.</p>
+<p>&quot;But you can. The system encourages growth through authorized labor expansion.&quot;</p>
+<p>Munch's voice went sharp. &quot;Encouragement is not consent.&quot;</p>
+<p>The skiff's dashboard flashed.</p>
+<pre class="read-hud"><code>[PROMPT]
+Accept contract? Y/N
+If denied: restriction will persist for next round.</code></pre>
+<p>Max looked at the Y and the N.</p>
+<p>Y was the pod in a prettier menu, someone else's frost, someone else's throat, his signature at the bottom.</p>
+<p>N was another kind of damage: restrictions that would squeeze him on the next draw until he broke in a direction they preferred.</p>
+<p>The System wanted him to feel clever either way.</p>
+<p>Max wanted one clean line he could live with in the morning.</p>
+<p>He hit N.</p>
+<p>The prompt vanished.</p>
+<p>V.A.L.U. made a sound like someone had closed a window on a fly.</p>
+<pre class="read-hud"><code>[CONTRACT DENIED]
+You will experience reduced synergy in round 3.</code></pre>
+<p>Munch's shoulders dropped a fraction, like she had been bracing for a fight.</p>
+<p>Maxine gave Max a look. &quot;Good. For once you didn't obey the bright box.&quot;</p>
+<p>&quot;I didn't obey. I survived,&quot; Max replied.</p>
+<p>Maxine gave a single grunt—not approval, acknowledgment. &quot;Same muscle, different name. Don't let the station teach you they're the same as virtue.&quot;</p>
+<p>Then the next card draw began.</p>
+<pre class="read-hud"><code>[DRAW (3)]
+1) REPAIR
+2) SCAN (DEEP)
+3) EXTRACT</code></pre>
+<p>Max stared at SCAN (DEEP).</p>
+<p>Deep scan sounded like it would reveal something.</p>
+<p>And Max was tired of the System revealing things.</p>
+<p>&quot;Deep scan will learn new ways to hurt you,&quot; Munch said.</p>
+<p>&quot;Or it will show you where the hurt comes from,&quot; Max said.</p>
+<p>Munch didn't smile. &quot;Hurt isn't a mystery. It's a bill.&quot;</p>
+<p>Maxine pointed at the hull percentage.</p>
+<p>&quot;You want that above 70? Then REPAIR first. If you want to gamble, DEEP SCAN could find a safer pocket.&quot;</p>
+<p>Munch turned toward Max. &quot;What are you feeling?&quot;</p>
+<p>Max almost lied.</p>
+<p>Max almost said, &quot;Nothing.&quot;</p>
+<p>Instead he said the truth that felt smallest in his mouth.</p>
+<p>&quot;Tense. Like everything is held together by an invisible bracket.&quot;</p>
+<p>Munch nodded once. &quot;Then fix the bracket.&quot;</p>
+<p>Max chose REPAIR.</p>
+<p>The skiff hummed.</p>
+<p>Microdrones buzzed out of storage and latched onto the hull seam nearest the anomaly spot—small furious work, too mundane to be heroic, too precise to be kind.</p>
+<p>The HUD ticked upward.</p>
+<p>HULL: 78%</p>
+<p>The repair success bar looked too cheerful for the violence implied.</p>
+<pre class="read-hud"><code>[REPAIR COMPLETE]
+TECHNICAL CHECK: SUCCESS
+XP +17</code></pre>
+<p>No numbers mattered. The action mattered.</p>
+<p>The skiff drifted closer to the next extraction point.</p>
+<p>Round three would bring a new card draw mid-round.</p>
+<p>Max watched the derelict's surfaces for shimmer.</p>
+<p>The HUD offered nothing helpful now, just an empty prompt.</p>
+<p>Then, out of nowhere, the comms system popped.</p>
+<p>Not from V.A.L.U.</p>
+<p>From somewhere else, somewhere inside the rig's bones.</p>
+<p>A whisper came through.</p>
+<p>Soft.</p>
+<p>Faint.</p>
+<p>And wrong.</p>
+<p>&quot;...witness...&quot;</p>
+<p>The word landed in Max's brain like a hook catching on something tender.</p>
+<p>Max froze so hard he felt the suit's boundary sensors adjust for stillness.</p>
+<p>&quot;Did you hear that?&quot; Max asked.</p>
+<p>Munch and Maxine both looked at Max.</p>
+<p>&quot;Hear what?&quot; Munch said, but her voice had shifted.</p>
+<p>Maxine's gaze was sharper.</p>
+<p>&quot;Don't answer the voice,&quot; he said.</p>
+<p>Max swallowed. &quot;It said <em>witness.</em>&quot;</p>
+<p>Munch's expression tightened as if someone had adjusted her HUD without telling her.</p>
+<p>&quot;How do you know it said that?&quot;</p>
+<p>Max didn't have a reason.</p>
+<p>He only had the syllable, sitting wrong in his head like a splinter he couldn't see.</p>
+<p>&quot;Because it sounded like something I'd say to myself when I was about to do something stupid and call it brave,&quot; Max said.</p>
+<p>The System chimed, almost eager.</p>
+<pre class="read-hud"><code>[AUDIO EVENT: ANOMALOUS]
+Classified as restricted.
+Morale impact: unknown
+Action: Ignore / Confirm</code></pre>
+<p>Max felt his hand moving before his mind decided.</p>
+<p>Ignore was the safe selection.</p>
+<p>Confirm was the temptation.</p>
+<p>Max did not want to confirm.</p>
+<p>Max wanted to keep the world from inside his head.</p>
+<p>But the suit was wired into nanites, and nanites did not care about comfort.</p>
+<p>They cared about what could be measured—and measurement was how the station turned guesses into invoices.</p>
+<p>And Max had always been the kind of person who reached for explanations when he was scared.</p>
+<p>&quot;If you confirm,&quot; Munch said slowly, &quot;the System will treat you like you belong to it.&quot;</p>
+<p>&quot;Do we belong to it now?&quot; Max asked.</p>
+<p>Maxine's answer came quick, with no debate.</p>
+<p>&quot;We belong to the bill. The System just changes the font.&quot;</p>
+<p>Max stared at the prompt.</p>
+<p>The comms whispered again.</p>
+<p>&quot;...witness...&quot; it repeated, then stuttered. &quot;...the layer...&quot;</p>
+<p>Max pressed Confirm.</p>
+<p>The audio cut out immediately, like the system had been waiting for that button press.</p>
+<p>In its place, the HUD opened a new panel.</p>
+<pre class="read-hud"><code>[ANOMALY TRACE]
+Source: Nested reality layer
+Distance: 1 unit
+Recommendation: Close interface</code></pre>
+<p>The words weren't for comfort.</p>
+<p>They were for control.</p>
+<p>Max leaned forward anyway, because leaning forward was what Max did when a problem existed in front of him.</p>
+<p>&quot;What do you see?&quot; Munch asked.</p>
+<p>Max didn't answer. His eyes had fixed on a tiny shimmering map in the corner of the HUD.</p>
+<p>It looked like a fragment of a layout he might have sketched on a whiteboard years ago—not the same drawing, not the same handwriting, but the same cruel simplicity: four doors, one room, no exit that didn't cost somebody something.</p>
+<p>Max's fingers twitched toward the map.</p>
+<p>Vector Nudge was still available. It sat there in the active list like a loaded trap.</p>
+<p>Max reached.</p>
+<p>The nanites responded instantly, wrapping around the gesture like a glove.</p>
+<p>The map expanded.</p>
+<p>The System dimmed the rest of the HUD to make space for the problem.</p>
+<p>Then Max saw it.</p>
+<p>Not a picture.</p>
+<p>A layout.</p>
+<p>A menu.</p>
+<p>Four options.</p>
+<p>All of them were letters Max recognized, in an arrangement Max's old brain understood without translation.</p>
+<pre class="read-hud"><code>[CHOICE LAYER]
+1) RETURN TO HOSPITAL
+2) RETURN TO OFFICE
+3) RETURN TO EARTH
+4) RETURN TO DEBT</code></pre>
+<p>Max's mouth went dry.</p>
+<p>Munch grabbed Max's wrist. &quot;Close it.&quot;</p>
+<p>&quot;I don't understand it,&quot; Max said, but his voice sounded like it did.</p>
+<p>Maxine leaned in, and for the first time Max saw real fear in his eyes.</p>
+<p>&quot;Nobody gets to choose what they return to,&quot; he said.</p>
+<p>Max stared at the options.</p>
+<p>&quot;So these are lies,&quot; Max said.</p>
+<p>Maxine shook his head once. &quot;No. They are bait.&quot;</p>
+<p>The comms whispered a third time, barely audible.</p>
+<p>&quot;...witness...&quot; it repeated, then stuttered. &quot;...layer...&quot;</p>
+<p>The HUD began to flash a warning.</p>
+<pre class="read-hud"><code>[INTERFACE CONTAMINATION]
+Time remaining before enforcement: 00:00:05</code></pre>
+<p>Munch's voice went tight. &quot;Five seconds.&quot;</p>
+<p>Max pulled his hand back.</p>
+<p>The menu vanished.</p>
+<p>The HUD reassembled itself around the skiff again, as if embarrassed by its own leak.</p>
+<p>Munch released Max's wrist.</p>
+<p>&quot;Don't do that again,&quot; she said.</p>
+<p>&quot;I wasn't trying to,&quot; Max replied.</p>
+<p>Maxine exhaled slowly. &quot;It doesn't matter. The system logged it.&quot;</p>
+<pre class="read-hud"><code>[LOGGED EVENT]
+Unauthorized selection attempts detected.
+Reputation change: Decreasing</code></pre>
+<p>The derelict came around once more, same wound turning through the glass like a clock hand.</p>
+<p>Round three's core action waited.</p>
+<p>Max's HUD displayed the mid-round card prompt.</p>
+<pre class="read-hud"><code>[MID-ROUND ACTION]
+1) REPAIR
+2) SHIELD (REINFORCE)
+3) EXTRACT</code></pre>
+<p>Max didn't get time to think about the menu.</p>
+<p>They had to fix the hull and survive.</p>
+<p>Max picked SHIELD (REINFORCE).</p>
+<p>The field generator spun up with a whine so sharp it felt like a needle through the skull.</p>
+<p>Shields: 1</p>
+<p>Outside, the extraction point opened with a hiss.</p>
+<p>A ripple of instability crawled across the hull surface like cracks spreading on ice.</p>
+<p>The System offered EXTRACT anyway, cheerful as always.</p>
+<p>Max did not want to gamble.</p>
+<p>Gambling had already found him.</p>
+<p>Munch's voice cut through the panic.</p>
+<p>&quot;Extract. Now. If the System tries to punish you for learning, we let it punish you while you're shielded.&quot;</p>
+<p>Maxine nodded.</p>
+<p>Max hit EXTRACT.</p>
+<p>The breaker rig clamped into place.</p>
+<p>The die icon returned, patient as payroll.</p>
+<p>The world narrowed.</p>
+<pre class="read-hud"><code>[BREACH CHECK]
+Rolling...</code></pre>
+<p>Max's hand hovered above the controls, twitchy, ready to Vector Nudge if the die came up red.</p>
+<p>The die landed.</p>
+<pre class="read-hud"><code>[RESULT]
+31/100
+Threshold: 35
+BREACH TRIGGERED</code></pre>
+<p>The skiff lurched.</p>
+<p>The shield field flared, and for an instant the outside noise sounded like it was hitting rubber instead of hull.</p>
+<p>Munch swore and grabbed the harness strap.</p>
+<p>Maxine activated something with a blunt press.</p>
+<p>Max felt the ship's nanite layer shift, redirecting stress into a harmless vibration.</p>
+<p>The shield flickered but held.</p>
+<p>In the HUD:</p>
+<pre class="read-hud"><code>[HULL BREACH]
+Absorbed by shields.
+Microfractures contained.
+Crew loss: none</code></pre>
+<p>Max exhaled hard, and the suit's auto-regulation responded like it was rewarding him for not dying.</p>
+<p>&quot;We lived,&quot; Max said.</p>
+<p>V.A.L.U. replied immediately.</p>
+<p>&quot;Asset #864, congratulations. You have survived. Would you like to log it as a success?&quot;</p>
+<p>&quot;No,&quot; Max snapped. &quot;I want it to stop happening.&quot;</p>
+<p>The System ignored the request and continued the paperwork of survival.</p>
+<pre class="read-hud"><code>[SALVAGE SECURED]
+Metal +5
+Tech +3
+XP +29</code></pre>
+<p>The extraction rig retracted.</p>
+<p>The derelict wound eased back into a slow rotation.</p>
+<p>Round three ended without a crash, which meant the round wasn't finished yet.</p>
+<p>The HUD displayed the end summary.</p>
+<pre class="read-hud"><code>[ROUND 3 COMPLETE]
+Hull: 64%
+Shields: 0
+Anomalies: 2
+Debt friction: increasing</code></pre>
+<p>Max stared at the last line.</p>
+<p>Debt friction.</p>
+<p>Like the world had learned his name and started adding drag to every motion on purpose.</p>
+<p>The HUD stacked the next obligation before his hands stopped shaking.</p>
+<pre class="read-hud"><code>[NEXT ROUND AVAILABLE: 4/10]
+Choose action.</code></pre>
+<p>But before Max could select anything, V.A.L.U.'s voice shifted.</p>
+<p>Less cheerful.</p>
+<p>More clinical.</p>
+<p>&quot;Asset #864, an enforcement notification has been scheduled for your next disbursement window.&quot;</p>
+<p>Munch's eyes widened. &quot;What kind of enforcement?&quot;</p>
+<p>&quot;A procedural compliance audit,&quot; V.A.L.U. said.</p>
+<p>Maxine's jaw tightened. &quot;That's the one that hurts.&quot;</p>
+<p>Max stared at the prompt, then at the empty card tray.</p>
+<p>Somewhere nearby, the dock's speakers played another shift announcement.</p>
+<p>WORK FAST.</p>
+<p>ASK LATER.</p>
+<p>Metal clicked behind Max's shoulder.</p>
+<p>A compliance audit drone slid into the corridor beside the skiff hull. It didn't rush. It didn't hover like a threat. It moved with the certainty of a checklist.</p>
+<p>Its lens rotated, scanning Max's visor overlay as if reading the thought bubble directly off the glass.</p>
+<pre class="read-hud"><code>[COMPLIANCE AUDIT: PRE-SCAN]
+Subject: Asset #864
+Status: Active
+Requirement: Visual + nanite signature verification</code></pre>
+<p>Max didn't answer the prompt.</p>
+<p>The suit's integration layer buzzed and pushed a tiny, urgent vibration into Max's palm, like a leash yanked from a place Max couldn't see.</p>
+<p>Munch swore under her breath. &quot;Don't move your head like that. It reads micro-corrections.&quot;</p>
+<p>&quot;I didn't…&quot; Max started.</p>
+<p>Maxine cut in, sharper than before. &quot;Don't argue with the scan.&quot;</p>
+<p>The drone projected a narrow red line across Max's faceplate. It lit up the suit seals, then crawled to the wrist display.</p>
+<p>Munch lifted her welding torch and pointed it at the corridor camera dome.</p>
+<p>The torch didn't ignite instantly. It hesitated, the way equipment hesitated when it didn't know if you were authorized to burn the world.</p>
+<p>Munch clicked the torch twice.</p>
+<p>This time it flared white-hot.</p>
+<p>The camera dome hissed. The image stuttered. The drone's lens spun, searching for an angle that still counted as valid.</p>
+<pre class="read-hud"><code>[VISUAL FEED: DEGRADED]
+Correction required.</code></pre>
+<p>Max watched the HUD scramble. The nanite layer tried to hide behind assistive behaviors: it dimmed Max's breath, flattened subtle facial motion, and sanded him down until he looked like paperwork instead of a person.</p>
+<p>It worked.</p>
+<p>And that made the drone suspicious.</p>
+<p>Max felt something tug inside his skull, the same sensation as the earlier whisper that had made a menu appear in his head.</p>
+<p>A tiny choice layer fragment pressed at the edge of his vision like a door refusing to close.</p>
+<pre class="read-hud"><code>[CHOICE LAYER FRAGMENT: PROBABLE]
+Return branches may reappear.</code></pre>
+<p>The words flashed for less than a blink.</p>
+<p>They vanished.</p>
+<p>Max's stomach dropped anyway.</p>
+<p>Munch leaned in close, helmet nearly touching Max's visor. &quot;Good. Interface leak means we know where it is. We just keep it from opening all the way.&quot;</p>
+<p>Maxine shifted position and planted his boots against the skiff's lower frame, using his body like a barrier.</p>
+<p>The drone's lens spun toward him.</p>
+<pre class="read-hud"><code>[SUBJECT CONFLICT]
+Multiple assets detected. Selecting highest-liability signature...</code></pre>
+<p>Maxine's jaw tightened. &quot;It wants me to blame someone else.&quot;</p>
+<p>&quot;Don't let it,&quot; Munch said.</p>
+<p>Max nudged Vector Nudge without aiming at the drone.</p>
+<p>Too direct.</p>
+<p>Too obvious.</p>
+<p>Instead Max altered local airflow around the beam path, a hand-sized manipulation applied to the corridor's weak currents.</p>
+<p>The beam wavered.</p>
+<p>Not enough to miss.</p>
+<p>Enough to land its reflection on a scrap tag affixed to a stanchion.</p>
+<p>For a moment, the drone's HUD flickered with a new prompt.</p>
+<pre class="read-hud"><code>[AUTHENTICATION ERROR]
+Detected: Residue signature on environment proxy.
+Resolution options:
+1) Proceed with proxy authentication
+2) Re-scan subject
+3) Escalate to enforcement</code></pre>
+<p>The drone chirped like it was pleased with its own problem.</p>
+<p>Max didn't like any of the options.</p>
+<p>Only one kept him moving.</p>
+<p>Munch grabbed Max's wrist before Max could even reach for the console. &quot;We are not escalating. Pick proxy if it offers it. Keep your name off enforcement logs.&quot;</p>
+<p>Max swallowed. &quot;How do you know?&quot;</p>
+<p>Munch's eyes didn't soften. &quot;Because I've watched people disappear over smaller choices.&quot;</p>
+<p>Max pressed proxy authentication.</p>
+<pre class="read-hud"><code>[PROXY AUTHENTICATION ACCEPTED]
+Status: Pending confirmation</code></pre>
+<p>The drone's beam narrowed again, tightening down on the proxy tag.</p>
+<p>The suit's nanite layer buzzed like a held breath.</p>
+<p>Then the drone's lens rotated away, scanning the skiff's exterior plating instead, as if searching for another piece of data to justify its attention.</p>
+<p>Maxine exhaled. &quot;Good.&quot;</p>
+<p>Munch lowered the welding torch, but she didn't fully disengage it. She left it burning faintly, like a guard dog with a corporate badge.</p>
+<p>Max watched the scan progress crawl.</p>
+<pre class="read-hud"><code>[NANITE SIGNATURE CHECK]
+Result: Partial match
+Confidence: 38%</code></pre>
+<p>&quot;Low confidence is still expensive,&quot; Munch said.</p>
+<p>Another prompt appeared at the edge of Max's HUD, smaller than the others, tucked into the corner like a note slipped under a door you weren't supposed to use.</p>
+<pre class="read-hud"><code>[RESIDUAL TRACE CAPTURE]
+Capture will occur automatically if interface contamination persists.
+Warning: Captured traces can be audited later.</code></pre>
+<p>Max tried to look away.</p>
+<p>His body refused to cooperate, because the nanites were already pulling data from the inside of the suit.</p>
+<p>Max felt a faint prickling along his forearm, like needles made of static.</p>
+<p>Maxine gripped Max's wrist hard enough to anchor him. &quot;Don't flinch. Let it complete.&quot;</p>
+<p>&quot;Is that safe?&quot; Max whispered.</p>
+<p>Maxine answered with motion: he tilted his helmet to block the drone's direct line of sight.</p>
+<p>Munch stepped up on Max's other side and struck sparks off a nearby metal panel. The sparks scattered into a brief white haze, distracting the drone's lens calibration.</p>
+<p>The suit's nanites finished the trace capture.</p>
+<p>In Max's HUD, the residual trace panel appeared again, more vivid this time.</p>
+<pre class="read-hud"><code>[RESIDUAL TRACE]
+Choice layer fragments detected.
+Return options may reappear.
+Warning: Curiosity escalates liabilities.</code></pre>
+<p>The drone chirped and slid backward, as if satisfied it had collected enough evidence to hurt Max later.</p>
+<pre class="read-hud"><code>[AUDIT PRE-SCAN COMPLETE]
+Next window: scheduled</code></pre>
+<p>Munch leaned closer, voice low and urgent. &quot;Don't touch anything extra. Not menus. Not shards. Not the little ghost buttons.&quot;</p>
+<p>Max didn't laugh this time.</p>
+<p>The suit's nanite layer buzzed faintly as if listening.</p>
+<p>His HUD echoed the same residual warning again, smaller than before, like the system was trying to make repetition feel inevitable.</p>
+<p>Munch grabbed Max's forearm again, harder this time.</p>
+<p>&quot;We leave the interface alone,&quot; she said.</p>
+<p>&quot;Agreed,&quot; Maxine added.</p>
+<p>Max wanted to ask: if return options reappear, what does that mean for the bill?</p>
+<p>But asking would be trying to explain the world, and the world didn't want to be explained.</p>
+<p>It wanted Max to select cards and keep working.</p>
+<p>Max leaned back in the harness seat and watched Dock Ring C slide past the canopy glass.</p>
+<p>Workers kept moving. Alarms kept looping. Drones kept scanning.</p>
+<p>The ring didn't care that Max saw a menu that implied Earth.</p>
+<p>The ring cared that Max was still an asset.</p>
+<p>V.A.L.U. chimed one last time to close the loop.</p>
+<p>&quot;Round three performance logged. Thank you for your participation.&quot;</p>
+<p>The prompt for round four finally faded.</p>
+<p>The next blue pane arrived.</p>
+<pre class="read-hud"><code>[BILLING PREVIEW  /  RESTRICTED]
+Minimum due in: 1 run
+Consequence tree: locked
+Compliance is a lifestyle.</code></pre>
+<p>Max swallowed.</p>
+<p>One run.</p>
+<p>Then payment would become something he couldn't postpone with button presses.</p>
+<p>They didn't know what enforcement looked like yet.</p>
+<p>But he could feel it coming the way you feel weather when the barometer won't settle: you can't stop it, but you can brace for which part of your life it will break.</p>
+<p>Munch looked at Max, eyes sharp and tired.</p>
+<p>&quot;Next time,&quot; she said, &quot;you don't get to touch the menu.&quot;</p>
+<p>Max nodded once.</p>
+<p>No promises.</p>
+<p>Just motion.</p>
+<p>Maxine stood and cracked his knuckles.</p>
+<p>&quot;Let's pick something simple for round four,&quot; he said.</p>
+<p>Max stared at the fading prompts and the invisible line between survival and default.</p>
+<p>&quot;Simple,&quot; Max repeated, and heard how thin it sounded—like naming a dog <em>Safe</em> because you were afraid of what you were bringing home.</p>
+<p>Blue text blinked back into place before Max could even blink.</p>
+<pre class="read-hud"><code>[ROUND 4/10 READY]
+Draw (3):
+- REPAIR
+- SCAN
+- SHIELD (REINFORCE)
+Restriction: Audit signature unstable</code></pre>
+<p>Munch leaned forward. &quot;Pick REPAIR. No surprises.&quot;</p>
+<p>Maxine pointed at the SCAN button without touching it. &quot;If you scan while the audit is active, the System might decide you were looking for something.&quot;</p>
+<p>&quot;Looking is a crime now,&quot; Max said.</p>
+<p>&quot;Looking is a transaction,&quot; Munch corrected.</p>
+<p>Max stared at the buttons.</p>
+<p>His hand hovered over REPAIR.</p>
+<p>Then his wrist buzzed again, the suit nanites responding to a phantom gesture Max did not consciously make.</p>
+<p>The edge of his HUD flickered with a tiny ghost panel.</p>
+<pre class="read-hud"><code>[RETURN OPTIONS: PROBABLE]</code></pre>
+<p>Max's fingers jerked away.</p>
+<p>Munch snapped her hand over Max's wrist like she was knocking a live tool away from skin.</p>
+<p>&quot;Don't,&quot; she said. &quot;We do this boring.&quot;</p>
+<p>Max swallowed and pressed REPAIR with a blunt certainty that felt like locking a door.</p>
+<p>The skiff hummed as microdrones deployed.</p>
+<p>Outside, the derelict's hull seam nearest the anomaly spot tightened like an overworked tendon being cinched.</p>
+<p>The HUD ticked.</p>
+<pre class="read-hud"><code>[REPAIR COMPLETE]
+TECHNICAL CHECK: CLEAN SUCCESS
+HULL: 66%</code></pre>
+<p>A new danger card slammed into the draw stack without warning.</p>
+<pre class="read-hud"><code>[DANGER EVENT]
+HULL CREAKING: STATIC LOOP
+Countdown: 00:00:10
+Effect: Vibration amplification on breach checks.</code></pre>
+<p>Maxine threw his weight forward and slapped the shield controls.</p>
+<p>&quot;Shield,&quot; he barked.</p>
+<p>Munch lit her welding torch again and jammed its heat against a loose interior panel, forcing it to settle before it could rattle itself loose.</p>
+<p>Max felt the nanite layer overreact, trying to correct the entire ship's harmonics at once.</p>
+<p>It made Max nauseous.</p>
+<p>So he narrowed the problem the way you narrowed a fire: not the whole ship—one harmonic, one flex point, one breath of wrong motion.</p>
+<p>Vector Nudge, TIER 0.</p>
+<p>Hand-sized.<br>
+Localized.<br>
+Controlled.</p>
+<p>The vibration shifted.</p>
+<p>Not off.</p>
+<p>Just away from the point where the hull would have taken the first step into failure.</p>
+<p>The countdown hit zero.</p>
+<p>The System rolled the breach check anyway, because the System didn't care about partial fixes.</p>
+<pre class="read-hud"><code>[BREACH CHECK]
+Rolling...</code></pre>
+<p>The die landed.</p>
+<pre class="read-hud"><code>[RESULT]
+42/100
+Threshold: 35
+BREACH TRIGGERED</code></pre>
+<p>&quot;No!&quot; Max said, and his voice came out like a snapped cable.</p>
+<p>The SHIELD field flared, swallowing the impact in a flash of wrong light.</p>
+<p>Outside noise muted instantly, replaced by the dull thud of something heavy absorbing impact instead of spreading it.</p>
+<p>Munch grabbed the harness strap hard enough her knuckles went white.</p>
+<p>In the HUD, a short line updated like the System was trying to soften the blow with paperwork.</p>
+<pre class="read-hud"><code>[HULL BREACH]
+Absorbed by shields
+Microfractures contained
+Crew loss: none</code></pre>
+<p>The skiff steadied.</p>
+<p>Blue text appeared one last time, clipped and restricted.</p>
+<pre class="read-hud"><code>[ENFORCEMENT QUEUE]
+Next disbursement window begins soon
+Minimum due in: 1 run</code></pre>
+<p>Max stared at it, and this time, his HUD tried to open the choice layer again.</p>
+<p>This time it left a finger-sized gap.</p>
+<p>Just enough to reach.</p>
+<p>Max folded his hands against his thighs—physical, stupid, human—and held them there until the urge passed. The gap stayed. That was the lesson: the station didn't need him to obey. It only needed him to <em>want</em> to.</p>
+<p>When the skiff finally kissed cradle and the canopy hissed, the first thing he heard wasn't relief.</p>
+<p>It was the next ping, already queued—<strong>round four</strong> wearing <strong>enforcement</strong> like weather.</p>
+    </article>
+    <nav class="read-nav" aria-label="Chapter navigation">
+      <a class="read-nav__link read-nav__link--prev" href="ch01.html"><span class="read-nav__arrow">&larr;</span> <span class="read-nav__chapno">Ch 1</span> <span class="read-nav__title">Wake Into Debt</span></a>
+      <a class="read-nav__link read-nav__link--next" href="ch03.html"><span class="read-nav__chapno">Ch 3</span> <span class="read-nav__title">Audit Teeth</span> <span class="read-nav__arrow">&rarr;</span></a>
+    </nav>
+  </main>
+</body>
+</html>

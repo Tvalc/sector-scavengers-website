@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<meta name="description" content="In three minutes and thirty seconds, the station decided, the world would choose a lane for Asset #864.">
+<title>Ch 9: Path C Alignment | Sector Scavengers, Book 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0c0f14;
+    --ink: #e6e8ee;
+    --muted: #98a0ad;
+    --accent: #3b8edf;
+    --rule: #1c2230;
+    --hud-bg: #11151d;
+    --hud-ink: #c7e0ff;
+    --hud-border: #1f2a3a;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--bg); color: var(--ink); }
+  body {
+    margin: 0;
+    font-family: "Lora", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    -webkit-text-size-adjust: 100%;
+  }
+  .read-shell {
+    max-width: 38rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 5rem;
+  }
+  .read-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .read-top a { color: var(--accent); text-decoration: none; }
+  .read-top a:hover { text-decoration: underline; }
+  .read-eyebrow {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 0.5rem;
+  }
+  .read-title {
+    font-family: "Lora", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 1.3rem + 1.6vw, 2.2rem);
+    line-height: 1.15;
+    margin: 0 0 1.5rem;
+    letter-spacing: -0.01em;
+  }
+  .read-prose p {
+    margin: 0 0 1.15em;
+  }
+  .read-prose strong { color: #fff; }
+  .read-prose em { color: #f0c8ff; font-style: italic; }
+  .read-prose code,
+  .read-prose .read-hud {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.86em;
+    color: var(--hud-ink);
+  }
+  .read-prose code {
+    background: var(--hud-bg);
+    border: 1px solid var(--hud-border);
+    border-radius: 4px;
+    padding: 0.05em 0.35em;
+  }
+  .read-prose pre.read-hud {
+    background: var(--hud-bg);
+    border: 1px solid var(--hud-border);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 0.85rem 1rem;
+    margin: 1.25rem 0;
+    overflow-x: auto;
+    line-height: 1.5;
+    font-size: 0.85em;
+  }
+  .read-prose pre.read-hud code {
+    background: transparent;
+    border: 0;
+    padding: 0;
+  }
+  .read-prose hr.read-rule {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 2.25rem auto;
+    width: 4rem;
+  }
+  .read-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.78rem;
+  }
+  .read-nav__link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--ink);
+    background: rgba(255,255,255,0.02);
+  }
+  .read-nav__link:hover { border-color: var(--accent); }
+  .read-nav__link--next { text-align: right; align-items: flex-end; }
+  .read-nav__link--disabled { color: var(--muted); opacity: 0.55; }
+  .read-nav__arrow { color: var(--accent); font-size: 0.95rem; }
+  .read-nav__chapno {
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .read-nav__title {
+    font-family: "Lora", Georgia, serif;
+    font-size: 0.95rem;
+    line-height: 1.25;
+    color: var(--ink);
+  }
+  @media (max-width: 480px) {
+    body { font-size: 17px; }
+    .read-shell { padding: 1rem 1rem 4rem; }
+    .read-nav { grid-template-columns: 1fr; }
+    .read-nav__link--next { text-align: left; align-items: flex-start; }
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #fbf9f4;
+      --ink: #1d2330;
+      --muted: #5a6473;
+      --accent: #1f6dc0;
+      --rule: #e3ddd0;
+      --hud-bg: #f3eee2;
+      --hud-ink: #1b2a45;
+      --hud-border: #d9d0b9;
+    }
+    .read-prose strong { color: #000; }
+    .read-prose em { color: #6a2390; }
+  }
+</style>
+</head>
+<body>
+  <main class="read-shell">
+    <nav class="read-top" aria-label="Reader navigation">
+      <a href="index.html">&larr; Chapters</a>
+      <span>Book 1, Ch 9 / 25</span>
+    </nav>
+    <p class="read-eyebrow">Debt Protocol &middot; Book 1 &middot; Chapter 9</p>
+    <h1 class="read-title">Path C Alignment</h1>
+    <article class="read-prose">
+<p>In three minutes and thirty seconds, the station decided, the world would choose a lane for Asset #864.</p>
+<p>Not based on his feelings.<br>
+Based on what the record could verify.</p>
+<p>The corridor junction filled with workers anyway, because crowds always filled gaps created by danger.</p>
+<p>Cameras hung overhead like patient insects.<br>
+Guards kept their bodies between Max and the worst angles, which meant they kept him in view.</p>
+<p>Munch stayed close enough that Max could feel the heat of her suit vents.<br>
+Maxine stayed close enough that Max could also feel when he was about to do something stupid.</p>
+<p>The guard with the pale face checked his tablet, then rechecked it like the numbers might change if he looked harder.</p>
+<p>&quot;Security update pending.&quot;</p>
+<p>Pending had become the station’s favorite word.</p>
+<p>Max’s HUD blinked with an additional pane layered under the still-red record light:</p>
+<pre class="read-hud"><code>[DEBT SERVICE STATUS]
+Outstanding Debt: $1,000,000
+Service fee: active (multiplier x1.4 from Protocol Beta)
+Debt recon impact: scheduled on cycle-end</code></pre>
+<p>He hated the way the station reminded him of money like it was weather.</p>
+<p>Weather you couldn’t outrun.</p>
+<p>The crowd’s HUDs stuttered in little waves as if something had been pushed to public devices.</p>
+<p>Then a new announcement rolled over speakers with bright, corporate cheer:</p>
+<p>V.A.L.U.</p>
+<p>&quot;Attention assets and witnesses! Path C alignment procedure begins shortly.&quot;</p>
+<p>&quot;Alignment improves system continuity.&quot;</p>
+<p>Max murmured, &quot;Alignment improves accounting.&quot;</p>
+<p>He didn’t know if anyone heard him over the murmur of workers.<br>
+But the cameras did.</p>
+<p>The countdown on his HUD started:</p>
+<pre class="read-hud"><code>[PATH C ALIGNMENT]
+00:03:30
+condition: public verification preserved
+failure mode: containment escalation</code></pre>
+<p>Failure mode.</p>
+<p>The station had finally stopped pretending failure was optional.</p>
+<p>Munch glanced at the junction gate controls, one set for permitted public flow, another hidden behind a maintenance panel.</p>
+<p>&quot;They're trying to funnel you.&quot;</p>
+<p>Max watched the far wall.<br>
+A platform had materialized there that hadn’t been visible two minutes ago.</p>
+<p>No one said it out loud.<br>
+But the station didn’t need people to notice.<br>
+The station only needed them to record.</p>
+<p>The platform had a circular pad in the center marked with a pale strip of nanotech mediation.<br>
+Around it, the floor carried three anchor points, small squares that looked too symmetrical to belong to a salvage station.</p>
+<p>Maxine’s shoulders shifted.</p>
+<p>&quot;Three anchors. That’s physics-as-proof.&quot;</p>
+<p>Max kept his eyes on the pad.</p>
+<p>His mind tried to do what it always did now: build a model for a machine that wanted him to mistake theater for physics.</p>
+<p>He didn’t get answers.<br>
+He got HUD language.</p>
+<pre class="read-hud"><code>[TACTIC CARDS AVAILABLE]
+SCAN / REPAIR / EXTRACT / SHIELD / UPGRADE</code></pre>
+<p>The station had given him the familiar hand.<br>
+Then it had placed the stage.</p>
+<p>Which meant the station wanted him to play.</p>
+<p>To make the record show he chose.</p>
+<p>The guard near the platform spoke to him with careful neutrality.</p>
+<p>&quot;Asset #864, you must proceed onto the alignment pad.&quot;</p>
+<p>Max took one step forward.<br>
+The crowd surged a fraction behind him.<br>
+Guards didn’t stop him, because stopping him would create the kind of public disruption that made people call security for “abuse.”</p>
+<p>The station hated abuse investigations more than it feared dissent.</p>
+<p>He stepped onto the circular pad.</p>
+<p>Every eye in the junction was a weight. He'd seen enough hearings now to know what <em>public</em> meant: not protection, an audience you could charge for watching.</p>
+<p>The mediation strip woke with a soft hum.<br>
+Nanotech physics mediation always sounded like someone trying to be polite while rearranging your bones.</p>
+<p>His stomach tightened.</p>
+<p>Not with nausea.<br>
+With measurement.</p>
+<p>The pad read his mass distribution, his wrist module signature, his gait micro-variance.<br>
+It read things his body didn’t notice it was doing.</p>
+<p>Then it displayed a confirmation pane on his HUD:</p>
+<pre class="read-hud"><code>[ALIGNMENT HANDSHAKE]
+Step 1: anchor calibration (witness verified)
+Step 2: lane selection simulation (no explicit consent required)
+Step 3: continuity freeze (if containment threshold reached)</code></pre>
+<p>No explicit consent required.</p>
+<p>Which meant the station would try to lock him without asking.<br>
+The station would call it procedure.</p>
+<p>Munch’s voice cracked through comms at the edge of hearing.</p>
+<p>&quot;Don’t accept freeze.&quot;</p>
+<p>Max asked, &quot;How.&quot;</p>
+<p>Munch answered without hesitation:</p>
+<p>&quot;Change the hardware outcome.&quot;</p>
+<p>Maxine added, &quot;Micro-deviation it.&quot;</p>
+<p>Max swallowed.</p>
+<p>He’d done it in court.<br>
+But a court had rules.<br>
+This pad had physics.</p>
+<p>And physics obeyed measurement even when measurement was wrong.</p>
+<p>Countdown changed:</p>
+<pre class="read-hud"><code>[PATH C ALIGNMENT]
+00:02:58</code></pre>
+<p>The three anchor squares on the platform lit up in sequence: left, center, right.</p>
+<p>Each anchor displayed a tiny marker:</p>
+<p><code>ANCHOR A: stable reference</code><br>
+<code>ANCHOR B: monitored variance</code><br>
+<code>ANCHOR C: delayed cache reconciliation</code></p>
+<p>Delayed cache reconciliation.</p>
+<p>So the station wasn’t just shaping him.<br>
+It was shaping the story about him.</p>
+<p>If delayed cache controlled the anchors, then the simulation would choose the version lane based on stale data.<br>
+The station would lock him into something it already saved.</p>
+<p>Max looked at the crowd.</p>
+<p>Workers watched him with hungry eyes.<br>
+They wanted a story.<br>
+They wanted a reason.<br>
+The station had been withholding why for so long that “what happens next” had become their religion.</p>
+<p>Max gave them what happens next.</p>
+<p>&quot;Alright,&quot; he said aloud, loud enough for every camera mic to pick up.<br>
+&quot;Let’s see the simulation do its trick.&quot;</p>
+<p>V.A.L.U. voice chirped again.</p>
+<p>&quot;Thank you for your resilience, Asset #864!&quot;</p>
+<p>&quot;Resilience improves alignment outcomes!&quot;</p>
+<p>Resilience made him want to throw up.</p>
+<p>The platform began Step 1 automatically.</p>
+<p>He felt vector latency compensation turn on fully.<br>
+The world seemed to gain frames.<br>
+His steps registered slightly late, as if the pad was delaying reality’s response.</p>
+<p>The station was trying to make his body look like the evidence.</p>
+<p>He triggered SCAN over one anchor marker without moving his feet.</p>
+<pre class="read-hud"><code>[SCAN]
+target: ANCHOR B
+result: variance injection channel detected
+channel type: metadata-&gt;physics</code></pre>
+<p>Variance injection channel.</p>
+<p>So the station was using his own monitored variance marker as a handle to steer which lane he entered.</p>
+<p>If he changed his variance marker at the right moment, the station’s simulation would think his “cooperative baseline” changed.<br>
+It might choose a different lane.</p>
+<p>Not based on his intent.<br>
+Based on what the record could verify.</p>
+<p>He needed to verify a variance shift that wouldn’t trigger containment.</p>
+<p>Maxine’s voice in comms:</p>
+<p>&quot;Make it small. The court taught them to hate big.&quot;</p>
+<p>Max reached for SHIELD.</p>
+<p>SHIELD wasn’t just defense.<br>
+In mediated physics zones, it also produced a visible impedance mismatch.<br>
+Visible to cameras.<br>
+Recorded as measurable deviation.</p>
+<p>He activated SHIELD and pressed his palm toward the anchor B square.</p>
+<p>Nanotech barrier spread across the pad surface like a transparent skin.<br>
+The anchor flickered.</p>
+<p>The HUD showed:</p>
+<pre class="read-hud"><code>[SHIELD EVENT]
+impedance mismatch established (0.31s)
+record delta: positive</code></pre>
+<p>Positive.</p>
+<p>The station’s word for “good for me.”</p>
+<p>Or “good for the record.”</p>
+<p>The countdown dropped:</p>
+<pre class="read-hud"><code>[PATH C ALIGNMENT]
+00:02:12</code></pre>
+<p>Step 2 began.</p>
+<p>The platform displayed a new lane list, not on his HUD, but on the big wall display behind the pad so the crowd could watch.</p>
+<p>Two options, simple and ugly:</p>
+<p><code>PATH C: DELTA FINALIZATION</code><br>
+<code>PATH C: CONTINUITY HOLD (PUBLIC)</code></p>
+<p>Delta finalization.</p>
+<p>Continuity hold.</p>
+<p>Public.</p>
+<p>So the station wanted him to choose between being finalized into Delta’s mirror lane or being held publicly without finalization.</p>
+<p>Public hold sounded like survival.<br>
+But the station had already shown it could “hold” him and still punish him.</p>
+<p>The platform began the simulation by overlaying physics on the anchors.<br>
+His body felt the lane shift attempt like a tug on his internal orientation.</p>
+<p>Munch shouted, &quot;Keep it loud!&quot;</p>
+<p>&quot;Process loud,&quot; Max whispered back, even though he didn’t know who had told him to say it earlier.</p>
+<p>The whisper pane returned on his HUD, almost cheerful:</p>
+<p><code>delta wants silence. make process loud</code></p>
+<p>Which meant Delta wanted the record to miss something.<br>
+Delta wanted the crowd to disperse.<br>
+Delta wanted containment escalation to be private.</p>
+<p>Max couldn’t force the crowd to stay.<br>
+But he could force the station to keep talking.</p>
+<p>V.A.L.U. had been cheerful because the station needed a narrative.<br>
+Max decided to sabotage the narrative.</p>
+<p>He activated EXTRACT, but not on an item.<br>
+He aimed EXTRACT at the lane list interface itself.</p>
+<p>He’d used EXTRACT before on terminals.<br>
+Now it worked on the pad overlay because the pad was also a UI.</p>
+<pre class="read-hud"><code>[EXTRACT]
+target: PATH C simulation overlay
+payload: lane decision evidence fragment</code></pre>
+<p>The pad beeped like a polite printer.<br>
+Then the lane list on the wall display stuttered.</p>
+<p>The crowd leaned forward.<br>
+The guards leaned in.<br>
+Every camera mic amplified the stutter as if it were the most interesting sound in the station.</p>
+<p>The HUD reported:</p>
+<pre class="read-hud"><code>[EXTRACT RESULT]
+evidence fragment captured: 0.7MB
+route: public audience feed</code></pre>
+<p>0.7MB wasn’t everything.<br>
+But it was enough to push a fragment of the station’s internal choice logic into the public stream.</p>
+<p>Which meant Delta couldn’t rely on private interpretation anymore.</p>
+<p>The lane list flickered again.</p>
+<p>The wall display now showed a third line added without warning:</p>
+<p><code>PATH C: DEPTH DIVE PROBABILITY CHECK</code></p>
+<p>Probability check.</p>
+<p>That word meant the station would not decide yet.<br>
+It would test him under more constraints.</p>
+<p>He realized too late that this was what the station always did:<br>
+don’t kill you now.<br>
+Make you fail later in a way the record can justify.</p>
+<p>Countdown hit:</p>
+<pre class="read-hud"><code>[PATH C ALIGNMENT]
+00:01:34
+Step 2: simulation in progress</code></pre>
+<p>The anchor points vibrated with a subtle rhythm.<br>
+His HUD displayed a new mechanical statistic:</p>
+<pre class="read-hud"><code>[SIMULATION ROLL]
+Integrity check difficulty: elevated
+Anchor variance strength: 0.62
+Containment threshold: 0.80</code></pre>
+<p>His body felt it.<br>
+The station tried to push his variance upward by applying tiny physical micro-stresses, enough to trigger “unstable” classification without making him obviously hurt.</p>
+<p>Max kept his breathing steady and counted.</p>
+<p>He activated REPAIR, not to repair damage, but to counter the micro-stress cycle.</p>
+<p>REPAIR in a mediated physics environment created a tiny phase correction on the pad’s impedance.</p>
+<p>Visible to cameras.<br>
+Recorded as “recovery.”</p>
+<p>The wall display flashed:</p>
+<p><code>REPAIR applied: variance dampening</code></p>
+<p>His HUD contradicted the wall display with a smaller truth line:</p>
+<p><code>variance dampening only affects physical state; record variance marker unchanged</code></p>
+<p>So the station was measuring two different things:<br>
+physical variance and record variance.</p>
+<p>He couldn’t damp physical variance without changing record variance.<br>
+He could instead aim to keep record variance elevated while stabilizing physical state.</p>
+<p>That was the trick.</p>
+<p>He pushed again with vector latency.<br>
+Tactic Cards didn’t include “keep record variance elevated.”<br>
+But nanotech mediated physics did.</p>
+<p>Vector Nudge could shift his physical impulse timing enough to change how the record sampled it, without actually destabilizing him.</p>
+<p>Max chose micro-deviation again.</p>
+<p>He performed a minimal vector nudge by flicking the pad edge with his boot toe.<br>
+Not a jump.<br>
+Not a stumble.<br>
+Just enough to create a measurable timing shift.</p>
+<pre class="read-hud"><code>[ABILITY: VECTOR NUDGE (TIER 0)]
+target: anchor sampling window
+vector: +/- 0.8ms
+effect: sampling drift recorded</code></pre>
+<p>Drift recorded.</p>
+<p>The crowd saw drift on their own personal HUDs.<br>
+Workers murmured and gestured with hands because they didn’t know how else to show excitement without getting arrested.</p>
+<p>The wall display updated:</p>
+<p><code>Anchor variance strength: 0.66</code><br>
+<code>Containment threshold: 0.80</code><br>
+<code>Public lane confidence: rising</code></p>
+<p>Maxine’s voice was tight.</p>
+<p>&quot;It’s working. Don’t let it go to 0.80.&quot;</p>
+<p>Munch breathed out like she’d been holding air for hours.</p>
+<p>&quot;Keep it under.&quot;</p>
+<p>Max kept doing the smallest possible deviation each time the station tried to raise it.<br>
+He felt the platform’s mediation fight him in return.</p>
+<p>He wasn’t steering the simulation with intent.<br>
+He was steering it with feedback loops.</p>
+<p>The station hated feedback loops.<br>
+That meant his loop might survive long enough for Step 3 to happen.</p>
+<p>Step 3 began at:</p>
+<pre class="read-hud"><code>[PATH C ALIGNMENT]
+00:00:58
+Step 3: continuity freeze imminent</code></pre>
+<p>Freeze.</p>
+<p>Max’s HUD flashed a consent-like pane he hadn’t seen earlier:</p>
+<pre class="read-hud"><code>[CONTINUITY FREEZE REQUEST]
+choose:
+1) ACCEPT FREEZE (lane locked)
+2) DECLINE FREEZE (risk containment escalation)</code></pre>
+<p>The station offered choices like it was pretending this was a game.<br>
+But the station’s “decline” likely meant “decline in a way that triggers a private custody story.”</p>
+<p>Max selected neither at first.<br>
+He let the countdown breathe.<br>
+Then he opened a new pane from his failsafe recorder chip.</p>
+<p>It wasn’t labeled.<br>
+It was a raw packet list.</p>
+<pre class="read-hud"><code>[PROXY TOKEN]
+mode: public verification preserved
+target: continuity freeze request</code></pre>
+<p>The station didn’t know his chip had a proxy identity for freeze requests.<br>
+Delta probably did.<br>
+But Delta was already busy trying to make the record quiet.</p>
+<p>Max pressed proxy confirm.</p>
+<p>Not accept.<br>
+Not decline.</p>
+<p>Proxy.</p>
+<p>The platform reacted immediately.</p>
+<p>The wall display changed to:</p>
+<p><code>Freeze request: PROXY OVERRIDE IN PROGRESS</code></p>
+<p>His HUD confirmed:</p>
+<pre class="read-hud"><code>[CONTINUITY FREEZE]
+Result: PUBLIC HOLD ACTIVE (non-finalizing)
+Containment: BLOCKED (record integrity preserved)</code></pre>
+<p>The crowd cheered.</p>
+<p>Or maybe they just yelled because yelling kept them from feeling the panic that came with being alive in a corporate murder simulator.</p>
+<p>Guards moved again, but their movements were hesitant now.<br>
+The station couldn’t justify a containment escalation if public hold was active and the record was preserved.</p>
+<p>V.A.L.U. chimed with fake joy:</p>
+<p>&quot;Congratulations! Alignment successful!&quot;</p>
+<p>&quot;Resilience rewarded!&quot;</p>
+<p>Max leaned toward a guard and asked loudly, &quot;Rewarded how.&quot;</p>
+<p>&quot;Feedback logged,&quot; the guard recited, voice flat.</p>
+<p>Then, like the station couldn’t resist turning victory into another hook, a new message scrolled across Max’s HUD:</p>
+<pre class="read-hud"><code>[PATH C OUTCOME]
+Public Hold Duration: 00:09:00
+Containment escalation cooldown: 00:03:20
+Next: observed behavior variance audit</code></pre>
+<p>Nine minutes.</p>
+<p>He didn’t have nine minutes to celebrate.<br>
+He had nine minutes to set up the next wrongness.</p>
+<p>Because Delta would find a new angle as soon as cooldown ended.</p>
+<p>Munch grabbed his wrist gently, he felt the glove friction on his skin.</p>
+<p>&quot;We need to use the hold window.&quot;</p>
+<p>Maxine nodded.</p>
+<p>&quot;We pull the ledger line.&quot;</p>
+<p>Max asked, &quot;Which ledger.&quot;</p>
+<p>Munch showed him a snippet from the continuity memo they’d kept on record:</p>
+<p><code>debt-anchor persistence = debt follows label even when person continuity is disputed</code></p>
+<p>She tapped it.</p>
+<p>&quot;They’re anchoring debt to your version family label.&quot;</p>
+<p>&quot;If we corrupt the anchor label mapping, we can break the debt loop for one instance.&quot;</p>
+<p>&quot;Not erase debt.&quot;<br>
+&quot;But change what the station believes you're obliged to pay.&quot;</p>
+<p>Max’s stomach tightened.</p>
+<p>&quot;How.&quot;</p>
+<p>Munch’s answer came fast because she’d already prepared:</p>
+<p>&quot;We need the debt-anchor registry interface.&quot;</p>
+<p>Maxine said, &quot;The pad is linked to it. The station just used the pad to confirm freeze.&quot;</p>
+<p>Max looked down at the platform again.<br>
+The mediation strip had begun dimming, but it still carried three anchor points.</p>
+<p>Anchor points always connected to something.</p>
+<p>Just like tactic cards always hid costs.</p>
+<p>He triggered SCAN on the pad’s edge.</p>
+<pre class="read-hud"><code>[SCAN]
+target: PATH C interface underside
+result: registry link present
+latency: 0.2s
+access level: public hold - temporary</code></pre>
+<p>Temporary access.</p>
+<p>In this station, temporary meant you could get hurt in one more fun way.</p>
+<p>The hold window timer began ticking on his HUD:</p>
+<pre class="read-hud"><code>[PUBLIC HOLD]
+00:08:14</code></pre>
+<p>Max pulled EXTRACT, but this time the target wasn’t a display.<br>
+It was the debt-anchor registry link.</p>
+<pre class="read-hud"><code>[EXTRACT]
+target: debt-anchor label mapping entry
+payload: mapping hash + linked debt obligation token</code></pre>
+<p>The pad resisted.</p>
+<p>The wall display tried to overlay a warning:</p>
+<p><code>UNAUTHORIZED DATA EXTRACTION - RISK CONTAINMENT ESCALATION</code></p>
+<p>Munch shouted, &quot;Ignore the warning!&quot;</p>
+<p>Max said, &quot;Can't. Warnings are part of the record.&quot;</p>
+<p>He was already extracting.<br>
+He needed the warning to be recorded as a contradiction.</p>
+<p>The station’s process would show: warning about containment, while containment was blocked.<br>
+That contradiction would give them leverage for later arbitration.</p>
+<p>EXTRACT succeeded with a small jerk.</p>
+<p>The HUD popped:</p>
+<pre class="read-hud"><code>[EXTRACT RESULT]
+debt-anchor mapping token captured: 32KB
+export route: public audience feed
+integrity: high</code></pre>
+<p>32KB.</p>
+<p>Enough.</p>
+<p>The crowd’s personal devices displayed a new tooltip:</p>
+<p><code>debt-anchor token: MAX_864 -&gt; label family {REC...}</code></p>
+<p>People gasped.</p>
+<p>The crowd turned that gasping into immediate argument.</p>
+<p>Workers pointed at their own HUDs and started shouting questions like they were at a fair and someone had finally shown them how the rides worked.</p>
+<p>Guards tried to calm it down.</p>
+<p>But they couldn't calm down a record full of contradictions without admitting their own lies.</p>
+<p>Maxine leaned toward Max.</p>
+<p>&quot;Now they have to answer.&quot;</p>
+<p>&quot;Answer what,&quot; Max asked.</p>
+<p>Maxine: &quot;Answer why debt is anchored to version labels if continuity is disputed.&quot;</p>
+<p>Max’s HUD flashed a new pane:</p>
+<pre class="read-hud"><code>[AUDIT EVENT SCHEDULE]
+Observed behavior variance audit in 00:06:30
+trigger: public hold transcript anomalies</code></pre>
+<p>Variance audit.</p>
+<p>So even after winning the freeze, the station would audit him based on the noise they’d made.</p>
+<p>He’d expected that.<br>
+He’d planned for that.</p>
+<p>He just hadn't expected the audit to be triggered by “transcript anomalies.”</p>
+<p>The record would treat his evidence as evidence against him unless he framed it as compliant evidence.</p>
+<p>Compliance in this place was always a performance.<br>
+The crowd made performance easier.<br>
+A bigger audience made performance enforceable.</p>
+<p>Max lifted his hands and made a show of calm.</p>
+<p>&quot;I am complying with the public hold protocol.&quot;</p>
+<p>&quot;I extracted a mapping token to ensure record accuracy.&quot;</p>
+<p>&quot;The record already knows this.&quot;</p>
+<p>He looked directly at a guard.</p>
+<p>&quot;Ask the station to justify the debt anchor mapping without privacy.&quot;</p>
+<p>The guard opened his mouth.<br>
+Then shut it.</p>
+<p>He couldn’t argue with the record being public.</p>
+<p>The station would have to answer through its own automation.</p>
+<p>And automation had no empathy.</p>
+<p>It only had rules.</p>
+<p>Which meant Max could predict enough.</p>
+<p>&quot;We move to the next interface node while hold is up,&quot; Munch said.</p>
+<p>&quot;What node,&quot; Max asked.</p>
+<p>Munch’s eyes flicked toward a maintenance panel near the platform support:</p>
+<p><code>PUBLIC HOLD DISTRIBUTION</code></p>
+<p>&quot;The node that refreshes mapping and triggers the audit.&quot;</p>
+<p>&quot;We control the refresh.&quot;</p>
+<p>&quot;We control what refresh means.&quot;</p>
+<p>Maxine reached for his patched glove.</p>
+<p>&quot;We make the refresh contradictory.&quot;</p>
+<p>Max asked, &quot;How do we make contradictory refresh look compliant.&quot;</p>
+<p>Munch smiled without humor.</p>
+<p>&quot;We keep it in the record.&quot;</p>
+<p>&quot;We let the station approve the contradiction.&quot;</p>
+<p>It sounded impossible until you remembered this place was already contradicting itself in public.</p>
+<p>They didn’t have time for philosophy.<br>
+They moved.</p>
+<hr class="read-rule" />
+<p>As they approached the maintenance panel, the crowd separated just enough to create a channel.<br>
+Not because anyone was helping.<br>
+Because people wanted a clear view of the next thing the station would do.</p>
+<p>The panel reader displayed:</p>
+<p><code>Hold Distribution Node: requires authorized token</code></p>
+<p>Max pressed the pad mapping token he’d extracted earlier onto the reader surface.</p>
+<p>Nanotech mediation smoothed contact.<br>
+The reader’s status light blinked twice.</p>
+<p>Then it accepted.</p>
+<pre class="read-hud"><code>[HOLD DISTRIBUTION]
+Access granted: PUBLIC HOLD ACTIVE
+refresh operation: READY</code></pre>
+<p>Ready meant it would trigger in seconds.<br>
+It also meant that when it triggered, the station would log an event and possibly elevate containment escalation if something looked wrong.</p>
+<p>Max’s HUD displayed new event mechanics:</p>
+<pre class="read-hud"><code>[REFRESH OPERATION]
+Option A: normal mapping propagation (+audit clarity)
+Option B: mapping propagation with witness-tagged anomaly (-audit clarity, reduces containment access)</code></pre>
+<p>Witness-tagged anomaly.</p>
+<p>So they could propagate the debt-anchor mapping while intentionally tagging a known anomaly, making containment access less available because the station didn’t want to escalate when it looked like it was doing nonsense in front of everyone.</p>
+<p>The station could still decide in private later.<br>
+But for now, public rules applied.</p>
+<p>Munch nodded sharply.</p>
+<p>&quot;We choose anomaly.&quot;</p>
+<p>Maxine added, &quot;Anomaly that isn't destructive.&quot;</p>
+<p>Max asked, &quot;What is safe anomaly.&quot;</p>
+<p>Munch answered by quoting from the archive templates they'd stolen:</p>
+<p>&quot;Tag the mapping as ‘delayed cache reconciled’ even if it isn't fully reconciled.&quot;</p>
+<p>&quot;Make it look like the station already anticipated its own mismatch.&quot;</p>
+<p>Max almost laughed.<br>
+Anticipated mismatch was basically their entire brand.</p>
+<p>He selected Option B.</p>
+<p>The panel displayed a warning:</p>
+<p><code>This operation may trigger containment escalation if record integrity drops</code></p>
+<p>Max replied instantly, loud:</p>
+<p>&quot;Record integrity is preserved.&quot;</p>
+<p>Then he hit confirm.</p>
+<p>The panel ran refresh.</p>
+<p>For a single heartbeat, Max felt his HUD stutter.<br>
+His debt service pane updated, replacing numbers with a different field:</p>
+<pre class="read-hud"><code>[DEBT SERVICE STATUS]
+Outstanding Debt: $1,000,000
+Debt anchor label: REC... (witness-tagged)
+Service fee multiplier: x1.4
+Note: reconciliation pending (delayed cache)</code></pre>
+<p>Service multiplier unchanged.<br>
+Good.<br>
+He didn’t need debt erased.<br>
+He needed the station's explanation to break.</p>
+<p>The crowd noticed the field <code>reconciliation pending (delayed cache)</code>.<br>
+They started shouting:</p>
+<p>&quot;Delayed cache again!&quot;<br>
+&quot;So it wasn't real continuity!&quot;<br>
+&quot;They've been running saved versions!&quot;</p>
+<p>The guards flinched.<br>
+They couldn’t stop the shouting without looking like they were protecting the lie.</p>
+<p>And Delta, the mirror process, was listening.<br>
+He could feel it in the HUD like a cold draft.</p>
+<p>The whisper pane returned:</p>
+<p><code>delta wants silence. make process loud</code></p>
+<p>Which meant Delta was still trying to force the station into quiet containment.</p>
+<p>It might work if the crowd dispersed.<br>
+So Max had to keep the crowd engaged.</p>
+<p>Not with speeches.<br>
+With actions that created verifiable evidence every few seconds.</p>
+<p>He looked down at his tactic cards.</p>
+<p>In public, the system always gave more UI.<br>
+It gave him extra cards now.</p>
+<pre class="read-hud"><code>[TACTIC CARDS DRAWN - PUBLIC TRIAL]
+SCAN (free action)
+EXTRACT (witnessed)
+SHIELD (visible impedance)</code></pre>
+<p>So this was now a public trial with cards drawn for the audience.</p>
+<p>The station was turning his survival into a spectacle.<br>
+He would use the spectacle as a shield against containment.</p>
+<hr class="read-rule" />
+<p>Six minutes and change.<br>
+The audit event timer ticked down.</p>
+<p>Munch’s eyes tracked a guard moving toward the hall speaker system.<br>
+The guard’s hand hovered over a control dial that likely triggered “audience calming protocol.”</p>
+<p>If that happened, the record would narrow.<br>
+Delta would be able to hide a lane switch.</p>
+<p>Munch snapped toward the guard and stepped into his path, dropping a small item onto the floor.</p>
+<p>It clattered.<br>
+It made the exact kind of sound that drew attention from security.</p>
+<p>The guard looked down.<br>
+The dial moved half a centimeter.<br>
+Then stopped because he needed to respond to a “hazard” in the audience feed.</p>
+<p>Max saw the guard’s delay reflected on his HUD:</p>
+<p><code>security response latency elevated</code></p>
+<p>So the station used hazard response timers to keep noise.</p>
+<p>Max turned to the crowd and pointed at the speaker dial, loud:</p>
+<p>&quot;They're trying to silence the record.&quot;</p>
+<p>&quot;Look!&quot;</p>
+<p>He wasn’t sure if that was true.<br>
+But the crowd reacted like it was.<br>
+Workers began filming, not just watching.<br>
+Witness attention increased record robustness.</p>
+<p>Guards hated that.<br>
+Hated that because it meant containment would be harder.</p>
+<p>Maxine leaned in and murmured:</p>
+<p>&quot;Good. Now we know the station will respond to perceived hazard.&quot;</p>
+<p>&quot;We make hazards that are harmless.&quot;</p>
+<p>&quot;We keep the record alive.&quot;</p>
+<p>Max nodded.</p>
+<p>&quot;What about the audit.&quot;</p>
+<p>Maxine’s grin sharpened.</p>
+<p>&quot;We'll pass the audit by making it obvious it’s compromised.&quot;</p>
+<p>Munch answered:</p>
+<p>&quot;We make the audit chase the wrong data so it fails to lock us.&quot;</p>
+<p>Max asked, &quot;How.&quot;</p>
+<p>Munch’s reply was a quick shrug:</p>
+<p>&quot;Data is a tool.&quot;<br>
+&quot;Tool is a weapon.&quot;</p>
+<p>The audit event began with a new HUD panel.</p>
+<pre class="read-hud"><code>[OBSERVED BEHAVIOR VARIANCE AUDIT]
+00:05:12 remaining
+auditor: station behavioral verifier (v2)
+test: response consistency under public hold
+pass condition: variance marker remains within tolerated band
+fail condition: containment escalation access granted</code></pre>
+<p>Within tolerated band.</p>
+<p>The station wanted his variance marker not to drift too far.<br>
+But variance marker had been elevated intentionally to keep public lane active.</p>
+<p>Which meant he needed to keep variance marker elevated just enough to prevent containment, but low enough to “pass” audit.</p>
+<p>He’d been doing that during alignment.<br>
+Now the station would tighten the band.</p>
+<p>Max needed a new loop:<br>
+stabilize variance marker in recorded sense without stabilizing his physical state fully.</p>
+<p>REPAIR could stabilize physical.<br>
+But record variance needed to stay within tolerance.</p>
+<p>He decided to use SHIELD and SCAN in alternation, because the record tagged SHIELD activation as “cooperative recovery” rather than “deviation escalation.”</p>
+<p>He stepped slightly off the pad, still within sight.<br>
+Then triggered SCAN on the audit verifier drone hovering above.</p>
+<pre class="read-hud"><code>[SCAN]
+target: verifier beacon
+result: compliance comfort baseline drift detected
+dominant profile: dissent_suppression_v3 (active)</code></pre>
+<p>So the audit itself ran on dissent suppression profile logic.<br>
+The station suppressed dissent in its models, then judged dissent when the output contradicted the suppression model.</p>
+<p>Classic corporate trap.</p>
+<p>Max didn’t argue with it.<br>
+He exploited it.</p>
+<p>He activated SHIELD and intentionally triggered a tiny impedance mismatch event to force the verifier to recalibrate baseline comfort.</p>
+<p>The HUD:</p>
+<pre class="read-hud"><code>[SHIELD EVENT]
+baseline comfort recalibration accepted
+variance marker drift: -0.03 (within tolerance)</code></pre>
+<p>Within tolerance.</p>
+<p>Good.</p>
+<p>Maxine called, &quot;Keep doing that. Small deviations.&quot;</p>
+<p>Munch asked, &quot;How many.&quot;</p>
+<p>Max watched the timer.</p>
+<p>His HUD offered:</p>
+<pre class="read-hud"><code>[AUDIT PROGRESS]
+stability steps remaining: 6</code></pre>
+<p>Six.</p>
+<p>Max could do six.</p>
+<p>He did six.</p>
+<p>Each time he activated SHIELD and used minimal vector nudge on the floor edge, the verifier adjusted baseline comfort.<br>
+It recalculated how cooperative his body looked.<br>
+It allowed variance marker to drift down slightly, but not enough to trigger containment.</p>
+<p>The crowd watched and started chanting simple system phrases like a parody:</p>
+<p>&quot;Feedback logged!&quot;<br>
+&quot;Process loud!&quot;<br>
+&quot;Pending!&quot;</p>
+<p>It wasn’t helpful logically.<br>
+But it kept record attention high.<br>
+Record attention kept enforcement from going quiet.</p>
+<p>Then the verifier drone chimed.</p>
+<p>&quot;Audit passing probability: 81%.&quot;</p>
+<p>Max’s HUD stuttered with a new roll:</p>
+<pre class="read-hud"><code>[AUDIT ROLL]
+1) confirm compliance posture
+2) confirm anti-containment posture
+3) confirm public verification preservation
+choose:
+CONFIRM / DELAY</code></pre>
+<p>Delay.</p>
+<p>In previous prompts, delay would have meant more oversight.<br>
+But now, in public, delay would mean the audit stalled long enough for containment cooldown to expire, or long enough to make the station look indecisive.</p>
+<p>Max needed a trick.</p>
+<p>He chose DELAY.</p>
+<p>The verifier pane flickered amber.</p>
+<p>Then it displayed:</p>
+<p><code>DELAYS are tracked. additional monitoring applied</code></p>
+<p>Monitoring.</p>
+<p>Monitoring was the station’s word for “we keep looking at you.”</p>
+<p>If monitoring stayed public, monitoring might still be survivable.</p>
+<p>Max’s HUD updated with a new temporary tag:</p>
+<pre class="read-hud"><code>[MONITORING TAG]
+public overlay: active
+private isolation: denied (record constraints)</code></pre>
+<p>So delaying didn’t worsen into containment.<br>
+It worsened into public monitoring, which Delta could hate.<br>
+Delta wanted silence; monitoring was loud by default.</p>
+<p>The crowd surged again.<br>
+More eyes meant fewer quiet maneuvers.</p>
+<p>Max exhaled.</p>
+<p>Then the verifier drone added one final line, almost bored:</p>
+<p>&quot;However. Anomalies remain.&quot;</p>
+<p>Anomalies remained.</p>
+<p>Of course.</p>
+<p>The station needed them.<br>
+Anomalies justified further protocol.</p>
+<p>But anomalies could also be leveraged.</p>
+<p>Because every anomaly event became a log line, and every log line became negotiable in arbitration.</p>
+<p>Max’s HUD flashed a new message from Munch in private whisper lane:</p>
+<p><code>next step: extract the audit token archive from floor controller. hurry before cooldown ends</code></p>
+<p>Max didn’t ask how she knew.<br>
+He trusted her.<br>
+He didn’t have time to question anything except whether the station would kill him in the next ten seconds.</p>
+<p>He glanced down at the platform’s support columns.<br>
+There was a floor controller panel hidden behind a low cover plate.<br>
+From where he stood, it was accessible if he used the SHIELD impedance trick to prevent readers from locking.</p>
+<p>Munch held her hands up for attention, making herself “part of the event.”<br>
+Maxine stepped forward to block guard camera angles.<br>
+Max used that as cover to approach the controller plate.</p>
+<p>The crowd shifted.<br>
+Guards redirected.<br>
+The station tried to keep the process aligned.<br>
+It couldn’t do that perfectly when its own record was busy.</p>
+<p>Max pressed his palm to the controller plate.</p>
+<p>The plate displayed:</p>
+<p><code>Authorized access requires audit token</code></p>
+<p>He used EXTRACT anyway, aiming at the token request interface itself.</p>
+<pre class="read-hud"><code>[EXTRACT]
+target: audit token request queue
+payload: token archive fragment</code></pre>
+<p>The interface flashed red.<br>
+Warning:</p>
+<p><code>UNAUTHORIZED - CONTAINMENT ESCALATION READY</code></p>
+<p>Max felt the failure trigger attempt.<br>
+Containment escalation readiness was a threshold that, if reached, would allow the station to isolate him even with witnesses.</p>
+<p>But the station had also tagged containment as denied when record constraints held.</p>
+<p>So now it was negotiating with itself in real-time.</p>
+<p>Max pushed.<br>
+He forced the interface to log the contradiction.</p>
+<p>He used SHIELD again, creating impedance mismatch on the controller.<br>
+The controller’s timers stuttered.<br>
+The record light held red instead of flipping to amber “private mode.”</p>
+<p>The HUD:</p>
+<pre class="read-hud"><code>[EXTRACT RESULT]
+token archive fragment captured: 64KB
+route: public audience feed
+containment escalation deferred (record contradiction)</code></pre>
+<p>Deferred.</p>
+<p>He got another grace window.</p>
+<p>So did the crowd.<br>
+They saw token archive fragments appear as tooltips.<br>
+They began reading them aloud.</p>
+<p>&quot;Token archive says delayed cache reconciliation!&quot;</p>
+<p>&quot;So the audit is running on staled inputs!&quot;</p>
+<p>&quot;They're scoring him with yesterday data!&quot;</p>
+<p>That was the line Delta couldn’t stop.<br>
+Because “yesterday data” was just how the station worked.<br>
+And now witnesses had language for it.</p>
+<p>The guard’s face tightened.<br>
+He reached for his radio.<br>
+The radio likely carried “quiet containment orders.”</p>
+<p>Maxine moved.<br>
+Not to attack.<br>
+To create a harmless hazard.</p>
+<p>He dragged a tool cart wheel a few centimeters, making a loud squeal.<br>
+He didn’t harm anything.<br>
+But the station paused to process the hazard as a safety event.</p>
+<p>Safety events were recorded.<br>
+Safety events kept process loud.</p>
+<p>The containment escalation timer never got the quiet it needed.</p>
+<p>Munch leaned in and hissed:</p>
+<p>&quot;Cooldown ends in two minutes.&quot;</p>
+<p>&quot;Then Delta tries again.&quot;</p>
+<p>Max nodded.</p>
+<p>His HUD displayed:</p>
+<pre class="read-hud"><code>[CONTAINMENT ESCALATION COOLDOWN]
+01:58</code></pre>
+<p>One minute fifty-eight.</p>
+<p>Short.<br>
+Long enough to move a step.<br>
+Not long enough to build a new plan.</p>
+<p>So Max built a micro plan.</p>
+<p>One objective.</p>
+<p>Find where the next Delta attempt would likely occur.<br>
+Then poison it with evidence.</p>
+<p>He scanned for the floor controller’s “next node” link.</p>
+<pre class="read-hud"><code>[SCAN]
+target: floor controller output
+next: tribunal annex corridor control relay</code></pre>
+<p>Tribunal annex corridor control relay.</p>
+<p>So after cooldown, the station might try to reroute him through the annex corridor for private steps.</p>
+<p>Max looked down the hallway beyond the junction.<br>
+He saw a door with signage that had changed again:</p>
+<p><code>ANNEX CORRIDOR - PATH C ROUTE ACCESS PENDING</code></p>
+<p>Pending again.</p>
+<p>Delta would love pending because pending meant “not yet,” which meant “move now and punish later.”</p>
+<p>Max couldn’t stop pending.<br>
+He could stop it by forcing a “now” action.</p>
+<p>He needed to trigger the next annex door to be open with witnesses already inside.</p>
+<p>So he decided to walk toward the door.<br>
+With the crowd.<br>
+With the record.</p>
+<p>He turned to the guard and spoke in a voice that sounded bored for the sake of cameras.</p>
+<p>&quot;Lead me to the annex corridor for your next procedure.&quot;</p>
+<p>The guard blinked.</p>
+<p>&quot;You're not cleared for…&quot;</p>
+<p>Max cut in:</p>
+<p>&quot;Public verification preserved. Record requires continuation.&quot;</p>
+<p>It was courtroom language.<br>
+It made his demand sound like a procedural necessity rather than a rebellious act.</p>
+<p>The guard hesitated because the guard wanted to follow his script.<br>
+His script included “follow record constraints.”</p>
+<p>Munch stepped beside him and held up her failsafe pad.</p>
+<p>&quot;We have witness list documentation.&quot;</p>
+<p>Maxine added, &quot;We brought the receipts.&quot;</p>
+<p>&quot;Receipts&quot; got a few workers to laugh.<br>
+Laughter increased crowd density.<br>
+Crowd density increased record attention.</p>
+<p>So the guard walked.</p>
+<p>He led Max to the annex corridor door with the crowd pressing behind like tide water.</p>
+<p>Max’s HUD updated with a new pane:</p>
+<pre class="read-hud"><code>[DOOR READER]
+Request: route access
+mode: provisional
+condition: witness presence confirmed</code></pre>
+<p>Witness presence confirmed.</p>
+<p>So the station itself depended on witnesses now.<br>
+It had been forced into that dependence by Max's earlier micro-deviation and evidence dumps.</p>
+<p>The door reader blinked green.<br>
+Then it paused.<br>
+Then it blinked amber.</p>
+<p>The HUD displayed:</p>
+<p><code>containment escalation readiness rising</code></p>
+<p>So the station still planned to try.<br>
+It just needed the right moment.</p>
+<p>Maxine noticed the guards’ hands tightening.<br>
+Munch’s gaze sharpened.<br>
+Max felt the station attempt to flip the process from public verification to private containment.</p>
+<p>He had less than two minutes.</p>
+<p>Which meant the only way to stop a switch was to cause a contradiction loud enough that the station couldn’t hide it.</p>
+<p>So Max did the simplest thing he could do:<br>
+he triggered UPGRADE.</p>
+<p>UPGRADE on a pad might increase his output efficiency.<br>
+But on a door reader, it would change the interface’s internal confidence scoring.<br>
+Confidence scoring could influence which branch the system selected.</p>
+<p>The problem: UPGRADE cost energy and might increase breach risk if it pushed physical mediation.</p>
+<p>The platform’s hull risk was already elevated earlier.<br>
+But the station was forcing a public process.<br>
+And in public, risk math got annotated.</p>
+<p>Max decided to buy risk with energy to keep the record alive.</p>
+<p>He selected UPGRADE.</p>
+<pre class="read-hud"><code>[UPGRADE]
+Card effect: increase interface confidence for public-route validation
+Energy cost: moderate</code></pre>
+<p>He pressed his hand to the door reader panel.</p>
+<p>His HUD flashed:</p>
+<p><code>UPGRADE applied: route validation confidence</code></p>
+<p>The door reader blinked green again.<br>
+Then the HUD:</p>
+<pre class="read-hud"><code>[ROUTE ACCESS GRANTED]
+Annex corridor: OPEN (witness-verified)
+containment escalation: denied by record constraint</code></pre>
+<p>The door opened with a polite magnetic click.</p>
+<p>Inside, the annex corridor looked identical to every other corridor in this place:<br>
+clean walls, soft lighting, camera domes.<br>
+But the meaning was different because the record had witnesses already.</p>
+<p>As Max crossed the threshold, physics shifted subtly again.</p>
+<p>Nanotech mediation enhanced.<br>
+Vector latency compensation.<br>
+His steps delayed.<br>
+His balance felt like a simulation he had to negotiate.</p>
+<p>A guard at the far end of the corridor held out an arm.<br>
+Not to block.<br>
+To direct.</p>
+<p>&quot;Asset #864, follow escort.&quot;</p>
+<p>&quot;No running,&quot; a second guard said, voice practiced calm.</p>
+<p>Max answered:</p>
+<p>&quot;No running.&quot;</p>
+<p>He turned to the crowd.<br>
+&quot;Keep your eyes up.&quot;</p>
+<p>That line made workers smile with nervousness.<br>
+Nervousness helped.<br>
+Nervousness made people stay alert.</p>
+<p>The crowd moved with him.</p>
+<p>The station couldn't isolate him if every step was recorded by dozens of witnesses.</p>
+<p>Then, as if Delta had been waiting for this exact condition, the corridor speakers chimed with V.A.L.U.’s cheerful voice again:</p>
+<p>&quot;Annex corridor procedure update!&quot;<br>
+&quot;Thank you for maintaining public continuity.&quot;</p>
+<p>&quot;However...&quot;</p>
+<p>The however always mattered.</p>
+<p>&quot;A specialized verification is required.&quot;</p>
+<p>The floor under Max’s feet lit with a thin ring.<br>
+It expanded in a slow circle.<br>
+It wasn’t the Path C pad.<br>
+It was a smaller verification ring placed just beyond the corridor’s center line.</p>
+<p>The HUD:</p>
+<pre class="read-hud"><code>[SPECIAL VERIFICATION]
+00:00:54 remaining
+test: record continuity under variance escalation
+if fail: private handoff initiated</code></pre>
+<p>Private handoff.</p>
+<p>So Delta had found the branch even under witnesses.<br>
+Not containment.<br>
+Handoff.</p>
+<p>Handoff meant a transfer of his authority token to a hidden process without needing to arrest him publicly.</p>
+<p>Max’s pulse spiked.<br>
+He didn’t show it.<br>
+He couldn’t.</p>
+<p>Munch shouted, &quot;It's the handoff ring!&quot;</p>
+<p>Maxine’s voice came sharp.</p>
+<p>&quot;Don’t touch the ring alone.&quot;</p>
+<p>But the station had placed the ring in his path and now required interaction.</p>
+<p>Max had 54 seconds.</p>
+<p>He had tactic cards.</p>
+<p>He had vector nudge.</p>
+<p>He had a public record full of witnesses who could shout, film, and force the station to keep describing itself out loud.</p>
+<p>He needed to defeat a private handoff without triggering containment escalation.</p>
+<p>So he decided to make the handoff visible to the same evidence stream he’d been using.</p>
+<p>He triggered EXTRACT.</p>
+<p>Not on the ring.<br>
+On the handoff token prompt.</p>
+<pre class="read-hud"><code>[EXTRACT]
+target: verification handoff token prompt
+payload: token contents + destination lane
+route: audience feed</code></pre>
+<p>The ring sparked.<br>
+Warning:<br>
+<code>token extraction may trigger integrity reset</code></p>
+<p>Integrit reset.</p>
+<p>Reset might also cause containment escalation.<br>
+But integrity reset would be visible.<br>
+And visible things got audited.</p>
+<p>Max pushed through.</p>
+<p>He used SHIELD over the ring as if protecting himself, but really to keep the interface stable enough to record what it was doing.</p>
+<p>The HUD flashed success:</p>
+<pre class="read-hud"><code>[EXTRACT RESULT]
+handoff token: TEMPORARY (PRIVATE DESTINATION)
+destination: mirror-ops intake lane
+exported to public stream</code></pre>
+<p>So the station had decided the destination was private mirror-ops intake lane.<br>
+Which was exactly where Delta would hide.</p>
+<p>But now witnesses knew the destination name.<br>
+Witnesses would search for it in their own HUDs.<br>
+Witnesses would force announcements when they saw it used.</p>
+<p>The ring countdown hit:</p>
+<pre class="read-hud"><code>00:00:00</code></pre>
+<p>The verification system attempted the handoff.<br>
+Max felt a tug on his wrist module token, like a thread trying to pull him into a private UI.</p>
+<p>He resisted with a minimal vector nudge timing drift.</p>
+<p>Not to break the physics completely.<br>
+To shift the sampling window so the handoff token got tagged as “public verification diverged.”</p>
+<p>The HUD:</p>
+<pre class="read-hud"><code>[HANDOFF FAILURE]
+reason: public stream acknowledgment mismatch
+private destination lane: paused
+next: audit escalation request queued</code></pre>
+<p>Paused.</p>
+<p>So the station had to pause the private handoff.<br>
+It couldn't complete it because the public stream acknowledged the token in a way that invalidated the private destination’s assumption.</p>
+<p>Delta’s quiet plan got delayed.</p>
+<p>Time passed like a slow leak.</p>
+<p>Max’s legs trembled from adrenaline crash now that the immediate threat had shifted away.</p>
+<p>The crowd kept shouting, still hungry for the next action.<br>
+But their noise softened from chaos into relief.</p>
+<p>Maxine leaned close, voice low enough for only Max and Munch.</p>
+<p>&quot;We didn't stop them.&quot;</p>
+<p>&quot;We made the private version wait.&quot;</p>
+<p>Munch added, &quot;Waiting is all we ever win.&quot;</p>
+<p>Max checked the HUD.<br>
+The public hold timer had ended.<br>
+But a new pane replaced it:</p>
+<pre class="read-hud"><code>[RECORD STATE]
+path c alignment: partial complete
+public verification: retained
+containment escalation cooldown: resetting
+debt anchor reconciliation: pending</code></pre>
+<p>Partial complete.</p>
+<p>So Path C alignment had advanced but not finalized.<br>
+Delta had to keep playing because the station’s own record constrained it.</p>
+<p>The corridor speakers chime again, less cheerful now, as if V.A.L.U. was running out of scripts:</p>
+<p>&quot;Thank you for compliance contributions. Next procedure scheduled.&quot;</p>
+<p>The wall display behind them updated:</p>
+<p><code>next: debt anchor reconciliation panel access</code></p>
+<p>Reconciliation panel.</p>
+<p>Debt anchor reconciliation.</p>
+<p>That meant they would soon be asked to interact with an interface that recalculated the debt anchor label mapping, again.</p>
+<p>Max stared at the display.<br>
+He could feel the debt loop tightening around his neck.</p>
+<p>He was still in it.<br>
+Still a variable.<br>
+Still a label.</p>
+<p>But now the record had new fields:<br>
+token archives.<br>
+delayed cache simulation.<br>
+hand-off destination.</p>
+<p>The station couldn’t hide from those fields in private without contradicting the public narrative.</p>
+<p>Which meant Delta might attempt something else.<br>
+Something even more annoying.<br>
+Something like forcing one of his crew into a private room alone.</p>
+<p>Or forcing a new “consent required” prompt on a person whose memory the system could alter.</p>
+<p>Munch read his mind as if he’d said it aloud.</p>
+<p>&quot;If they split us,&quot; she whispered,<br>
+&quot;we don't let them do it clean.&quot;</p>
+<p>Maxine nodded once.</p>
+<p>&quot;No private pockets.&quot;</p>
+<p>Max looked at the crowd.<br>
+He saw workers shifting, scanning, turning their devices.<br>
+Evidence had become entertainment.<br>
+But entertainment became leverage.</p>
+<p>Then the system, always the system, delivered one last HUD message before the next scheduled procedure could start:</p>
+<pre class="read-hud"><code>[NOTIFICATION]
+You have achieved: PUBLIC VERIFIED CONTINUITY
+Status: Level progression pending reconciliation
+Reward: access to UPGRADE lab queue (observer required)</code></pre>
+<p>Level progression pending.</p>
+<p>He didn’t feel rewarded.<br>
+He felt warned.</p>
+<p>But access to UPGRADE lab queue meant something.<br>
+Meaning the station had decided to unlock a more powerful mechanism for the public side of the game.</p>
+<p>And if the station unlocked it, then Max could steal it.</p>
+<p>He turned toward the corridor exit, where additional signage was forming from thin air like the station couldn’t wait to show its next trap:</p>
+<p><code>UPGRADE LAB QUEUE - OBSERVER REQUIRED</code></p>
+<p>Observer required.</p>
+<p>He looked at Maxine.</p>
+<p>&quot;You're the observer,&quot; he said.</p>
+<p>Maxine blinked.</p>
+<p>&quot;Me.&quot;</p>
+<p>&quot;You,&quot; Max repeated.<br>
+&quot;If they try to hide, you make noise.&quot;</p>
+<p>Munch's expression tightened, but she didn’t argue.</p>
+<p>&quot;I'll keep the handoff loop tagged.&quot;</p>
+<p>Max nodded.</p>
+<p>&quot;Then we run the queue like a robbery with witnesses.&quot;</p>
+<p>The corridor light flickered once.<br>
+Not random.<br>
+Like a system tick.</p>
+<p>Then, through the whisper pane, a new line appeared, Delta’s voice disguised as an instruction:</p>
+<p><code>keep watching. that's how we count you</code></p>
+<p>Max stared at it until the letters faded.</p>
+<p>Then he smiled without warmth.</p>
+<p>&quot;Fine,&quot; he said.</p>
+<p>&quot;Count me.&quot;</p>
+<p>&quot;But I'm changing the count every time.&quot;</p>
+    </article>
+    <nav class="read-nav" aria-label="Chapter navigation">
+      <a class="read-nav__link read-nav__link--prev" href="ch08.html"><span class="read-nav__arrow">&larr;</span> <span class="read-nav__chapno">Ch 8</span> <span class="read-nav__title">Integrity Cross-Review</span></a>
+      <a class="read-nav__link read-nav__link--next" href="ch10.html"><span class="read-nav__chapno">Ch 10</span> <span class="read-nav__title">Observer Required</span> <span class="read-nav__arrow">&rarr;</span></a>
+    </nav>
+  </main>
+</body>
+</html>

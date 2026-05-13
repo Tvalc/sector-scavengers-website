@@ -11,6 +11,7 @@
     "build:assets": "node scripts/extract-promo-frames.mjs",
     "build:site-assets": "npm run build:backgrounds && npm run build:assets",
     "generate:novel": "node scripts/generate-novel-lore-pages.mjs",
+    "generate:novel-reader": "node scripts/generate-novel-reader.mjs",
     "export:novel-art-prompts": "node scripts/export-novel-art-prompts.mjs"
   },
   "devDependencies": {

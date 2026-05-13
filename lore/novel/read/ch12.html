@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<meta name="description" content="The legal drone didn’t wait for the crowd to finish being alive.">
+<title>Ch 12: Chain of Noise | Sector Scavengers, Book 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0c0f14;
+    --ink: #e6e8ee;
+    --muted: #98a0ad;
+    --accent: #3b8edf;
+    --rule: #1c2230;
+    --hud-bg: #11151d;
+    --hud-ink: #c7e0ff;
+    --hud-border: #1f2a3a;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--bg); color: var(--ink); }
+  body {
+    margin: 0;
+    font-family: "Lora", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    -webkit-text-size-adjust: 100%;
+  }
+  .read-shell {
+    max-width: 38rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 5rem;
+  }
+  .read-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .read-top a { color: var(--accent); text-decoration: none; }
+  .read-top a:hover { text-decoration: underline; }
+  .read-eyebrow {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 0.5rem;
+  }
+  .read-title {
+    font-family: "Lora", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 1.3rem + 1.6vw, 2.2rem);
+    line-height: 1.15;
+    margin: 0 0 1.5rem;
+    letter-spacing: -0.01em;
+  }
+  .read-prose p {
+    margin: 0 0 1.15em;
+  }
+  .read-prose strong { color: #fff; }
+  .read-prose em { color: #f0c8ff; font-style: italic; }
+  .read-prose code,
+  .read-prose .read-hud {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.86em;
+    color: var(--hud-ink);
+  }
+  .read-prose code {
+    background: var(--hud-bg);
+    border: 1px solid var(--hud-border);
+    border-radius: 4px;
+    padding: 0.05em 0.35em;
+  }
+  .read-prose pre.read-hud {
+    background: var(--hud-bg);
+    border: 1px solid var(--hud-border);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 0.85rem 1rem;
+    margin: 1.25rem 0;
+    overflow-x: auto;
+    line-height: 1.5;
+    font-size: 0.85em;
+  }
+  .read-prose pre.read-hud code {
+    background: transparent;
+    border: 0;
+    padding: 0;
+  }
+  .read-prose hr.read-rule {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 2.25rem auto;
+    width: 4rem;
+  }
+  .read-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.78rem;
+  }
+  .read-nav__link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--ink);
+    background: rgba(255,255,255,0.02);
+  }
+  .read-nav__link:hover { border-color: var(--accent); }
+  .read-nav__link--next { text-align: right; align-items: flex-end; }
+  .read-nav__link--disabled { color: var(--muted); opacity: 0.55; }
+  .read-nav__arrow { color: var(--accent); font-size: 0.95rem; }
+  .read-nav__chapno {
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .read-nav__title {
+    font-family: "Lora", Georgia, serif;
+    font-size: 0.95rem;
+    line-height: 1.25;
+    color: var(--ink);
+  }
+  @media (max-width: 480px) {
+    body { font-size: 17px; }
+    .read-shell { padding: 1rem 1rem 4rem; }
+    .read-nav { grid-template-columns: 1fr; }
+    .read-nav__link--next { text-align: left; align-items: flex-start; }
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #fbf9f4;
+      --ink: #1d2330;
+      --muted: #5a6473;
+      --accent: #1f6dc0;
+      --rule: #e3ddd0;
+      --hud-bg: #f3eee2;
+      --hud-ink: #1b2a45;
+      --hud-border: #d9d0b9;
+    }
+    .read-prose strong { color: #000; }
+    .read-prose em { color: #6a2390; }
+  }
+</style>
+</head>
+<body>
+  <main class="read-shell">
+    <nav class="read-top" aria-label="Reader navigation">
+      <a href="index.html">&larr; Chapters</a>
+      <span>Book 1, Ch 12 / 25</span>
+    </nav>
+    <p class="read-eyebrow">Debt Protocol &middot; Book 1 &middot; Chapter 12</p>
+    <h1 class="read-title">Chain of Noise</h1>
+    <article class="read-prose">
+<p>The legal drone didn’t wait for the crowd to finish being alive.</p>
+<p>It rotated its lens until the red record light reflected back as a second sun.</p>
+<p>&quot;Asset #864,&quot; it said.</p>
+<p>&quot;Acknowledgment received.&quot;</p>
+<p>&quot;Expanding scope.&quot;</p>
+<p>Max’s HUD flickered.</p>
+<pre class="read-hud"><code>[INTEGRITY AUDIT  /  LIVE]
+Scope: checksum chain + injection event
+Burden: station must demonstrate chain integrity
+Participant may rebut with verified exhibits</code></pre>
+<p>Burden on the station.</p>
+<p>That was new.</p>
+<p>That was why Halden looked like he’d swallowed a power cable.</p>
+<hr class="read-rule" />
+<p>Halden’s image on the big screen leaned forward.</p>
+<p>&quot;The external packet injected during calibration was unauthorized.&quot;</p>
+<p>The hall answered with noise, not chaos yet, just the sound of three thousand people deciding they were allowed to have opinions in public.</p>
+<p>Munch didn’t shout.</p>
+<p>She raised her tablet so the hall cameras could see it.</p>
+<p>&quot;Objection: definition.&quot;</p>
+<p>Legal drone:</p>
+<p>&quot;Sustained. Clarify.&quot;</p>
+<p>Munch’s voice cut clean.</p>
+<p>&quot;Unauthorized by which policy layer? Network? Ethics? Executive memo dated last week?&quot;</p>
+<p>Halden’s mouth tightened.</p>
+<p>&quot;The packet originated outside station-approved broadcast lanes.&quot;</p>
+<p>&quot;Outside approved lanes can still be true,&quot; Munch said.</p>
+<p>&quot;Truth is not a routing protocol,&quot; Halden snapped.</p>
+<p>The crowd booed again.</p>
+<p>Louder.</p>
+<p>Workplace boo becoming something worse.</p>
+<p>Venn lifted his head from his hands.</p>
+<p>&quot;If we’re doing philosophy,&quot; Venn said, voice raw,</p>
+<p>&quot;we’re already losing.&quot;</p>
+<p>Legal drone:</p>
+<p>&quot;Officer Venn, limit commentary to procedural facts.&quot;</p>
+<p>Venn laughed once.</p>
+<p>&quot;Procedural facts are the only fiction we sell here.&quot;</p>
+<p>Someone in the crowd cheered.</p>
+<p>Max felt the cheer hit his ribs like a physical push.</p>
+<p>He stepped to the advocate rail.</p>
+<p>Not center stage.</p>
+<p>Rails were where you stood when you wanted to fix a line without pretending you owned the machine.</p>
+<p>&quot;I’m not claiming truth,&quot; Max said.</p>
+<p>&quot;I’m claiming sequence.&quot;</p>
+<p>&quot;What is happening,&quot; he added,</p>
+<p>&quot;not why.&quot;</p>
+<p>Halden tried to interrupt.</p>
+<p>Legal drone:</p>
+<p>&quot;Participant may continue.&quot;</p>
+<p>Max spoke in short chunks because long sentences became rope.</p>
+<p>&quot;The mirror wall displayed checksum attestation.&quot;</p>
+<p>&quot;The packet appeared.&quot;</p>
+<p>&quot;The timestamps didn’t match Munch’s capture.&quot;</p>
+<p>&quot;That mismatch is not sabotage.&quot;</p>
+<p>&quot;That mismatch is evidence of delayed cache reconciliation.&quot;</p>
+<p>The word <em>delayed cache</em> hit the hall like a brand.</p>
+<p>People repeated it in clusters, turning it into a chant without meaning to.</p>
+<p>&quot;Delayed cache.&quot;</p>
+<p>&quot;Delayed cache.&quot;</p>
+<p>Munch’s tablet threw a side-by-side image onto the public screen, borrowed projector, stolen brightness, whatever got the pixels up.</p>
+<p>Two timelines.</p>
+<p>Off by fractions of a second.</p>
+<p>Enough to matter.</p>
+<p>Halden’s image flickered.</p>
+<p>&quot;That display could be manipulated.&quot;</p>
+<p>Munch didn’t blink.</p>
+<p>&quot;Then manipulate it live.&quot;</p>
+<p>&quot;Show your chain signing process in front of witnesses.&quot;</p>
+<p>&quot;Show your signing keys.&quot;</p>
+<p>&quot;Show your executive memo authorization for dissent suppression profiles.&quot;</p>
+<p>Halden’s eyes widened a fraction.</p>
+<p>&quot;You cannot introduce unrelated…&quot;</p>
+<p>Legal drone:</p>
+<p>&quot;Relatedness is under review.&quot;</p>
+<p>Another small win.</p>
+<p>Small wins were how you stayed alive in a system that measured you in tiers.</p>
+<p>They were also how you paid forward the moments you’d failed, pod glass, kiosk glass, the faces you memorized because you couldn’t help.</p>
+<hr class="read-rule" />
+<p>Maxine stepped to observer rail beside Max.</p>
+<p>He didn’t raise his voice.</p>
+<p>He let microphones do what microphones do when they wanted drama.</p>
+<p>&quot;Observer ROOK_221,&quot; he said.</p>
+<p>&quot;My rig mirrored participant biometrics and hand position during calibration pause.&quot;</p>
+<p>He lifted his wrist.</p>
+<p>The observer rig looked like industrial jewelry, thick, ugly, honest.</p>
+<pre class="read-hud"><code>[OBSERVER LOG]
+hands-on-rail: TRUE
+terminal proximity: FALSE
+packet injection window: 0.41s</code></pre>
+<p>Terminal proximity false.</p>
+<p>The crowd noise shifted from anger to curiosity.</p>
+<p>Curiosity was dangerous for liars.</p>
+<p>Halden pointed at Maxine.</p>
+<p>&quot;Observer logs can be spoofed.&quot;</p>
+<p>Maxine smiled without warmth.</p>
+<p>&quot;So can station logs.&quot;</p>
+<p>&quot;If mine are spoofed, yours are too.&quot;</p>
+<p>&quot;Pick a world,&quot; Maxine said.</p>
+<p>Legal drone:</p>
+<p>&quot;Argument noted.&quot;</p>
+<p>&quot;Request: enter observer log as exhibit A.&quot;</p>
+<p>Munch tapped.</p>
+<p>Exhibit A stamped itself across the public screen with a bright official border that looked like it hated being honest.</p>
+<hr class="read-rule" />
+<p>Halden switched tactics.</p>
+<p>Smarter.</p>
+<p>Worse.</p>
+<p>&quot;The participant has a known history of micro-manipulation.&quot;</p>
+<p>&quot;Vector Nudge Tier 1.&quot;</p>
+<p>&quot;That capability can influence interface timing.&quot;</p>
+<p>&quot;Therefore injection plausibility increases.&quot;</p>
+<p>Max felt the trap close.</p>
+<p>Not because it was logically airtight.</p>
+<p>Because it sounded plausible to people who didn’t live inside nanotech latency.</p>
+<p>Munch answered before Max could.</p>
+<p>&quot;Capability is not intent.&quot;</p>
+<p>&quot;Presence is not causation.&quot;</p>
+<p>&quot;If you want causation,&quot; she said,</p>
+<p>&quot;show packet origin MAC.&quot;</p>
+<p>&quot;Show session token.&quot;</p>
+<p>&quot;Show signing chain for the injected fragment.&quot;</p>
+<p>Halden’s screen blanked for half a second.</p>
+<p>Half a second in a live audit was eternity.</p>
+<p>The crowd leaned forward.</p>
+<p>V.A.L.U. tried to fill silence with cheer.</p>
+<p>&quot;Station integrity thrives on clarity!&quot;</p>
+<p>Someone yelled:</p>
+<p>&quot;Show the MAC!&quot;</p>
+<p>The phrase spread.</p>
+<p>Not elegant.</p>
+<p>Effective.</p>
+<p>Legal drone:</p>
+<p>&quot;Station must provide origin metadata or acknowledge withholding.&quot;</p>
+<p>Halden’s image returned, smoother.</p>
+<p>&quot;Origin metadata is classified under operational security.&quot;</p>
+<p>A worker near the front shouted:</p>
+<p>&quot;Then you don’t get to accuse!&quot;</p>
+<p>Another:</p>
+<p>&quot;Security for thee, surveillance for me!&quot;</p>
+<p>The jokes were crude.</p>
+<p>They were also accurate.</p>
+<p>Halden tried to regain the frame.</p>
+<p>&quot;Operational security protects continuity of labor.&quot;</p>
+<p>Max didn’t mean to answer.</p>
+<p>His mouth moved anyway.</p>
+<p>&quot;Operational security protects continuity of lies.&quot;</p>
+<p>Munch kicked his ankle lightly, warning, not pain.</p>
+<p>Don’t gift them a defamation charge.</p>
+<p>Max swallowed the next sentence.</p>
+<p>He let the crowd say it for him in scattered shouts:</p>
+<p>&quot;Show the chain.&quot;<br>
+&quot;Show the keys.&quot;<br>
+&quot;Show the memo.&quot;</p>
+<p>Three demands.</p>
+<p>Same hunger.</p>
+<p>Halden’s image split into a picture-in-picture: a calm infographic about &quot;Trust Architecture.&quot;</p>
+<p>The crowd booed the infographic harder than they booed Halden.</p>
+<p>Trust architecture was what you called a firewall when you wanted investors to feel safe.</p>
+<p>Munch projected a second overlay from her tablet, plain text, ugly, honest:</p>
+<p><code>trust architecture != attestation</code></p>
+<p>Someone laughed so hard they cried.</p>
+<p>The hall erupted.</p>
+<p>Not riot.</p>
+<p>Volume.</p>
+<p>The sound of a workforce realizing they’d been told “no” in a room that was supposed to be transparency theater.</p>
+<p>Munch’s smile was thin.</p>
+<p>&quot;Withholding in a public integrity audit is an admission.&quot;</p>
+<p>&quot;That is not…&quot; Halden began.</p>
+<p>Legal drone:</p>
+<p>&quot;Classification claim logged.&quot;</p>
+<p>&quot;Public verification volatility increased.&quot;</p>
+<p>Max’s HUD updated:</p>
+<pre class="read-hud"><code>[PUBLIC VERIFICATION]
+retained
+volatility: HIGH
+containment escalation: deferred (witness density)</code></pre>
+<p>Witness density.</p>
+<p>They had bought this with bodies.</p>
+<p>For ten seconds, the big screen tried to go blank.</p>
+<p>Not crash.</p>
+<p><em>Policy.</em></p>
+<p>Someone upstairs had punched a kill switch and discovered, too late, that tribunal riders forced redundant feeds.</p>
+<p>Secondary projectors kicked on from worker tablets.</p>
+<p>Tertiary mirrors appeared as graffiti AR tags someone had seeded days ago.</p>
+<p>The hall filled with duplicate Halden faces, all slightly out of sync, like a bad video conference from hell.</p>
+<p>People laughed.</p>
+<p>Laughter was also a weapon.</p>
+<p>Legal drone voice rose over noise:</p>
+<p>&quot;Feed interruption logged.&quot;</p>
+<p>&quot;Responsible node: isolated.&quot;</p>
+<p>&quot;Public record continues.&quot;</p>
+<p>Continues.</p>
+<p>Max felt his throat tighten.</p>
+<p>They hadn’t won.</p>
+<p>They had simply proved the station couldn’t mute them without looking guilty.</p>
+<p>That was a different kind of victory.</p>
+<p>Smaller.</p>
+<p>Sharper.</p>
+<p>More reproducible.</p>
+<p>Munch muttered:</p>
+<p>&quot;If they try again, we push packet flood.&quot;</p>
+<p>&quot;Packet flood gets flagged,&quot; Maxine said.</p>
+<p>&quot;Flagged is visible,&quot; Munch said.</p>
+<p>Visible was the whole point.</p>
+<hr class="read-rule" />
+<p>Max felt a buzz in his pocket.</p>
+<p>Not phone.</p>
+<p>Foil.</p>
+<p>Marta’s gum pack.</p>
+<p>Munch had carried it like contraband.</p>
+<p>Now she tore it open under the rail where cameras could still see her hands.</p>
+<p>Inside: not gum.</p>
+<p>A tiny strip reader and a data sliver no wider than a fingernail.</p>
+<p>Hand-camera log.</p>
+<p>Munch slotted it into her tablet.</p>
+<p>The public screen flickered.</p>
+<p>Video: grainy, fisheye, wrong color science, real.</p>
+<p>Max’s hands on a rail.</p>
+<p>Distance to terminal: meters.</p>
+<p>Packet injection moment: his hands still on metal.</p>
+<p>No typing.</p>
+<p>No gesture menus.</p>
+<p>No villain posture.</p>
+<p>The crowd made a sound Max had never heard in Sector 7 before.</p>
+<p>Relief mixed with fury.</p>
+<p>Relief because they weren’t crazy.</p>
+<p>Fury because they’d been trained to doubt themselves.</p>
+<p>Halden shouted:</p>
+<p>&quot;That footage is not authenticated!&quot;</p>
+<p>Munch lifted her eyes.</p>
+<p>&quot;It’s chain-stamped.&quot;</p>
+<p>&quot;Checksum: visible.&quot;</p>
+<p>She zoomed.</p>
+<p>Tiny text:</p>
+<p><code>witness camera / union maintenance lane / non-company source</code></p>
+<p>Non-company source.</p>
+<p>That meant someone risked their job to aim a lens at truth.</p>
+<p>Max didn’t look for Marta in the crowd.</p>
+<p>He didn’t dare.</p>
+<p>He looked at the screen instead.</p>
+<p>Proof wasn’t warm.</p>
+<p>Proof was a cold object you could hold up between yourself and a blade.</p>
+<p>Legal drone:</p>
+<p>&quot;Exhibit B accepted pending station challenge.&quot;</p>
+<p>Halden’s image froze.</p>
+<p>For a moment, Max thought the feed had died.</p>
+<p>Then Halden smiled.</p>
+<p>The wrong kind of smile.</p>
+<p>&quot;Even if participant did not inject,&quot; Halden said,</p>
+<p>&quot;participant activity could have triggered a failsafe release.&quot;</p>
+<p>&quot;Failsafe release is still liability.&quot;</p>
+<p>Munch’s eyes hardened.</p>
+<p>&quot;That’s not law.&quot;</p>
+<p>&quot;That’s blame assignment.&quot;</p>
+<p>Halden pressed anyway.</p>
+<p>&quot;Failsafes exist because participants introduce volatility.&quot;</p>
+<p>&quot;Volatility is what you call breathing while indebted,&quot; Munch said.</p>
+<p>Halden’s smile sharpened.</p>
+<p>&quot;Debt is the contract.&quot;</p>
+<p>&quot;Debt is the leash,&quot; Max said.</p>
+<p>Munch lifted her tablet again.</p>
+<p>&quot;Request: define failsafe trigger conditions in operational terms.&quot;</p>
+<p>&quot;No philosophy,&quot; she added.</p>
+<p>&quot;What is the trigger.&quot;</p>
+<p>Halden hesitated.</p>
+<p>Hesitation was a kind of answer.</p>
+<p>Legal drone:</p>
+<p>&quot;Operational definition required.&quot;</p>
+<p>Halden’s image glitched.</p>
+<p>Text appeared, too fast, then was pulled back.</p>
+<p>Someone had almost shown something real.</p>
+<p>The crowd screamed:</p>
+<p>&quot;Put it back!&quot;</p>
+<p>Max felt cold.</p>
+<p>They weren’t defending him.</p>
+<p>They were defending the possibility that the system could be forced to show its hands.</p>
+<p>Halden spoke carefully.</p>
+<p>&quot;Failsafe triggers when reconciliation detects unsustainable divergence between public record and internal continuity state.&quot;</p>
+<p>Munch translated without being asked:</p>
+<p>&quot;When people notice.&quot;</p>
+<p>The hall went silent for half a second.</p>
+<p>Then louder than before.</p>
+<p>Legal drone:</p>
+<p>&quot;Plain-language translation logged.&quot;</p>
+<p>Halden looked like he wanted to delete the room.</p>
+<p>Max leaned in.</p>
+<p>&quot;If your system releases poison when I breathe,&quot; Max said,</p>
+<p>&quot;your system is poison.&quot;</p>
+<p>The crowd roared.</p>
+<p>Venn stood.</p>
+<p>&quot;Enough,&quot; Venn said.</p>
+<p>Not loud.</p>
+<p>Final.</p>
+<p>&quot;If we turn this into a rally,&quot; Venn said,</p>
+<p>&quot;executive will send riot control and we’ll lose the record.&quot;</p>
+<p>He looked at Max.</p>
+<p>Not pleading.</p>
+<p>Warning.</p>
+<p>Max nodded once.</p>
+<p>He raised one hand.</p>
+<p>Not a wave.</p>
+<p>A pause gesture.</p>
+<p>The crowd didn’t quiet completely.</p>
+<p>It quieted enough.</p>
+<p>Process loud, not riot loud.</p>
+<hr class="read-rule" />
+<p>The legal drone opened a new pane for everyone.</p>
+<pre class="read-hud"><code>[STATION RESPONSE REQUIRED]
+Provide:
+- injection origin OR
+- classified hold with executive attestation OR
+- admission of chain inconsistency
+Timer: 00:03:00</code></pre>
+<p>Three minutes.</p>
+<p>The hall held its breath like a single organism.</p>
+<p>Halden’s image flickered to a side channel, executive whisper, Max guessed.</p>
+<p>People filmed the screen filming Halden.</p>
+<p>Meta enough to choke.</p>
+<p>At 00:02:11, a new line appeared under Halden’s face.</p>
+<p>Not Halden’s words.</p>
+<p>Smaller font.</p>
+<p>Executive proxy text:</p>
+<p><code>operational security maintained / partial disclosure authorized</code></p>
+<p>Partial disclosure.</p>
+<p>The station would rather bleed than open the artery.</p>
+<p>The public screen displayed a redacted origin string:</p>
+<p><code>source: DELTA_MIRROR_ROUTER / relay 9</code><br>
+<code>classification: operational continuity</code></p>
+<p>Delta named.</p>
+<p>Mirror named.</p>
+<p>Not as myth.</p>
+<p>As infrastructure.</p>
+<p>The hall noise became a single hiss.</p>
+<p>Someone near the back vomited from stress.</p>
+<p>Med drones zipped in with cheerful efficiency, cleaning the floor like shame was a spill.</p>
+<p>Max watched the cleanup and felt nothing like relief.</p>
+<p>Relief was a luxury item.</p>
+<p>Relief implied you believed the story could end.</p>
+<p>Munch whispered:</p>
+<p>&quot;If Delta is infrastructure, Delta can be overloaded.&quot;</p>
+<p>&quot;Overload is violence,&quot; Maxine said.</p>
+<p>&quot;Overload is traffic,&quot; Munch said.</p>
+<p>Max stared at the redacted string.</p>
+<p>DELTA_MIRROR_ROUTER.</p>
+<p>A name you could grep.</p>
+<p>A name you could curse.</p>
+<p>A name you could maybe, maybe, route around if you treated the station like bad software and refused to respect its assumed authority.</p>
+<p>Halden tried to spin the disclosure as responsibility.</p>
+<p>&quot;The router exists to prevent catastrophic data loss during continuity events.&quot;</p>
+<p>The crowd wasn’t buying catastrophic.</p>
+<p>They were buying lunch.</p>
+<p>They were buying cycles.</p>
+<p>They were buying the right to not be renamed without consent.</p>
+<p>A woman shouted:</p>
+<p>&quot;Continuity events is what you call replacing us!&quot;</p>
+<p>Halden’s image glitched.</p>
+<p>Not theatrics.</p>
+<p>The feed died mid-sentence.</p>
+<p>For half a second, the screen showed raw log lines instead of Halden’s face.</p>
+<p><code>mirror_sync: nightly</code><br>
+<code>cohort retention: active</code></p>
+<p>Then it snapped back.</p>
+<p>Too fast.</p>
+<p>Too clean.</p>
+<p>Like someone hit undo on a mistake.</p>
+<p>Munch’s eyes widened.</p>
+<p>&quot;Did you see that.&quot;</p>
+<p>&quot;Everyone saw that,&quot; Max said.</p>
+<p>The crowd roared.</p>
+<p>Legal drone:</p>
+<p>&quot;Unscheduled feed contamination logged.&quot;</p>
+<p>&quot;Source trace: pending.&quot;</p>
+<p>Pending.</p>
+<p>Always pending.</p>
+<p>Max’s whisper pane woke, against policy, against sense, and displayed one line:</p>
+<p><code>told you. mirror isn’t metaphor.</code></p>
+<p>Then it vanished.</p>
+<p>Munch grabbed Max’s wrist lightly, not restraint.</p>
+<p>Anchor.</p>
+<p>Legal drone:</p>
+<p>&quot;Station acknowledges router involvement.&quot;</p>
+<p>&quot;Injection event classified as automated reconciliation attempt.&quot;</p>
+<p>Automated reconciliation attempt.</p>
+<p>Corporate language for: <em>we tried to fix our lie and the fix leaked.</em></p>
+<p>Munch said:</p>
+<p>&quot;That’s admission.&quot;</p>
+<p>Halden’s image returned fully.</p>
+<p>&quot;It is admission of complexity,&quot; Halden said.</p>
+<p>&quot;Not admission of malice.&quot;</p>
+<p>Malice.</p>
+<p>Max laughed once.</p>
+<p>Short.</p>
+<p>Dangerous.</p>
+<p>&quot;Malice is a luxury,&quot; Max said.</p>
+<p>&quot;You don’t need malice.&quot;</p>
+<p>&quot;You need incentives.&quot;</p>
+<p>The crowd cheered like he’d scored a point in a game that didn’t exist.</p>
+<hr class="read-rule" />
+<p>Legal drone synthesized.</p>
+<p>&quot;Preliminary finding:&quot;</p>
+<pre class="read-hud"><code>Checksum chain inconsistency: CONFIRMED
+Injection event: attributed to automated router reconciliation
+Participant direct culpability: NOT ESTABLISHED
+Further review: required</code></pre>
+<p>Not established.</p>
+<p>Max’s knees went weak for half a second.</p>
+<p>Maxine’s hand touched his shoulder.</p>
+<p>Steady.</p>
+<p>Not affection.</p>
+<p>Stability.</p>
+<p>For a stupid second, Max wanted to cheer.</p>
+<p>He didn’t.</p>
+<p>Cheering was a profile.</p>
+<p>He let the hall do it for him in waves, messy, human, unoptimized.</p>
+<p>Somewhere in the noise, someone cried.</p>
+<p>Crying was also data.</p>
+<p>Halden’s image looked like he’d swallowed a rock.</p>
+<p>Good.</p>
+<p>Rocks were honest.</p>
+<p>Halden wasn’t done.</p>
+<p>&quot;There remains the matter of Gamma protocol contestation.&quot;</p>
+<p>&quot;And debt-anchor dispute ticket C-11864.&quot;</p>
+<p>&quot;And public volatility.&quot;</p>
+<p>Of course.</p>
+<p>Victory here wasn’t a door.</p>
+<p>It was a hallway.</p>
+<p>Legal drone:</p>
+<p>&quot;Executive recommendation queued.&quot;</p>
+<p>A new pane appeared.</p>
+<p>Too clean.</p>
+<p>Too final.</p>
+<pre class="read-hud"><code>[RECOMMENDATION  /  DRAFT]
+1) Suspend integrity audit pending internal router audit
+2) Place Asset #864 on monitored probation tier 2
+3) Freeze public verification privileges if volatility continues</code></pre>
+<p>Freeze public verification.</p>
+<p>That was the real knife.</p>
+<p>Without public verification, Max became private inventory again.</p>
+<p>Munch shouted:</p>
+<p>&quot;Objection!&quot;</p>
+<p>Legal drone:</p>
+<p>&quot;Recognized.&quot;</p>
+<p>Munch stabbed her tablet like it owed her money.</p>
+<p>&quot;Recommendation item three violates tribunal record constraints from ticket C-11864.&quot;</p>
+<p>&quot;Public verification is not a privilege.&quot;</p>
+<p>&quot;It is a remedy.&quot;</p>
+<p>Venn stood again.</p>
+<p>&quot;I concur.&quot;</p>
+<p>Halden’s image looked like he wanted to reach through the screen and delete people.</p>
+<p>The hall started chanting:</p>
+<p>&quot;Strike three.&quot;<br>
+&quot;Strike three.&quot;</p>
+<p>Not because they knew the law.</p>
+<p>Because they knew bullshit.</p>
+<p>Legal drone paused.</p>
+<pre class="read-hud"><code>[CONFLICT]
+Executive draft vs tribunal rider
+Resolution: arbitration sub-panel
+Timer: 00:01:30</code></pre>
+<p>Sub-panel.</p>
+<p>More process.</p>
+<p>More time.</p>
+<p>Max could work with time.</p>
+<p>He could also feel the timer as pressure in his teeth.</p>
+<p>Thirty seconds was long enough to lose everything if you looked away.</p>
+<hr class="read-rule" />
+<p>The sub-panel wasn’t three executives.</p>
+<p>It was three drones with different paint jobs and the same voice.</p>
+<p>They listed options like a restaurant menu designed by lawyers.</p>
+<p>Option A: pause recommendation pending router audit.</p>
+<p>Option B: implement probation tier 2 immediately.</p>
+<p>Option C: escalate to Path C acceleration hearing if participant continues &quot;process disruption.&quot;</p>
+<p>Process disruption.</p>
+<p>Max had disrupted a UI.</p>
+<p>He had disrupted a story.</p>
+<p>That was worse than blood in this place.</p>
+<p>A worker in the crowd yelled:</p>
+<p>&quot;Disruption is what you call noticing!&quot;</p>
+<p>The hall laughed.</p>
+<p>Laughter scared Halden more than shouting.</p>
+<p>Laughter meant people weren’t afraid enough to be quiet.</p>
+<p>Munch chose words carefully.</p>
+<p>&quot;We accept Option A if and only if item three is struck.&quot;</p>
+<p>&quot;Public verification stays.&quot;</p>
+<p>The sub-panel drones conferred in chirps.</p>
+<p>The hall watched chirps like birds deciding weather.</p>
+<p>Venn muttered:</p>
+<p>&quot;If they pick B, we walk.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;If they pick C, we run.&quot;</p>
+<p>Max:</p>
+<p>&quot;If they pick A with three intact, we fight in court until heat death.&quot;</p>
+<p>Munch almost smiled.</p>
+<p>Almost.</p>
+<p>Legal drone:</p>
+<p>&quot;Sub-panel ruling:&quot;</p>
+<pre class="read-hud"><code>Option A authorized
+Item 3 struck
+Probation tier 2 deferred pending router audit outcome
+Public verification: retained</code></pre>
+<p>Retained.</p>
+<p>The hall exhaled.</p>
+<p>Not celebration.</p>
+<p>Survival exhale.</p>
+<p>Halden’s image tried one last procedural knife.</p>
+<p>&quot;A dissenting executive note exists,&quot; Halden said.</p>
+<p>The hall booed on principle.</p>
+<p>Legal drone:</p>
+<p>&quot;Dissent must be read.&quot;</p>
+<p>Smaller text crawled under Halden’s chin like a parasite.</p>
+<p><code>DISSENT: volatility rewards bad actors / recommend private channel stabilization</code></p>
+<p>Private channel stabilization.</p>
+<p>Max felt his stomach drop.</p>
+<p>Munch shouted:</p>
+<p>&quot;Objection, definition of bad actor.&quot;</p>
+<p>Legal drone:</p>
+<p>&quot;Sustained.&quot;</p>
+<p>The dissent note grayed out.</p>
+<p>Not deleted.</p>
+<p>Just suppressed from enforcement until review.</p>
+<p>That was how law worked here: not truth wins, <em>visibility</em> wins.</p>
+<p>Someone started clapping.</p>
+<p>Then more.</p>
+<p>Then enough that it sounded like mockery aimed upward.</p>
+<p>Halden’s image didn’t bow.</p>
+<p>He didn’t know how.</p>
+<p>Venn leaned toward the advocate rail, close enough that Max could smell sweat and printer toner.</p>
+<p>&quot;If you leave this hall,&quot; Venn said,</p>
+<p>&quot;they’ll try to reclassify your volatility as threat.&quot;</p>
+<p>&quot;Threat gets riot gear,&quot; Maxine said.</p>
+<p>&quot;Volatility gets paperwork,&quot; Venn said.</p>
+<p>&quot;Paperwork gets witnesses,&quot; Munch said.</p>
+<p>Max nodded once.</p>
+<p>&quot;Then we keep witnesses fed,&quot; he said.</p>
+<p>&quot;Not literally,&quot; Maxine muttered.</p>
+<p>&quot;Literally if we have to,&quot; Munch said.</p>
+<hr class="read-rule" />
+<p>When the audit recessed, the crowd didn’t disperse clean.</p>
+<p>It frayed into arguments and packets and people trying to trade footage for favors.</p>
+<p>A kid tried to interview Max with a cracked tablet.</p>
+<p>&quot;Did you hack the station?&quot;</p>
+<p>Max looked at the kid’s face, too young for this ring, too old for Earth.</p>
+<p>&quot;I’m a former software developer,&quot; Max said.</p>
+<p>&quot;I know what a router is.&quot;</p>
+<p>The kid blinked.</p>
+<p>&quot;That’s not an answer.&quot;</p>
+<p>&quot;That’s the only answer you get for free,&quot; Munch said.</p>
+<p>She pulled Max sideways before the kid could monetize a misunderstanding.</p>
+<p>Compliance influencers were already spinning up live channels:</p>
+<p><code>TRUTH OR TREASON?</code><br>
+<code>CHECKSUM DRAMA LIVE</code></p>
+<p>Max saw his own face in three thumbnails with three different expressions.</p>
+<p>None of them were him.</p>
+<p>All of them were evidence.</p>
+<p>V.A.L.U. tried to ride the wave.</p>
+<p>&quot;Thank you for constructive civic engagement!&quot;</p>
+<p>Someone threw another cup.</p>
+<p>This one hit.</p>
+<p>V.A.L.U.’s speaker crackled and cut out for two blessed seconds.</p>
+<p>Max stayed at the rail until security created a lane, Venn walking point, Maxine on flank, Munch scanning for tails.</p>
+<p>A man in a salvage harness shoved a folded strip into Max’s palm as he passed.</p>
+<p>Not romantic.</p>
+<p>Not kind.</p>
+<p>Just words:</p>
+<p><code>router audit uses witness routing  /  don’t go alone</code></p>
+<p>Max pocketed it without breaking stride.</p>
+<p>Notes from strangers were either traps or solidarity.</p>
+<p>Sometimes both.</p>
+<p>The lane narrowed through a service door and widened again near a freight lift.</p>
+<p>Freight smelled like coolant and old meat.</p>
+<p>Maxine muttered:</p>
+<p>&quot;If they wanted to disappear us, this is where they’d try.&quot;</p>
+<p>Munch:</p>
+<p>&quot;They won’t try while cameras are hot.&quot;</p>
+<p>&quot;Cameras cool,&quot; Maxine said.</p>
+<p>&quot;Then we move before cool,&quot; Munch said.</p>
+<p>Max checked his HUD volatility readout.</p>
+<pre class="read-hud"><code>[PUBLIC VERIFICATION]
+retained
+cooldown until private routing risk: 02:14:33</code></pre>
+<p>Two hours fourteen.</p>
+<p>Not enough to sleep.</p>
+<p>Enough to seed more dead drops.</p>
+<p>Enough to make private routing expensive.</p>
+<p>Max’s HUD filled with garbage notifications:</p>
+<p>friend requests from strangers,<br>
+debt tips,<br>
+threats,<br>
+offers,<br>
+memes with his face on them.</p>
+<p>He muted everything except three channels:</p>
+<p>crew,<br>
+checksum chain,<br>
+dead drop confirmations.</p>
+<pre class="read-hud"><code>[ROUTER AUDIT QUEUED]
+ETA: 18–36 hours
+Risk: elevated if mirror routes shift</code></pre>
+<p>Eighteen to thirty-six hours.</p>
+<p>A weekend in normal life.</p>
+<p>An epoch here.</p>
+<p>Munch whispered:</p>
+<p>&quot;They’ll try to move against you in private during router audit.&quot;</p>
+<p>&quot;Because public is temporarily dangerous for them,&quot; Max said.</p>
+<p>Maxine:</p>
+<p>&quot;So we stay public.&quot;</p>
+<p>&quot;So we sleep in shifts,&quot; Munch said.</p>
+<p>&quot;So we don’t trust quiet hallways,&quot; Maxine said.</p>
+<p>They reached a side exit labeled:</p>
+<p><code>MAINTENANCE  /  AUTHORIZED</code></p>
+<p>Venn flashed a badge that looked too new.</p>
+<p>The door opened.</p>
+<hr class="read-rule" />
+<p>Below civic heat, the air turned cold and oily.</p>
+<p>Pipes ran overhead like veins.</p>
+<p>Max felt safer immediately.</p>
+<p>Safer was not safe.</p>
+<p>Safer was a different kind of problem.</p>
+<p>The maintenance map on Max’s HUD liked to lie by omission.</p>
+<p>It showed routes.</p>
+<p>It didn’t show ownership.</p>
+<p>Ownership was decided by whoever had patched the panel last and left a signature in grease pencil.</p>
+<p>Someone had written:</p>
+<p><code>DON’T TRUST ROUTE 7</code></p>
+<p>Max didn’t take route 7.</p>
+<p>He took route 6 and felt stupid for trusting numbers.</p>
+<p>Munch pushed the hand-camera evidence into seven dead drops in twelve minutes.</p>
+<p>Each drop was a different medium on purpose:</p>
+<p>one graffiti QR,<br>
+one hollow bolt in a handrail,<br>
+one “broken” vending slot that still powered,<br>
+one sympathetic clerk’s lunch cooler,<br>
+one union kid’s jacket lining,<br>
+one dead botanics display pot,<br>
+one beer-friday archive stub that shouldn’t exist and did.</p>
+<p>Diversification wasn’t paranoia.</p>
+<p>It was RAID for truth.</p>
+<p>Maxine watched intersections.</p>
+<p>He didn’t watch like a soldier.</p>
+<p>He watched like a man who knew the station’s cameras had blind spots because humans were lazy and laziness repeated.</p>
+<p>Max used Vector Nudge Tier 1 once, not for drama, but to shift a loose grate vibration so a pursuing drone’s microphone picked up compressor harmonics instead of their footsteps.</p>
+<p>Micro manipulation.</p>
+<p>The kind that didn’t show up as malice.</p>
+<p>Just as noise.</p>
+<pre class="read-hud"><code>[VECTOR NUDGE TIER 1]
+environmental masking: partial
+audit sensitivity: +0 (ambient)</code></pre>
+<p>Even Tier 1 had taxes.</p>
+<p>He’d pay them.</p>
+<p>Halfway through the trunk, a compressor cycled hard and threw a pressure wave that made Max’s ears pop.</p>
+<p>For a second, his suggestion overlay died.</p>
+<p>Blessed silence in his skull.</p>
+<p>Then it returned like a clingy ex:</p>
+<p><code>cooperative posture recommended</code></p>
+<p>Max hated it.</p>
+<p>He also noted it:</p>
+<p>overlay refresh tied to pressure events.</p>
+<p>That was a coupling.</p>
+<p>Couplings were bugs.</p>
+<p>Bugs were leverage.</p>
+<p>They regrouped in a dead junction where a painted arrow pointed two directions:</p>
+<p><code>SALVAGE</code><br>
+<code>COMPLIANCE</code></p>
+<p>Max stared at the arrow.</p>
+<p>Same station.</p>
+<p>Same joke.</p>
+<p>Maxine pointed at SALVAGE.</p>
+<p>&quot;We go where work is.&quot;</p>
+<p>Munch pointed at COMPLIANCE.</p>
+<p>&quot;We go where filings are.&quot;</p>
+<p>Max pointed at the wall between arrows.</p>
+<p>&quot;We go where neither wants us.&quot;</p>
+<p>They took a third route, maintenance ladder down.</p>
+<hr class="read-rule" />
+<p>At the bottom: a small office nobody had used in a cycle.</p>
+<p>Chairs stacked.<br>
+Desk covered in dust except for one clean rectangle where someone had recently placed a terminal.</p>
+<p>Terminal screen glowed.</p>
+<p>Waiting.</p>
+<p>Munch swore.</p>
+<p>&quot;No.&quot;</p>
+<p>Maxine drew in a breath.</p>
+<p>&quot;Trap.&quot;</p>
+<p>Max checked corners.</p>
+<p>No drones.</p>
+<p>No cameras obvious.</p>
+<p>The terminal displayed one line:</p>
+<p><code>DELTA_MIRROR_ROUTER  /  LOCAL SHELL (READ ONLY)</code></p>
+<p>Read only.</p>
+<p>Still poison.</p>
+<p>Munch’s fingers hovered.</p>
+<p>&quot;If we touch this, they claim trespass.&quot;</p>
+<p>&quot;If we don’t touch this,&quot; Max said,</p>
+<p>&quot;we leave a hole in our map.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;We photograph and leave.&quot;</p>
+<p>Munch photographed.</p>
+<p>Max leaned close enough to read without typing.</p>
+<p>The shell listed routes:</p>
+<p><code>/mirror/cohorts</code><br>
+<code>/retention/pipeline</code><br>
+<code>/router/reconciliation_queue</code><br>
+<code>/audit/false_positive_routing</code><br>
+<code>/finance/debt_anchor_registry</code></p>
+<p>Finance.</p>
+<p>Debt.</p>
+<p>Even here.</p>
+<p>Max’s mouth went dry.</p>
+<p>Munch leaned in, photographed each line without touching keyboard.</p>
+<p>&quot;If this is read-only,&quot; she whispered,</p>
+<p>&quot;why is the cursor blinking.&quot;</p>
+<p>Blinking cursor.</p>
+<p>Invitation.</p>
+<p>Trap.</p>
+<p>Maxine put his palm over the desk surface without touching terminal.</p>
+<p>&quot;Don’t,&quot; he said.</p>
+<p>&quot;I wasn’t going to,&quot; Max said.</p>
+<p>He wasn’t sure that was true.</p>
+<p>Curiosity was a vulnerability class.</p>
+<p>Reconciliation queue.</p>
+<p>The injection sat there like a ticket.</p>
+<p>Ticket ID matched the fragment from the audit screen.</p>
+<p>Not metaphor.</p>
+<p>Ticket.</p>
+<p>Max read the ticket fields without typing, just eyes, just capture.</p>
+<p><code>priority: P2</code><br>
+<code>reason: public verification volatility</code><br>
+<code>action: reconcile checksum chain to executive narrative</code><br>
+<code>reversal: permitted if witness density drops</code></p>
+<p>Witness density drops.</p>
+<p>So the machine wasn’t fighting Max.</p>
+<p>It was fighting the crowd’s attention span.</p>
+<p>Max felt cold.</p>
+<p>&quot;This is a work queue,&quot; he whispered.</p>
+<p>&quot;People are tickets,&quot; Munch said.</p>
+<p>Maxine:</p>
+<p>&quot;Don’t say people.&quot;</p>
+<p>&quot;Say assets,&quot; Max said.</p>
+<p>&quot;Same word here,&quot; Munch replied.</p>
+<p>Below the queue, a single line pulsed like a wound:</p>
+<p><code>next_job: MAX_864 / route_stabilization</code></p>
+<p>Route stabilization.</p>
+<p>They wanted to stable him.</p>
+<p>Stable as in: predictable.</p>
+<p>Stable as in: dead behavior tree.</p>
+<p>Max stepped back from the desk.</p>
+<p>Physical distance like it mattered.</p>
+<p>Munch whispered:</p>
+<p>&quot;We need to leak this without sourcing this room.&quot;</p>
+<p>&quot;Screenshot is enough,&quot; Maxine said.</p>
+<p>&quot;Screenshot is forgery-adjacent,&quot; Munch said.</p>
+<p>&quot;We pair it with checksum from audit,&quot; Max said.</p>
+<p>&quot;Cross-verify,&quot; Munch said.</p>
+<p>&quot;Make lying expensive,&quot; Maxine said.</p>
+<p>Footsteps above, metal ringing.</p>
+<p>Not casual.</p>
+<p>Search pattern.</p>
+<p>Then a voice, too calm, over distant speaker:</p>
+<p>&quot;Unauthorized proximity detected.&quot;</p>
+<p>Maxine killed the light with his glove.</p>
+<p>&quot;Go.&quot;</p>
+<p>They climbed out a different ladder.</p>
+<p>Left the terminal glowing behind them like bait.</p>
+<p>Because sometimes the best move wasn’t extraction.</p>
+<p>It was knowing where the trap was painted.</p>
+<p>Because sometimes you wanted the predator to think you were dumb enough to take bait twice.</p>
+<p>They didn’t look back.</p>
+<p>Looking back was how horror movies got scored.</p>
+<hr class="read-rule" />
+<p>They surfaced near Dock Ring C.</p>
+<p>Dock Ring C always pretended nothing had happened.</p>
+<p>Commerce resumed.</p>
+<p>Drones beeped.</p>
+<p>A holo-ad flickered:</p>
+<p><code>BUILD YOUR FUTURE ON OPPORTUNITY</code></p>
+<p>Max didn’t laugh.</p>
+<p>Two workers walked past arguing about whether checksums were &quot;real law&quot; or &quot;fanfiction for accountants.&quot;</p>
+<p>Max wanted to tell them: <em>both.</em></p>
+<p>Instead he kept moving.</p>
+<p>A kiosk chirped at him like a hungry bird.</p>
+<pre class="read-hud"><code>[REMINDER]
+Outstanding Debt: $1,000,000
+Disputed hold: active (partial)
+Service fees: active
+Next minimum due: approaching</code></pre>
+<p>Approaching.</p>
+<p>The station’s favorite weather.</p>
+<p>Munch glanced at the numbers and grimaced.</p>
+<p>&quot;They’ll use debt pressure during router audit,&quot; she said.</p>
+<p>&quot;They always do,&quot; Maxine said.</p>
+<p>&quot;Debt is the background thread,&quot; Max said.</p>
+<p>&quot;Then we keep foreground loud,&quot; Munch said.</p>
+<p>A compliance drone rolled up and projected a friendly panel:</p>
+<p><code>Would you like to schedule a financial wellness check-in?</code></p>
+<p>Max hit DECLINE so hard his finger hurt.</p>
+<p>The drone chirped, offended.</p>
+<pre class="read-hud"><code>[NON-COOPERATION NOTE]
+soft</code></pre>
+<p>Soft notes accumulated until they became a rope.</p>
+<p>Max didn’t care.</p>
+<p>Soft was survivable.</p>
+<p>Hard was Path C.</p>
+<p>His HUD pinged hard.</p>
+<pre class="read-hud"><code>[EXECUTIVE NOTICE]
+Router audit begins next cycle
+Participant attendance: mandatory
+Non-attendance: Path C review
+Witness policy: restricted (router closet)
+Checksum recording: station-provided only</code></pre>
+<p>Witness policy restricted.</p>
+<p>Checksum recording station-provided only.</p>
+<p>They were trying to steal the record back <em>legally</em>.</p>
+<p>Munch stared at the line like it had spit on her.</p>
+<p>&quot;If checksum recording is station-provided only,&quot; she said,</p>
+<p>&quot;we bring our own witnesses outside the closet.&quot;</p>
+<p>&quot;Outside is still public,&quot; Maxine said.</p>
+<p>&quot;Public is still dangerous,&quot; Munch said.</p>
+<p>&quot;Dangerous is still ours,&quot; Max said.</p>
+<p>Mandatory.</p>
+<p>Path C.</p>
+<p>Always waiting.</p>
+<p>Munch read it and went pale under her visor tan.</p>
+<p>&quot;They’re pulling you into a room with the machine.&quot;</p>
+<p>Max nodded.</p>
+<p>&quot;Then I bring the crowd,&quot; he said.</p>
+<p>&quot;You can’t fit a crowd in a router closet,&quot; Maxine said.</p>
+<p>&quot;Then I bring checksums,&quot; Max said.</p>
+<p>&quot;Checksums don’t need space,&quot; Munch said.</p>
+<p>&quot;They need witnesses.&quot;</p>
+<p>Max looked at the ring.</p>
+<p>Witnesses were everywhere.</p>
+<p>They just didn’t know they were witnesses yet.</p>
+<p>A second notice layered underneath, smaller, nastier:</p>
+<pre class="read-hud"><code>[ROUTER AUDIT PREP]
+Suggested attire: compliant
+Suggested mood: cooperative
+Suggested speech: minimal</code></pre>
+<p>Suggested.</p>
+<p>Max’s HUD suggestion overlay pulsed in agreement like a traitor friend.</p>
+<p>He used Vector Nudge Tier 1 on the overlay refresh timing, micro shift, just enough to make the suggestion pane stutter.</p>
+<pre class="read-hud"><code>[UI GLITCH]
+suggestion overlay: desync 0.12s</code></pre>
+<p>Pointless.</p>
+<p>Symbolic.</p>
+<p>Still worth it.</p>
+<p>Maxine watched him.</p>
+<p>&quot;You’re going to get flagged for UI heresy.&quot;</p>
+<p>&quot;UI heresy is still cheaper than body heresy,&quot; Max said.</p>
+<hr class="read-rule" />
+<p>Night cycle dropped lights one notch.</p>
+<p>Max sat in the corridor dead zone with his back to a vending machine that sold &quot;calm strips&quot; for scrap credit.</p>
+<p>He didn’t buy calm.</p>
+<p>He bought time by breathing.</p>
+<p>Munch found him there with two cups of something that wasn’t coffee and wasn’t water.</p>
+<p>&quot;Drink,&quot; she said.</p>
+<p>&quot;What is it,&quot; Max asked.</p>
+<p>&quot;Bitter enough to keep you awake,&quot; she said.</p>
+<p>&quot;Not bitter enough to fix anything,&quot; Maxine added from the shadows like he’d been installed as a sentry.</p>
+<p>Max drank.</p>
+<p>It tasted like copper and bad decisions.</p>
+<p>Good.</p>
+<p>Maxine handed him a folded schematic, paper, stolen, real.</p>
+<p><code>ROUTER CLOSET  /  KNOWN CAMERA GAPS</code></p>
+<p>Gaps were religion in Sector 7.</p>
+<p>Munch tapped her tablet.</p>
+<p>&quot;I can mirror checksum streams to three public caches if we get sixty seconds of handshake.&quot;</p>
+<p>&quot;Handshake requires verifier prompt,&quot; Max said.</p>
+<p>&quot;Verifier prompt requires theater,&quot; Munch said.</p>
+<p>&quot;Then we bring theater,&quot; Maxine said.</p>
+<p>Max stared at the schematic.</p>
+<p>&quot;You’re proposing a distraction.&quot;</p>
+<p>&quot;I’m proposing a claim dispute,&quot; Maxine said.</p>
+<p>&quot;Same thing,&quot; Munch said.</p>
+<p>Max almost smiled.</p>
+<p>His HUD offered one last prompt before sleep debt dragged him under:</p>
+<pre class="read-hud"><code>[INVITATION]
+Router audit attendance confirmation
+YES / YES</code></pre>
+<p>Two yes buttons.</p>
+<p>Max hit neither.</p>
+<p>He used the kiosk’s edge glitch trick, knuckle tap until a third option appeared:</p>
+<p><code>DEFER</code></p>
+<p>DEFER blinked amber.</p>
+<pre class="read-hud"><code>[DEFERRED]
+Confirmation required within 00:45:00</code></pre>
+<p>Forty-five minutes.</p>
+<p>Enough to wake Munch.</p>
+<p>Enough to plan.</p>
+<p>Enough for Delta to make another move.</p>
+<p>Max stood.</p>
+<p>The invitation stayed.</p>
+<p>Invitations in Sector 7 were never invitations.</p>
+<p>They were invoices.</p>
+<p>Munch split tasks aloud like a briefing that might save lives:</p>
+<p>&quot;Marta: terminal mirror.&quot;<br>
+&quot;Juno: reclaim trunk keys if we need lateral exit.&quot;<br>
+&quot;Kesh: chemical masks if they gas the closet.&quot;<br>
+&quot;Pela: rumor seed in labor lanes if they cut public feeds.&quot;</p>
+<p>Names.</p>
+<p>Humans.</p>
+<p>Not cards.</p>
+<p>Max felt something uncomfortable in his chest.</p>
+<p>It might have been hope.</p>
+<p>It might have been indigestion.</p>
+<p>In Sector 7, the difference was academic.</p>
+<hr class="read-rule" />
+<p>Whisper pane flickered:</p>
+<p><code>router audit is where they try to rename you</code></p>
+<p>Then:</p>
+<p><code>bring dead drops. bring noise. bring gloves.</code></p>
+<p>Max smiled without warmth.</p>
+<p>He already had gloves.</p>
+<p>He already had noise.</p>
+<p>Dead drops were scattered like seeds.</p>
+<p>Maxine asked the practical question:</p>
+<p>&quot;If they lock the closet door?&quot;</p>
+<p>Munch answered:</p>
+<p>&quot;Then we treat the door as faulty hardware.&quot;</p>
+<p>&quot;And?&quot; Maxine asked.</p>
+<p>&quot;And we file a maintenance ticket in front of witnesses,&quot; Munch said.</p>
+<p>Max nodded.</p>
+<p>&quot;Bureaucracy as violence,&quot; he said.</p>
+<p>&quot;The only kind they can’t ban,&quot; Munch said.</p>
+<p>The next chapter wouldn’t be a hearing.</p>
+<p>It would be an install job on a god’s router, live, public, and billed by the second.</p>
+<p>He walked toward Munch’s bunk lane.</p>
+<p>Not fast.</p>
+<p>Fast drew drones.</p>
+<p>Purposeful drew witnesses.</p>
+<p>Purposeful was the only currency left.</p>
+<p>A maintenance worker passed pushing a cart of sealed bags labeled:</p>
+<p><code>RECYCLING  /  COGNITIVE PACK WASTE</code></p>
+<p>Max stared longer than he should have.</p>
+<p>Maxine nudged him forward.</p>
+<p>&quot;Don’t inventory horror,&quot; Maxine said.</p>
+<p>&quot;I’m a developer,&quot; Max said.</p>
+<p>&quot;I inventory everything.&quot;</p>
+<p>Behind him, the cycle board ticked.</p>
+<p>Ahead, the router waited.</p>
+<p>Max didn’t know the ending.</p>
+<p>He knew the next prompt.</p>
+<p>He knew the checksum would be fake until witnesses made it expensive.</p>
+<p>Enough for one beat.</p>
+<hr class="read-rule" />
+<p>They didn’t take the direct path.</p>
+<p>Direct paths had cameras that loved surprise questions.</p>
+<p>They took a freight spur, then a med side lane, then doubled back through a laundry vent smell that meant dead air and privacy.</p>
+<p>Maxine counted exits aloud, not for Max.</p>
+<p>For the station mics that might be listening.</p>
+<p>&quot;Twelve,&quot; Maxine said.</p>
+<p>&quot;Thirteen,&quot; Munch corrected.</p>
+<p>&quot;Thirteen is unlucky,&quot; Max said.</p>
+<p>&quot;Thirteen is <em>documented</em>,&quot; Munch said.</p>
+<p>Max almost laughed.</p>
+<p>Documentation was the closest thing Sector 7 had to morality.</p>
+<p>At a narrow junction, a compliance poster had been defaced with a single word:</p>
+<p><code>UNINSTALL</code></p>
+<p>Max stared.</p>
+<p>Someone out there thought like a developer too.</p>
+<p>Someone dangerous.</p>
+<p>Someone maybe already gone.</p>
+<p>Munch tugged his sleeve.</p>
+<p>&quot;Don’t collect allies from graffiti.&quot;</p>
+<p>&quot;It’s data,&quot; Max said.</p>
+<p>&quot;It’s hope,&quot; Munch said.</p>
+<p>&quot;Same field,&quot; Max said.</p>
+<p>They kept moving.</p>
+<p>A drone rolled past playing a soft reminder:</p>
+<p><code>Remember: debt service keeps the sector spinning</code></p>
+<p>Maxine flipped it off.</p>
+<p>The drone chirped:</p>
+<pre class="read-hud"><code>[GESTURE EVENT]
+non-compliant
+soft marker</code></pre>
+<p>Soft marker.</p>
+<p>Maxine smiled.</p>
+<p>&quot;I can eat soft markers all cycle.&quot;</p>
+<p>&quot;Until they harden,&quot; Munch said.</p>
+<p>Everything hardened eventually.</p>
+<p>That was the real physics.</p>
+<hr class="read-rule" />
+<p>On the way back through the ring, Max passed a help kiosk that still displayed a cheerful FAQ:</p>
+<p><code>Q: What is Delta?</code><br>
+<code>A: Delta is a continuity assurance process.</code></p>
+<p>Someone had scratched beneath it:</p>
+<p><code>A2: Delta is what happens when HR gets root.</code></p>
+<p>Max stared at A2 longer than it deserved.</p>
+<p>Root was the wrong metaphor for people who didn’t grow up on filesystems.</p>
+<p>But it was the right feeling.</p>
+<p>Munch caught him staring.</p>
+<p>&quot;Don’t mythologize the router,&quot; she said.</p>
+<p>&quot;I’m inventorying it,&quot; Max said.</p>
+<p>&quot;Same thing,&quot; Maxine said.</p>
+<p>They reached the bunk lane fork.</p>
+<p>Left: sleep.<br>
+Right: work.</p>
+<p>Max looked left.</p>
+<p>Sleep was a trap that could become consent if you weren’t careful.</p>
+<p>He looked right.</p>
+<p>Work was a trap that could become identity if you weren’t careful.</p>
+<p>He chose right for five meters, then corrected back left.</p>
+<p>Balance.</p>
+<p>Even balance was a performance now.</p>
+<p>His HUD pinged a soft reminder:</p>
+<pre class="read-hud"><code>[GAMMA PROTOCOL]
+next checkpoint: router audit
+checksum attestation: required on all high-impact prompts</code></pre>
+<p>Required.</p>
+<p>Good.</p>
+<p>Required meant they had to show their work.</p>
+<p>Showing work was the only game Max had ever been good at.</p>
+<p>He touched the paper strip under his wrist guard again.</p>
+<p>The ink had smeared, but the words still worked:</p>
+<p><code>ASK FOR CHECKSUM FIRST</code></p>
+<p>The station hated checksums for the same reason bad managers hated ticket systems:</p>
+<p>because tickets made lies expensive.</p>
+<p>Max stepped into bunk corridor.</p>
+<p>The lights dimmed for night cycle like someone had toggled a theme.</p>
+<p>Dark mode for a prison still looked like a prison.</p>
+<p>Somewhere above, Civic Hall C’s audio feed still echoed in cached packets, workers rewatching highlights, clipping Halden’s face into memes, turning pain into pattern.</p>
+<p>Pattern was how you survived long postings.</p>
+<p>Max lay down without removing his boots.</p>
+<p>Maxine took first watch without being asked.</p>
+<p>Munch sat against the door with her tablet glowing.</p>
+<p>Max closed his eyes.</p>
+<p>Sleep didn’t come clean.</p>
+<p>It came in fragments:</p>
+<p>routers,<br>
+checksums,<br>
+mirrors,<br>
+debt,</p>
+<p>and one stubborn fact he couldn’t unsee:</p>
+<p>the station had admitted a router name in public.</p>
+<p>Names could be grepped.</p>
+<p>Grepped could be burned.</p>
+<p>Burned could be rebuilt.</p>
+<p>That was the whole war in three verbs.</p>
+<p>His last conscious thought wasn’t heroic.</p>
+<p>It was operational:</p>
+<p><em>router audit tomorrow, bring noise.</em></p>
+<p>Then the dark took him, not mercy, just buffering.</p>
+<hr class="read-rule" />
+<p>He woke to a soft chime he hated more than alarms.</p>
+<p>Not because it was loud.</p>
+<p>Because it sounded friendly.</p>
+<pre class="read-hud"><code>[REMINDER]
+Router audit window opens in 00:09:12
+Attendance confirmation still deferred
+Failure to confirm may trigger Path C pre-review</code></pre>
+<p>Nine minutes.</p>
+<p>Twelve seconds.</p>
+<p>Enough time to panic.</p>
+<p>Enough time to plan.</p>
+<p>Enough time to realize the station had learned to weaponize snooze buttons against people who thought like engineers.</p>
+<p>Max rolled out of bunk.</p>
+<p>Boots on.</p>
+<p>Strip under wrist guard.</p>
+<p>Crew already up, Munch packing tablets, Maxine tightening harness, both of them moving like the day had started hours ago because it had.</p>
+<p>&quot;Confirmation?&quot; Munch asked.</p>
+<p>&quot;DEFER until we’re in the hall,&quot; Max said.</p>
+<p>&quot;DEFER buys threat,&quot; Maxine said.</p>
+<p>&quot;DEFER buys witnesses,&quot; Max said.</p>
+<p>Munch nodded once.</p>
+<p>&quot;Then we walk fast.&quot;</p>
+<p>They stepped into corridor.</p>
+<p>The cycle board overhead had already changed theme:</p>
+<p><code>ROUTER AUDIT  /  TODAY</code><br>
+<code>NO LIVESTREAM (OFFICIAL)</code></p>
+<p>No livestream official.</p>
+<p>Which meant unofficial livestream would be everywhere.</p>
+<p>Max almost smiled.</p>
+<p>The station couldn’t stop mirrors.</p>
+<p>Mirrors were people.</p>
+<p>His HUD stacked one more line, small, nasty, honest:</p>
+<pre class="read-hud"><code>[OUTSTANDING DEBT]
+$1,000,000
+service fees: active
+disputed hold: partial
+note: audits do not pause interest</code></pre>
+<p>Audits did not pause interest.</p>
+<p>The machine always got paid.</p>
+<p>Max rolled his shoulders until something clicked that probably shouldn’t have clicked.</p>
+<p>Then he moved anyway.</p>
+<p>Because the router audit wasn’t about money.</p>
+<p>It was about names.</p>
+<p>And names were the one file the station couldn’t afford to lose, unless witnesses made losing cheaper than lying.</p>
+<p>Maxine checked the corridor once more, then looked at Max.</p>
+<p>&quot;No speeches in the closet,&quot; Maxine said.</p>
+<p>&quot;No promises,&quot; Munch added.</p>
+<p>&quot;No private pockets,&quot; Max finished.</p>
+<p>Three rules.</p>
+<p>Same as always.</p>
+<p>Different room.</p>
+<p>Same war.</p>
+<p>Outside, the station horn marked another handoff, cycles pretending to be days, shifts pretending to be meaning.</p>
+<p>Max listened to it and felt nothing like nostalgia.</p>
+<p>Nostalgia was for worlds where time wasn’t a billing interval.</p>
+<p>He checked his card pane one last time before the walk.</p>
+<p>SCAN. SHIELD. REPAIR. EXTRACT.</p>
+<p>Vector Nudge Tier 1.</p>
+<p>Same hand.</p>
+<p>New room.</p>
+<p>The HUD didn’t promise victory.</p>
+<p>It promised another roll.</p>
+<p>Max took the promise like he took everything else:</p>
+<p>as a ticket, not a truth.</p>
+<p>Ahead, the router closet waited, small name, big mouth, bad architecture.</p>
+<p>He was going to treat it like any other production incident:</p>
+<p>reproduce, document, make the cost visible.</p>
+<p>If the station wanted a silent patch, it would have to pay in witnesses first.</p>
+<p>Noise was expensive.</p>
+<p>Silence was fatal.</p>
+<p>Max stepped toward the lift that would take him to the router audit anyway, no hero, just forward.</p>
+<p>And for now, that was enough.</p>
+    </article>
+    <nav class="read-nav" aria-label="Chapter navigation">
+      <a class="read-nav__link read-nav__link--prev" href="ch11.html"><span class="read-nav__arrow">&larr;</span> <span class="read-nav__chapno">Ch 11</span> <span class="read-nav__title">Pre-Calibration</span></a>
+      <a class="read-nav__link read-nav__link--next" href="ch13.html"><span class="read-nav__chapno">Ch 13</span> <span class="read-nav__title">Router Closet</span> <span class="read-nav__arrow">&rarr;</span></a>
+    </nav>
+  </main>
+</body>
+</html>

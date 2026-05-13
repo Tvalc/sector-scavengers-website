@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<meta name="description" content="The first sign the day was wrong came as a polite notification.">
+<title>Ch 5: Trace Debt | Sector Scavengers, Book 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0c0f14;
+    --ink: #e6e8ee;
+    --muted: #98a0ad;
+    --accent: #3b8edf;
+    --rule: #1c2230;
+    --hud-bg: #11151d;
+    --hud-ink: #c7e0ff;
+    --hud-border: #1f2a3a;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--bg); color: var(--ink); }
+  body {
+    margin: 0;
+    font-family: "Lora", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    -webkit-text-size-adjust: 100%;
+  }
+  .read-shell {
+    max-width: 38rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 5rem;
+  }
+  .read-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .read-top a { color: var(--accent); text-decoration: none; }
+  .read-top a:hover { text-decoration: underline; }
+  .read-eyebrow {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 0.5rem;
+  }
+  .read-title {
+    font-family: "Lora", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 1.3rem + 1.6vw, 2.2rem);
+    line-height: 1.15;
+    margin: 0 0 1.5rem;
+    letter-spacing: -0.01em;
+  }
+  .read-prose p {
+    margin: 0 0 1.15em;
+  }
+  .read-prose strong { color: #fff; }
+  .read-prose em { color: #f0c8ff; font-style: italic; }
+  .read-prose code,
+  .read-prose .read-hud {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.86em;
+    color: var(--hud-ink);
+  }
+  .read-prose code {
+    background: var(--hud-bg);
+    border: 1px solid var(--hud-border);
+    border-radius: 4px;
+    padding: 0.05em 0.35em;
+  }
+  .read-prose pre.read-hud {
+    background: var(--hud-bg);
+    border: 1px solid var(--hud-border);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 0.85rem 1rem;
+    margin: 1.25rem 0;
+    overflow-x: auto;
+    line-height: 1.5;
+    font-size: 0.85em;
+  }
+  .read-prose pre.read-hud code {
+    background: transparent;
+    border: 0;
+    padding: 0;
+  }
+  .read-prose hr.read-rule {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 2.25rem auto;
+    width: 4rem;
+  }
+  .read-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.78rem;
+  }
+  .read-nav__link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--ink);
+    background: rgba(255,255,255,0.02);
+  }
+  .read-nav__link:hover { border-color: var(--accent); }
+  .read-nav__link--next { text-align: right; align-items: flex-end; }
+  .read-nav__link--disabled { color: var(--muted); opacity: 0.55; }
+  .read-nav__arrow { color: var(--accent); font-size: 0.95rem; }
+  .read-nav__chapno {
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .read-nav__title {
+    font-family: "Lora", Georgia, serif;
+    font-size: 0.95rem;
+    line-height: 1.25;
+    color: var(--ink);
+  }
+  @media (max-width: 480px) {
+    body { font-size: 17px; }
+    .read-shell { padding: 1rem 1rem 4rem; }
+    .read-nav { grid-template-columns: 1fr; }
+    .read-nav__link--next { text-align: left; align-items: flex-start; }
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #fbf9f4;
+      --ink: #1d2330;
+      --muted: #5a6473;
+      --accent: #1f6dc0;
+      --rule: #e3ddd0;
+      --hud-bg: #f3eee2;
+      --hud-ink: #1b2a45;
+      --hud-border: #d9d0b9;
+    }
+    .read-prose strong { color: #000; }
+    .read-prose em { color: #6a2390; }
+  }
+</style>
+</head>
+<body>
+  <main class="read-shell">
+    <nav class="read-top" aria-label="Reader navigation">
+      <a href="index.html">&larr; Chapters</a>
+      <span>Book 1, Ch 5 / 25</span>
+    </nav>
+    <p class="read-eyebrow">Debt Protocol &middot; Book 1 &middot; Chapter 5</p>
+    <h1 class="read-title">Trace Debt</h1>
+    <article class="read-prose">
+<p>The first sign the day was wrong came as a polite notification.</p>
+<pre class="read-hud"><code>[LOCKER ACCESS ALERT]
+Med Corridor B / Locker cluster
+Routine inventory pass scheduled: 00:42:11</code></pre>
+<p>Max stared at the pane while standing in line for synthetic coffee that tasted like boiled wires.</p>
+<p>Munch read it over his shoulder and said exactly one word.</p>
+<p>&quot;No.&quot;</p>
+<p>Maxine looked up from his wrist display.</p>
+<p>&quot;How routine is routine?&quot;</p>
+<p>Munch's jaw tightened.</p>
+<p>&quot;Routine enough to include random confiscation.&quot;</p>
+<p>Max dismissed the pane.</p>
+<p>It returned immediately with the same timer.</p>
+<p>00:42:03.</p>
+<p>He dismissed it again.</p>
+<p>00:41:58.</p>
+<p>&quot;It's pinning,&quot; he said.</p>
+<p>Maxine took a slow breath.</p>
+<p>&quot;Then we move the cache.&quot;</p>
+<p>Munch shook her head.</p>
+<p>&quot;Move now and we walk straight into pre-inventory patrol pattern.&quot;</p>
+<p>&quot;Leave it and we trust routine.&quot;</p>
+<p>&quot;We don't trust routine.&quot;</p>
+<p>Max looked from one to the other, coffee packet going warm in his hand.</p>
+<p>The station around them did what stations do:</p>
+<p>Workers pushed carts.<br>
+Drones swept lanes.<br>
+People pretended not to overhear fear.</p>
+<p>The overhead cycle board shifted lines in flat white text:</p>
+<p>MID-CYCLE DEBT RECONCILIATION<br>
+QUALITY ASSURANCE SWEEPS</p>
+<p>&quot;That's inventory language,&quot; Munch said.</p>
+<p>Maxine answered.</p>
+<p>&quot;It's seizure language.&quot;</p>
+<p>Max didn't drink the coffee.</p>
+<p>He poured it into a drain and watched brown foam spin away.</p>
+<p>&quot;How long to route to B corridor without touching monitored lanes?&quot;</p>
+<p>Munch pulled up map layers.</p>
+<p>&quot;Fastest clean path is twelve minutes if we split.&quot;</p>
+<p>Maxine looked at Max.</p>
+<p>&quot;You're still tracked active. Your path pings no matter what.&quot;</p>
+<p>&quot;Then we use that.&quot;</p>
+<p>Munch turned to him.</p>
+<p>&quot;Use how?&quot;</p>
+<p>&quot;Maxine baits the tracker down main with me visible. You slip service and pull cache.&quot;</p>
+<p>Maxine frowned.</p>
+<p>&quot;Reverse that. I'm tracked heavier.&quot;</p>
+<p>&quot;Exactly. You draw more eyes.&quot;</p>
+<p>He was right and everyone hated it.</p>
+<p>Munch slid her gaze between them, calculating risk like a person balancing glass on moving steel.</p>
+<p>&quot;Timer's running.&quot;</p>
+<p>00:40:29.</p>
+<p>&quot;Fine,&quot; she said. &quot;Maxine and Max go loud lane. I go spine C and hit B-17 from the back.&quot;</p>
+<p>Max nodded.</p>
+<p>The plan sat wrong in his chest, not because it was stupid, but because it repeated an old pattern: someone he cared about walking into danger while he stayed where the cameras could see him behave. Visibility was its own kind of cowardice here. He swallowed the objection. Objections without better tactics were just noise.</p>
+<p>&quot;What if locker is already tagged?&quot;</p>
+<p>Munch's expression didn't move.</p>
+<p>&quot;Then I leave with nothing and we pretend this was a walk.&quot;</p>
+<p>Maxine clipped his gauntlets in place.</p>
+<p>&quot;And if you don't check in?&quot;</p>
+<p>Munch holstered her torch.</p>
+<p>&quot;You burn the route map and start a riot.&quot;</p>
+<p>Maxine grunted.</p>
+<p>&quot;Reasonable.&quot;</p>
+<hr class="read-rule" />
+<p>Main lane was theater.</p>
+<p>Max and Maxine walked shoulder to shoulder through the brightest part of Dock Ring C while Max's tracked token icon blinked on a three-second rhythm.</p>
+<p>Blink.<br>
+Pause.<br>
+Blink.</p>
+<p>Every blink felt like a finger in his back.</p>
+<p>V.A.L.U. chimed at cheerful volume.</p>
+<p>&quot;Asset #864, thank you for maintaining visible route compliance!&quot;</p>
+<p>Max spoke through his teeth.</p>
+<p>&quot;You're welcome.&quot;</p>
+<p>&quot;Sarcasm detected. Logging engagement.&quot;</p>
+<p>Maxine leaned close enough for private comms.</p>
+<p>&quot;Keep talking to it.&quot;</p>
+<p>&quot;Why?&quot;</p>
+<p>&quot;Makes you look obedient.&quot;</p>
+<p>&quot;I'm not obedient.&quot;</p>
+<p>&quot;I know. We just need them to think you are for ten minutes.&quot;</p>
+<p>They passed disbursement lane A.</p>
+<p>A woman in a medic stripe suit was arguing with a kiosk while two drones recorded from opposite angles.</p>
+<p>&quot;I paid! I paid the minimum!&quot;</p>
+<p>The kiosk responded:</p>
+<pre class="read-hud"><code>[PAYMENT ACKNOWLEDGED]
+Additional stabilization surcharge due.</code></pre>
+<p>The woman slammed her fist into the glass.</p>
+<p>The drones moved in.</p>
+<p>Max kept his eyes forward for three strides. On the fourth he looked back, just long enough to fix her face in memory, the way you'd memorize a witness you might need later. Maxine didn't scold him for it. That was almost worse. It meant even small mercies had been priced into the plan.</p>
+<p>He kept walking because stopping would be a statement.</p>
+<p>He hated that he knew that now.</p>
+<p>Maxine steered him around a cargo tug and into the open plaza beneath the claim board.</p>
+<p>Sixteen slots floated.<br>
+Ten occupied.<br>
+Two flashing red.</p>
+<p>An overhead announcement cut in:</p>
+<p>&quot;Attention assets: quality assurance sweep in Med Corridor B in thirty minutes. Please report personal storage claims proactively to reduce friction.&quot;</p>
+<p>Max did not look at Maxine.</p>
+<p>Maxine did not look at Max.</p>
+<p>They both heard it.</p>
+<p>&quot;Can QA announce exact corridor like that?&quot; Max asked.</p>
+<p>&quot;Only when they want panic traffic to reveal outliers.&quot;</p>
+<p>&quot;Great.&quot;</p>
+<p>&quot;Always.&quot;</p>
+<p>They looped once around the claim board, then doubled back past Salvage Yard to burn clock and produce clean telemetry.</p>
+<p>Max's tracked token changed color from blue to pale green.</p>
+<pre class="read-hud"><code>[TRACKED ACTIVE]
+Route regularity: improving</code></pre>
+<p>&quot;I am going to punch the person who wrote this UI,&quot; Max said.</p>
+<p>Maxine kept his voice flat.</p>
+<p>&quot;Take a number.&quot;</p>
+<hr class="read-rule" />
+<p>Munch moved through service spine C like she had built it herself.</p>
+<p>He only heard her in short private bursts in his left audio channel.</p>
+<p>&quot;Crossed junction.&quot;<br>
+&quot;One drone overhead, no pause.&quot;<br>
+&quot;At ladder drop.&quot;</p>
+<p>Then silence for thirty seconds.</p>
+<p>Max's pulse climbed.</p>
+<p>&quot;Munch?&quot;</p>
+<p>Static.</p>
+<p>Maxine didn't break stride.</p>
+<p>&quot;She mutes during fine work.&quot;</p>
+<p>Twenty seconds later:</p>
+<p>&quot;At locker row. Two workers nearby. Waiting cycle.&quot;</p>
+<p>Max exhaled.</p>
+<p>Maxine said, &quot;Good.&quot;</p>
+<p>Munch:</p>
+<p>&quot;Locker cluster scanner is running full pass already. Early start.&quot;</p>
+<p>Maxine stopped dead.</p>
+<p>&quot;How early.&quot;</p>
+<p>&quot;Now.&quot;</p>
+<p>Max looked at the timer pane still pinned in his corner.</p>
+<p>00:31:02.</p>
+<p>&quot;They moved it up.&quot;</p>
+<p>Munch's voice dropped.</p>
+<p>&quot;Locker B-17 is flagged yellow.&quot;</p>
+<p>Max's mouth went dry.</p>
+<p>&quot;Can you pull it?&quot;</p>
+<p>&quot;Trying.&quot;</p>
+<p>He could hear faint tool sounds through the channel.</p>
+<p>Click.<br>
+Metal tap.<br>
+Breath.</p>
+<p>Then:</p>
+<p>&quot;No.&quot;</p>
+<p>Maxine's shoulders tightened.</p>
+<p>&quot;No what.&quot;</p>
+<p>&quot;Panel's been replaced. New anti-tamper mesh inside. If I force it, local alarm.&quot;</p>
+<p>Max's hands curled into fists.</p>
+<p>&quot;Then we lost it.&quot;</p>
+<p>&quot;Not yet.&quot;</p>
+<p>Munch sounded like she was moving.</p>
+<p>&quot;There's a maintenance vent behind the locker wall. If I can reach from rear conduit, I might pull the shim blind.&quot;</p>
+<p>Maxine nodded once, even though she couldn't see.</p>
+<p>&quot;Do it.&quot;</p>
+<p>&quot;Thirty seconds.&quot;</p>
+<p>Max counted heartbeats.</p>
+<p>At twelve, V.A.L.U. interrupted.</p>
+<p>&quot;Asset #864, your route regularity has improved by 14%! Keep up the responsible behavior!&quot;</p>
+<p>Max wanted to bite through his own tongue.</p>
+<p>Maxine hissed, &quot;Play nice.&quot;</p>
+<p>&quot;Thanks, V.A.L.U.,&quot; Max said.</p>
+<p>&quot;You're welcome!&quot;</p>
+<p>At twenty-seven heartbeats, Munch came back on channel, breathing hard.</p>
+<p>&quot;Got it.&quot;</p>
+<p>Max stopped walking.</p>
+<p>&quot;Say again.&quot;</p>
+<p>&quot;Got the shim. Almost dropped it into coolant return. It smells like dead batteries and shame, but it's in my glove.&quot;</p>
+<p>Maxine actually smiled for half a second.</p>
+<p>&quot;Route out?&quot;</p>
+<p>&quot;Complicated.&quot;</p>
+<p>&quot;How complicated.&quot;</p>
+<p>&quot;Two QA officers entered corridor. They're scanning random lockers manually.&quot;</p>
+<p>Max's HUD flashed.</p>
+<pre class="read-hud"><code>[PROXIMITY ALERT]
+Linked teammate anomaly risk: elevated</code></pre>
+<p>&quot;It can see your risk now,&quot; Max said.</p>
+<p>&quot;It can always see risk,&quot; Maxine said. &quot;Now it monetizes it in real time.&quot;</p>
+<p>Munch cut in.</p>
+<p>&quot;Need a distraction in three minutes or I get trapped between scanner lanes.&quot;</p>
+<p>Maxine looked toward the claim board and then up at a hanging cable crane with overloaded cargo.</p>
+<p>&quot;I can give you noise.&quot;</p>
+<p>&quot;Not fire,&quot; Munch said immediately.</p>
+<p>&quot;No fire.&quot;</p>
+<p>&quot;No injuries.&quot;</p>
+<p>&quot;I said no fire.&quot;</p>
+<p>Maxine cracked his neck.</p>
+<p>&quot;Max, with me.&quot;</p>
+<hr class="read-rule" />
+<p>Maxine's plan was simple and therefore terrible.</p>
+<p>At the edge of claim board lane, he pointed at a red-flashing derelict slot and said, loudly:</p>
+<p>&quot;That fighter is mis-tagged. It's stealing my claim line.&quot;</p>
+<p>A nearby asset turned.</p>
+<p>&quot;No it's not.&quot;</p>
+<p>Maxine stepped forward.</p>
+<p>&quot;Read the registry hash.&quot;</p>
+<p>&quot;I can't from here.&quot;</p>
+<p>&quot;Then stop talking.&quot;</p>
+<p>Within fifteen seconds three more people had stopped to watch.</p>
+<p>Within twenty-five seconds two drones had rolled in for dispute recording.</p>
+<p>Within forty seconds V.A.L.U. appeared on public speakers:</p>
+<p>&quot;Attention assets! Please resolve claim disagreements using approved civility pathways.&quot;</p>
+<p>Maxine leaned in harder, voice rising exactly to the level that looked authentic and drew supervisors.</p>
+<p>&quot;Approved civility can kiss vacuum. That tag is wrong.&quot;</p>
+<p>The crowd swelled.</p>
+<p>Drones multiplied.</p>
+<p>Max stood one step behind Maxine and played confused muscle.</p>
+<p>His tracked token stayed green.</p>
+<pre class="read-hud"><code>[TRACKED ACTIVE]
+Conflict proximity detected.
+No direct aggression logged.</code></pre>
+<p>Good.</p>
+<p>While the lane watched Maxine argue with a hologram, Munch's whisper came through:</p>
+<p>&quot;Passing scanner lane two.&quot;</p>
+<p>Five seconds later:</p>
+<p>&quot;Past QA officers.&quot;</p>
+<p>Ten seconds:</p>
+<p>&quot;Out of B corridor. Moving to yard route.&quot;</p>
+<p>Maxine kept yelling for another full minute, then let a supervisor drone &quot;win&quot; by offering to file a formal complaint.</p>
+<p>He accepted.</p>
+<p>&quot;Fine. File it.&quot;</p>
+<p>The crowd dispersed instantly, disappointed and relieved.</p>
+<p>Maxine stepped back beside Max and lowered his voice.</p>
+<p>&quot;Where is she.&quot;</p>
+<p>&quot;Moving yard route.&quot;</p>
+<p>&quot;Good.&quot;</p>
+<p>A new pane appeared in Max's corner.</p>
+<pre class="read-hud"><code>[CONDUCT NOTICE]
+You remained non-violent during a conflict event.
+Behavior credit: +1</code></pre>
+<p>Max laughed, genuinely this time.</p>
+<p>&quot;Behavior credit. Amazing.&quot;</p>
+<p>Maxine rolled his eyes.</p>
+<p>&quot;Don't spend it all in one place.&quot;</p>
+<hr class="read-rule" />
+<p>They regrouped behind recycler stack two, out of primary sightlines but still in noise.</p>
+<p>Munch arrived two minutes late, breathing hard, visor streaked with coolant mist.</p>
+<p>She held up her glove.</p>
+<p>Inside, nested in folded mesh cloth, was the storage shim.</p>
+<p>Max almost sagged.</p>
+<p>&quot;You did it.&quot;</p>
+<p>&quot;Don't praise me until we verify files.&quot;</p>
+<p>Maxine looked at the corridor.</p>
+<p>&quot;Not here.&quot;</p>
+<p>&quot;Safe room?&quot;</p>
+<p>&quot;Too obvious.&quot;</p>
+<p>Munch shook her head.</p>
+<p>&quot;We use Marta.&quot;</p>
+<p>Max blinked.</p>
+<p>&quot;Marta? Yard ops Marta?&quot;</p>
+<p>&quot;Marta has a dead printer terminal with no net uplink and old physical ports.&quot;</p>
+<p>&quot;Why would she help.&quot;</p>
+<p>Munch gave him a look.</p>
+<p>&quot;Because she hates mixed payout math almost as much as she hates management.&quot;</p>
+<p>&quot;That's not a reason.&quot;</p>
+<p>&quot;In this sector it is.&quot;</p>
+<hr class="read-rule" />
+<p>Marta did not greet them.</p>
+<p>She was elbow-deep in a sorter tray full of bent tech components and didn't look up when they approached.</p>
+<p>&quot;Not buying. Not selling. Come back on cycle quarter.&quot;</p>
+<p>Munch put both palms on the counter.</p>
+<p>&quot;Need your printer terminal.&quot;</p>
+<p>Marta finally glanced up.</p>
+<p>&quot;No.&quot;</p>
+<p>Maxine leaned one arm on the side rail.</p>
+<p>&quot;We'll pay.&quot;</p>
+<p>&quot;No.&quot;</p>
+<p>Max slid his tracked token icon into low visibility mode with a tap and tried his luck.</p>
+<p>&quot;Please.&quot;</p>
+<p>Marta stared at him for a long second, then snorted.</p>
+<p>&quot;Please costs extra.&quot;</p>
+<p>Munch pulled a sealed tube from her belt pouch and set it on the counter.</p>
+<p>Marta's eyes flicked to it.</p>
+<p>&quot;What is that.&quot;</p>
+<p>&quot;Pre-collapse thermal paste. Real silver suspension.&quot;</p>
+<p>Marta went still.</p>
+<p>&quot;You're lying.&quot;</p>
+<p>Munch unscrewed the cap enough for the smell to hit.</p>
+<p>Marta's expression changed from skepticism to hunger.</p>
+<p>&quot;...Fine,&quot; she said. &quot;Three minutes. If drones ask, you're here for valuation dispute.&quot;</p>
+<p>She jerked her chin toward a side bay and keyed a hidden panel.</p>
+<p>A narrow room opened behind stacked crates.</p>
+<p>Inside sat an old print-and-log station with a cracked keyboard, dead fan, and a side slot that looked exactly like the shim's form factor.</p>
+<p>&quot;Three minutes,&quot; Marta repeated. &quot;Then I never saw you.&quot;</p>
+<hr class="read-rule" />
+<p>Munch inserted the shim.</p>
+<p>The terminal did not boot.</p>
+<p>Maxine swore.</p>
+<p>Munch hit the chassis twice with the flat of her hand.</p>
+<p>The screen flickered.<br>
+Coughed.<br>
+Came alive in grayscale.</p>
+<pre class="read-hud"><code>LOCAL PRINT NODE
+NO NETWORK
+INSERT MEDIA</code></pre>
+<p>Max pointed.</p>
+<p>&quot;Media's in.&quot;</p>
+<p>The node hesitated, then mounted the files.</p>
+<pre class="read-hud"><code>3 FILES FOUND
+1) mirror_index_cap1.img
+2) mirror_index_cap2.img
+3) process_tag_cap3.img</code></pre>
+<p>Munch selected print all.</p>
+<p>The printer head screamed to life like an animal being dragged backward through time.</p>
+<p>Page one spat out, grainy but legible:</p>
+<p>MAX_102 ... TERMINATED<br>
+MAX_233 ... DEFAULT RECOVERY<br>
+MAX_377 ... COGNITIVE PACK APPLIED<br>
+MAX_612 ... MISSING / UNRESOLVED<br>
+MAX_864 ... ACTIVE</p>
+<p>Page two:</p>
+<p>timestamp clusters.<br>
+branch IDs.<br>
+failure tags.</p>
+<p>Page three:</p>
+<p><code>DELTA_MIRROR_ROUTER</code></p>
+<p>Under it, a line Max hadn't seen in the tiny capture:</p>
+<p><code>policy: retention by debt cohort</code></p>
+<p>Max stared.</p>
+<p>&quot;Debt cohort.&quot;</p>
+<p>Maxine said, &quot;Means they bucket us by balance and run outcomes.&quot;</p>
+<p>Munch corrected him.</p>
+<p>&quot;Means they bucket us by <em>value density</em>.&quot;</p>
+<p>&quot;What's value density.&quot;</p>
+<p>Munch didn't look away from the page.</p>
+<p>&quot;How much suffering per credit returned.&quot;</p>
+<p>Nobody spoke for two full seconds.</p>
+<p>Then the side door banged open and Marta hissed:</p>
+<p>&quot;Out. Now.&quot;</p>
+<p>A drone ping sounded in the yard outside.</p>
+<p>Marta shoved a brown envelope at Munch.</p>
+<p>&quot;Put paper in this. If that tracker sees open print stock on you, you get searched.&quot;</p>
+<p>Munch stuffed the three pages in and zipped it inside her suit.</p>
+<p>Max yanked the shim.</p>
+<p>Maxine unplugged power to the printer station.</p>
+<p>The screen died.</p>
+<p>They stepped out into the yard just as a patrol drone rolled past the bay entrance.</p>
+<p>The drone paused.</p>
+<p>Lens swept.</p>
+<p>Marta was already shouting at Max before the lens settled.</p>
+<p>&quot;I told you valuation mismatch isn't my problem! Take your complaint to lane F!&quot;</p>
+<p>Max caught on.</p>
+<p>&quot;Lane F said lane C!&quot;</p>
+<p>&quot;Then lane C can kiss my actuator!&quot;</p>
+<p>The drone logged:</p>
+<pre class="read-hud"><code>[OBSERVATION]
+Customer service dispute.
+No escalation.</code></pre>
+<p>It rolled on.</p>
+<p>Marta waited until it was gone, then stabbed a finger at the exit.</p>
+<p>&quot;Get out.&quot;</p>
+<p>Maxine set the thermal paste on her counter.</p>
+<p>&quot;Pleasure doing business.&quot;</p>
+<p>Marta didn't smile.</p>
+<p>&quot;Never again.&quot;</p>
+<p>Munch nodded once.</p>
+<p>&quot;Until next time.&quot;</p>
+<p>Marta muttered something rude and went back to her sorter tray.</p>
+<hr class="read-rule" />
+<p>They didn't stop moving until they reached the lower med corridor dead zone where wall scanners were known to drop packets under compressor load.</p>
+<p>Maxine posted at the corner.</p>
+<p>Munch pulled the envelope out and spread the pages on a maintenance crate.</p>
+<p>Max looked at them under bare utility light.</p>
+<p>The paper made it real in a way panes never did.</p>
+<p>Ink.<br>
+Fibers.<br>
+Edges.</p>
+<p>No easy delete.</p>
+<p>No automatic corruption countdown.</p>
+<p>He touched the first line.</p>
+<p>MAX_102.</p>
+<p>&quot;How many are there total?&quot;</p>
+<p>Munch traced the edge of page two.</p>
+<p>&quot;At least six in this snapshot. Maybe more off-page.&quot;</p>
+<p>Maxine said quietly:</p>
+<p>&quot;Enough.&quot;</p>
+<p>Max looked at process tag line again.</p>
+<p><code>policy line: retention by debt cohort</code></p>
+<p>&quot;Retention for what?&quot;</p>
+<p>Maxine answered first.</p>
+<p>&quot;For yield.&quot;</p>
+<p>Munch answered second.</p>
+<p>&quot;For control.&quot;</p>
+<p>Max answered last.</p>
+<p>&quot;For repetition.&quot;</p>
+<p>Groundhog day.</p>
+<p>Loop after loop.<br>
+Not accident.<br>
+Policy.</p>
+<p>His HUD flashed with a new mid-cycle statement pane:</p>
+<pre class="read-hud"><code>[CYCLE STATUS]
+Debt cohort assignment: updated</code></pre>
+<p>Munch saw it at the same moment.</p>
+<p>&quot;They moved your cohort.&quot;</p>
+<p>&quot;Based on what?&quot;</p>
+<p>Maxine looked at the pages.</p>
+<p>&quot;Based on this.&quot;</p>
+<p>&quot;They know we printed?&quot;</p>
+<p>&quot;Maybe.&quot;</p>
+<p>Munch folded the pages back into the envelope and sealed it.</p>
+<p>&quot;Then we stop carrying all three together.&quot;</p>
+<p>She split them:</p>
+<p>Page one to Max.<br>
+Page two to Maxine.<br>
+Page three to herself.</p>
+<p>&quot;If one of us gets taken, two pages survive.&quot;</p>
+<p>Maxine nodded.</p>
+<p>&quot;Good.&quot;</p>
+<p>Max slid his page into chest seam.</p>
+<p>It scratched against skin through fabric.</p>
+<p>Good.</p>
+<p>He wanted to feel it there.</p>
+<p>Wanted proof to hurt.</p>
+<hr class="read-rule" />
+<p>The next problem arrived before they made it back upstairs.</p>
+<p>A system broadcast on all local channels, voice neutral:</p>
+<p>&quot;Attention assets in Sector 7: unscheduled audit refinement begins now. All tracked-active tokens report for calibration.&quot;</p>
+<p>Max stopped walking.</p>
+<p>The tracked token icon in his HUD turned amber.</p>
+<pre class="read-hud"><code>[TRACKED ACTIVE]
+Mandatory calibration in: 00:14:00</code></pre>
+<p>Maxine cursed.</p>
+<p>&quot;Too fast.&quot;</p>
+<p>Munch's eyes were already scanning route options.</p>
+<p>&quot;If he misses mandatory, it escalates to containment.&quot;</p>
+<p>Max looked at both of them.</p>
+<p>&quot;Then I go.&quot;</p>
+<p>&quot;Not with page one on you,&quot; Munch said.</p>
+<p>Maxine held out his hand.</p>
+<p>&quot;Trade.&quot;</p>
+<p>Max hesitated a beat, then swapped his page for Maxine's page two.</p>
+<p>Less identifying.<br>
+Still evidence.</p>
+<p>Munch tucked page three deeper and zipped her suit higher.</p>
+<p>&quot;Calibration room means scans, posture checks, cognitive prompts. You stay dumb and compliant.&quot;</p>
+<p>&quot;Again?&quot;</p>
+<p>&quot;Again.&quot;</p>
+<p>Maxine clapped Max once on the shoulder.</p>
+<p>&quot;And if they ask why your route moved weirdly this morning?&quot;</p>
+<p>Max answered automatically.</p>
+<p>&quot;Service corridor. Looking for a place to throw up.&quot;</p>
+<p>Maxine almost smiled.</p>
+<p>&quot;Now you're learning.&quot;</p>
+<hr class="read-rule" />
+<p>Calibration Bay 2 was not the same as review bays.</p>
+<p>No table.<br>
+No chairs.</p>
+<p>Just a standing ring with floor markers, three scanner columns, and one wall screen displaying a rotating silhouette of a human body with problem zones highlighted in yellow.</p>
+<p>A technician in gray compliance coveralls waved Max onto the center marker without making eye contact.</p>
+<p>&quot;Arms out.&quot;</p>
+<p>Max held his arms out.</p>
+<p>White light scanned top to bottom.</p>
+<p>The tech watched numbers on a wrist slate and chewed the inside of his cheek.</p>
+<p>&quot;Tilt head left.&quot;</p>
+<p>Max tilted.</p>
+<p>&quot;Right.&quot;</p>
+<p>Tilt.</p>
+<p>&quot;Hold gaze on blue point.&quot;</p>
+<p>A blue dot appeared on the wall screen.</p>
+<p>Max stared.</p>
+<p>Questions flashed in rapid sequence, too fast to process fully:</p>
+<pre class="read-hud"><code>Do you hear unlogged voices? Y/N
+Do you perceive duplicate prompts? Y/N
+Do you recall non-sanctioned memories during runs? Y/N
+Would you accept stabilization for improved performance? Y/N</code></pre>
+<p>Max answered:</p>
+<p>N.<br>
+N.<br>
+N.<br>
+N.</p>
+<p>The wall screen changed.</p>
+<pre class="read-hud"><code>[CALIBRATION RESULT]
+Token remains active.
+Anomaly pressure: persistent.
+Recommendation: monitored assignment.</code></pre>
+<p>The technician finally looked at him.</p>
+<p>&quot;You keep declining packs, they'll escalate recommendation.&quot;</p>
+<p>Max kept his voice flat.</p>
+<p>&quot;Noted.&quot;</p>
+<p>&quot;You should just take it.&quot;</p>
+<p>&quot;You take one?&quot;</p>
+<p>The technician looked away.</p>
+<p>&quot;Not my bracket.&quot;</p>
+<p>He tapped completion.</p>
+<p>&quot;Go.&quot;</p>
+<p>Max stepped out of the ring feeling like he'd been measured for a coffin.</p>
+<hr class="read-rule" />
+<p>Maxine and Munch were waiting where they said they'd be, near a dead vending unit that still advertised:</p>
+<p>ZERO CALORIES / MAX COMPLIANCE</p>
+<p>Munch's first question:</p>
+<p>&quot;Did they touch your head?&quot;</p>
+<p>&quot;Only with questions.&quot;</p>
+<p>&quot;Any new penalties?&quot;</p>
+<p>Max checked.</p>
+<pre class="read-hud"><code>[TOKEN STATUS]
+Monitored assignment: ENABLED</code></pre>
+<p>&quot;Monitored assignment.&quot;</p>
+<p>Maxine spat to the side.</p>
+<p>&quot;Means they can force target picks.&quot;</p>
+<p>Max blinked.</p>
+<p>&quot;Force as in suggest?&quot;</p>
+<p>Maxine laughed once.</p>
+<p>&quot;Force as in legal fiction.&quot;</p>
+<p>Munch looked up at cycle board timing and swore.</p>
+<p>&quot;Assignment queue opens in eight minutes.&quot;</p>
+<p>&quot;Can we skip run?&quot;</p>
+<p>&quot;Not with active token.&quot;</p>
+<p>Max rubbed his eyes.</p>
+<p>&quot;Great.&quot;</p>
+<p>Maxine glanced down corridor, then back.</p>
+<p>&quot;One run. Clean. Then we plan next hatch.&quot;</p>
+<p>Munch held his gaze for a long second.</p>
+<p>&quot;One run.&quot;</p>
+<p>Max nodded, because motion was the only available prayer.</p>
+<hr class="read-rule" />
+<p>Assignment queue was a new cruelty.</p>
+<p>Tracked-active assets stood in a separate line while a wall display assigned targets in real time.</p>
+<p>No choice wheel.<br>
+No reroll.<br>
+No negotiation.</p>
+<p>When Max's tag hit the scanner, the wall flashed:</p>
+<pre class="read-hud"><code>[ASSIGNMENT]
+Target: F-11 (Uncommon Derelict)
+Risk band: Yellow/Red
+Compliance reason: Route regularity test</code></pre>
+<p>Max stared.</p>
+<p>&quot;Route regularity test.&quot;</p>
+<p>Munch read over his shoulder.</p>
+<p>&quot;They're stress-testing your pattern.&quot;</p>
+<p>Maxine looked up at the target map.</p>
+<p>&quot;F-11 drifts near debris shear lane.&quot;</p>
+<p>Max laughed without humor.</p>
+<p>&quot;So they picked weather.&quot;</p>
+<p>&quot;They picked whether you'll obey in weather.&quot;</p>
+<p>The launch cradle opened beneath them with a mechanical thud.</p>
+<p>No countdown.</p>
+<p>Just go.</p>
+<p>Max climbed into the pilot seat and felt page two in his pocket press against his thigh.</p>
+<p>Proof on paper.<br>
+Debt in lights.<br>
+Loop in steel.</p>
+<p>The skiff sealed.</p>
+<p>HUD bloomed.</p>
+<pre class="read-hud"><code>[FORCED ASSIGNMENT RUN]
+Round 1/10
+Token monitor: active
+Penalty carryover: active</code></pre>
+<p>Draw:</p>
+<pre class="read-hud"><code>1) REPAIR
+2) SCAN
+3) EXTRACT</code></pre>
+<p>Same verbs.</p>
+<p>Different teeth.</p>
+<p>Max looked through the canopy.</p>
+<p>F-11 rotated ahead in the dark, hull plating glittering where old impacts had stripped paint to bare metal.</p>
+<p>Groundhog day.</p>
+<p>Only now he knew the loop had a policy name.</p>
+<p>He dragged SCAN into play.</p>
+<p>The beam fired.</p>
+<p>And before results came back, a whisper slid across his HUD in thin gray text that did not belong to any approved pane:</p>
+<p><em>if this run breaches twice, they will move you to retention path c</em></p>
+<p>Max's breath caught.</p>
+<p>Munch saw his posture change.</p>
+<p>&quot;What.&quot;</p>
+<p>He kept his eyes forward.</p>
+<p>&quot;Nothing.&quot;</p>
+<p>Maxine from behind:</p>
+<p>&quot;Lie better.&quot;</p>
+<p>The scan result hit the screen.</p>
+<pre class="read-hud"><code>[SCAN RESULT]
+Primary pocket: unstable
+Secondary pocket: hidden
+Advisory: shield recommended</code></pre>
+<p>No shield in draw.</p>
+<p>Of course.</p>
+<p>Max's tracked token pulsed amber.</p>
+<pre class="read-hud"><code>[TOKEN NOTE]
+Proceed with assignment priorities.</code></pre>
+<p>He touched REPAIR.</p>
+<p>Microdrones launched.</p>
+<p>Hull ticked up.</p>
+<p>The skiff entered shear-lane fringe.</p>
+<p>External debris began to patter against the shieldless canopy like hard rain.</p>
+<p>Rain.</p>
+<p>The word hit him in two places at once:</p>
+<p>memory and weather.</p>
+<p>Hard-won and immediate.</p>
+<p>He tightened his grip, eyes locked on the next prompt as F-11 turned broadside and the first breach window of the run opened like a mouth.</p>
+<p>The token pulsed again.</p>
+<pre class="read-hud"><code>[ASSIGNMENT PRIORITY]
+Extract from primary pocket.
+Deviation will be logged.</code></pre>
+<p>Max stared at it.</p>
+<p>Primary pocket was unstable.</p>
+<p>Secondary pocket was hidden.</p>
+<p>&quot;Token wants primary,&quot; he said.</p>
+<p>Munch swore.</p>
+<p>&quot;Of course it does.&quot;</p>
+<p>Maxine leaned forward.</p>
+<p>&quot;You can deviate once without immediate lock, maybe twice if your behavior score is still positive.&quot;</p>
+<p>Max glanced at the behavior credit in his corner panel.</p>
+<p>+1.</p>
+<p>One fake good-boy point between him and whatever retention path c meant.</p>
+<p>He selected secondary pocket anyway.</p>
+<p>The skiff yawed left.</p>
+<p>Clamps snapped onto a seam the scanner had tagged as low-visibility.</p>
+<p>For one breath everything held.</p>
+<p>Then the token pane flashed red.</p>
+<pre class="read-hud"><code>[DEVIATION LOGGED]
+Assignment compliance reduced.</code></pre>
+<p>&quot;One,&quot; Maxine said.</p>
+<p>&quot;I heard it.&quot;</p>
+<p>The hidden pocket opened with a hiss and vented frozen particulate across the canopy in a white spray.</p>
+<p>Inside floated three sealed containers and one loose panel with faded lettering:</p>
+<p><code>RETEN...</code></p>
+<p>The rest was gone.</p>
+<p>Max reached for EXTRACT.</p>
+<p>No EXTRACT in active draw.</p>
+<p>He had burned it.</p>
+<p>New draw spooled:</p>
+<pre class="read-hud"><code>1) SCAVENGE
+2) REPAIR
+3) EXTRACT</code></pre>
+<p>He almost laughed.</p>
+<p>The system waited until he saw the label before giving him a way out.</p>
+<p>Classic.</p>
+<p>A danger card struck before he could play.</p>
+<pre class="read-hud"><code>[DANGER EVENT]
+DEBRIS SHEAR FRONT
+Impact in 00:00:09</code></pre>
+<p>The canopy lit with incoming fragments.</p>
+<p>Maxine snapped, &quot;Extract now.&quot;</p>
+<p>Max hit EXTRACT.</p>
+<p>Die.</p>
+<pre class="read-hud"><code>[RESULT]
+41/100
+Threshold: 35
+BREACH AVOIDED</code></pre>
+<p>Close enough to feel in your teeth.</p>
+<p>Loot pane:</p>
+<pre class="read-hud"><code>[SALVAGE SECURED]
+Scrap +103
+Metal +2
+Tech +1</code></pre>
+<p>Then immediately:</p>
+<pre class="read-hud"><code>[LIEN TAX]
+Scrap -22
+Auto-service transfer complete.</code></pre>
+<p>Max watched the subtraction and felt his pulse stabilize into anger.</p>
+<p>Token note followed:</p>
+<pre class="read-hud"><code>[TOKEN NOTE]
+Deviation tolerated.
+Further deviation increases retention risk.</code></pre>
+<p>&quot;One tolerated,&quot; Maxine said.</p>
+<p>&quot;You narrating now?&quot;</p>
+<p>&quot;You hearing now.&quot;</p>
+<p>Round 2 opened.</p>
+<pre class="read-hud"><code>[ROUND 2/10]
+1) REPAIR
+2) EXTRACT
+3) SCAN</code></pre>
+<p>Max chose REPAIR first.</p>
+<p>If the system wanted obedience, he'd give it clean hulls and ugly compliance.</p>
+<p>Repair landed.</p>
+<p>Hull to 71%.</p>
+<p>Then SCAN.</p>
+<p>This time both pockets were marked unstable.</p>
+<p>No hidden route.<br>
+No trick.</p>
+<p>Token priority appeared again:</p>
+<pre class="read-hud"><code>[ASSIGNMENT PRIORITY]
+Primary pocket required.</code></pre>
+<p>&quot;If you deviate again?&quot; Max asked.</p>
+<p>Munch answered.</p>
+<p>&quot;We find out what retention c is.&quot;</p>
+<p>Max selected primary.</p>
+<p>The extractor engaged.</p>
+<p>The hull groaned.</p>
+<p>He extracted.</p>
+<p>Die.</p>
+<pre class="read-hud"><code>[RESULT]
+37/100
+BREACH AVOIDED</code></pre>
+<p>Too close.</p>
+<p>Too often.</p>
+<p>He started to understand why everyone in this sector moved like they were always bracing for impact.</p>
+<p>Round 3 gave him SHIELD.</p>
+<p>Mercy card.</p>
+<p>He took it.</p>
+<p>Shields: 1.</p>
+<p>Then another token note:</p>
+<pre class="read-hud"><code>[TOKEN NOTE]
+Compliant behavior trend improving.</code></pre>
+<p>&quot;It likes me now,&quot; Max said.</p>
+<p>Maxine's laugh was harsh.</p>
+<p>&quot;It likes your data.&quot;</p>
+<p>Round 3 breach roll:</p>
+<pre class="read-hud"><code>[RESULT]
+54/100
+BREACH AVOIDED</code></pre>
+<p>No hit.</p>
+<p>No shield burn.</p>
+<p>The shield sat there unused, and Max hated how much comfort that gave him.</p>
+<p>Round 4 opened with thin energy and a thick warning.</p>
+<pre class="read-hud"><code>[ROUND 4/10]
+Energy: 58/85
+Shear lane severity: escalating</code></pre>
+<p>Draw:</p>
+<pre class="read-hud"><code>1) REPAIR
+2) EXTRACT
+3) EXTRACT</code></pre>
+<p>Again with the double-extract architecture.</p>
+<p>Groundhog day.</p>
+<p>Card glow.<br>
+Choice.</p>
+<p>He forced himself to REPAIR first.</p>
+<p>Then single EXTRACT.</p>
+<p>Roll:</p>
+<pre class="read-hud"><code>[RESULT]
+32/100
+BREACH TRIGGERED</code></pre>
+<p>Shield flared.</p>
+<p>Absorbed most.</p>
+<p>Hull still dropped.</p>
+<pre class="read-hud"><code>[HULL]
+63%</code></pre>
+<p>Crew loss roll ran.</p>
+<pre class="read-hud"><code>[CREW LOSS]
+Roll: 76/100
+No immediate loss.</code></pre>
+<p>Max exhaled through his nose and ignored the second EXTRACT card until it timed out.</p>
+<p>Token pane noted:</p>
+<pre class="read-hud"><code>[TOKEN NOTE]
+Risk impulse suppressed.</code></pre>
+<p>&quot;Did it just grade my restraint?&quot; Max asked.</p>
+<p>Munch said, &quot;Yes.&quot;</p>
+<p>&quot;I hate that.&quot;</p>
+<p>&quot;So does everyone.&quot;</p>
+<p>Round 5 started with a whisper.</p>
+<p>Not voice this time.</p>
+<p>A HUD artifact at the edge of the draw pane:</p>
+<p><em>retention path c includes memory normalization</em></p>
+<p>Then gone.</p>
+<p>Max didn't react.</p>
+<p>Could not react.</p>
+<p>The token was watching expression drift now; he could feel it.</p>
+<p>He played boring.</p>
+<p>REPAIR.<br>
+SCAN.<br>
+EXTRACT.</p>
+<p>The run got meaner anyway.</p>
+<p>At extraction:</p>
+<pre class="read-hud"><code>[RESULT]
+35/100
+Threshold: 35
+BREACH TRIGGERED</code></pre>
+<p>Exact threshold.</p>
+<p>No shield active.</p>
+<p>The skiff bucked hard enough that Max's teeth clicked.</p>
+<p>Munch slammed a palm to the console to keep from being thrown.</p>
+<p>Maxine punched emergency patch.</p>
+<p>Crew roll:</p>
+<pre class="read-hud"><code>[CREW LOSS]
+Roll: 45/100
+Survivor status retained.</code></pre>
+<p>Token flashed yellow.</p>
+<pre class="read-hud"><code>[RETENTION RISK]
+Increasing.</code></pre>
+<p>&quot;Two breaches,&quot; Maxine said.</p>
+<p>&quot;I can count,&quot; Max snapped.</p>
+<p>&quot;Then count how many they said triggers path c.&quot;</p>
+<p>Max swallowed.</p>
+<p>The whisper had said if this run breaches twice.</p>
+<p>It had breached twice.</p>
+<p>Round 6 draw came up with no shield, no repair.</p>
+<pre class="read-hud"><code>1) SCAN
+2) EXTRACT
+3) SCAVENGE</code></pre>
+<p>Munch looked at him.</p>
+<p>&quot;Extract fast. Minimize events.&quot;</p>
+<p>Maxine added:</p>
+<p>&quot;No scavenge. No greed.&quot;</p>
+<p>Max hit EXTRACT immediately.</p>
+<p>Die.</p>
+<pre class="read-hud"><code>[RESULT]
+60/100
+BREACH AVOIDED</code></pre>
+<p>Good.</p>
+<p>Too late to matter.</p>
+<p>Token pane:</p>
+<pre class="read-hud"><code>[RETENTION REVIEW]
+Pending.</code></pre>
+<p>Round 7 and 8 passed with clean rolls.</p>
+<p>Round 9 almost broke them.</p>
+<p>Shear front warning hit mid-draw.</p>
+<p>No shield.</p>
+<p>Hull at 57%.</p>
+<p>Max pulled EXTRACT on instinct and prayed to nobody.</p>
+<p>Roll:</p>
+<pre class="read-hud"><code>[RESULT]
+36/100
+BREACH AVOIDED</code></pre>
+<p>Again one point from disaster.</p>
+<p>Maxine laughed, tired and sharp.</p>
+<p>&quot;You're being measured in millimeters.&quot;</p>
+<p>Max wanted to answer and couldn't find a word that wasn't violence.</p>
+<p>Round 10 came with a forced prompt before cards.</p>
+<pre class="read-hud"><code>[PRE-ROUND NOTICE]
+Retention review will resolve at run completion.</code></pre>
+<p>Then draw:</p>
+<pre class="read-hud"><code>1) REPAIR
+2) EXTRACT
+3) SCAN (DEEP)</code></pre>
+<p>SCAN (DEEP) glowed like a confession booth.</p>
+<p>Munch shook her head.</p>
+<p>&quot;No.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;Absolutely no.&quot;</p>
+<p>Max selected REPAIR.</p>
+<p>Hull to 64%.</p>
+<p>Then EXTRACT.</p>
+<p>Final roll:</p>
+<pre class="read-hud"><code>[RESULT]
+48/100
+BREACH AVOIDED</code></pre>
+<p>Run complete.</p>
+<p>No fanfare.</p>
+<p>Then the pane they were waiting for:</p>
+<pre class="read-hud"><code>[RETENTION REVIEW RESOLUTION]
+Path C deferred.
+Status: WATCHLIST
+Condition: zero additional anomaly incidents next cycle.</code></pre>
+<p>Max stared until his eyes hurt.</p>
+<p>&quot;Deferred.&quot;</p>
+<p>Munch let out a slow breath she probably hadn't had since round five.</p>
+<p>Maxine checked the watchlist icon that replaced token status.</p>
+<p>&quot;You get one bad day.&quot;</p>
+<p>&quot;I already had one.&quot;</p>
+<p>&quot;You get one more.&quot;</p>
+<p>The skiff auto-routed back to Dock Ring C.</p>
+<p>V.A.L.U. resumed cheerful tone as if none of it mattered.</p>
+<p>&quot;Great work, Asset #864! You have demonstrated resilience under dynamic constraints.&quot;</p>
+<p>Max said nothing.</p>
+<p>He was busy memorizing the exact shape of the word deferred.</p>
+<hr class="read-rule" />
+<p>Dock Ring C had a new queue by the time they landed.</p>
+<p>WATCHLIST ASSETS / MID-CYCLE MANDATORY CHECK</p>
+<p>Of course.</p>
+<p>Maxine looked at the sign and muttered, &quot;They're not subtle.&quot;</p>
+<p>Munch said, &quot;Subtle doesn't bill.&quot;</p>
+<p>Max joined the line because refusal wasn't resistance, it was auto-escalation.</p>
+<p>Three people ahead.</p>
+<p>One came out crying.<br>
+One came out blank.<br>
+One didn't come out by the time Max went in.</p>
+<p>Mandatory check bay was smaller than calibration bay and twice as bright.</p>
+<p>A single officer in white-black sat behind a desk panel with no nameplate.</p>
+<p>She didn't look up when Max entered.</p>
+<p>&quot;Asset #864. Confirm awareness of watchlist conditions.&quot;</p>
+<p>Pane appeared:</p>
+<pre class="read-hud"><code>[WATCHLIST CONDITIONS]
+- No unauthorized interface access
+- No route deviations without cause
+- No unresolved audio anomalies
+- Compliance response required within 3 seconds on prompt</code></pre>
+<p>&quot;Confirm,&quot; she said.</p>
+<p>Max said, &quot;Confirm.&quot;</p>
+<p>She swiped to next pane.</p>
+<pre class="read-hud"><code>[OPTIONAL SUPPORT]
+Cognitive stabilization remains available.</code></pre>
+<p>&quot;Decline,&quot; Max said before she could ask.</p>
+<p>Now she looked up.</p>
+<p>&quot;Why.&quot;</p>
+<p>He held her gaze.</p>
+<p>&quot;I prefer continuity.&quot;</p>
+<p>Her eyes narrowed a fraction.</p>
+<p>&quot;Continuity is expensive.&quot;</p>
+<p>&quot;So is amnesia.&quot;</p>
+<p>She held his gaze another beat, then tapped complete.</p>
+<p>&quot;Check done. Return to operations.&quot;</p>
+<p>He stepped out.</p>
+<p>Munch and Maxine were at the end of the lane pretending not to wait.</p>
+<p>Maxine asked, &quot;Offer still live?&quot;</p>
+<p>&quot;Yeah.&quot;</p>
+<p>&quot;You declined?&quot;</p>
+<p>&quot;Yeah.&quot;</p>
+<p>Munch nodded once.</p>
+<p>&quot;Good.&quot;</p>
+<p>No praise.</p>
+<p>Just confirmation.</p>
+<p>The three of them moved toward lower med corridors without discussing it because there was no other next move.</p>
+<p>They had three pages.</p>
+<p>They had a watchlist.</p>
+<p>They had maybe one cycle before path c stopped being deferred.</p>
+<hr class="read-rule" />
+<p>Lower med corridor B-17 was clear when they arrived.</p>
+<p>No drones.<br>
+No patrol.<br>
+No sirens.</p>
+<p>Too clean.</p>
+<p>Max unlocked the locker with the analog key.</p>
+<p>Inside:</p>
+<p>torn glove.<br>
+cracked med patch.</p>
+<p>No shim.</p>
+<p>Max froze.</p>
+<p>&quot;No no no.&quot;</p>
+<p>Munch shoved in beside him and checked the back panel seam.</p>
+<p>Empty.</p>
+<p>Maxine scanned the floor, the wall, the adjacent lockers.</p>
+<p>&quot;Could've slipped.&quot;</p>
+<p>&quot;Could've been taken,&quot; Munch said.</p>
+<p>Max's HUD pulsed.</p>
+<p>A fresh pane opened with no sender metadata.</p>
+<pre class="read-hud"><code>[NOTE]
+don't cache where policy can inventory
+locker was touched at 14:02
+hatch 14 tonight or lose sequence</code></pre>
+<p>Maxine saw Max's face.</p>
+<p>&quot;What does it say.&quot;</p>
+<p>Max read it out loud.</p>
+<p>No more secrets inside the team.</p>
+<p>Munch pressed the bridge of her nose.</p>
+<p>&quot;Touched at fourteen-oh-two. That's during QA sweep.&quot;</p>
+<p>Maxine looked up corridor.</p>
+<p>&quot;Then they have the shim.&quot;</p>
+<p>Max stared at the pane.</p>
+<p>&quot;It says lose sequence.&quot;</p>
+<p>&quot;Meaning?&quot; Munch asked.</p>
+<p>Max shook his head.</p>
+<p>&quot;Either message bait or timeline warning. I don't know.&quot;</p>
+<p>Maxine made the decision like he was cutting wire.</p>
+<p>&quot;Then we go hatch 14 tonight.&quot;</p>
+<p>Munch snapped toward him.</p>
+<p>&quot;That is what bait wants.&quot;</p>
+<p>&quot;And if it's not bait, waiting kills proof.&quot;</p>
+<p>&quot;They already took proof.&quot;</p>
+<p>&quot;We still have pages.&quot;</p>
+<p>Max held up a hand.</p>
+<p>&quot;Stop.&quot;</p>
+<p>They stopped.</p>
+<p>He thought of the run.<br>
+Watchlist.<br>
+Path c deferred.</p>
+<p>He thought of MAX_377.<br>
+Pack applied.</p>
+<p>He thought of the little gray whisper:</p>
+<p><em>if this run breaches twice</em></p>
+<p>And how it had been right.</p>
+<p>&quot;We go hatch 14,&quot; Max said.</p>
+<p>Munch's eyes went hard.</p>
+<p>&quot;Watchlist condition one says no unauthorized interface access.&quot;</p>
+<p>&quot;Then don't authorize me.&quot;</p>
+<p>Maxine almost smiled.</p>
+<p>&quot;Now he's thinking like debt.&quot;</p>
+<p>Munch didn't smile back.</p>
+<p>&quot;We go smart or we don't go.&quot;</p>
+<p>&quot;Define smart.&quot;</p>
+<p>&quot;No tracked devices. No standard lanes. No repeat route from last time. Hard extraction path before entry.&quot;</p>
+<p>Maxine nodded.</p>
+<p>&quot;Agreed.&quot;</p>
+<p>Max added:</p>
+<p>&quot;And if we see stabilization hardware, we document first, run second.&quot;</p>
+<p>Munch blinked.</p>
+<p>&quot;You think hatch 14 is tied to packs?&quot;</p>
+<p>&quot;I think everything is tied to packs now.&quot;</p>
+<p>Maxine checked cycle board timing on his wrist.</p>
+<p>&quot;Shift ghost in forty-nine minutes.&quot;</p>
+<p>Munch re-locked the empty locker and pocketed the key.</p>
+<p>&quot;Then we prep.&quot;</p>
+<p>Max glanced once at the empty shelf where the shim had been.</p>
+<p>Proof lost.<br>
+Trace gained.</p>
+<p>Groundhog day.</p>
+<p>But now the day was leaving him notes.</p>
+<hr class="read-rule" />
+<p>Prep happened in motion.</p>
+<p>At Salvage Yard, Marta sold them two damaged comm beads with cracked housings and no registered serial IDs.</p>
+<p>&quot;Burners,&quot; she said. &quot;Range sucks. Reliability worse.&quot;</p>
+<p>Maxine took all three and cracked one open with his thumb.</p>
+<p>&quot;Good.&quot;</p>
+<p>At a maintenance cage, Munch borrowed a coil of mag-line &quot;for conduit work&quot; and never returned it.</p>
+<p>At an idle tool bench, Max stripped his wrist module to minimal mode so tracked token updates buffered instead of broadcasting live.</p>
+<p>A warning flashed:</p>
+<pre class="read-hud"><code>[TOKEN DESYNC RISK]</code></pre>
+<p>He accepted.</p>
+<p>At the cycle board, shift ghost countdown dropped under ten minutes.</p>
+<p>The ring changed temperature in tiny ways you could only feel if you'd been through enough of them:</p>
+<p>patrols widened then tightened,<br>
+camera sweeps lagged then corrected,<br>
+workers moved faster because everyone knew the overlap window was either opportunity or funeral.</p>
+<p>Munch distributed comm beads.</p>
+<p>&quot;Short bursts only. No names on open channel.&quot;</p>
+<p>Maxine holstered one blade and left the second visible.</p>
+<p>&quot;If this goes loud, we don't hold hatch. We hold route.&quot;</p>
+<p>Max nodded.</p>
+<p>&quot;If we get split?&quot;</p>
+<p>Munch answered:</p>
+<p>&quot;Service spine C fallback. If that's burned, med corridor waste chute.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;If both burned, run anywhere with people and make a scene.&quot;</p>
+<p>Max looked at him.</p>
+<p>&quot;Scene?&quot;</p>
+<p>&quot;Noise buys seconds.&quot;</p>
+<p>The overhead board clicked:</p>
+<p>SHIFT GHOST - 00:00:59</p>
+<p>The ring lights dimmed one notch.</p>
+<p>Max's HUD flashed one last watchlist reminder.</p>
+<pre class="read-hud"><code>[WATCHLIST]
+No unauthorized interface access.</code></pre>
+<p>He dismissed it.</p>
+<p>This time, it stayed gone.</p>
+<p>Shift ghost began.</p>
+<p>Maxine looked at Max.</p>
+<p>&quot;Ready?&quot;</p>
+<p>Max checked his pockets:</p>
+<p>page two.<br>
+burner bead.<br>
+nothing else.</p>
+<p>No safety.<br>
+No certainty.</p>
+<p>&quot;No,&quot; he said.</p>
+<p>Then:</p>
+<p>&quot;Move.&quot;</p>
+<hr class="read-rule" />
+<p>Service spine C felt narrower at shift ghost.</p>
+<p>Not physically.<br>
+Psychologically.</p>
+<p>Every corner looked like a decision tree.<br>
+Every drone tone sounded like a question with penalties.</p>
+<p>Maxine took lead.<br>
+Munch took rear.<br>
+Max ran center and tried not to breathe like prey.</p>
+<p>The first camera spine at junction 3 was already desynced, sweeping ten degrees late.</p>
+<p>Maxine timed it.</p>
+<p>&quot;Now.&quot;</p>
+<p>They crossed.</p>
+<p>The second spine had a live tech under it, kneeling with panel tools.</p>
+<p>Munch switched channels.</p>
+<p>&quot;Detour.&quot;</p>
+<p>Maxine shook his head.</p>
+<p>&quot;No time.&quot;</p>
+<p>He stepped into full view and barked:</p>
+<p>&quot;Power drop in bay four, who signed this timing?&quot;</p>
+<p>The tech looked up, startled and annoyed.</p>
+<p>&quot;What power drop?&quot;</p>
+<p>&quot;The one you miss if you keep your face in that panel.&quot;</p>
+<p>The tech stood, swore, and hustled toward bay four without checking logs.</p>
+<p>Maxine motioned.</p>
+<p>&quot;Go.&quot;</p>
+<p>They slipped past.</p>
+<p>Hatch 14 spur came into view.</p>
+<p>The SEALED stencil looked freshly repainted.</p>
+<p>Bad sign.</p>
+<p>Worse sign: two new conduit lines had been run to the reader plate since last time.</p>
+<p>Munch crouched.</p>
+<p>&quot;Reader's hot.&quot;</p>
+<p>Maxine scanned corridor.</p>
+<p>&quot;Can you still bypass?&quot;</p>
+<p>&quot;Can I? Yes.&quot;</p>
+<p>&quot;Can you quietly?&quot;</p>
+<p>Munch bared her teeth.</p>
+<p>&quot;Define quietly.&quot;</p>
+<p>Max's HUD flickered.</p>
+<p>A ghost pane appeared, thin gray text:</p>
+<p><em>left conduit is dummy / right conduit carries callback</em></p>
+<p>He swallowed.</p>
+<p>&quot;Right conduit is live callback.&quot;</p>
+<p>Munch froze.</p>
+<p>&quot;How do you know.&quot;</p>
+<p>&quot;The note channel.&quot;</p>
+<p>Maxine did not waste time asking if they trusted it.</p>
+<p>&quot;Cut left.&quot;</p>
+<p>Munch clipped one line with insulated jaws.</p>
+<p>No alarm.</p>
+<p>She clipped the second.</p>
+<p>Still no alarm.</p>
+<p>&quot;Both were dummy.&quot;</p>
+<p>Maxine cursed.</p>
+<p>Max's ghost text updated:</p>
+<p><em>good / they wanted you to choose</em></p>
+<p>His skin crawled.</p>
+<p>&quot;It says they wanted us to choose.&quot;</p>
+<p>Munch pressed her forehead to the hatch for one second.</p>
+<p>&quot;I hate this.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;Open it.&quot;</p>
+<p>Munch keyed her bypass probe.</p>
+<p>The reader flashed yellow, then blue, then white.</p>
+<p>Click.</p>
+<p>Hatch 14 opened three inches on its own.</p>
+<p>Cold air poured out again.</p>
+<p>Not station cold.<br>
+Data-center cold.</p>
+<p>And now there was sound from inside:</p>
+<p>a low repeating chime, two notes, pause, two notes, pause.</p>
+<p>Maxine said, &quot;Different from last time.&quot;</p>
+<p>Munch whispered, &quot;Someone's in there.&quot;</p>
+<p>Max felt his watchlist token wake up despite minimal mode.</p>
+<pre class="read-hud"><code>[TOKEN DESYNC WARNING]
+Tracked signal reacquiring...</code></pre>
+<p>No.</p>
+<p>He thumbed hard mute.</p>
+<p>The warning dimmed but did not disappear.</p>
+<p>Maxine slid inside first this time, blade low and ready.</p>
+<p>Munch followed.</p>
+<p>Max followed both and sealed the hatch behind them.</p>
+<p>The node room was no longer half-dark.</p>
+<p>All racks were active.<br>
+All LEDs synchronized.</p>
+<p>At the far terminal stood a figure in a maintenance coverall with hood up, back to them, one hand resting on the keyboard.</p>
+<p>The figure did not turn.</p>
+<p>&quot;You're late,&quot; the figure said.</p>
+<p>The voice was filtered through a throat modulator that made age and gender meaningless.</p>
+<p>Maxine didn't lower the blade.</p>
+<p>&quot;Hands where we can see.&quot;</p>
+<p>The figure ignored him and tapped enter.</p>
+<p>The wall display behind terminal flooded with rows of live entries:</p>
+<p>MAX_881 ... ACTIVE<br>
+MAX_902 ... ACTIVE<br>
+MAX_914 ... ACTIVE</p>
+<p>Max stopped breathing.</p>
+<p>Active.<br>
+Plural.</p>
+<p>Munch took one half-step forward.</p>
+<p>&quot;Who are you.&quot;</p>
+<p>The figure finally turned.</p>
+<p>Hood stayed up.<br>
+Face hidden by a matte mask with no features except one horizontal visor slit pulsing soft blue.</p>
+<p>&quot;Wrong question,&quot; the figure said.</p>
+<p>&quot;Then right question,&quot; Maxine replied.</p>
+<p>&quot;How many of you are still alive?&quot;</p>
+<p>The figure tilted its head toward Max.</p>
+<p>&quot;More than policy allows.&quot;</p>
+<p>Max found his voice.</p>
+<p>&quot;Are you Delta.&quot;</p>
+<p>The figure laughed once, static through metal.</p>
+<p>&quot;Delta is a janitor process with executive privileges.&quot;</p>
+<p>Munch's torch hand tightened.</p>
+<p>&quot;Why message us.&quot;</p>
+<p>&quot;Because you touched mirror index without submitting to normalization.&quot;</p>
+<p>&quot;And?&quot;</p>
+<p>&quot;And because retention path c starts at watchlist drift plus one fabricated discrepancy.&quot;</p>
+<p>Max felt the room shrink.</p>
+<p>&quot;Fabricated.&quot;</p>
+<p>&quot;You're not being selected for behavior.&quot;</p>
+<p>The figure tapped the terminal again.</p>
+<p>A pane exploded across the main display:</p>
+<pre class="read-hud"><code>[RETENTION C PREP]
+Asset #864
+Trigger condition armed:
+- one anomaly incident OR
+- one conduct tier raise OR
+- one missed prompt response</code></pre>
+<p>Maxine swore.</p>
+<p>&quot;They set him to fail.&quot;</p>
+<p>&quot;Yes,&quot; the figure said. &quot;Now ask the useful question.&quot;</p>
+<p>Munch said it first.</p>
+<p>&quot;What do we do.&quot;</p>
+<p>The figure reached under the terminal and set a small black cartridge on the desk.</p>
+<p>Analog label in white marker:</p>
+<p>GHOST PATCH / TOKEN SCRAMBLE</p>
+<p>&quot;You install this in your tracked module during a verifier prompt. It buys one blind cycle.&quot;</p>
+<p>Maxine didn't move.</p>
+<p>&quot;What's the catch.&quot;</p>
+<p>&quot;Everything.&quot;</p>
+<p>The figure's visor slit brightened.</p>
+<p>&quot;It burns the token clean. It also flags your asset as unresolved if they detect the swap.&quot;</p>
+<p>Max stared at the cartridge.</p>
+<p>One blind cycle.</p>
+<p>One move to change the board.</p>
+<p>One move to disappear faster if it failed.</p>
+<p>His HUD flashed hard red.</p>
+<pre class="read-hud"><code>[TRACKED TOKEN]
+Reacquisition complete.
+Mandatory prompt incoming.</code></pre>
+<p>The figure stepped back from the terminal.</p>
+<p>&quot;Decision window closes in ten seconds.&quot;</p>
+<p>Maxine looked at Max.</p>
+<p>Munch looked at Max.</p>
+<p>No one talked.</p>
+<p>Groundhog day.</p>
+<p>Choice.<br>
+Consequences.<br>
+Bill.</p>
+<p>Max reached for the cartridge.</p>
+    </article>
+    <nav class="read-nav" aria-label="Chapter navigation">
+      <a class="read-nav__link read-nav__link--prev" href="ch04.html"><span class="read-nav__arrow">&larr;</span> <span class="read-nav__chapno">Ch 4</span> <span class="read-nav__title">Cycle Reset</span></a>
+      <a class="read-nav__link read-nav__link--next" href="ch06.html"><span class="read-nav__chapno">Ch 6</span> <span class="read-nav__title">Shift Ghost</span> <span class="read-nav__arrow">&rarr;</span></a>
+    </nav>
+  </main>
+</body>
+</html>

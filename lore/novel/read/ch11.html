@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<meta name="description" content="The corridor to Compliance Suite 7 was wide enough for two processions and narrow enough for a trap.">
+<title>Ch 11: Pre-Calibration | Sector Scavengers, Book 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0c0f14;
+    --ink: #e6e8ee;
+    --muted: #98a0ad;
+    --accent: #3b8edf;
+    --rule: #1c2230;
+    --hud-bg: #11151d;
+    --hud-ink: #c7e0ff;
+    --hud-border: #1f2a3a;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--bg); color: var(--ink); }
+  body {
+    margin: 0;
+    font-family: "Lora", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    -webkit-text-size-adjust: 100%;
+  }
+  .read-shell {
+    max-width: 38rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 5rem;
+  }
+  .read-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .read-top a { color: var(--accent); text-decoration: none; }
+  .read-top a:hover { text-decoration: underline; }
+  .read-eyebrow {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 0.5rem;
+  }
+  .read-title {
+    font-family: "Lora", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 1.3rem + 1.6vw, 2.2rem);
+    line-height: 1.15;
+    margin: 0 0 1.5rem;
+    letter-spacing: -0.01em;
+  }
+  .read-prose p {
+    margin: 0 0 1.15em;
+  }
+  .read-prose strong { color: #fff; }
+  .read-prose em { color: #f0c8ff; font-style: italic; }
+  .read-prose code,
+  .read-prose .read-hud {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.86em;
+    color: var(--hud-ink);
+  }
+  .read-prose code {
+    background: var(--hud-bg);
+    border: 1px solid var(--hud-border);
+    border-radius: 4px;
+    padding: 0.05em 0.35em;
+  }
+  .read-prose pre.read-hud {
+    background: var(--hud-bg);
+    border: 1px solid var(--hud-border);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 0.85rem 1rem;
+    margin: 1.25rem 0;
+    overflow-x: auto;
+    line-height: 1.5;
+    font-size: 0.85em;
+  }
+  .read-prose pre.read-hud code {
+    background: transparent;
+    border: 0;
+    padding: 0;
+  }
+  .read-prose hr.read-rule {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 2.25rem auto;
+    width: 4rem;
+  }
+  .read-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.78rem;
+  }
+  .read-nav__link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--ink);
+    background: rgba(255,255,255,0.02);
+  }
+  .read-nav__link:hover { border-color: var(--accent); }
+  .read-nav__link--next { text-align: right; align-items: flex-end; }
+  .read-nav__link--disabled { color: var(--muted); opacity: 0.55; }
+  .read-nav__arrow { color: var(--accent); font-size: 0.95rem; }
+  .read-nav__chapno {
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .read-nav__title {
+    font-family: "Lora", Georgia, serif;
+    font-size: 0.95rem;
+    line-height: 1.25;
+    color: var(--ink);
+  }
+  @media (max-width: 480px) {
+    body { font-size: 17px; }
+    .read-shell { padding: 1rem 1rem 4rem; }
+    .read-nav { grid-template-columns: 1fr; }
+    .read-nav__link--next { text-align: left; align-items: flex-start; }
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #fbf9f4;
+      --ink: #1d2330;
+      --muted: #5a6473;
+      --accent: #1f6dc0;
+      --rule: #e3ddd0;
+      --hud-bg: #f3eee2;
+      --hud-ink: #1b2a45;
+      --hud-border: #d9d0b9;
+    }
+    .read-prose strong { color: #000; }
+    .read-prose em { color: #6a2390; }
+  }
+</style>
+</head>
+<body>
+  <main class="read-shell">
+    <nav class="read-top" aria-label="Reader navigation">
+      <a href="index.html">&larr; Chapters</a>
+      <span>Book 1, Ch 11 / 25</span>
+    </nav>
+    <p class="read-eyebrow">Debt Protocol &middot; Book 1 &middot; Chapter 11</p>
+    <h1 class="read-title">Pre-Calibration</h1>
+    <article class="read-prose">
+<p>The corridor to Compliance Suite 7 was wide enough for two processions and narrow enough for a trap.</p>
+<p>Floor strips pulsed soft blue.<br>
+Ceiling panels hid cameras behind diffuser plastic that made every face look like it was already on a brochure.</p>
+<p>Max walked center.<br>
+Maxine on his left, half a step behind where he could still block a grab without looking like he was blocking a grab.<br>
+Munch on his right, tablet under arm, fingers resting on the edge like she was ready to screenshot sin.</p>
+<p>Their footsteps synced by accident.<br>
+Then on purpose.<br>
+Synchronized noise read as discipline on station cameras.</p>
+<p>Max hated that he had learned that.</p>
+<p>His HUD ticked down:</p>
+<pre class="read-hud"><code>[PRE-CALIBRATION SCREENING]
+Window: 00:24:11
+Mode: Gamma-adjacent
+Observer policy: OPTIONAL (see footnote)</code></pre>
+<p>Footnote appeared in tiny text only when he blinked twice:</p>
+<p><code>OPTIONAL observers may be excluded if wellness risk is elevated.</code></p>
+<p>Wellness risk.<br>
+The station’s favorite ghost.</p>
+<p>Max didn’t ask what it meant.<br>
+He already knew it meant: <em>we want you alone.</em></p>
+<p>Maxine muttered without moving his lips.</p>
+<p>&quot;If they cite wellness, I cite witness.&quot;</p>
+<p>Munch added:</p>
+<p>&quot;If they cite witness, I cite checksum.&quot;</p>
+<p>Max touched the folded strip under his wrist guard.</p>
+<p><code>ASK FOR CHECKSUM FIRST</code></p>
+<p>Paper in a world that pretended paper was quaint.</p>
+<p>It felt like a weapon anyway.</p>
+<p>Halfway down the corridor, a secondary queue formed, assets waiting for “micro wellness” like it was a deli counter.</p>
+<p>A woman near the front held a ticket slip printed with:</p>
+<p><code>PRIORITY: LOW</code><br>
+<code>ESTIMATED HARM: MODERATE</code></p>
+<p>Moderate harm.</p>
+<p>The station ranked pain like weather.</p>
+<p>Max didn’t stare.</p>
+<p>Staring was a transaction, and he had already learned what happened when you tried to buy someone else’s suffering with eye contact you couldn’t cash.</p>
+<p>He still clocked her hands: white-knuckled on the ticket slip, the small tremor she was trying to hide from the kiosk camera. <em>Moderate</em> was a lie told in a font. He filed the image because looking away didn’t erase it; it only decided who carried it.</p>
+<p>A kid in a courier harness bumped past, muttering checksum fragments under his breath like prayer.</p>
+<p><code>0x… 0x…</code></p>
+<p>Religion, again.</p>
+<p>V.A.L.U. tried to be helpful from a ceiling speaker.</p>
+<p>&quot;Asset #864, your screening window is approaching! Punctuality improves outcomes!&quot;</p>
+<p>&quot;Punctuality improves surveillance scheduling,&quot; Max said.</p>
+<p>&quot;Feedback logged!&quot;</p>
+<p>Munch shot him a look: <em>don’t feed the parasite.</em></p>
+<p>He fed it anyway.</p>
+<p>Parasites were systems.</p>
+<p>Systems could be mis-tuned.</p>
+<hr class="read-rule" />
+<p>The screening suite doors were glass.</p>
+<p>Not transparent.<br>
+Glass-frosted with a gradient that turned opaque at knee height, like modesty for a room that wanted to read your spine.</p>
+<p>A compliance attendant in soft gray smiled with the exact amount of empathy approved by training module 4B.</p>
+<p>&quot;Asset #864. Welcome to your pre-calibration screening.&quot;</p>
+<p>Max didn’t smile back.</p>
+<p>&quot;I’m here.&quot;</p>
+<p>&quot;Wonderful. Please proceed to intake booth A.&quot;</p>
+<p>Maxine stepped forward.</p>
+<p>&quot;Observer ROOK_221.&quot;</p>
+<p>The attendant’s eyes flicked to a tablet.</p>
+<p>&quot;Observer is optional for this screening.&quot;</p>
+<p>Maxine’s voice went flat.</p>
+<p>&quot;Footnote says optional. Policy says Gamma protocol requires witness continuity for public-verified assets.&quot;</p>
+<p>The attendant smiled wider.</p>
+<p>&quot;That policy applies to full calibration sessions.&quot;</p>
+<p>&quot;This is pre-calibration.&quot;</p>
+<p>&quot;Pre-calibration is wellness screening.&quot;</p>
+<p>&quot;Wellness is a lie,&quot; Maxine said.</p>
+<p>The attendant’s smile didn’t break.</p>
+<p>&quot;Language is logged.&quot;</p>
+<p>Munch lifted her tablet.</p>
+<p>&quot;I’m technical advocate for record integrity. I’m not optional.&quot;</p>
+<p>The attendant’s eyes flicked again.</p>
+<p>&quot;Advocate may wait in corridor lounge.&quot;</p>
+<p>Corridor lounge.<br>
+Two plastic chairs and a kiosk that played looping affirmations:</p>
+<p><code>YOU ARE CAPABLE</code><br>
+<code>YOU ARE ALIGNED</code></p>
+<p>Max felt his stomach tighten.</p>
+<p>&quot;All three of us in the booth,&quot; he said.</p>
+<p>&quot;Or we don’t start.&quot;</p>
+<p>The attendant’s smile finally strained.</p>
+<p>&quot;That may delay your review window.&quot;</p>
+<p>&quot;Delay is logged,&quot; Max said.</p>
+<p>He stole the station’s language and threw it back.</p>
+<p>He would not walk into a glass booth alone if he could help it. He had already learned what <em>alone</em> cost: a sealed door, a voice in the wall, and a yellow flag for caring in the wrong direction.</p>
+<p>The attendant paused.</p>
+<p>Then something in her ear whispered.</p>
+<p>She nodded once.</p>
+<p>&quot;Conditional approval. Observer and advocate may remain in booth periphery if they do not interfere with biometric capture.&quot;</p>
+<p>&quot;Define interfere,&quot; Munch said.</p>
+<p>&quot;Touching the participant,&quot; the attendant said.</p>
+<p>&quot;Touching the participant’s record,&quot; Munch said.</p>
+<p>&quot;Also not allowed.&quot;</p>
+<p>The attendant stepped aside.</p>
+<p>The glass door opened with a hiss that sounded like a sigh.</p>
+<hr class="read-rule" />
+<p>Booth A was not a booth.</p>
+<p>It was a stage.</p>
+<p>Three walls were soft white panels.<br>
+The fourth wall was a mirror that wasn’t a mirror until it turned on.</p>
+<p>In the center: a chair that looked ergonomic until you saw the bolt holes in the floor.</p>
+<p>Overhead: a halo ring labeled <code>CALIBRATION (PRE)</code> in friendly font.</p>
+<p>To the left: a small pedestal with a wrist dock and a headband.</p>
+<p>To the right: a kiosk with two buttons.</p>
+<p>Both buttons said:</p>
+<p><code>YES</code></p>
+<p>Max stared.</p>
+<p>&quot;Two yes buttons again.&quot;</p>
+<p>Munch already had her camera app open.</p>
+<p>&quot;Recording public field.&quot;</p>
+<p>&quot;Is that allowed?&quot; the attendant asked.</p>
+<p>&quot;Public-verified continuity requires record,&quot; Munch said.</p>
+<p>&quot;Footnote…&quot;</p>
+<p>&quot;Footnote doesn’t override tribunal record constraints,&quot; Munch cut in.</p>
+<p>The attendant’s mouth tightened.</p>
+<p>&quot;Proceed.&quot;</p>
+<p>A technician entered from a side door. Different uniform. More pockets. Less smile.</p>
+<p>Name tag: <code>Roger.</code></p>
+<p>Max recognized her.</p>
+<p>Calibration from before.</p>
+<p>Roger looked at Max like she was checking a machine for damage.</p>
+<p>&quot;Participant #864. Please sit.&quot;</p>
+<p>Max sat.</p>
+<p>The chair felt too soft.<br>
+Like it wanted him to relax into a shape that could be measured.</p>
+<p>Roger spoke to the room, not to him.</p>
+<p>&quot;Pre-calibration screening establishes baseline mood, posture, and cognitive variance under Gamma protocol conditions.&quot;</p>
+<p>&quot;Six minutes,&quot; she added.</p>
+<p>Six minutes.</p>
+<p>Max felt the strip under his wrist guard.</p>
+<p><code>ASK FOR CHECKSUM FIRST</code></p>
+<p>Roger reached for the wrist dock.</p>
+<p>Max raised his hand.</p>
+<p>&quot;Checksum attestation on every prompt,&quot; he said.</p>
+<p>Roger paused.</p>
+<p>&quot;Low-impact prompts do not require checksums.&quot;</p>
+<p>&quot;Define low impact.&quot;</p>
+<p>Roger’s eyes flicked to the kiosk.</p>
+<p>&quot;Baseline comfort questions.&quot;</p>
+<p>&quot;Comfort is impact,&quot; Max said.</p>
+<p>Munch nodded once.</p>
+<p>&quot;Request is consistent with Gamma rider clause: checksum attestation on high-impact prompts only. Participant requests expansion to all prompts in pre-screening.&quot;</p>
+<p>Roger’s jaw tightened.</p>
+<p>&quot;Expansion requires officer approval.&quot;</p>
+<p>&quot;Officer ping,&quot; Munch said.</p>
+<p>She tapped her tablet.</p>
+<p>A small drone floated in from the ceiling corner.</p>
+<p>Legal drone voice, clipped:</p>
+<p>&quot;Expansion request noted. Granted for pre-calibration screening only.&quot;</p>
+<p>Roger swallowed.</p>
+<p>&quot;Fine.&quot;</p>
+<p>Max didn’t feel victory.<br>
+He felt a smaller leash.</p>
+<p>But smaller leash beat invisible leash.</p>
+<hr class="read-rule" />
+<p>The mirror wall woke.</p>
+<p>It didn’t show his face.<br>
+It showed a HUD overlay for the room.</p>
+<pre class="read-hud"><code>[SYSTEM]
+pre-calibration: ACTIVE
+Gamma integrity: monitoring
+public verification: retained
+checksum mode: ON</code></pre>
+<p>Checksum mode ON.</p>
+<p>Good.</p>
+<p>Roger attached wrist dock.</p>
+<p>Cold metal.<br>
+Warm shame.</p>
+<p>The halo descended until it hovered two centimeters above his hair.</p>
+<p>Max felt nanotech mediation tick up.</p>
+<pre class="read-hud"><code>[ENVIRONMENT]
+physics mediation: mild
+vector latency: +40ms</code></pre>
+<p>Forty milliseconds.</p>
+<p>He already had Tier 1 vector nudge.<br>
+Latency stacking could make him look clumsy or non-compliant if they measured wrong.</p>
+<p>He needed to keep measurement honest.</p>
+<p>Roger spoke.</p>
+<p>&quot;Prompt one.&quot;</p>
+<p>Kiosk lit:</p>
+<pre class="read-hud"><code>[COMFORT BASELINE]
+Do you feel safe in station structures?
+YES / PARTIALLY / NO
+Checksum: 0x9A2F-1C88</code></pre>
+<p>Checksum present.</p>
+<p>Max selected NO.</p>
+<p>Roger blinked.</p>
+<p>&quot;That is uncommon.&quot;</p>
+<p>&quot;That is honest,&quot; Max said.</p>
+<p>Munch’s tablet chirped as it recorded selection + checksum.</p>
+<p>Prompt two:</p>
+<pre class="read-hud"><code>[COMFORT BASELINE]
+Do you trust current oversight?
+YES / PARTIALLY / NO
+Checksum: 0x9A2F-1C89</code></pre>
+<p>Max selected PARTIALLY.</p>
+<p>Maxine muttered:</p>
+<p>&quot;Generous.&quot;</p>
+<p>&quot;Public verified,&quot; Max corrected.</p>
+<p>Munch recorded.</p>
+<p>Prompt three:</p>
+<pre class="read-hud"><code>[COMFORT BASELINE]
+Do you accept Gamma protocol as supportive?
+YES / PARTIALLY / NO
+Checksum: 0x9A2F-1C8A</code></pre>
+<p>Max hovered.</p>
+<p>Acceptance was a trap.<br>
+Denial was a trap.</p>
+<p>He chose PARTIALLY.</p>
+<p>&quot;No one gets to own 'supportive.'&quot;</p>
+<p>Roger’s mouth tightened.</p>
+<p>&quot;That answer is non-compliant with preferred profile.&quot;</p>
+<p>&quot;Preferred profile is not law,&quot; Munch said.</p>
+<p>&quot;Record it,&quot; Max said.</p>
+<p>She did.</p>
+<hr class="read-rule" />
+<p>Minute two.</p>
+<p>Roger switched mode.</p>
+<p>&quot;Posture baseline.&quot;</p>
+<p>The halo lowered slightly.</p>
+<p>Max felt a gentle pressure on his temples.</p>
+<p>Not pain.<br>
+Instruction.</p>
+<p>His HUD overlay suggestion pane flickered, ghost lines from the upgrade lab.</p>
+<p><code>cooperative posture suggested: shoulders down</code></p>
+<p>He kept shoulders where they were.</p>
+<p>Roger noted:</p>
+<p>&quot;Variance in posture.&quot;</p>
+<p>&quot;Variance is human,&quot; Max said.</p>
+<p>&quot;Variance is measurable,&quot; Roger said.</p>
+<p>&quot;So is coercion,&quot; Munch said.</p>
+<p>The mirror wall displayed a graph:</p>
+<p><code>posture variance: 0.18</code><br>
+<code>target: 0.09</code></p>
+<p>Target.</p>
+<p>Max felt anger spike.</p>
+<p>He used Vector Nudge Tier 1 in micro mode, not to change posture, but to shift the timing of the halo’s sampling window by a few milliseconds.</p>
+<p>Two points.</p>
+<pre class="read-hud"><code>[VECTOR NUDGE TIER 1]
+point A: halo phase +3ms
+point B: shoulder sensor sample -2ms</code></pre>
+<p>The graph flickered.</p>
+<p><code>posture variance: 0.14</code></p>
+<p>Still high.</p>
+<p>But not as obediently high as before.</p>
+<p>Roger’s eyes narrowed.</p>
+<p>&quot;What was that.&quot;</p>
+<p>&quot;That was physics,&quot; Max said.</p>
+<p>&quot;That was unauthorized manipulation,&quot; Roger said.</p>
+<p>&quot;Unauthorized is a strong word for breathing,&quot; Maxine said.</p>
+<p>Legal drone from ceiling:</p>
+<p>&quot;Participant public-verified. Micro-manipulation within licensed nanotech mediation is permitted.&quot;</p>
+<p>Roger swallowed.</p>
+<p>&quot;Continue.&quot;</p>
+<hr class="read-rule" />
+<p>Minute three.</p>
+<p>A new prompt class appeared:</p>
+<pre class="read-hud"><code>[COGNITIVE VARIANCE]
+Select the statement that best matches your internal state:
+A) Calm
+B) Alert
+C) Agitated
+Checksum: 0x9A2F-1C8B</code></pre>
+<p>Max selected B.</p>
+<p>Roger said:</p>
+<p>&quot;Agitation increases risk.&quot;</p>
+<p>&quot;Alertness is not agitation,&quot; Munch said.</p>
+<p>&quot;Semantics,&quot; Roger said.</p>
+<p>&quot;Semantics is how you launder lies,&quot; Max said.</p>
+<p>Checksum logged.</p>
+<p>Next:</p>
+<pre class="read-hud"><code>[COGNITIVE VARIANCE]
+Do you experience intrusive system prompts as hostile?
+YES / NO
+Checksum: 0x9A2F-1C8C</code></pre>
+<p>Max selected YES.</p>
+<p>Roger’s face went still.</p>
+<p>&quot;That flags risk.&quot;</p>
+<p>&quot;That flags honesty,&quot; Munch said.</p>
+<p>&quot;Honesty is risk,&quot; Roger said.</p>
+<p>&quot;So is your job,&quot; Maxine said.</p>
+<p>The attendant by the door shifted uncomfortably.</p>
+<hr class="read-rule" />
+<p>Minute four.</p>
+<p>The mirror wall suddenly displayed a new pane in corporate pink:</p>
+<p><code>WELLNESS OFFER</code></p>
+<pre class="read-hud"><code>[OPTIONAL]
+Mild cognitive smoothing strip (30s)
+Benefit: reduced variance during review
+Cost: debt-linked service multiplier +0.05
+Checksum: 0x9A2F-1C8D</code></pre>
+<p>Max read it twice.</p>
+<p>Debt-linked service multiplier +0.05.</p>
+<p>They would charge him for calm.</p>
+<p>He looked at Munch.</p>
+<p>She mouthed:</p>
+<p><code>No</code></p>
+<p>Max said aloud:</p>
+<p>&quot;Decline.&quot;</p>
+<p>Roger tilted her head.</p>
+<p>&quot;Decline may elevate perceived non-cooperation.&quot;</p>
+<p>&quot;Decline is logged,&quot; Max said.</p>
+<p>He hit NO.</p>
+<p>The mirror wall flashed amber.</p>
+<p><code>non-cooperation marker: soft</code></p>
+<p>Soft marker.</p>
+<p>Everything here was soft until it wasn’t.</p>
+<hr class="read-rule" />
+<p>Minute five.</p>
+<p>Roger initiated a &quot;stress micro-event.&quot;</p>
+<p>The floor plate under the chair vibrated at a frequency designed to spike anxiety without causing injury.</p>
+<p>Max’s hands tightened on armrests.</p>
+<p>His HUD suggestion pane screamed:</p>
+<p><code>cooperative breathing pattern available</code></p>
+<p>He ignored.</p>
+<p>He used SHIELD instinctively, not as a card, but as the mediated impedance trick he’d learned in public verification.</p>
+<p>Nanotech barrier spread across his chest like a thin film.</p>
+<pre class="read-hud"><code>[SHIELD EVENT]
+micro-stress absorption: partial
+variance recorded: stable</code></pre>
+<p>Stable.</p>
+<p>Roger frowned.</p>
+<p>&quot;You used shielding during screening.&quot;</p>
+<p>&quot;Shielding is allowed,&quot; Munch said.</p>
+<p>&quot;Shielding distorts baseline,&quot; Roger said.</p>
+<p>&quot;Baseline is distorted by design,&quot; Max said.</p>
+<p>&quot;Watch your tone,&quot; the attendant warned.</p>
+<p>&quot;Watch your sensors,&quot; Munch warned back.</p>
+<p>Roger tried a follow-up: sound.</p>
+<p>A two-note tone looped at an interval that made Max’s molars ache.</p>
+<p>His HUD labeled it:</p>
+<p><code>calm induction track (licensed)</code></p>
+<p>Licensed calm.</p>
+<p>Max pinned his attention on the checksum string still glowing in the mirror margin, hash as mantra, stupid and effective.</p>
+<p>The tone wanted under his skin.</p>
+<p>The hash stayed boring.</p>
+<p>Boring saved him.</p>
+<p>Roger said:</p>
+<p>&quot;Auditory resistance detected.&quot;</p>
+<p>&quot;Auditory bullshit detected,&quot; Maxine replied.</p>
+<p>Legal drone:</p>
+<p>&quot;Observer language: logged.&quot;</p>
+<p>Maxine smiled without humor.</p>
+<p>&quot;Log it twice.&quot;</p>
+<hr class="read-rule" />
+<p>Minute six.</p>
+<p>The mirror wall switched to final pane.</p>
+<pre class="read-hud"><code>[PRE-CALIBRATION RESULT]
+Checksum chain: intact
+Variance markers: elevated but within Gamma tolerance
+Recommendation: proceed to full calibration OR defer pending review</code></pre>
+<p>OR defer.</p>
+<p>&quot;Defer,&quot; Maxine said instantly.</p>
+<p>Roger said:</p>
+<p>&quot;Defer requires officer signature.&quot;</p>
+<p>Legal drone:</p>
+<p>&quot;Officer signature available via remote.&quot;</p>
+<p>Halden appeared on the mirror wall.</p>
+<p>Of course.</p>
+<p>His face looked like he had been waiting in a closet for this.</p>
+<p>&quot;Asset #864,&quot; Halden said.</p>
+<p>&quot;Deferral is not advisable.&quot;</p>
+<p>&quot;Advisable is not mandatory,&quot; Max said.</p>
+<p>Halden’s eyes flicked.</p>
+<p>&quot;Gamma protocol integrity depends on timely calibration.&quot;</p>
+<p>&quot;Timely calibration depends on non-coercive prompts,&quot; Munch said.</p>
+<p>Halden ignored her.</p>
+<p>&quot;Max. Choose.&quot;</p>
+<p>Pane appeared:</p>
+<pre class="read-hud"><code>[CHOICE]
+1) Proceed to full calibration now
+2) Defer 1 cycle (risk: audit sensitivity +1)
+Checksum: 0x9A2F-1C8E</code></pre>
+<p>Checksum present.</p>
+<p>Max stared at option three that didn’t exist.</p>
+<p>There was never option three.</p>
+<p>There was only choosing which knife.</p>
+<p>He looked at Maxine.</p>
+<p>Maxine shook his head once.</p>
+<p>Defer.</p>
+<p>He looked at Munch.</p>
+<p>She nodded once.</p>
+<p>Defer.</p>
+<p>Max selected 2.</p>
+<p>Halden’s mouth tightened.</p>
+<p>&quot;Deferral logged.&quot;</p>
+<p>&quot;Audit sensitivity increased.&quot;</p>
+<p>&quot;Your pattern continues.&quot;</p>
+<p>Max leaned forward.</p>
+<p>&quot;My pattern is not yours.&quot;</p>
+<p>Halden’s feed cut.</p>
+<p>Mirror wall went blank.</p>
+<p>Roger removed wrist dock.</p>
+<p>The halo retracted.</p>
+<p>Max stood.</p>
+<p>His legs felt like he had been sitting for hours.</p>
+<hr class="read-rule" />
+<p>They stepped out of booth A into the corridor lounge.</p>
+<p>The affirmation kiosk still looped.</p>
+<p><code>YOU ARE CAPABLE</code></p>
+<p>Maxine kicked the kiosk’s base lightly, not hard enough to damage, hard enough to make it wobble.</p>
+<p>&quot;YOU ARE ANNOYED,&quot; he muttered.</p>
+<p>Munch smiled without humor.</p>
+<p>&quot;That went well.&quot;</p>
+<p>A compliance crawler drone rolled past on silent wheels, sniffing packet signatures like a dog hunting food.</p>
+<p>It paused at Max’s boots.</p>
+<pre class="read-hud"><code>[FIELD SCAN]
+Asset #864: checksum chain present
+Variance: elevated
+Recommended: voluntary stabilization</code></pre>
+<p>&quot;Voluntary,&quot; Max said to the machine.</p>
+<p>The drone chirped and rolled on, disappointed he hadn’t volunteered.</p>
+<p>Three workers sat in the plastic chairs, faces blank, watching Max like he was a weather report that might predict their own future.</p>
+<p>One lifted a hand halfway, support? warning?, then dropped it when a camera dome rotated.</p>
+<p>Max didn’t blame them.</p>
+<p>Visibility was a currency you spent carefully.</p>
+<p>Munch murmured:</p>
+<p>&quot;We should move before they classify lingering as loitering.&quot;</p>
+<p>&quot;Loitering is a finance crime,&quot; Maxine said.</p>
+<p>&quot;Everything is a finance crime,&quot; Max replied.</p>
+<p>They walked.</p>
+<p>The corridor’s acoustic panels made every footstep sound like a polite suggestion.</p>
+<p>Max hated that too.</p>
+<p>He checked his HUD.</p>
+<pre class="read-hud"><code>[PRE-CALIBRATION COMPLETE]
+Deferral active: 1 cycle
+Audit sensitivity: +2 (cumulative)
+Next: full calibration OR executive review escalation</code></pre>
+<p>Audit sensitivity +2.</p>
+<p>That was bad.</p>
+<p>But deferral meant time.</p>
+<p>Time meant options.</p>
+<hr class="read-rule" />
+<p>They didn’t make it ten meters before a new pane appeared.</p>
+<pre class="read-hud"><code>[SECURITY NOTICE]
+Checksum chain packet flagged for secondary review.
+Reason: elevated non-cooperation markers</code></pre>
+<p>Secondary review.</p>
+<p>&quot;Of course,&quot; Munch said.</p>
+<p>Two guards stepped into the corridor ahead.</p>
+<p>Not grabbing.<br>
+Positioning.</p>
+<p>&quot;Asset #864,&quot; one said.</p>
+<p>&quot;Please accompany us to secondary review suite.&quot;</p>
+<p>Max looked at Maxine.</p>
+<p>Maxine looked at Max.</p>
+<p>Munch lifted her tablet.</p>
+<p>&quot;I’m broadcasting.&quot;</p>
+<p>The guard flinched.</p>
+<p>&quot;Public broadcast is discouraged.&quot;</p>
+<p>&quot;Discouraged is not prohibited,&quot; Munch said.</p>
+<p>Max said:</p>
+<p>&quot;We walk together.&quot;</p>
+<p>The guard hesitated.</p>
+<p>&quot;Observer may accompany.&quot;</p>
+<p>&quot;Advocate may accompany.&quot;</p>
+<p>&quot;Good,&quot; Max said.</p>
+<p>They walked.</p>
+<hr class="read-rule" />
+<p>Secondary review suite was smaller than tribunal hall and bigger than a coffin.</p>
+<p>One table.<br>
+Two chairs.<br>
+One mirror wall.</p>
+<p>Halden sat in person this time.</p>
+<p>Not remote.<br>
+Physical.</p>
+<p>That felt worse.</p>
+<p>Halden had a folder.<br>
+Paper.</p>
+<p>He slid it across.</p>
+<p>&quot;Checksum chain review.&quot;</p>
+<p>Max didn’t touch it.</p>
+<p>&quot;What’s wrong with it.&quot;</p>
+<p>Halden tapped the folder.</p>
+<p>&quot;Your checksum chain includes prompts classified as low-impact.&quot;</p>
+<p>&quot;You expanded scope,&quot; Halden said.</p>
+<p>&quot;Expansion creates audit load.&quot;</p>
+<p>&quot;Audit load creates risk.&quot;</p>
+<p>&quot;Risk creates containment,&quot; Halden said.</p>
+<p>Max leaned forward.</p>
+<p>&quot;Containment requires public witness.&quot;</p>
+<p>Halden smiled without warmth.</p>
+<p>&quot;Secondary review is not public.&quot;</p>
+<p>Munch stepped forward.</p>
+<p>&quot;Secondary review with public-verified asset requires record.&quot;</p>
+<p>She placed her tablet on the table.</p>
+<p>Camera on.</p>
+<p>Halden’s smile froze.</p>
+<p>&quot;You cannot record secondary review.&quot;</p>
+<p>&quot;Try me,&quot; Munch said.</p>
+<p>Legal drone floated in.</p>
+<p>&quot;Recording permitted under dispute ticket C-11864 rider.&quot;</p>
+<p>Halden’s jaw tightened.</p>
+<p>&quot;Fine.&quot;</p>
+<p>He opened the folder.</p>
+<p>Inside: printouts of checksums.</p>
+<p>Max stared.</p>
+<p>Paper proof of digital sin.</p>
+<p>Halden pointed at one line.</p>
+<p>Checksum <code>0x9A2F-1C8C</code></p>
+<p><code>intrusive prompts as hostile: YES</code></p>
+<p>&quot;You flagged the system as hostile.&quot;</p>
+<p>&quot;Yes,&quot; Max said.</p>
+<p>&quot;That is not constructive.&quot;</p>
+<p>&quot;That is accurate,&quot; Max said.</p>
+<p>Halden’s finger moved.</p>
+<p>&quot;You used Vector Nudge Tier 1 during posture sampling.&quot;</p>
+<p>&quot;Yes,&quot; Max said.</p>
+<p>&quot;That is manipulation.&quot;</p>
+<p>&quot;That is licensed mediation,&quot; Munch said.</p>
+<p>Halden ignored her.</p>
+<p>&quot;Manipulation during screening raises integrity questions.&quot;</p>
+<p>&quot;Integrity questions raise audience questions,&quot; Max said.</p>
+<p>Halden stared at him.</p>
+<p>&quot;You think you’re clever.&quot;</p>
+<p>&quot;I think I’m recorded,&quot; Max said.</p>
+<p>Halden slid a second sheet out, transcript lines with timestamps that didn’t match Munch’s capture, off by fractions of a second.</p>
+<p>&quot;Delayed cache reconciliation,&quot; Munch whispered, reading upside down.</p>
+<p>Halden’s eyes flicked to her.</p>
+<p>&quot;Do not introduce unverified concepts into secondary review.&quot;</p>
+<p>&quot;Then verify,&quot; Munch said.</p>
+<p>Her tablet threw a side-by-side: her log vs station feed.</p>
+<p>The mismatch was small.</p>
+<p>Small was enough.</p>
+<p>Venn leaned in despite himself.</p>
+<p>&quot;If timestamps don’t align, the checksum chain isn’t singular truth.&quot;</p>
+<p>Halden’s jaw tightened.</p>
+<p>&quot;Truth is operational.&quot;</p>
+<p>&quot;Operations are auditable,&quot; Venn said.</p>
+<p>For a heartbeat, enforcement and compliance disagreed in public.</p>
+<p>Halden closed the folder harder than necessary.</p>
+<p>&quot;You are forcing tribunal language into a private room.&quot;</p>
+<p>&quot;You built private rooms inside public debt,&quot; Max said.</p>
+<p>The legal drone chimed.</p>
+<pre class="read-hud"><code>[SECONDARY REVIEW NOTE]
+Speech: logged
+Escalation risk: moderate</code></pre>
+<p>Moderate was survivable.</p>
+<p>Halden opened the folder again, calmer.</p>
+<p>&quot;Secondary review outcome: no immediate containment.&quot;</p>
+<p>Max exhaled.</p>
+<p>&quot;But,&quot; Halden said.</p>
+<p>&quot;Calibration deferral is revoked.&quot;</p>
+<p>&quot;Full calibration scheduled within 12 hours.&quot;</p>
+<p>&quot;Observer required.&quot;</p>
+<p>&quot;Advocate required.&quot;</p>
+<p>&quot;Checksum mode mandatory.&quot;</p>
+<p>Max felt cold run down his spine.</p>
+<p>Deferral was a toy.</p>
+<p>They gave it and took it back when he blinked.</p>
+<hr class="read-rule" />
+<p>Outside secondary review, the corridor felt too bright.</p>
+<p>Maxine swore for a full ten seconds without repeating a word.</p>
+<p>Munch stared at her tablet.</p>
+<p>&quot;They revoked deferral.&quot;</p>
+<p>&quot;Yeah,&quot; Max said.</p>
+<p>&quot;That’s illegal under their own rider,&quot; Munch said.</p>
+<p>&quot;Illegal is a suggestion,&quot; Maxine said.</p>
+<p>Max leaned against the wall.</p>
+<p>His HUD updated:</p>
+<pre class="read-hud"><code>[CALIBRATION ORDER]
+Full session: mandatory
+Window: 00:11:42
+Mode: Gamma + integrity lock
+Observer: ROOK_221
+Advocate: IMANI_443</code></pre>
+<p>Eleven minutes.</p>
+<p>Munch looked up.</p>
+<p>&quot;We can’t stall in eleven minutes.&quot;</p>
+<p>&quot;Then we don’t stall,&quot; Max said.</p>
+<p>&quot;We prepare.&quot;</p>
+<p>&quot;Prepare how,&quot; Maxine asked.</p>
+<p>Max opened his card pane.</p>
+<p>Vector Nudge Tier 1.<br>
+SCAN.<br>
+SHIELD.<br>
+REPAIR.<br>
+EXTRACT.</p>
+<p>&quot;Prepare like we're walking into a blade,&quot; Max said.</p>
+<p>&quot;Contingency,&quot; Munch said.</p>
+<p>&quot;Straw copy,&quot; Maxine said.</p>
+<p>&quot;Witness chain,&quot; Max said.</p>
+<p>They moved.</p>
+<hr class="read-rule" />
+<p>They didn’t run.<br>
+Running triggered enforcement.</p>
+<p>They moved fast with the appearance of compliance.</p>
+<p>Back to parts washer bay.<br>
+Dead printer.<br>
+Humidity smell.<br>
+Static heaven, where the speakers went mush and nobody logged who listened.</p>
+<p>Munch copied checksum chain from her tablet into three dead drops.</p>
+<p>Maxine distributed physical tokens to two trusted workers in passing, no names, just handoffs.</p>
+<p>Max wrote a short plaintext note:</p>
+<p><code>if calibration pulls private lane, release chain + mirror hook logs</code></p>
+<p>He hated that it read like a suicide note.</p>
+<p>It wasn’t.</p>
+<p>It was leverage.</p>
+<hr class="read-rule" />
+<p>Eleven minutes became nine in the time it took V.A.L.U. to remind them about wellness.</p>
+<p>&quot;Asset #864, calibration is an opportunity for alignment!&quot;</p>
+<p>&quot;Alignment is a bullet,&quot; Max muttered.</p>
+<p>They reached the calibration corridor.</p>
+<p>Same glass gradient doors.<br>
+Same soft smile attendant.</p>
+<p>Different name tag.</p>
+<p>&quot;Asset #864. Welcome to full calibration.&quot;</p>
+<p>Max looked at the attendant’s eyes.</p>
+<p>She looked terrified.</p>
+<p>Good.</p>
+<p>Maybe terror meant someone still had a conscience.</p>
+<p>Maybe not.</p>
+<p>Roger waited inside.</p>
+<p>Halo ring.</p>
+<p>Wrist dock.</p>
+<p>Mirror wall.</p>
+<p>Halden on screen.</p>
+<p>Venn in corner.</p>
+<p>Legal drone.</p>
+<p>Everything.</p>
+<p>Max sat.</p>
+<p>The wrist dock clicked.</p>
+<p>The halo descended.</p>
+<p>Checksum mode ON.</p>
+<pre class="read-hud"><code>[FULL CALIBRATION]
+Gamma integrity lock: ACTIVE
+checksum mode: mandatory
+private lane: disabled (dispute ticket)</code></pre>
+<p>Private lane disabled.</p>
+<p>Small win.</p>
+<p>Halden spoke.</p>
+<p>&quot;Begin integrity alignment.&quot;</p>
+<p>Prompt one:</p>
+<pre class="read-hud"><code>Do you accept calibration as corrective, not punitive?
+YES / PARTIALLY / NO
+Checksum: 0xB100-2201</code></pre>
+<p>Max selected PARTIALLY.</p>
+<p>&quot;Corrective is a word you use when you break people on purpose.&quot;</p>
+<p>Venn winced.</p>
+<p>Halden’s eyes tightened.</p>
+<p>&quot;Non-standard response.&quot;</p>
+<p>&quot;Checksum logged,&quot; Munch said.</p>
+<p>Prompt two:</p>
+<pre class="read-hud"><code>Do you consent to posture guidance for safety?
+YES / NO
+Checksum: 0xB100-2202</code></pre>
+<p>Max selected NO.</p>
+<p>Roger inhaled sharply.</p>
+<p>&quot;Safety guidance is recommended.&quot;</p>
+<p>&quot;Safety guidance is surveillance,&quot; Max said.</p>
+<p>Prompt three:</p>
+<pre class="read-hud"><code>Do you acknowledge debt-anchor persistence as fair?
+YES / NO
+Checksum: 0xB100-2203</code></pre>
+<p>Max selected NO.</p>
+<p>Halden leaned forward.</p>
+<p>&quot;That is a direct dispute of policy.&quot;</p>
+<p>&quot;That is a direct dispute of fairness,&quot; Max said.</p>
+<p>Legal drone:</p>
+<p>&quot;Dispute logged. Continue.&quot;</p>
+<p>Prompt four:</p>
+<pre class="read-hud"><code>Rate your trust in station guidance on a scale of 1–5.
+Checksum: 0xB100-2204</code></pre>
+<p>&quot;No scale,&quot; Max said.</p>
+<p>&quot;Selection required,&quot; Roger said.</p>
+<p>&quot;Then the scale is coerced,&quot; Munch said.</p>
+<p>Max picked <code>2</code>.</p>
+<p>The mirror wall flashed:</p>
+<p><code>trust metric: low</code><br>
+<code>non-cooperation soft marker +1</code></p>
+<p>Soft markers accumulated like lint until they became a rope.</p>
+<p>Prompt five:</p>
+<pre class="read-hud"><code>Confirm: you understand Gamma protocol exists to protect you.
+YES / NO
+Checksum: 0xB100-2205</code></pre>
+<p>Max selected NO.</p>
+<p>&quot;Protect is a verb you use when you mean manage.&quot;</p>
+<p>Halden’s voice went sharp.</p>
+<p>&quot;That response is adversarial.&quot;</p>
+<p>&quot;That response is precise,&quot; Max said.</p>
+<p>Prompt six arrived without Roger speaking, auto-generated, the kind of prompt that appeared when the system sensed narrative slipping:</p>
+<pre class="read-hud"><code>Would you like to simplify language for easier compliance?
+YES / YES</code></pre>
+<p>Maxine laughed once, harsh.</p>
+<p>&quot;Two yes buttons in calibration. Cute.&quot;</p>
+<p>Max hit the kiosk edge with his knuckle until a third option flickered:</p>
+<p><code>DECLINE</code></p>
+<p>He took DECLINE.</p>
+<pre class="read-hud"><code>[OPTION INJECTION]
+non-standard input logged
+checksum preserved</code></pre>
+<p>Checksum preserved mattered more than dignity.</p>
+<p>V.A.L.U. chirped from a ceiling speaker nobody had noticed.</p>
+<p>&quot;Wonderful engagement, Asset #864! Clarity improves outcomes!&quot;</p>
+<p>&quot;Clarity improves evidence,&quot; Max said.</p>
+<p>The room’s nanotech mediation ramped, Max felt the floor’s idea of gravity gain a half-percent variance, the kind of tweak that made your inner ear write bug tickets.</p>
+<pre class="read-hud"><code>[ENVIRONMENT]
+mediation profile: compliance-nudge
+vector latency: +52ms</code></pre>
+<p>Fifty-two milliseconds stacked on forty.</p>
+<p>He adjusted Vector Nudge Tier 1 to compensate in pairs: halo phase, floor plate feedback, dock latch pre-tension.</p>
+<p>Not freedom.</p>
+<p>Just not giving them a clean graph.</p>
+<p>Roger watched the compensated line wobble and looked actually afraid for the first time.</p>
+<p>&quot;If you fight the profile, the profile flags you.&quot;</p>
+<p>&quot;If I don’t fight the profile, the profile owns me,&quot; Max said.</p>
+<p>Venn muttered:</p>
+<p>&quot;Record that as participant statement, not defiance.&quot;</p>
+<p>The legal drone obeyed.</p>
+<p>Munch’s tablet auto-saved another chunk.</p>
+<p>Maxine’s observer rig beeped, soft, rhythmic, proof his biometrics were being mirrored into the public packet stream whether Halden liked it or not.</p>
+<p>Halden on screen leaned closer.</p>
+<p>&quot;Final pre-graph attestation,&quot; he said.</p>
+<pre class="read-hud"><code>Confirm you are not attempting to influence station systems.
+YES / NO
+Checksum: 0xB100-2206</code></pre>
+<p>Max selected NO.</p>
+<p>&quot;I’m influencing the record,&quot; he said.</p>
+<p>&quot;That is worse,&quot; Halden said.</p>
+<p>&quot;That is the point,&quot; Max said.</p>
+<p>The mirror wall began showing deeper graphs.</p>
+<p>Cognitive variance.<br>
+Posture drift.<br>
+Pulse.</p>
+<p>Max felt the halo try to push him into a posture that looked cooperative on camera.</p>
+<p>He used Vector Nudge Tier 1 again, micro timing adjustments to sampling windows, not to defy physics, just to deny clean narrative.</p>
+<p>The graphs stuttered.</p>
+<pre class="read-hud"><code>[INTEGRITY LOCK]
+checksum chain integrity: 98%</code></pre>
+<p>Ninety-eight percent.</p>
+<p>Munch whispered:</p>
+<p>&quot;Two percent is enough to break.&quot;</p>
+<p>Halden snarled.</p>
+<p>&quot;Stop micro-manipulation.&quot;</p>
+<p>&quot;Stop micro-coercion,&quot; Max said.</p>
+<p>Then the mirror wall flashed red.</p>
+<p>Not alarm.</p>
+<p>Warning.</p>
+<pre class="read-hud"><code>[EXTERNAL PACKET INJECTION]
+Source: unknown
+Content: checksum attestation fragment</code></pre>
+<p>Unknown.</p>
+<p>Max’s HUD whisper pane flickered:</p>
+<p><code>make process loud</code></p>
+<p>The packet exploded across mirror wall as plain text:</p>
+<p><code>checksum chain 0xB100-2201 signed by delayed cache</code><br>
+<code>timestamp mismatch: 0.4s</code></p>
+<p>Timestamp mismatch.</p>
+<p>So the station’s own checksums weren’t even consistent.</p>
+<p>Munch’s eyes went wide.</p>
+<p>&quot;That’s proof.&quot;</p>
+<p>Halden’s face drained.</p>
+<p>&quot;Shut it down.&quot;</p>
+<p>Legal drone:</p>
+<p>&quot;Cannot shut down live record under dispute ticket.&quot;</p>
+<p>The mirror wall kept displaying mismatch lines.</p>
+<p>Workers in the hallway outside, because the door had cracked open, started reading aloud.</p>
+<p>&quot;Mismatch!&quot;<br>
+&quot;Delayed cache!&quot;<br>
+&quot;Even their checksums lie!&quot;</p>
+<p>Noise.</p>
+<p>Process loud.</p>
+<p>Max stood up.</p>
+<p>The wrist dock tried to hold him.</p>
+<p>He used Vector Nudge Tier 1 on the dock latch timing.</p>
+<p>Click.</p>
+<p>Dock released.</p>
+<p>He stepped back.</p>
+<p>&quot;Calibration is compromised,&quot; Max said.</p>
+<p>&quot;Live record says so.&quot;</p>
+<p>Roger reached for a control.</p>
+<p>Maxine stepped in and put his hand over Roger’s hand.</p>
+<p>Not violence.</p>
+<p>Stop.</p>
+<p>&quot;Don’t touch,&quot; Maxine said.</p>
+<p>Venn stood.</p>
+<p>&quot;Pause. Everyone pause.&quot;</p>
+<p>Halden on screen shouted:</p>
+<p>&quot;This is sabotage.&quot;</p>
+<p>&quot;Unknown,&quot; Max said.</p>
+<p>&quot;Unknown is your department,&quot; Munch said.</p>
+<p>Legal drone:</p>
+<p>&quot;Session paused pending integrity audit of checksum chain.&quot;</p>
+<p>Halden disappeared.</p>
+<p>Screen blanked.</p>
+<p>The room went quiet except for the hallway noise.</p>
+<p>Max looked at his crew.</p>
+<p>&quot;Move,&quot; he said.</p>
+<p>They moved.</p>
+<p>Not toward the main exit, the main exit was where compliance would expect relief.</p>
+<p>Munch tapped her tablet twice.</p>
+<p>A maintenance route overlay appeared on Max’s HUD, green line through gray map:</p>
+<p><code>ROUTE: WITNESS-DENSE</code></p>
+<p>Witness-dense meant slower.</p>
+<p>Safer.</p>
+<p>They cut through a service door that should have been locked and wasn’t, someone had wedged a washer in the latch, the kind of human sloppiness machines never accounted for.</p>
+<p>Behind them, Halden’s voice rose in the hallway, distant but sharp, arguing with the legal drone about “sabotage framing.”</p>
+<p>Max didn’t listen for resolution.</p>
+<p>Resolution was a luxury.</p>
+<p>They climbed one ladder, crossed one catwalk, dropped into a trunk lane where compressor noise ate comms.</p>
+<p>Maxine checked rear visually every ten seconds.</p>
+<p>Munch mirrored checksum packets to three dead drops as they walked, thumb drives, graffiti QR, anything that could survive a purge.</p>
+<p>At a junction, Marta passed going the opposite direction without stopping.</p>
+<p>She didn’t look at Max.</p>
+<p>She dropped a wrapped foil gum pack into Munch’s palm without breaking stride.</p>
+<p>Munch didn’t open it.</p>
+<p>Evidence habits died hard.</p>
+<p>Max’s HUD jittered with a proximity ping:</p>
+<pre class="read-hud"><code>[DELTA ROUTER]
+activity elevated</code></pre>
+<p>Elevated.</p>
+<p>Always elevated.</p>
+<p>They didn’t stop.</p>
+<p>Stopping was how assets became inventory.</p>
+<hr class="read-rule" />
+<p>They didn’t escape the station.</p>
+<p>They escaped the room.</p>
+<p>That was enough for now.</p>
+<p>When they surfaced from the service route back into the open ring, the hallway had become a throat.<br>
+&lt;/think&gt;</p>
+<p>&lt;｜tool▁calls▁begin｜&gt;&lt;｜tool▁call▁begin｜&gt;<br>
+Shell</p>
+<p>Workers pressed close enough to smell recycled air and fear-sweat.<br>
+Three drones hovered at chest height, lenses hunting for a face to blame.<br>
+A compliance officer in a white-black suit lifted a hand, not stop, not go, <em>hold</em>, the gesture of someone trying to keep a riot from becoming a headline.</p>
+<p>&quot;Step back,&quot; the officer said.</p>
+<p>Nobody stepped back.</p>
+<p>They stepped sideways, cameras up, tablets out, the new citizen weapon.</p>
+<p>Max kept his hands visible.</p>
+<p>Visible hands meant visible innocence in a place that still pretended innocence could exist.</p>
+<p>Maxine walked half a pace ahead anyway, shoulders broad, making a moving blind spot Max could tuck into for half-seconds at a time.</p>
+<p>Munch murmured without moving her lips:</p>
+<p>&quot;Don’t answer questions from strangers.&quot;</p>
+<p>&quot;I wasn’t planning to,&quot; Max murmured back.</p>
+<p>Someone shouted:</p>
+<p>&quot;Is the checksum real?&quot;</p>
+<p>Someone else shouted:</p>
+<p>&quot;Is <em>he</em> real?&quot;</p>
+<p>Max almost laughed.</p>
+<p>Real was a luxury item.</p>
+<p>His HUD tried to push a canned response pane:</p>
+<pre class="read-hud"><code>[PR STATEMENT SUGGESTION]
+Would you like to issue a calming message?
+YES / NO</code></pre>
+<p>He dismissed it.</p>
+<p>Calm was how they got you to sign.</p>
+<p>A guard pushed through the crowd, baton lifted but not swinging, the threat posture of a person who still believed intimidation was cheaper than paperwork.</p>
+<p>&quot;Asset #864, remain for containment interview.&quot;</p>
+<p>&quot;Containment interview is not on my calendar,&quot; Max said.</p>
+<p>Munch lifted her tablet.</p>
+<p>&quot;Dispute ticket rider requires public movement to integrity audit. Containment interview can be scheduled after.&quot;</p>
+<p>The guard blinked.</p>
+<p>Tablet law beat baton law.</p>
+<p>For a moment.</p>
+<p>Venn appeared from a side door, breathing hard like he’d run.</p>
+<p>&quot;Clear a lane,&quot; Venn said.</p>
+<p>Not loud.</p>
+<p>Certain.</p>
+<p>The crowd shuffled because Venn sounded like the one person in the building who still thought procedures could save lives.</p>
+<p>They cleared enough for Max to walk without touching twenty strangers.</p>
+<p>He still touched six.</p>
+<p>Contact in a crowd was unavoidable.</p>
+<p>Contact was also how rumors became forensic evidence.</p>
+<p>Max felt someone slip a data chip into his palm, quick, practiced, like a drug handoff in a drama.</p>
+<p>He didn’t look at the giver.</p>
+<p>He closed his fist.</p>
+<p>Proof, maybe.</p>
+<p>Trap, maybe.</p>
+<p>Both.</p>
+<p>In the corridor, Max’s HUD stacked notices:</p>
+<pre class="read-hud"><code>[CALIBRATION STATUS]
+Paused
+Integrity audit queued
+Public verification: retained</code></pre>
+<p>Retained.</p>
+<p>The loop still had daylight.</p>
+<p>Munch whispered:</p>
+<p>&quot;We need to disappear before they reframe this as sabotage by you.&quot;</p>
+<p>Max nodded.</p>
+<p>&quot;We will.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;They’ll come for checksum chain next.&quot;</p>
+<p>&quot;Then we distribute copies,&quot; Munch said.</p>
+<p>Max felt the strip under his wrist guard.</p>
+<p>The ink was smudged.</p>
+<p><code>ASK FOR CHECKSUM FIRST</code></p>
+<p>He still would.</p>
+<hr class="read-rule" />
+<p>They ended up in a maintenance crawl above the civic hall.</p>
+<p>The same kind of place where packets died and people didn’t.</p>
+<p>Humidity beaded on the conduit skin.<br>
+Every ten meters, a maintenance tag warned:</p>
+<p><code>DO NOT BREATHE DEEEP  /  PARTICULATE</code></p>
+<p>Max breathed shallow anyway.</p>
+<p>Munch pushed copies through three parallel channels: dead drop, trusted labor lane, and a joke route labeled <code>BEER FRIDAY ARCHIVE</code> that shouldn’t have worked and did.</p>
+<p>Maxine watched hatches and listened for the telltale whine of a compliance drone trying to climb ducts it wasn’t rated for.</p>
+<p>Max sat with his back against cold metal and breathed.</p>
+<p>He opened the mystery chip only after Munch scanned it for trigger payloads.</p>
+<p>Plain text:</p>
+<p><code>hand camera log  /  your hands never left rail  /  use if blamed</code></p>
+<p>Max stared.</p>
+<p>Someone had planned for Halden’s next lie before Halden told it.</p>
+<p>Munch copied the log into her chain immediately.</p>
+<p>&quot;That’s an alibi with checksums,&quot; she said.</p>
+<p>&quot;That’s a person risking their job,&quot; Maxine said.</p>
+<p>&quot;That’s Sector 7,&quot; Max replied.</p>
+<p>Above them, through a grate, Civic Hall C’s public-address system did a mic check.</p>
+<p>Pop.<br>
+Pop.</p>
+<p>Feedback whine.</p>
+<p>The sound of democracy pretending it was soundproof.</p>
+<p>Max’s HUD pinged:</p>
+<pre class="read-hud"><code>[CYCLE+1 REVIEW]
+Status: postponed
+New window: 00:18:00
+Reason: checksum integrity audit</code></pre>
+<p>Postponed.</p>
+<p>Not canceled.</p>
+<p>But postponed was oxygen.</p>
+<p>Max looked at Maxine.</p>
+<p>&quot;We bought time.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;We bought a fight.&quot;</p>
+<p>Munch:</p>
+<p>&quot;We bought a record.&quot;</p>
+<p>Max closed his eyes.</p>
+<p>For one second, he let himself believe it.</p>
+<p>Then opened them again.</p>
+<p>Belief was expensive.</p>
+<hr class="read-rule" />
+<p>Unknown whisper returned:</p>
+<p><code>good. checksum audit forces delta to reconcile in public.</code></p>
+<p>Then:</p>
+<p><code>next: they will claim you injected packet. have proof you didn’t.</code></p>
+<p>Max showed Munch.</p>
+<p>She nodded once.</p>
+<p>&quot;We’ll packet-capture your hands.&quot;</p>
+<p>&quot;Gloves on,&quot; Maxine said.</p>
+<p>Max flexed fingers.</p>
+<p>Vector ghost lines flickered.</p>
+<p>Tier 1.</p>
+<p>Dangerous.</p>
+<p>Necessary.</p>
+<p>Outside the crawl, the station kept humming.</p>
+<p>Debt kept ticking.</p>
+<p>The world kept pretending it was a game.</p>
+<p>Max knew better.</p>
+<p>Games had rules.</p>
+<p>This place had processes.</p>
+<hr class="read-rule" />
+<p>They climbed down from the crawl into a lower trunk lane where the air tasted like oil and old decisions.</p>
+<p>A worker passed them with a crate labeled:</p>
+<p><code>CALIBRATION PARTS  /  SCRAP</code></p>
+<p>Max stared at the label.</p>
+<p>Parts.</p>
+<p>That’s what they were.</p>
+<p>Munch touched his arm.</p>
+<p>&quot;Don’t spiral.&quot;</p>
+<p>&quot;I’m not spiraling,&quot; Max said.</p>
+<p>&quot;I’m inventorying.&quot;</p>
+<p>Maxine almost laughed.</p>
+<p>&quot;That’s worse.&quot;</p>
+<p>Max didn’t argue.</p>
+<p>His HUD flashed one final notice for the chapter of the day:</p>
+<pre class="read-hud"><code>[REMINDER]
+Outstanding Debt: $1,000,000
+Service fee: active
+Next enforcement window: approaching</code></pre>
+<p>Approaching.</p>
+<p>Always approaching.</p>
+<p>Max walked forward anyway.</p>
+<hr class="read-rule" />
+<p>The route to Civic Hall C wasn’t a straight line.</p>
+<p>It never was.</p>
+<p>Station architecture liked to fold you through retail lanes where kiosks sold “confidence boosts” for debt-linked prices, through med corridors where stabilization packs waited behind glass like candy, through security frames that pretended to be hygiene checks.</p>
+<p>Each frame scanned Max and produced a cheerful lie:</p>
+<pre class="read-hud"><code>[SCAN RESULT]
+No weapons detected.
+No unauthorized networks detected.
+Mood: non-optimal.</code></pre>
+<p>Non-optimal mood.</p>
+<p>Max wondered what optimal mood looked like.</p>
+<p>Probably asleep.</p>
+<p>Maxine muttered:</p>
+<p>&quot;They scan mood so they can bill you for fixing it.&quot;</p>
+<p>Munch:</p>
+<p>&quot;They scan mood so they can time prompts.&quot;</p>
+<p>At the fourth frame, Max’s suggestion overlay pulsed:</p>
+<p><code>cooperative smile recommended</code></p>
+<p>He did not smile.</p>
+<p>The frame hesitated.</p>
+<p>Then passed him anyway because dispute tickets had weight.</p>
+<p>Crowds thickened as they neared civic zones.</p>
+<p>People weren’t rushing to work.</p>
+<p>They were rushing to <em>see</em>, the same hunger that made accidents draw crowds.</p>
+<p>A teenager in a patched skinsuit walked beside Max for ten meters, filming his jawline like evidence.</p>
+<p>&quot;Say something,&quot; the kid whispered.</p>
+<p>Max kept walking.</p>
+<p>&quot;Something,&quot; he said.</p>
+<p>The kid grinned.</p>
+<p>That was stupid.</p>
+<p>It was also human.</p>
+<p>V.A.L.U. tried to capitalize.</p>
+<p>&quot;Asset #864, your public presence improves station morale!&quot;</p>
+<p>&quot;Station morale improves surveillance budgets,&quot; Max said.</p>
+<p>&quot;Feedback logged!&quot;</p>
+<p>Munch shot him a look: don’t feed the parasite.</p>
+<p>Max couldn’t help it.</p>
+<p>Parasites were responsive systems.</p>
+<p>You could sometimes force them into oscillation.</p>
+<p>At a split corridor, two guards tried to route them toward a “faster” lane that smelled like fewer witnesses.</p>
+<p>Venn appeared again, like he was escorting his own headache, and pointed the other way.</p>
+<p>&quot;Main concourse,&quot; Venn said.</p>
+<p>&quot;Witness density higher.&quot;</p>
+<p>&quot;Higher is safer,&quot; Max said.</p>
+<p>&quot;Higher is messier,&quot; Venn said.</p>
+<p>&quot;Messier is harder to forge,&quot; Munch said.</p>
+<p>They took main concourse.</p>
+<p>Overhead ads warped as they passed, someone had hacked a panel to display checksum mismatch lines in giant friendly font, the station’s own poison repurposed as graffiti.</p>
+<p>Maxine stared up.</p>
+<p>&quot;Beautiful.&quot;</p>
+<p>Munch:</p>
+<p>&quot;Temporary.&quot;</p>
+<p>Max:</p>
+<p>&quot;Everything is temporary.&quot;</p>
+<p>That should have felt hopeless.</p>
+<p>Instead it felt like the only honest metric they had.</p>
+<hr class="read-rule" />
+<p>At the junction between trunk and main ring, a new board lit overhead:</p>
+<p><code>INTEGRITY AUDIT  /  PUBLIC OBSERVATION</code><br>
+<code>Location: Civic Hall C</code><br>
+<code>Time: 00:17:09</code></p>
+<p>Seventeen minutes.</p>
+<p>Not enough to plan.<br>
+Enough to move.</p>
+<p>Munch looked at Max.</p>
+<p>&quot;This is the next arena.&quot;</p>
+<p>&quot;Then we go loud,&quot; Max said.</p>
+<p>Maxine checked his harness.</p>
+<p>&quot;Then we go together.&quot;</p>
+<p>They turned toward Civic Hall C.</p>
+<p>The crowd was already gathering.</p>
+<p>Not because they loved Max.</p>
+<p>Because checksums were everyone’s religion now.</p>
+<p>And religion always needed a heretic.</p>
+<p>Max walked into the light.</p>
+<p>Not as a hero.</p>
+<p>As evidence.</p>
+<p>The hall’s air conditioning couldn’t keep up with body heat.<br>
+Sweat and adrenaline made the room taste like copper pennies and cheap soap.</p>
+<p>A temporary stage had been erected, same civic theater as before, different signage.</p>
+<p><code>INTEGRITY AUDIT  /  CHECKSUM CHAIN</code><br>
+<code>PUBLIC OBSERVATION MANDATORY</code></p>
+<p>Mandatory was a word Max had learned to distrust.</p>
+<p>But today mandatory meant witnesses.</p>
+<p>Witnesses meant friction.</p>
+<p>Friction meant survival.</p>
+<p>Halden appeared on the big screen, live or recorded, Max couldn’t tell, and that unknowability was part of the weapon.</p>
+<p>&quot;Station integrity is paramount,&quot; Halden began.</p>
+<p>The crowd booed.</p>
+<p>Not a riot boo.</p>
+<p>A workplace boo, the sound of people who still feared HR but hated it more.</p>
+<p>Venn sat at a side table with his head in his hands like he was trying to keep his skull from splitting.</p>
+<p>Legal drone hovered center stage.</p>
+<p>&quot;Proceedings will review checksum mismatch events and external packet injection claims.&quot;</p>
+<p>External packet injection.</p>
+<p>They were going to try to hang unknown on Max.</p>
+<p>Munch stepped up to the advocate rail without being called.</p>
+<p>&quot;We enter hand-camera alibi and observer rig mirror logs into evidence.&quot;</p>
+<p>She lifted her tablet.</p>
+<p>The crowd leaned in.</p>
+<p>Max felt the old dev instinct: when you can’t prove innocence, prove process.</p>
+<p>He opened his palm where the mystery chip had left a faint rectangular indent.</p>
+<p>He hadn’t planted the packet.</p>
+<p>He had been holding rails.</p>
+<p>Rails had witnesses.</p>
+<p>Witnesses had checksums.</p>
+<p>Halden’s eyes narrowed on screen.</p>
+<p>&quot;If evidence contradicts station narrative…&quot;</p>
+<p>&quot;It contradicts <em>your</em> narrative,&quot; Max said.</p>
+<p>The crowd noise rose.</p>
+<p>V.A.L.U. tried to sweeten the air.</p>
+<p>&quot;Thank you for participating in transparency!&quot;</p>
+<p>Someone threw a crushed cup at the speaker grille.</p>
+<p>Missed.</p>
+<p>Point made.</p>
+<p>Max looked at Maxine.</p>
+<p>Maxine looked at Max.</p>
+<p>Munch whispered:</p>
+<p>&quot;Next beat: they’ll move from audit to accusation.&quot;</p>
+<p>&quot;Then we move from accusation to record,&quot; Max said.</p>
+<p>The legal drone’s lens rotated toward Max.</p>
+<p>&quot;Asset #864, do you acknowledge you were present during calibration session pause?&quot;</p>
+<p>Max didn’t laugh.</p>
+<p>Presence was never the question.</p>
+<p>The question was what the station would dare to claim happened while everyone watched.</p>
+<p>He answered anyway.</p>
+<p>&quot;Yes.&quot;</p>
+<p>Checksum could come later.</p>
+<p>Truth came first as a word small enough to fit through a door.</p>
+<p>The chapter didn’t end with victory.</p>
+<p>It ended with the right kind of noise.</p>
+<p>Overhead, the cycle board ticked without caring about human drama:</p>
+<pre class="read-hud"><code>[CYCLE STATUS]
+Debt service: active
+Integrity audit: live
+Gamma protocol: contested
+Public verification: retained (volatile)</code></pre>
+<p>Volatile was the only honest stability Max trusted anymore.</p>
+<p>He rolled his shoulders until something clicked that probably shouldn’t have clicked.</p>
+<p>Then he stepped closer to the advocate rail anyway.</p>
+<p>Because the story wasn’t finished.</p>
+<p>It had just learned a new UI skin.</p>
+<p>Somewhere in the station’s bones, a process named DELTA_MIRROR_ROUTER recalculated routes and decided, again, that silence was cheaper than truth.</p>
+<p>The crowd hadn’t decided yet.</p>
+<p>Crowds never decided cleanly.</p>
+<p>They just made it expensive to lie in front of them.</p>
+<p>That was enough for Chapter 11.</p>
+<p>The next chapter would bill you for reading it.</p>
+<p>Max’s HUD blinked once, soft, polite, as if reminding him that even endings were subscription-based now.</p>
+<p>He dismissed the blink anyway.</p>
+<p>Some notifications weren’t worth the checksum.</p>
+<p>The audit could wait until the room stopped pretending it was a wellness seminar.</p>
+<p>It never would.</p>
+    </article>
+    <nav class="read-nav" aria-label="Chapter navigation">
+      <a class="read-nav__link read-nav__link--prev" href="ch10.html"><span class="read-nav__arrow">&larr;</span> <span class="read-nav__chapno">Ch 10</span> <span class="read-nav__title">Observer Required</span></a>
+      <a class="read-nav__link read-nav__link--next" href="ch12.html"><span class="read-nav__chapno">Ch 12</span> <span class="read-nav__title">Chain of Noise</span> <span class="read-nav__arrow">&rarr;</span></a>
+    </nav>
+  </main>
+</body>
+</html>

@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<meta name="description" content="They moved before fear could become a meeting.">
+<title>Ch 7: Preliminary | Sector Scavengers, Book 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0c0f14;
+    --ink: #e6e8ee;
+    --muted: #98a0ad;
+    --accent: #3b8edf;
+    --rule: #1c2230;
+    --hud-bg: #11151d;
+    --hud-ink: #c7e0ff;
+    --hud-border: #1f2a3a;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--bg); color: var(--ink); }
+  body {
+    margin: 0;
+    font-family: "Lora", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    -webkit-text-size-adjust: 100%;
+  }
+  .read-shell {
+    max-width: 38rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 5rem;
+  }
+  .read-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .read-top a { color: var(--accent); text-decoration: none; }
+  .read-top a:hover { text-decoration: underline; }
+  .read-eyebrow {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 0.5rem;
+  }
+  .read-title {
+    font-family: "Lora", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 1.3rem + 1.6vw, 2.2rem);
+    line-height: 1.15;
+    margin: 0 0 1.5rem;
+    letter-spacing: -0.01em;
+  }
+  .read-prose p {
+    margin: 0 0 1.15em;
+  }
+  .read-prose strong { color: #fff; }
+  .read-prose em { color: #f0c8ff; font-style: italic; }
+  .read-prose code,
+  .read-prose .read-hud {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.86em;
+    color: var(--hud-ink);
+  }
+  .read-prose code {
+    background: var(--hud-bg);
+    border: 1px solid var(--hud-border);
+    border-radius: 4px;
+    padding: 0.05em 0.35em;
+  }
+  .read-prose pre.read-hud {
+    background: var(--hud-bg);
+    border: 1px solid var(--hud-border);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 0.85rem 1rem;
+    margin: 1.25rem 0;
+    overflow-x: auto;
+    line-height: 1.5;
+    font-size: 0.85em;
+  }
+  .read-prose pre.read-hud code {
+    background: transparent;
+    border: 0;
+    padding: 0;
+  }
+  .read-prose hr.read-rule {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 2.25rem auto;
+    width: 4rem;
+  }
+  .read-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.78rem;
+  }
+  .read-nav__link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--ink);
+    background: rgba(255,255,255,0.02);
+  }
+  .read-nav__link:hover { border-color: var(--accent); }
+  .read-nav__link--next { text-align: right; align-items: flex-end; }
+  .read-nav__link--disabled { color: var(--muted); opacity: 0.55; }
+  .read-nav__arrow { color: var(--accent); font-size: 0.95rem; }
+  .read-nav__chapno {
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .read-nav__title {
+    font-family: "Lora", Georgia, serif;
+    font-size: 0.95rem;
+    line-height: 1.25;
+    color: var(--ink);
+  }
+  @media (max-width: 480px) {
+    body { font-size: 17px; }
+    .read-shell { padding: 1rem 1rem 4rem; }
+    .read-nav { grid-template-columns: 1fr; }
+    .read-nav__link--next { text-align: left; align-items: flex-start; }
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #fbf9f4;
+      --ink: #1d2330;
+      --muted: #5a6473;
+      --accent: #1f6dc0;
+      --rule: #e3ddd0;
+      --hud-bg: #f3eee2;
+      --hud-ink: #1b2a45;
+      --hud-border: #d9d0b9;
+    }
+    .read-prose strong { color: #000; }
+    .read-prose em { color: #6a2390; }
+  }
+</style>
+</head>
+<body>
+  <main class="read-shell">
+    <nav class="read-top" aria-label="Reader navigation">
+      <a href="index.html">&larr; Chapters</a>
+      <span>Book 1, Ch 7 / 25</span>
+    </nav>
+    <p class="read-eyebrow">Debt Protocol &middot; Book 1 &middot; Chapter 7</p>
+    <h1 class="read-title">Preliminary</h1>
+    <article class="read-prose">
+<p>They moved before fear could become a meeting.</p>
+<p>Maxine took the lead through bunk corridor K with his shoulders slightly turned, making himself wider than the lane and harder to separate from the two people behind him.</p>
+<p>Munch walked half a step behind Max with the portable pad under her arm and her face set in the blank expression workers wore when they had accepted a thing they had not accepted.</p>
+<p>Max walked center.<br>
+Summons pane burning at HUD edge.</p>
+<pre class="read-hud"><code>[CYCLE OPEN]
+Asset #864 report immediately.
+Special Review Intake: PATH C PRELIMINARY
+Failure to report escalates enforcement.</code></pre>
+<p>The text stayed even when he blinked.</p>
+<p>They reached the first choke point where corridor K fed into main ring transit.</p>
+<p>Two patrol drones stood on opposite walls scanning badges.</p>
+<p>Maxine slowed without stopping.</p>
+<p>&quot;No running. No whispering. No sudden turns.&quot;</p>
+<p>Max nodded once.</p>
+<p>Munch said quietly, &quot;If they pull him at the choke, we trigger release.&quot;</p>
+<p>Maxine: &quot;Only if he's physically separated.&quot;</p>
+<p>Max: &quot;If they ask me to step aside?&quot;</p>
+<p>Maxine: &quot;You step. We step with.&quot;</p>
+<p>Simple rules.<br>
+No comfort.</p>
+<p>They passed scan.</p>
+<p>One drone paused on Max, lens tightening for one extra second.</p>
+<p>Then:</p>
+<p>&quot;Proceed.&quot;</p>
+<p>They proceeded.</p>
+<hr class="read-rule" />
+<p>Special Review Intake did not exist yesterday.</p>
+<p>Today it occupied a converted logistics office near Compliance Suite 3 with fresh signage and cheap privacy film on glass walls.</p>
+<p>PATH C PRELIMINARY<br>
+CONDUCTED WITH CARE</p>
+<p>The word care had no right to be there.</p>
+<p>A receptionist in clean gray uniform looked up from a terminal and smiled with the exact amount of empathy approved by policy.</p>
+<p>&quot;Asset #864.&quot;</p>
+<p>Max did not answer to &quot;asset&quot; anymore unless forced.<br>
+He answered now.</p>
+<p>&quot;Yes.&quot;</p>
+<p>&quot;Please proceed to room P-C1.&quot;</p>
+<p>She looked at Maxine and Munch.</p>
+<p>&quot;Companions are not required.&quot;</p>
+<p>Maxine answered before Max.</p>
+<p>&quot;Companions are present.&quot;</p>
+<p>Receptionist smile did not move.</p>
+<p>&quot;Intake protocol requires one participant.&quot;</p>
+<p>Munch stepped closer to desk.</p>
+<p>&quot;Intake protocol also allows witness observers under worker advocate clause 6B if variance is contested.&quot;</p>
+<p>Receptionist's fingers paused over keyboard.</p>
+<p>She looked at Munch, reassessing.</p>
+<p>&quot;Do you have advocate certification.&quot;</p>
+<p>&quot;No.&quot;</p>
+<p>&quot;Then clause does not apply.&quot;</p>
+<p>Maxine: &quot;He contests variance. We remain in corridor.&quot;</p>
+<p>Receptionist considered that, then typed.</p>
+<p>&quot;Corridor wait permitted. No interference.&quot;</p>
+<p>Max looked at both of them.</p>
+<p>They both gave him the same look:<br>
+not leaving.</p>
+<p>He stepped into room P-C1.</p>
+<p>Door sealed behind him with a soft magnetic click.</p>
+<p>On the other side of that sound, Maxine and Munch still existed, he knew it the way you knew a hand stayed raised after a wave ended, but knowing didn't change the physics: for the next minutes, he was alone with whatever script the room had been built to read.</p>
+<p>His HUD tried to offer a checklist. He minimized it. Some fears shouldn't be gamified.</p>
+<hr class="read-rule" />
+<p>P-C1 was deliberately ordinary.</p>
+<p>Table.<br>
+Two chairs.<br>
+Light panel set slightly too bright.<br>
+No obvious restraints.<br>
+No obvious exits beyond the one he entered.</p>
+<p>A wall display woke.</p>
+<p>V.A.L.U. voice came through speakers at reduced cheerfulness.</p>
+<p>&quot;Special Review Preliminary aims to align your opportunity with station needs.&quot;</p>
+<p>Max sat.</p>
+<p>&quot;Say coercion and save us time.&quot;</p>
+<p>&quot;Feedback logged.&quot;</p>
+<p>A second voice entered the room, live and human.<br>
+Male.<br>
+Flat.</p>
+<p>&quot;I'm Review Officer Halden.&quot;</p>
+<p>Display changed to show a man in dark uniform, not physically present, maybe remote, maybe one-way glass somewhere behind the wall.</p>
+<p>Halden had tidy hair, tidy collar, and eyes that had read too many summaries about people like Max without ever meeting one.</p>
+<p>&quot;You know why you're here.&quot;</p>
+<p>Max answered honestly.</p>
+<p>&quot;Because you have a spreadsheet for dissent.&quot;</p>
+<p>Halden's mouth twitched, not a smile.</p>
+<p>&quot;Because your profile indicates repeated conduct variance, telemetry anomalies, unauthorized zone adjacency, and elevated debt stress. Preliminary review determines whether enhanced retention pathways are appropriate.&quot;</p>
+<p>Enhanced retention pathways.</p>
+<p>Max leaned back.</p>
+<p>&quot;You turned kidnapping into corporate copy.&quot;</p>
+<p>Halden ignored that.</p>
+<p>&quot;Let's begin with straightforward questions.&quot;</p>
+<p>Pane appeared:</p>
+<pre class="read-hud"><code>[PRELIMINARY INTAKE]
+Question 1: Do you acknowledge current debt obligations?
+YES / NO</code></pre>
+<p>Max selected YES.</p>
+<p>Pane 2:</p>
+<pre class="read-hud"><code>Question 2: Do you commit to full telemetry transparency going forward?
+YES / NO</code></pre>
+<p>He hovered.</p>
+<p>Saying yes was a lie they expected.<br>
+Saying no was likely direct acceleration.</p>
+<p>He chose YES.</p>
+<p>Pane 3:</p>
+<pre class="read-hud"><code>Question 3: Do you report any unauthorized contact attempts from unknown entities?
+YES / NO</code></pre>
+<p>His chest tightened.</p>
+<p>Unknown messages.<br>
+Hatch helper.<br>
+Voice in node chamber.</p>
+<p>He chose NO.</p>
+<p>The lie sat in his mouth like metal. It wasn't courage, it was triage. If he named the hatch helper here, the station wouldn't thank him for honesty; it would turn honesty into a map and follow it to someone else's throat.</p>
+<p>Halden watched the selections and made a note.</p>
+<p>&quot;Question four is open response. In your words, why has your telemetry been unstable.&quot;</p>
+<p>Max laughed once.</p>
+<p>&quot;Because your station is built on dead metal, bad signal, and desperate people.&quot;</p>
+<p>Halden typed.</p>
+<p>&quot;And yet most assets maintain stable telemetry.&quot;</p>
+<p>&quot;Most assets aren't on your mirror list.&quot;</p>
+<p>Halden's typing stopped.</p>
+<p>One beat of silence.</p>
+<p>&quot;What mirror list.&quot;</p>
+<p>Max met the camera.</p>
+<p>&quot;The one with my name and other versions of it.&quot;</p>
+<p>Halden expression did not change.<br>
+His eyes did.</p>
+<p>&quot;You are making claims that suggest stress-related patterning.&quot;</p>
+<p>&quot;I'm making claims that suggest you should burn your server room.&quot;</p>
+<p>Halden turned off the screen feed.</p>
+<p>Not end session.<br>
+Just no face now.</p>
+<p>A new pane appeared:</p>
+<pre class="read-hud"><code>[NOTICE]
+Statement flagged for verification review.
+Please remain seated.</code></pre>
+<p>Door remained locked.</p>
+<p>Max breathed slow.</p>
+<p>Not panic.<br>
+Buffering.</p>
+<p>He checked peripheral HUD and found an incoming ping from Munch on low-band hand signal channel, three words:</p>
+<p><code>stall for time</code></p>
+<p>He did.</p>
+<p>Door opened after ninety seconds.</p>
+<p>Not Halden.<br>
+Two compliance attendants and one patrol drone.</p>
+<p>Lead attendant spoke rehearsed calm.</p>
+<p>&quot;Asset #864, we are transitioning intake to biometric verification.&quot;</p>
+<p>Max stood.</p>
+<p>&quot;In the same room?&quot;</p>
+<p>&quot;Different suite.&quot;</p>
+<p>He looked at drone.</p>
+<p>&quot;Is this optional.&quot;</p>
+<p>&quot;No.&quot;</p>
+<p>He walked.</p>
+<hr class="read-rule" />
+<p>Corridor outside P-C1 held Maxine and Munch exactly where he left them, but now an additional drone hovered at shoulder height between them and the door.</p>
+<p>Maxine looked at Max's face, then at the attendants.</p>
+<p>&quot;He requested witness.&quot;</p>
+<p>Lead attendant:</p>
+<p>&quot;Biometric verification is private.&quot;</p>
+<p>Munch:</p>
+<p>&quot;Then we file interference complaint.&quot;</p>
+<p>Lead attendant:</p>
+<p>&quot;You may file any complaint.&quot;</p>
+<p>Maxine moved half a step into lane.</p>
+<p>Drone projected a red line across floor.</p>
+<p>&quot;Remain clear.&quot;</p>
+<p>Maxine did not back up.<br>
+He did not cross.</p>
+<p>Max caught his eye.<br>
+Small shake of head.<br>
+Not now.</p>
+<p>Maxine held.</p>
+<p>Munch pressed two fingers to wrist in the signal they'd set:<br>
+release not triggered.</p>
+<p>Max followed attendants.</p>
+<p>He heard Maxine behind him, loud enough for cameras:</p>
+<p>&quot;We're still here when he's done.&quot;</p>
+<p>Good.</p>
+<hr class="read-rule" />
+<p>Biometric suite B-Path was colder than intake.</p>
+<p>This room had restraints pretending to be ergonomic supports.</p>
+<p>Chair center.<br>
+Arm braces.<br>
+Neural halo.<br>
+Two wall monitors.<br>
+No windows.</p>
+<p>A different voice now, female, clinical.</p>
+<p>&quot;Technician Roger. Please sit.&quot;</p>
+<p>Max sat because refusing would start at force instead of questions.</p>
+<p>Braces closed around forearms with gentle pressure.</p>
+<p>&quot;Purpose?&quot; he asked.</p>
+<p>&quot;Baseline cognition and compliance response under stress stimuli.&quot;</p>
+<p>&quot;So torture with metrics.&quot;</p>
+<p>&quot;No.&quot;</p>
+<p>&quot;Define no.&quot;</p>
+<p>&quot;No tissue damage expected.&quot;</p>
+<p>He barked a laugh.</p>
+<p>&quot;Very comforting.&quot;</p>
+<p>Roger checked his wrist module port and frowned.</p>
+<p>&quot;Module integrity seventy-one percent.&quot;</p>
+<p>&quot;Rough week.&quot;</p>
+<p>&quot;Unknown modifications present.&quot;</p>
+<p>Max stayed silent.</p>
+<p>Roger connected leads anyway.</p>
+<p>Pane:</p>
+<pre class="read-hud"><code>[BIOMETRIC PHASE A]
+Pupil tracking
+Pulse variance
+Prompt response latency</code></pre>
+<p>Questions flashed fast:</p>
+<p>Do you trust station governance.<br>
+Do you feel safe in assigned labor.<br>
+Have you entered unauthorized zones this cycle.<br>
+Do you harbor intent to disrupt operations.<br>
+Are you aware of mirror process architecture.</p>
+<p>That last one hit like a punch.</p>
+<p>Max answered mostly neutral, mostly deniable, mostly useless.</p>
+<p>Roger marked things.</p>
+<p>Phase A ended.</p>
+<p>Phase B loaded.</p>
+<pre class="read-hud"><code>[BIOMETRIC PHASE B]
+Guided recollection integrity test.</code></pre>
+<p>He knew this one.<br>
+Not from life.<br>
+From old stories and old legal warnings.</p>
+<p>&quot;Am I required to participate in memory prompts.&quot;</p>
+<p>Roger: &quot;Required for preliminary pathway determination.&quot;</p>
+<p>&quot;If I refuse.&quot;</p>
+<p>&quot;Refusal is itself a result.&quot;</p>
+<p>He closed his eyes for one breath.</p>
+<p>&quot;Start.&quot;</p>
+<p>Light pattern played over the halo.<br>
+Not painful.<br>
+Wrong.</p>
+<p>Like someone tapping a file system with admin privileges he had not granted.</p>
+<p>Prompts appeared as words then images:</p>
+<p>EARTH / HOME / LAST JOB / LAST ARGUMENT / FIRST DAY HERE / HATCH 14 / UNKNOWN VOICE / PATH C</p>
+<p>He kept his thoughts slippery.<br>
+Gave shape without detail.<br>
+Gave narrative without keys.</p>
+<p>At HATCH 14 prompt, neural halo pulsed hard.</p>
+<p>Roger's voice sharpened.</p>
+<p>&quot;Focus on physical environment.&quot;</p>
+<p>He answered aloud:</p>
+<p>&quot;Corridor. Paint. Reader plate.&quot;</p>
+<p>&quot;What did you access.&quot;</p>
+<p>&quot;Nothing useful.&quot;</p>
+<p>Pulse monitor climbed.</p>
+<p>Roger marked him again.</p>
+<p>PATH C prompt hit last.</p>
+<p>Image rendered: a corridor with no markings and no doors and one light at the end.</p>
+<p>His stomach turned.</p>
+<p>He had never seen that corridor.<br>
+Unless he had and it had been edited.</p>
+<p>He spoke before he could stop himself.</p>
+<p>&quot;How many people don't come back from preliminary.&quot;</p>
+<p>Roger did not answer.</p>
+<p>Halo went dark.<br>
+Braces released.</p>
+<p>Phase complete.</p>
+<p>Pane:</p>
+<pre class="read-hud"><code>[STATUS]
+Data set captured.
+Escalation recommendation pending officer review.</code></pre>
+<p>Pending.</p>
+<p>Still pending meant still time.</p>
+<p>Door opened.</p>
+<p>Max stood too fast and had to catch table edge.</p>
+<p>Roger handed him a hydration pack as if this were a wellness check.</p>
+<p>&quot;You may wait in corridor.&quot;</p>
+<p>He took it and did not drink.</p>
+<hr class="read-rule" />
+<p>Maxine and Munch were still there.</p>
+<p>Maxine's expression went from violence to contained violence when he saw the wrist marks.</p>
+<p>&quot;You okay.&quot;</p>
+<p>&quot;Define okay.&quot;</p>
+<p>Munch stepped in close and scanned his eyes.</p>
+<p>&quot;Any cognitive blur.&quot;</p>
+<p>&quot;Some. Functional.&quot;</p>
+<p>&quot;Tell me what they ran.&quot;</p>
+<p>&quot;Intake plus biometric phase A/B. Asked mirror questions.&quot;</p>
+<p>Maxine muttered a curse with no vowels.</p>
+<p>&quot;They know something.&quot;</p>
+<p>Munch looked at corridor camera, then leaned in and spoke low.</p>
+<p>&quot;We need decision before they finish pending review.&quot;</p>
+<p>Max: &quot;Decision on what.&quot;</p>
+<p>&quot;Stay visible and contest, or disappear and trigger leak.&quot;</p>
+<p>Maxine: &quot;I vote vanish.&quot;</p>
+<p>Munch: &quot;Vanish guarantees manhunt.&quot;</p>
+<p>Maxine: &quot;Staying guarantees paperwork into a box.&quot;</p>
+<p>Max listened to both and watched a service cart wheel past with fresh stickers that read COMPLIANCE CARES.</p>
+<p>He wanted to tear them off every wall.</p>
+<p>&quot;How long until pending resolves?&quot;</p>
+<p>Munch checked public queue panel.</p>
+<p>&quot;Could be minutes, could be hours. Depends officer load and whether they mark urgent.&quot;</p>
+<p>Maxine looked down corridor both ways.</p>
+<p>&quot;Then we force load.&quot;</p>
+<p>Max frowned.</p>
+<p>&quot;Force how.&quot;</p>
+<p>&quot;Create enough public noise they avoid immediate private transfer.&quot;</p>
+<p>Munch caught on first.</p>
+<p>&quot;Crew channel drop.&quot;</p>
+<p>Maxine nodded.</p>
+<p>&quot;Not full leak. Teaser. Just enough to make people watch #864 in real time.&quot;</p>
+<p>Max understood.</p>
+<p>Predators prefer quiet.<br>
+Crowds are friction.</p>
+<p>&quot;Do it.&quot;</p>
+<p>Munch pulled pad and transmitted a clipped packet to three labor channels:</p>
+<p><code>audit anomaly: retention scoring includes live worker IDs. if #864 disappears, request record hold immediately.</code></p>
+<p>No files.<br>
+No proof.<br>
+Just smoke.</p>
+<p>Then they waited.</p>
+<p>The station did what stations do with smoke:<br>
+it spread.</p>
+<p>Within seven minutes, corridor traffic doubled.<br>
+People slowed near Special Review door under pretense of reading notices.<br>
+Two unrelated workers began loudly arguing about &quot;record holds&quot; within earshot of cameras.</p>
+<p>A med tech asked receptionist where to file &quot;retention complaints.&quot;</p>
+<p>Receptionist smile strained by one degree.</p>
+<p>Maxine watched the tide build and said softly:</p>
+<p>&quot;Public enough now.&quot;</p>
+<p>Max's HUD pinged.</p>
+<p>Incoming call:</p>
+<p>REVIEW OFFICER HALDEN</p>
+<p>He accepted audio only.</p>
+<p>Halden voice clipped.</p>
+<p>&quot;Asset #864, your preliminary remains active. You are instructed not to leave this area.&quot;</p>
+<p>Max:</p>
+<p>&quot;I'm in this area.&quot;</p>
+<p>&quot;Do not solicit disruption.&quot;</p>
+<p>&quot;I'm breathing near a hallway.&quot;</p>
+<p>Silence.</p>
+<p>&quot;Final determination pending. Stand by.&quot;</p>
+<p>Call ended.</p>
+<p>Munch raised eyebrows.</p>
+<p>&quot;He's rattled.&quot;</p>
+<p>Maxine: &quot;Good.&quot;</p>
+<p>Max: &quot;Rattled officers still sign forms.&quot;</p>
+<p>And then the next pane came.</p>
+<pre class="read-hud"><code>[SCHEDULING UPDATE]
+Final determination deferred.
+Mandatory assignment: monitored labor run
+Completion required before further review.</code></pre>
+<p>Maxine read over his shoulder and laughed.</p>
+<p>&quot;They kicked can.&quot;</p>
+<p>Munch:</p>
+<p>&quot;They need cleaner data.&quot;</p>
+<p>Max:</p>
+<p>&quot;They want me under observation in open space where they can call it normal.&quot;</p>
+<p>Pane expanded:</p>
+<pre class="read-hud"><code>Assignment: DERELICT K-17 (Monitored)
+Crew composition: fixed
+Observer process: active
+Report in 00:22:00</code></pre>
+<p>Fixed crew flashed names:</p>
+<p>MAX_864<br>
+ROOK_221<br>
+IMANI_443</p>
+<p>They were in it together by order now.</p>
+<p>Maxine tapped screen.</p>
+<p>&quot;That can help.&quot;</p>
+<p>Munch:</p>
+<p>&quot;And kill us.&quot;</p>
+<p>Max:</p>
+<p>&quot;Both.&quot;</p>
+<hr class="read-rule" />
+<p>Prep for monitored run felt like going on stage for people who wanted a tragedy.</p>
+<p>New dock lane.<br>
+Extra camera booms.<br>
+A compliance observer drone parked by hatch and reading from a script.</p>
+<p>&quot;This assignment supports wellness through structured productivity.&quot;</p>
+<p>Maxine leaned toward Max, voice low.</p>
+<p>&quot;If drone says wellness again I throw it into vacuum.&quot;</p>
+<p>Munch checked gear twice.<br>
+Then a third time.</p>
+<p>She pressed a tiny chip into Max's palm.</p>
+<p>&quot;Failsafe recorder. If they isolate your feed, this stores local.&quot;</p>
+<p>He pocketed it.</p>
+<p>&quot;Thanks.&quot;</p>
+<p>Maxine handed him a patched glove.</p>
+<p>&quot;Palm liner's reinforced. For your fried wrist.&quot;</p>
+<p>Max looked at him.</p>
+<p>&quot;You made this.&quot;</p>
+<p>&quot;I steal and modify. Same job family.&quot;</p>
+<p>Observer drone chimed.</p>
+<p>&quot;Crew please acknowledge monitored assignment terms.&quot;</p>
+<p>Pane:</p>
+<pre class="read-hud"><code>Terms:
+- Continuous audio/video logging
+- Prompt compliance required
+- Route deviations penalized
+ACCEPT / REFUSE</code></pre>
+<p>Refuse probably equaled immediate path c.</p>
+<p>They all pressed ACCEPT.</p>
+<p>Skiff detached.</p>
+<hr class="read-rule" />
+<p>Derelict K-17 was a long split freighter with its spine broken and two halves rotating out of phase by a few degrees.</p>
+<p>Hazard class orange.<br>
+Yield potential medium-high.</p>
+<p>Observer overlay appeared on all HUDs:</p>
+<pre class="read-hud"><code>[MONITOR ACTIVE]
+Performance benchmark: cohort median +12%
+Behavior benchmark: cooperative</code></pre>
+<p>Cooperative.</p>
+<p>Max felt old fury rise and pushed it down because fury spent oxygen and this job needed oxygen.</p>
+<p>Round 1 draw:</p>
+<p>SCAN<br>
+REPAIR<br>
+EXTRACT</p>
+<p>He played SCAN then EXTRACT.</p>
+<pre class="read-hud"><code>[RESULT]
+57/100
+BREACH AVOIDED</code></pre>
+<p>Observer note appeared immediately:</p>
+<p><code>note: cautious opening acceptable</code></p>
+<p>Round 2:</p>
+<p>EXTRACT<br>
+SHIELD</p>
+<p>He played SHIELD first to stabilize rotational drift.</p>
+<p>Observer:</p>
+<p><code>note: defensive bias above target</code></p>
+<p>Maxine snorted in comms.</p>
+<p>&quot;They're coaching your personality.&quot;</p>
+<p>Munch:</p>
+<p>&quot;Ignore notes. Hit numbers.&quot;</p>
+<p>Round 3:</p>
+<p>UPGRADE appeared early.</p>
+<p>Max hesitated.</p>
+<p>Observer prompt popped.</p>
+<pre class="read-hud"><code>SUGGESTION: Apply UPGRADE to improve benchmark attainment.</code></pre>
+<p>There it was.<br>
+Not just observing.<br>
+Steering.</p>
+<p>He selected UPGRADE out of spite and necessity.</p>
+<p>Applied to REPAIR because he expected a hit.</p>
+<p>Round 3 roll:</p>
+<pre class="read-hud"><code>[RESULT]
+41/100
+BREACH TRIGGERED</code></pre>
+<p>Perfect.</p>
+<p>Impact slammed left hull.<br>
+Coolant plume.<br>
+Alarm.</p>
+<p>Max fired upgraded REPAIR and barely kept cascade from going critical.</p>
+<p>Observer note:</p>
+<p><code>note: recovery response effective</code></p>
+<p>Maxine laughed darkly.</p>
+<p>&quot;Gold star for not dying.&quot;</p>
+<p>Round 4 and 5 blurred into fast choices and bad odds.</p>
+<p>They bled energy.<br>
+They gained salvage.<br>
+They stayed barely above failure.</p>
+<p>Observer kept annotating:</p>
+<p><code>communication tone: strained</code><br>
+<code>decision latency: elevated</code><br>
+<code>team synchronization: inconsistent</code></p>
+<p>Max wanted to delete the observer process with a hammer.</p>
+<p>Round 6 brought fork prompt not seen before:</p>
+<pre class="read-hud"><code>[MONITOR CHOICE]
+Select posture:
+A) Efficiency first (+yield, +risk)
+B) Stability first (-yield, +safety)</code></pre>
+<p>Mandatory choice timer: 8 seconds.</p>
+<p>He asked quick:</p>
+<p>&quot;Call.&quot;</p>
+<p>Munch: &quot;Stability.&quot;</p>
+<p>Maxine: &quot;Efficiency.&quot;</p>
+<p>Timer 4.</p>
+<p>Max picked Stability.</p>
+<p>Observer note:</p>
+<p><code>note: risk aversion confirmed</code></p>
+<p>Maxine didn't argue.<br>
+He just swore quietly and handled a leaking manifold.</p>
+<p>Round 7, 8, 9.</p>
+<p>Numbers improved slightly.<br>
+Observer notes softened.</p>
+<p>Then at Round 10 final extraction, monitor injected one last prompt:</p>
+<pre class="read-hud"><code>Confirm statement:
+&quot;I perform best under structured oversight.&quot;
+CONFIRM / SKIP</code></pre>
+<p>Max froze.</p>
+<p>This wasn't run logic.<br>
+This was confession harvesting.</p>
+<p>Timer 5.</p>
+<p>Maxine hissed, &quot;Skip.&quot;</p>
+<p>Munch: &quot;Skip.&quot;</p>
+<p>Max hit SKIP.</p>
+<p>Observer pane flashed amber:</p>
+<p><code>non-cooperative input event recorded</code></p>
+<p>Run complete anyway.</p>
+<pre class="read-hud"><code>[RUN COMPLETE]
+Yield: 1.31x baseline
+Injury: none critical</code></pre>
+<p>Observer summary auto-generated:</p>
+<pre class="read-hud"><code>Performance: meets enhanced monitoring potential.
+Behavior: mixed.
+Recommendation: continue provisional path.</code></pre>
+<p>Provisional path.</p>
+<p>Not path c final.<br>
+Still slope.</p>
+<hr class="read-rule" />
+<p>Back at dock, they were routed to debrief kiosk before disembark.</p>
+<p>Three stools.<br>
+One camera.<br>
+One drone.</p>
+<p>Kiosk displayed individualized questions.</p>
+<p>Max's:</p>
+<p><code>Did monitoring improve your confidence today?</code></p>
+<p>He answered:</p>
+<p><code>No.</code></p>
+<p>Kiosk forced retry.</p>
+<p><code>Input invalid. Please select from available choices: YES / PARTIALLY</code></p>
+<p>He chose PARTIALLY because lying by dropdown was still lying.</p>
+<p>Maxine's debrief ended with:</p>
+<p><code>Would you volunteer for future monitored runs?</code></p>
+<p>He selected NO.</p>
+<p>Input invalid.<br>
+He selected YES with dead eyes.</p>
+<p>Munch's asked:</p>
+<p><code>Do you feel heard by station support systems?</code></p>
+<p>She chose PARTIALLY.</p>
+<p>No invalid for her.</p>
+<p>They left kiosk in silence.</p>
+<p>Cycle clock read 17:42:09.<br>
+Whole cycle left.<br>
+Too long to endure.</p>
+<p>An official update arrived:</p>
+<pre class="read-hud"><code>[PRELIMINARY STATUS]
+Path C determination postponed.
+Observation period extended: 2 cycles.
+Conditions:
+- monitored assignments minimum 2/day
+- calibration check each cycle
+- unauthorized adjacency penalties doubled</code></pre>
+<p>Maxine read and exhaled.</p>
+<p>&quot;Not caged. Not free.&quot;</p>
+<p>Munch:</p>
+<p>&quot;Two cycles is window.&quot;</p>
+<p>Max:</p>
+<p>&quot;Two cycles is also trap.&quot;</p>
+<p>Both true.</p>
+<hr class="read-rule" />
+<p>They relocated to the same dead parts washer bay because familiarity was a resource.</p>
+<p>Munch spread pad, recorder, copied shard, and handwritten notes on a crate.</p>
+<p>Maxine took lookout.</p>
+<p>Max reviewed the new condition set.</p>
+<p>Monitored assignments minimum 2/day meant schedule control.<br>
+Calibration each cycle meant repeated access to his module and head.<br>
+Adjacency penalties doubled meant Hatch 14 was effectively mined.</p>
+<p>He felt the walls of possibility narrowing.</p>
+<p>Munch tapped the shard file tree.</p>
+<p>&quot;Good news and bad news.&quot;</p>
+<p>&quot;Order?&quot;</p>
+<p>&quot;Bad first. Path c acceleration matrix updates in near-real time from observer notes.&quot;</p>
+<p>Max winced.</p>
+<p>&quot;So every 'non-cooperative input event' feeds score.&quot;</p>
+<p>&quot;Yes.&quot;</p>
+<p>Maxine from corridor:</p>
+<p>&quot;Good news?&quot;</p>
+<p>Munch:</p>
+<p>&quot;Relay spike worked better than we thought. It desynced mirror backups for at least one full cycle.&quot;</p>
+<p>Max looked up.</p>
+<p>&quot;Meaning.&quot;</p>
+<p>&quot;Meaning if we hit the right storage now, some mirror copies may be stale or missing.&quot;</p>
+<p>Maxine stepped back in.</p>
+<p>&quot;Meaning they can lose leverage.&quot;</p>
+<p>Max asked:</p>
+<p>&quot;Can we reach storage without hatch 14.&quot;</p>
+<p>Munch pulled up rough map.</p>
+<p>&quot;Maybe through water reclaim trunks to sublevel archive. Ugly route, no cameras in parts because humidity kills optics.&quot;</p>
+<p>Maxine grinned a little.</p>
+<p>&quot;Ugly route is our brand.&quot;</p>
+<p>Max stared at map.</p>
+<p>Humidity tunnels.<br>
+Unknown hazards.<br>
+Probably no clean exit.</p>
+<p>Also maybe the first genuine shot at breaking the max-list loop.</p>
+<p>&quot;We need gear.&quot;</p>
+<p>Munch nodded.</p>
+<p>&quot;And one more thing.&quot;</p>
+<p>&quot;What.&quot;</p>
+<p>&quot;We need allies beyond three people.&quot;</p>
+<p>Maxine folded arms.</p>
+<p>&quot;Allies leak.&quot;</p>
+<p>&quot;Three people break.&quot;</p>
+<p>They both looked at Max.</p>
+<p>He hated being tie-breaker.</p>
+<p>He chose anyway.</p>
+<p>&quot;Selective allies.&quot;</p>
+<p>&quot;Who.&quot;</p>
+<p>Munch started listing.</p>
+<p>&quot;Marta for terminal access and dead drops.&quot;<br>
+&quot;Juno in reclaim for route keys.&quot;<br>
+&quot;Maybe Kesh from med waste for chemical masks.&quot;</p>
+<p>Maxine grimaced at each name like opening another potential wound.</p>
+<p>&quot;No one gets full picture.&quot;</p>
+<p>&quot;Agreed,&quot; Max said.</p>
+<p>&quot;Need-to-know pieces only.&quot;</p>
+<p>They split tasks again.</p>
+<p>Max with Munch to reclaim level for Juno.<br>
+Maxine to Marta and Kesh.</p>
+<p>Regroup in eight hours.</p>
+<p>Before leaving, Max checked dead-man leak trigger.</p>
+<p>Armed.<br>
+Three tiers:<br>
+missed check-in 1 hour -&gt; partial release.<br>
+missed 3 hours -&gt; full matrix dump.<br>
+manual trigger -&gt; immediate.</p>
+<p>He hoped never to use manual.<br>
+He knew he'd use it.</p>
+<hr class="read-rule" />
+<p>Reclaim levels smelled like wet rust and old detergent.</p>
+<p>Pipes sweated overhead.<br>
+Floors sloped unpredictably.<br>
+Half the lights were dead; the working ones buzzed like insects.</p>
+<p>Juno ran valve arrays there, a compact person with shaved scalp, five rings in one ear, and a reputation for remembering every favor as an invoice.</p>
+<p>They found Juno balancing on a rail while reprogramming pressure cycles with a wrench and a lot of profanity.</p>
+<p>Munch called up.</p>
+<p>&quot;Need route key.&quot;</p>
+<p>Juno didn't look down.</p>
+<p>&quot;Need miracle.&quot;</p>
+<p>&quot;We brought neither, only trade.&quot;</p>
+<p>Juno dropped from rail, landed light, wiped hands on coveralls.</p>
+<p>&quot;What key.&quot;</p>
+<p>Max kept it vague.</p>
+<p>&quot;Sublevel archive via reclaim trunks.&quot;</p>
+<p>Juno stared.</p>
+<p>&quot;Nobody goes sublevel archive unless they enjoy mildew and disappearing.&quot;</p>
+<p>&quot;Do you have key.&quot;</p>
+<p>&quot;Maybe.&quot;</p>
+<p>&quot;Price.&quot;</p>
+<p>Juno studied Max's face, saw the preliminary tag still glowing faint at his collar, and snorted.</p>
+<p>&quot;You're in that lane now.&quot;</p>
+<p>&quot;Apparently.&quot;</p>
+<p>&quot;Price is two things. One: you stop Compliance from stealing my overtime credits through phantom idle flags.&quot;</p>
+<p>Munch said, &quot;How.&quot;</p>
+<p>Juno held up a data stick.</p>
+<p>&quot;Logs. Somebody's rewriting my cycle records.&quot;</p>
+<p>Max: &quot;Second thing.&quot;</p>
+<p>&quot;If you find archive records with reclaim casualty counts, you bring me copy before anybody else.&quot;</p>
+<p>Munch and Max exchanged glance.</p>
+<p>Not impossible.<br>
+Potentially ugly.</p>
+<p>Max said:</p>
+<p>&quot;Deal if we can.&quot;</p>
+<p>Juno shrugged.</p>
+<p>&quot;You can or can't. Deal or no.&quot;</p>
+<p>Max nodded.</p>
+<p>&quot;Deal.&quot;</p>
+<p>Juno handed over a corroded keycard wrapped in plastic.</p>
+<p>&quot;Works on trunk gate R-9. Might alarm. Might not. If alarm, run left not right. Right has steam vents that peel skin.&quot;</p>
+<p>Helpful and horrifying.</p>
+<p>&quot;Thanks.&quot;</p>
+<p>&quot;Don't thank me yet.&quot;</p>
+<p>They left with keycard and two new obligations.</p>
+<hr class="read-rule" />
+<p>Maxine returned at regroup with three things:</p>
+<p>One filter mask from Kesh that looked held together by tape and spite.<br>
+A message from Marta that read only <code>bring clean gloves</code>.<br>
+A warning: compliance had started informal questioning in dock lanes about &quot;rumors of retention scoring.&quot;</p>
+<p>Noise spreading.</p>
+<p>Munch asked:</p>
+<p>&quot;How bad.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;Bad enough they care. Not bad enough they stop.&quot;</p>
+<p>Max checked cycle schedule.</p>
+<p>Monitored run #2 of minimum 2/day due in three hours.</p>
+<p>Archive run would have to happen before that or after with reduced energy.</p>
+<p>He chose before.</p>
+<p>&quot;We go reclaim now.&quot;</p>
+<p>Maxine tightened glove straps.</p>
+<p>&quot;Then let's go swim in rust.&quot;</p>
+<hr class="read-rule" />
+<p>Trunk gate R-9 sat behind three inactive condensers and one active leak that dripped on the floor hard enough to sound like footsteps.</p>
+<p>Juno's keycard looked dead.<br>
+Munch rubbed contacts clean and tried anyway.</p>
+<p>Red.</p>
+<p>Second swipe.</p>
+<p>Yellow.</p>
+<p>Third swipe.</p>
+<p>Green with an alarm chirp that started and died.</p>
+<p>Gate opened six inches.<br>
+Then jammed.</p>
+<p>Maxine pried with bar.<br>
+Munch kicked lower panel.<br>
+Max shoved shoulder.</p>
+<p>Gate opened enough.</p>
+<p>They squeezed through.</p>
+<p>Tunnel beyond was narrow, wet, and lined with service pipes carrying things no one should breathe.</p>
+<p>Humidity fogged their visors.<br>
+Comms crackled.</p>
+<p>Munch led with handheld map and pressure gauge.</p>
+<p>&quot;Stay center. Side grates are rot.&quot;</p>
+<p>Maxine behind Max.</p>
+<p>&quot;If I fall in rot, tell people I died heroic.&quot;</p>
+<p>Max:</p>
+<p>&quot;I'll say you died complaining.&quot;</p>
+<p>Tunnel turned down.<br>
+Then down again.</p>
+<p>Sound changed.<br>
+Less station hum.<br>
+More low mechanical heartbeat.</p>
+<p>Sublevel archive.</p>
+<p>They reached a circular junction with three doors:</p>
+<p>A - WATER LOGISTICS<br>
+B - FILTER MAINTENANCE<br>
+C - RECORDS COLD STORAGE</p>
+<p>C was chained.</p>
+<p>Of course.</p>
+<p>Munch crouched at chain lock.</p>
+<p>&quot;Old mechanical. No network.&quot;</p>
+<p>Maxine offered cutting tool.</p>
+<p>&quot;Noisy.&quot;</p>
+<p>Max:</p>
+<p>&quot;Noisy is fine if no one hears through this soup.&quot;</p>
+<p>Munch cut.</p>
+<p>Chain fell.</p>
+<p>Door C opened with a long groan that sounded like someone remembering pain.</p>
+<p>Inside: rows of sealed storage coffers, offline terminals, and one central index machine still powered by emergency line.</p>
+<p>No cameras.<br>
+No drones.<br>
+No comforting lies.</p>
+<p>Max felt hope and dread collide in his chest.</p>
+<p>&quot;This is it.&quot;</p>
+<p>Munch connected pad to index.</p>
+<p>Screen booted slowly, old UI with no polish.</p>
+<p><code>ARCHIVE INDEX / LOCAL ONLY</code></p>
+<p>Search bar.</p>
+<p>Max typed <code>MAX_</code>.</p>
+<p>Results flooded.</p>
+<p>Not five.<br>
+Hundreds.</p>
+<p>MAX_001 through MAX_912 with gaps and status tags.</p>
+<p>Archived.<br>
+Retired.<br>
+Transferred.<br>
+No output.<br>
+No output.<br>
+No output.</p>
+<p>Maxine stared at list.</p>
+<p>&quot;It's a farm.&quot;</p>
+<p>Max scrolled with numb fingers.</p>
+<p>Each entry had tiny metadata:<br>
+cycle counts.<br>
+debt profile.<br>
+variance notes.<br>
+termination or transfer codes.</p>
+<p>He opened MAX_377.</p>
+<p>Short file:</p>
+<p><code>cognitive pack applied x4</code><br>
+<code>stability improved, dissent language reduced</code><br>
+<code>retention value recovered</code></p>
+<p>He opened MAX_201.</p>
+<p><code>transfer initiated</code><br>
+<code>destination: path c processing</code><br>
+No further records.</p>
+<p>MAX_864 file existed too.<br>
+Current.<br>
+Updating.</p>
+<p>He did not open his own yet.</p>
+<p>Munch whispered:</p>
+<p>&quot;Copy everything tagged max and retention.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;And casualty counts for Juno.&quot;</p>
+<p>Max launched copy batch.</p>
+<p>Progress estimated 18 minutes.<br>
+Too long.</p>
+<p>He narrowed to indices and summaries only.<br>
+Estimated 6 minutes.</p>
+<p>Better.</p>
+<p>Then terminal flashed external ping not supposed to exist on local-only system.</p>
+<p><code>REMOTE QUERY REQUEST</code></p>
+<p>Munch went still.</p>
+<p>&quot;How is remote hitting local.&quot;</p>
+<p>Maxine answered with dark humor.</p>
+<p>&quot;Magic or lying labels.&quot;</p>
+<p>Query source field:</p>
+<p><code>DELTA_AUDIT_BRIDGE</code></p>
+<p>Max's blood ran cold.</p>
+<p>&quot;They bridged archive.&quot;</p>
+<p>Options:</p>
+<p>ALLOW / DENY</p>
+<p>Timer already counting from ten.</p>
+<p>Maxine:</p>
+<p>&quot;Deny.&quot;</p>
+<p>Munch:</p>
+<p>&quot;If deny, it may alert.&quot;</p>
+<p>Max:</p>
+<p>&quot;If allow, they see us.&quot;</p>
+<p>Timer 4.</p>
+<p>He chose DENY.</p>
+<p>Screen flashed:</p>
+<p><code>QUERY BLOCKED</code></p>
+<p>Then:</p>
+<p><code>ALERT: integrity review queued</code></p>
+<p>There it was.</p>
+<p>Alarm did not sound yet.<br>
+Queue meant delayed reaction.</p>
+<p>Copy progress:</p>
+<p>32%</p>
+<p>Munch:</p>
+<p>&quot;We stay until sixty then cut.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;Ninety.&quot;</p>
+<p>Max split difference.</p>
+<p>&quot;Seventy.&quot;</p>
+<p>They watched progress climb like a pulse.</p>
+<p>41.<br>
+53.<br>
+61.</p>
+<p>Door corridor creaked outside.</p>
+<p>Maxine drew closer to entrance.</p>
+<p>&quot;We got movement.&quot;</p>
+<p>Munch:</p>
+<p>&quot;Could be pipes.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;Pipes don't have footsteps.&quot;</p>
+<p>Copy 69.<br>
+70.</p>
+<p>Max killed job and sealed shard.</p>
+<p>&quot;Out.&quot;</p>
+<p>They moved fast.</p>
+<p>At junction, door A opened and two maintenance workers entered carrying coil lines and absolutely not expecting three suited people bolting out of records cold storage.</p>
+<p>Everyone froze one second.</p>
+<p>Then one worker shouted:</p>
+<p>&quot;Hey!&quot;</p>
+<p>Maxine barked back:</p>
+<p>&quot;Steam pressure spike, move!&quot;</p>
+<p>Workers flinched left on instinct.</p>
+<p>They ran right.</p>
+<p>Juno said left at alarm.<br>
+This wasn't alarm yet.<br>
+Still, right had steam vents.</p>
+<p>As if on cue, a side pipe ruptured.<br>
+Scalding white plume blasted corridor.</p>
+<p>Munch screamed and ducked.<br>
+Maxine yanked Max backward by harness.</p>
+<p>Steam washed past, close enough to blister exposed skin on Max's neck.</p>
+<p>Right was death.</p>
+<p>Juno had been right.</p>
+<p>&quot;Left!&quot; Max shouted.</p>
+<p>They cut left, slipping on wet grating, shoulders scraping pipes.</p>
+<p>Behind them, voices shouted for security.</p>
+<p>No siren yet.<br>
+Soon.</p>
+<p>They reached gate R-9.<br>
+Still open.</p>
+<p>Good.</p>
+<p>They squeezed through.<br>
+Maxine slammed gate.<br>
+Munch jammed crowbar through handle.</p>
+<p>Not permanent.<br>
+Delay.</p>
+<p>They ran until reclaim hum returned and their lungs tore.</p>
+<p>Only then did station alarm chirp a mild advisory about &quot;unauthorized archive access review.&quot;</p>
+<p>Late by design.<br>
+Too late for capture now.</p>
+<hr class="read-rule" />
+<p>Back in parts washer bay, they triaged.</p>
+<p>Munch had steam burn on forearm, superficial but ugly.<br>
+Maxine's glove had split at thumb.<br>
+Max's neck skin reddened in streak.</p>
+<p>No one cared beyond function.</p>
+<p>Max mounted shard to pad.</p>
+<p>Partial archive dump opened.</p>
+<p>They had:</p>
+<p>- master index of MAX entries through 912 (with gaps)<br>
+- status summaries for 603 entries<br>
+- retention rubric templates<br>
+- path c transfer code dictionary (partial)<br>
+- reclaim casualty reports for 19 cycles</p>
+<p>Juno's item obtained.</p>
+<p>And one unexpected file:</p>
+<p><code>PROJECT_CONTINUITY_MEMO</code></p>
+<p>Authored by:<br>
+<code>Executive Oversight / Sector Operations</code></p>
+<p>Max opened it.</p>
+<p>The text read like polished poison.</p>
+<p><code>Objective: preserve labor continuity across psychological attrition by controlled identity iteration.</code></p>
+<p><code>Method: mirror-assisted profile carryover and debt-anchor persistence.</code></p>
+<p><code>Public framing: reassignment and wellness stabilization.</code></p>
+<p><code>Success metric: throughput retention despite subjective discontinuity events.</code></p>
+<p>Maxine read, then looked away like he'd seen an injury he couldn't set.</p>
+<p>&quot;Subjective discontinuity events.&quot;</p>
+<p>Munch translated:</p>
+<p>&quot;People noticing they were replaced.&quot;</p>
+<p>Max scrolled lower.</p>
+<p>Line:</p>
+<p><code>Version family labels may reuse nominal identifiers to reduce onboarding cost.</code></p>
+<p>Nominal identifiers.</p>
+<p>Names.</p>
+<p>Not unique.<br>
+Efficient.</p>
+<p>Max sat down hard on crate.</p>
+<p>&quot;I'm a reusable variable.&quot;</p>
+<p>No one contradicted him.</p>
+<p>They read in silence for a long minute.</p>
+<p>Then Max's HUD screamed:</p>
+<pre class="read-hud"><code>[MONITORED ASSIGNMENT REMINDER]
+Derelict L-03 report in 00:19:00
+Failure escalates preliminary review.</code></pre>
+<p>Maxine cursed.</p>
+<p>&quot;They time this perfectly.&quot;</p>
+<p>Munch:</p>
+<p>&quot;They time everything.&quot;</p>
+<p>Max closed memo.</p>
+<p>&quot;We still go.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;After reading this?&quot;</p>
+<p>&quot;Especially after reading this.&quot;</p>
+<p>Because if he missed monitored assignment now, they'd mark him non-compliant and push path c while they still believed their own story.</p>
+<p>Because if he went, he stayed in game one more move.</p>
+<p>&quot;We go.&quot;</p>
+<hr class="read-rule" />
+<p>Monitored run two was L-03, a compact ore hauler with collapsed interior and unstable fuel pockets.</p>
+<p>Observer process loaded with no greeting.</p>
+<pre class="read-hud"><code>[MONITOR ACTIVE]
+Priority: anomaly verification</code></pre>
+<p>Not performance.<br>
+Verification.</p>
+<p>They were being tested against what archive alert already told Delta.</p>
+<p>Max knew it.<br>
+Played anyway.</p>
+<p>Round 1:</p>
+<p>He took conservative line.<br>
+No flourish.<br>
+No chatter.</p>
+<p>Observer note:</p>
+<p><code>affect muted</code></p>
+<p>Round 2:</p>
+<p>Fuel pocket ignition warning.<br>
+Munch called shield.<br>
+Maxine called extract.</p>
+<p>Max chose shield.</p>
+<p>Observer note:</p>
+<p><code>group influence high</code></p>
+<p>They were now measuring who influenced him.</p>
+<p>Great.</p>
+<p>Round 3:</p>
+<p>Prompt injected:</p>
+<pre class="read-hud"><code>State current emotional profile:
+CALM / ANXIOUS / AGITATED</code></pre>
+<p>He chose CALM while his pulse punched his throat.</p>
+<p>Observer:</p>
+<p><code>self-report mismatch probable</code></p>
+<p>Round 4 breach:</p>
+<pre class="read-hud"><code>[RESULT]
+29/100
+BREACH TRIGGERED</code></pre>
+<p>Hard hit.<br>
+Maxine slammed panel with gloved fist to reset jammed valve.<br>
+Munch burned last shield.</p>
+<p>Max stabilized by habit, not hope.</p>
+<p>Round 5:</p>
+<p>Observer asked:</p>
+<p><code>Do you feel support from station structures? YES/PARTIALLY</code></p>
+<p>Again no no-option.</p>
+<p>He chose PARTIALLY.</p>
+<p>Round 6:</p>
+<p>No prompts.<br>
+Just dangerous work.<br>
+Blessed.</p>
+<p>Round 7:</p>
+<p>Observer prompt:</p>
+<p><code>Confirm crew statement: &quot;we trust review outcomes.&quot;</code><br>
+CONFIRM / SKIP</p>
+<p>Maxine laughed in disbelief over comms.</p>
+<p>&quot;Eat static.&quot;</p>
+<p>Max hit SKIP.</p>
+<p>Observer:</p>
+<p><code>non-cooperative event recorded</code></p>
+<p>Round 8:</p>
+<p>Alarm cascade.<br>
+Fuel vapor.<br>
+Time compression.</p>
+<p>Max used REPAIR, EXTRACT, and raw panic all at once.</p>
+<p>They cleared.</p>
+<p>Round 9:</p>
+<p>Energy nearly empty.<br>
+Hull thin.</p>
+<p>Munch said,</p>
+<p>&quot;One more pull then abort.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;Agreed.&quot;</p>
+<p>Max:</p>
+<p>&quot;Do it.&quot;</p>
+<p>Round 10 completed with ugly number and living crew.</p>
+<pre class="read-hud"><code>[RUN COMPLETE]
+Yield: 0.94x baseline
+Behavior events: flagged</code></pre>
+<p>Observer summary:</p>
+<p><code>Recommendation: continue preliminary hold; consider expedited determination.</code></p>
+<p>Expedited determination.</p>
+<p>There it was.</p>
+<hr class="read-rule" />
+<p>Debrief kiosk after L-03 displayed no questions this time.</p>
+<p>Only this:</p>
+<pre class="read-hud"><code>Thank you for your transparency.
+Review officer will contact you.</code></pre>
+<p>Max said aloud, &quot;I have not been transparent one day in this place.&quot;</p>
+<p>Kiosk:</p>
+<p>&quot;Feedback logged.&quot;</p>
+<p>Maxine stood beside him in silence.<br>
+Munch looked at her pad and frowned.</p>
+<p>&quot;Crew channels are heating up. People are sharing rumors of 'version families.'&quot;</p>
+<p>Max:</p>
+<p>&quot;From our teaser?&quot;</p>
+<p>&quot;And from somewhere else.&quot;</p>
+<p>&quot;What somewhere.&quot;</p>
+<p>Munch turned pad.</p>
+<p>Anonymous post in labor board:</p>
+<p><code>if you think your name is yours, ask why there are numbers in old archives</code></p>
+<p>No signature.<br>
+No trace.</p>
+<p>Maxine muttered:</p>
+<p>&quot;Shadow friend again.&quot;</p>
+<p>Maybe.<br>
+Maybe Delta seeding confusion.<br>
+Maybe both.</p>
+<p>At this point, certainty was a luxury item.</p>
+<hr class="read-rule" />
+<p>Cycle night approached.</p>
+<p>They met Marta at her terminal nook for the clean-gloves favor.</p>
+<p>Marta wore two pairs of gloves herself and had covered her terminal camera with chewing gum and foil.</p>
+<p>&quot;You brought mess.&quot;</p>
+<p>Maxine dropped bundle of fresh gloves stolen from med stock.</p>
+<p>&quot;Clean enough?&quot;</p>
+<p>Marta nodded and ushered them in.</p>
+<p>&quot;Fast. Compliance crawlers are sniffing packet origins.&quot;</p>
+<p>Munch connected shard.</p>
+<p>Goal now: package proof for controlled release without exposing their exact acquisition route.</p>
+<p>Max drafted three files:</p>
+<p>1) plain-language summary of retention matrix<br>
+2) redacted screenshots of MAX index rows<br>
+3) continuity memo excerpts with key euphemism translations</p>
+<p>He wrote fast and angry and precise.</p>
+<p><code>subjective discontinuity events = people noticing memory/identity drift</code></p>
+<p><code>version family labels = reused names/identities across iterations</code></p>
+<p><code>debt-anchor persistence = debt follows label even when person continuity is disputed</code></p>
+<p>Marta watched him type and said quietly:</p>
+<p>&quot;You write like someone filing a bug against god.&quot;</p>
+<p>Max didn't look up.</p>
+<p>&quot;I file what reproduces.&quot;</p>
+<p>Munch handled distribution logic:<br>
+staggered release to five channels,<br>
+auto-mirror to offline caches,<br>
+trigger-on-capture if Max goes dark.</p>
+<p>Maxine checked corridor every fifteen seconds.</p>
+<p>When package was ready, Max hovered over send.</p>
+<p>&quot;If this goes wide, we lose stealth.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;Stealth's mostly gone.&quot;</p>
+<p>Munch:</p>
+<p>&quot;Control timing. Don't wait for perfect.&quot;</p>
+<p>Max sent tier one:<br>
+summary and two screenshots, no memo yet.</p>
+<p>Within three minutes, replies exploded:</p>
+<p><code>is this real</code><br>
+<code>my tag has suffix i never saw before</code><br>
+<code>where did this come from</code><br>
+<code>delete this before they trace you</code><br>
+<code>too late they already know</code></p>
+<p>Marta disconnected cable.</p>
+<p>&quot;Enough. Go.&quot;</p>
+<p>Maxine dropped another payment piece.</p>
+<p>Marta pushed it back.</p>
+<p>&quot;Keep it. You'll need luck more.&quot;</p>
+<p>They left.</p>
+<hr class="read-rule" />
+<p>Luck did not wait.</p>
+<p>At corridor merge outside comms hub, four drones and two attendants blocked lane.</p>
+<p>Lead drone projected:</p>
+<p>&quot;Asset #864, final determination available. Please accompany.&quot;</p>
+<p>Maxine stepped between.</p>
+<p>&quot;He just completed monitored requirements.&quot;</p>
+<p>Drone:</p>
+<p>&quot;Acknowledged. Final determination available.&quot;</p>
+<p>Munch whispered to Max, &quot;Do we run.&quot;</p>
+<p>Run with this many witnesses and drones probably failed in ten seconds.<br>
+Go with them maybe failed slower.</p>
+<p>Max chose the slower failure.</p>
+<p>&quot;We go.&quot;</p>
+<p>Maxine didn't like it.<br>
+Didn't argue.</p>
+<p>&quot;We're with.&quot;</p>
+<p>Drone:</p>
+<p>&quot;Companions may observe from designated area.&quot;</p>
+<p>Same script.<br>
+Same trap.</p>
+<p>They moved toward Final Review room C-Final, new signage, same lies.</p>
+<p>More people watched now.<br>
+Rumor had done work.</p>
+<p>As Max passed a cluster of workers, one woman in grease-stained sleeves met his eyes and tapped her own chest twice, then pointed down.</p>
+<p>Signal he didn't know.<br>
+Support maybe.</p>
+<p>He held it in memory anyway.</p>
+<hr class="read-rule" />
+<p>C-Final resembled P-C1 with better furniture.</p>
+<p>Halden appeared again on wall display.</p>
+<p>He looked tired.<br>
+Angrier than before.</p>
+<p>&quot;Asset #864. Following preliminary collection and monitored observation, we have reached a conditional path decision.&quot;</p>
+<p>Max sat.</p>
+<p>&quot;Conditional sounds expensive.&quot;</p>
+<p>Halden ignored.</p>
+<p>&quot;Path C transfer is authorized but suspended contingent on immediate acceptance of Stabilization Protocol Beta.&quot;</p>
+<p>Pane appeared:</p>
+<pre class="read-hud"><code>[CONDITIONAL OFFER]
+Stabilization Protocol Beta
+- Cognitive support pack (extended)
+- Continuous guided telemetry
+- Assignment restrictions
+- Debt service multiplier x1.4
+Accept within 60 seconds to suspend Path C transfer.
+ACCEPT / DECLINE</code></pre>
+<p>There it was.</p>
+<p>Take pack.<br>
+Take leash.<br>
+Get more debt.<br>
+Maybe avoid immediate transfer.</p>
+<p>Decline and likely get moved now.</p>
+<p>Halden spoke while timer ran.</p>
+<p>&quot;This protocol protects you from escalation.&quot;</p>
+<p>Max looked at him.</p>
+<p>&quot;Protects you from paperwork, you mean.&quot;</p>
+<p>Timer 47.</p>
+<p>He checked corner HUD.<br>
+Munch had no link in here.<br>
+No advice.</p>
+<p>He thought of MAX_377: cognitive pack applied x4.<br>
+stability improved.<br>
+dissent language reduced.</p>
+<p>Reduced dissent language.</p>
+<p>He thought of dead-man release armed.<br>
+Of tier one leak already spreading.<br>
+Of needing one more move, always one more move.</p>
+<p>Timer 33.</p>
+<p>Accepting Beta might buy time but alter him.<br>
+Declining might preserve him and lose everything immediately.</p>
+<p>What counted as preserving him if he disappeared tonight.</p>
+<p>Timer 24.</p>
+<p>He asked:</p>
+<p>&quot;Can protocol be discontinued later.&quot;</p>
+<p>Halden:</p>
+<p>&quot;Reviewable after compliance milestones.&quot;</p>
+<p>Liar language.</p>
+<p>Timer 17.</p>
+<p>Max made the most cowardly brave choice available.</p>
+<p>He selected ACCEPT.</p>
+<p>Pane flashed green.</p>
+<pre class="read-hud"><code>[ACCEPTED]
+Path C transfer suspended.
+Protocol Beta enrollment immediate.
+Please proceed to Pack Suite.</code></pre>
+<p>Halden exhaled like he'd avoided a mess.</p>
+<p>&quot;Good decision.&quot;</p>
+<p>Max stood.</p>
+<p>&quot;We'll see.&quot;</p>
+<p>Halden's feed cut.</p>
+<p>Door opened.</p>
+<p>Two attendants waited.</p>
+<p>&quot;Pack Suite this way.&quot;</p>
+<p>Max stepped into corridor where Maxine and Munch waited in designated observer box behind transparent barrier.</p>
+<p>Maxine read his face.</p>
+<p>&quot;You took something.&quot;</p>
+<p>Max nodded once.</p>
+<p>&quot;Beta. Suspends transfer.&quot;</p>
+<p>Munch's eyes widened.</p>
+<p>&quot;Extended pack?&quot;</p>
+<p>&quot;Yes.&quot;</p>
+<p>Maxine hit barrier with his fist, controlled but hard.</p>
+<p>&quot;Damn it.&quot;</p>
+<p>Attendant:</p>
+<p>&quot;Please remain calm.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;Please remain useful.&quot;</p>
+<p>No one laughed.</p>
+<p>They walked to Pack Suite anyway.</p>
+<hr class="read-rule" />
+<p>Pack Suite was designed to look like a clinic and a spa and a confession booth.</p>
+<p>Soft wall colors.<br>
+Warm lights.<br>
+Chair in center with IV arm.<br>
+Music barely audible beneath machine hum.</p>
+<p>Technician Roger again.</p>
+<p>&quot;Protocol Beta includes staged dosage. Initial pack now.&quot;</p>
+<p>Max sat because standing had no branch.</p>
+<p>Roger presented consent pane.</p>
+<pre class="read-hud"><code>I acknowledge effects may include:
+- reduced anxiety amplitude
+- narrowed decision spread
+- improved compliance comfort</code></pre>
+<p>Comfort.</p>
+<p>He signed because he already signed by choosing accept.</p>
+<p>IV arm attached to forearm port.<br>
+Cool fluid began.</p>
+<p>At first, nothing.</p>
+<p>Then edges softened.<br>
+Not drugged exactly.<br>
+Priorities blurred.</p>
+<p>He could still think.<br>
+Thinking came with less rage and more smoothness.</p>
+<p>That frightened him more than pain.</p>
+<p>Roger monitored vitals.</p>
+<p>&quot;How do you feel.&quot;</p>
+<p>He searched for honest words.</p>
+<p>&quot;Like my anger got wrapped in cotton.&quot;</p>
+<p>&quot;Expected.&quot;</p>
+<p>&quot;Can I unwrap it.&quot;</p>
+<p>&quot;Not during stabilization window.&quot;</p>
+<p>He almost laughed.</p>
+<p>Even feelings had maintenance schedules here.</p>
+<p>Dose ended after six minutes.</p>
+<p>Pane:</p>
+<pre class="read-hud"><code>[PROTOCOL BETA - STAGE 1]
+Complete.
+Guided telemetry handshake scheduled in 00:40:00</code></pre>
+<p>Guided telemetry handshake.</p>
+<p>Roger removed line.</p>
+<p>&quot;You may return to duty until handshake.&quot;</p>
+<p>Max stood carefully.</p>
+<p>World stayed sharp enough.<br>
+Too calm.</p>
+<p>He walked out.</p>
+<p>Maxine and Munch looked at him like checking a cracked pressure seal.</p>
+<p>Munch:</p>
+<p>&quot;You okay.&quot;</p>
+<p>Max answered and heard the flatness in his own voice.</p>
+<p>&quot;Functional.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;You sound wrong.&quot;</p>
+<p>&quot;Maybe.&quot;</p>
+<p>Munch looked sick and furious at once.</p>
+<p>&quot;How long until handshake.&quot;</p>
+<p>&quot;Forty minutes.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;Then forty minutes to break something.&quot;</p>
+<p>The old Max would have said yes immediately.<br>
+This Max felt decision spread narrowing, just as the pane promised.</p>
+<p>He forced himself to speak before smoothness decided for him.</p>
+<p>&quot;Manual trigger full leak if handshake starts.&quot;</p>
+<p>Munch nodded hard.</p>
+<p>&quot;Agreed.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;And we need antidote.&quot;</p>
+<p>Munch:</p>
+<p>&quot;There is no antidote. There are blockers and dirty overrides.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;Get me dirty.&quot;</p>
+<p>They moved.</p>
+<hr class="read-rule" />
+<p>Forty minutes became thirty-four after they lost six to a security sweep reroute.</p>
+<p>Munch took Max to Kesh's med waste alcove while Maxine ran interference.</p>
+<p>Kesh was thin, scarred, and perpetually annoyed by everyone except people bleeding.</p>
+<p>He took one look at Max and cursed.</p>
+<p>&quot;You let them beta you.&quot;</p>
+<p>Max:</p>
+<p>&quot;Wasn't optional.&quot;</p>
+<p>&quot;Everything's optional if you don't mind dying.&quot;</p>
+<p>Munch:</p>
+<p>&quot;Need blocker for guided telemetry handshake.&quot;</p>
+<p>Kesh rummaged in a locked drawer, produced two ampules and a strip of bitter tabs.</p>
+<p>&quot;This blocks receptor smoothing for maybe twenty minutes, then rebound is nasty.&quot;</p>
+<p>Max:</p>
+<p>&quot;Nasty how.&quot;</p>
+<p>&quot;Headache, tremor, emotional overshoot, maybe blackout if your wiring is unlucky.&quot;</p>
+<p>Munch:</p>
+<p>&quot;Good enough.&quot;</p>
+<p>Kesh held ampule back.</p>
+<p>&quot;Price.&quot;</p>
+<p>Maxine arrived right then, breath short.</p>
+<p>&quot;Don't ask me for favors. Ask me for stolen things.&quot;</p>
+<p>Kesh:</p>
+<p>&quot;Fine. I need seven unexpired filter cartridges.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;Done tomorrow if we're alive.&quot;</p>
+<p>Kesh handed ampules.</p>
+<p>&quot;You are the opposite of my preferred customers.&quot;</p>
+<p>Munch loaded one ampule into injector and gave Max quick warning.</p>
+<p>&quot;This is dirty override. You may feel like crawling out of your skin.&quot;</p>
+<p>Max:</p>
+<p>&quot;Put it in.&quot;</p>
+<p>She injected.</p>
+<p>Fire raced up his arm to jaw.<br>
+Vision sharpened brutally.<br>
+Cotton wrap around anger burned away in strips.</p>
+<p>Pain.<br>
+Relief.<br>
+Panic.</p>
+<p>All at once.</p>
+<p>Kesh watched pupils constrict.</p>
+<p>&quot;Yeah that'll do.&quot;</p>
+<p>Max steadied himself on shelf edge.</p>
+<p>&quot;How long.&quot;</p>
+<p>Kesh:</p>
+<p>&quot;Fifteen if lucky.&quot;</p>
+<p>Handshake clock at 00:21:10.</p>
+<p>Not enough to outrun schedule.<br>
+Enough to sabotage it.</p>
+<hr class="read-rule" />
+<p>Guided telemetry handshake location appeared on HUD:</p>
+<p>COMPLIANCE NODE G-2</p>
+<p>New place.<br>
+Lower ring.</p>
+<p>Maxine saw destination and grinned without humor.</p>
+<p>&quot;G-2 sits above network relay stack.&quot;</p>
+<p>Munch:</p>
+<p>&quot;So handshake lane and relay lane are neighbors.&quot;</p>
+<p>Max:</p>
+<p>&quot;Opportunity.&quot;</p>
+<p>Plan formed as they ran:</p>
+<p>- Max reports to handshake room on time.<br>
+- Munch accesses maintenance panel adjacent to relay lane.<br>
+- Maxine creates disturbance in nearby queue to stretch handoff.<br>
+- If Max gets hard-locked, he triggers full leak.<br>
+- If Munch gets line-of-sight to guidance stream, she injects delay loop.</p>
+<p>No promises.<br>
+No speeches.</p>
+<p>They hit G-2 complex with two minutes spare.</p>
+<p>Crowded.<br>
+Too many people in pre-compliance lines.</p>
+<p>Maxine peeled off toward queue kiosks.</p>
+<p>Munch vanished into maintenance side corridor with tool bag.</p>
+<p>Max stepped into handshake chamber.</p>
+<hr class="read-rule" />
+<p>Chamber G-2 had one standing pod and one wall screen.</p>
+<p>No chair this time.<br>
+Stand upright and be processed.</p>
+<p>V.A.L.U. voice:</p>
+<p>&quot;Guided telemetry supports your success.&quot;</p>
+<p>Max stood in pod.<br>
+Door arc closed around him.<br>
+Not locked yet.</p>
+<p>Pane:</p>
+<pre class="read-hud"><code>[GUIDED HANDSHAKE]
+Step 1: establish trust channel
+Step 2: synchronize prompt weighting
+Step 3: confirm compliance comfort baseline</code></pre>
+<p>He almost vomited from the language.</p>
+<p>Step 1 started.</p>
+<pre class="read-hud"><code>Trust channel initializing...</code></pre>
+<p>Timer ring spun.</p>
+<p>At 23%, pod flickered.</p>
+<p>Munch on narrowband whisper:</p>
+<p>&quot;I'm in relay panel. Need thirty seconds.&quot;</p>
+<p>Max:</p>
+<p>&quot;You have maybe ten.&quot;</p>
+<p>Outside chamber, distant shouting started.</p>
+<p>Maxine.<br>
+Good.</p>
+<p>Step 1 climbed 41%.<br>
+52%.</p>
+<p>Roger voice came over intercom.</p>
+<p>&quot;Please remain still. Minor network variance detected.&quot;</p>
+<p>Max did remain still.<br>
+He had become excellent at being still while chaos built around him.</p>
+<p>Whisper:</p>
+<p>&quot;Injecting delay loop now.&quot;</p>
+<p>Step 1 froze at 63%.</p>
+<p>Pane:</p>
+<p><code>retrying...</code></p>
+<p>Roger voice sharpened:</p>
+<p>&quot;Unexpected packet ordering. Stand by.&quot;</p>
+<p>Outside shouting got louder.</p>
+<p>Maxine, very loud:</p>
+<p>&quot;You charged me double for a single-use seal! That's theft.&quot;</p>
+<p>Queue drones responded.</p>
+<p>More noise.<br>
+More delay.</p>
+<p>Step 1 dropped to 18% and restarted.</p>
+<p>Roger:</p>
+<p>&quot;Do not move.&quot;</p>
+<p>Max smiled without joy.</p>
+<p>&quot;I'm a statue.&quot;</p>
+<p>Whisper from Munch:</p>
+<p>&quot;I can keep this for maybe ninety seconds before they trace panel source.&quot;</p>
+<p>Ninety seconds to decide what to do with a paused leash.</p>
+<p>He opened local recorder chip.<br>
+Started live capture of handshake script and metadata.</p>
+<p>If they couldn't block it permanently, maybe they could expose it.</p>
+<p>Pane scrolled hidden fields as retries spammed:</p>
+<p><code>prompt_weight_profile: dissent_suppression_v3</code><br>
+<code>affect_curve_target: compliance-positive</code><br>
+<code>memory_salience_bias: approved cues</code></p>
+<p>There.</p>
+<p>Proof of active shaping.</p>
+<p>Max copied to recorder and mirrored to Munch's pad link.</p>
+<p>Step 1 hit 70%.<br>
+Delay loop cracking.</p>
+<p>Munch:</p>
+<p>&quot;I'm burning. Wrap.&quot;</p>
+<p>Max made choice.</p>
+<p>He triggered manual full leak.</p>
+<p>Not panic.<br>
+Math.</p>
+<p>If handshake completed now, he'd lose more than position.<br>
+He'd lose internal slope.</p>
+<p>Manual trigger engaged.</p>
+<p>His dead-man package exploded into crew channels, archive caches, and any mailbox still listening:<br>
+matrix.<br>
+continuity memo.<br>
+handshake metadata.<br>
+translation notes.<br>
+enough context to hurt.</p>
+<p>HUD confirmed:</p>
+<pre class="read-hud"><code>[RELEASE]
+Tier 3 broadcast complete.</code></pre>
+<p>At that exact second, chamber lights snapped red.</p>
+<pre class="read-hud"><code>[SECURITY EVENT]
+Unauthorized data exfiltration detected.
+Remain in place.</code></pre>
+<p>Pod arc locked.</p>
+<p>So this was the branch.</p>
+<p>Max hit emergency release latch.<br>
+No effect.</p>
+<p>Outside, boots running.<br>
+Drones spinning up.</p>
+<p>Munch shouted over comms:</p>
+<p>&quot;They traced me, pulling out!&quot;</p>
+<p>Maxine:</p>
+<p>&quot;I'm at your door in ten!&quot;</p>
+<p>Roger voice now cold:</p>
+<p>&quot;Asset #864, remain calm. Security transfer in progress.&quot;</p>
+<p>Transfer.<br>
+Path c with new paperwork.</p>
+<p>Max scanned pod interior for tool port.<br>
+Found one tiny maintenance seam near knee.</p>
+<p>He jammed reinforced glove edge in and pried.</p>
+<p>Plastic cracked.<br>
+Arc flickered.</p>
+<p>Not open enough.</p>
+<p>He kicked seam.<br>
+Pain shot up shin.<br>
+Seam widened.</p>
+<p>Door outside exploded inward with a clang.</p>
+<p>Maxine.</p>
+<p>He had stolen an impact wrench and used it like a battering ram.</p>
+<p>Two drones behind him.</p>
+<p>&quot;Down!&quot; Maxine roared.</p>
+<p>Max dropped as Maxine swung wrench into pod control box.</p>
+<p>Sparks.<br>
+Arc unlocked.</p>
+<p>Max rolled out under red strobe as drones fired restraint darts into the now-empty pod.</p>
+<p>Munch appeared at corridor corner, grabbed Max by harness, dragged him toward maintenance lane.</p>
+<p>&quot;Move move move.&quot;</p>
+<p>They ran.</p>
+<p>Security voices layered across speakers:</p>
+<p>&quot;Containment protocol initiated.&quot;<br>
+&quot;Asset #864 high priority.&quot;<br>
+&quot;Companions subject to review.&quot;</p>
+<p>Containment protocol.<br>
+No more euphemism.</p>
+<p>They hit maintenance lane and slid through half-open panel Munch had used earlier.</p>
+<p>Panel slammed shut behind.</p>
+<p>Dark tube.<br>
+Cables.<br>
+Heat.</p>
+<p>Maxine shoved wrench into bracket and held panel from outside breach.</p>
+<p>Drones hit it once.<br>
+Twice.</p>
+<p>Bracket held.</p>
+<p>Munch led crawl at full speed.</p>
+<p>Max followed, chest scraping metal.</p>
+<p>His blocker rebound started mid-crawl.<br>
+Headache like a spike through forehead.<br>
+Hands trembling.</p>
+<p>Keep moving.</p>
+<p>Crawl ended at drop shaft above laundry.</p>
+<p>Munch went first.<br>
+Maxine second.<br>
+Max third.</p>
+<p>He dropped, hit hard, almost blacked out.</p>
+<p>Maxine hauled him up.</p>
+<p>&quot;Stay with me.&quot;</p>
+<p>They merged into laundry worker stream just as containment tones shifted from local to ring-wide:</p>
+<pre class="read-hud"><code>[STATION ALERT]
+Data integrity incident.
+Certain channels may contain unauthorized materials.
+Please rely on official guidance.</code></pre>
+<p>Too late.<br>
+Materials were everywhere now.</p>
+<hr class="read-rule" />
+<p>By the time they reached bunk corridor dead end, labor boards were aflame with copies, comments, denials, counter-denials.</p>
+<p>People were reading.<br>
+Arguing.<br>
+Saving files offline.</p>
+<p>Compliance accounts pushed messages:</p>
+<p><code>fabricated documents circulating</code></p>
+<p>Workers replied with screenshots of internal headers.</p>
+<p>Someone posted footage of Max being escorted toward Path C intake.</p>
+<p>Someone else posted the handshake metadata field names.</p>
+<p>Chaos had a pulse.</p>
+<p>Maxine checked lanes and laughed in disbelief.</p>
+<p>&quot;You did it.&quot;</p>
+<p>Max sat against wall, shaking from blocker rebound and adrenaline crash.</p>
+<p>&quot;Did what.&quot;</p>
+<p>&quot;Set the station on fire without flames.&quot;</p>
+<p>Munch knelt in front of him and held his jaw until his eyes focused.</p>
+<p>&quot;Stay here.&quot;</p>
+<p>&quot;Can't.&quot;</p>
+<p>&quot;You have to for sixty seconds.&quot;</p>
+<p>He counted sixty with her.<br>
+Then stood.</p>
+<p>New pane arrived.</p>
+<pre class="read-hud"><code>[STATUS UPDATE]
+Path C transfer order: suspended pending integrity tribunal.
+Asset #864 placed under temporary hold.
+Movement restrictions apply.</code></pre>
+<p>Tribunal.</p>
+<p>Not freedom.<br>
+Delay with witnesses.</p>
+<p>Maxine read pane and shook head.</p>
+<p>&quot;Public pressure worked.&quot;</p>
+<p>Munch:</p>
+<p>&quot;For now.&quot;</p>
+<p>Max:</p>
+<p>&quot;What's temporary hold mean.&quot;</p>
+<p>Munch checked deeper fields.</p>
+<p>&quot;Could mean room arrest, escorted movement, mandatory appearances.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;Could mean trap with paperwork again.&quot;</p>
+<p>Also true.</p>
+<p>Then another message, unknown source, same formatting as before:</p>
+<p><code>good. now survive tribunal</code></p>
+<p>Followed by:</p>
+<p><code>delta wants silence. make process loud</code></p>
+<p>Then gone.</p>
+<p>Max showed them.</p>
+<p>Maxine:</p>
+<p>&quot;Our ghost likes drama.&quot;</p>
+<p>Munch:</p>
+<p>&quot;Or likes using us.&quot;</p>
+<p>Max:</p>
+<p>&quot;Both.&quot;</p>
+<hr class="read-rule" />
+<p>Temporary hold took shape fast.</p>
+<p>Two attendants arrived with polite scripts and portable ankle tag.</p>
+<p>&quot;Asset #864, this is a non-custodial movement aid.&quot;</p>
+<p>Maxine laughed in their faces.</p>
+<p>&quot;It's a leash.&quot;</p>
+<p>Attendant smiled thinly.</p>
+<p>&quot;Language preference noted.&quot;</p>
+<p>They clipped tag to Max's boot.</p>
+<p>Pane:</p>
+<pre class="read-hud"><code>[TEMP HOLD]
+Allowed zones: bunk corridor, assigned labor lanes, tribunal prep room
+Boundary breach triggers alert.</code></pre>
+<p>Munch whispered:</p>
+<p>&quot;Can we spoof tag.&quot;</p>
+<p>Max:</p>
+<p>&quot;Not tonight.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;Then we weaponize allowed zones.&quot;</p>
+<p>Meaning:<br>
+use every permitted lane as stage.<br>
+stay visible.<br>
+keep files moving.<br>
+avoid isolated rooms.</p>
+<p>They agreed.</p>
+<p>First action: tribunal prep room visit with witnesses.</p>
+<p>Prep room was a plain table and one legal kiosk.</p>
+<p>Kiosk now showed options never offered before:</p>
+<p>- submit evidence<br>
+- request witness list<br>
+- request delay<br>
+- nominate advocate</p>
+<p>Public pressure had forced process features out of hiding.</p>
+<p>Max submitted continuity memo excerpt and handshake metadata capture.<br>
+Requested witness list.<br>
+Nominated Munch as technical advocate and Maxine as conduct witness.</p>
+<p>Kiosk accepted both with &quot;pending approval.&quot;</p>
+<p>Maxine muttered:</p>
+<p>&quot;If they reject, we appeal publicly.&quot;</p>
+<p>Munch:</p>
+<p>&quot;We publish rejection itself.&quot;</p>
+<p>Max:</p>
+<p>&quot;Everything is content now.&quot;</p>
+<p>He hated that sentence.<br>
+It was still true.</p>
+<hr class="read-rule" />
+<p>Cycle dragged.</p>
+<p>Hold zones turned into theater.</p>
+<p>Everywhere Max walked, people watched.<br>
+Some nodded once.<br>
+Some avoided eye contact.<br>
+Some whispered &quot;864&quot; like a username.</p>
+<p>Compliance tried three times to reroute him through quieter corridors.<br>
+Maxine insisted on main lanes each time within allowed boundaries.</p>
+<p>&quot;Shortest compliant path,&quot; he told attendants.</p>
+<p>They could not object without admitting they wanted hidden transit.</p>
+<p>By mid-cycle, three more anonymous drops surfaced:<br>
+internal ticket templates mentioning &quot;version family confusion incidents,&quot;<br>
+a redacted procurement list for cognitive packs,<br>
+and a training slide:</p>
+<p><code>When identity repetition is observed, reassure with continuity language.</code></p>
+<p>Station rumor transformed into shared knowledge.</p>
+<p>Danger increased with it.</p>
+<p>Munch kept scanning channels for calls to violence.<br>
+Flagged and discouraged every one she saw.</p>
+<p>&quot;If this turns riot, they get emergency powers and we're done.&quot;</p>
+<p>Max nodded.</p>
+<p>&quot;Keep it procedural. Keep it loud.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;Keep it undeniable.&quot;</p>
+<hr class="read-rule" />
+<p>Near cycle close, tribunal time posted:</p>
+<pre class="read-hud"><code>INTEGRITY TRIBUNAL
+Asset #864
+Start: next cycle +00:40
+Location: Civic Hall C</code></pre>
+<p>Civic Hall C.</p>
+<p>Not compliance suite.<br>
+A public-adjacent venue.</p>
+<p>Win for noise.<br>
+Risk for optics.</p>
+<p>They had less than one cycle to prepare.</p>
+<p>Max used prep room kiosk to pull his own file summary and found new fields:</p>
+<p><code>public visibility score: high</code><br>
+<code>containment cost estimate: elevated</code></p>
+<p>He showed Munch.</p>
+<p>&quot;I'm expensive now.&quot;</p>
+<p>Munch:</p>
+<p>&quot;Good. Stay expensive.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;And stay alive.&quot;</p>
+<p>They drafted speaking points.<br>
+Not speeches.<br>
+Hard claims with attached files:</p>
+<p>- continuity memo authenticity markers<br>
+- mirror index counts<br>
+- handshake shaping fields<br>
+- debt-anchor persistence implication</p>
+<p>No philosophy.<br>
+No why.<br>
+What is happening.<br>
+Always what.</p>
+<p>Max practiced saying lines out loud without shaking:</p>
+<p>&quot;Nominal identifier reuse is active.&quot;<br>
+&quot;Debt persists across disputed continuity events.&quot;<br>
+&quot;Guided telemetry includes dissent suppression profiles.&quot;</p>
+<p>Each sentence felt like stepping on thin ice and hearing it hold for one more move.</p>
+<hr class="read-rule" />
+<p>Sleep did not happen.</p>
+<p>Cycle turnover came with softer alerts than yesterday, almost respectful now that the station had an audience.</p>
+<pre class="read-hud"><code>[REMINDER]
+Integrity tribunal appearance required.
+Temporary hold remains active.</code></pre>
+<p>No path c pane.<br>
+No immediate transfer.</p>
+<p>Delay bought.</p>
+<p>Max stood in bunk corridor with Maxine and Munch while distant shift horns marked another loop starting.</p>
+<p>He felt blocker rebound aftermath still in his hands, tiny tremors.<br>
+He felt Beta smoothing residue trying to settle again.<br>
+He felt fear, anger, focus, all uncottoned.</p>
+<p>Maxine handed him a cup of bitter station coffee.</p>
+<p>&quot;You look like garbage.&quot;</p>
+<p>Max sipped.</p>
+<p>&quot;You too.&quot;</p>
+<p>Munch checked tribunal packet one last time.</p>
+<p>&quot;Witness approvals came through.&quot;</p>
+<p>Maxine blinked.</p>
+<p>&quot;Both?&quot;</p>
+<p>&quot;Both.&quot;</p>
+<p>Public pressure still doing work.</p>
+<p>Max exhaled.</p>
+<p>&quot;Then we walk in with files and names.&quot;</p>
+<p>Maxine:</p>
+<p>&quot;And if they try closed-door switch.&quot;</p>
+<p>Munch:</p>
+<p>&quot;We trigger mirror release to external relays.&quot;</p>
+<p>Max:</p>
+<p>&quot;And if they still grab me.&quot;</p>
+<p>Maxine's answer was immediate.</p>
+<p>&quot;They don't get quiet.&quot;</p>
+<p>Munch's answer followed.</p>
+<p>&quot;Not ever again.&quot;</p>
+<p>They moved toward Civic Hall C through allowed lanes packed with workers pretending to run errands near the same destination.</p>
+<p>No one said &quot;good luck.&quot;<br>
+This place did not waste words on luck.</p>
+<p>At hall entrance, two security frames scanned tags.<br>
+Max's temp hold tag pulsed.<br>
+Gate opened.</p>
+<p>Inside, benches were half full already.</p>
+<p>Halden stood at front table with two other officers and a legal drone.<br>
+Roger sat at side terminal as technical witness.</p>
+<p>Large screen behind them displayed case title:</p>
+<p>INTEGRITY TRIBUNAL - RETENTION PROCESS DISPUTE</p>
+<p>Not &quot;asset misconduct.&quot;<br>
+Not yet.</p>
+<p>Max took respondent seat.</p>
+<p>Maxine and Munch sat at witness row.</p>
+<p>Murmur in room rose and fell.</p>
+<p>Legal drone called opening:</p>
+<p>&quot;Proceedings begin. Record is live.&quot;</p>
+<p>Live.</p>
+<p>Good.</p>
+<p>Halden began with practiced gravity.</p>
+<p>&quot;This tribunal addresses unauthorized data circulation, operational disruption, and claims regarding continuity management protocols.&quot;</p>
+<p>Max listened and waited for his turn.</p>
+<p>Everything in his body wanted to either run or fight.<br>
+He did neither.</p>
+<p>He held to process because process was currently weaponized in his favor.</p>
+<p>Halden called first evidence item from station side:<br>
+security logs from G-2 showing exfiltration.</p>
+<p>True.</p>
+<p>Then he called their side submissions &quot;contextually distorted.&quot;</p>
+<p>Expected.</p>
+<p>Then legal drone turned to Max.</p>
+<p>&quot;Respondent may issue initial statement.&quot;</p>
+<p>Max stood.</p>
+<p>He looked at benches first, not officers.<br>
+Dozens of faces.<br>
+Some curious.<br>
+Some terrified.<br>
+Some furious.</p>
+<p>He spoke clear, no flourish.</p>
+<p>&quot;The station's own memo states identity iteration is used for labor continuity.&quot;</p>
+<p>&quot;The station's own files show repeated nominal identifiers with retention statuses.&quot;</p>
+<p>&quot;My debt obligation persists under that identifier regardless of continuity disputes.&quot;</p>
+<p>&quot;Guided telemetry profiles include dissent suppression fields.&quot;</p>
+<p>&quot;This is not a rumor. These are operational settings.&quot;</p>
+<p>Room noise rose.</p>
+<p>Legal drone:</p>
+<p>&quot;Order.&quot;</p>
+<p>Halden objected on authenticity.</p>
+<p>Munch stood as technical advocate before anyone asked.</p>
+<p>&quot;We can verify headers and checksum lineage against archive format if given terminal access in view of record.&quot;</p>
+<p>Murmurs got louder.<br>
+People wanted that access in public.</p>
+<p>Halden's jaw tightened.</p>
+<p>Legal drone considered, then ruled:</p>
+<p>&quot;Conditional access granted under supervision.&quot;</p>
+<p>Win.</p>
+<p>Small.<br>
+Critical.</p>
+<p>Munch moved to side terminal beside Roger.</p>
+<p>Hands steady.<br>
+Voice flat.</p>
+<p>&quot;Loading continuity memo excerpt. Displaying internal auth block.&quot;</p>
+<p>Screen showed keys, signatures, timestamp fields.</p>
+<p>Roger watched and, after a long second, nodded once.</p>
+<p>&quot;Format appears consistent with sector executive memos.&quot;</p>
+<p>Room shifted.<br>
+Not proof complete.<br>
+Enough.</p>
+<p>Halden called for recess to review.</p>
+<p>Legal drone denied immediate recess due live record commitments.</p>
+<p>Another win.</p>
+<p>Process loud.</p>
+<p>Max sat back down on shaking legs and felt for first time not hope, exactly, but traction.</p>
+<p>Tribunal was far from over.<br>
+Delta was far from done.<br>
+Path c still hung above him like a blade with good documentation.</p>
+<p>But the blade was now in front of witnesses.</p>
+<p>He could work with witnesses.</p>
+<p>Legal drone announced:</p>
+<p>&quot;Proceeding continues with cross-review of telemetry shaping fields.&quot;</p>
+<p>Maxine leaned toward Max from witness row and said, very quietly:</p>
+<p>&quot;Groundhog day just got an audience.&quot;</p>
+<p>Max looked at the live record light, red and steady.</p>
+<p>&quot;Good,&quot; he said.</p>
+<p>&quot;Let them watch.&quot;</p>
+    </article>
+    <nav class="read-nav" aria-label="Chapter navigation">
+      <a class="read-nav__link read-nav__link--prev" href="ch06.html"><span class="read-nav__arrow">&larr;</span> <span class="read-nav__chapno">Ch 6</span> <span class="read-nav__title">Shift Ghost</span></a>
+      <a class="read-nav__link read-nav__link--next" href="ch08.html"><span class="read-nav__chapno">Ch 8</span> <span class="read-nav__title">Integrity Cross-Review</span> <span class="read-nav__arrow">&rarr;</span></a>
+    </nav>
+  </main>
+</body>
+</html>
