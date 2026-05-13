@@ -516,8 +516,7 @@ function panelArtPromptForCell(ch, cell, pageNum) {
 }
 
 function novelComicArtPromptOverlay(prompt) {
-  return `                        <div class="novel-comic__art-prompt" role="note" aria-label="AI image prompt for this panel">
-                          <span class="novel-comic__art-prompt-k">AI image prompt</span>
+  return `                        <div class="novel-comic__art-prompt" role="note" aria-label="Image prompt for this panel">
                           <p class="novel-comic__art-prompt-text">${esc(prompt)}</p>
                         </div>`;
 }
