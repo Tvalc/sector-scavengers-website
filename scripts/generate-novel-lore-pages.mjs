@@ -165,8 +165,10 @@ function layoutSpansForPage(ch, pageIndex) {
      and absorbs the next prose beat ("His mouth tasted like copper...") as the
      panel's caption bubble. */
   if (ch.n === 1 && pageIndex === 3) return ["12"];
-  /* Ch. 1: [SYSTEM] Good morning, Max paired with "Max slapped at the air". */
-  if (ch.n === 1 && pageIndex === 5) return ["6", "6"];
+  /* Ch. 1: "He sat up too fast..." gets a single full-width panel.
+     The "Max slapped at the air..." beat is absorbed into the prior
+     [SYSTEM] greeting bubble, so this page now carries one cell. */
+  if (ch.n === 1 && pageIndex === 5) return ["12"];
   if (pageIndex % 2 === 0) return ["12"];
   const multi = [
     ["6", "6", "12"],
@@ -386,7 +388,17 @@ function buildComicPages(ch) {
         const { prose, hudCode } = head.proseHud;
         queue.shift();
         gid += 1;
-        row.push({ span: span0, kind: "proseHud", prose, hudCode, gid });
+        const cellGid = gid;
+        let proseOut = prose;
+        /* Mirror the code-cell behaviour: when real art exists, the rendered
+           image already carries the HUD line, so we can pull the next prose
+           beat into the same bubble for a single consolidated panel. */
+        if (realPanelArtSrc(ch.n, cellGid) && queue[0]?.prose !== undefined) {
+          const absorbed = queue.shift();
+          proseOut = `${proseOut} ${absorbed.prose}`.trim();
+          gid += 1;
+        }
+        row.push({ span: span0, kind: "proseHud", prose: proseOut, hudCode, gid: cellGid });
         continue;
       }
       const { chunkMd, artDirective } = consumeProseFromQueue(queue, budget);
