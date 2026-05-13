@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Auto-playing slideshow of the Wake into ledger origin strip. Record for social, or share the link.">
-  <title>Origin strip slideshow · Lore · Sector Scavengers</title>
+  <meta name="description" content="Auto-playing slideshow of the Beer Friday lore strip. Record for social, or share the link.">
+  <title>Beer Friday slideshow · Lore · Sector Scavengers</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
@@ -242,8 +242,8 @@
 </head>
 <body class="origin-ss-page">
   <header class="origin-ss__topbar">
-    <a href="origin-story.html">← Wake into ledger</a>
-    <h1 class="origin-ss__title">Origin strip · Slideshow</h1>
+    <a href="beer-friday.html">← Beer Friday</a>
+    <h1 class="origin-ss__title">Beer Friday · Slideshow</h1>
     <a href="index.html">Lore hub</a>
   </header>
 
@@ -251,7 +251,7 @@
     class="origin-ss"
     id="origin-ss-root"
     data-interval="6300"
-    aria-label="Origin story slideshow"
+    aria-label="Beer Friday slideshow"
   >
     <div class="origin-ss__stage-wrap">
       <div class="origin-ss__progress-track" aria-hidden="true">
@@ -261,17 +261,17 @@
         <img
           class="origin-ss__img"
           data-origin-ss-img
-          src="../media/origin-story/SS-Background-Origin-Story-Panel-1.png"
+          src="../media/beer-friday/SS-Beer-Friday-Panel-1.png"
           width="1200"
           height="675"
           alt=""
           decoding="async"
           fetchpriority="high"
         >
-        <p class="origin-ss__tag" data-origin-ss-tag>01 · Layoffs</p>
+        <p class="origin-ss__tag" data-origin-ss-tag>01 · Rooftop</p>
       </div>
       <blockquote class="origin-ss__caption" data-origin-ss-caption>
-        In 2026 the layoffs stop pretending to be temporary.
+        Building B roof. Loose railing. Customer Obsession peeling like a warning label.
       </blockquote>
     </div>
 
@@ -279,7 +279,7 @@
       <div class="origin-ss__hud-nav">
         <button type="button" class="origin-ss__btn" data-origin-ss-prev aria-label="Previous slide">◀ Prev</button>
         <span class="origin-ss__counter" aria-live="polite">
-          <span data-origin-ss-index>1</span> / <span data-origin-ss-total>20</span>
+          <span data-origin-ss-index>1</span> / <span data-origin-ss-total>6</span>
         </span>
         <button type="button" class="origin-ss__btn" data-origin-ss-next aria-label="Next slide">Next ▶</button>
       </div>
@@ -291,34 +291,20 @@
 
     <p class="origin-ss__help" data-origin-ss-help>
       <strong>Recording:</strong> use <kbd>Fullscreen</kbd> then your OS screen recorder. Add <code>?record=1</code> to the URL to hide this chrome from the first frame.
-      Press <kbd>H</kbd> to toggle clean mode (image + caption only). <kbd>Space</kbd> / arrow keys advance. Optional <code>?interval=5000</code> sets milliseconds per slide (minimum 1200).
+      Press <kbd>H</kbd> to toggle clean mode (image + caption only). <kbd>Space</kbd> / arrow keys advance. Optional <code>?interval=8000</code> sets milliseconds per slide (minimum 1200).
     </p>
   </main>
 
   <script>
     window.LORE_SLIDESHOW = {
-      altLabelPrefix: "Wake into ledger",
+      altLabelPrefix: "Beer Friday strip",
       slides: [
-        { src: "../media/origin-story/SS-Background-Origin-Story-Panel-1.png", tag: "01 · Layoffs",         caption: "2026. The AI does your job better. HR books your exit interview." },
-        { src: "../media/origin-story/SS-Background-Origin-Story-Panel-2.png", tag: "02 · Severance",       caption: "Severance comes with a brochure. Sleep through the bad years. Wake up rich." },
-        { src: "../media/origin-story/SS-Background-Origin-Panel-3.png",       tag: "03 · Status symbol",   caption: "The rich freeze first. Cryo becomes a tourist attraction." },
-        { src: "../media/origin-story/SS-Background-BudgetCryo-Origin-Panel-4.png", tag: "04 · Debt paper", caption: "Then a bank bundles your nap into a bond. Your sleep is somebody's return." },
-        { src: "../media/origin-story/SS-Background-Origin-Warehouse-Panel-5.png", tag: "05 · Warehouse",  caption: "A shelf holds a person the way it holds a crate. Pods stack like SKUs." },
-        { src: "../media/origin-story/SS-Background-Origin-Warehouse-Panel-6.png", tag: "06 · Fees accrue",caption: "Storage fees accrue while you dream. Power. Air. Coolant. The bill climbs." },
-        { src: "../media/origin-story/SS-Background-Origin-Warehouse-Panel-6b.png", tag: "06 · Underwater",caption: "You sleep through your own foreclosure." },
-        { src: "../media/origin-story/SS-Background-Origin-ShipLoad-Panel-7.png",  tag: "07 · The lot",     caption: "A broker prints a lot. Warm bodies included. Still under contract." },
-        { src: "../media/origin-story/SS-Background-Origin-ShipLoad-Panel-7b.png", tag: "07 · Winning bid", caption: "Salvage Co. wins the auction. Logo you've never seen." },
-        { src: "../media/origin-story/SS-Background-Origin-ShipLoad-Panel-7c.png", tag: "07 · No jurisdiction", caption: "Signatures happen in orbit. No jurisdiction. No appeal." },
-        { src: "../media/origin-story/SS-Background-Origin-ShipLoad-Panel-7d.png", tag: "07 · Manifest number", caption: "Transfer complete. You're a manifest number now." },
-        { src: "../media/origin-story/SS-Background-Origin-Wakeup-Panel-8.png",    tag: "08 · Thaw",         caption: "Thaw alarms go off in batches. Millions wake to the same due date." },
-        { src: "../media/origin-story/SS-Background-Origin-ShipLoad-Panel-8b.png", tag: "08 · Clock starts", caption: "Suit seals. Airlock clock starts. You're already late on the rent." },
-        { src: "../media/origin-story/SS-Background-Origin-SalvageRun-Panel-9.png", tag: "09 · The commute",caption: "A shuttle drops you at the junk tide line. Welcome to the new commute." },
-        { src: "../media/origin-story/SS-Background-Origin-SalvageRun-Panel-9b.png", tag: "09 · The math",  caption: "You burn fuel to earn scrap. The math gets ugly fast." },
-        { src: "../media/origin-story/SS-Background-Origin-SalvageRun-Panel-9c.png", tag: "09 · Hull talk", caption: "Then the hull starts talking back." },
-        { src: "../media/origin-story/SS-Background-Origin-Boarding-Panel-10.png",  tag: "10 · The mouth",  caption: "The derelict's mouth is a dark rectangle in a hull that used to be proud." },
-        { src: "../media/origin-story/SS-Background-Origin-Boarding-Panel-10b.png", tag: "10 · You cross",  caption: "You go through. Standing still also costs money." },
-        { src: "../media/origin-story/SS-Background-Origin-Boarding-Panel-10c.png", tag: "10 · Quiet wrong",caption: "The first room looks empty. Then the suit readouts twitch." },
-        { src: "../media/origin-story/SS-Website-Explore-Panel.png",                tag: "11 · Pay the map",caption: "The map lies until you pay it in actions. Some doors pay out. Some bill you in blood." }
+        { src: "../media/beer-friday/SS-Beer-Friday-Panel-1.png", tag: "01 · Rooftop",          caption: "Building B roof. Loose railing. Customer Obsession peeling like a warning label." },
+        { src: "../media/beer-friday/SS-Beer-Friday-Panel-2.png", tag: "02 · Employee #2",      caption: "Employee Number Two: literally the second person to ever collect a paycheck here." },
+        { src: "../media/beer-friday/SS-Beer-Friday-Panel-3.png", tag: "03 · Excellence",       caption: "Water arcs and probable OSHA violations over an active street. Downstairs, a VP says \"operational excellence.\"" },
+        { src: "../media/beer-friday/SS-Beer-Friday-Panel-4.png", tag: "04 · Security",         caption: "Security shows up. Two navy jackets. \"Sir, can we see some ID?\"" },
+        { src: "../media/beer-friday/SS-Beer-Friday-Panel-5.png", tag: "05 · The stare",        caption: "\"I'm Employee Number Two. You can go.\" Risk runs the math before Policy opens its mouth." },
+        { src: "../media/beer-friday/SS-Beer-Friday-Panel-6.png", tag: "06 · The brochure",     caption: "Years later, a fundraising brochure shows up. Same confidence. Nicer font." }
       ]
     };
   </script>
