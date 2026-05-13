@@ -4613,13 +4613,14 @@ a.lore-hub__card--live:hover {
   max-height: none;
   min-height: 0;
 }
-.novel-chapter-page .novel-comic-page .novel-comic__grid:has(.novel-panel--span-4):has(.novel-panel--span-8) .novel-panel--span-4:not(.novel-panel--sys) .novel-comic__balloon.rules-comic__bubble {
+.novel-chapter-page .novel-comic-page .novel-comic__grid:has(.novel-panel--span-4):has(.novel-panel--span-8) .novel-panel:not(.novel-panel--sys) .novel-comic__balloon.rules-comic__bubble {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   min-height: 0;
+  margin-top: 0.6rem;
 }
-.novel-chapter-page .novel-comic-page .novel-comic__grid:has(.novel-panel--span-4):has(.novel-panel--span-8) .novel-panel--span-4 .novel-comic__balloon p {
+.novel-chapter-page .novel-comic-page .novel-comic__grid:has(.novel-panel--span-4):has(.novel-panel--span-8) .novel-panel .novel-comic__balloon p {
   margin: 0;
 }
