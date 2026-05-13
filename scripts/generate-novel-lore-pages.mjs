@@ -169,6 +169,10 @@ function layoutSpansForPage(ch, pageIndex) {
      The "Max slapped at the air..." beat is absorbed into the prior
      [SYSTEM] greeting bubble, so this page now carries one cell. */
   if (ch.n === 1 && pageIndex === 5) return ["12"];
+  /* Ch. 1 Page 10: narrow "Somewhere in the wall..." on the left, wide
+     robot-helper beat on the right. Marked fixed so the rebalancer doesn't
+     collapse it back to 6/6. */
+  if (ch.n === 1 && pageIndex === 9) return { spans: ["4", "8"], fixed: true };
   if (pageIndex % 2 === 0) return ["12"];
   const multi = [
     ["6", "6", "12"],
@@ -178,6 +182,12 @@ function layoutSpansForPage(ch, pageIndex) {
     ["12", "4", "4", "4"],
   ];
   return multi[(ch.n + pageIndex) % multi.length];
+}
+
+/** Normalize layoutSpansForPage return value to { spans, fixed }. */
+function normalizeLayout(layout) {
+  if (Array.isArray(layout)) return { spans: layout, fixed: false };
+  return { spans: layout.spans, fixed: Boolean(layout.fixed) };
 }
 
 function markdownToPlainSpan(md) {
@@ -359,7 +369,8 @@ function buildComicPages(ch) {
   let guard = 0;
   while (queue.length > 0 && guard < 800) {
     guard += 1;
-    const spansTemplate = layoutSpansForPage(ch, pages.length);
+    const layout = normalizeLayout(layoutSpansForPage(ch, pages.length));
+    const spansTemplate = layout.spans;
     const row = [];
     for (const span0 of spansTemplate) {
       if (!queue.length) break;
@@ -409,7 +420,7 @@ function buildComicPages(ch) {
       gid += 1;
       row.push({ span: span0, kind: "prose", chunkMd, gid, artDirective: artDirective || null });
     }
-    rebalanceRowSpans(row);
+    if (!layout.fixed) rebalanceRowSpans(row);
     if (row.length) pages.push(row);
     else break;
   }

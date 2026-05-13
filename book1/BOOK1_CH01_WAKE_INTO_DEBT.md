@@ -51,15 +51,11 @@ A checkbox.
 
 Max signed it grinning. Sleep through the bad years. Wake up after scarcity. Spend the rest of his life on plants and pickleball, with no roadmap and no boss.
 
-Then nothing.
-
-The nothing had texture. Not sleep. Not unconsciousness. More like a semi-lucid dream covered with a thick fog.
-
 Max's stomach heaved. He rolled onto his side and vomited again...less gel this time, more acid, and watched the mess slide toward a floor grate that drank it without judgment. His hands shook until he had to press them flat to the deck to steady them.
 
 Somewhere in the wall, machinery clicked through a checklist only it could hear.
 
-He tried to stand and failed once, twice, on the third try catching the lip of the cryo pod like it owed him money. His reflection in the cracked chrome was wrong in a way he couldn't name yet: his own face, but the eyes moved a half beat later than he felt himself moving them, as if someone else were interpreting his nerve impusles and executing them with a slight lag.
+He tried to stand and failed once, twice, on the third try the robot helper reached out and caught him. His reflection in the chrome chassis of the bot was wrong in a way he couldn't figure out through the fog his mind was wrapped in. His own face, but the eyes moved a half beat later than he felt himself moving them, as if someone else were interpreting his nerve impusles and executing them with a slight lag.
 
 A thin line of blood ran from his nose and stopped halfway, as if the nanites couldn't decide whether bleeding was on-brand.
 
