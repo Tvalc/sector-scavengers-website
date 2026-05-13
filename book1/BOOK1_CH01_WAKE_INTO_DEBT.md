@@ -49,7 +49,7 @@ Laughter.
 A contract packet.
 A checkbox.
 
-**CRYO TRANSITION CONSENT: IRREVERSIBLE**
+Max was more excited than he'd ever been, getting ready to go to sleep until a post scarcity society exists and he can focus on growing his plant collection and perfecting his pickle ball game without worrying about work or societal stress.
 
 Then nothing.
 
