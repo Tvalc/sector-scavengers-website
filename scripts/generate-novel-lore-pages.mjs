@@ -800,18 +800,41 @@ ${comic.html}
 `;
 }
 
+/* Hand-written, story-first descriptions for the novel hub.
+   Keys are chapter numbers. Falsey/missing => fall back to the generated teaser
+   from the chapter source. Use plain prose, no art directives. */
+const NOVEL_HUB_DESCRIPTIONS = {
+  1: "Max wakes mid-scream in a cryopod, owing a corporation that barely remembers his name. The thaw is the easy part. Blue text in the air, a polite welcome from V.A.L.U., and a debt ledger waiting to greet him are the rest.",
+};
+
+/* Chapters listed here render as non-clickable “Coming soon” cards on the hub.
+   Ch1 is the only one playable right now; everything else is in the pipeline. */
+const NOVEL_HUB_LIVE = new Set([1]);
+
 function indexHtml(chapters) {
   const cards = chapters
-    .map(
-      (ch) => `
+    .map((ch) => {
+      const isLive = NOVEL_HUB_LIVE.has(ch.n);
+      const desc = NOVEL_HUB_DESCRIPTIONS[ch.n] || (isLive ? ch.teaser : "Coming soon.");
+      if (!isLive) {
+        return `
+      <li>
+        <div class="lore-hub__card lore-hub__card--soon novel-hub__card" aria-disabled="true">
+          <span class="lore-hub__card-tag">Ch. ${ch.n}</span>
+          <h2 class="lore-hub__card-title">${esc(ch.title)}</h2>
+          <p class="lore-hub__card-desc">Coming soon.</p>
+        </div>
+      </li>`;
+      }
+      return `
       <li>
         <a class="lore-hub__card lore-hub__card--live novel-hub__card" href="ch${String(ch.n).padStart(2, "0")}.html">
           <span class="lore-hub__card-tag">Ch. ${ch.n}</span>
           <h2 class="lore-hub__card-title">${esc(ch.title)}</h2>
-          <p class="lore-hub__card-desc">${ch.teaser}</p>
+          <p class="lore-hub__card-desc">${esc(desc)}</p>
         </a>
-      </li>`,
-    )
+      </li>`;
+    })
     .join("");
 
   return `<!DOCTYPE html>
