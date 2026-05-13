@@ -161,7 +161,11 @@ function parseChapter(file) {
 function layoutSpansForPage(ch, pageIndex) {
   /* Ch. 1 cold open: splash mid-scream, then splash for the scream-interior beat before tier strips resume. */
   if (ch.n === 1 && pageIndex === 1) return ["12"];
-  /* Ch. 1: two beats only (slap + cryo spill) after the "Another box" / HUD splash; floor opens next page. */
+  /* Ch. 1: full-width BOOTSTRAP readout (real art carries the code text in-image). */
+  if (ch.n === 1 && pageIndex === 3) return ["12"];
+  /* Ch. 1: full-width "His mouth tasted like copper" prose sits below the readout panel. */
+  if (ch.n === 1 && pageIndex === 4) return ["12"];
+  /* Ch. 1: [SYSTEM] Good morning, Max paired with "Max slapped at the air"—half-width pair. */
   if (ch.n === 1 && pageIndex === 5) return ["6", "6"];
   if (pageIndex % 2 === 0) return ["12"];
   const multi = [
@@ -535,13 +539,17 @@ function renderComicBookHtml(ch) {
         const { w, h } = panelFigureDims(cell.span);
         const bubbleCls = bubbleClassesForNovelCell(cell, cell.gid, cell.span);
         if (cell.kind === "code") {
-          return `                      <article class="rules-comic__panel novel-panel novel-panel--span-${cell.span} novel-panel--sys" id="novel-p${cell.gid}">
-                        <div class="rules-comic__frame" aria-hidden="true"></div>
-${figureWithPlaceholderAndPrompt(ch, cell, pageNum, w, h)}
+          const hasRealArt = !!realPanelArtSrc(ch.n, cell.gid);
+          const readoutBlock = hasRealArt
+            ? ""
+            : `
                         <div class="rules-comic__strip-note rules-comic__strip-note--novel-sys">
                           <p class="novel-panel__sys-label"><span class="rules-comic__kicker">Readout</span></p>
                           <pre class="novel-panel__sys"><code>${esc(cell.code)}</code></pre>
-                        </div>
+                        </div>`;
+          return `                      <article class="rules-comic__panel novel-panel novel-panel--span-${cell.span} novel-panel--sys" id="novel-p${cell.gid}">
+                        <div class="rules-comic__frame" aria-hidden="true"></div>
+${figureWithPlaceholderAndPrompt(ch, cell, pageNum, w, h)}${readoutBlock}
                       </article>`;
         }
         if (cell.kind === "proseHud") {
