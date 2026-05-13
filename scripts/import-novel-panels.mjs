@@ -16,6 +16,12 @@
  *   node scripts/import-novel-panels.mjs --chapter 1
  *   node scripts/import-novel-panels.mjs --chapter 1 --src "C:\\path\\to\\Chapter-1"
  *   node scripts/import-novel-panels.mjs --chapter 1 --limit 5
+ *   node scripts/import-novel-panels.mjs --chapter 1 --map "6=8,7=9"
+ *
+ * --map lets you remap the source Panel-N number to a specific output gid when
+ * the comic's gid numbering drifts from the source filename (e.g. when bubbles
+ * are absorbed into earlier panels). Entries are "<sourcePanelN>=<outputGid>",
+ * comma separated. Unlisted source files fall back to their natural gid.
  *
  * Idempotent: existing outputs are overwritten only when --force is set.
  */
@@ -29,13 +35,23 @@ const websiteRoot = path.resolve(__dirname, "..");
 
 function parseArgs() {
   const args = process.argv.slice(2);
-  const opts = { chapter: null, src: null, limit: null, force: false };
+  const opts = { chapter: null, src: null, limit: null, force: false, map: {} };
   for (let i = 0; i < args.length; i += 1) {
     const a = args[i];
     if (a === "--chapter") opts.chapter = parseInt(args[++i], 10);
     else if (a === "--src") opts.src = args[++i];
     else if (a === "--limit") opts.limit = parseInt(args[++i], 10);
     else if (a === "--force") opts.force = true;
+    else if (a === "--map") {
+      const raw = String(args[++i] || "");
+      for (const pair of raw.split(",")) {
+        const trimmed = pair.trim();
+        if (!trimmed) continue;
+        const m = /^(\d+)\s*=\s*(\d+)$/.exec(trimmed);
+        if (!m) throw new Error(`--map entry must be "src=gid", got: ${trimmed}`);
+        opts.map[parseInt(m[1], 10)] = parseInt(m[2], 10);
+      }
+    }
   }
   if (!opts.chapter || Number.isNaN(opts.chapter)) {
     throw new Error("Pass --chapter N (integer, e.g. --chapter 1)");
@@ -67,7 +83,7 @@ function sortKeyFromName(name) {
 }
 
 async function main() {
-  const { chapter, src, limit, force } = parseArgs();
+  const { chapter, src, limit, force, map } = parseArgs();
   const sourceDir = src || defaultSourceDir(chapter);
   if (!fs.existsSync(sourceDir)) {
     throw new Error(`Source folder not found: ${sourceDir}`);
@@ -76,7 +92,7 @@ async function main() {
   const outDir = path.join(websiteRoot, "media", "novel", `ch${chPad}`);
   fs.mkdirSync(outDir, { recursive: true });
 
-  const sourceFiles = fs
+  const sourceEntries = fs
     .readdirSync(sourceDir)
     .filter((f) => /Page-\d+-Panel-\d+\.png$/i.test(f))
     .map((f) => ({ name: f, key: sortKeyFromName(f) }))
@@ -84,10 +100,9 @@ async function main() {
       if (a.key[0] !== b.key[0]) return a.key[0] - b.key[0];
       if (a.key[1] !== b.key[1]) return a.key[1] - b.key[1];
       return a.key[2].localeCompare(b.key[2]);
-    })
-    .map((entry) => entry.name);
+    });
 
-  const take = limit ? sourceFiles.slice(0, limit) : sourceFiles;
+  const take = limit ? sourceEntries.slice(0, limit) : sourceEntries;
   if (!take.length) {
     console.log(`No matching source PNGs in ${sourceDir}`);
     return;
@@ -96,10 +111,17 @@ async function main() {
   console.log(`Importing ${take.length} panel(s) for Ch ${chapter} from:`);
   console.log(`  ${sourceDir}`);
   console.log(`Output: media/novel/ch${chPad}/`);
+  if (Object.keys(map).length) {
+    console.log(`Source -> gid map: ${Object.entries(map).map(([k, v]) => `${k}=>${v}`).join(", ")}`);
+  }
 
   for (let i = 0; i < take.length; i += 1) {
-    const srcName = take[i];
-    const gid = i + 1;
+    const entry = take[i];
+    const srcName = entry.name;
+    /* sourceN is the "Panel-N" number in the filename. Natural gid = ordinal in
+       the sorted list (i+1). --map overrides the natural mapping per sourceN. */
+    const sourceN = entry.key[1];
+    const gid = map[sourceN] != null ? map[sourceN] : i + 1;
     const outName = `panel-${String(gid).padStart(2, "0")}.webp`;
     const outPath = path.join(outDir, outName);
     if (fs.existsSync(outPath) && !force) {
