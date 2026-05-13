@@ -5,6 +5,7 @@
  * Source naming convention:
  *   SS-Novel-CH{n}-Page-{p}-Panel-{k}.png  (PNG, multi-MB)
  *   SS-Novel-CH{n}-Page-{p}-Panel-{k}-left.png  /  ...-right.png  (side-by-side spread)
+ *   ...-Panel-{k}-bottomleft.png  /  ...-bottomright.png  (second row under the same page panel)
  *
  * We map the source files by their numeric order across (page, panel, side) to
  * the chapter's global panel index (gid) used by the comic generator, so
@@ -17,12 +18,14 @@
  *   node scripts/import-novel-panels.mjs --chapter 1
  *   node scripts/import-novel-panels.mjs --chapter 1 --src "C:\\path\\to\\Chapter-1"
  *   node scripts/import-novel-panels.mjs --chapter 1 --limit 5
- *   node scripts/import-novel-panels.mjs --chapter 1 --map "5=6,6=8,7=9,8=10"
+ *   node scripts/import-novel-panels.mjs --chapter 1 --map "1=1,2=2,3=3,4=4,5=6,6=8,7=9,8-left=10,8-right=11,8-bottomleft=12,8-bottomright=13" --force
  *
  * --map remaps source panel numbers to output gids when the comic drifts from
  * filename order (e.g. absorbed bubbles). Entries:
- *   "8=10"       one file for panel 8 -> gid 10; two files (8-left + 8-right) -> 10 then 11
+ *   "8=10"       one file for panel 8 -> gid 10; two files (8-left + 8-right) -> 10 then 11;
+ *                add 8-bottomleft + 8-bottomright for a second row under the same comic page (gids 12 and 13)
  *   "8-left=10"  explicit side (optional, overrides the pair rule for that file)
+ *   "8-bottomleft=12"  explicit bottom row (same map syntax)
  * Comma separated. Unlisted source files fall back to ordinal position (1-based).
  *
  * Idempotent: existing outputs are overwritten only when --force is set.
@@ -49,7 +52,7 @@ function parseArgs() {
       for (const pair of raw.split(",")) {
         const trimmed = pair.trim();
         if (!trimmed) continue;
-        const m = /^(\d+)(?:-(left|right))?\s*=\s*(\d+)$/i.exec(trimmed);
+        const m = /^(\d+)(?:-(left|right|bottomleft|bottomright))?\s*=\s*(\d+)$/i.exec(trimmed);
         if (!m) throw new Error(`--map entry must be "N=gid" or "N-left=gid", got: ${trimmed}`);
         const key = m[2] ? `${m[1]}-${m[2].toLowerCase()}` : m[1];
         opts.map[key] = parseInt(m[3], 10);
@@ -78,13 +81,23 @@ function defaultSourceDir(chapter) {
   );
 }
 
+function sideOrderFromSuffix(suffix) {
+  if (!suffix) return 0;
+  const s = suffix.toLowerCase();
+  if (s === "left") return 0;
+  if (s === "right") return 1;
+  if (s === "bottomleft") return 2;
+  if (s === "bottomright") return 3;
+  return 0;
+}
+
 function sortKeyFromName(name) {
-  // SS-Novel-CH#-Page-#-Panel-#.png  or  ...-Panel-#-left.png / -right.png
-  const m = /Page-(\d+)-Panel-(\d+)(?:-(left|right))?\.png$/i.exec(name);
-  if (!m) return [Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, 2, name];
+  // SS-Novel-CH#-Page-#-Panel-#.png  or  ...-left / -right / -bottomleft / -bottomright
+  const m = /Page-(\d+)-Panel-(\d+)(?:-(left|right|bottomleft|bottomright))?\.png$/i.exec(name);
+  if (!m) return [Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, 99, name];
   const page = parseInt(m[1], 10);
   const panel = parseInt(m[2], 10);
-  const sideOrder = m[3] ? (m[3].toLowerCase() === "left" ? 0 : 1) : 0;
+  const sideOrder = sideOrderFromSuffix(m[3]);
   return [page, panel, sideOrder, name];
 }
 
@@ -100,14 +113,14 @@ async function main() {
 
   const sourceEntries = fs
     .readdirSync(sourceDir)
-    .filter((f) => /Page-\d+-Panel-\d+(?:-(left|right))?\.png$/i.test(f))
+    .filter((f) => /Page-\d+-Panel-\d+(?:-(left|right|bottomleft|bottomright))?\.png$/i.test(f))
     .map((f) => {
-      const m = /Page-(\d+)-Panel-(\d+)(?:-(left|right))?\.png$/i.exec(f);
+      const m = /Page-(\d+)-Panel-(\d+)(?:-(left|right|bottomleft|bottomright))?\.png$/i.exec(f);
       if (!m) return { name: f, key: sortKeyFromName(f), panel: -1, side: null };
       const page = parseInt(m[1], 10);
       const panel = parseInt(m[2], 10);
       const side = m[3] ? m[3].toLowerCase() : null;
-      const sideOrder = side === "left" ? 0 : side === "right" ? 1 : 0;
+      const sideOrder = sideOrderFromSuffix(side);
       const key = [page, panel, sideOrder, f];
       return { name: f, key, panel, side };
     })
