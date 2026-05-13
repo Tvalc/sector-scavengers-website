@@ -217,12 +217,12 @@ Chapter 1, Wake Into Debt, panel 12, comic page 8
 **Beat / copy (for you, not necessarily on the art):**
 
 ```
-Max was more excited than he'd ever been, getting ready to go to sleep until a post scarcity society exists and he can focus on growing his plant collection and perfecting his pickle ball game without worrying about work or societal stress.
+Max signed it grinning. Sleep through the bad years. Wake up after scarcity. Spend the rest of his life on plants and pickleball, with no roadmap and no boss.
 ```
 
 **Full prompt (paste into generator as one block):**
 
-Comic book panel. The scene should match this text from the comic: "Max was more excited than he'd ever been, getting ready to go to sleep until a post scarcity society exists and he can focus on growing his plant collection and perfecting his pickle ball game without worrying about work or societal stress." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
+Comic book panel. The scene should match this text from the comic: "Max signed it grinning. Sleep through the bad years. Wake up after scarcity. Spend the rest of his life on plants and pickleball, with no roadmap and no boss." Max is a Black male character with warm brown skin, round cheeks, very large round dark-brown eyes, a soft curly black afro, and a small button nose. His default outfit is a light blue zip-up onesie. Do not render him as a generic white character. Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image. Framing feels like a tall comic panel: figure and background both read clearly.
 
 **Tracking (for filenames / sheets, not part of the image prompt):**
 

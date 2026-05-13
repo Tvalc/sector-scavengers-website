@@ -49,7 +49,7 @@ Laughter.
 A contract packet.
 A checkbox.
 
-Max was more excited than he'd ever been, getting ready to go to sleep until a post scarcity society exists and he can focus on growing his plant collection and perfecting his pickle ball game without worrying about work or societal stress.
+Max signed it grinning. Sleep through the bad years. Wake up after scarcity. Spend the rest of his life on plants and pickleball, with no roadmap and no boss.
 
 Then nothing.
 
