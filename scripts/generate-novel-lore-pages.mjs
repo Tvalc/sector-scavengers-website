@@ -177,6 +177,9 @@ function layoutSpansForPage(ch, pageIndex) {
      narrow taller right panel. Mirror of the page-10 split. Fixed so the
      rebalancer doesn't collapse the 8/4. */
   if (ch.n === 1 && pageIndex === 10) return { spans: ["8", "4"], fixed: true };
+  /* Ch. 1 page 12: single splash after the 8+4 laugh beat. STABILITY fence is
+     merged into the "Max wiped his face…" prose unit in the queue. */
+  if (ch.n === 1 && pageIndex === 11) return { spans: ["12"], fixed: true };
   if (pageIndex % 2 === 0) return ["12"];
   const multi = [
     ["6", "6", "12"],
@@ -240,6 +243,38 @@ function mergeAnotherBoxSystemGreeting(units) {
       next.text.trim().length < 220
     ) {
       out.push({ type: "proseHud", prose: u.text, hudCode: next.text.trimEnd() });
+      i += 1;
+      continue;
+    }
+    out.push(u);
+  }
+  return out;
+}
+
+/**
+ * Ch. 1: the [STABILITY NOTICE] fence sits right before "Max wiped his face…".
+ * For the comic we want one full-width image + that caption only, so fold the
+ * readout into the following prose unit as art direction (still in the MD for
+ * the prose reader / script).
+ */
+function mergeStabilityNoticeIntoWipeFace(units) {
+  const out = [];
+  for (let i = 0; i < units.length; i += 1) {
+    const u = units[i];
+    const next = units[i + 1];
+    if (
+      u.type === "code" &&
+      /\[STABILITY NOTICE\]/i.test(u.text) &&
+      next?.type === "prose" &&
+      /^Max wiped his face\./i.test(next.text.trim())
+    ) {
+      const hudHint = u.text.replace(/\s+/g, " ").trim();
+      const extra = `Scene also includes a faint floating readout with soft glow, lines similar to: ${hudHint}. Keep HUD abstract, not micro-legible.`;
+      out.push({
+        type: "prose",
+        text: next.text,
+        artDirective: next.artDirective ? `${next.artDirective} ${extra}` : extra,
+      });
       i += 1;
       continue;
     }
@@ -366,7 +401,9 @@ function annotateNovelBubbleChains(pages) {
 
 /** Turn chapter markdown into comic rows (each row = one printed “page” of panels). */
 function buildComicPages(ch) {
-  const units = mergeAnotherBoxSystemGreeting(chapterUnitsFromMd(ch.bodyMd));
+  const units = mergeAnotherBoxSystemGreeting(
+    mergeStabilityNoticeIntoWipeFace(chapterUnitsFromMd(ch.bodyMd)),
+  );
   const queue = units.map(unitToQueueItem);
   const pages = [];
   let gid = 0;

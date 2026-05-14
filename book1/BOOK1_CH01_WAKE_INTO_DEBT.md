@@ -67,7 +67,7 @@ Neural bridge calibrating.
 Please avoid sudden existential conclusions for the next 90 seconds.
 ```
 
-Max wiped his face. The blood smeared, and then *retracted*, as if the nanites couldn't stand the mess.
+Max wiped his face. The blood smeared, and then retracted, as if the nanites couldn't stand the mess.
 
 The room speaker crackled alive.
 
