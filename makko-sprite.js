@@ -111,6 +111,14 @@
       .then(function (data) {
         var frames = buildFrameList(data, preferredTag);
         if (!frames.length) return;
+        var fpsAttr = canvas.getAttribute("data-makko-fps");
+        var fps = fpsAttr ? parseFloat(fpsAttr, 10) : NaN;
+        if (fps > 0 && isFinite(fps)) {
+          var frameSec = 1 / fps;
+          for (var fi = 0; fi < frames.length; fi++) {
+            frames[fi].durationSec = frameSec;
+          }
+        }
         var anchor = (data.meta && data.meta.anchor) || { x: 0, y: 0 };
 
         var img = new Image();

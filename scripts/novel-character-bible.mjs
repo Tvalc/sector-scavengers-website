@@ -6,7 +6,8 @@
  * Setting triggers match any substring in the beat text (case-insensitive).
  *
  * If a paragraph has its own `<!-- art: ... -->` directive in the markdown,
- * that directive fully replaces the auto bible content for that panel.
+ * that text is appended as extra staging; the quoted comic beat, character
+ * bible, and setting bible still apply unless you remove them manually.
  *
  * NAMING NOTE
  * -----------
@@ -75,7 +76,7 @@ export const CHARACTERS = {
   VALU: {
     aliases: ["V.A.L.U.", "VALU"],
     description:
-      "V.A.L.U. is a disembodied corporate AI voice. If anything for V.A.L.U. appears on screen, render it as a faint friendly logo, a wall speaker, or a holographic icon, never as a body.",
+      "V.A.L.U. is a corporate AI voice, usually routed through ship systems. In orientation scenes she often speaks through the helper bot: chest grille glow, a small chest projector, or a soft holographic badge above the EV suit stack. Do not park her on a random wall speaker unless the script says so. Never draw V.A.L.U. as a human body.",
   },
 
   Petra: {
@@ -104,9 +105,13 @@ export const SETTINGS = [
       "DON'T SIGN AGAIN",
       "THEY COUNT THE WAKE-UPS",
       "Orientation Bay",
+      "orientation bay",
+      "orientation helper",
+      "ev suit",
+      "ev suits",
     ],
     description:
-      "The location is a cryo orientation bay: cramped, industrial, six sealed cryo pods plus one open pod, ribbed steel deck slick with thaw gel, cold vapor seeping from pod seams, scratched chrome reflections, harsh practical overhead lights, frost-blind viewports.",
+      "The location is a cryo orientation bay: cramped, industrial, six sealed cryo pods plus one open pod with thaw gel catching the light, ribbed steel deck slick with gel and thin cold vapor, scratched chrome, frost-blind viewports, harsh practical overhead lights. Include the orientation helper robot (chassis, tool arms) and EV suits racked or folded on a nearby bulkhead stack—this should read as the same practical bay you would storyboard across multiple panels, not a redesigned room each time.",
   },
   {
     key: "companyCorridor",
@@ -178,10 +183,73 @@ export const CHAPTER_POV = {
   default: "Max",
 };
 
+/** One-line stand-in for full Max bible in Ch.1 cryo prompts (reduces wall-of-text). */
+export const MAX_ART_PROMPT_CH1_SHORT =
+  "Max — match Book 1 ref: Black male, warm brown skin, light blue zip onesie, large dark eyes, soft afro; never default to white features.";
+
+/** Cryo bay without repeating the long SETTING paragraph on every panel. */
+export const SETTING_CH1_CRYO_SHORT =
+  "Setting: same Book 1 cryo orientation bay as neighboring panels—pods, open gel pod, helper bot + EV suit stack, ribbed deck, vapor; keep geometry consistent.";
+
+/**
+ * When no trigger in the panel beat matches a setting, fall back to this keyed
+ * location for the chapter (e.g. Book 1 opens in cryo before the prose names pods).
+ */
+export const CHAPTER_DEFAULT_SETTING = {
+  1: "cryoBay",
+};
+
+/**
+ * First setting row whose trigger substring-matches `beat` (case-insensitive).
+ * @returns {{ key: string, description: string } | null}
+ */
+export function matchSettingFromBeat(beat) {
+  if (!beat) return null;
+  const lower = beat.toLowerCase();
+  for (const s of SETTINGS) {
+    for (const trigger of s.triggers) {
+      if (lower.includes(trigger.toLowerCase())) {
+        return { key: s.key, description: s.description };
+      }
+    }
+  }
+  return null;
+}
+
+/**
+ * Setting for image prompts: match beat text, else optional chapter default.
+ * @returns {{ key: string | null, description: string }}
+ */
+export function resolveSettingForChapter(chapterN, beat) {
+  const matched = matchSettingFromBeat(beat || "");
+  if (matched) return matched;
+  const defKey = CHAPTER_DEFAULT_SETTING[chapterN];
+  if (defKey) {
+    const row = SETTINGS.find((s) => s.key === defKey);
+    if (row) return { key: row.key, description: row.description };
+  }
+  return { key: null, description: "" };
+}
+
+/** Extra continuity line for models using multi-panel or chapter references. */
+export function continuityPromptForSettingKey(settingKey, chapterN) {
+  if (settingKey === "cryoBay" && chapterN === 1) {
+    return "Continuity: same cryo bay read as your other Book 1 plates here—pods, bot, EV stack—unless this beat moves location.";
+  }
+  if (settingKey === "cryoBay") {
+    return "If other panels in this chapter already show this cryo bay, keep pod layout, robot, and suit storage visually consistent with those references.";
+  }
+  return "";
+}
+
 /** Returns concatenated bible descriptions for any characters detected in `beat`. */
-export function detectCharactersInBeat(beat, { chapterN } = {}) {
-  if (!beat)
+export function detectCharactersInBeat(beat, { chapterN, terseCh1Cryo } = {}) {
+  const useShortMax = terseCh1Cryo && chapterN === 1;
+
+  if (!beat) {
+    if (useShortMax) return MAX_ART_PROMPT_CH1_SHORT;
     return getPovCharacterBible(chapterN, /* asImplicitSubject */ true);
+  }
 
   const found = [];
   const seen = new Set();
@@ -205,6 +273,13 @@ export function detectCharactersInBeat(beat, { chapterN } = {}) {
     found.unshift(povName);
   }
 
+  if (useShortMax) {
+    if (found.length === 1 && found[0] === "Max") return MAX_ART_PROMPT_CH1_SHORT;
+    return found
+      .map((n) => (n === "Max" ? MAX_ART_PROMPT_CH1_SHORT : CHARACTERS[n].description))
+      .join(" ");
+  }
+
   return found.map((n) => CHARACTERS[n].description).join(" ");
 }
 
@@ -218,14 +293,5 @@ function getPovCharacterBible(chapterN, asImplicitSubject) {
 
 /** Returns the first matching setting bible description, or empty string. */
 export function detectSettingInBeat(beat) {
-  if (!beat) return "";
-  const lower = beat.toLowerCase();
-  for (const s of SETTINGS) {
-    for (const trigger of s.triggers) {
-      if (lower.includes(trigger.toLowerCase())) {
-        return s.description;
-      }
-    }
-  }
-  return "";
+  return matchSettingFromBeat(beat)?.description || "";
 }

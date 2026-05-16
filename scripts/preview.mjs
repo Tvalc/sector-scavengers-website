@@ -8,8 +8,13 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ROOT = path.resolve(__dirname, "..");
+/** Default: repo root. Set `PREVIEW_ROOT` to a path relative to the repo root to serve another folder (e.g. `../Makko_Showcase_Game_Plan/web_example`). */
+const ROOT = process.env.PREVIEW_ROOT
+  ? path.resolve(__dirname, "..", process.env.PREVIEW_ROOT)
+  : path.resolve(__dirname, "..");
 const PORT = Number(process.env.PORT) || 4173;
+/** `::` + `ipv6Only: false` fixes many Windows setups where `localhost` resolves to IPv6 first. Override with `PREVIEW_HOST=0.0.0.0` or `127.0.0.1` if needed. */
+const LISTEN_HOST = process.env.PREVIEW_HOST || "::";
 
 const MIME = {
   ".html": "text/html; charset=utf-8",
@@ -148,7 +153,28 @@ function warnIfLfsPointerSample() {
   }
 }
 
-server.listen(PORT, "127.0.0.1", () => {
+server.on("error", (err) => {
+  console.error(`Preview server error (${PORT}):`, err.message);
+  if (err.code === "EADDRINUSE") {
+    console.error(`Port ${PORT} is in use. Try: set PORT=4176  or  stop the other preview.`);
+  }
+  process.exit(1);
+});
+
+const listenOpts =
+  LISTEN_HOST === "::"
+    ? { port: PORT, host: "::", ipv6Only: false }
+    : { port: PORT, host: LISTEN_HOST };
+
+server.listen(listenOpts, () => {
   warnIfLfsPointerSample();
-  console.log(`Preview: http://127.0.0.1:${PORT}/`);
+  console.log(`Preview: http://127.0.0.1:${PORT}/  |  http://localhost:${PORT}/`);
+  if (process.env.PREVIEW_ROOT) {
+    console.log(`(root: ${ROOT})`);
+  } else {
+    console.log("(Sector Scavengers site — this repo. Lore: /lore/index.html)");
+  }
+  if (process.env.PREVIEW_HINT) {
+    console.log(process.env.PREVIEW_HINT);
+  }
 });

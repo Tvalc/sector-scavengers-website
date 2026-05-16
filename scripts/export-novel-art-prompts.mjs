@@ -48,7 +48,12 @@ function aspectBlock(span) {
   return "**Layout:** vertical tier panel (~4:5 portrait). Tight readable focal; leave margin for balloon overlay in post.";
 }
 
-function extractBeatParts(articleInner, isSys) {
+function extractBeatParts(articleInner, isSys, hudReadoutOverride) {
+  if (isSys && hudReadoutOverride) {
+    const balloonMatch = /<blockquote[^>]*>[\s\S]*?<p>([\s\S]*?)<\/p>/.exec(articleInner);
+    const balloon = balloonMatch ? stripTags(balloonMatch[1]) : "";
+    return { actionBeat: balloon, hudReadout: hudReadoutOverride };
+  }
   if (isSys) {
     const codeMatch = /<pre class="novel-panel__sys"><code>([\s\S]*?)<\/code><\/pre>/.exec(articleInner);
     const balloonMatch = /<blockquote[^>]*>[\s\S]*?<p>([\s\S]*?)<\/p>/.exec(articleInner);
@@ -85,17 +90,39 @@ function extractPanels(html) {
     const pageNum = sm[1];
     const sectionBody = sm[2];
     const artRe =
-      /<article class="([^"]*)" id="(novel-p\d+)">([\s\S]*?)<\/article>/g;
+      /<article class="([^"]*)" id="(novel-p\d+)"([^>]*)>([\s\S]*?)<\/article>/g;
     let am;
     while ((am = artRe.exec(sectionBody)) !== null) {
       const classStr = am[1];
       const id = am[2];
-      const inner = am[3];
+      const articleAttrs = am[3];
+      const inner = am[4];
       const span = spanFromClasses(classStr);
       const isSys = classStr.includes("novel-panel--sys");
       const isProseHud = classStr.includes("novel-panel--prose-hud");
-      const { actionBeat, hudReadout } = extractBeatParts(inner, isSys);
-      panels.push({ pageNum, id, span, isSys, isProseHud, actionBeat, hudReadout });
+      const readoutOnArt = classStr.includes("novel-panel--readout-on-art");
+      let hudFromAttr = "";
+      if (readoutOnArt && isSys) {
+        const mHud = /data-novel-hud-readout="([^"]*)"/.exec(articleAttrs);
+        if (mHud) {
+          try {
+            hudFromAttr = decodeURIComponent(mHud[1]);
+          } catch {
+            hudFromAttr = "";
+          }
+        }
+      }
+      const { actionBeat, hudReadout } = extractBeatParts(inner, isSys, hudFromAttr);
+      panels.push({
+        pageNum,
+        id,
+        span,
+        isSys,
+        isProseHud,
+        actionBeat,
+        hudReadout,
+        readoutOnArt,
+      });
     }
   }
   return panels;
@@ -113,6 +140,7 @@ function promptForPanel(chapterN, title, p) {
     hudReadout: p.hudReadout || "",
     isSys: p.isSys,
     isProseHud: p.isProseHud,
+    firstPersonHudCoreAttributes: Boolean(p.isSys && p.readoutOnArt && p.hudReadout),
   });
 }
 

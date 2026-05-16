@@ -1,31 +1,22 @@
 /**
- * Image prompts for novel panel art: stage direction + verbatim beat reference.
+ * Image prompts for novel panel art — compact, scene-first.
  *
- * Each prompt is built from layered context:
- *   1. Optional per-panel `artDirective` (from <!-- art: ... --> in the markdown).
- *      When present, this fully replaces the auto scene description.
- *   2. Otherwise: a verbatim reference to the beat text (so the model draws the
- *      *action*, not just a character portrait), followed by the character
- *      bible and the setting bible.
- *   3. Optional HUD readout, framed as a screen/HUD inside the scene.
- *   4. Short shared look and print constraints in plain language (balloon margin,
- *      no lettering in the art).
- *   5. Optional soft framing sentence from the grid span, only when there is no
- *      `<!-- art: ... -->` override so we never contradict the author's shot.
+ * Order of operations:
+ *   1. Optional `<!-- art: ... -->` becomes the primary **Scene:** line (drawable staging).
+ *   2. Short **Balloon/caption intent** + on-screen readout when relevant.
+ *   3. One tight **character** line and one tight **setting** line (Ch.1 cryo uses
+ *      short constants; other settings are word-capped).
+ *   4. One-line HUD note for sys / proseHud; one-line print rules; short layout.
  *
- * The beat text IS echoed in the prompt now (previously suppressed). The bubble
- * still carries the words for the reader, but the image model needs the action
- * directive in order to depict what is happening rather than just *who* is there.
- *
- * Rendering medium (brush, grain, painterly vs clean line, exact palette) is
- * left to your generator preset.
+ * The yellow balloon still carries reader-facing copy; this string is for the image model.
  *
  * Used by generate-novel-lore-pages (HTML overlay) and export-novel-art-prompts.
  */
 
 import {
   detectCharactersInBeat,
-  detectSettingInBeat,
+  resolveSettingForChapter,
+  SETTING_CH1_CRYO_SHORT,
 } from "./novel-character-bible.mjs";
 
 /** Bookkeeping only (not meant for the image model). */
@@ -33,41 +24,37 @@ export function buildPanelTrackingLine({ chapterN, title, panelGid, pageNum }) {
   return `Chapter ${chapterN}, ${title}, panel ${panelGid}, comic page ${pageNum}`;
 }
 
-/** Soft framing hint when there is no per-panel override (override text already implies shot). */
-function layoutHint(span) {
-  if (String(span) === "12") {
-    return "Framing feels like a wide movie still: you can read the room in one look.";
-  }
-  return "Framing feels like a tall comic panel: figure and background both read clearly.";
-}
-
-function hudVisualHint() {
-  return "If there is a HUD, keep it as soft glow, simple shapes, and a few symbols, not a wall of tiny readable text.";
-}
-
-/**
- * Shared look and print constraints, in plain language.
- * When the author supplied `<!-- art: ... -->`, we keep this short so it does not
- * drown out their scene description with jargon.
- */
-function artDirectionLine({ isSys, isProseHud, hasArtDirective }) {
-  const base = hasArtDirective
-    ? "Near-future sci-fi, lived-in metal and plastic, harsh practical light. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image."
-    : "Near-future sci-fi that feels grounded and lived-in: worn metal, cable runs, cold vapor, harsh practical lights. You can read the main shapes at a glance. Leave a little empty margin where speech balloons can go later. Do not draw dialogue or captions inside the image.";
-  if (isSys || isProseHud) {
-    return `${base} Any screen glow or HUD stays loose and abstract, not micro-legible blocks.`;
-  }
-  return base;
-}
-
 function cleanInline(text) {
   if (!text) return "";
   return String(text).replace(/\s+/g, " ").trim();
 }
 
-/** Strip trailing terminal punctuation so we can wrap a clean quote and add our own period. */
 function trimTerminalPunct(text) {
   return String(text).replace(/[\s.!?]+$/u, "");
+}
+
+/** Hard cap on boilerplate length so prompts stay short. */
+function truncateWords(text, maxWords) {
+  const t = cleanInline(text);
+  if (!t) return "";
+  const w = t.split(/\s+/).filter(Boolean);
+  if (w.length <= maxWords) return t;
+  return `${w.slice(0, maxWords).join(" ")}…`;
+}
+
+/** Long `<!-- art: -->` notes are trimmed so the prompt stays short; expand in MD if needed. */
+const SCENE_DIRECTIVE_MAX_WORDS = 52;
+
+function layoutHintCompact(span) {
+  return String(span) === "12" ? "Layout: wide splash." : "Layout: tall portrait (~4:5).";
+}
+
+function printRulesOneLine() {
+  return "Leave balloon margin; do not paint yellow caption/dialogue into the art.";
+}
+
+function hudSysNote() {
+  return "HUD: soft glow unless this plate needs sharp readable type.";
 }
 
 /**
@@ -85,58 +72,33 @@ function splitLegacyBeat(beat) {
 }
 
 /**
- * Auto scene block: verbatim beat + character bible + setting bible.
+ * CORE ATTRIBUTES / “THE BLUE UI ERUPTED” merged plate — short FPV HUD brief.
  */
-function autoSceneBlock({
-  actionBeat,
-  hudReadout,
-  chapterN,
-  isSys,
-  isProseHud,
-}) {
-  const parts = [];
-  const action = cleanInline(actionBeat);
-  const hud = cleanInline(hudReadout);
+export function buildFirstPersonCoreAttributesHudPrompt({ hudReadout, span }) {
+  const hud = truncateWords(trimTerminalPunct(cleanInline(hudReadout)), 28);
+  const layout = String(span) === "12" ? "Wide; HUD dominates." : "Tall ~4:5; HUD dominates.";
+  return (
+    `Comic book panel. FPV: cyan HUD sheets rush toward camera; legible attribute readout in-art: "${hud}." ` +
+    `Hands/forearms at bottom/sides, cyan rim light—match other Ch.1 first-person UI refs. ` +
+    `No full body, no wide bay. THE BLUE UI ERUPTED is typeset in the yellow caption only, not painted. ` +
+    `${layout} ${printRulesOneLine()}`
+  );
+}
 
-  /* 1. What is happening in this panel. */
-  if (action) {
-    parts.push(`The scene should match this text from the comic: "${trimTerminalPunct(action)}."`);
-  } else if (isSys && hud) {
-    parts.push(
-      `The scene is a floating holographic readout panel as the dominant visual, glowing softly with the lines "${trimTerminalPunct(hud)}".`,
-    );
+function beatHudLines(action, hud, isSys, isProseHud) {
+  const a = action ? truncateWords(trimTerminalPunct(action), 32) : "";
+  const h = hud ? truncateWords(trimTerminalPunct(hud), 24) : "";
+  if (a && h && (isSys || isProseHud)) {
+    return `Balloon/caption intent: "${a}." On-screen readout: "${h}."`;
   }
-
-  /* 2. HUD/screen content shown inside the scene, when there is also action prose. */
-  if ((isSys || isProseHud) && action && hud) {
-    parts.push(`A glowing screen or HUD in the scene reads "${trimTerminalPunct(hud)}".`);
-  }
-
-  /* 3. Character bible for anyone detected in the beat text. */
-  const detectSource = `${action} ${hud}`.trim();
-  const chars = detectCharactersInBeat(detectSource, { chapterN });
-  if (chars) parts.push(chars);
-
-  /* 4. Setting bible if anything in the beat hints at a known location. */
-  const setting = detectSettingInBeat(detectSource);
-  if (setting) parts.push(setting);
-
-  return parts.join(" ");
+  if (a) return `Balloon/caption intent: "${a}."`;
+  if (isSys && h) return `Primary readout in-scene: "${h}."`;
+  return "";
 }
 
 /**
- * Single string to paste into an image generator: stage direction + style + composition.
- * Add your own rendering-style preset separately (brushwork, grain, color grade, line quality, medium).
- *
  * @param {object} args
- * @param {string} [args.actionBeat] - Prose beat text describing what happens in this panel.
- *                                     For code-only sys panels this is usually empty.
- * @param {string} [args.hudReadout] - Optional text shown on a HUD/screen inside the scene
- *                                     (e.g. "[SYSTEM] Good morning, Max.").
- * @param {string} [args.beat]       - Legacy single-string form; auto-split into actionBeat/hudReadout.
- * @param {string} [args.artDirective] - Optional plain-English scene description from a
- *                                       `<!-- art: ... -->` comment attached to this panel's paragraph.
- *                                       When set, replaces the auto character + setting block.
+ * @param {boolean} [args.firstPersonHudCoreAttributes] - Ch.1 merged CORE ATTRIBUTES FPV plate.
  */
 export function buildPanelArtPrompt({
   chapterN,
@@ -150,6 +112,7 @@ export function buildPanelArtPrompt({
   isSys,
   isProseHud,
   artDirective,
+  firstPersonHudCoreAttributes,
 }) {
   void title;
   void panelGid;
@@ -163,26 +126,48 @@ export function buildPanelArtPrompt({
     hud = split.hudReadout;
   }
 
-  const chunks = ["Comic book panel."];
+  action = cleanInline(action);
+  hud = cleanInline(hud);
 
-  const directive = artDirective && String(artDirective).trim();
-  const hasArtDirective = Boolean(directive);
-  if (directive) {
-    chunks.push(directive.replace(/\s+/g, " ").trim());
-  } else {
-    const auto = autoSceneBlock({
-      actionBeat: action,
-      hudReadout: hud,
-      chapterN,
-      isSys,
-      isProseHud,
-    });
-    if (auto) chunks.push(auto);
+  if (firstPersonHudCoreAttributes && hud) {
+    return buildFirstPersonCoreAttributesHudPrompt({ hudReadout: hud, span });
   }
 
-  if (isSys || isProseHud) chunks.push(hudVisualHint());
-  chunks.push(artDirectionLine({ isSys, isProseHud, hasArtDirective }));
-  if (!hasArtDirective) chunks.push(layoutHint(span));
+  const directive = artDirective && String(artDirective).trim();
+  const detectSource = `${action} ${hud}`.trim();
+  const chars = detectCharactersInBeat(detectSource, {
+    chapterN,
+    terseCh1Cryo: chapterN === 1,
+  });
+  const charLine = chars ? truncateWords(chars, chapterN === 1 ? 36 : 26) : "";
+
+  const { key: settingKey, description: settingDesc } = resolveSettingForChapter(
+    chapterN,
+    detectSource,
+  );
+  let settingLine = "";
+  if (settingDesc) {
+    const raw =
+      chapterN === 1 && settingKey === "cryoBay" ? SETTING_CH1_CRYO_SHORT : settingDesc;
+    settingLine = truncateWords(raw, 22);
+  }
+
+  const chunks = ["Comic book panel."];
+  if (directive) {
+    chunks.push(
+      `Scene: ${truncateWords(directive.replace(/\s+/g, " ").trim(), SCENE_DIRECTIVE_MAX_WORDS)}`,
+    );
+  }
+
+  const bh = beatHudLines(action, hud, isSys, isProseHud);
+  if (bh) chunks.push(bh);
+
+  if (charLine) chunks.push(charLine);
+  if (settingLine) chunks.push(settingLine);
+
+  if (isSys || isProseHud) chunks.push(hudSysNote());
+  chunks.push(printRulesOneLine());
+  chunks.push(layoutHintCompact(span));
 
   return chunks.filter(Boolean).join(" ");
 }

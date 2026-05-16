@@ -1,0 +1,1072 @@
+{
+  "meta": {
+    "app": "MAKKO Sprite Studio",
+    "version": "1.0.0",
+    "image": "birthdaybot_happybirthday_default.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 4096,
+      "h": 2048
+    },
+    "scale": 1,
+    "frameTags": [
+      {
+        "name": "HappyBirthday",
+        "from": 0,
+        "to": 48,
+        "direction": "forward"
+      }
+    ],
+    "anchor": {
+      "x": 246,
+      "y": 259,
+      "normalized": {
+        "x": 0.5,
+        "y": 0.9923371647509579
+      },
+      "strategy": "bottom-center"
+    },
+    "referenceAlignment": {
+      "referenceBounds": {
+        "width": 446,
+        "height": 256
+      },
+      "frameBounds": {
+        "width": 492,
+        "height": 261
+      },
+      "normalized": true
+    }
+  },
+  "frames": {
+    "birthdaybot_happybirthday_default_000.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_001.png": {
+      "frame": {
+        "x": 492,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_002.png": {
+      "frame": {
+        "x": 984,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_003.png": {
+      "frame": {
+        "x": 1476,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_004.png": {
+      "frame": {
+        "x": 1968,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_005.png": {
+      "frame": {
+        "x": 2460,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_006.png": {
+      "frame": {
+        "x": 2952,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_007.png": {
+      "frame": {
+        "x": 0,
+        "y": 261,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_008.png": {
+      "frame": {
+        "x": 492,
+        "y": 261,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_009.png": {
+      "frame": {
+        "x": 984,
+        "y": 261,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_010.png": {
+      "frame": {
+        "x": 1476,
+        "y": 261,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_011.png": {
+      "frame": {
+        "x": 1968,
+        "y": 261,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_012.png": {
+      "frame": {
+        "x": 2460,
+        "y": 261,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_013.png": {
+      "frame": {
+        "x": 2952,
+        "y": 261,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_014.png": {
+      "frame": {
+        "x": 0,
+        "y": 522,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_015.png": {
+      "frame": {
+        "x": 492,
+        "y": 522,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_016.png": {
+      "frame": {
+        "x": 984,
+        "y": 522,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_017.png": {
+      "frame": {
+        "x": 1476,
+        "y": 522,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_018.png": {
+      "frame": {
+        "x": 1968,
+        "y": 522,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_019.png": {
+      "frame": {
+        "x": 2460,
+        "y": 522,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_020.png": {
+      "frame": {
+        "x": 2952,
+        "y": 522,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_021.png": {
+      "frame": {
+        "x": 0,
+        "y": 783,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_022.png": {
+      "frame": {
+        "x": 492,
+        "y": 783,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_023.png": {
+      "frame": {
+        "x": 984,
+        "y": 783,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_024.png": {
+      "frame": {
+        "x": 1476,
+        "y": 783,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_025.png": {
+      "frame": {
+        "x": 1968,
+        "y": 783,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_026.png": {
+      "frame": {
+        "x": 2460,
+        "y": 783,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_027.png": {
+      "frame": {
+        "x": 2952,
+        "y": 783,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_028.png": {
+      "frame": {
+        "x": 0,
+        "y": 1044,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_029.png": {
+      "frame": {
+        "x": 492,
+        "y": 1044,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_030.png": {
+      "frame": {
+        "x": 984,
+        "y": 1044,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_031.png": {
+      "frame": {
+        "x": 1476,
+        "y": 1044,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_032.png": {
+      "frame": {
+        "x": 1968,
+        "y": 1044,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_033.png": {
+      "frame": {
+        "x": 2460,
+        "y": 1044,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_034.png": {
+      "frame": {
+        "x": 2952,
+        "y": 1044,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_035.png": {
+      "frame": {
+        "x": 0,
+        "y": 1305,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_036.png": {
+      "frame": {
+        "x": 492,
+        "y": 1305,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_037.png": {
+      "frame": {
+        "x": 984,
+        "y": 1305,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_038.png": {
+      "frame": {
+        "x": 1476,
+        "y": 1305,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_039.png": {
+      "frame": {
+        "x": 1968,
+        "y": 1305,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_040.png": {
+      "frame": {
+        "x": 2460,
+        "y": 1305,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_041.png": {
+      "frame": {
+        "x": 2952,
+        "y": 1305,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_042.png": {
+      "frame": {
+        "x": 0,
+        "y": 1566,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_043.png": {
+      "frame": {
+        "x": 492,
+        "y": 1566,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_044.png": {
+      "frame": {
+        "x": 984,
+        "y": 1566,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_045.png": {
+      "frame": {
+        "x": 1476,
+        "y": 1566,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_046.png": {
+      "frame": {
+        "x": 1968,
+        "y": 1566,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_047.png": {
+      "frame": {
+        "x": 2460,
+        "y": 1566,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    },
+    "birthdaybot_happybirthday_default_048.png": {
+      "frame": {
+        "x": 2952,
+        "y": 1566,
+        "w": 492,
+        "h": 261
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 492,
+        "h": 261
+      },
+      "sourceSize": {
+        "w": 492,
+        "h": 261
+      },
+      "duration": 33
+    }
+  }
+}

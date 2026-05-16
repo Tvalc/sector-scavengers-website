@@ -1,20 +1,20 @@
 /**
  * Phone-friendly prose reader for the Sector Scavengers novel.
  *
- * Reads sector-scavengers/novel/BOOK1_CH*.md and writes lean, readable
- * chapter pages at lore/novel/read/ch01.html ... ch25.html plus index.html.
+ * Reads BOOK1_CH*.md (prefer website `book1/`, else ../sector-scavengers/novel)
+ * and writes lore/novel/read/ch01.html … plus index.html.
  * No comic panel scaffolding, no panel art prompts, no embedded art.
- * Output stays small (tens of KB per chapter) so it actually loads on mobile.
  *
- * Run from website root: node scripts/generate-novel-reader.mjs
+ * Run: node scripts/generate-novel-reader.mjs [--chapter N | --chapters 1,2]
  */
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { resolveNovelDir, parseChapterFilterFromArgv } from "./novel-source.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const websiteRoot = path.resolve(__dirname, "..");
-const novelDir = path.resolve(websiteRoot, "..", "sector-scavengers", "novel");
+const novelDir = resolveNovelDir(websiteRoot);
 const outDir = path.join(websiteRoot, "lore", "novel", "read");
 
 function esc(s) {
@@ -560,6 +560,7 @@ ${items}
 }
 
 function main() {
+  const chapterFilter = parseChapterFilterFromArgv(process.argv);
   const files = fs
     .readdirSync(novelDir)
     .filter((f) => /^BOOK1_CH\d+_.+\.md$/i.test(f))
@@ -567,22 +568,36 @@ function main() {
   const chapters = files.map(parseChapter).filter(Boolean).sort((a, b) => a.n - b.n);
   if (!chapters.length) throw new Error("No chapter files found");
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+  const relSource = path.relative(websiteRoot, novelDir) || ".";
+  console.log("Novel source:", relSource);
+  const written = [];
+  let totalBytes = 0;
   for (let i = 0; i < chapters.length; i += 1) {
     const ch = chapters[i];
+    if (chapterFilter && !chapterFilter.has(ch.n)) continue;
     const prev = chapters[i - 1] || null;
     const next = chapters[i + 1] || null;
     const html = chapterPageHtml(ch, prev, next);
-    fs.writeFileSync(path.join(outDir, `ch${ch.num}.html`), html, "utf8");
+    const outPath = path.join(outDir, `ch${ch.num}.html`);
+    fs.writeFileSync(outPath, html, "utf8");
+    totalBytes += fs.statSync(outPath).size;
+    written.push(ch.n);
     process.stdout.write(`ch${ch.num} `);
   }
-  fs.writeFileSync(path.join(outDir, "index.html"), indexPageHtml(chapters), "utf8");
+  if (chapterFilter) {
+    const missing = [...chapterFilter].filter((k) => !written.includes(k));
+    if (missing.length) console.warn("\nNo manuscript / skipped for chapter(s):", missing.join(", "));
+    if (!written.length) console.warn("\nNo chapter HTML written; index still refreshed from all manuscripts.");
+  }
+  const indexPath = path.join(outDir, "index.html");
+  fs.writeFileSync(indexPath, indexPageHtml(chapters), "utf8");
+  totalBytes += fs.statSync(indexPath).size;
   process.stdout.write(`index\n`);
-  const totalKb = fs
-    .readdirSync(outDir)
-    .filter((f) => f.endsWith(".html"))
-    .map((f) => fs.statSync(path.join(outDir, f)).size)
-    .reduce((a, b) => a + b, 0) / 1024;
-  console.log(`Wrote ${chapters.length + 1} files to ${path.relative(websiteRoot, outDir)}. Total ${Math.round(totalKb)} KB.`);
+  console.log(
+    `Wrote ${written.length + 1} files to ${path.relative(websiteRoot, outDir)}. Total ${Math.round(totalBytes / 1024)} KB.`,
+  );
 }
 
-main();
+const thisFile = path.resolve(fileURLToPath(import.meta.url));
+const invokedAsCli = process.argv[1] && path.resolve(process.argv[1]) === thisFile;
+if (invokedAsCli) main();

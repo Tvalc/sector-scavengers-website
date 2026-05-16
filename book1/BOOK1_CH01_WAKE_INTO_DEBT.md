@@ -69,7 +69,7 @@ Please avoid sudden existential conclusions for the next 90 seconds.
 
 Max wiped his face. The blood smeared, and then retracted, as if the nanites couldn't stand the mess.
 
-The room speaker crackled alive.
+The helper bot squared the EV suit in front of Max like it was offering a flag of surrender. Its chest grille crackled alive.
 
 "Welcome, Valued Asset #864! I am V.A.L.U., your Valued Asset Logistics Unit. On behalf of The Company, congratulations on your return to meaningful participation."
 
@@ -77,10 +77,12 @@ The voice was warm, polished, and weaponized.
 
 "Where am I?" Max asked.
 
+<!-- art: Helper bot still presenting the EV suit stack; V.A.L.U. line plays through chest projector or grille glow while the bot gestures with its free hand. Max in onesie, wary. -->
 "You're asking amazing questions already! You are currently in Sector 7 Orientation Bay Delta-Three. Please remain calm while your new physical permissions initialize."
 
-"My what."
+"My what?"
 
+<!-- art: Max still on his feet on the ribbed steel deck (not floating); weight shifts as if the floor flexed—one hand pressed flat to his sternum or the bulkhead for balance, knees slightly bent, shoulders lifted. His face sells the hit: eyes wide, jaw tight, breath caught. A single systemic "pulse" reads visually as a fast, cool cyan-to-white wash that runs along the overhead light strips, crawls once along the thaw-gel seam of the nearest open pod, and traces thin highlights along the zipper and seams of his light-blue onesie—source reads as the bay's infrastructure waking his permissions, not a random aura. Keep the orientation helper bot and EV suit stack readable in the mid-ground so the geography matches adjacent panels. -->
 A pulse went through Max's skeleton. Not pain exactly. More like every atom in his body checking in with management.
 
 The blue UI erupted.
@@ -97,6 +99,7 @@ LEVEL 1
 World interactions now mediated by licensed nanotechnology.
 ```
 
+<!-- art: Wide splash beat right after the attribute HUD: Max center-midground in the cryo bay, full figure readable. He has gone dead still—shoulders locked, weight planted—mouth slightly open as if he forgot the inhale, eyes huge and fixed on empty air where the blue UI sheets were a beat ago (no readable text in-frame now; only faint cyan afterglow on his cheeks and the bridge of his nose). One hand hovers an inch from his sternum or throat, fingers half-curled, not quite touching skin—sell "breathing stopped" as paralysis, not sleep. Ribbed deck, nearest pod rim, and a slice of helper bot / EV stack still read in depth so the geography matches the prior panels. Harsh top light, shallow depth: face and hands are the sharp focal story. -->
 Max stopped breathing.
 
 "Licensed by who?"

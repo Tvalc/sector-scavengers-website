@@ -1,15 +1,17 @@
 /**
- * Reads sector-scavengers/novel markdown and writes lore/novel/*.html + index.
- * Run from website root: node scripts/generate-novel-lore-pages.mjs
+ * Reads BOOK1_CH*.md (prefer website `book1/`, else ../sector-scavengers/novel)
+ * and writes lore/novel/chNN.html + index.html.
+ * Run: node scripts/generate-novel-lore-pages.mjs [--chapter N | --chapters 1,2]
  */
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { buildPanelArtPrompt } from "./novel-panel-art-prompt.mjs";
+import { resolveNovelDir, parseChapterFilterFromArgv } from "./novel-source.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const websiteRoot = path.resolve(__dirname, "..");
-const novelDir = path.resolve(websiteRoot, "..", "sector-scavengers", "novel");
+const novelDir = resolveNovelDir(websiteRoot);
 const outDir = path.join(websiteRoot, "lore", "novel");
 
 function esc(s) {
@@ -180,6 +182,17 @@ function layoutSpansForPage(ch, pageIndex) {
   /* Ch. 1 page 12: single splash after the 8+4 laugh beat. STABILITY fence is
      merged into the "Max wiped his face…" prose unit in the queue. */
   if (ch.n === 1 && pageIndex === 11) return { spans: ["12"], fixed: true };
+  /* Ch. 1 page 13: single splash — helper bot + EV suit + V.A.L.U. welcome (balloon) +
+     narration caption (see mergeValuOrientationSplash). Comic id novel-p20; SS Panel 13
+     imports to panel-20.webp automatically (import-novel-panels built-in map). */
+  if (ch.n === 1 && pageIndex === 12) return { spans: ["12"], fixed: true };
+  /* Ch. 1 page 14: "Where am I?" + orientation reply — one wide panel, dual bubbles over art (mergeWhereAmIOrientationReply). */
+  if (ch.n === 1 && pageIndex === 13) return { spans: ["12"], fixed: true };
+  /* Ch. 1 page 16: pulse beat + CORE ATTRIBUTES readout as two equal half-page
+     panels. Prose "The blue UI erupted." merges into the code beat (caption only
+     in HTML; readout is painted on the plate). Comic gid stays 25 for the right
+     panel so existing panel-25.webp imports still line up (see mergeBlueUiIntoCoreAttributesReadout). */
+  if (ch.n === 1 && pageIndex === 15) return { spans: ["6", "6"], fixed: true };
   if (pageIndex % 2 === 0) return ["12"];
   const multi = [
     ["6", "6", "12"],
@@ -204,6 +217,14 @@ function markdownToPlainSpan(md) {
     .replace(/`([^`]+)`/g, "$1")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+/** Strip one layer of wrapping straight or curly quotes for dialogue display. */
+function stripBalancedOuterQuotes(s) {
+  let t = String(s || "").trim();
+  if (t.length >= 2 && t.startsWith('"') && t.endsWith('"')) return t.slice(1, -1).trim();
+  if (t.length >= 2 && t.startsWith("\u201c") && t.endsWith("\u201d")) return t.slice(1, -1).trim();
+  return t;
 }
 
 function chapterUnitsFromMd(md) {
@@ -283,17 +304,126 @@ function mergeStabilityNoticeIntoWipeFace(units) {
   return out;
 }
 
+/**
+ * Ch. 1: "helper bot / EV suit" beat + V.A.L.U. welcome dialogue + "voice was warm"
+ * become one full-width comic panel: one plate, caption strip (first + third beat),
+ * speech balloon (middle beat). Manuscript stays three paragraphs for the prose reader.
+ * Art on disk: `media/novel/ch01/panel-20.webp` for comic id `novel-p20` (import maps SS Panel 13 -> 20; see `BUILTIN_CHAPTER_PANEL_MAP` in import-novel-panels.mjs). Generator also accepts `SS-Novel-CH1-Page-1-Panel-13.*` in that folder if `panel-20.webp` is absent.
+ */
+function mergeValuOrientationSplash(units) {
+  const out = [];
+  for (let i = 0; i < units.length; i += 1) {
+    const u = units[i];
+    const a = units[i + 1];
+    const b = units[i + 2];
+    if (
+      u.type === "prose" &&
+      a?.type === "prose" &&
+      b?.type === "prose" &&
+      /The helper bot squared the EV suit/i.test(u.text) &&
+      /Welcome,\s*Valued Asset #864/i.test(a.text) &&
+      /^The voice was warm,\s*polished,\s+and\s+weaponized\.?\s*$/i.test(b.text.trim())
+    ) {
+      const dirs = [u.artDirective, a.artDirective, b.artDirective].filter(Boolean);
+      out.push({
+        type: "proseComicComposite",
+        captionMd: `${u.text.trim()}\n\n${b.text.trim()}`,
+        balloonMd: a.text.trim(),
+        artDirective: dirs.length ? dirs.join(" ") : null,
+      });
+      i += 2;
+      continue;
+    }
+    out.push(u);
+  }
+  return out;
+}
+
+/**
+ * Ch. 1: "Where am I?" + orientation reply → one full-width panel, two speech
+ * balloons over the art (manuscript stays two paragraphs for the prose reader).
+ * Art: comic gid 21; SS `Page-1-Panel-14` → `panel-21.webp` (see import built-in map).
+ */
+function mergeWhereAmIOrientationReply(units) {
+  const out = [];
+  for (let i = 0; i < units.length; i += 1) {
+    const u = units[i];
+    const a = units[i + 1];
+    if (
+      u.type === "prose" &&
+      a?.type === "prose" &&
+      /Where am I/i.test(u.text) &&
+      /You'?re asking amazing questions already/i.test(a.text)
+    ) {
+      const dirs = [u.artDirective, a.artDirective].filter(Boolean);
+      out.push({
+        type: "proseDualOverlay",
+        maxBubbleMd: u.text.trim(),
+        robotBubbleMd: a.text.trim(),
+        artDirective: dirs.length ? dirs.join(" ") : null,
+      });
+      i += 1;
+      continue;
+    }
+    out.push(u);
+  }
+  return out;
+}
+
+/**
+ * Ch. 1: "The blue UI erupted." + `[CORE ATTRIBUTES DETECTED]…` fence → one
+ * half-page sys panel (manuscript stays two blocks for the prose reader). HTML
+ * shows figure + caption only; readout text is expected on the art. Queue uses
+ * `gidIncrement: 2` so this cell keeps comic id 25 after the preceding pulse
+ * panel 23 (skips the absorbed 24 slot).
+ */
+function mergeBlueUiIntoCoreAttributesReadout(units) {
+  const out = [];
+  for (let i = 0; i < units.length; i += 1) {
+    const u = units[i];
+    const next = units[i + 1];
+    if (
+      u.type === "prose" &&
+      next?.type === "code" &&
+      /^The blue UI erupted\.?\s*$/i.test(u.text.replace(/\s+/g, " ").trim()) &&
+      /\[CORE ATTRIBUTES DETECTED\]/i.test(next.text)
+    ) {
+      out.push({
+        type: "code",
+        text: next.text,
+        bubbleMd: "THE BLUE UI ERUPTED",
+        readoutAsArtOnly: true,
+        gidIncrement: 2,
+        artDirective: u.artDirective || null,
+      });
+      i += 1;
+      continue;
+    }
+    out.push(u);
+  }
+  return out;
+}
+
 function unitToQueueItem(u) {
-  if (u.type === "code") return { code: u.text };
+  if (u.type === "code") {
+    const q = { code: u.text };
+    if (u.bubbleMd) q.bubbleMd = u.bubbleMd;
+    if (u.readoutAsArtOnly) q.readoutAsArtOnly = true;
+    if (u.gidIncrement != null) q.gidIncrement = u.gidIncrement;
+    if (u.artDirective) q.artDirective = u.artDirective;
+    return q;
+  }
   if (u.type === "proseHud") return { proseHud: u };
+  if (u.type === "proseDualOverlay") return { proseDualOverlay: u };
+  if (u.type === "proseComicComposite") return { proseComicComposite: u };
   if (u.type === "artHint") return { artHint: u.artDirective };
   return { prose: u.text, artDirective: u.artDirective || null };
 }
 
 /**
  * `<!-- art: ... -->` directly above (or inline at the start of) a paragraph
- * attaches a per-panel scene description, then the rest of the paragraph
- * becomes the panel's bubble text as usual.
+ * attaches extra staging for the panel art prompt; the paragraph body is still
+ * the panel's bubble text and is always quoted in the prompt as the story beat.
  */
 function extractArtDirective(rawParagraph) {
   const re = /^\s*<!--\s*art:\s*([\s\S]*?)\s*-->\s*\n?/i;
@@ -401,8 +531,12 @@ function annotateNovelBubbleChains(pages) {
 
 /** Turn chapter markdown into comic rows (each row = one printed “page” of panels). */
 function buildComicPages(ch) {
-  const units = mergeAnotherBoxSystemGreeting(
-    mergeStabilityNoticeIntoWipeFace(chapterUnitsFromMd(ch.bodyMd)),
+  const units = mergeBlueUiIntoCoreAttributesReadout(
+    mergeWhereAmIOrientationReply(
+      mergeValuOrientationSplash(
+        mergeAnotherBoxSystemGreeting(mergeStabilityNoticeIntoWipeFace(chapterUnitsFromMd(ch.bodyMd))),
+      ),
+    ),
   );
   const queue = units.map(unitToQueueItem);
   const pages = [];
@@ -421,14 +555,55 @@ function buildComicPages(ch) {
         queue.shift();
         continue;
       }
-      if (head.code !== undefined) {
+      if (head.proseDualOverlay !== undefined) {
+        const u = head.proseDualOverlay;
         queue.shift();
         gid += 1;
-        const codeCell = { span: span0, kind: "code", code: head.code, gid };
+        row.push({
+          span: span0,
+          kind: "proseDualOverlay",
+          maxBubbleMd: u.maxBubbleMd,
+          robotBubbleMd: u.robotBubbleMd,
+          gid,
+          artDirective: u.artDirective || null,
+        });
+        continue;
+      }
+      if (head.proseComicComposite !== undefined) {
+        const u = head.proseComicComposite;
+        queue.shift();
+        gid += 1;
+        row.push({
+          span: span0,
+          kind: "proseComposite",
+          captionMd: u.captionMd,
+          balloonMd: u.balloonMd,
+          gid,
+          artDirective: u.artDirective || null,
+        });
+        continue;
+      }
+      if (head.code !== undefined) {
+        queue.shift();
+        gid += head.gidIncrement ?? 1;
+        const codeCell = {
+          span: span0,
+          kind: "code",
+          code: head.code,
+          gid,
+          readoutAsArtOnly: Boolean(head.readoutAsArtOnly),
+          artDirective: head.artDirective || null,
+        };
+        if (head.bubbleMd) codeCell.bubbleMd = head.bubbleMd;
         /* When real panel art exists for this beat, the rendered art already
            carries the code text. Absorb the next prose unit as the panel's
            caption bubble and bump gid so downstream panels keep their numbers. */
-        if (realPanelArtSrc(ch.n, gid, "../../") && queue[0]?.prose !== undefined) {
+        if (
+          !codeCell.readoutAsArtOnly &&
+          !codeCell.bubbleMd &&
+          realPanelArtSrc(ch.n, gid, "../../") &&
+          queue[0]?.prose !== undefined
+        ) {
           const absorbed = queue.shift();
           codeCell.bubbleMd = absorbed.prose;
           gid += 1;
@@ -492,18 +667,127 @@ function panelFigureDims(span) {
   return { w: 800, h: 1000 };
 }
 
+/** Optional extra basenames (no extension) after `panel-{gid}`. SS export names + legacy `panel-13` when artists match SS panel index (merged splash is comic gid 20). */
+const NOVEL_DISK_FILENAME_ALIASES = {
+  "1:6": ["SS-Novel-CH1-Page-1-Panel-5"],
+  "1:8": ["SS-Novel-CH1-Page-1-Panel-6"],
+  "1:9": ["SS-Novel-CH1-Page-1-Panel-7"],
+  "1:10": [
+    "SS-Novel-CH1-Page-1-Panel-8-topleft",
+    "SS-Novel-CH1-Page-1-Panel-8-topLeft",
+  ],
+  "1:11": [
+    "SS-Novel-CH1-Page-1-Panel-8-topright",
+    "SS-Novel-CH1-Page-1-Panel-8-topRight",
+  ],
+  "1:12": [
+    "SS-Novel-CH1-Page-1-Panel-8-bottomleft",
+    "SS-Novel-CH1-Page-1-Panel-8-bottomLeft",
+  ],
+  "1:13": [
+    "SS-Novel-CH1-Page-1-Panel-8-bottomright",
+    "SS-Novel-CH1-Page-1-Panel-8-bottomRight",
+  ],
+  "1:14": ["SS-Novel-CH1-Page-1-Panel-9"],
+  "1:15": ["SS-Novel-CH1-Page-1-Panel-10left", "SS-Novel-CH1-Page-1-Panel-10-left"],
+  "1:16": ["SS-Novel-CH1-Page-1-Panel-10right", "SS-Novel-CH1-Page-1-Panel-10-right"],
+  "1:17": ["SS-Novel-CH1-Page-1-Panel-11left", "SS-Novel-CH1-Page-1-Panel-11-left"],
+  "1:18": ["SS-Novel-CH1-Page-1-Panel-11right", "SS-Novel-CH1-Page-1-Panel-11-right"],
+  "1:19": ["SS-Novel-CH1-Page-1-Panel-12"],
+  "1:20": ["SS-Novel-CH1-Page-1-Panel-13", "panel-13"],
+  "1:21": ["SS-Novel-CH1-Page-1-Panel-14"],
+  "1:22": ["SS-Novel-CH1-Page-1-Panel-15"],
+  "1:26": ["SS-Novel-CH1-Page-1-Panel-17"],
+  /* Comic page 16 (print): pulse (gid 23) + CORE ATTRIBUTES / blue UI (gid 25). */
+  "1:23": [
+    "panel-16left",
+    "panel-16-left",
+    "SS-Novel-CH1-Page-1-Panel-16-left",
+    "SS-Novel-CH1-Page-1-Panel-16Left",
+    "CH1-comic-page16-left",
+  ],
+  "1:25": [
+    "panel-16right",
+    "panel-16-right",
+    "SS-Novel-CH1-Page-1-Panel-16-right",
+    "SS-Novel-CH1-Page-1-Panel-16Right",
+    "CH1-comic-page16-right",
+  ],
+};
+
+const NOVEL_PANEL_MEDIA_EXTS = [".webp", ".png", ".jpg", ".jpeg"];
+
 /**
- * Returns a relative src when an imported panel image exists at
- * media/novel/ch{nn}/panel-{gid}.webp. `webToSiteRoot` is the prefix from the
- * HTML file to the site root (e.g. "../../" from lore/novel/, "../../../" from lore/novel/scroll/).
+ * When print page 16 art is exported with non-canonical names (e.g. `panel-16left`
+ * instead of `panel-23.webp`), pick the first matching file in the chapter folder.
  */
-function realPanelArtSrc(chapterN, gid, webToSiteRoot = "../../") {
+function chapter1ComicPage16SplitFallback(dir, gid) {
+  if (!fs.existsSync(dir)) return null;
+  const matches = [];
+  for (const name of fs.readdirSync(dir)) {
+    const ext = path.extname(name).toLowerCase();
+    if (!NOVEL_PANEL_MEDIA_EXTS.includes(ext)) continue;
+    const stem = path.basename(name, ext).toLowerCase();
+    const i = stem.indexOf("16");
+    if (i < 0) continue;
+    const tail = stem.slice(i + 2);
+    if (gid === 23 && tail.includes("left") && !tail.includes("right")) matches.push(name);
+    if (gid === 25 && tail.includes("right")) matches.push(name);
+  }
+  if (!matches.length) return null;
+  const rank = (fname) => {
+    const s = fname.toLowerCase();
+    if (gid === 23) {
+      if (s.startsWith("panel-16left")) return 0;
+      if (s.startsWith("panel-16-left")) return 1;
+      if (s.includes("16left")) return 2;
+      return 5;
+    }
+    if (s.startsWith("panel-16right")) return 0;
+    if (s.startsWith("panel-16-right")) return 1;
+    if (s.includes("16right")) return 2;
+    return 5;
+  };
+  matches.sort((a, b) => rank(a) - rank(b) || a.localeCompare(b));
+  return { fname: matches[0] };
+}
+
+/**
+ * First matching file in the chapter media dir: canonical `panel-{gid}.webp` first, then aliases.
+ * @returns {{ fname: string } | null}
+ */
+function resolveNovelPanelOnDisk(chapterN, gid, artFileGid) {
   const chPad = String(chapterN).padStart(2, "0");
-  const gidPad = String(gid).padStart(2, "0");
-  const fsPath = path.join(websiteRoot, "media", "novel", `ch${chPad}`, `panel-${gidPad}.webp`);
-  if (!fs.existsSync(fsPath)) return null;
+  const dir = path.join(websiteRoot, "media", "novel", `ch${chPad}`);
+  const fileGid = artFileGid != null ? artFileGid : gid;
+  const gidPad = String(fileGid).padStart(2, "0");
+  const basenames = [`panel-${gidPad}`];
+  for (const a of NOVEL_DISK_FILENAME_ALIASES[`${chapterN}:${gid}`] || []) {
+    if (!basenames.includes(a)) basenames.push(a);
+  }
+  for (const base of basenames) {
+    for (const ext of NOVEL_PANEL_MEDIA_EXTS) {
+      const fname = base + ext;
+      if (fs.existsSync(path.join(dir, fname))) return { fname };
+    }
+  }
+  if (chapterN === 1 && (gid === 23 || gid === 25)) {
+    const fb = chapter1ComicPage16SplitFallback(dir, gid);
+    if (fb) return fb;
+  }
+  return null;
+}
+
+/**
+ * Returns a relative src when panel art exists under media/novel/ch{nn}/.
+ * `webToSiteRoot` is the prefix from the HTML file to the site root (e.g. "../../" from lore/novel/).
+ */
+function realPanelArtSrc(chapterN, gid, webToSiteRoot = "../../", artFileGid = null) {
+  const hit = resolveNovelPanelOnDisk(chapterN, gid, artFileGid);
+  if (!hit) return null;
+  const chPad = String(chapterN).padStart(2, "0");
   const root = webToSiteRoot.replace(/\/?$/, "/");
-  return `${root}media/novel/ch${chPad}/panel-${gidPad}.webp`;
+  return `${root}media/novel/ch${chPad}/${hit.fname}`;
 }
 
 function railDotsComic(pageCount) {
@@ -543,11 +827,25 @@ function panelArtPromptForCell(ch, cell, pageNum) {
   const isProseHud = cell.kind === "proseHud";
   let actionBeat = "";
   let hudReadout = "";
-  if (cell.kind === "code") {
+  if (cell.kind === "proseComposite") {
+    const cap = markdownToPlainSpan(cell.captionMd);
+    const bal = markdownToPlainSpan(cell.balloonMd);
+    actionBeat = `${cap} A speech balloon from the helper bot carries this line (typeset in post, not painted into the plate): ${bal}`;
+  } else if (cell.kind === "proseDualOverlay") {
+    const maxP = markdownToPlainSpan(cell.maxBubbleMd);
+    const robP = markdownToPlainSpan(cell.robotBubbleMd);
+    const maxLine =
+      maxP.replace(/\s*Max asked\.?\s*$/i, "").replace(/^["']+|["']+$/g, "").trim() || "Where am I?";
+    actionBeat = `Max says (speech balloon, not lettering in the plate): "${maxLine}". The helper bot / V.A.L.U. replies (separate balloon): "${robP}".`;
+  } else if (cell.kind === "code") {
     hudReadout = String(cell.code || "").trim();
-    /* If a prose beat was absorbed into this code panel as its caption bubble,
-       that prose is the action being depicted. */
-    if (cell.bubbleMd) actionBeat = markdownToPlainSpan(cell.bubbleMd);
+    if (cell.readoutAsArtOnly && cell.bubbleMd) {
+      actionBeat = `Title-style caption below the plate (typeset later, not painted into the art): ${markdownToPlainSpan(cell.bubbleMd)}. Floating HUD readout—paint the full readout text into the image art.`;
+    } else if (cell.bubbleMd) {
+      /* If a prose beat was absorbed into this code panel as its caption bubble,
+         that prose is the action being depicted. */
+      actionBeat = markdownToPlainSpan(cell.bubbleMd);
+    }
   } else if (cell.kind === "proseHud") {
     actionBeat = markdownToPlainSpan(cell.prose);
     hudReadout = String(cell.hudCode || "").trim();
@@ -565,6 +863,7 @@ function panelArtPromptForCell(ch, cell, pageNum) {
     isSys,
     isProseHud,
     artDirective: cell.artDirective || null,
+    firstPersonHudCoreAttributes: Boolean(cell.kind === "code" && cell.readoutAsArtOnly),
   });
 }
 
@@ -578,7 +877,7 @@ function figureWithPlaceholderAndPrompt(ch, cell, pageNum, w, h, webToSiteRoot =
   const prompt = panelArtPromptForCell(ch, cell, pageNum);
   const altFlat = prompt.replace(/\s+/g, " ").trim();
   const alt = altFlat.length > 220 ? `${altFlat.slice(0, 217)}…` : altFlat;
-  const realSrc = realPanelArtSrc(ch.n, cell.gid, webToSiteRoot);
+  const realSrc = realPanelArtSrc(ch.n, cell.gid, webToSiteRoot, cell.artFileGid ?? null);
   const root = webToSiteRoot.replace(/\/?$/, "/");
   if (realSrc) {
     return `                        <figure class="rules-comic__figure rules-comic__figure--art novel-comic__figure--with-art">
@@ -593,7 +892,7 @@ ${novelComicArtPromptOverlay(prompt)}
 
 function proseHudFigureWithPrompt(ch, cell, pageNum, webToSiteRoot = "../../") {
   const prompt = panelArtPromptForCell(ch, cell, pageNum);
-  const realSrc = realPanelArtSrc(ch.n, cell.gid, webToSiteRoot);
+  const realSrc = realPanelArtSrc(ch.n, cell.gid, webToSiteRoot, cell.artFileGid ?? null);
   if (realSrc) {
     const altFlat = prompt.replace(/\s+/g, " ").trim();
     const alt = altFlat.length > 220 ? `${altFlat.slice(0, 217)}…` : altFlat;
@@ -622,21 +921,27 @@ function renderComicBookHtml(ch) {
         const { w, h } = panelFigureDims(cell.span);
         const bubbleCls = bubbleClassesForNovelCell(cell, cell.gid, cell.span);
         if (cell.kind === "code") {
-          const hasRealArt = !!realPanelArtSrc(ch.n, cell.gid);
-          const readoutBlock = hasRealArt
-            ? ""
-            : `
+          const hasRealArt = !!realPanelArtSrc(ch.n, cell.gid, "../../", cell.artFileGid ?? null);
+          const showReadoutStrip = !hasRealArt && !cell.readoutAsArtOnly;
+          const readoutBlock = showReadoutStrip
+            ? `
                         <div class="rules-comic__strip-note rules-comic__strip-note--novel-sys">
                           <p class="novel-panel__sys-label"><span class="rules-comic__kicker">Readout</span></p>
                           <pre class="novel-panel__sys"><code>${esc(cell.code)}</code></pre>
-                        </div>`;
+                        </div>`
+            : "";
           const bubbleBlock = cell.bubbleMd
             ? `
                         <blockquote class="${bubbleCls}">
                           <p>${inlineMdToHtml(cell.bubbleMd)}</p>
                         </blockquote>`
             : "";
-          return `                      <article class="rules-comic__panel novel-panel novel-panel--span-${cell.span} novel-panel--sys" id="novel-p${cell.gid}">
+          const readoutOnArtCls = cell.readoutAsArtOnly ? " novel-panel--readout-on-art" : "";
+          const hudData =
+            cell.readoutAsArtOnly && cell.code
+              ? ` data-novel-hud-readout="${encodeURIComponent(cell.code)}"`
+              : "";
+          return `                      <article class="rules-comic__panel novel-panel novel-panel--span-${cell.span} novel-panel--sys${readoutOnArtCls}" id="novel-p${cell.gid}"${hudData}>
                         <div class="rules-comic__frame" aria-hidden="true"></div>
 ${figureWithPlaceholderAndPrompt(ch, cell, pageNum, w, h)}${readoutBlock}${bubbleBlock}
                       </article>`;
@@ -648,6 +953,46 @@ ${proseHudFigureWithPrompt(ch, cell, pageNum)}
                         <blockquote class="${bubbleCls}">
                           <p>${inlineMdToHtml(cell.prose)}</p>
                         </blockquote>
+                      </article>`;
+        }
+        if (cell.kind === "proseComposite") {
+          const captionParas = cell.captionMd
+            .split(/\n\n+/)
+            .map((p) => p.trim())
+            .filter(Boolean)
+            .map((p) => `<p>${inlineMdToHtml(p)}</p>`)
+            .join("\n                          ");
+          const capBubbleCls = bubbleClassesForNovelCell(cell, cell.gid, cell.span);
+          return `                      <article class="rules-comic__panel novel-panel novel-panel--span-${cell.span} novel-panel--composite-cap-bubble" id="novel-p${cell.gid}">
+                        <div class="rules-comic__frame" aria-hidden="true"></div>
+                        <div class="novel-comic__figure-with-overlay">
+${figureWithPlaceholderAndPrompt(ch, cell, pageNum, w, h)}
+                        <aside class="novel-comic__robot-speech novel-comic__robot-speech--over-art" aria-label="V.A.L.U. through the helper bot">
+                          <p>${inlineMdToHtml(stripBalancedOuterQuotes(cell.balloonMd))}</p>
+                        </aside>
+                        </div>
+                        <blockquote class="${capBubbleCls} novel-comic__balloon--composite-narration">
+                          ${captionParas}
+                        </blockquote>
+                      </article>`;
+        }
+        if (cell.kind === "proseDualOverlay") {
+          const maxPlain = markdownToPlainSpan(cell.maxBubbleMd)
+            .replace(/\s*Max asked\.?\s*$/i, "")
+            .replace(/^["']+|["']+$/g, "")
+            .trim();
+          const maxDisplay = maxPlain || "Where am I?";
+          return `                      <article class="rules-comic__panel novel-panel novel-panel--span-${cell.span} novel-panel--dual-overlay-bubbles" id="novel-p${cell.gid}">
+                        <div class="rules-comic__frame" aria-hidden="true"></div>
+                        <div class="novel-comic__figure-with-overlay">
+${figureWithPlaceholderAndPrompt(ch, cell, pageNum, w, h)}
+                        <aside class="novel-comic__robot-speech novel-comic__overlaid-speech--ch1p14-max" aria-label="Max">
+                          <p>${inlineMdToHtml(maxDisplay)}</p>
+                        </aside>
+                        <aside class="novel-comic__robot-speech novel-comic__overlaid-speech--ch1p14-robot" aria-label="V.A.L.U. through the helper bot">
+                          <p>${inlineMdToHtml(stripBalancedOuterQuotes(cell.robotBubbleMd))}</p>
+                        </aside>
+                        </div>
                       </article>`;
         }
         return `                      <article class="rules-comic__panel novel-panel novel-panel--span-${cell.span}" id="novel-p${cell.gid}">
@@ -1015,6 +1360,7 @@ function main() {
     console.error("Missing novel dir:", novelDir);
     process.exit(1);
   }
+  const chapterFilter = parseChapterFilterFromArgv(process.argv);
   fs.mkdirSync(outDir, { recursive: true });
   const files = fs.readdirSync(novelDir).filter((f) => /^BOOK1_CH\d+_/i.test(f) && f.endsWith(".md"));
   const chapters = files
@@ -1026,12 +1372,32 @@ function main() {
     process.exit(1);
   }
   const n = chapters.length;
+  const relSource = path.relative(websiteRoot, novelDir) || ".";
+  console.log("Novel source:", relSource);
+  const written = [];
   for (const ch of chapters) {
+    if (chapterFilter && !chapterFilter.has(ch.n)) continue;
     const html = chapterHtml(ch, n);
     fs.writeFileSync(path.join(outDir, `ch${String(ch.n).padStart(2, "0")}.html`), html, "utf8");
+    written.push(ch.n);
+  }
+  if (chapterFilter) {
+    const missing = [...chapterFilter].filter((k) => !written.includes(k));
+    if (missing.length) console.warn("No manuscript / skipped for chapter(s):", missing.join(", "));
+    if (!written.length) console.warn("No chapter HTML written; index still refreshed from all manuscripts.");
   }
   fs.writeFileSync(path.join(outDir, "index.html"), indexHtml(chapters), "utf8");
-  console.log("Wrote", n, "chapter pages + novel/index.html →", outDir);
+  if (chapterFilter) {
+    console.log(
+      "Wrote",
+      written.length,
+      "chapter page(s) + index.html →",
+      outDir,
+      "(" + written.map((x) => `ch${String(x).padStart(2, "0")}`).join(", ") + ")",
+    );
+  } else {
+    console.log("Wrote", n, "chapter pages + novel/index.html →", outDir);
+  }
 }
 
 export {

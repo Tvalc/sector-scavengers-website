@@ -6,11 +6,23 @@
  *   SS-Novel-CH{n}-Page-{p}-Panel-{k}.png  (PNG, multi-MB)
  *   SS-Novel-CH{n}-Page-{p}-Panel-{k}-left.png  /  ...-right.png  (side-by-side spread)
  *   ...-Panel-{k}-bottomleft.png  /  ...-bottomright.png  (second row under the same page panel)
+ *   ...-Panel-{k}-topleft.png / ...-topright.png (four-tile page-8 style; hyphen optional: Panel-8topleft.png)
  *   The hyphen between {k} and the side is optional: Panel-10left.png also matches.
+ *
+ * IMPORTANT: `Page-{p}` is the **page index inside the SS export / art board** (often Page-1
+ * for the first board), **not** the website’s “Page 13” scroll header (`#novel-page-13`).
+ * `Panel-{k}` is the k-th tile on that board. The site loads **imported** `panel-NN.webp` from
+ * `media/novel/chNN/`; if you only update the source PNG and skip import, or an old webp
+ * shares the same slot, the comic will not match the PNG you are viewing.
  *
  * We map the source files by their numeric order across (page, panel, side) to
  * the chapter's global panel index (gid) used by the comic generator, so
  * the first 5 incoming files become panel-01..panel-05 of that chapter.
+ *
+ * Chapter 1 built-in map (SS `Page-1-Panel-*` → comic `novel-p{gid}` / `panel-{gid}.webp`; gids skip
+ * merged HUD/code beats): 5→6, 6→8, 7→9, 8 corners→10–13, 9→14, 10 left/right→15–16,
+ * 11 left/right→17–18, 12→19, 13→20, 14→21, 15→22.
+ * Pass --map to override any key.
  *
  * Output:
  *   media/novel/ch{NN}/panel-{nn}.webp  (sRGB, max 1600px wide, q=82)
@@ -19,7 +31,7 @@
  *   node scripts/import-novel-panels.mjs --chapter 1
  *   node scripts/import-novel-panels.mjs --chapter 1 --src "C:\\path\\to\\Chapter-1"
  *   node scripts/import-novel-panels.mjs --chapter 1 --limit 5
- *   node scripts/import-novel-panels.mjs --chapter 1 --map "1=1,2=2,3=3,4=4,5=6,6=8,7=9,8-left=10,8-right=11,8-bottomleft=12,8-bottomright=13" --force
+ *   node scripts/import-novel-panels.mjs --chapter 1 --map "5=6,6=8,7=9,8-topleft=10,8-topright=11,8-bottomleft=12,8-bottomright=13,9=14,10-left=15,10-right=16,11-left=17,11-right=18,12=19,13=20,14=21,15=22" --force
  *
  * --map remaps source panel numbers to output gids when the comic drifts from
  * filename order (e.g. absorbed bubbles). Entries:
@@ -39,6 +51,30 @@ import sharp from "sharp";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const websiteRoot = path.resolve(__dirname, "..");
 
+/** Built-in SS Panel number -> comic gid when the generator merges/absorbs beats. User --map overrides same keys. */
+const BUILTIN_CHAPTER_PANEL_MAP = {
+  1: {
+    5: 6,
+    6: 8,
+    7: 9,
+    "8-topleft": 10,
+    "8-topright": 11,
+    "8-bottomleft": 12,
+    "8-bottomright": 13,
+    9: 14,
+    "10-left": 15,
+    "10-right": 16,
+    "11-left": 17,
+    "11-right": 18,
+    12: 19,
+    13: 20,
+    14: 21,
+    15: 22,
+    /** SS export tile 17 → comic page 17 (`novel-p26` / `panel-26.webp`). */
+    17: 26,
+  },
+};
+
 function parseArgs() {
   const args = process.argv.slice(2);
   const opts = { chapter: null, src: null, limit: null, force: false, map: {} };
@@ -53,7 +89,8 @@ function parseArgs() {
       for (const pair of raw.split(",")) {
         const trimmed = pair.trim();
         if (!trimmed) continue;
-        const m = /^(\d+)(?:-(left|right|bottomleft|bottomright))?\s*=\s*(\d+)$/i.exec(trimmed);
+        const m =
+          /^(\d+)(?:-(left|right|topleft|topright|bottomleft|bottomright))?\s*=\s*(\d+)$/i.exec(trimmed);
         if (!m) throw new Error(`--map entry must be "N=gid" or "N-left=gid", got: ${trimmed}`);
         const key = m[2] ? `${m[1]}-${m[2].toLowerCase()}` : m[1];
         opts.map[key] = parseInt(m[3], 10);
@@ -85,6 +122,8 @@ function defaultSourceDir(chapter) {
 function sideOrderFromSuffix(suffix) {
   if (!suffix) return 0;
   const s = suffix.toLowerCase();
+  if (s === "topleft") return 0;
+  if (s === "topright") return 1;
   if (s === "left") return 0;
   if (s === "right") return 1;
   if (s === "bottomleft") return 2;
@@ -92,8 +131,9 @@ function sideOrderFromSuffix(suffix) {
   return 0;
 }
 
-/* Side suffix accepts either "Panel-10-left" or "Panel-10left" forms. */
-const PANEL_FILE_RE = /Page-(\d+)-Panel-(\d+)(?:-?(left|right|bottomleft|bottomright))?\.png$/i;
+/* Side suffix: Panel-8-topleft / Panel-10left / Panel-10-left (hyphen optional before side). */
+const PANEL_FILE_RE =
+  /Page-(\d+)-Panel-(\d+)(?:-?(topleft|topright|bottomleft|bottomright|left|right))?\.png$/i;
 
 function sortKeyFromName(name) {
   const m = PANEL_FILE_RE.exec(name);
@@ -105,7 +145,14 @@ function sortKeyFromName(name) {
 }
 
 async function main() {
-  const { chapter, src, limit, force, map } = parseArgs();
+  const { chapter, src, limit, force, map: userMap } = parseArgs();
+  const map = { ...userMap };
+  const builtin = BUILTIN_CHAPTER_PANEL_MAP[chapter];
+  if (builtin) {
+    for (const [k, v] of Object.entries(builtin)) {
+      if (map[k] === undefined) map[k] = v;
+    }
+  }
   const sourceDir = src || defaultSourceDir(chapter);
   if (!fs.existsSync(sourceDir)) {
     throw new Error(`Source folder not found: ${sourceDir}`);

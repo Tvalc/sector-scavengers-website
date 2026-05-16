@@ -4,6 +4,11 @@
   "type": "module",
   "scripts": {
     "preview": "node scripts/preview.mjs",
+    "preview:sector-scavengers": "node scripts/preview.mjs",
+    "preview:2": "node scripts/preview-4174.mjs",
+    "preview:makko-examples": "node scripts/preview-web-example.mjs",
+    "preview:web-example": "node scripts/preview-web-example.mjs",
+    "preview:both": "node scripts/preview-both.mjs",
     "sync:hero-videos": "node scripts/sync-hero-videos.mjs",
     "build:backgrounds": "node scripts/bake-site-backgrounds.mjs",
     "build:lore": "node scripts/bake-lore-origin.mjs",
@@ -11,8 +16,12 @@
     "build:assets": "node scripts/extract-promo-frames.mjs",
     "build:site-assets": "npm run build:backgrounds && npm run build:assets",
     "generate:novel": "node scripts/generate-novel-lore-pages.mjs",
+    "generate:novel:ch1": "node scripts/generate-novel-lore-pages.mjs --chapter 1",
     "generate:novel-reader": "node scripts/generate-novel-reader.mjs",
-    "export:novel-art-prompts": "node scripts/export-novel-art-prompts.mjs"
+    "generate:novel-reader:ch1": "node scripts/generate-novel-reader.mjs --chapter 1",
+    "export:novel-art-prompts": "node scripts/export-novel-art-prompts.mjs",
+    "import:novel-panels": "node scripts/import-novel-panels.mjs",
+    "import:novel:ch1": "node scripts/import-novel-panels.mjs --chapter 1"
   },
   "devDependencies": {
     "sharp": "^0.34.5"

@@ -4299,7 +4299,11 @@ a.lore-hub__card--live:hover {
   }
 }
 
-.novel-chapter-page .novel-comic-page .novel-panel:not(.novel-panel--sys) {
+/* Sys panels with an HTML readout strip keep the old layout (strip uses
+   margin-top: auto). Sys panels with figure + caption only match prose panels
+   and need the same caption stretch as neighbors in a row. */
+.novel-chapter-page .novel-comic-page .novel-panel:not(.novel-panel--sys),
+.novel-chapter-page .novel-comic-page .novel-panel--sys:not(:has(.rules-comic__strip-note--novel-sys)) {
   min-height: 100%;
 }
 
@@ -4308,7 +4312,11 @@ a.lore-hub__card--live:hover {
    and min-height: 100% on the panel, this makes every yellow caption box in
    a row the same pixel height as its neighbors (the longest caption sets the
    row height; shorter captions grow into yellow padding to match). */
-.novel-chapter-page .novel-comic-page .novel-panel:not(.novel-panel--sys) .rules-comic__bubble.novel-comic__balloon {
+.novel-chapter-page .novel-comic-page .novel-panel:not(.novel-panel--sys) .rules-comic__bubble.novel-comic__balloon,
+.novel-chapter-page
+  .novel-comic-page
+  .novel-panel--sys:not(:has(.rules-comic__strip-note--novel-sys))
+  .rules-comic__bubble.novel-comic__balloon {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
@@ -4317,7 +4325,12 @@ a.lore-hub__card--live:hover {
   overflow: visible;
   min-height: 0;
 }
-.novel-chapter-page .novel-comic-page .novel-panel:not(.novel-panel--sys) .rules-comic__bubble.novel-comic__balloon > p {
+.novel-chapter-page .novel-comic-page .novel-panel:not(.novel-panel--sys) .rules-comic__bubble.novel-comic__balloon > p,
+.novel-chapter-page
+  .novel-comic-page
+  .novel-panel--sys:not(:has(.rules-comic__strip-note--novel-sys))
+  .rules-comic__bubble.novel-comic__balloon
+  > p {
   margin: 0;
 }
 
@@ -4378,6 +4391,232 @@ a.lore-hub__card--live:hover {
 
 .novel-chapter-page .rules-comic__strip-note--novel-sys {
   margin-top: auto;
+}
+
+.novel-chapter-page .rules-comic__strip-note--novel-caption {
+  margin-top: 0.65rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 240, 255, 0.12);
+  background: rgba(4, 14, 28, 0.55);
+  font-size: clamp(0.82rem, 1.2vw, 0.95rem);
+  line-height: 1.52;
+  color: rgba(220, 232, 245, 0.92);
+}
+
+.novel-chapter-page .rules-comic__strip-note--novel-caption p {
+  margin: 0;
+}
+
+.novel-chapter-page .rules-comic__strip-note--novel-caption p + p {
+  margin-top: 0.55rem;
+}
+
+/* Merged VALU page: overlay robot speech on art; yellow Bangers caption below */
+.novel-chapter-page .novel-panel--composite-cap-bubble {
+  overflow: visible;
+}
+
+.novel-chapter-page .novel-panel--composite-cap-bubble .novel-comic__figure-with-overlay {
+  position: relative;
+  width: 100%;
+  align-self: stretch;
+}
+
+.novel-chapter-page .novel-panel--composite-cap-bubble .novel-comic__figure-with-overlay .rules-comic__figure {
+  position: relative;
+  z-index: 0;
+}
+
+.novel-chapter-page .novel-panel--composite-cap-bubble .novel-comic__balloon--composite-narration {
+  flex: 0 0 auto;
+}
+
+.novel-chapter-page .novel-comic__robot-speech {
+  padding: 0.65rem 0.85rem 0.72rem;
+  font-family: var(--font-sans);
+  font-size: clamp(0.72rem, 1.05vw, 0.88rem);
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.42;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #0c1220;
+  background: linear-gradient(180deg, #ffffff 0%, #eef2f7 100%);
+  border: 3px solid #0a0c10;
+  border-radius: 1.05rem 1.05rem 1.05rem 0.28rem;
+  box-shadow: 4px 4px 0 rgba(10, 12, 16, 0.82);
+}
+
+.novel-chapter-page .novel-comic__robot-speech p {
+  margin: 0;
+}
+
+/* Upper-right over the plate; tail aims down-left toward the bot */
+.novel-chapter-page .novel-comic__robot-speech--over-art {
+  position: absolute;
+  z-index: 2;
+  top: calc(clamp(0.35rem, 2.8vw, 1rem) + 50px);
+  right: clamp(0.2rem, 1.8vw, 0.75rem);
+  left: auto;
+  width: min(46%, 19.5rem);
+  max-width: min(92vw, 22rem);
+  margin: 0;
+}
+
+.novel-chapter-page .novel-comic__robot-speech--over-art::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 18%;
+  margin-top: -2px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top: 12px solid #ffffff;
+  border-bottom: 0;
+  filter: drop-shadow(0 2px 0 #0a0c10);
+}
+
+.novel-chapter-page .novel-comic-page .novel-panel--composite-cap-bubble .novel-comic__balloon--composite-narration {
+  margin-top: 0.6rem;
+}
+
+/* Ch. 1 page 14: Max (left) + V.A.L.U. (right) — anchored near each speaker, no center pile-up */
+.novel-chapter-page .novel-panel--dual-overlay-bubbles {
+  overflow: visible;
+}
+
+.novel-chapter-page .novel-panel--dual-overlay-bubbles .novel-comic__figure-with-overlay {
+  position: relative;
+  width: 100%;
+  align-self: stretch;
+}
+
+.novel-chapter-page .novel-panel--dual-overlay-bubbles .novel-comic__figure-with-overlay .rules-comic__figure {
+  position: relative;
+  z-index: 0;
+}
+
+.novel-chapter-page .novel-comic__overlaid-speech--ch1p14-max {
+  position: absolute;
+  z-index: 3;
+  /* Above Max’s side; nudged right toward his head */
+  bottom: clamp(30%, 10.5rem, 44%);
+  left: clamp(2%, 1.2vw, 6%);
+  right: auto;
+  top: auto;
+  width: min(24%, 9.25rem);
+  max-width: min(88vw, 10.5rem);
+  margin: 0;
+  transform: translateX(50px);
+  font-style: normal;
+  font-weight: 700;
+  border-radius: 1.05rem 0.32rem 1.05rem 1.05rem;
+  overflow: visible;
+}
+
+/* Max tail: outline + fill, overlaps balloon edge so it reads as one piece */
+.novel-chapter-page .novel-comic__overlaid-speech--ch1p14-max::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -14px;
+  margin: 0;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 0 11px 15px;
+  border-color: transparent transparent transparent #0a0c10;
+  pointer-events: none;
+}
+
+.novel-chapter-page .novel-comic__overlaid-speech--ch1p14-max::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: auto;
+  right: -9px;
+  margin: 0;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 0 8px 11px;
+  border-color: transparent transparent transparent #ffffff;
+  pointer-events: none;
+}
+
+.novel-chapter-page .novel-comic__overlaid-speech--ch1p14-robot {
+  position: absolute;
+  z-index: 2;
+  /* Lower toward the robot; tail centered on bottom */
+  top: calc(100px + clamp(0.35rem, 2.2vmin, 0.75rem));
+  left: 52%;
+  right: clamp(1.5%, 1vw, 4%);
+  bottom: auto;
+  width: auto;
+  max-width: min(20rem, 96%);
+  margin: 0;
+  padding: 0.5rem 0.62rem 0.58rem;
+  font-size: clamp(0.58rem, 0.85vw, 0.72rem);
+  line-height: 1.34;
+  transform: none;
+  overflow: visible;
+}
+
+.novel-chapter-page .novel-comic__overlaid-speech--ch1p14-robot::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: calc(50% - 25px);
+  right: auto;
+  margin-top: -2px;
+  margin-left: -9px;
+  width: 0;
+  height: 0;
+  transform: none;
+  border: 9px solid transparent;
+  border-top: 11px solid #ffffff;
+  border-bottom: 0;
+  filter: drop-shadow(0 2px 0 #0a0c10);
+}
+
+@media (max-width: 52rem) {
+  .novel-chapter-page .novel-comic__overlaid-speech--ch1p14-robot {
+    left: 50%;
+    font-size: clamp(0.55rem, 2.5vw, 0.68rem);
+  }
+}
+
+@media (max-width: 36rem) {
+  .novel-chapter-page .novel-comic__overlaid-speech--ch1p14-max {
+    bottom: auto;
+    top: clamp(0.25rem, 1.5vmin, 0.5rem);
+    left: 2%;
+    right: auto;
+    width: min(96vw, 12rem);
+    max-width: 94%;
+    transform: translateX(min(50px, 4vw));
+  }
+
+  .novel-chapter-page .novel-comic__overlaid-speech--ch1p14-robot {
+    top: calc(100px + clamp(4.25rem, 28vw, 6.25rem));
+    left: 2%;
+    right: 2%;
+    bottom: auto;
+    max-width: none;
+    font-size: clamp(0.54rem, 2.8vw, 0.66rem);
+  }
+
+  .novel-chapter-page .novel-comic__overlaid-speech--ch1p14-robot::after {
+    left: calc(50% - 25px);
+    right: auto;
+    margin-left: -9px;
+    transform: none;
+  }
 }
 
 .novel-chapter-page .novel-panel__sys {
@@ -4582,7 +4821,11 @@ a.lore-hub__card--live:hover {
 /* Snap the caption flush to the bottom of the image instead of letting
    the panel column push it to the bottom of the cell (which left a dark
    gap above the yellow box when the image was shorter than the column). */
-.novel-chapter-page .novel-comic-page .novel-panel:not(.novel-panel--sys) .rules-comic__bubble.novel-comic__balloon {
+.novel-chapter-page .novel-comic-page .novel-panel:not(.novel-panel--sys) .rules-comic__bubble.novel-comic__balloon,
+.novel-chapter-page
+  .novel-comic-page
+  .novel-panel--sys:not(:has(.rules-comic__strip-note--novel-sys))
+  .rules-comic__bubble.novel-comic__balloon {
   margin-top: 0.6rem;
 }
 
@@ -4626,3 +4869,144 @@ a.lore-hub__card--live:hover {
 }
 /* (Caption stretch+center is handled by the global .novel-panel balloon rule
    above; no extra balloon overrides needed for the 4+8 grid.) */
+
+/* -- Birthday page (Tony / BirthdayBot) -- */
+.birthday-page {
+  --birthday-hud-cyan: rgba(0, 255, 220, 0.92);
+  --birthday-hud-border: rgba(0, 240, 255, 0.35);
+  --birthday-hud-bg: rgba(4, 14, 32, 0.82);
+}
+
+.birthday-page .rules--birthday {
+  min-height: auto;
+  padding-bottom: clamp(1.25rem, 3vw, 2rem);
+}
+
+.birthday-page .birthday-masthead {
+  margin-bottom: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+.birthday-page .birthday-masthead .rules__title {
+  font-size: clamp(1.65rem, 4.5vw, 2.75rem);
+  line-height: 1.12;
+}
+
+.birthday-page .birthday-masthead .strip-page__subject {
+  color: var(--birthday-hud-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.birthday-stage {
+  position: relative;
+  border-radius: 14px;
+  border: 2px solid var(--birthday-hud-border);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.45) inset,
+    0 18px 48px rgba(0, 0, 0, 0.55),
+    0 0 40px rgba(0, 200, 255, 0.08);
+  overflow: hidden;
+  background-color: #0a0812;
+  background-image: url("media/birthday/birthday-background.webp");
+  background-size: cover;
+  background-position: center;
+  min-height: min(48vh, 420px);
+}
+
+.birthday-stage__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  align-items: stretch;
+  min-height: inherit;
+  padding: clamp(0.5rem, 1.5vw, 0.85rem);
+}
+
+.birthday-stage__anim {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: min(42vh, 380px);
+  padding: 0.35rem;
+}
+
+.birthday-stage__anim .makko-sprite-canvas {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: min(42vh, 380px);
+  display: block;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.45));
+}
+
+.birthday-hud {
+  align-self: center;
+  margin: clamp(0.5rem, 2vw, 1rem);
+  padding: clamp(1rem, 2.2vw, 1.35rem);
+  border-radius: 10px;
+  border: 1px solid var(--birthday-hud-border);
+  background: var(--birthday-hud-bg);
+  box-shadow:
+    0 0 24px rgba(0, 180, 255, 0.12),
+    inset 0 1px 0 rgba(0, 255, 255, 0.08);
+  font-family: var(--font-mono);
+  font-size: clamp(0.78rem, 1.35vw, 0.92rem);
+  line-height: 1.55;
+  color: rgba(220, 238, 255, 0.94);
+}
+
+.birthday-hud::before {
+  content: "[ PERSONAL TRANSMISSION ]";
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--birthday-hud-cyan);
+}
+
+.birthday-hud p {
+  margin: 0;
+}
+
+.birthday-hud p + p {
+  margin-top: 0.85rem;
+}
+
+.birthday-cta-wrap {
+  margin-top: clamp(0.85rem, 2vw, 1.25rem);
+  text-align: center;
+}
+
+.birthday-cta-wrap .btn {
+  font-family: var(--font-mono);
+  font-size: clamp(0.72rem, 1.6vw, 0.88rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  max-width: 52rem;
+  width: 100%;
+  white-space: normal;
+  line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+  .birthday-stage__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .birthday-stage__anim {
+    min-height: min(36vh, 320px);
+  }
+
+  .birthday-stage__anim .makko-sprite-canvas {
+    max-height: min(36vh, 320px);
+  }
+
+  .birthday-hud {
+    margin-top: 0;
+  }
+}

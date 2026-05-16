@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Happy 41st Birthday, Tony. Sector Scavengers — wishlist on Steam.">
+  <title>Happy 41st Birthday Tony · Sector Scavengers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="birthday-page beer-page novel-chapter-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="atmosphere" aria-hidden="true">
+    <div class="atmosphere__grid"></div>
+    <div class="atmosphere__vignette"></div>
+    <div class="atmosphere__grain"></div>
+  </div>
+
+  <header class="site-header site-header--over-dark">
+    <div class="site-header__inner">
+      <a class="logo" href="../index.html">
+        <span class="logo__mark" aria-hidden="true">◈</span>
+        <span class="logo__text">Sector Scavengers</span>
+      </a>
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="../index.html#how">How it plays</a>
+        <a href="../crew/index.html">Crew</a>
+        <a href="index.html">Lore</a>
+        <a href="origin-story.html">Origin</a>
+        <a href="beer-friday.html">Beer Friday</a>
+        <a href="novel/index.html">Novel</a>
+        <a
+          href="https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/"
+          class="nav__cta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Wishlist</a>
+      </nav>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="rules rules--birthday" aria-labelledby="birthday-title">
+      <div class="rules__veil" aria-hidden="true"></div>
+      <div class="rules__noise" aria-hidden="true"></div>
+      <div class="rules__layout">
+        <div class="rules__rail" aria-hidden="true">
+          <span>FILE</span>
+          <span>SS-Ω</span>
+          <span>BDAY</span>
+        </div>
+        <div class="rules__strip">
+          <header class="strip-page__masthead birthday-masthead reveal" data-reveal aria-labelledby="birthday-title">
+            <p class="strip-page__tags">
+              <span class="strip-page__tag">Sector 7</span>
+              <span class="strip-page__tag">Personal log</span>
+            </p>
+            <p class="strip-page__subject">Transmission · priority: heartfelt</p>
+            <h1 id="birthday-title" class="rules__title">Happy 41st Birthday, Tony</h1>
+          </header>
+
+          <div class="birthday-stage reveal" data-reveal>
+            <div class="birthday-stage__inner">
+              <div class="birthday-stage__anim" aria-label="BirthdayBot animation">
+                <canvas
+                  class="makko-sprite-canvas"
+                  width="492"
+                  height="280"
+                  role="img"
+                  alt="BirthdayBot celebrating with the HappyBirthday animation"
+                  data-makko-json="../media/sprites/birthdaybot/birthdaybot_happybirthday_default.json"
+                  data-makko-image="../media/sprites/birthdaybot/birthdaybot_happybirthday_default.png"
+                  data-makko-frame-tag="HappyBirthday"
+                  data-makko-fps="20"
+                ></canvas>
+              </div>
+              <aside class="birthday-hud" aria-label="Message from Tony">
+                <p>Hi, I'm Tony Valcarcel, a 20+ year video games industry veteran (Marketing) who decided that age 40 was the time to start as a solo gamedev.</p>
+                <p>It's been a wild journey so far but I'm loving it!</p>
+                <p>Today I turn 41 and it would mean the world to me if you checked out Sector Scavengers and, if it looks interesting, wishlist it on Steam.</p>
+                <p>Thanks for checking out the world I'm building, and for being on the journey with me!</p>
+              </aside>
+            </div>
+          </div>
+
+          <div class="birthday-cta-wrap reveal" data-reveal>
+            <a
+              class="btn btn--primary"
+              href="https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Wishlist today to wish Tony a happy birthday</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--compact">
+    <div class="site-footer__inner">
+      <p class="site-footer__brand">Sector Scavengers</p>
+      <div class="site-footer__links">
+        <a href="../index.html">Home</a>
+        <a href="../crew/index.html">Crew</a>
+        <a href="index.html">Lore</a>
+        <a href="novel/index.html">Novel</a>
+        <a href="https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/" target="_blank" rel="noopener noreferrer">Wishlist</a>
+      </div>
+      <p class="site-footer__copy">© <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="../site.js"></script>
+  <script src="../makko-sprite.js" defer></script>
+</body>
+</html>

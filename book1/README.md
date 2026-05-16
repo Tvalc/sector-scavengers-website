@@ -34,4 +34,4 @@ Source markdown for Book 1 of the *Sector Scavengers* novel. Renders natively in
 
 ## Note
 
-This folder is a mirror of the canonical manuscript living at `sector-scavengers/novel/`. Edit there, not here. To refresh after canonical edits, copy `sector-scavengers/novel/BOOK1_CH*.md` into this folder and commit.
+`npm run generate:novel` and `npm run generate:novel-reader` read **this `book1/` folder first** when it contains `BOOK1_CH*.md`; otherwise they fall back to the sibling repo `../sector-scavengers/novel/`. For website-only edits, change markdown here and run `npm run generate:novel:chN` (or `-- --chapter N`) so only that chapter’s HTML is rewritten. Keep this folder in sync with the canonical novel repo when you want both places identical.
