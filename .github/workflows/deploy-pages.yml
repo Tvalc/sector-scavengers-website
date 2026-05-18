@@ -23,10 +23,17 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      # Must fetch Git LFS objects, otherwise *.mp4 in the artifact are tiny pointer files and videos won't play.
       - uses: actions/checkout@v4
         with:
-          lfs: true
+          lfs: false
+
+      # When the account LFS budget is available, pull *.mp4 for the site artifact.
+      # Deploy still succeeds if this fails (e.g. "exceeded its LFS budget").
+      - name: Fetch Git LFS videos (optional)
+        continue-on-error: true
+        run: |
+          git lfs install --local
+          git lfs pull
 
       - uses: actions/configure-pages@v4
 
