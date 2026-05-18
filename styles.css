@@ -5246,54 +5246,27 @@ a.lore-hub__card--live:hover {
   }
 }
 
-/* -- 200 wishlists thank-you (animated backdrop) -- */
+/* -- 200 wishlists thank-you (animation + message side by side) -- */
 .birthday-page--wishlist-200 .birthday-stage--wishlist-200 {
   background-color: #0a0812;
   background-image: url("media/wishlist/wishlist-race-background.png");
   background-size: cover;
   background-position: center;
-  min-height: min(52vh, 480px);
-}
-
-.birthday-page--wishlist-200 .birthday-stage--wishlist-200::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background: linear-gradient(
-    105deg,
-    rgba(4, 14, 32, 0.88) 0%,
-    rgba(4, 14, 32, 0.42) 42%,
-    rgba(4, 14, 32, 0.72) 100%
-  );
-}
-
-.birthday-page--wishlist-200 .birthday-stage__backdrop {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  max-width: none;
-  max-height: none;
-  filter: none;
 }
 
 .birthday-page--wishlist-200 .birthday-stage--wishlist-200 .birthday-stage__inner {
-  position: relative;
-  z-index: 2;
-  grid-template-columns: 1fr;
-  justify-items: end;
-  align-items: center;
-  min-height: min(52vh, 480px);
-  padding: clamp(0.75rem, 2vw, 1.25rem);
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  align-items: stretch;
 }
 
-.birthday-page--wishlist-200 .birthday-hud--community {
-  max-width: min(440px, 94%);
-  margin: clamp(0.5rem, 2vw, 1rem);
+.birthday-page--wishlist-200 .birthday-stage__anim {
+  min-height: min(44vh, 400px);
+  background: rgba(4, 12, 28, 0.35);
+  border-radius: 8px;
+}
+
+.birthday-page--wishlist-200 .birthday-stage__anim .makko-sprite-canvas {
+  max-height: min(44vh, 400px);
 }
 
 .birthday-page--wishlist-200 .birthday-hud--community::before {
@@ -5307,16 +5280,15 @@ a.lore-hub__card--live:hover {
 }
 
 @media (max-width: 900px) {
-  .birthday-page--wishlist-200 .birthday-stage--wishlist-200 {
-    min-height: min(58vh, 520px);
-  }
-
   .birthday-page--wishlist-200 .birthday-stage--wishlist-200 .birthday-stage__inner {
-    justify-items: stretch;
-    min-height: min(58vh, 520px);
+    grid-template-columns: 1fr;
   }
 
-  .birthday-page--wishlist-200 .birthday-hud--community {
-    max-width: none;
+  .birthday-page--wishlist-200 .birthday-stage__anim {
+    min-height: min(36vh, 320px);
+  }
+
+  .birthday-page--wishlist-200 .birthday-stage__anim .makko-sprite-canvas {
+    max-height: min(36vh, 320px);
   }
 }
