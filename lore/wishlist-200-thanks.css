@@ -3,8 +3,8 @@
 body.birthday-page--wishlist-200 {
   --wishlist-panel-h: min(72vh, 760px);
   /* Static hero anchor (desktop) — tracks fixed race background, no motion */
-  --wishlist-block-left: calc(38% - 50px);
-  --wishlist-block-top: calc(50vh - 180px);
+  --wishlist-block-left: calc(38% + 25px);
+  --wishlist-block-top: calc(50vh - 80px);
   --wishlist-hud-right: calc(clamp(1rem, 2vw, 1.5rem) + 50px);
   --birthday-hud-cyan: rgba(0, 255, 220, 0.92);
   --birthday-hud-border: rgba(0, 240, 255, 0.35);
