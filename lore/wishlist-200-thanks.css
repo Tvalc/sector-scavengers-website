@@ -76,13 +76,21 @@ body.birthday-page--wishlist-200 .strip-page__subject {
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
 }
 
-body.birthday-page--wishlist-200 .wishlist-200-cta {
+.wishlist-200-cta-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
   margin-top: 100px;
   margin-left: 50px;
-  margin-bottom: 0;
-  text-align: left;
+  margin-bottom: 2rem;
+}
+
+body.birthday-page--wishlist-200 .wishlist-200-cta {
+  margin: 0;
+  text-align: center;
   width: fit-content;
-  max-width: calc(100% - 50px);
+  max-width: none;
 }
 
 body.birthday-page--wishlist-200 .wishlist-200-cta .btn {
@@ -94,7 +102,7 @@ body.birthday-page--wishlist-200 .wishlist-200-cta .btn {
 
 .wishlist-200-framed {
   display: block;
-  margin: 1rem 0 2rem 50px;
+  margin: 1rem 0 0;
   max-width: min(720px, calc(100vw - 3rem));
   padding: 0;
   border: 2px solid var(--birthday-hud-border);
@@ -145,7 +153,7 @@ body.birthday-page--wishlist-200 .wishlist-200-cta .btn {
   align-items: flex-end;
   justify-content: center;
   padding: 0;
-  margin: 50px 0 0 150px;
+  margin: 200px 0 0 225px;
 }
 
 .wishlist-200-visual__canvas {
@@ -245,14 +253,13 @@ body.birthday-page--wishlist-200 .birthday-hud__names {
     margin: 30px 0 0 0;
   }
 
-  body.birthday-page--wishlist-200 .wishlist-200-cta {
+  .wishlist-200-cta-stack {
     margin-top: 2rem;
     margin-left: 1rem;
+    transform: none;
   }
 
   .wishlist-200-framed {
-    margin-left: 1rem;
-    margin-right: 1rem;
     max-width: none;
   }
 }
