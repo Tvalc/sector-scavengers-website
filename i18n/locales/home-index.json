@@ -1,0 +1,358 @@
+{
+  "index": {
+    "hero": {
+      "coverTag": "Cover · Field feed",
+      "feed": "FEED",
+      "videoAria": "Gameplay: website hero, 3-19 trailer, characters, ships showcase.",
+      "toolbarAria": "Hero video controls",
+      "prevClip": "Previous clip",
+      "nextClip": "Next clip",
+      "unmuteVideo": "Unmute video"
+    },
+    "narrator": {
+      "serialStrip": "Serial strip · Signal & salvage",
+      "fieldStrip": "Field strip · Laws of the loop"
+    },
+    "prologue": {
+      "tag1": "Prologue · The lanyard",
+      "bubble1": "Wore the lanyard until AI ate the roadmap. Badge died too.",
+      "note1": "The exit packet was almost kind: cryo until abundance, skip the ugly middle, wake into a gentle future. The future never arrived. Your contract did.",
+      "tag2": "Prologue · Inventory",
+      "bubble2": "Centuries on, you are not an alum. You are inventory.",
+      "note2": "Shuffled dock to dock until someone needed sinew in vacuum and your tab already had interest. You woke up as a line item, not an alum.",
+      "tag3": "Prologue · Your future",
+      "bubble3": "They wake you and immediately hand you a space suit, demanding that you start harvesting space salvage to pay off debt",
+      "note3": "Your job is derelicts in the black while company droids hang in the feed, snarky as a helpdesk and precise as tax law. They only love what you declare. Everything else is yours to keep."
+    },
+    "beats": {
+      "tag0102": "Beat 01–02 · Hand & energy",
+      "bubbleEnergy": "Tank reads empty, turn ends. No stalling, no off-meter miracles.",
+      "bubbleHand": "Three cards in the hand. That is the whole deal.",
+      "mech01k": "Beat 01 · Mechanic",
+      "mech01": "You always hold three cards. Not two, not four. Three. Every choice is which one of those three you spend right now.",
+      "mech02k": "Beat 02 · Mechanic",
+      "mech02": "Energy is what you spend to play cards from that hand. Tank empty means turn over. No stalling, no miracles off-meter.",
+      "tag03": "Beat 03 · Explore derelict ships",
+      "bubble03": "The wreck does not show its depth for free. Spend real actions until the map stops lying.",
+      "mech03": "Each wreck rolls its room count in secret. You spend real actions to reveal rooms, and if you finish the last room without extracting, the run ends there. No overtime.",
+      "tag04": "Beat 04 · Hull",
+      "bubble04": "Cards reveal rewards and deal damage.",
+      "mech04": "Cards reveal rewards and apply pressure to the hull you stand in. Stack enough hits and the run ends in the black.",
+      "tag05": "Beat 05 · Debt",
+      "bubble05": "You owe the company.",
+      "mech05": "The company bills after every third ship you raid. The campaign win is still blunt: zero the debt. Declared credits go to the boss to pay it down. Anything else stays your problem.",
+      "tag06": "Beat 06 · Smuggled ledger",
+      "bubble06": "Whatever you do not declare stays yours: cryo keys, tools, hull patches, hub concrete. Company never sees it.",
+      "mech06": "Smuggled credits never touch the boss ledger. Off-book money builds the hub itself: new crew, new tools, new patches before the next breach finds you.",
+      "tag07": "Beat 07 · Void XP",
+      "bubble07": "Die once, feed the void once. It remembers. Next thaw, you get new angles and new cards.",
+      "mech07": "Any death feeds the void: you earn void experience that unlocks new cards for the next attempt. Lose, learn, redraw, repeat."
+    },
+    "videos": {
+      "eyebrow": "Mission feed",
+      "title": "Video Dispatches",
+      "lead": "Field logs from <a href=\"https://www.youtube.com/@PlayMyGamesNow\" target=\"_blank\" rel=\"noopener noreferrer\">PlayMyGamesNow</a>: long-form dev updates and short tactical drops, framed like the rest of the archive.",
+      "latest": "Latest Uploads",
+      "openChannel": "Open full channel",
+      "shortDrops": "Short Drops",
+      "seeShorts": "See all Shorts",
+      "clipNote": "Clip note"
+    },
+    "makko": {
+      "eyebrow": "How it was made",
+      "title": "Built With Makko AI",
+      "subtitle": "How to make a roguelike with AI",
+      "p1": "Sector Scavengers was built with Makko AI, an AI 2D game studio where you describe what you want and the AI builds it. This page is also a working answer to how to make a roguelike with AI: a complete AI roguelike game, shipped without an art team. The entire art pipeline (every crew member, derelict ship environment, and UI element) was generated through Makko's Art Studio and Collections system. Collections sets the visual foundation once and every asset generated after that inherits it. No art background needed. No style re-prompting between sessions.",
+      "p2": "The game logic, debt mechanics, and card system were built using Makko's Code Studio. Plain English descriptions. Playable result in a browser. The same loop you just read about was built without writing a line of code, real no-code game development that lets you build a roguelike without coding any of the systems by hand.",
+      "p3": "If you want to build your own roguelike with AI, Makko is free to start. It works as a full roguelike game maker: art, characters, environments, and game logic in one tool. The devlog for Sector Scavengers covers the full build process from concept to playable game.",
+      "cta": "Build your own roguelike free",
+      "devlog": "Read the Sector Scavengers devlog"
+    },
+    "homeLore": {
+      "tag": "Live in archive",
+      "kicker": "Lore",
+      "open": "Open",
+      "originTitle": "Origin story",
+      "originDesc": "Wake into ledger: layoffs, cryo as severance, debt sold to salvage, first derelicts.",
+      "beerTitle": "Beer Friday",
+      "beerDesc": "Building B, Employee Number Two, and the rooftop that outranked Corporate Risk.",
+      "novelTitle": "Debt Protocol",
+      "novelDesc": "Book 1 as a scroll comic on the web—panel read, full script when you want it.",
+      "more": "Browse the full lore archive"
+    },
+    "cta": {
+      "eyebrow": "Ping the storefront",
+      "title": "Wishlist if you like your odds salty",
+      "body": "Steam reads interest the way droids read forms: coldly and in your favor if the numbers move. Tap wishlist if you want the build notes while we keep stacking hub debt, hull risk, and smuggled hope into the same loop you just read about, built with Makko AI."
+    }
+  },
+  "locales": {
+    "ja": {
+      "index": {
+        "hero": {
+          "coverTag": "カバー · フィールド・フィード",
+          "feed": "フィード",
+          "videoAria": "ゲームプレイ：サイトヒーロー、3-19トレーラー、キャラクター、艦船ショーケース。",
+          "toolbarAria": "ヒーロー動画コントロール",
+          "prevClip": "前のクリップ",
+          "nextClip": "次のクリップ",
+          "unmuteVideo": "動画のミュート解除"
+        },
+        "narrator": {
+          "serialStrip": "シリアル・ストリップ · シグナル＆サルベージ",
+          "fieldStrip": "フィールド・ストリップ · ループの法則"
+        },
+        "prologue": {
+          "tag1": "プロローグ · ランヤード",
+          "bubble1": "AIがロードマップを飲み込むまでランヤードをつけていた。バッジも死んだ。",
+          "note1": "出口パケットはほぼ優しかった：豊かさまでコールドスリープ、醜い中間を飛ばし、穏やかな未来で目覚める。未来は来なかった。契約が来た。",
+          "tag2": "プロローグ · インベントリ",
+          "bubble2": "何世紀も経って、あなたは同窓ではない。在庫だ。",
+          "note2": "誰かが真空で筋肉を必要とし、あなたのタブにすでに利息がついているまで、ドックからドックへとシャッフルされた。同窓としてではなく、行項目として目覚めた。",
+          "tag3": "プロローグ · あなたの未来",
+          "bubble3": "目覚めさせられ、すぐに宇宙服を渡され、借金を返すために宇宙サルベージの収穫を始めろと要求される",
+          "note3": "仕事は闇の難破船。会社のドロイドがフィードにぶら下がり、ヘルプデスクのように皮肉で、税法のように正確だ。彼らが愛するのは申告したものだけ。それ以外はすべてあなたのもの。"
+        },
+        "beats": {
+          "tag0102": "ビート 01–02 · 手札とエネルギー",
+          "bubbleEnergy": "タンクが空ならターン終了。足踏みも、メーター外の奇跡もなし。",
+          "bubbleHand": "手札は3枚。それがすべての取引だ。",
+          "mech01k": "ビート 01 · メカニクス",
+          "mech01": "常に3枚のカードを持つ。2枚でも4枚でもない。3枚。すべての選択は、その3枚のうち今どれを使うかだ。",
+          "mech02k": "ビート 02 · メカニクス",
+          "mech02": "エネルギーはその手札からカードを出すために使うもの。タンクが空ならターン終了。足踏みも、メーター外の奇跡もなし。",
+          "tag03": "ビート 03 · 難破船を探索",
+          "bubble03": "難破船は深さをタダでは見せない。マップが嘘をつかなくなるまで、本物のアクションを使え。",
+          "mech03": "各難破船は部屋数を秘密にロールする。本物のアクションを使って部屋を明らかにし、最後の部屋を終えても抽出しなければ、ランはそこで終わる。残業なし。",
+          "tag04": "ビート 04 · 船体",
+          "bubble04": "カードは報酬を明らかにし、ダメージを与える。",
+          "mech04": "カードは報酬を明らかにし、立っている船体に圧力をかける。十分なヒットを積み重ねれば、ランは闇で終わる。",
+          "tag05": "ビート 05 · 借金",
+          "bubble05": "会社に借りがある。",
+          "mech05": "襲撃する3隻目ごとに会社が請求する。キャンペーンの勝利条件は依然として単純：借金をゼロに。申告したクレジットはボスへの返済に使われる。それ以外はあなたの問題。",
+          "tag06": "ビート 06 · 密輸台帳",
+          "bubble06": "申告しないものはすべてあなたのもの：コールドスリープキー、ツール、船体パッチ、ハブの資材。会社は見ない。",
+          "mech06": "密輸クレジットはボスの台帳に触れない。帳簿外の金がハブそのものを築く：新しいクルー、新しいツール、次の突破が来る前の新しいパッチ。",
+          "tag07": "ビート 07 · ヴォイドXP",
+          "bubble07": "一度死ねば、ヴォイドに一度餌をやる。覚えている。次の解凍で、新しい角度と新しいカードが手に入る。",
+          "mech07": "どんな死もヴォイドに餌を与える：次の試行のために新しいカードをアンロックするヴォイド経験値を得る。負け、学び、引き直し、繰り返せ。"
+        },
+        "videos": {
+          "eyebrow": "ミッション・フィード",
+          "title": "動画ディスパッチ",
+          "lead": "<a href=\"https://www.youtube.com/@PlayMyGamesNow\" target=\"_blank\" rel=\"noopener noreferrer\">PlayMyGamesNow</a>からの現場ログ：長編の開発アップデートと短い戦術ドロップ。アーカイブの他と同じ枠組みで。",
+          "latest": "最新アップロード",
+          "openChannel": "チャンネルを開く",
+          "shortDrops": "ショート・ドロップ",
+          "seeShorts": "すべてのショートを見る",
+          "clipNote": "クリップ注"
+        },
+        "makko": {
+          "eyebrow": "制作の経緯",
+          "title": "Makko AIで制作",
+          "subtitle": "AIでローグライクを作る方法",
+          "p1": "Sector ScavengersはMakko AIで制作されたAI 2Dゲームスタジオの作品で、欲しいものを説明すればAIが構築する。本ページはAIでローグライクを作る方法への実践的な答えでもある：アートチームなしで出荷した完全なAIローグライクゲーム。全アートパイプライン（クルー全員、難破船環境、UI要素）はMakkoのArt StudioとCollectionsシステムで生成。Collectionsは視覚的基盤を一度設定し、その後生成されるすべてのアセットが継承する。アートの経験不要。セッション間のスタイル再プロンプトも不要。",
+          "p2": "ゲームロジック、借金メカニクス、カードシステムはMakkoのCode Studioで構築。平易な英語の説明。ブラウザでプレイ可能な結果。今読んだループと同じものが、一行もコードを書かずに構築された——システムを手でコーディングせずにローグライクを作れる本物のノーコードゲーム開発。",
+          "p3": "AIで自分のローグライクを作りたいなら、Makkoは無料で始められる。フルのローグライクゲームメーカーとして機能：アート、キャラクター、環境、ゲームロジックを一つのツールで。Sector Scavengersの開発ログはコンセプトからプレイ可能なゲームまでの全構築プロセスをカバーする。",
+          "cta": "無料で自分のローグライクを作る",
+          "devlog": "Sector Scavengers開発ログを読む"
+        },
+        "homeLore": {
+          "tag": "アーカイブ公開中",
+          "kicker": "世界観",
+          "open": "開く",
+          "originTitle": "起源ストーリー",
+          "originDesc": "帳簿で目覚める：レイオフ、別れ金としてのコールドスリープ、サルベージへの債務譲渡、最初の難破船。",
+          "beerTitle": "ビアフライデー",
+          "beerDesc": "B棟、社員番号2、コーポレートリスクを上回った屋上。",
+          "novelTitle": "Debt Protocol",
+          "novelDesc": "第1巻をWebスクロールコミックで——パネル読み、必要なら全文スクリプト。",
+          "more": "世界観アーカイブをすべて見る"
+        },
+        "cta": {
+          "eyebrow": "ストアフロントにピング",
+          "title": "塩辛いオッズが好きならウィッシュリスト",
+          "body": "Steamは関心をドロイドがフォームを読むように冷たく読む——数字が動けばあなたに有利だ。ビルドノートが欲しければウィッシュリストをタップ。ハブの借金、船体リスク、密輸の希望を、今読んだループと同じものに積み上げ続ける。"
+        }
+      }
+    },
+    "tr": {
+      "index": {
+        "hero": {
+          "coverTag": "Kapak · Saha yayını",
+          "feed": "YAYIN",
+          "videoAria": "Oynanış: site kahramanı, 3-19 fragmanı, karakterler, gemi vitrini.",
+          "toolbarAria": "Kahraman video kontrolleri",
+          "prevClip": "Önceki klip",
+          "nextClip": "Sonraki klip",
+          "unmuteVideo": "Videonun sesini aç"
+        },
+        "narrator": {
+          "serialStrip": "Seri şerit · Sinyal ve kurtarma",
+          "fieldStrip": "Saha şeridi · Döngünün yasaları"
+        },
+        "prologue": {
+          "tag1": "Önsöz · Yaka kartı",
+          "bubble1": "Yapay zeka yol haritasını yiyene kadar yaka kartı taktın. Rozet de öldü.",
+          "note1": "Çıkış paketi neredeyse nazikti: bolluğa kadar kriyojenik uyku, çirkin ortayı atla, nazik bir geleceğe uyan. Gelecek gelmedi. Sözleşmen geldi.",
+          "tag2": "Önsöz · Envanter",
+          "bubble2": "Yüzyıllar sonra mezun değilsin. Envantersin.",
+          "note2": "Biri vakumda kasa ihtiyacı duyana ve sekmende zaten faiz birikene kadar iskeleden iskeleye karıştırıldın. Mezun olarak değil, satır kalemi olarak uyandın.",
+          "tag3": "Önsöz · Geleceğin",
+          "bubble3": "Seni uyandırıp hemen uzay giysisi veriyorlar; borcu ödemek için uzay hurdası toplamaya başlamanı istiyorlar",
+          "note3": "İşin karanlıktaki enkazlar. Şirket dronları yayında asılı, yardım masası kadar alaycı, vergi hukuku kadar kesin. Sadece bildirdiklerini severler. Geri kalanı senindir."
+        },
+        "beats": {
+          "tag0102": "Vuruş 01–02 · El ve enerji",
+          "bubbleEnergy": "Depo boş, tur biter. Oyalama yok, sayaç dışı mucize yok.",
+          "bubbleHand": "Elde üç kart. Tüm anlaşma bu.",
+          "mech01k": "Vuruş 01 · Mekanik",
+          "mech01": "Her zaman üç kart tutarsın. İki değil, dört değil. Üç. Her seçim o üçten hangisini şimdi harcayacağındır.",
+          "mech02k": "Vuruş 02 · Mekanik",
+          "mech02": "Enerji o elden kart oynamak için harcanır. Depo boşsa tur biter. Oyalama yok, sayaç dışı mucize yok.",
+          "tag03": "Vuruş 03 · Enkaz gemileri keşfet",
+          "bubble03": "Enkaz derinliğini bedavaya göstermez. Harita yalan söylemeyene kadar gerçek eylemler harca.",
+          "mech03": "Her enkaz oda sayısını gizlice atar. Odaları açmak için gerçek eylemler harcarsın; son odayı bitirip çıkmazsan koşu orada biter. Fazla mesai yok.",
+          "tag04": "Vuruş 04 · Gövde",
+          "bubble04": "Kartlar ödülleri açar ve hasar verir.",
+          "mech04": "Kartlar ödülleri açar ve içinde durduğun gövdeye baskı uygular. Yeterince vuruş biriktir, koşu karanlıkta biter.",
+          "tag05": "Vuruş 05 · Borç",
+          "bubble05": "Şirkete borçlusun.",
+          "mech05": "Yağmaladığın her üçüncü gemiden sonra şirket faturalandırır. Kampanya zaferi hâlâ sert: borcu sıfırla. Bildirilen krediler patrona gider. Geri kalanı senin sorunun.",
+          "tag06": "Vuruş 06 · Kaçak defter",
+          "bubble06": "Bildirmediğin her şey senindir: kriyojenik anahtarlar, aletler, gövde yamaları, merkez malzemesi. Şirket görmez.",
+          "mech06": "Kaçak krediler patron defterine dokunmaz. Defter dışı para merkezin kendisini kurar: yeni mürettebat, yeni aletler, bir sonraki ihlal seni bulmadan yeni yamalar.",
+          "tag07": "Vuruş 07 · Boşluk XP",
+          "bubble07": "Bir kez öl, boşluğu bir kez besle. Hatırlar. Sonraki çözülmede yeni açılar ve yeni kartlar alırsın.",
+          "mech07": "Her ölüm boşluğu besler: sonraki deneme için yeni kartların kilidini açan boşluk deneyimi kazanırsın. Kaybet, öğren, yeniden çek, tekrarla."
+        },
+        "videos": {
+          "eyebrow": "Görev yayını",
+          "title": "Video sevkleri",
+          "lead": "<a href=\"https://www.youtube.com/@PlayMyGamesNow\" target=\"_blank\" rel=\"noopener noreferrer\">PlayMyGamesNow</a>'dan saha kayıtları: uzun geliştirme güncellemeleri ve kısa taktik damlaları, arşivin geri kalanı gibi çerçevelenmiş.",
+          "latest": "Son yüklemeler",
+          "openChannel": "Kanalı aç",
+          "shortDrops": "Kısa damlalar",
+          "seeShorts": "Tüm Shorts'ları gör",
+          "clipNote": "Klip notu"
+        },
+        "makko": {
+          "eyebrow": "Nasıl yapıldı",
+          "title": "Makko AI ile yapıldı",
+          "subtitle": "Yapay zekayla roguelike nasıl yapılır",
+          "p1": "Sector Scavengers, istediğini tarif edip yapay zekanın inşa ettiği bir AI 2D oyun stüdyosu olan Makko AI ile yapıldı. Bu sayfa aynı zamanda yapay zekayla roguelike yapmanın çalışan bir cevabı: sanat ekibi olmadan çıkan tam bir AI roguelike. Tüm sanat hattı Makko'nun Art Studio ve Collections sistemiyle üretildi.",
+          "p2": "Oyun mantığı, borç mekaniği ve kart sistemi Makko Code Studio ile kuruldu. Sade İngilizce açıklamalar. Tarayıcıda oynanabilir sonuç. Az önce okuduğun döngü tek satır kod yazılmadan yapıldı.",
+          "p3": "Kendi roguelike'ını yapay zekayla yapmak istiyorsan Makko ücretsiz başlar. Sector Scavengers geliştirme günlüğü kavramdan oynanabilir oyuna tüm süreci kapsar.",
+          "cta": "Kendi roguelike'ını ücretsiz yap",
+          "devlog": "Sector Scavengers geliştirme günlüğünü oku"
+        },
+        "homeLore": {
+          "tag": "Arşivde canlı",
+          "kicker": "Evren",
+          "open": "Aç",
+          "originTitle": "Köken hikayesi",
+          "originDesc": "Deftere uyanış: işten çıkarmalar, ayrılık tazminatı olarak kriyojenik uyku, hurdaya satılan borç, ilk enkazlar.",
+          "beerTitle": "Bira Cuması",
+          "beerDesc": "B Binası, Çalışan Numarası İki ve Kurumsal Risk'i geçen çatı katı.",
+          "novelTitle": "Debt Protocol",
+          "novelDesc": "Kitap 1 web kaydırmalı çizgi roman — panel okuma, istediğinde tam senaryo.",
+          "more": "Tüm evren arşivine göz at"
+        },
+        "cta": {
+          "eyebrow": "Mağazaya ping at",
+          "title": "Tuzlu şansları seviyorsan istek listesine ekle",
+          "body": "Steam ilgiyi dronların formları okuduğu gibi okur: soğukça ve rakamlar hareket ederse senin lehine. Az önce okuduğun döngüye merkez borcu, gövde riski ve kaçak umut eklemeye devam ederken yapım notlarını istiyorsan istek listesine dokun."
+        }
+      }
+    },
+    "es": {
+      "index": {
+        "hero": {
+          "coverTag": "Portada · Transmisión de campo",
+          "feed": "SEÑAL",
+          "videoAria": "Jugabilidad: héroe del sitio, tráiler 3-19, personajes, vitrina de naves.",
+          "toolbarAria": "Controles de vídeo del héroe",
+          "prevClip": "Clip anterior",
+          "nextClip": "Clip siguiente",
+          "unmuteVideo": "Activar sonido del vídeo"
+        },
+        "narrator": {
+          "serialStrip": "Tira serial · Señal y salvamento",
+          "fieldStrip": "Tira de campo · Leyes del bucle"
+        },
+        "prologue": {
+          "tag1": "Prólogo · El cordón",
+          "bubble1": "Llevaste el cordón hasta que la IA se comió la hoja de ruta. La credencial murió también.",
+          "note1": "El paquete de salida casi fue amable: criogenia hasta la abundancia, saltar el feo intermedio, despertar en un futuro gentil. El futuro nunca llegó. Llegó tu contrato.",
+          "tag2": "Prólogo · Inventario",
+          "bubble2": "Siglos después no eres un alumno. Eres inventario.",
+          "note2": "Te barajearon de muelle en muelle hasta que alguien necesitó músculo en el vacío y tu pestaña ya tenía intereses. Despertaste como partida, no como alumno.",
+          "tag3": "Prólogo · Tu futuro",
+          "bubble3": "Te despiertan y al instante te dan un traje espacial, exigiendo que empieces a cosechar salvamento espacial para pagar la deuda",
+          "note3": "Tu trabajo son los derelictos en la negrura mientras los droides de la empresa cuelgan en el feed, sarcásticos como un helpdesk y precisos como la ley fiscal. Solo aman lo que declaras. Todo lo demás es tuyo."
+        },
+        "beats": {
+          "tag0102": "Golpe 01–02 · Mano y energía",
+          "bubbleEnergy": "El tanque vacío, fin del turno. Sin estancarse, sin milagros fuera del medidor.",
+          "bubbleHand": "Tres cartas en la mano. Ese es todo el trato.",
+          "mech01k": "Golpe 01 · Mecánica",
+          "mech01": "Siempre sostienes tres cartas. No dos, no cuatro. Tres. Cada elección es cuál de esas tres gastas ahora.",
+          "mech02k": "Golpe 02 · Mecánica",
+          "mech02": "La energía es lo que gastas para jugar cartas de esa mano. Tanque vacío significa fin del turno. Sin estancarse, sin milagros fuera del medidor.",
+          "tag03": "Golpe 03 · Explorar naves derelictas",
+          "bubble03": "El naufragio no muestra su profundidad gratis. Gasta acciones reales hasta que el mapa deje de mentir.",
+          "mech03": "Cada naufragio tira en secreto su número de salas. Gastas acciones reales para revelar salas; si terminas la última sin extraer, la partida acaba ahí. Sin horas extra.",
+          "tag04": "Golpe 04 · Casco",
+          "bubble04": "Las cartas revelan recompensas e infligen daño.",
+          "mech04": "Las cartas revelan recompensas y presionan el casco en el que estás. Acumula suficientes golpes y la partida termina en la negrura.",
+          "tag05": "Golpe 05 · Deuda",
+          "bubble05": "Le debes a la empresa.",
+          "mech05": "La empresa factura tras cada tercer barco que saqueas. La victoria de campaña sigue siendo directa: cero deuda. Los créditos declarados van al jefe. Lo demás es tu problema.",
+          "tag06": "Golpe 06 · Libro mayor contrabandeado",
+          "bubble06": "Lo que no declaras es tuyo: llaves criogénicas, herramientas, parches de casco, material del hub. La empresa nunca lo ve.",
+          "mech06": "Los créditos contrabandeados no tocan el libro del jefe. El dinero fuera de libro construye el hub: nueva tripulación, nuevas herramientas, nuevos parches antes de la siguiente brecha.",
+          "tag07": "Golpe 07 · XP del vacío",
+          "bubble07": "Muere una vez, alimenta el vacío una vez. Recuerda. En el próximo deshielo, nuevos ángulos y nuevas cartas.",
+          "mech07": "Cualquier muerte alimenta el vacío: ganas experiencia del vacío que desbloquea nuevas cartas para el siguiente intento. Pierde, aprende, redibuja, repite."
+        },
+        "videos": {
+          "eyebrow": "Transmisión de misión",
+          "title": "Despachos de vídeo",
+          "lead": "Registros de campo de <a href=\"https://www.youtube.com/@PlayMyGamesNow\" target=\"_blank\" rel=\"noopener noreferrer\">PlayMyGamesNow</a>: actualizaciones largas de desarrollo y gotas tácticas cortas, enmarcadas como el resto del archivo.",
+          "latest": "Últimas subidas",
+          "openChannel": "Abrir canal completo",
+          "shortDrops": "Gotas cortas",
+          "seeShorts": "Ver todos los Shorts",
+          "clipNote": "Nota del clip"
+        },
+        "makko": {
+          "eyebrow": "Cómo se hizo",
+          "title": "Hecho con Makko AI",
+          "subtitle": "Cómo hacer un roguelike con IA",
+          "p1": "Sector Scavengers se hizo con Makko AI, un estudio de juegos 2D con IA donde describes lo que quieres y la IA lo construye. Esta página también es una respuesta práctica a cómo hacer un roguelike con IA: un roguelike completo generado por IA, sin equipo de arte.",
+          "p2": "La lógica del juego, la mecánica de deuda y el sistema de cartas se construyeron con Code Studio de Makko. Descripciones en inglés sencillo. Resultado jugable en el navegador. El mismo bucle que acabas de leer se hizo sin escribir una línea de código.",
+          "p3": "Si quieres construir tu propio roguelike con IA, Makko es gratis para empezar. El devlog de Sector Scavengers cubre todo el proceso desde el concepto hasta el juego jugable.",
+          "cta": "Construye tu roguelike gratis",
+          "devlog": "Lee el devlog de Sector Scavengers"
+        },
+        "homeLore": {
+          "tag": "En vivo en el archivo",
+          "kicker": "Lore",
+          "open": "Abrir",
+          "originTitle": "Historia de origen",
+          "originDesc": "Despertar en el libro mayor: despidos, criogenia como finiquito, deuda vendida al salvamento, primeros derelictos.",
+          "beerTitle": "Viernes de cerveza",
+          "beerDesc": "Edificio B, Empleado Número Dos y la azotea que superó a Riesgo Corporativo.",
+          "novelTitle": "Debt Protocol",
+          "novelDesc": "Libro 1 como cómic de desplazamiento en la web — lectura por paneles, guion completo cuando quieras.",
+          "more": "Explorar el archivo de lore completo"
+        },
+        "cta": {
+          "eyebrow": "Ping a la tienda",
+          "title": "Lista de deseos si te gustan las probabilidades saladas",
+          "body": "Steam lee el interés como los droides leen los formularios: con frialdad y a tu favor si los números se mueven. Toca lista de deseos si quieres las notas de build mientras seguimos apilando deuda del hub, riesgo de casco y esperanza contrabandeada en el mismo bucle que acabas de leer."
+        }
+      }
+    }
+  }
+}

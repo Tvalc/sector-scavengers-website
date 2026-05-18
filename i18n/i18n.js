@@ -56,6 +56,60 @@
     });
   }
 
+  var homeIndexCache = null;
+
+  function fetchHomeIndex() {
+    if (homeIndexCache) return Promise.resolve(homeIndexCache);
+    return fetch(BASE + "locales/home-index.json", { cache: "no-cache" })
+      .then(function (r) {
+        if (!r.ok) return null;
+        return r.json();
+      })
+      .then(function (data) {
+        homeIndexCache = data;
+        return data;
+      })
+      .catch(function () {
+        return null;
+      });
+  }
+
+  function deepMerge(target, source) {
+    if (!source || typeof source !== "object") return target;
+    Object.keys(source).forEach(function (key) {
+      var val = source[key];
+      if (val && typeof val === "object" && !Array.isArray(val)) {
+        if (!target[key] || typeof target[key] !== "object") target[key] = {};
+        deepMerge(target[key], val);
+      } else if (typeof val === "string") {
+        target[key] = val;
+      }
+    });
+    return target;
+  }
+
+  function walkPhrasePairs(enObj, locObj, phrases) {
+    if (!enObj || !locObj) return;
+    Object.keys(enObj).forEach(function (k) {
+      var ev = enObj[k];
+      var lv = locObj[k];
+      if (typeof ev === "string" && typeof lv === "string" && ev !== lv) phrases[ev] = lv;
+      else if (ev && typeof ev === "object" && lv && typeof lv === "object") walkPhrasePairs(ev, lv, phrases);
+    });
+  }
+
+  function mergeHomeIndex(dict, lang, home) {
+    if (!home) return dict;
+    if (home.index) deepMerge(dict, { index: home.index });
+    var loc = home.locales && home.locales[lang];
+    if (loc && loc.index) deepMerge(dict, { index: loc.index });
+    if (lang !== "en" && home.index && loc && loc.index) {
+      dict.phrases = dict.phrases || {};
+      walkPhrasePairs(home.index, loc.index, dict.phrases);
+    }
+    return dict;
+  }
+
   function applyDataI18n(root) {
     root.querySelectorAll("[data-i18n]").forEach(function (el) {
       var key = el.getAttribute("data-i18n");
@@ -215,6 +269,11 @@
   function applyLang(lang) {
     state.applying = true;
     return fetchLocale(lang)
+      .then(function (dict) {
+        return fetchHomeIndex().then(function (home) {
+          return mergeHomeIndex(dict, lang, home);
+        });
+      })
       .then(function (dict) {
         state.dict = dict;
         state.lang = lang;

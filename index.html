@@ -106,12 +106,12 @@
           </header>
 
           <div class="hero__comic-shell reveal" data-reveal>
-            <span class="rules-comic__tag hero__comic-tag">Cover · Field feed</span>
+            <span class="rules-comic__tag hero__comic-tag" data-i18n="index.hero.coverTag">Cover · Field feed</span>
             <div class="rules-comic__frame hero__comic-frame" aria-hidden="true"></div>
             <div class="hero__video-stage">
               <div class="hero__video-frame">
                 <div class="hero__video-hud" aria-hidden="true">
-                  <span>FEED</span><span class="hero__video-hud-blink">●</span>
+                  <span data-i18n="index.hero.feed">FEED</span><span class="hero__video-hud-blink">●</span>
                 </div>
                 <figure class="hero__figure">
                   <div class="hero__figure-inner hero__figure-inner--cinema">
@@ -123,25 +123,26 @@
                       preload="none"
                       width="1920"
                       height="1080"
+                      data-i18n-attr="aria-label:index.hero.videoAria"
                       aria-label="Gameplay: website hero, 3-19 trailer, characters, ships showcase."
                       data-hero-videos="media/website-video/website-hero.mp4,media/website-video/3-19-trailer-ss.mp4,media/website-video/characters.mp4,media/website-video/ships-showcase-final.mp4"
                     ></video>
                   </div>
                 </figure>
-                <div class="hero__video-toolbar" data-hero-toolbar role="group" aria-label="Hero video controls">
+                <div class="hero__video-toolbar" data-hero-toolbar role="group" data-i18n-attr="aria-label:index.hero.toolbarAria" aria-label="Hero video controls">
                   <div class="hero__video-toolbar-nav">
-                    <button type="button" class="hero__video-btn" data-hero-prev aria-label="Previous clip">
+                    <button type="button" class="hero__video-btn" data-hero-prev data-i18n-attr="aria-label:index.hero.prevClip" aria-label="Previous clip">
                       <span class="hero__video-btn-glyph" aria-hidden="true">◀</span>
                     </button>
                     <span class="hero__video-counter" aria-live="polite">
                       <span data-hero-index>1</span><span class="hero__video-counter-sep" aria-hidden="true">/</span><span data-hero-total>4</span>
                     </span>
-                    <button type="button" class="hero__video-btn" data-hero-next aria-label="Next clip">
+                    <button type="button" class="hero__video-btn" data-hero-next data-i18n-attr="aria-label:index.hero.nextClip" aria-label="Next clip">
                       <span class="hero__video-btn-glyph" aria-hidden="true">▶</span>
                     </button>
                   </div>
-                  <button type="button" class="hero__video-btn hero__video-btn--mute" data-hero-mute aria-pressed="true" aria-label="Unmute video">
-                    <span class="hero__video-btn-label" data-hero-mute-text>Unmute</span>
+                  <button type="button" class="hero__video-btn hero__video-btn--mute" data-hero-mute aria-pressed="true" data-i18n-attr="aria-label:index.hero.unmuteVideo" aria-label="Unmute video">
+                    <span class="hero__video-btn-label" data-hero-mute-text data-i18n="aria.unmute">Unmute</span>
                   </button>
                 </div>
               </div>
@@ -154,7 +155,7 @@
               href="https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/"
               target="_blank"
               rel="noopener noreferrer"
-            >Wishlist on Steam</a>
+            data-i18n="common.wishlistOnSteam">Wishlist on Steam</a>
           </div>
         </div>
       </div>
@@ -172,7 +173,7 @@
         <div class="rules__strip">
           <p class="rules-comic__narrator rules__strip-narrator" aria-hidden="true">
             <span class="rules-comic__narrator-k">SS-Ω</span>
-            <span class="rules-comic__narrator-t">Serial strip · Signal <span class="hero__amp">&amp;</span> salvage</span>
+            <span class="rules-comic__narrator-t" data-i18n="index.narrator.serialStrip" data-i18n-html>Serial strip · Signal &amp; salvage</span>
           </p>
 
           <div class="strip-story reveal" data-reveal>
@@ -181,7 +182,7 @@
             <div class="rules-comic rules-comic--arc">
               <div class="rules-comic__grid rules-comic__grid--arc">
                 <article class="rules-comic__panel">
-                  <span class="rules-comic__tag">Prologue · The lanyard</span>
+                  <span class="rules-comic__tag" data-i18n="index.prologue.tag1">Prologue · The lanyard</span>
                   <div class="rules-comic__frame" aria-hidden="true"></div>
                   <figure class="rules-comic__figure">
                     <picture>
@@ -199,18 +200,17 @@
                     </picture>
                   </figure>
                   <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t">
-                    <p>Wore the lanyard until AI ate the roadmap. Badge died too.</p>
+                    <p data-i18n="index.prologue.bubble1">Wore the lanyard until AI ate the roadmap. Badge died too.</p>
                   </blockquote>
                   <div class="rules-comic__strip-note">
                     <p>
-                      <span class="rules-comic__kicker">Strip note</span>
-                      The exit packet was almost kind: cryo until abundance, skip the ugly middle, wake into a gentle future. The future never arrived. Your contract did.
+                      <span class="rules-comic__kicker" data-i18n="common.stripNote">Strip note</span><span data-i18n="index.prologue.note1"> The exit packet was almost kind: cryo until abundance, skip the ugly middle, wake into a gentle future. The future never arrived. Your contract did.</span>
                     </p>
                   </div>
                 </article>
 
                 <article class="rules-comic__panel">
-                  <span class="rules-comic__tag">Prologue · Inventory</span>
+                  <span class="rules-comic__tag" data-i18n="index.prologue.tag2">Prologue · Inventory</span>
                   <div class="rules-comic__frame" aria-hidden="true"></div>
                   <figure class="rules-comic__figure rules-comic__figure--hud">
                     <picture>
@@ -228,18 +228,17 @@
                     </picture>
                   </figure>
                   <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t">
-                    <p>Centuries on, you are not an alum. You are inventory.</p>
+                    <p data-i18n="index.prologue.bubble2">Centuries on, you are not an alum. You are inventory.</p>
                   </blockquote>
                   <div class="rules-comic__strip-note">
                     <p>
-                      <span class="rules-comic__kicker">Strip note</span>
-                      Shuffled dock to dock until someone needed sinew in vacuum and your tab already had interest. You woke up as a line item, not an alum.
+                      <span class="rules-comic__kicker" data-i18n="common.stripNote">Strip note</span><span data-i18n="index.prologue.note2"> Shuffled dock to dock until someone needed sinew in vacuum and your tab already had interest. You woke up as a line item, not an alum.</span>
                     </p>
                   </div>
                 </article>
 
                 <article class="rules-comic__panel rules-comic__panel--span rules-comic__panel--arc-wide">
-                  <span class="rules-comic__tag">Prologue · Your future</span>
+                  <span class="rules-comic__tag" data-i18n="index.prologue.tag3">Prologue · Your future</span>
                   <div class="rules-comic__frame" aria-hidden="true"></div>
                   <figure class="rules-comic__figure rules-comic__figure--hud rules-comic__figure--arc-future">
                     <picture>
@@ -257,12 +256,11 @@
                     </picture>
                   </figure>
                   <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t rules-comic__bubble--wide">
-                    <p>They wake you and immediately hand you a space suit, demanding that you start harvesting space salvage to pay off debt</p>
+                    <p data-i18n="index.prologue.bubble3">They wake you and immediately hand you a space suit, demanding that you start harvesting space salvage to pay off debt</p>
                   </blockquote>
                   <div class="rules-comic__strip-note">
                     <p>
-                      <span class="rules-comic__kicker">Strip note</span>
-                      Your job is derelicts in the black while company droids hang in the feed, snarky as a helpdesk and precise as tax law. They only love what you declare. Everything else is yours to keep.
+                      <span class="rules-comic__kicker" data-i18n="common.stripNote">Strip note</span><span data-i18n="index.prologue.note3"> Your job is derelicts in the black while company droids hang in the feed, snarky as a helpdesk and precise as tax law. They only love what you declare. Everything else is yours to keep.</span>
                     </p>
                   </div>
                 </article>
@@ -275,9 +273,10 @@
                 href="https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-i18n="common.wishlistOnSteam"
               >Wishlist on Steam</a>
-              <a class="btn btn--ghost" href="crew/index.html">Crew</a>
-              <a class="btn btn--ghost" href="#lore">Lore</a>
+              <a class="btn btn--ghost" href="crew/index.html" data-i18n="nav.crew">Crew</a>
+              <a class="btn btn--ghost" href="#lore" data-i18n="nav.lore">Lore</a>
             </div>
           </div>
 
@@ -292,12 +291,12 @@
             <div class="rules-comic">
               <p class="rules-comic__narrator" aria-hidden="true">
                 <span class="rules-comic__narrator-k">SS-Ω</span>
-                <span class="rules-comic__narrator-t">Field strip · Laws of the loop</span>
+                <span class="rules-comic__narrator-t" data-i18n="index.narrator.fieldStrip">Field strip · Laws of the loop</span>
               </p>
 
               <div class="rules-comic__grid">
                 <article class="rules-comic__panel rules-comic__panel--span rules-comic__panel--play-duo">
-                  <span class="rules-comic__tag">Beat 01–02 · Hand &amp; energy</span>
+                  <span class="rules-comic__tag" data-i18n="index.beats.tag0102">Beat 01–02 · Hand &amp; energy</span>
                   <div class="rules-comic__frame" aria-hidden="true"></div>
                   <div class="rules-comic__play-duo-stage">
                     <figure class="rules-comic__figure rules-comic__figure--play-duo">
@@ -318,24 +317,22 @@
                     <blockquote
                       class="rules-comic__bubble rules-comic__bubble--tail-b rules-comic__bubble--play-systems"
                     >
-                      <p>Tank reads empty, turn ends. No stalling, no off-meter miracles.</p>
+                      <p data-i18n="index.beats.bubbleEnergy">Tank reads empty, turn ends. No stalling, no off-meter miracles.</p>
                     </blockquote>
                   </div>
                   <div class="rules-comic__play-duo-cols">
                     <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t rules-comic__bubble--play-hand">
-                      <p>Three cards in the hand. That is the whole deal.</p>
+                      <p data-i18n="index.beats.bubbleHand">Three cards in the hand. That is the whole deal.</p>
                     </blockquote>
                     <div class="rules-comic__play-duo-mechanics">
                       <div class="rules-comic__strip-note">
                         <p>
-                          <span class="rules-comic__kicker">Beat 01 · Mechanic</span>
-                          You always hold three cards. Not two, not four. Three. Every choice is which one of those three you spend right now.
+                          <span class="rules-comic__kicker" data-i18n="index.beats.mech01k">Beat 01 · Mechanic</span><span data-i18n="index.beats.mech01"> You always hold three cards. Not two, not four. Three. Every choice is which one of those three you spend right now.</span>
                         </p>
                       </div>
                       <div class="rules-comic__strip-note">
                         <p>
-                          <span class="rules-comic__kicker">Beat 02 · Mechanic</span>
-                          Energy is what you spend to play cards from that hand. Tank empty means turn over. No stalling, no miracles off-meter.
+                          <span class="rules-comic__kicker" data-i18n="index.beats.mech02k">Beat 02 · Mechanic</span><span data-i18n="index.beats.mech02"> Energy is what you spend to play cards from that hand. Tank empty means turn over. No stalling, no miracles off-meter.</span>
                         </p>
                       </div>
                     </div>
@@ -343,7 +340,7 @@
                 </article>
 
                 <article class="rules-comic__panel rules-comic__panel--span rules-comic__panel--wide">
-                  <span class="rules-comic__tag">Beat 03 · Explore derelict ships</span>
+                  <span class="rules-comic__tag" data-i18n="index.beats.tag03">Beat 03 · Explore derelict ships</span>
                   <div class="rules-comic__frame" aria-hidden="true"></div>
                   <figure class="rules-comic__figure">
                     <picture>
@@ -361,18 +358,17 @@
                     </picture>
                   </figure>
                   <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t rules-comic__bubble--wide">
-                    <p>The wreck does not show its depth for free. Spend real actions until the map stops lying.</p>
+                    <p data-i18n="index.beats.bubble03">The wreck does not show its depth for free. Spend real actions until the map stops lying.</p>
                   </blockquote>
                   <div class="rules-comic__strip-note">
                     <p>
-                      <span class="rules-comic__kicker">Mechanic</span>
-                      Each wreck rolls its room count in secret. You spend real actions to reveal rooms, and if you finish the last room without extracting, the run ends there. No overtime.
+                      <span class="rules-comic__kicker" data-i18n="common.mechanic">Mechanic</span><span data-i18n="index.beats.mech03"> Each wreck rolls its room count in secret. You spend real actions to reveal rooms, and if you finish the last room without extracting, the run ends there. No overtime.</span>
                     </p>
                   </div>
                 </article>
 
                 <article class="rules-comic__panel">
-                  <span class="rules-comic__tag">Beat 04 · Hull</span>
+                  <span class="rules-comic__tag" data-i18n="index.beats.tag04">Beat 04 · Hull</span>
                   <div class="rules-comic__frame" aria-hidden="true"></div>
                   <figure class="rules-comic__figure rules-comic__figure--hud">
                     <img
@@ -386,18 +382,17 @@
                     />
                   </figure>
                   <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t">
-                    <p>Cards reveal rewards and deal damage.</p>
+                    <p data-i18n="index.beats.bubble04">Cards reveal rewards and deal damage.</p>
                   </blockquote>
                   <div class="rules-comic__strip-note">
                     <p>
-                      <span class="rules-comic__kicker">Mechanic</span>
-                      Cards reveal rewards and apply pressure to the hull you stand in. Stack enough hits and the run ends in the black.
+                      <span class="rules-comic__kicker" data-i18n="common.mechanic">Mechanic</span><span data-i18n="index.beats.mech04"> Cards reveal rewards and apply pressure to the hull you stand in. Stack enough hits and the run ends in the black.</span>
                     </p>
                   </div>
                 </article>
 
                 <article class="rules-comic__panel">
-                  <span class="rules-comic__tag">Beat 05 · Debt</span>
+                  <span class="rules-comic__tag" data-i18n="index.beats.tag05">Beat 05 · Debt</span>
                   <div class="rules-comic__frame" aria-hidden="true"></div>
                   <figure class="rules-comic__figure rules-comic__figure--hud">
                     <img
@@ -411,18 +406,17 @@
                     />
                   </figure>
                   <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t">
-                    <p>You owe the company.</p>
+                    <p data-i18n="index.beats.bubble05">You owe the company.</p>
                   </blockquote>
                   <div class="rules-comic__strip-note">
                     <p>
-                      <span class="rules-comic__kicker">Mechanic</span>
-                      The company bills after every third ship you raid. The campaign win is still blunt: zero the debt. Declared credits go to the boss to pay it down. Anything else stays your problem.
+                      <span class="rules-comic__kicker" data-i18n="common.mechanic">Mechanic</span><span data-i18n="index.beats.mech05"> The company bills after every third ship you raid. The campaign win is still blunt: zero the debt. Declared credits go to the boss to pay it down. Anything else stays your problem.</span>
                     </p>
                   </div>
                 </article>
 
                 <article class="rules-comic__panel rules-comic__panel--span rules-comic__panel--beat-smuggle">
-                  <span class="rules-comic__tag">Beat 06 · Smuggled ledger</span>
+                  <span class="rules-comic__tag" data-i18n="index.beats.tag06">Beat 06 · Smuggled ledger</span>
                   <div class="rules-comic__frame" aria-hidden="true"></div>
                   <figure class="rules-comic__figure rules-comic__figure--hud">
                     <picture>
@@ -440,18 +434,17 @@
                     </picture>
                   </figure>
                   <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t rules-comic__bubble--wide">
-                    <p>Whatever you do not declare stays yours: cryo keys, tools, hull patches, hub concrete. Company never sees it.</p>
+                    <p data-i18n="index.beats.bubble06">Whatever you do not declare stays yours: cryo keys, tools, hull patches, hub concrete. Company never sees it.</p>
                   </blockquote>
                   <div class="rules-comic__strip-note">
                     <p>
-                      <span class="rules-comic__kicker">Mechanic</span>
-                      Smuggled credits never touch the boss ledger. Off-book money builds the hub itself: new crew, new tools, new patches before the next breach finds you.
+                      <span class="rules-comic__kicker" data-i18n="common.mechanic">Mechanic</span><span data-i18n="index.beats.mech06"> Smuggled credits never touch the boss ledger. Off-book money builds the hub itself: new crew, new tools, new patches before the next breach finds you.</span>
                     </p>
                   </div>
                 </article>
 
                 <article class="rules-comic__panel rules-comic__panel--span">
-                  <span class="rules-comic__tag">Beat 07 · Void XP</span>
+                  <span class="rules-comic__tag" data-i18n="index.beats.tag07">Beat 07 · Void XP</span>
                   <div class="rules-comic__frame" aria-hidden="true"></div>
                   <figure class="rules-comic__figure rules-comic__figure--void">
                     <img
@@ -465,12 +458,11 @@
                     />
                   </figure>
                   <blockquote class="rules-comic__bubble rules-comic__bubble--tail-t rules-comic__bubble--wide">
-                    <p>Die once, feed the void once. It remembers. Next thaw, you get new angles and new cards.</p>
+                    <p data-i18n="index.beats.bubble07">Die once, feed the void once. It remembers. Next thaw, you get new angles and new cards.</p>
                   </blockquote>
                   <div class="rules-comic__strip-note">
                     <p>
-                      <span class="rules-comic__kicker">Mechanic</span>
-                      Any death feeds the void: you earn void experience that unlocks new cards for the next attempt. Lose, learn, redraw, repeat.
+                      <span class="rules-comic__kicker" data-i18n="common.mechanic">Mechanic</span><span data-i18n="index.beats.mech07"> Any death feeds the void: you earn void experience that unlocks new cards for the next attempt. Lose, learn, redraw, repeat.</span>
                     </p>
                   </div>
                 </article>
@@ -489,17 +481,17 @@
           <span>VID</span>
         </div>
         <div class="video-archive__content">
-          <p class="section-eyebrow">Mission feed</p>
-          <h2 id="videos-title" class="section-title">Video Dispatches</h2>
-          <p class="video-archive__lead">
+          <p class="section-eyebrow" data-i18n="index.videos.eyebrow">Mission feed</p>
+          <h2 id="videos-title" class="section-title" data-i18n="index.videos.title">Video Dispatches</h2>
+          <p class="video-archive__lead" data-i18n="index.videos.lead" data-i18n-html>
             Field logs from <a href="https://www.youtube.com/@PlayMyGamesNow" target="_blank" rel="noopener noreferrer">PlayMyGamesNow</a>:
             long-form dev updates and short tactical drops, framed like the rest of the archive.
           </p>
 
           <div class="video-archive__group">
             <div class="video-archive__group-head">
-              <h3 class="video-archive__group-title">Latest Uploads</h3>
-              <a class="video-archive__channel-link" href="https://www.youtube.com/@PlayMyGamesNow/videos" target="_blank" rel="noopener noreferrer">Open full channel</a>
+              <h3 class="video-archive__group-title" data-i18n="index.videos.latest">Latest Uploads</h3>
+              <a class="video-archive__channel-link" href="https://www.youtube.com/@PlayMyGamesNow/videos" target="_blank" rel="noopener noreferrer" data-i18n="index.videos.openChannel">Open full channel</a>
             </div>
 
             <div class="rules-comic">
@@ -577,8 +569,8 @@
 
           <div class="video-archive__group">
             <div class="video-archive__group-head">
-              <h3 class="video-archive__group-title">Short Drops</h3>
-              <a class="video-archive__channel-link" href="https://www.youtube.com/@PlayMyGamesNow/shorts" target="_blank" rel="noopener noreferrer">See all Shorts</a>
+              <h3 class="video-archive__group-title" data-i18n="index.videos.shortDrops">Short Drops</h3>
+              <a class="video-archive__channel-link" href="https://www.youtube.com/@PlayMyGamesNow/shorts" target="_blank" rel="noopener noreferrer" data-i18n="index.videos.seeShorts">See all Shorts</a>
             </div>
 
             <div class="rules-comic">
@@ -596,7 +588,7 @@
                     ></iframe>
                   </figure>
                   <div class="rules-comic__strip-note">
-                    <p><span class="rules-comic__kicker">Clip note</span>Will you help Max survive?</p>
+                    <p><span class="rules-comic__kicker" data-i18n="index.videos.clipNote">Clip note</span>Will you help Max survive?</p>
                   </div>
                 </article>
 
@@ -613,7 +605,7 @@
                     ></iframe>
                   </figure>
                   <div class="rules-comic__strip-note">
-                    <p><span class="rules-comic__kicker">Clip note</span>Roguelike wishlists going wild!</p>
+                    <p><span class="rules-comic__kicker" data-i18n="index.videos.clipNote">Clip note</span>Roguelike wishlists going wild!</p>
                   </div>
                 </article>
 
@@ -630,7 +622,7 @@
                     ></iframe>
                   </figure>
                   <div class="rules-comic__strip-note">
-                    <p><span class="rules-comic__kicker">Clip note</span>What should Max yell on the way to extraction?</p>
+                    <p><span class="rules-comic__kicker" data-i18n="index.videos.clipNote">Clip note</span>What should Max yell on the way to extraction?</p>
                   </div>
                 </article>
 
@@ -647,7 +639,7 @@
                     ></iframe>
                   </figure>
                   <div class="rules-comic__strip-note">
-                    <p><span class="rules-comic__kicker">Clip note</span>New UI who dis?</p>
+                    <p><span class="rules-comic__kicker" data-i18n="index.videos.clipNote">Clip note</span>New UI who dis?</p>
                   </div>
                 </article>
 
@@ -664,7 +656,7 @@
                     ></iframe>
                   </figure>
                   <div class="rules-comic__strip-note">
-                    <p><span class="rules-comic__kicker">Clip note</span>Help me name my cards!</p>
+                    <p><span class="rules-comic__kicker" data-i18n="index.videos.clipNote">Clip note</span>Help me name my cards!</p>
                   </div>
                 </article>
 
@@ -681,7 +673,7 @@
                     ></iframe>
                   </figure>
                   <div class="rules-comic__strip-note">
-                    <p><span class="rules-comic__kicker">Clip note</span>Deckbuilding Roguelike in Space: 90 seconds of gameplay</p>
+                    <p><span class="rules-comic__kicker" data-i18n="index.videos.clipNote">Clip note</span>Deckbuilding Roguelike in Space: 90 seconds of gameplay</p>
                   </div>
                 </article>
               </div>
@@ -701,16 +693,16 @@
         <div class="uplink__content">
           <div class="uplink__panel">
             <div class="uplink__flare" aria-hidden="true"></div>
-            <p class="section-eyebrow section-eyebrow--center">How it was made</p>
-            <h2 id="makko-title" class="section-title section-title--center">Built With Makko AI</h2>
-            <h2 class="section-title section-title--center" style="font-size:1.05rem; opacity:0.78; margin-top:0.25rem; letter-spacing:0.1em; text-transform:uppercase; color:#3b8edf;">How to make a roguelike with AI</h2>
-            <p class="uplink__text">
-              Sector Scavengers was <a href="https://www.makko.ai" target="_blank" rel="noopener noreferrer" style="color:#3b8edf;">built with Makko AI</a>, an AI 2D game studio where you describe what you want and the AI builds it. This page is also a working answer to how to make a roguelike with AI: a complete AI roguelike game, shipped without an art team. The entire art pipeline (every crew member, derelict ship environment, and UI element) was generated through Makko's Art Studio and Collections system. Collections sets the visual foundation once and every asset generated after that inherits it. No art background needed. No style re-prompting between sessions.
+            <p class="section-eyebrow section-eyebrow--center" data-i18n="index.makko.eyebrow">How it was made</p>
+            <h2 id="makko-title" class="section-title section-title--center" data-i18n="index.makko.title">Built With Makko AI</h2>
+            <h2 class="section-title section-title--center" style="font-size:1.05rem; opacity:0.78; margin-top:0.25rem; letter-spacing:0.1em; text-transform:uppercase; color:#3b8edf;" data-i18n="index.makko.subtitle">How to make a roguelike with AI</h2>
+            <p class="uplink__text" data-i18n="index.makko.p1">
+              Sector Scavengers was built with Makko AI, an AI 2D game studio where you describe what you want and the AI builds it. This page is also a working answer to how to make a roguelike with AI: a complete AI roguelike game, shipped without an art team. The entire art pipeline (every crew member, derelict ship environment, and UI element) was generated through Makko's Art Studio and Collections system. Collections sets the visual foundation once and every asset generated after that inherits it. No art background needed. No style re-prompting between sessions.
             </p>
-            <p class="uplink__text">
+            <p class="uplink__text" data-i18n="index.makko.p2">
               The game logic, debt mechanics, and card system were built using Makko's Code Studio. Plain English descriptions. Playable result in a browser. The same loop you just read about was built without writing a line of code, real no-code game development that lets you build a roguelike without coding any of the systems by hand.
             </p>
-            <p class="uplink__text">
+            <p class="uplink__text" data-i18n="index.makko.p3">
               If you want to build your own roguelike with AI, Makko is free to start. It works as a full roguelike game maker: art, characters, environments, and game logic in one tool. The devlog for Sector Scavengers covers the full build process from concept to playable game.
             </p>
             <div class="uplink__actions">
@@ -720,10 +712,10 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 style="background:#3b8edf; background-image:none; color:#ffffff; border-color:#3b8edf; box-shadow:0 0 28px rgba(59,142,223,0.32);"
-              >Build your own roguelike free</a>
+              data-i18n="index.makko.cta">Build your own roguelike free</a>
             </div>
             <p class="uplink__text" style="text-align:center; margin-top:1rem;">
-              <a href="https://www.makko.ai/blog/no-code-roguelike-how-i-shipped-a-full-ai-generated-game-in-10-days-devlog-1/" target="_blank" rel="noopener noreferrer" style="color:#3b8edf;">Read the Sector Scavengers devlog</a>
+              <a href="https://www.makko.ai/blog/no-code-roguelike-how-i-shipped-a-full-ai-generated-game-in-10-days-devlog-1/" target="_blank" rel="noopener noreferrer" style="color:#3b8edf;" data-i18n="index.makko.devlog">Read the Sector Scavengers devlog</a>
             </p>
           </div>
         </div>
@@ -740,34 +732,34 @@
         <div class="home-lore__inner">
           <h2 id="lore-module-title" class="sr-only">Lore</h2>
           <a class="hero__lore-strip" href="lore/origin-story.html">
-            <span class="hero__lore-strip-tag">Live in archive</span>
+            <span class="hero__lore-strip-tag" data-i18n="index.homeLore.tag">Live in archive</span>
             <span class="hero__lore-strip-main">
-              <span class="hero__lore-strip-kicker">Lore</span>
-              <span class="hero__lore-strip-title">Origin story</span>
-              <span class="hero__lore-strip-desc">Wake into ledger: layoffs, cryo as severance, debt sold to salvage, first derelicts.</span>
+              <span class="hero__lore-strip-kicker" data-i18n="index.homeLore.kicker">Lore</span>
+              <span class="hero__lore-strip-title" data-i18n="index.homeLore.originTitle">Origin story</span>
+              <span class="hero__lore-strip-desc" data-i18n="index.homeLore.originDesc">Wake into ledger: layoffs, cryo as severance, debt sold to salvage, first derelicts.</span>
             </span>
-            <span class="hero__lore-strip-arrow" aria-hidden="true">Open</span>
+            <span class="hero__lore-strip-arrow" aria-hidden="true" data-i18n="index.homeLore.open">Open</span>
           </a>
           <a class="hero__lore-strip" href="lore/beer-friday.html">
-            <span class="hero__lore-strip-tag">Live in archive</span>
+            <span class="hero__lore-strip-tag" data-i18n="index.homeLore.tag">Live in archive</span>
             <span class="hero__lore-strip-main">
-              <span class="hero__lore-strip-kicker">Lore</span>
-              <span class="hero__lore-strip-title">Beer Friday</span>
-              <span class="hero__lore-strip-desc">Building B, Employee Number Two, and the rooftop that outranked Corporate Risk.</span>
+              <span class="hero__lore-strip-kicker" data-i18n="index.homeLore.kicker">Lore</span>
+              <span class="hero__lore-strip-title" data-i18n="index.homeLore.beerTitle">Beer Friday</span>
+              <span class="hero__lore-strip-desc" data-i18n="index.homeLore.beerDesc">Building B, Employee Number Two, and the rooftop that outranked Corporate Risk.</span>
             </span>
-            <span class="hero__lore-strip-arrow" aria-hidden="true">Open</span>
+            <span class="hero__lore-strip-arrow" aria-hidden="true" data-i18n="index.homeLore.open">Open</span>
           </a>
           <a class="hero__lore-strip" href="lore/novel/index.html">
-            <span class="hero__lore-strip-tag">Live in archive</span>
+            <span class="hero__lore-strip-tag" data-i18n="index.homeLore.tag">Live in archive</span>
             <span class="hero__lore-strip-main">
-              <span class="hero__lore-strip-kicker">Lore</span>
-              <span class="hero__lore-strip-title">Debt Protocol</span>
-              <span class="hero__lore-strip-desc">Book 1 as a scroll comic on the web—panel read, full script when you want it.</span>
+              <span class="hero__lore-strip-kicker" data-i18n="index.homeLore.kicker">Lore</span>
+              <span class="hero__lore-strip-title" data-i18n="index.homeLore.novelTitle">Debt Protocol</span>
+              <span class="hero__lore-strip-desc" data-i18n="index.homeLore.novelDesc">Book 1 as a scroll comic on the web—panel read, full script when you want it.</span>
             </span>
-            <span class="hero__lore-strip-arrow" aria-hidden="true">Open</span>
+            <span class="hero__lore-strip-arrow" aria-hidden="true" data-i18n="index.homeLore.open">Open</span>
           </a>
           <p class="home-lore__more">
-            <a class="home-lore__more-link" href="lore/index.html">Browse the full lore archive</a>
+            <a class="home-lore__more-link" href="lore/index.html" data-i18n="index.homeLore.more">Browse the full lore archive</a>
           </p>
         </div>
       </div>
@@ -783,11 +775,10 @@
         <div class="uplink__content">
           <div class="uplink__panel">
             <div class="uplink__flare" aria-hidden="true"></div>
-            <p class="section-eyebrow section-eyebrow--center">Ping the storefront</p>
-            <h2 id="cta-title" class="section-title section-title--center">Wishlist if you like your odds salty</h2>
-            <p class="uplink__text">
-              Steam reads interest the way droids read forms: coldly and in your favor if the numbers move. Tap wishlist if you want the build notes
-              while we keep stacking hub debt, hull risk, and smuggled hope into the same loop you just read about, <a href="https://www.makko.ai" target="_blank" rel="noopener noreferrer" style="color:#3b8edf;">built with Makko AI</a>.
+            <p class="section-eyebrow section-eyebrow--center" data-i18n="index.cta.eyebrow">Ping the storefront</p>
+            <h2 id="cta-title" class="section-title section-title--center" data-i18n="index.cta.title">Wishlist if you like your odds salty</h2>
+            <p class="uplink__text" data-i18n="index.cta.body">
+              Steam reads interest the way droids read forms: coldly and in your favor if the numbers move. Tap wishlist if you want the build notes while we keep stacking hub debt, hull risk, and smuggled hope into the same loop you just read about, built with Makko AI.
             </p>
             <div class="uplink__actions">
               <a
@@ -795,6 +786,7 @@
                 href="https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-i18n="common.wishlistOnSteam"
               >Wishlist on Steam</a>
             </div>
           </div>
