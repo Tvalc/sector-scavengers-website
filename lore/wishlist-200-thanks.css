@@ -4,7 +4,7 @@ body.birthday-page--wishlist-200 {
   --wishlist-panel-h: min(72vh, 760px);
   /* Static hero anchor (desktop) — tracks fixed race background, no motion */
   --wishlist-block-left: calc(38% + 175px);
-  --wishlist-block-top: calc(50vh - 80px);
+  --wishlist-block-top: calc(50vh + 20px);
   --wishlist-hud-right: calc(clamp(1rem, 2vw, 1.5rem) + 50px);
   --wishlist-anim-w: min(390px, 39vw);
   --wishlist-anim-h: min(195px, 27vh);
