@@ -4,7 +4,6 @@ body.birthday-page--wishlist-200 {
   --wishlist-panel-h: min(38vh, 280px);
   --wishlist-anim-offset-x: 350px;
   --wishlist-anim-offset-y: 450px;
-  --wishlist-cta-stack-offset-y: 125px;
   --birthday-hud-cyan: rgba(0, 255, 220, 0.92);
   --birthday-hud-border: rgba(0, 240, 255, 0.35);
   min-height: 100vh;
@@ -50,23 +49,44 @@ body.birthday-page--wishlist-200 .rules__strip {
 }
 
 body.birthday-page--wishlist-200 .strip-page__masthead.birthday-masthead {
-  margin-bottom: 0.35rem;
+  margin: 0 clamp(0.75rem, 2vw, 1.25rem) 0.35rem;
+  padding: 0.65rem 0.85rem 0.75rem;
+  width: fit-content;
+  max-width: calc(100% - 2.5rem);
+  background: rgba(4, 14, 32, 0.55);
+  border: 1px solid var(--birthday-hud-border);
+  border-radius: 10px;
+  box-shadow:
+    0 0 24px rgba(0, 180, 255, 0.1),
+    inset 0 1px 0 rgba(0, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 body.birthday-page--wishlist-200 .strip-page__tags {
   margin-bottom: 0.3rem;
 }
 
+body.birthday-page--wishlist-200 .strip-page__tag {
+  background: rgba(2, 8, 22, 0.45);
+}
+
 body.birthday-page--wishlist-200 .strip-page__subject {
   margin-bottom: 0.2rem;
   font-size: 0.55rem;
+  color: var(--birthday-hud-cyan);
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.9),
+    0 0 10px rgba(0, 0, 0, 0.65);
 }
 
 body.birthday-page--wishlist-200 .birthday-masthead .rules__title {
   font-size: clamp(0.85rem, 1.75vw, 1.2rem);
   line-height: 1.1;
   margin-bottom: 0;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.9),
+    0 0 12px rgba(0, 0, 0, 0.65);
 }
 
 @media (min-width: 720px) {
@@ -75,8 +95,12 @@ body.birthday-page--wishlist-200 .birthday-masthead .rules__title {
   }
 }
 
-body.birthday-page--wishlist-200 .strip-page__subject {
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
+.wishlist-200-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 1 auto;
+  margin: var(--wishlist-anim-offset-y) 0 0 var(--wishlist-anim-offset-x);
 }
 
 .wishlist-200-cta-stack {
@@ -84,9 +108,10 @@ body.birthday-page--wishlist-200 .strip-page__subject {
   flex-direction: column;
   align-items: center;
   width: fit-content;
-  margin-top: var(--wishlist-cta-stack-offset-y);
-  margin-left: 50px;
+  margin-top: 10px;
+  margin-left: 0;
   margin-bottom: 2rem;
+  gap: 10px;
 }
 
 body.birthday-page--wishlist-200 .wishlist-200-cta {
@@ -105,7 +130,7 @@ body.birthday-page--wishlist-200 .wishlist-200-cta .btn {
 
 .wishlist-200-framed {
   display: block;
-  margin: 1rem 0 0;
+  margin: 0;
   max-width: min(720px, calc(100vw - 3rem));
   padding: 0;
   border: 2px solid var(--birthday-hud-border);
@@ -139,15 +164,18 @@ body.birthday-page--wishlist-200 .wishlist-200-cta .btn {
 
 .wishlist-200-row {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: 0;
+  align-items: flex-start;
+  justify-content: center;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  padding: 0 clamp(1rem, 2vw, 1.5rem);
+  max-width: 100%;
+  box-sizing: border-box;
   min-height: var(--wishlist-panel-h);
   width: 100%;
 }
 
 .wishlist-200-visual {
-  flex: 0 1 58%;
+  flex: 0 0 auto;
   min-width: 0;
   background: transparent !important;
   border: none;
@@ -156,7 +184,7 @@ body.birthday-page--wishlist-200 .wishlist-200-cta .btn {
   align-items: flex-end;
   justify-content: center;
   padding: 0;
-  margin: var(--wishlist-anim-offset-y) 0 0 var(--wishlist-anim-offset-x);
+  margin: 0;
 }
 
 .wishlist-200-visual__canvas {
@@ -171,9 +199,10 @@ body.birthday-page--wishlist-200 .wishlist-200-cta .btn {
 }
 
 body.birthday-page--wishlist-200 .wishlist-200-hud {
-  flex: 0 0 min(380px, 34vw);
+  flex: 0 0 min(320px, 28vw);
+  max-width: min(340px, calc(50vw - 2rem));
   align-self: center;
-  margin: 0.35rem clamp(0.75rem, 2vw, 1.25rem) 0.35rem 200px;
+  margin: 0.35rem clamp(1rem, 2vw, 1.5rem) 0.35rem clamp(0.5rem, 1.5vw, 1rem);
   padding: 0.75rem 1rem;
   min-height: auto;
   height: auto;
@@ -219,8 +248,8 @@ body.birthday-page--wishlist-200 .birthday-hud__names {
 
 @media (max-width: 1100px) {
   body.birthday-page--wishlist-200 .wishlist-200-hud {
-    margin-left: clamp(1.5rem, 8vw, 200px);
-    flex-basis: min(360px, 40vw);
+    margin-left: clamp(0.5rem, 1.5vw, 1rem);
+    flex-basis: min(300px, 32vw);
   }
 }
 
@@ -239,26 +268,28 @@ body.birthday-page--wishlist-200 .birthday-hud__names {
     align-items: stretch;
   }
 
+  .wishlist-200-center {
+    margin: 30px auto 0;
+    width: 100%;
+  }
+
   .wishlist-200-visual {
     flex: 0 0 auto;
     width: 100%;
-    margin-left: 0;
+    margin: 0;
   }
 
   body.birthday-page--wishlist-200 .wishlist-200-hud {
     flex: 1 1 auto;
+    max-width: none;
     width: auto;
     margin-left: clamp(1rem, 2vw, 1.5rem);
     margin-right: clamp(1rem, 2vw, 1.5rem);
   }
 
-  .wishlist-200-visual {
-    margin: 30px 0 0 0;
-  }
-
   .wishlist-200-cta-stack {
-    margin-top: 2rem;
-    margin-left: 1rem;
+    margin-top: 10px;
+    margin-left: 0;
     transform: none;
   }
 
