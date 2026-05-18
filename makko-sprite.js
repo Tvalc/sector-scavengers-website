@@ -172,6 +172,11 @@
 
   function bootWhenVisible(canvas) {
     if (canvas.getAttribute("data-makko-booted") === "1") return;
+    if (canvas.getAttribute("data-makko-boot") === "immediate") {
+      canvas.setAttribute("data-makko-booted", "1");
+      boot(canvas);
+      return;
+    }
     if (!("IntersectionObserver" in window)) {
       canvas.setAttribute("data-makko-booted", "1");
       boot(canvas);

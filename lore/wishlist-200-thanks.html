@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="wishlist-200-thanks.css?v=20260516b">
+  <link rel="stylesheet" href="wishlist-200-thanks.css?v=20260516c">
 </head>
 <body class="birthday-page birthday-page--wishlist-200 beer-page novel-chapter-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -56,40 +56,42 @@
             <h1 id="wishlist-thanks-title" class="rules__title">Thanks for helping us reach 200 wishlists!</h1>
           </header>
 
-          <div class="wishlist-200-bleed reveal" data-reveal>
-            <div class="wishlist-200-row">
-              <div class="wishlist-200-center">
-                <div class="wishlist-200-visual" aria-label="BirthdayBot celebrating two hundred Steam wishlists">
-                  <canvas
-                    class="wishlist-200-visual__canvas makko-sprite-canvas"
-                    width="1005"
-                    height="566"
-                    role="img"
-                    alt="BirthdayBot celebrating two hundred Steam wishlists"
-                    data-makko-json="../media/sprites/birthdaybot/birthdaybot_front200wishlists_default.json"
-                    data-makko-image="../media/sprites/birthdaybot/birthdaybot_front200wishlists_default.png"
-                    data-makko-frame-tag="front200wishlists"
-                    data-makko-fps="20"
-                  ></canvas>
-                </div>
-                <div class="wishlist-200-cta-stack">
-                  <div class="birthday-cta-wrap wishlist-200-cta">
-                    <a
-                      class="btn btn--primary"
-                      href="https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >Wishlist on Steam and join the next playtest wave</a>
-                  </div>
-                  <figure class="wishlist-200-framed">
-                    <img
-                      src="../media/wishlist/200-wishlists.png"
-                      alt="200 wishlists milestone"
-                      loading="lazy"
-                    />
-                  </figure>
-                </div>
+          <div class="wishlist-200-center" aria-label="Celebration and wishlist call to action">
+            <div class="wishlist-200-visual" aria-label="BirthdayBot celebrating two hundred Steam wishlists">
+              <canvas
+                class="wishlist-200-visual__canvas makko-sprite-canvas"
+                width="1005"
+                height="566"
+                role="img"
+                alt="BirthdayBot celebrating two hundred Steam wishlists"
+                data-makko-json="../media/sprites/birthdaybot/birthdaybot_front200wishlists_default.json"
+                data-makko-image="../media/sprites/birthdaybot/birthdaybot_front200wishlists_default.png"
+                data-makko-frame-tag="front200wishlists"
+                data-makko-fps="20"
+                data-makko-boot="immediate"
+              ></canvas>
+            </div>
+            <div class="wishlist-200-cta-stack">
+              <div class="birthday-cta-wrap wishlist-200-cta">
+                <a
+                  class="btn btn--primary"
+                  href="https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Wishlist on Steam and join the next playtest wave</a>
               </div>
+              <figure class="wishlist-200-framed">
+                <img
+                  src="../media/wishlist/200-wishlists.png"
+                  alt="200 wishlists milestone"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+          </div>
+
+          <div class="wishlist-200-bleed">
+            <div class="wishlist-200-row">
               <aside class="birthday-hud birthday-hud--community wishlist-200-hud" aria-label="Thank you message">
                 <p>We hit <strong>200 Steam wishlists</strong> on Sector Scavengers — and we could not have done it without everyone following along, sharing the signal, and jumping into playtests.</p>
                 <p>Thank you to our community and playtest crew:</p>

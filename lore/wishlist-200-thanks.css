@@ -98,17 +98,27 @@ body.birthday-page--wishlist-200 .birthday-masthead .rules__title {
   }
 }
 
+/* No scroll-reveal on hero: .reveal uses opacity + transform and breaks position:fixed */
+body.birthday-page--wishlist-200 .wishlist-200-center,
+body.birthday-page--wishlist-200 .wishlist-200-center .wishlist-200-visual,
+body.birthday-page--wishlist-200 .wishlist-200-center .wishlist-200-cta-stack {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
 @media (min-width: 901px) {
   .wishlist-200-center {
     position: fixed;
     left: calc(var(--wishlist-block-left) + var(--wishlist-block-nudge-x));
     top: calc(var(--wishlist-block-top) + var(--wishlist-block-nudge-y));
-    transform: translateX(-50%);
+    transform: translateX(-50%) !important;
     z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0;
+    pointer-events: auto;
   }
 }
 
@@ -293,9 +303,12 @@ body.birthday-page--wishlist-200 .birthday-hud__names {
     position: relative;
     left: auto;
     top: auto;
-    transform: none;
+    transform: none !important;
     width: 100%;
     margin: 1.5rem auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .wishlist-200-visual {
