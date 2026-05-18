@@ -3,8 +3,9 @@
 body.birthday-page--wishlist-200 {
   --wishlist-panel-h: min(72vh, 760px);
   /* Static hero anchor (desktop) — tracks fixed race background, no motion */
-  --wishlist-block-left: calc(38% - 200px);
-  --wishlist-block-top: calc(50vh - 430px);
+  --wishlist-block-left: calc(38% - 125px);
+  --wishlist-block-top: calc(50vh - 330px);
+  --wishlist-hud-right: calc(clamp(1rem, 2vw, 1.5rem) + 50px);
   --birthday-hud-cyan: rgba(0, 255, 220, 0.92);
   --birthday-hud-border: rgba(0, 240, 255, 0.35);
   min-height: 100vh;
@@ -121,7 +122,13 @@ body.birthday-page--wishlist-200 .wishlist-200-center .wishlist-200-cta-stack {
     align-items: center;
     margin: 0;
     pointer-events: auto;
-    will-change: auto;
+    animation: none !important;
+  }
+
+  body.birthday-page--wishlist-200 .wishlist-200-hud {
+    position: fixed;
+    top: 4vh;
+    right: var(--wishlist-hud-right);
   }
 }
 
@@ -195,7 +202,8 @@ body.birthday-page--wishlist-200 .wishlist-200-cta .btn {
 
 .wishlist-200-visual {
   flex: 0 0 auto;
-  min-width: 0;
+  width: min(520px, 52vw);
+  min-width: 280px;
   background: transparent !important;
   border: none;
   box-shadow: none;
@@ -206,21 +214,28 @@ body.birthday-page--wishlist-200 .wishlist-200-cta .btn {
   margin: 0;
 }
 
-.wishlist-200-visual__canvas {
+body.birthday-page--wishlist-200 .wishlist-200-visual__canvas {
   display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
+  width: min(520px, 52vw);
+  height: min(260px, 36vh);
+  max-width: min(520px, 52vw);
+  max-height: min(260px, 36vh);
+  min-width: 280px;
+  min-height: 158px;
+  flex-shrink: 0;
   aspect-ratio: 1005 / 566;
-  max-height: min(36vh, 260px);
   background: transparent !important;
   filter: none;
+  opacity: 1 !important;
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
 }
 
 body.birthday-page--wishlist-200 .wishlist-200-hud {
   position: absolute;
   top: 4vh;
-  right: clamp(1rem, 2vw, 1.5rem);
+  right: var(--wishlist-hud-right);
   left: auto;
   flex: none;
   width: min(320px, 28vw);

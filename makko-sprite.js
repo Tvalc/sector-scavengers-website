@@ -59,9 +59,11 @@
     });
   }
 
-  function drawFrame(canvas, ctx, img, frame, anchor, cssW, cssH, dpr) {
-    canvas.width = Math.floor(cssW * dpr);
-    canvas.height = Math.floor(cssH * dpr);
+  function drawFrame(canvas, ctx, img, frame, anchor, cssW, cssH, dpr, scaleOverride) {
+    var bufW = Math.floor(cssW * dpr);
+    var bufH = Math.floor(cssH * dpr);
+    if (canvas.width !== bufW) canvas.width = bufW;
+    if (canvas.height !== bufH) canvas.height = bufH;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, cssW, cssH);
     var sw0 = frame.sw;
@@ -72,7 +74,8 @@
     var sy = Math.max(0, Math.min(frame.sy, Math.max(0, ih - 1)));
     var sw = Math.max(1, Math.min(sw0, iw - sx));
     var sh = Math.max(1, Math.min(sh0, ih - sy));
-    var scale = Math.min(cssW / sw, cssH / sh);
+    var scale =
+      scaleOverride > 0 ? scaleOverride : Math.min(cssW / sw, cssH / sh);
     var dw = sw * scale;
     var dh = sh * scale;
     var footX = cssW / 2;
@@ -111,6 +114,14 @@
       .then(function (data) {
         var frames = buildFrameList(data, preferredTag);
         if (!frames.length) return;
+        var loopEndAttr = canvas.getAttribute("data-makko-loop-end");
+        if (loopEndAttr) {
+          var loopEnd = parseInt(loopEndAttr, 10);
+          if (loopEnd > 0 && loopEnd < frames.length) {
+            frames = frames.slice(0, loopEnd);
+          }
+        }
+        var holdScale = canvas.getAttribute("data-makko-hold-scale") === "true";
         var fpsAttr = canvas.getAttribute("data-makko-fps");
         var fps = fpsAttr ? parseFloat(fpsAttr, 10) : NaN;
         if (fps > 0 && isFinite(fps)) {
@@ -133,9 +144,29 @@
             return { w: w, h: h };
           }
 
+          var dpr = Math.min(window.devicePixelRatio || 1, 2);
+          var layoutW = 0;
+          var layoutH = 0;
+          var fixedScale = 0;
+
           function paint(i) {
             var s = cssSize();
-            drawFrame(canvas, ctx, img, frames[i], anchor, s.w, s.h, Math.min(window.devicePixelRatio || 1, 2));
+            if (holdScale && fixedScale <= 0 && frames.length) {
+              fixedScale = Math.min(s.w / frames[0].sw, s.h / frames[0].sh);
+            }
+            layoutW = s.w;
+            layoutH = s.h;
+            drawFrame(
+              canvas,
+              ctx,
+              img,
+              frames[i],
+              anchor,
+              s.w,
+              s.h,
+              dpr,
+              holdScale ? fixedScale : 0,
+            );
           }
 
           if (reduceMotion) {
@@ -151,8 +182,8 @@
             var dt = (now - last) / 1000;
             last = now;
             acc += dt;
-            if (acc >= frames[i].durationSec) {
-              acc = 0;
+            while (acc >= frames[i].durationSec && frames.length > 0) {
+              acc -= frames[i].durationSec;
               i = (i + 1) % frames.length;
             }
             paint(i);
