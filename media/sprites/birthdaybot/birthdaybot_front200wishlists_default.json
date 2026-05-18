@@ -1,0 +1,1072 @@
+{
+  "meta": {
+    "app": "MAKKO Sprite Studio",
+    "version": "1.0.0",
+    "image": "birthdaybot_front200wishlists_default.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 8192,
+      "h": 4096
+    },
+    "scale": 1,
+    "frameTags": [
+      {
+        "name": "front200wishlists",
+        "from": 0,
+        "to": 48,
+        "direction": "forward"
+      }
+    ],
+    "anchor": {
+      "x": 503,
+      "y": 484,
+      "normalized": {
+        "x": 0.5004975124378109,
+        "y": 0.8551236749116607
+      },
+      "strategy": "bottom-center"
+    },
+    "referenceAlignment": {
+      "referenceBounds": {
+        "width": 1003,
+        "height": 407
+      },
+      "frameBounds": {
+        "width": 1005,
+        "height": 566
+      },
+      "normalized": true
+    }
+  },
+  "frames": {
+    "birthdaybot_front200wishlists_default_000.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_001.png": {
+      "frame": {
+        "x": 1005,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_002.png": {
+      "frame": {
+        "x": 2010,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_003.png": {
+      "frame": {
+        "x": 3015,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_004.png": {
+      "frame": {
+        "x": 4020,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_005.png": {
+      "frame": {
+        "x": 5025,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_006.png": {
+      "frame": {
+        "x": 6030,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_007.png": {
+      "frame": {
+        "x": 0,
+        "y": 566,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_008.png": {
+      "frame": {
+        "x": 1005,
+        "y": 566,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_009.png": {
+      "frame": {
+        "x": 2010,
+        "y": 566,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_010.png": {
+      "frame": {
+        "x": 3015,
+        "y": 566,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_011.png": {
+      "frame": {
+        "x": 4020,
+        "y": 566,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_012.png": {
+      "frame": {
+        "x": 5025,
+        "y": 566,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_013.png": {
+      "frame": {
+        "x": 6030,
+        "y": 566,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_014.png": {
+      "frame": {
+        "x": 0,
+        "y": 1132,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_015.png": {
+      "frame": {
+        "x": 1005,
+        "y": 1132,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_016.png": {
+      "frame": {
+        "x": 2010,
+        "y": 1132,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_017.png": {
+      "frame": {
+        "x": 3015,
+        "y": 1132,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_018.png": {
+      "frame": {
+        "x": 4020,
+        "y": 1132,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_019.png": {
+      "frame": {
+        "x": 5025,
+        "y": 1132,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_020.png": {
+      "frame": {
+        "x": 6030,
+        "y": 1132,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_021.png": {
+      "frame": {
+        "x": 0,
+        "y": 1698,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_022.png": {
+      "frame": {
+        "x": 1005,
+        "y": 1698,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_023.png": {
+      "frame": {
+        "x": 2010,
+        "y": 1698,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_024.png": {
+      "frame": {
+        "x": 3015,
+        "y": 1698,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_025.png": {
+      "frame": {
+        "x": 4020,
+        "y": 1698,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_026.png": {
+      "frame": {
+        "x": 5025,
+        "y": 1698,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_027.png": {
+      "frame": {
+        "x": 6030,
+        "y": 1698,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_028.png": {
+      "frame": {
+        "x": 0,
+        "y": 2264,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_029.png": {
+      "frame": {
+        "x": 1005,
+        "y": 2264,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_030.png": {
+      "frame": {
+        "x": 2010,
+        "y": 2264,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_031.png": {
+      "frame": {
+        "x": 3015,
+        "y": 2264,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_032.png": {
+      "frame": {
+        "x": 4020,
+        "y": 2264,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_033.png": {
+      "frame": {
+        "x": 5025,
+        "y": 2264,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_034.png": {
+      "frame": {
+        "x": 6030,
+        "y": 2264,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_035.png": {
+      "frame": {
+        "x": 0,
+        "y": 2830,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_036.png": {
+      "frame": {
+        "x": 1005,
+        "y": 2830,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_037.png": {
+      "frame": {
+        "x": 2010,
+        "y": 2830,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_038.png": {
+      "frame": {
+        "x": 3015,
+        "y": 2830,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_039.png": {
+      "frame": {
+        "x": 4020,
+        "y": 2830,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_040.png": {
+      "frame": {
+        "x": 5025,
+        "y": 2830,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_041.png": {
+      "frame": {
+        "x": 6030,
+        "y": 2830,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_042.png": {
+      "frame": {
+        "x": 0,
+        "y": 3396,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_043.png": {
+      "frame": {
+        "x": 1005,
+        "y": 3396,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_044.png": {
+      "frame": {
+        "x": 2010,
+        "y": 3396,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_045.png": {
+      "frame": {
+        "x": 3015,
+        "y": 3396,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_046.png": {
+      "frame": {
+        "x": 4020,
+        "y": 3396,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_047.png": {
+      "frame": {
+        "x": 5025,
+        "y": 3396,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    },
+    "birthdaybot_front200wishlists_default_048.png": {
+      "frame": {
+        "x": 6030,
+        "y": 3396,
+        "w": 1005,
+        "h": 566
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1005,
+        "h": 566
+      },
+      "sourceSize": {
+        "w": 1005,
+        "h": 566
+      },
+      "duration": 50
+    }
+  }
+}
