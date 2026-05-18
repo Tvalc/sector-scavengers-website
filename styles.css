@@ -5246,44 +5246,55 @@ a.lore-hub__card--live:hover {
   }
 }
 
-/* -- 200 wishlists thank-you (animation + message side by side) -- */
-.birthday-page--wishlist-200 .birthday-stage--wishlist-200 {
-  background-color: #060a14;
-  background-image: none;
+/* -- 200 wishlists thank-you: animation left, message right (separate panels) -- */
+.birthday-page--wishlist-200 .rules--birthday > .rules__veil,
+.birthday-page--wishlist-200 .rules--birthday > .rules__noise {
+  display: none;
 }
 
-.birthday-page--wishlist-200 .birthday-stage--wishlist-200 .birthday-stage__inner {
-  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
-  align-items: stretch;
-  gap: 0;
-  padding: 0;
-  min-height: min(48vh, 440px);
-}
-
-.birthday-page--wishlist-200 .birthday-stage__anim {
-  min-height: min(48vh, 440px);
-  background-color: #0a0812;
-  background-image: url("media/wishlist/wishlist-race-background.png");
+.birthday-page--wishlist-200 .rules--birthday {
+  background-image: url("generated/bg-hero.webp");
   background-size: cover;
-  background-position: center;
-  border-radius: 8px 0 0 8px;
+  background-position: 58% 40%;
+}
+
+.wishlist-200-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+  align-items: stretch;
+}
+
+.wishlist-200-visual {
+  border-radius: 14px;
+  border: 2px solid var(--birthday-hud-border);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.45) inset,
+    0 18px 48px rgba(0, 0, 0, 0.55),
+    0 0 40px rgba(0, 200, 255, 0.08);
   overflow: hidden;
+  background: #000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: min(50vh, 480px);
 }
 
-.birthday-page--wishlist-200 .birthday-stage__anim .makko-sprite-canvas {
+.wishlist-200-visual__canvas {
   width: 100%;
+  height: 100%;
   max-width: 100%;
-  max-height: min(48vh, 440px);
+  max-height: min(50vh, 480px);
+  display: block;
+  filter: none;
 }
 
-.birthday-page--wishlist-200 .birthday-hud--community {
+.birthday-page--wishlist-200 .wishlist-200-hud {
   align-self: stretch;
   margin: 0;
-  border-radius: 0 8px 8px 0;
-  border-left: 2px solid var(--birthday-hud-border);
   background: rgba(4, 14, 32, 0.98);
   overflow-y: auto;
-  max-height: min(48vh, 440px);
+  max-height: min(50vh, 480px);
 }
 
 .birthday-page--wishlist-200 .birthday-hud--community::before {
@@ -5297,25 +5308,19 @@ a.lore-hub__card--live:hover {
 }
 
 @media (max-width: 900px) {
-  .birthday-page--wishlist-200 .birthday-stage--wishlist-200 .birthday-stage__inner {
+  .wishlist-200-row {
     grid-template-columns: 1fr;
-    min-height: auto;
   }
 
-  .birthday-page--wishlist-200 .birthday-stage__anim {
-    min-height: min(36vh, 320px);
-    border-radius: 8px 8px 0 0;
+  .wishlist-200-visual {
+    min-height: min(38vh, 340px);
   }
 
-  .birthday-page--wishlist-200 .birthday-stage__anim .makko-sprite-canvas {
-    max-height: min(36vh, 320px);
+  .wishlist-200-visual__canvas {
+    max-height: min(38vh, 340px);
   }
 
-  .birthday-page--wishlist-200 .birthday-hud--community {
-    border-left: none;
-    border-top: 2px solid var(--birthday-hud-border);
-    border-radius: 0 0 8px 8px;
+  .birthday-page--wishlist-200 .wishlist-200-hud {
     max-height: none;
-    margin: 0;
   }
 }
