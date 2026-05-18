@@ -1,25 +1,48 @@
-/* 200 wishlists thank-you — page-specific (paths relative to lore/) */
+/* 200 wishlists thank-you — SS-Marketing-Wishlist-Race is the ONLY page background */
 
-.birthday-page--wishlist-200 .atmosphere {
-  display: none;
-}
-
-.birthday-page--wishlist-200 .rules--birthday {
-  background: transparent;
-  background-image: none;
-}
-
-.birthday-page--wishlist-200 .rules--birthday > .rules__veil,
-.birthday-page--wishlist-200 .rules--birthday > .rules__noise {
-  display: none;
-}
-
-.birthday-page--wishlist-200 {
+body.birthday-page--wishlist-200 {
   --wishlist-panel-h: min(88vh, 880px);
+  --birthday-hud-cyan: rgba(0, 255, 220, 0.92);
+  --birthday-hud-border: rgba(0, 240, 255, 0.35);
+  min-height: 100vh;
+  background-color: #081018;
+  background-image: url("../media/wishlist/wishlist-race-background.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.birthday-page--wishlist-200 .rules__strip {
+body.birthday-page--wishlist-200 .atmosphere,
+body.birthday-page--wishlist-200 .rules__veil,
+body.birthday-page--wishlist-200 .rules__noise {
+  display: none !important;
+}
+
+body.birthday-page--wishlist-200 .rules,
+body.birthday-page--wishlist-200 .rules--birthday,
+body.birthday-page--wishlist-200 #main,
+body.birthday-page--wishlist-200 .rules__layout,
+body.birthday-page--wishlist-200 .rules__strip {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+body.birthday-page--wishlist-200 .site-header.site-header--over-dark {
+  background: linear-gradient(180deg, rgba(2, 4, 10, 0.72), transparent);
+}
+
+body.birthday-page--wishlist-200 .site-footer--compact {
+  background: transparent;
+}
+
+body.birthday-page--wishlist-200 .rules__strip {
   max-width: none;
+}
+
+body.birthday-page--wishlist-200 .birthday-masthead .rules__title,
+body.birthday-page--wishlist-200 .strip-page__subject {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
 }
 
 .wishlist-200-bleed {
@@ -28,18 +51,10 @@
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   min-height: var(--wishlist-panel-h);
-  border-radius: 14px;
-  border: 2px solid var(--birthday-hud-border);
-  box-shadow:
-    0 0 0 1px rgba(0, 0, 0, 0.45) inset,
-    0 18px 48px rgba(0, 0, 0, 0.55),
-    0 0 40px rgba(0, 200, 255, 0.08);
-  overflow: hidden;
-  background-color: #0a1428;
-  background-image: url("../media/wishlist/wishlist-race-background.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background: none !important;
+  border: none;
+  box-shadow: none;
+  overflow: visible;
 }
 
 .wishlist-200-row {
@@ -54,7 +69,7 @@
 .wishlist-200-visual {
   flex: 0 1 58%;
   min-width: 0;
-  background: transparent;
+  background: transparent !important;
   border: none;
   box-shadow: none;
   display: flex;
@@ -62,8 +77,6 @@
   justify-content: center;
   padding: 0;
   margin: 0;
-  min-height: 0;
-  height: auto;
 }
 
 .wishlist-200-visual__canvas {
@@ -77,7 +90,7 @@
   filter: none;
 }
 
-.birthday-page--wishlist-200 .wishlist-200-hud {
+body.birthday-page--wishlist-200 .wishlist-200-hud {
   flex: 0 0 min(400px, 34vw);
   align-self: center;
   margin: clamp(1rem, 2vw, 1.5rem);
@@ -88,28 +101,34 @@
   max-height: none;
   overflow: visible;
   background: rgba(4, 14, 32, 0.98);
+  border: 1px solid var(--birthday-hud-border);
+  border-radius: 10px;
+  box-shadow:
+    0 0 24px rgba(0, 180, 255, 0.12),
+    inset 0 1px 0 rgba(0, 255, 255, 0.08);
 }
 
-.birthday-page--wishlist-200 .birthday-hud--community::before {
+body.birthday-page--wishlist-200 .birthday-hud--community::before {
   content: "[ COMMUNITY TRANSMISSION ]";
 }
 
-.birthday-page--wishlist-200 .birthday-hud__names {
+body.birthday-page--wishlist-200 .birthday-hud__names {
   color: rgba(180, 230, 255, 0.92);
   font-size: clamp(0.72rem, 1.2vw, 0.86rem);
   line-height: 1.5;
 }
 
 @media (max-width: 1100px) {
-  .birthday-page--wishlist-200 .wishlist-200-hud {
+  body.birthday-page--wishlist-200 .wishlist-200-hud {
     margin-left: clamp(1.5rem, 8vw, 200px);
     flex-basis: min(360px, 40vw);
   }
 }
 
 @media (max-width: 900px) {
-  .birthday-page--wishlist-200 {
+  body.birthday-page--wishlist-200 {
     --wishlist-panel-h: min(78vh, 720px);
+    background-attachment: scroll;
   }
 
   .wishlist-200-row {
@@ -122,7 +141,7 @@
     width: 100%;
   }
 
-  .birthday-page--wishlist-200 .wishlist-200-hud {
+  body.birthday-page--wishlist-200 .wishlist-200-hud {
     flex: 1 1 auto;
     width: auto;
     margin-left: clamp(1rem, 2vw, 1.5rem);
