@@ -5277,14 +5277,14 @@ a.lore-hub__card--live:hover {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  min-height: min(50vh, 480px);
+  min-height: min(58vh, 560px);
 }
 
 .wishlist-200-visual__canvas {
   width: 100%;
   height: 100%;
   max-width: 100%;
-  max-height: min(50vh, 480px);
+  max-height: min(58vh, 560px);
   display: block;
   filter: none;
 }
@@ -5293,8 +5293,7 @@ a.lore-hub__card--live:hover {
   align-self: stretch;
   margin: 0;
   background: rgba(4, 14, 32, 0.98);
-  overflow-y: auto;
-  max-height: min(50vh, 480px);
+  overflow: visible;
 }
 
 .birthday-page--wishlist-200 .birthday-hud--community::before {
@@ -5313,14 +5312,10 @@ a.lore-hub__card--live:hover {
   }
 
   .wishlist-200-visual {
-    min-height: min(38vh, 340px);
+    min-height: min(42vh, 380px);
   }
 
   .wishlist-200-visual__canvas {
-    max-height: min(38vh, 340px);
-  }
-
-  .birthday-page--wishlist-200 .wishlist-200-hud {
-    max-height: none;
+    max-height: min(42vh, 380px);
   }
 }
