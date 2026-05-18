@@ -2,8 +2,8 @@
 
 body.birthday-page--wishlist-200 {
   --wishlist-panel-h: min(38vh, 280px);
-  --wishlist-anim-offset-x: 350px;
-  --wishlist-anim-offset-y: 450px;
+  --wishlist-anim-offset-x: 275px;
+  --wishlist-anim-offset-y: 300px;
   --birthday-hud-cyan: rgba(0, 255, 220, 0.92);
   --birthday-hud-border: rgba(0, 240, 255, 0.35);
   min-height: 100vh;
