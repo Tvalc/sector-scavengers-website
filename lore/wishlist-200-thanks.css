@@ -2,11 +2,11 @@
 
 body.birthday-page--wishlist-200 {
   --wishlist-panel-h: min(72vh, 760px);
-  /* Anchor to viewport + fixed BG; nudge whole block (anim + CTA + image) */
-  --wishlist-block-left: 44%;
-  --wishlist-block-top: 56vh;
-  --wishlist-block-nudge-x: -75px;
-  --wishlist-block-nudge-y: -150px;
+  /* Fixed to viewport so block tracks the fixed race background */
+  --wishlist-block-left: 38%;
+  --wishlist-block-top: 50vh;
+  --wishlist-block-nudge-x: -150px;
+  --wishlist-block-nudge-y: -280px;
   --birthday-hud-cyan: rgba(0, 255, 220, 0.92);
   --birthday-hud-border: rgba(0, 240, 255, 0.35);
   min-height: 100vh;
@@ -98,16 +98,18 @@ body.birthday-page--wishlist-200 .birthday-masthead .rules__title {
   }
 }
 
-.wishlist-200-center {
-  position: absolute;
-  left: calc(var(--wishlist-block-left) + var(--wishlist-block-nudge-x));
-  top: calc(var(--wishlist-block-top) + var(--wishlist-block-nudge-y));
-  transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
+@media (min-width: 901px) {
+  .wishlist-200-center {
+    position: fixed;
+    left: calc(var(--wishlist-block-left) + var(--wishlist-block-nudge-x));
+    top: calc(var(--wishlist-block-top) + var(--wishlist-block-nudge-y));
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
 }
 
 .wishlist-200-cta-stack {
