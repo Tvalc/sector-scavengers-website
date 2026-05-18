@@ -193,6 +193,9 @@ function layoutSpansForPage(ch, pageIndex) {
      in HTML; readout is painted on the plate). Comic gid stays 25 for the right
      panel so existing panel-25.webp imports still line up (see mergeBlueUiIntoCoreAttributesReadout). */
   if (ch.n === 1 && pageIndex === 15) return { spans: ["6", "6"], fixed: true };
+  /* Ch. 1 page 18: hold one full-width beat ("Then who do I yell at?" + cold
+     robot response) so the staging reads as a single movement shot. */
+  if (ch.n === 1 && pageIndex === 17) return { spans: ["12"], fixed: true };
   if (pageIndex % 2 === 0) return ["12"];
   const multi = [
     ["6", "6", "12"],
@@ -371,6 +374,75 @@ function mergeWhereAmIOrientationReply(units) {
 }
 
 /**
+ * Ch. 1: "Max stopped breathing." + "Licensed by who?" + "The Company."
+ * become one full-width panel with two overlaid speech balloons (same placement
+ * classes used on page 14), while preserving the first beat as caption text.
+ */
+function mergeStoppedBreathingLicensedPair(units) {
+  const out = [];
+  for (let i = 0; i < units.length; i += 1) {
+    const u = units[i];
+    const a = units[i + 1];
+    const b = units[i + 2];
+    if (
+      u.type === "prose" &&
+      a?.type === "prose" &&
+      b?.type === "prose" &&
+      /^Max stopped breathing\.?\s*$/i.test(u.text.trim()) &&
+      /Licensed by who\?/i.test(a.text) &&
+      /^["']?The Company\./i.test(b.text.trim())
+    ) {
+      const dirs = [u.artDirective, a.artDirective, b.artDirective].filter(Boolean);
+      out.push({
+        type: "proseDualOverlay",
+        captionMd: u.text.trim(),
+        maxBubbleMd: a.text.trim(),
+        robotBubbleMd: b.text.trim(),
+        maxBubbleClass: "novel-comic__overlaid-speech--ch1p17-max",
+        robotBubbleClass: "novel-comic__overlaid-speech--ch1p17-robot",
+        artDirective: dirs.length ? dirs.join(" ") : null,
+      });
+      i += 2;
+      continue;
+    }
+    out.push(u);
+  }
+  return out;
+}
+
+/**
+ * Ch. 1: "Then who do I yell at?" + the immediate V.A.L.U. EV-suit survival
+ * response render as one movement panel with dual overlaid bubbles.
+ */
+function mergeThenWhoAndSuitWarning(units) {
+  const out = [];
+  for (let i = 0; i < units.length; i += 1) {
+    const u = units[i];
+    const a = units[i + 1];
+    if (
+      u.type === "prose" &&
+      a?.type === "prose" &&
+      /^["']?Then who do I yell at\?/i.test(u.text.trim()) &&
+      /Yelling is a non-productive output/i.test(a.text)
+    ) {
+      const dirs = [u.artDirective, a.artDirective].filter(Boolean);
+      out.push({
+        type: "proseDualOverlay",
+        maxBubbleMd: u.text.trim(),
+        robotBubbleMd: a.text.trim(),
+        maxBubbleClass: "novel-comic__overlaid-speech--ch1p18-max",
+        robotBubbleClass: "novel-comic__overlaid-speech--ch1p18-robot",
+        artDirective: dirs.length ? dirs.join(" ") : null,
+      });
+      i += 1;
+      continue;
+    }
+    out.push(u);
+  }
+  return out;
+}
+
+/**
  * Ch. 1: "The blue UI erupted." + `[CORE ATTRIBUTES DETECTED]…` fence → one
  * half-page sys panel (manuscript stays two blocks for the prose reader). HTML
  * shows figure + caption only; readout text is expected on the art. Queue uses
@@ -532,9 +604,13 @@ function annotateNovelBubbleChains(pages) {
 /** Turn chapter markdown into comic rows (each row = one printed “page” of panels). */
 function buildComicPages(ch) {
   const units = mergeBlueUiIntoCoreAttributesReadout(
-    mergeWhereAmIOrientationReply(
-      mergeValuOrientationSplash(
-        mergeAnotherBoxSystemGreeting(mergeStabilityNoticeIntoWipeFace(chapterUnitsFromMd(ch.bodyMd))),
+    mergeThenWhoAndSuitWarning(
+      mergeStoppedBreathingLicensedPair(
+        mergeWhereAmIOrientationReply(
+          mergeValuOrientationSplash(
+            mergeAnotherBoxSystemGreeting(mergeStabilityNoticeIntoWipeFace(chapterUnitsFromMd(ch.bodyMd))),
+          ),
+        ),
       ),
     ),
   );
@@ -562,8 +638,11 @@ function buildComicPages(ch) {
         row.push({
           span: span0,
           kind: "proseDualOverlay",
+          captionMd: u.captionMd || "",
           maxBubbleMd: u.maxBubbleMd,
           robotBubbleMd: u.robotBubbleMd,
+          maxBubbleClass: u.maxBubbleClass || null,
+          robotBubbleClass: u.robotBubbleClass || null,
           gid,
           artDirective: u.artDirective || null,
         });
@@ -698,6 +777,7 @@ const NOVEL_DISK_FILENAME_ALIASES = {
   "1:21": ["SS-Novel-CH1-Page-1-Panel-14"],
   "1:22": ["SS-Novel-CH1-Page-1-Panel-15"],
   "1:26": ["SS-Novel-CH1-Page-1-Panel-17"],
+  "1:27": ["SS-Novel-CH1-Page-1-Panel-18"],
   /* Comic page 16 (print): pulse (gid 23) + CORE ATTRIBUTES / blue UI (gid 25). */
   "1:23": [
     "panel-16left",
@@ -982,17 +1062,27 @@ ${figureWithPlaceholderAndPrompt(ch, cell, pageNum, w, h)}
             .replace(/^["']+|["']+$/g, "")
             .trim();
           const maxDisplay = maxPlain || "Where am I?";
+          const maxBubbleClass = cell.maxBubbleClass || "novel-comic__overlaid-speech--ch1p14-max";
+          const robotBubbleClass = cell.robotBubbleClass || "novel-comic__overlaid-speech--ch1p14-robot";
+          const capBubbleCls = bubbleClassesForNovelCell(cell, cell.gid, cell.span);
+          const captionBlock =
+            cell.captionMd && cell.captionMd.trim()
+              ? `
+                        <blockquote class="${capBubbleCls} novel-comic__balloon--composite-narration">
+                          <p>${inlineMdToHtml(cell.captionMd)}</p>
+                        </blockquote>`
+              : "";
           return `                      <article class="rules-comic__panel novel-panel novel-panel--span-${cell.span} novel-panel--dual-overlay-bubbles" id="novel-p${cell.gid}">
                         <div class="rules-comic__frame" aria-hidden="true"></div>
                         <div class="novel-comic__figure-with-overlay">
 ${figureWithPlaceholderAndPrompt(ch, cell, pageNum, w, h)}
-                        <aside class="novel-comic__robot-speech novel-comic__overlaid-speech--ch1p14-max" aria-label="Max">
+                        <aside class="novel-comic__robot-speech ${maxBubbleClass}" aria-label="Max">
                           <p>${inlineMdToHtml(maxDisplay)}</p>
                         </aside>
-                        <aside class="novel-comic__robot-speech novel-comic__overlaid-speech--ch1p14-robot" aria-label="V.A.L.U. through the helper bot">
+                        <aside class="novel-comic__robot-speech ${robotBubbleClass}" aria-label="V.A.L.U. through the helper bot">
                           <p>${inlineMdToHtml(stripBalancedOuterQuotes(cell.robotBubbleMd))}</p>
                         </aside>
-                        </div>
+                        </div>${captionBlock}
                       </article>`;
         }
         return `                      <article class="rules-comic__panel novel-panel novel-panel--span-${cell.span}" id="novel-p${cell.gid}">
@@ -1193,6 +1283,7 @@ ${comic.html}
     </div>
   </footer>
 
+  <script src="../../i18n/i18n.js"></script>
   <script src="../../site.js"></script>
 </body>
 </html>
@@ -1349,6 +1440,7 @@ ${cards}
     </div>
   </footer>
 
+  <script src="../../i18n/i18n.js"></script>
   <script src="../../site.js"></script>
 </body>
 </html>

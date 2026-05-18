@@ -1719,7 +1719,52 @@ code {
   color: var(--cyan);
 }
 
-.beer-page .site-header.site-header--over-dark {
+.beer-page /* Language switcher (i18n) */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 0.65rem;
+}
+
+.lang-switch__select {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(220, 240, 255, 0.92);
+  background: rgba(4, 14, 32, 0.72);
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  border-radius: 6px;
+  padding: 0.35rem 0.5rem;
+  cursor: pointer;
+  max-width: 7.5rem;
+}
+
+.lang-switch__select:hover,
+.lang-switch__select:focus {
+  border-color: rgba(0, 255, 220, 0.55);
+  outline: none;
+}
+
+.site-header__inner:has(.lang-switch) .nav-toggle {
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  .lang-switch {
+    margin-right: 0.35rem;
+  }
+
+  .lang-switch__select {
+    font-size: 0.58rem;
+    max-width: 6.5rem;
+    padding: 0.3rem 0.4rem;
+  }
+}
+
+.site-header.site-header--over-dark {
   background: linear-gradient(180deg, rgba(2, 4, 10, 0.94), rgba(2, 4, 10, 0.55) 55%, transparent);
   border-bottom-color: transparent;
   backdrop-filter: blur(14px) saturate(140%);

@@ -1,0 +1,123 @@
+{
+  "ui": {
+    "languageLabel": "Language",
+    "lang": {
+      "en": "English",
+      "ja": "日本語",
+      "tr": "Türkçe",
+      "es": "Español"
+    }
+  },
+  "common": {
+    "skipToContent": "Skip to content",
+    "sectorScavengers": "Sector Scavengers",
+    "signalAndSalvage": "Signal & Salvage",
+    "live": "Live",
+    "vault": "Vault",
+    "archive": "Archive",
+    "stripNote": "Strip note",
+    "mechanic": "Mechanic",
+    "wishlistOnSteam": "Wishlist on Steam",
+    "sector7": "Sector 7",
+    "communityLog": "Community log"
+  },
+  "nav": {
+    "howItPlays": "How it plays",
+    "crew": "Crew",
+    "lore": "Lore",
+    "origin": "Origin",
+    "beerFriday": "Beer Friday",
+    "novel": "Novel",
+    "videos": "Videos",
+    "makko": "Built with Makko",
+    "wishlist": "Wishlist"
+  },
+  "aria": {
+    "primaryNav": "Primary",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "muteVideo": "Mute video",
+    "unmuteVideo": "Unmute video",
+    "mute": "Mute",
+    "unmute": "Unmute"
+  },
+  "footer": {
+    "copy": "© {year} · Built with Makko AI"
+  },
+  "wishlist200": {
+    "metaTitle": "200 Wishlists · Thank You · Sector Scavengers",
+    "metaDesc": "Thanks for helping Sector Scavengers reach 200 Steam wishlists.",
+    "transmission": "Transmission · milestone: 200 wishlists",
+    "title": "Thanks for helping us reach 200 wishlists!",
+    "cta": "Wishlist on Steam and join the next playtest wave",
+    "alt200": "200 wishlists milestone",
+    "hudAria": "Thank you message",
+    "hudTitle": "[ COMMUNITY TRANSMISSION ]",
+    "hudP1": "We hit 200 Steam wishlists on Sector Scavengers — and we could not have done it without everyone following along, sharing the signal, and jumping into playtests.",
+    "hudP2": "Thank you to our community and playtest crew:",
+    "hudNames": "Vinsmoke, Igor Allexander, Blurryface, Zoltu, Raks Walker, ShiroSaints, Akira, Seventhly, Ezio, Kurozzz, The Robe of Fire team, Ji, Imran, HeroGamer, Imran, Ben Vibrant, Matheo, Markoso, Linds, Shiva, Icebear, Joshua Burrito, Simona, Novabrand, and anyone else following and supporting the game!",
+    "hudP3": "More builds, more wrecks, and more feedback soon. Stay on channel."
+  },
+  "loreHub": {
+    "title": "Lore",
+    "lede": "Rainforest-era files, alumni-list mythology, and the corporate weather that hardened long before Signal & Salvage. More entries ship as we finish the web versions.",
+    "originTitle": "Origin story",
+    "originDesc": "Wake into ledger: illustrated strip—layoffs, cryo as severance, debt sold to salvage, first derelicts.",
+    "beerTitle": "Beer Friday",
+    "beerDesc": "The last real one, Building B, Employee Number Two, and the rooftop that outranked Corporate Risk.",
+    "novelTitle": "Debt Protocol (novel)",
+    "novelDesc": "Book 1 as a scroll comic—balloons carry the story, with the full script tucked under each chapter."
+  },
+  "index": {
+    "heroSubtitle": "Signal & Salvage",
+    "eyebrow": "Severance bought you sleep. Sleep sold you forward.",
+    "howEyebrow": "How it plays",
+    "howTitle": "Laws of the loop",
+    "howLead": "You stage every salvage run from the hub. Inside a derelict the run is a card game with teeth: a fixed hand size, a fuel gauge, and a hull that does not care about your intent. The panels below restate the non-negotiables in briefing form, same mechanics, louder line.",
+    "wishlistCta": "Wishlist on Steam",
+    "videosTitle": "Field footage",
+    "makkoTitle": "Built With Makko AI",
+    "loreTitle": "Lore & files"
+  },
+  "phrases": {
+    "Skip to content": "Skip to content",
+    "How it plays": "How it plays",
+    "Crew": "Crew",
+    "Lore": "Lore",
+    "Origin": "Origin",
+    "Beer Friday": "Beer Friday",
+    "Novel": "Novel",
+    "Videos": "Videos",
+    "Built with Makko": "Built with Makko",
+    "Wishlist": "Wishlist",
+    "Wishlist on Steam": "Wishlist on Steam",
+    "Sector Scavengers": "Sector Scavengers",
+    "Signal & Salvage": "Signal & Salvage",
+    "Signal &amp; Salvage": "Signal & Salvage",
+    "Laws of the loop": "Laws of the loop",
+    "Strip note": "Strip note",
+    "Mechanic": "Mechanic",
+    "Live": "Live",
+    "Vault": "Vault",
+    "Archive": "Archive",
+    "Sector 7": "Sector 7",
+    "Community log": "Community log",
+    "Transmission · milestone: 200 wishlists": "Transmission · milestone: 200 wishlists",
+    "Thanks for helping us reach 200 wishlists!": "Thanks for helping us reach 200 wishlists!",
+    "Wishlist on Steam and join the next playtest wave": "Wishlist on Steam and join the next playtest wave",
+    "[ COMMUNITY TRANSMISSION ]": "[ COMMUNITY TRANSMISSION ]",
+    "We hit <strong>200 Steam wishlists</strong> on Sector Scavengers — and we could not have done it without everyone following along, sharing the signal, and jumping into playtests.": "We hit <strong>200 Steam wishlists</strong> on Sector Scavengers — and we could not have done it without everyone following along, sharing the signal, and jumping into playtests.",
+    "Thank you to our community and playtest crew:": "Thank you to our community and playtest crew:",
+    "More builds, more wrecks, and more feedback soon. Stay on channel.": "More builds, more wrecks, and more feedback soon. Stay on channel.",
+    "Origin story": "Origin story",
+    "Beer Friday": "Beer Friday",
+    "Debt Protocol (novel)": "Debt Protocol (novel)",
+    "Debt Protocol": "Debt Protocol",
+    "Book 1": "Book 1",
+    "Open menu": "Open menu",
+    "Close menu": "Close menu",
+    "Mute": "Mute",
+    "Unmute": "Unmute",
+    "Severance bought you sleep. Sleep sold you forward.": "Severance bought you sleep. Sleep sold you forward."
+  }
+}

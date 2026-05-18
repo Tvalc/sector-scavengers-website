@@ -49,11 +49,11 @@
         <div class="rules__strip">
           <header class="strip-page__masthead birthday-masthead reveal" data-reveal aria-labelledby="wishlist-thanks-title">
             <p class="strip-page__tags">
-              <span class="strip-page__tag">Sector 7</span>
-              <span class="strip-page__tag">Community log</span>
+              <span class="strip-page__tag" data-i18n="common.sector7">Sector 7</span>
+              <span class="strip-page__tag" data-i18n="common.communityLog">Community log</span>
             </p>
-            <p class="strip-page__subject">Transmission · milestone: 200 wishlists</p>
-            <h1 id="wishlist-thanks-title" class="rules__title">Thanks for helping us reach 200 wishlists!</h1>
+            <p class="strip-page__subject" data-i18n="wishlist200.transmission">Transmission · milestone: 200 wishlists</p>
+            <h1 id="wishlist-thanks-title" class="rules__title" data-i18n="wishlist200.title">Thanks for helping us reach 200 wishlists!</h1>
           </header>
 
           <div class="wishlist-200-center" aria-label="Celebration and wishlist call to action">
@@ -80,6 +80,7 @@
                   href="https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-i18n="wishlist200.cta"
                 >Wishlist on Steam and join the next playtest wave</a>
               </div>
               <figure class="wishlist-200-framed">
@@ -94,11 +95,11 @@
 
           <div class="wishlist-200-bleed">
             <div class="wishlist-200-row">
-              <aside class="birthday-hud birthday-hud--community wishlist-200-hud" aria-label="Thank you message">
-                <p>We hit <strong>200 Steam wishlists</strong> on Sector Scavengers — and we could not have done it without everyone following along, sharing the signal, and jumping into playtests.</p>
-                <p>Thank you to our community and playtest crew:</p>
+              <aside class="birthday-hud birthday-hud--community wishlist-200-hud" aria-label="Thank you message" data-i18n-attr="aria-label:wishlist200.hudAria">
+                <p data-i18n="wishlist200.hudP1" data-i18n-html>We hit <strong>200 Steam wishlists</strong> on Sector Scavengers — and we could not have done it without everyone following along, sharing the signal, and jumping into playtests.</p>
+                <p data-i18n="wishlist200.hudP2">Thank you to our community and playtest crew:</p>
                 <p class="birthday-hud__names">Vinsmoke, Igor Allexander, Blurryface, Zoltu, Raks Walker, ShiroSaints, Akira, Seventhly, Ezio, Kurozzz, The Robe of Fire team, Ji, Imran, HeroGamer, Imran, Ben Vibrant, Matheo, Markoso, Linds, Shiva, Icebear, Joshua Burrito, Simona, Novabrand, and anyone else following and supporting the game!</p>
-                <p>More builds, more wrecks, and more feedback soon. Stay on channel.</p>
+                <p data-i18n="wishlist200.hudP3">More builds, more wrecks, and more feedback soon. Stay on channel.</p>
               </aside>
             </div>
           </div>
@@ -107,6 +108,7 @@
     </section>
   </main>
 
+  <script src="../i18n/i18n.js"></script>
   <script src="../site.js"></script>
   <script src="../makko-sprite.js" defer></script>
 </body>

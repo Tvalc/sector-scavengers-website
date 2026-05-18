@@ -5,9 +5,16 @@
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.getElementById("site-nav");
   if (toggle && nav) {
+    function menuLabel(open) {
+      if (window.SS_I18N && window.SS_I18N.t) {
+        return open ? window.SS_I18N.t("aria.closeMenu") : window.SS_I18N.t("aria.openMenu");
+      }
+      return open ? "Close menu" : "Open menu";
+    }
+
     function setOpen(open) {
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      toggle.setAttribute("aria-label", menuLabel(open));
       nav.classList.toggle("is-open", open);
     }
 
@@ -19,6 +26,10 @@
       link.addEventListener("click", function () {
         if (window.matchMedia("(max-width: 768px)").matches) setOpen(false);
       });
+    });
+
+    document.addEventListener("ss:i18n-ready", function () {
+      setOpen(nav.classList.contains("is-open"));
     });
   }
 
@@ -46,9 +57,12 @@
     function syncMuteUi() {
       if (!btnMute) return;
       var m = heroVideo.muted;
+      var t = window.SS_I18N && window.SS_I18N.t ? window.SS_I18N.t.bind(window.SS_I18N) : function (k, fb) {
+        return fb;
+      };
       btnMute.setAttribute("aria-pressed", m ? "true" : "false");
-      btnMute.setAttribute("aria-label", m ? "Unmute video" : "Mute video");
-      if (txtMute) txtMute.textContent = m ? "Unmute" : "Mute";
+      btnMute.setAttribute("aria-label", m ? t("aria.unmuteVideo", "Unmute video") : t("aria.muteVideo", "Mute video"));
+      if (txtMute) txtMute.textContent = m ? t("aria.unmute", "Unmute") : t("aria.mute", "Mute");
     }
 
     function syncHeroToolbar() {
@@ -226,5 +240,20 @@
   );
   revealEls.forEach(function (el) {
     io.observe(el);
+  });
+
+  document.addEventListener("ss:i18n-ready", function () {
+    document.querySelectorAll(".hero__video[data-hero-videos]").forEach(function (heroVideo) {
+      var frame = heroVideo.closest(".hero__video-frame");
+      var toolbar = frame ? frame.querySelector("[data-hero-toolbar]") : null;
+      var btnMute = toolbar ? toolbar.querySelector("[data-hero-mute]") : null;
+      var txtMute = toolbar ? toolbar.querySelector("[data-hero-mute-text]") : null;
+      if (btnMute && heroVideo) {
+        var m = heroVideo.muted;
+        var t = window.SS_I18N.t;
+        btnMute.setAttribute("aria-label", m ? t("aria.unmuteVideo") : t("aria.muteVideo"));
+        if (txtMute) txtMute.textContent = m ? t("aria.unmute") : t("aria.mute");
+      }
+    });
   });
 })();

@@ -278,6 +278,18 @@ body.birthday-page--wishlist-200 .birthday-hud--community::before {
     0 0 10px rgba(0, 0, 0, 0.7);
 }
 
+html[lang="ja"] body.birthday-page--wishlist-200 .birthday-hud--community::before {
+  content: "[ コミュニティ通信 ]";
+}
+
+html[lang="tr"] body.birthday-page--wishlist-200 .birthday-hud--community::before {
+  content: "[ TOPLULUK İLETİMİ ]";
+}
+
+html[lang="es"] body.birthday-page--wishlist-200 .birthday-hud--community::before {
+  content: "[ TRANSMISIÓN COMUNITARIA ]";
+}
+
 body.birthday-page--wishlist-200 .wishlist-200-hud p + p {
   margin-top: 0.5rem;
 }
