@@ -1297,25 +1297,29 @@ const NOVEL_HUB_DESCRIPTIONS = {
   1: "Max wakes mid-scream in a cryopod, owing a corporation that barely remembers his name. The thaw is the easy part. Blue text in the air, a polite welcome from V.A.L.U., and a debt ledger waiting to greet him are the rest.",
 };
 
-/* Chapters listed here render as non-clickable “Coming soon” cards on the hub.
-   Ch1 is the only one playable right now; everything else is in the pipeline. */
-const NOVEL_HUB_LIVE = new Set([1]);
+/* Chapters listed here render as clickable live cards on the novel hub. */
+const NOVEL_HUB_LIVE = new Set([]);
+
+/* Chapters in progress: visible on the hub but not linked until art is ready. */
+const NOVEL_HUB_WIP = new Set([1]);
 
 /* Chapters that get a secondary “Read as scroll” link on the novel hub card. */
-const NOVEL_HUB_SCROLL_LINK = new Set([1]);
+const NOVEL_HUB_SCROLL_LINK = new Set([]);
 
 function indexHtml(chapters) {
   const cards = chapters
     .map((ch) => {
       const isLive = NOVEL_HUB_LIVE.has(ch.n);
+      const isWip = NOVEL_HUB_WIP.has(ch.n);
       const desc = NOVEL_HUB_DESCRIPTIONS[ch.n] || (isLive ? ch.teaser : "Coming soon.");
       if (!isLive) {
+        const cardDesc = isWip ? esc(desc) : "Coming soon.";
         return `
       <li>
         <div class="lore-hub__card lore-hub__card--soon novel-hub__card" aria-disabled="true">
           <span class="lore-hub__card-tag">Ch. ${ch.n}</span>
           <h2 class="lore-hub__card-title">${esc(ch.title)}</h2>
-          <p class="lore-hub__card-desc">Coming soon.</p>
+          <p class="lore-hub__card-desc">${cardDesc}</p>
         </div>
       </li>`;
       }
