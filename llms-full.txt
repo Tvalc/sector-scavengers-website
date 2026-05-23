@@ -32,6 +32,20 @@ Sector Scavengers is an upcoming roguelike deckbuilding game. The public site in
 - Covers no-code production patterns for run-based deckbuilders.
 - Includes structured step guidance and FAQ.
 
+### https://sectorscavengers.com/guides/sector-scavengers-vs-slay-the-spire.html
+- Comparison guide for players evaluating fit and decision style.
+- Uses side-by-side rubric for run pressure, card economy, and progression behavior.
+
+### https://sectorscavengers.com/guides/facts.html
+- Citation-ready reference page with stable project facts and official links.
+
+### https://sectorscavengers.com/guides/dev-updates.html
+- Chronological index of website and content milestones.
+- Useful for checking recency and update consistency.
+
+### https://sectorscavengers.com/guides/glossary.html
+- Plain-language definitions for roguelike deckbuilding and Makko workflow terms.
+
 ### https://sectorscavengers.com/crew/index.html
 - Crew roster and character context.
 - Useful for role and doctrine details.

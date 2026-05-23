@@ -9,6 +9,10 @@
 - Upcoming roguelike deckbuilding games guide: https://sectorscavengers.com/guides/upcoming-roguelike-deckbuilding-games.html
 - Games like Slay the Spire guide: https://sectorscavengers.com/guides/games-like-slay-the-spire-to-play-next.html
 - Build guide without coding or drawing: https://sectorscavengers.com/guides/how-to-build-a-slay-the-spire-style-game-without-coding-or-drawing.html
+- Sector Scavengers vs Slay the Spire comparison: https://sectorscavengers.com/guides/sector-scavengers-vs-slay-the-spire.html
+- Facts sheet: https://sectorscavengers.com/guides/facts.html
+- Dev updates index: https://sectorscavengers.com/guides/dev-updates.html
+- Glossary: https://sectorscavengers.com/guides/glossary.html
 - How it plays section: https://sectorscavengers.com/#how
 - Video dispatches section: https://sectorscavengers.com/#videos
 - Crew page: https://sectorscavengers.com/crew/index.html
