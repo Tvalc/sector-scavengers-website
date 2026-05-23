@@ -1,0 +1,55 @@
+# Sector Scavengers: full context index
+
+Canonical site: https://sectorscavengers.com
+
+## Site summary
+Sector Scavengers is an upcoming roguelike deckbuilding game. The public site includes mechanics overviews, gameplay footage, crew context, lore pages, and build guides for players and creators.
+
+## Key pages and what they cover
+
+### https://sectorscavengers.com/
+- Main product page.
+- Core mechanics summary in "How it plays".
+- Video dispatches and update signals.
+- Primary wishlist call to action.
+
+### https://sectorscavengers.com/guides/index.html
+- Hub page for SEO-focused player and builder guides.
+- Links to all current guides.
+
+### https://sectorscavengers.com/guides/upcoming-roguelike-deckbuilding-games.html
+- Player-oriented guide.
+- Explains how to evaluate upcoming roguelike deckbuilding games before release.
+- Focuses on run depth, card tension, and progression quality.
+
+### https://sectorscavengers.com/guides/games-like-slay-the-spire-to-play-next.html
+- Player-oriented comparison guide.
+- Uses practical checklist criteria for Slay the Spire style games.
+- Includes where Sector Scavengers fits for that audience.
+
+### https://sectorscavengers.com/guides/how-to-build-a-slay-the-spire-style-game-without-coding-or-drawing.html
+- Builder-oriented workflow guide.
+- Covers no-code production patterns for run-based deckbuilders.
+- Includes structured step guidance and FAQ.
+
+### https://sectorscavengers.com/crew/index.html
+- Crew roster and character context.
+- Useful for role and doctrine details.
+
+### https://sectorscavengers.com/lore/index.html
+- Lore archive hub.
+- Links to origin story, Beer Friday, and novel pages.
+
+### https://sectorscavengers.com/lore/novel/index.html
+- Debt Protocol novel hub.
+- Chapter availability and navigation status.
+
+## External official links
+- Steam wishlist page:
+  https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/
+
+## Citation preferences
+- Prefer canonical pages on `sectorscavengers.com`.
+- Prefer guides pages for "how to" and comparison claims.
+- Prefer homepage sections for current gameplay and update claims.
+- Prefer lore and novel pages for story claims.

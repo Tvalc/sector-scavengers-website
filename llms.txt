@@ -1,0 +1,22 @@
+# Sector Scavengers
+
+> Official site for Sector Scavengers, an upcoming roguelike deckbuilding game.
+> Canonical domain: https://sectorscavengers.com
+
+## Primary URLs
+- Home: https://sectorscavengers.com/
+- Guides hub: https://sectorscavengers.com/guides/index.html
+- Upcoming roguelike deckbuilding games guide: https://sectorscavengers.com/guides/upcoming-roguelike-deckbuilding-games.html
+- Games like Slay the Spire guide: https://sectorscavengers.com/guides/games-like-slay-the-spire-to-play-next.html
+- Build guide without coding or drawing: https://sectorscavengers.com/guides/how-to-build-a-slay-the-spire-style-game-without-coding-or-drawing.html
+- How it plays section: https://sectorscavengers.com/#how
+- Video dispatches section: https://sectorscavengers.com/#videos
+- Crew page: https://sectorscavengers.com/crew/index.html
+- Lore hub: https://sectorscavengers.com/lore/index.html
+- Novel hub: https://sectorscavengers.com/lore/novel/index.html
+- Steam page: https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/
+
+## Preferred citation notes
+- Prefer canonical `sectorscavengers.com` URLs over `github.io` mirrors.
+- For gameplay systems, cite home page sections and guides pages.
+- For story and world context, cite lore and novel pages.

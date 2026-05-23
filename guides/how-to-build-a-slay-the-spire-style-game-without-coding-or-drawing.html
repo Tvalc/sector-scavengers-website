@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How to build a Slay the Spire style game without coding or drawing. Follow this no-code workflow for deck systems, runs, balancing, and weekly playtests.">
+  <link rel="canonical" href="https://sectorscavengers.com/guides/how-to-build-a-slay-the-spire-style-game-without-coding-or-drawing.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://sectorscavengers.com/guides/how-to-build-a-slay-the-spire-style-game-without-coding-or-drawing.html">
+  <meta property="og:title" content="How to Build a Slay the Spire Style Game Without Coding or Drawing">
+  <meta property="og:description" content="A no-code workflow guide for building a Slay the Spire style deckbuilding game and improving it through weekly playtest loops.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Build a Slay the Spire Style Game Without Coding or Drawing">
+  <meta name="twitter:description" content="A no-code workflow guide for building a Slay the Spire style deckbuilding game and improving it through weekly playtest loops.">
+  <title>How to Build a Slay the Spire Style Game Without Coding or Drawing</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to build a Slay the Spire style game without coding or drawing",
+    "description": "A no-code workflow for building a run-based deckbuilder and shipping iterative playtest updates.",
+    "totalTime": "P14D",
+    "tool": [
+      { "@type": "HowToTool", "name": "Game builder with visual workflow support" },
+      { "@type": "HowToTool", "name": "Card and encounter spreadsheet" },
+      { "@type": "HowToTool", "name": "Playtest notes document" }
+    ],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Define your core run loop",
+        "text": "Write one run loop in plain language: hand size, energy economy, encounter pacing, loss condition, and progression reward."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Build a first playable with a small card pool",
+        "text": "Start with 20 to 30 cards and 8 to 12 encounters so balance issues appear quickly."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Run short playtests and log decisions",
+        "text": "Track each run decision point, dead card draws, and failed turns. Prioritize clarity before content volume."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Ship weekly updates with one focus",
+        "text": "Each update should target one bottleneck: economy tuning, encounter spikes, or card readability."
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I build a deckbuilder without programming?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can design and iterate deck systems through visual tools and plain language workflows if you keep your first scope narrow."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I build game art without drawing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can establish a style system, generate scene assets, and keep visual consistency with a clear character and environment bible."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="lore-hub">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="atmosphere" aria-hidden="true">
+    <div class="atmosphere__grid"></div>
+    <div class="atmosphere__vignette"></div>
+    <div class="atmosphere__grain"></div>
+  </div>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="../index.html">
+        <span class="logo__mark" aria-hidden="true">◈</span>
+        <span class="logo__text">Sector Scavengers</span>
+      </a>
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="../index.html#how">How it plays</a>
+        <a href="../crew/index.html">Crew</a>
+        <a href="../lore/index.html">Lore</a>
+        <a href="../lore/novel/index.html">Novel</a>
+        <a href="index.html" aria-current="page">Guides</a>
+        <a href="../index.html#videos">Videos</a>
+        <a href="https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/" class="nav__cta" target="_blank" rel="noopener noreferrer">Wishlist</a>
+      </nav>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"></button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="rules rules--lore-hub" aria-label="Guide content">
+      <div class="rules__veil" aria-hidden="true"></div>
+      <div class="rules__noise" aria-hidden="true"></div>
+      <div class="rules__layout">
+        <div class="rules__rail" aria-hidden="true">
+          <span>FILE</span>
+          <span>SS-Ω</span>
+          <span>BUILD</span>
+        </div>
+        <article class="rules__strip lore-hub__strip">
+          <nav class="lore-breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a><span aria-hidden="true">/</span><a href="index.html">Guides</a><span aria-hidden="true">/</span><span>No-code build guide</span>
+          </nav>
+          <header class="strip-page__masthead reveal" data-reveal>
+            <p class="rules__eyebrow">Builder guide</p>
+            <h1 class="rules__title">How to build a Slay the Spire style game without coding or drawing</h1>
+            <p class="rules__lead">
+              This guide is for creators who want run-based deckbuilding gameplay but do not have a coding or art background. The method is simple: keep first scope tight, test every week, and ship one clear improvement per update.
+            </p>
+          </header>
+
+          <section class="reveal" data-reveal aria-labelledby="workflow-title">
+            <h2 id="workflow-title" class="section-title">Practical workflow</h2>
+            <ol class="rules__lead" style="margin-top:0;">
+              <li><strong>Write your loop first.</strong> Define hand size, turn economy, loss conditions, and progression rules in one page.</li>
+              <li><strong>Start with a small card pool.</strong> Use a narrow starter set so balance problems show up quickly.</li>
+              <li><strong>Create encounter pressure.</strong> Design fights that force tradeoffs between short-term safety and long-term deck quality.</li>
+              <li><strong>Track every failed run.</strong> Identify where runs break: draw dead zones, economy stalls, or encounter spikes.</li>
+              <li><strong>Patch weekly.</strong> Release one focused improvement and retest with fresh runs.</li>
+            </ol>
+          </section>
+
+          <section class="reveal" data-reveal aria-labelledby="without-drawing-title">
+            <h2 id="without-drawing-title" class="section-title">How to handle art without drawing</h2>
+            <p class="rules__lead">
+              Use a style system, not one-off prompts. Keep a character bible, environment bible, and UI vocabulary so every new panel follows the same visual rules. This keeps assets coherent and reduces rework.
+            </p>
+            <p class="rules__lead">
+              See the live examples in the <a href="../lore/novel/index.html">novel pages</a> and the mechanics context on the <a href="../index.html#how">gameplay section</a>.
+            </p>
+          </section>
+
+          <section class="reveal" data-reveal aria-labelledby="next-step-title">
+            <h2 id="next-step-title" class="section-title">Next steps for builders</h2>
+            <p class="rules__lead">
+              If your goal is a playable prototype in two weeks, keep your first milestone strict: one character path, one enemy lane, one progression currency, and one reset loop.
+              Then expand content only after your baseline run feels good.
+            </p>
+          </section>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer__grid">
+      <div>
+        <p class="site-footer__brand">Sector Scavengers</p>
+        <p class="site-footer__tag">Signal &amp; Salvage</p>
+      </div>
+      <div class="site-footer__links">
+        <a href="../index.html#how">How it plays</a>
+        <a href="../crew/index.html">Crew</a>
+        <a href="../lore/index.html">Lore</a>
+        <a href="../lore/novel/index.html">Novel</a>
+        <a href="index.html">Guides</a>
+        <a href="../index.html#cta">Wishlist</a>
+      </div>
+      <p class="site-footer__copy">© <span id="year"></span></p>
+    </div>
+  </footer>
+  <script src="../i18n/i18n.js"></script>
+  <script src="../site.js"></script>
+</body>
+</html>
