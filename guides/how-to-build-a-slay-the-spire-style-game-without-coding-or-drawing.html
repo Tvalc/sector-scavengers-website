@@ -74,6 +74,40 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "VideoObject",
+        "name": "From Idea to Playable Game in One Video",
+        "description": "Makko walkthrough from project setup and first prompt to a playable game build.",
+        "thumbnailUrl": "https://img.youtube.com/vi/J9tnYGr6_10/hqdefault.jpg",
+        "uploadDate": "2026-01-01",
+        "embedUrl": "https://www.youtube.com/embed/J9tnYGr6_10",
+        "contentUrl": "https://www.youtube.com/watch?v=J9tnYGr6_10"
+      },
+      {
+        "@type": "VideoObject",
+        "name": "The Character Animation Problem Solved",
+        "description": "Makko tutorial on character manifests, animation alignment, and in-game integration.",
+        "thumbnailUrl": "https://img.youtube.com/vi/BIbnt6nsA20/hqdefault.jpg",
+        "uploadDate": "2026-01-01",
+        "embedUrl": "https://www.youtube.com/embed/BIbnt6nsA20",
+        "contentUrl": "https://www.youtube.com/watch?v=BIbnt6nsA20"
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Single Source of Truth Changes Everything for Game Devs",
+        "description": "Makko short video on asset hygiene and maintaining one clean source asset across projects.",
+        "thumbnailUrl": "https://img.youtube.com/vi/6VPtkrR2yBM/hqdefault.jpg",
+        "uploadDate": "2026-03-10",
+        "embedUrl": "https://www.youtube.com/embed/6VPtkrR2yBM",
+        "contentUrl": "https://www.youtube.com/watch?v=6VPtkrR2yBM"
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
@@ -154,40 +188,86 @@
           <section class="reveal" data-reveal aria-labelledby="resource-title">
             <h2 id="resource-title" class="section-title">Makko resources to use right now</h2>
             <p class="rules__lead">
-              These are the most relevant Makko resources for the exact workflow you asked for.
+              These are the most relevant Makko resources for the exact workflow you asked for. Each card has a thumbnail and a short summary so you can scan fast and open the right one.
             </p>
-            <div class="rules-comic">
-              <div class="rules-comic__grid">
-                <article class="rules-comic__panel">
-                  <span class="rules-comic__tag">Blog post</span>
-                  <div class="rules-comic__frame" aria-hidden="true"></div>
-                  <div class="rules-comic__strip-note"><p><span class="rules-comic__kicker">Build pipeline</span><a href="https://blog.makko.ai/how-to-make-a-game-without-coding/" target="_blank" rel="noopener noreferrer">How to Make a Game Without Coding</a></p></div>
-                </article>
-                <article class="rules-comic__panel">
-                  <span class="rules-comic__tag">Blog post</span>
-                  <div class="rules-comic__frame" aria-hidden="true"></div>
-                  <div class="rules-comic__strip-note"><p><span class="rules-comic__kicker">Prompting</span><a href="https://blog.makko.ai/how-prompt-based-game-creation-works/" target="_blank" rel="noopener noreferrer">How Prompt-Based Game Creation Works</a></p></div>
-                </article>
-                <article class="rules-comic__panel">
-                  <span class="rules-comic__tag">Blog post</span>
-                  <div class="rules-comic__frame" aria-hidden="true"></div>
-                  <div class="rules-comic__strip-note"><p><span class="rules-comic__kicker">Art to gameplay</span><a href="https://www.makko.ai/blog/make-2d-game-with-ai/" target="_blank" rel="noopener noreferrer">Make a 2D Game With AI</a></p></div>
-                </article>
-                <article class="rules-comic__panel">
-                  <span class="rules-comic__tag">YouTube</span>
-                  <div class="rules-comic__frame" aria-hidden="true"></div>
-                  <div class="rules-comic__strip-note"><p><span class="rules-comic__kicker">First prompt to playable</span><a href="https://www.youtube.com/watch?v=J9tnYGr6_10" target="_blank" rel="noopener noreferrer">From Idea to Playable Game in One Video</a></p></div>
-                </article>
-                <article class="rules-comic__panel">
-                  <span class="rules-comic__tag">YouTube</span>
-                  <div class="rules-comic__frame" aria-hidden="true"></div>
-                  <div class="rules-comic__strip-note"><p><span class="rules-comic__kicker">Asset integration</span><a href="https://www.youtube.com/watch?v=BIbnt6nsA20" target="_blank" rel="noopener noreferrer">The Character Animation Problem Solved</a></p></div>
-                </article>
-                <article class="rules-comic__panel">
-                  <span class="rules-comic__tag">YouTube</span>
-                  <div class="rules-comic__frame" aria-hidden="true"></div>
-                  <div class="rules-comic__strip-note"><p><span class="rules-comic__kicker">Asset hygiene</span><a href="https://www.youtube.com/watch?v=6VPtkrR2yBM" target="_blank" rel="noopener noreferrer">Single Source of Truth Changes Everything</a></p></div>
-                </article>
+            <div class="guide-resource-grid">
+              <article class="guide-resource-card">
+                <a class="guide-resource-card__thumb-link" href="https://blog.makko.ai/how-to-make-a-game-without-coding/" target="_blank" rel="noopener noreferrer">
+                  <img class="guide-resource-card__thumb" src="https://storage.ghost.io/c/da/94/da943c8a-a2a7-4b16-b876-c1dcebbaf91d/content/images/2026/03/how-to-no-code.png" alt="Makko blog thumbnail for how to make a game without coding" loading="lazy" decoding="async">
+                </a>
+                <div class="guide-resource-card__body">
+                  <p class="guide-resource-card__type">Blog post</p>
+                  <h3 class="guide-resource-card__title"><a href="https://blog.makko.ai/how-to-make-a-game-without-coding/" target="_blank" rel="noopener noreferrer">How to Make a Game Without Coding</a></h3>
+                  <p class="guide-resource-card__summary">Full Makko pipeline from character creation in Art Studio to playable logic in Code Studio, including manifests, planning, and rebuild loops.</p>
+                </div>
+              </article>
+              <article class="guide-resource-card">
+                <a class="guide-resource-card__thumb-link" href="https://blog.makko.ai/how-prompt-based-game-creation-works/" target="_blank" rel="noopener noreferrer">
+                  <img class="guide-resource-card__thumb" src="https://storage.ghost.io/c/da/94/da943c8a-a2a7-4b16-b876-c1dcebbaf91d/content/images/2026/01/prompt.png" alt="Makko blog thumbnail for prompt based game creation" loading="lazy" decoding="async">
+                </a>
+                <div class="guide-resource-card__body">
+                  <p class="guide-resource-card__type">Blog post</p>
+                  <h3 class="guide-resource-card__title"><a href="https://blog.makko.ai/how-prompt-based-game-creation-works/" target="_blank" rel="noopener noreferrer">How Prompt-Based Game Creation Works</a></h3>
+                  <p class="guide-resource-card__summary">How to write prompts that produce stable gameplay systems instead of disconnected outputs, plus when to use Plan Mode versus faster edits.</p>
+                </div>
+              </article>
+              <article class="guide-resource-card">
+                <a class="guide-resource-card__thumb-link" href="https://www.makko.ai/blog/make-2d-game-with-ai/" target="_blank" rel="noopener noreferrer">
+                  <img class="guide-resource-card__thumb" src="https://storage.ghost.io/c/da/94/da943c8a-a2a7-4b16-b876-c1dcebbaf91d/content/images/2026/03/makko-make-2d-game-with-ai-code-studio-preview.png" alt="Makko blog thumbnail for making a 2D game with AI" loading="lazy" decoding="async">
+                </a>
+                <div class="guide-resource-card__body">
+                  <p class="guide-resource-card__type">Blog post</p>
+                  <h3 class="guide-resource-card__title"><a href="https://www.makko.ai/blog/make-2d-game-with-ai/" target="_blank" rel="noopener noreferrer">Make a 2D Game With AI</a></h3>
+                  <p class="guide-resource-card__summary">Step-by-step guide that connects art production and gameplay implementation in one pipeline, with specific notes on consistency and asset reuse.</p>
+                </div>
+              </article>
+              <article class="guide-resource-card">
+                <a class="guide-resource-card__thumb-link" href="https://www.youtube.com/watch?v=J9tnYGr6_10" target="_blank" rel="noopener noreferrer">
+                  <img class="guide-resource-card__thumb" src="https://img.youtube.com/vi/J9tnYGr6_10/hqdefault.jpg" alt="YouTube thumbnail for From Idea to Playable Game in One Video" loading="lazy" decoding="async">
+                </a>
+                <div class="guide-resource-card__body">
+                  <p class="guide-resource-card__type">YouTube</p>
+                  <h3 class="guide-resource-card__title"><a href="https://www.youtube.com/watch?v=J9tnYGr6_10" target="_blank" rel="noopener noreferrer">From Idea to Playable Game in One Video</a></h3>
+                  <p class="guide-resource-card__summary">Best first watch. Covers prompt setup, character creation, reference sheets, animation baking, project planning, and playable build review.</p>
+                </div>
+              </article>
+              <article class="guide-resource-card">
+                <a class="guide-resource-card__thumb-link" href="https://www.youtube.com/watch?v=BIbnt6nsA20" target="_blank" rel="noopener noreferrer">
+                  <img class="guide-resource-card__thumb" src="https://img.youtube.com/vi/BIbnt6nsA20/hqdefault.jpg" alt="YouTube thumbnail for The Character Animation Problem Solved" loading="lazy" decoding="async">
+                </a>
+                <div class="guide-resource-card__body">
+                  <p class="guide-resource-card__type">YouTube</p>
+                  <h3 class="guide-resource-card__title"><a href="https://www.youtube.com/watch?v=BIbnt6nsA20" target="_blank" rel="noopener noreferrer">The Character Animation Problem Solved</a></h3>
+                  <p class="guide-resource-card__summary">Focused tutorial on manifests, animation alignment, adding assets to project, and fixing common integration issues after rebuild.</p>
+                </div>
+              </article>
+              <article class="guide-resource-card">
+                <a class="guide-resource-card__thumb-link" href="https://www.youtube.com/watch?v=6VPtkrR2yBM" target="_blank" rel="noopener noreferrer">
+                  <img class="guide-resource-card__thumb" src="https://img.youtube.com/vi/6VPtkrR2yBM/hqdefault.jpg" alt="YouTube thumbnail for Single Source of Truth Changes Everything" loading="lazy" decoding="async">
+                </a>
+                <div class="guide-resource-card__body">
+                  <p class="guide-resource-card__type">YouTube</p>
+                  <h3 class="guide-resource-card__title"><a href="https://www.youtube.com/watch?v=6VPtkrR2yBM" target="_blank" rel="noopener noreferrer">Single Source of Truth Changes Everything</a></h3>
+                  <p class="guide-resource-card__summary">Short breakdown of asset hygiene in Makko and why one clean source asset prevents drift across multiple projects and updates.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="reveal" data-reveal aria-labelledby="video-embed-title">
+            <h2 id="video-embed-title" class="section-title">Watch the top 3 Makko tutorials</h2>
+            <div class="guide-video-grid">
+              <div class="guide-video-card">
+                <iframe src="https://www.youtube.com/embed/J9tnYGr6_10" title="From Idea to Playable Game in One Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p>Complete start-to-finish walkthrough. Best first video if you are new to Makko.</p>
+              </div>
+              <div class="guide-video-card">
+                <iframe src="https://www.youtube.com/embed/BIbnt6nsA20" title="The Character Animation Problem Solved" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p>Character manifest and animation integration workflow with troubleshooting notes.</p>
+              </div>
+              <div class="guide-video-card">
+                <iframe src="https://www.youtube.com/embed/6VPtkrR2yBM" title="Single Source of Truth Changes Everything for Game Devs" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p>Quick explanation of clean asset workflows and why they matter as projects scale.</p>
               </div>
             </div>
           </section>
