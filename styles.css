@@ -3092,6 +3092,27 @@ a.lore-hub__card--live:hover {
   line-height: 1.45;
 }
 
+.guide-meta {
+  margin: 0.15rem 0 1rem;
+  color: rgba(173, 197, 226, 0.95);
+  font-size: 0.84rem;
+  letter-spacing: 0.01em;
+}
+
+.guide-summary-box {
+  margin: 0.7rem 0 1.1rem;
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(0, 240, 255, 0.26);
+  border-radius: 10px;
+  background: rgba(5, 14, 30, 0.92);
+}
+
+.guide-summary-box p {
+  margin: 0;
+  color: rgba(226, 238, 252, 0.97);
+  line-height: 1.55;
+}
+
 /* Lore strips + crew: same shell and panel chrome as “How it plays” */
 .rules.rules--strip-page,
 .rules.rules--crew-page,
