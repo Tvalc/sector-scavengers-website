@@ -2,7 +2,7 @@
 
 Static HTML/CSS/JS. Deployed with **GitHub Pages** (GitHub Actions).
 
-**Live site:** https://tvalc.github.io/sector-scavengers-website/
+**Live site:** https://sectorscavengers.com/
 
 Large **`.mp4`** files are tracked with **Git LFS** (GitHub rejects blobs over 100MB without it). Install [Git LFS](https://git-lfs.com/) and run `git lfs install` before cloning if videos are missing locally.
 
