@@ -84,6 +84,37 @@
       "eyebrow": "Ping the storefront",
       "title": "Wishlist if you like your odds salty",
       "body": "Steam reads interest the way droids read forms: coldly and in your favor if the numbers move. Tap wishlist if you want the build notes while we keep stacking hub debt, hull risk, and smuggled hope into the same loop you just read about, built with Makko AI."
+    },
+    "intro": {
+      "lead": "Sector Scavengers is an upcoming roguelike deckbuilding game for players who like Slay the Spire style runs and hard card choices. This page also documents how to build a game like Slay the Spire without coding or drawing through practical workflow notes and dev logs."
+    },
+    "guides": {
+      "title": "Player and builder guides",
+      "lead": "Practical pages for two common searches: upcoming roguelike deckbuilding games like Slay the Spire, and how to build this kind of game without coding or drawing.",
+      "updatedTag": "Updated guide",
+      "playersKicker": "For players",
+      "buildersKicker": "For builders",
+      "card1Title": "Upcoming roguelike deckbuilding games",
+      "card1Desc": "What to wishlist and how to evaluate run depth, deck tension, and progression before release.",
+      "card2Title": "Games like Slay the Spire to play next",
+      "card2Desc": "A practical checklist for run-based card games, with Sector Scavengers fit notes and links.",
+      "card3Title": "How to build a Slay the Spire style game without coding or drawing",
+      "card3Desc": "Step-by-step workflow from first loop draft to playable run and weekly balance updates.",
+      "open": "Open",
+      "browse": "Browse all guides"
+    },
+    "homeFaq": {
+      "title": "FAQ",
+      "qLabel": "Q",
+      "aLabel": "A",
+      "q1": "What kind of game is Sector Scavengers?",
+      "a1": "An upcoming roguelike deckbuilding game focused on high-pressure run decisions and progression tradeoffs.",
+      "q2": "Is this for players who like Slay the Spire style runs?",
+      "a2": "Yes. The game is built for players who enjoy tight card decisions, risk management, and replay through run iteration.",
+      "q3": "Can I follow build progress and wishlist updates?",
+      "a3": "Yes. Use <a href=\"#videos\">video dispatches</a>, the <a href=\"guides/dev-updates.html\">development updates index</a>, and the <a href=\"https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/\" target=\"_blank\" rel=\"noopener noreferrer\">Steam page</a>.",
+      "q4": "Can I learn how this was built with Makko?",
+      "a4": "Use the <a href=\"guides/how-to-build-a-slay-the-spire-style-game-without-coding-or-drawing.html\">Makko build guide</a> and linked tutorials."
     }
   },
   "locales": {
@@ -173,6 +204,37 @@
           "eyebrow": "ストアフロントにピング",
           "title": "塩辛いオッズが好きならウィッシュリスト",
           "body": "Steamは関心をドロイドがフォームを読むように冷たく読む——数字が動けばあなたに有利だ。ビルドノートが欲しければウィッシュリストをタップ。ハブの借金、船体リスク、密輸の希望を、今読んだループと同じものに積み上げ続ける。"
+        },
+        "intro": {
+          "lead": "Sector Scavengersは、Slay the Spire系のランと厳しいカード選択が好きなプレイヤー向けの近日公開ローグライクデッキ構築ゲームです。このページでは、コーディングや作画なしで同系統ゲームを作るための実践ワークフローノートと開発ログもまとめています。"
+        },
+        "guides": {
+          "title": "プレイヤー向け・開発者向けガイド",
+          "lead": "よくある2つの検索に向けた実用ページです。Slay the Spire系の近日公開ローグライクデッキ構築ゲーム、そしてコーディングや作画なしでこの種のゲームを作る方法。",
+          "updatedTag": "更新済みガイド",
+          "playersKicker": "プレイヤー向け",
+          "buildersKicker": "開発者向け",
+          "card1Title": "近日公開のローグライクデッキ構築ゲーム",
+          "card1Desc": "何をウィッシュリストに入れるか、そしてリリース前にランの深さ・デッキ緊張感・進行設計をどう評価するか。",
+          "card2Title": "次に遊ぶべきSlay the Spire系ゲーム",
+          "card2Desc": "ラン型カードゲームのための実践チェックリスト。Sector Scavengersの適合メモとリンク付き。",
+          "card3Title": "コーディングや作画なしでSlay the Spire系ゲームを作る方法",
+          "card3Desc": "最初のループ設計からプレイ可能ラン、週次バランス更新までのステップ別ワークフロー。",
+          "open": "開く",
+          "browse": "すべてのガイドを見る"
+        },
+        "homeFaq": {
+          "title": "FAQ",
+          "qLabel": "Q",
+          "aLabel": "A",
+          "q1": "Sector Scavengersはどんなゲームですか？",
+          "a1": "高圧のラン判断と進行トレードオフに焦点を当てた、近日公開のローグライクデッキ構築ゲームです。",
+          "q2": "Slay the Spire系のランが好きなプレイヤー向けですか？",
+          "a2": "はい。厳しいカード判断、リスク管理、ラン反復による再挑戦が好きなプレイヤー向けに作られています。",
+          "q3": "開発進捗やウィッシュリスト更新は追えますか？",
+          "a3": "はい。<a href=\"#videos\">動画ディスパッチ</a>、<a href=\"guides/dev-updates.html\">開発アップデート一覧</a>、<a href=\"https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/\" target=\"_blank\" rel=\"noopener noreferrer\">Steamページ</a>を確認してください。",
+          "q4": "Makkoでどう作ったか学べますか？",
+          "a4": "<a href=\"guides/how-to-build-a-slay-the-spire-style-game-without-coding-or-drawing.html\">Makkoビルドガイド</a>と関連チュートリアルを見てください。"
         }
       }
     },
@@ -262,6 +324,37 @@
           "eyebrow": "Mağazaya ping at",
           "title": "Tuzlu şansları seviyorsan istek listesine ekle",
           "body": "Steam ilgiyi dronların formları okuduğu gibi okur: soğukça ve rakamlar hareket ederse senin lehine. Az önce okuduğun döngüye merkez borcu, gövde riski ve kaçak umut eklemeye devam ederken yapım notlarını istiyorsan istek listesine dokun."
+        },
+        "intro": {
+          "lead": "Sector Scavengers, Slay the Spire tarzı koşuları ve sert kart kararlarını seven oyuncular için yaklaşan bir roguelike deste kurma oyunu. Bu sayfa ayrıca kodlama veya çizim bilmeden bu tür bir oyunun nasıl yapılacağını pratik iş akışı notları ve geliştirme günlükleriyle anlatır."
+        },
+        "guides": {
+          "title": "Oyuncu ve yapımcı rehberleri",
+          "lead": "İki yaygın arama için pratik sayfalar: Slay the Spire gibi yaklaşan roguelike deckbuilder oyunları ve kodlama ya da çizim bilmeden bu tür bir oyunu nasıl yapacağın.",
+          "updatedTag": "Güncellenmiş rehber",
+          "playersKicker": "Oyuncular için",
+          "buildersKicker": "Yapımcılar için",
+          "card1Title": "Yaklaşan roguelike deckbuilder oyunları",
+          "card1Desc": "Neyi istek listesine ekleyeceğin ve çıkıştan önce koşu derinliği, deste gerilimi ve ilerlemeyi nasıl değerlendireceğin.",
+          "card2Title": "Sırada oynanacak Slay the Spire benzeri oyunlar",
+          "card2Desc": "Koşu tabanlı kart oyunları için pratik kontrol listesi, Sector Scavengers uyum notları ve bağlantılarla.",
+          "card3Title": "Kodlama veya çizim olmadan Slay the Spire tarzı oyun nasıl yapılır",
+          "card3Desc": "İlk döngü taslağından oynanabilir koşuya ve haftalık denge güncellemelerine adım adım iş akışı.",
+          "open": "Aç",
+          "browse": "Tüm rehberlere göz at"
+        },
+        "homeFaq": {
+          "title": "SSS",
+          "qLabel": "S",
+          "aLabel": "C",
+          "q1": "Sector Scavengers nasıl bir oyun?",
+          "a1": "Yüksek baskılı koşu kararlarına ve ilerleme takaslarına odaklanan, yakında çıkacak bir roguelike deckbuilder oyunudur.",
+          "q2": "Slay the Spire tarzı koşuları seven oyuncular için mi?",
+          "a2": "Evet. Oyun, sıkı kart kararlarını, risk yönetimini ve koşu tekrarına dayalı tekrar oynanabilirliği seven oyuncular için tasarlandı.",
+          "q3": "Yapım sürecini ve istek listesi güncellemelerini takip edebilir miyim?",
+          "a3": "Evet. <a href=\"#videos\">video gönderilerini</a>, <a href=\"guides/dev-updates.html\">geliştirme güncellemeleri dizinini</a> ve <a href=\"https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/\" target=\"_blank\" rel=\"noopener noreferrer\">Steam sayfasını</a> kullan.",
+          "q4": "Bunun Makko ile nasıl yapıldığını öğrenebilir miyim?",
+          "a4": "<a href=\"guides/how-to-build-a-slay-the-spire-style-game-without-coding-or-drawing.html\">Makko yapım rehberini</a> ve bağlı eğitimleri kullan."
         }
       }
     },
@@ -351,6 +444,37 @@
           "eyebrow": "Ping a la tienda",
           "title": "Lista de deseos si te gustan las probabilidades saladas",
           "body": "Steam lee el interés como los droides leen los formularios: con frialdad y a tu favor si los números se mueven. Toca lista de deseos si quieres las notas de build mientras seguimos apilando deuda del hub, riesgo de casco y esperanza contrabandeada en el mismo bucle que acabas de leer."
+        },
+        "intro": {
+          "lead": "Sector Scavengers es un próximo roguelike de construcción de mazos para jugadores que disfrutan carreras estilo Slay the Spire y decisiones de cartas exigentes. Esta página también documenta cómo crear este tipo de juego sin programar ni dibujar, con notas de flujo de trabajo y devlogs prácticos."
+        },
+        "guides": {
+          "title": "Guías para jugadores y creadores",
+          "lead": "Páginas prácticas para dos búsquedas comunes: próximos roguelike deckbuilders como Slay the Spire y cómo crear este tipo de juego sin programar ni dibujar.",
+          "updatedTag": "Guía actualizada",
+          "playersKicker": "Para jugadores",
+          "buildersKicker": "Para creadores",
+          "card1Title": "Próximos roguelike deckbuilders",
+          "card1Desc": "Qué añadir a wishlist y cómo evaluar profundidad de run, tensión del mazo y progresión antes del lanzamiento.",
+          "card2Title": "Juegos como Slay the Spire para jugar después",
+          "card2Desc": "Checklist práctico para juegos de cartas por runs, con notas de encaje de Sector Scavengers y enlaces.",
+          "card3Title": "Cómo crear un juego estilo Slay the Spire sin programar ni dibujar",
+          "card3Desc": "Flujo paso a paso desde el primer borrador del loop hasta una run jugable y ajustes semanales de balance.",
+          "open": "Abrir",
+          "browse": "Ver todas las guías"
+        },
+        "homeFaq": {
+          "title": "FAQ",
+          "qLabel": "P",
+          "aLabel": "R",
+          "q1": "¿Qué tipo de juego es Sector Scavengers?",
+          "a1": "Un próximo roguelike deckbuilder centrado en decisiones de run de alta presión y compensaciones de progresión.",
+          "q2": "¿Es para jugadores que disfrutan runs estilo Slay the Spire?",
+          "a2": "Sí. El juego está hecho para jugadores que disfrutan decisiones de cartas exigentes, gestión de riesgo y repetición de runs.",
+          "q3": "¿Puedo seguir el progreso y las actualizaciones de wishlist?",
+          "a3": "Sí. Usa los <a href=\"#videos\">video dispatches</a>, el <a href=\"guides/dev-updates.html\">índice de actualizaciones de desarrollo</a> y la <a href=\"https://store.steampowered.com/app/4541430/Sector_Scavengers_Signal__Salvage/\" target=\"_blank\" rel=\"noopener noreferrer\">página de Steam</a>.",
+          "q4": "¿Puedo aprender cómo se construyó esto con Makko?",
+          "a4": "Usa la <a href=\"guides/how-to-build-a-slay-the-spire-style-game-without-coding-or-drawing.html\">guía de creación con Makko</a> y los tutoriales enlazados."
         }
       }
     }
