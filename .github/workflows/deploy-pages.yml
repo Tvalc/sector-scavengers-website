@@ -25,15 +25,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          lfs: false
+          lfs: true
 
-      # When the account LFS budget is available, pull *.mp4 for the site artifact.
-      # Deploy still succeeds if this fails (e.g. "exceeded its LFS budget").
-      - name: Fetch Git LFS videos (optional)
+      # Site falls back to YouTube hero embeds when LFS pull fails (e.g. budget exceeded).
+      - name: Fetch Git LFS videos
         continue-on-error: true
         run: |
           git lfs install --local
-          git lfs pull
+          git lfs pull || echo "::warning::Git LFS pull failed — MP4s on Pages will be pointers; hero uses YouTube fallback."
 
       - uses: actions/configure-pages@v4
 
