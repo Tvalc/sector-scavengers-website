@@ -23,16 +23,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      # lfs: false — checkout must succeed when the account LFS budget is exceeded.
+      # Hero video uses YouTube fallback; dispatch iframes use direct embed src.
       - uses: actions/checkout@v4
         with:
-          lfs: true
-
-      # Site falls back to YouTube hero embeds when LFS pull fails (e.g. budget exceeded).
-      - name: Fetch Git LFS videos
-        continue-on-error: true
-        run: |
-          git lfs install --local
-          git lfs pull || echo "::warning::Git LFS pull failed — MP4s on Pages will be pointers; hero uses YouTube fallback."
+          lfs: false
 
       - uses: actions/configure-pages@v4
 
