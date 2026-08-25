@@ -24,7 +24,7 @@ canvas{position:fixed;inset:0;display:block}
 button{font-family:inherit}
 
 /* ---------- HUD ---------- */
-#hud{position:fixed;inset:0;pointer-events:none;z-index:5;display:flex;flex-direction:column;justify-content:space-between}
+#hud{position:fixed;left:var(--gL,0px);right:var(--gR,0px);top:var(--gT,0px);bottom:var(--gB,0px);pointer-events:none;z-index:5;display:flex;flex-direction:column;justify-content:space-between}
 #hudTop{display:flex;justify-content:space-between;align-items:flex-start;gap:6px;
   padding:calc(8px + env(safe-area-inset-top)) 10px 0}
 .chip{background:rgba(13,23,38,.82);border:2px solid var(--line);border-radius:14px;padding:7px 11px;
@@ -42,7 +42,7 @@ button{font-family:inherit}
 .navBtn:active{transform:scale(.94)}
 .navBtn .dot{position:absolute;display:none}
 .navBtn.alert{border-color:var(--gold)}
-#hint{position:fixed;left:50%;transform:translateX(-50%);bottom:118px;z-index:6;pointer-events:none;
+#hint{position:fixed;left:calc(var(--gL,0px) + (100vw - var(--gL,0px) - var(--gR,0px))/2);transform:translateX(-50%);bottom:calc(var(--gB,0px) + 118px);z-index:6;pointer-events:none;
   background:rgba(13,23,38,.9);border:2px solid var(--line);border-radius:99px;padding:8px 16px;
   font-weight:800;font-size:13px;display:none;animation:hintBob 1.6s ease-in-out infinite}
 @keyframes hintBob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-6px)}}
@@ -138,7 +138,7 @@ button{font-family:inherit}
   border-radius:12px;padding:6px 14px;cursor:pointer;font-size:13px;min-width:64px}
 .tgl button.on{background:var(--mint);color:#06121e;border-color:#06121e}
 
-#toasts{position:fixed;top:calc(60px + env(safe-area-inset-top));left:0;right:0;display:flex;flex-direction:column;
+#toasts{position:fixed;top:calc(var(--gT,0px) + 60px + env(safe-area-inset-top));left:var(--gL,0px);right:var(--gR,0px);display:flex;flex-direction:column;
   align-items:center;gap:7px;z-index:60;pointer-events:none}
 .toast{background:var(--card);border:2.5px solid var(--line);border-radius:99px;padding:8px 17px;font-weight:800;
   font-size:12.5px;box-shadow:0 4px 0 rgba(0,0,0,.4);max-width:90vw;text-align:center;
@@ -155,7 +155,7 @@ button{font-family:inherit}
 #chipTabs{color:var(--aqua)}
 
 /* ---------- ability button ---------- */
-#abilityBtn{position:fixed;left:calc(12px + env(safe-area-inset-left));bottom:calc(96px + env(safe-area-inset-bottom));
+#abilityBtn{position:fixed;left:calc(var(--gL,0px) + 12px + env(safe-area-inset-left));bottom:calc(var(--gB,0px) + 96px + env(safe-area-inset-bottom));
   width:72px;height:72px;border-radius:50%;border:3px solid var(--line);z-index:8;display:none;
   background:rgba(13,23,38,.9);color:var(--txt);cursor:pointer;font-weight:900;touch-action:none}
 #abilityBtn .ae{font-size:26px;display:block;line-height:1.1}
@@ -165,7 +165,7 @@ button{font-family:inherit}
 #abilityBtn .cdRing{position:absolute;inset:-3px;border-radius:50%;pointer-events:none}
 
 /* ---------- taunt button (talk shit, demoralize the fish) ---------- */
-#tauntBtn{position:fixed;right:calc(12px + env(safe-area-inset-right));bottom:calc(96px + env(safe-area-inset-bottom));
+#tauntBtn{position:fixed;right:calc(var(--gR,0px) + 12px + env(safe-area-inset-right));bottom:calc(var(--gB,0px) + 96px + env(safe-area-inset-bottom));
   width:66px;height:66px;border-radius:50%;border:3px solid var(--line);z-index:8;display:none;
   background:rgba(13,23,38,.9);color:var(--txt);cursor:pointer;font-weight:900;touch-action:none}
 #tauntBtn .te{font-size:24px;display:block;line-height:1.1}
@@ -391,6 +391,7 @@ button{font-family:inherit}
     <div class="tgl">SFX <button id="tSfx">ON</button></div>
     <div class="tgl">MUSIC <button id="tMusic">ON</button></div>
     <div class="tgl">HAPTICS <button id="tHap">ON</button></div>
+    <div class="tgl">ART STYLE <button id="tStyle" style="min-width:96px">OG 😎</button></div>
     <button class="btn aqua" id="setShop">🛒 UPGRADES</button>
     <button class="btn aqua" id="setZone">🗺️ THE MAP</button>
     <button class="btn aganeBtn" id="setAgane" hidden>🔁 GO AGANE</button>
@@ -703,6 +704,7 @@ function defSave(){return {v:2,clams:0,xp:0,zone:0,zonesOwned:[0],gatePaid:[0],
   secrets:{fails:0,jiggles:0,pending:''},
   vendy:0,hints:{brace:0,cook:0},
   stats:{casts:0,fish:0,junk:0,bigW:0,bigSp:'',wins:0,defeats:0,flawless:0,pulls:0},
+  style:'og',                                   // active art style pack (see STYLES)
   set:{sfx:1,music:1,hap:1}}}
 /* v1 → v2 migration map:
    clams  = v1 clams + Σ sack[i].sell           (sack + SELL button are deleted; auto-award now)
@@ -978,7 +980,7 @@ function vib(p){if(save.set.hap&&navigator.vibrate)try{navigator.vibrate(p)}catc
 
 /* ---------- canvas / view ---------- */
 const W=430,H=620,WATER_Y=300;
-const cv=$('cv'),x=cv.getContext('2d');
+const cv=$('cv');let x=cv.getContext('2d');   // x is 'let' so fishImgURL can temporarily retarget it to an offscreen canvas
 const view={s:1,ox:0,oy:0,dpr:1,cw:0,ch:0};
 function resize(){
   const dpr=Math.min(2,window.devicePixelRatio||1);
@@ -987,6 +989,10 @@ function resize(){
   cv.style.width=cw+'px';cv.style.height=ch+'px';
   view.dpr=dpr;view.cw=cw;view.ch=ch;
   view.s=Math.min(cw/W,ch/H);view.ox=(cw-W*view.s)/2;view.oy=(ch-H*view.s)/2;
+  // v2.7: publish the game-frame rect so HTML UI anchors to the game column, not the window edges
+  const gw=W*view.s,gh=H*view.s,rs=document.documentElement.style;
+  rs.setProperty('--gL',view.ox+'px');rs.setProperty('--gR',(cw-view.ox-gw)+'px');
+  rs.setProperty('--gT',view.oy+'px');rs.setProperty('--gB',(ch-view.oy-gh)+'px');
 }
 addEventListener('resize',resize);
 function toGame(e){const r=cv.getBoundingClientRect();
@@ -2056,7 +2062,12 @@ function renderCatch(c){
   const bA=hx(rcol),bAl=c.shiny?0.24:(c.r>=3?0.17:0.08);
   card.style.setProperty('--burstc','rgba('+bA[0]+','+bA[1]+','+bA[2]+','+bAl+')');
   const hat=c.kind==='fish'&&eqRod()&&eqRod().sparkle&&Math.random()<0.01;
-  $('cEmoji').textContent=c.e+(hat?'🎩':'');                     // 1% tiny hat (wand)
+  const inkSp=c.kind==='fish'&&TH().fish==='ink'?SPECIES.find(s=>s.id===c.id):null;
+  const ce=$('cEmoji');
+  if(inkSp){ce.textContent=hat?'🎩':'';ce.style.backgroundImage='url('+fishImgURL(inkSp,150)+')';
+    ce.style.backgroundSize='contain';ce.style.backgroundRepeat='no-repeat';ce.style.backgroundPosition='center';
+    ce.style.width='150px';ce.style.height='150px';ce.style.margin='0 auto'}
+  else{ce.style.backgroundImage='';ce.style.width='';ce.style.height='';ce.style.margin='';ce.textContent=c.e+(hat?'🎩':'')}  // emoji style / junk
   $('cEmoji').style.filter=c.shiny?'drop-shadow(0 0 18px #fff) saturate(1.6)':'drop-shadow(0 6px 12px rgba(0,0,0,.45))';
   const realName=(c.shiny?'✨ ':'')+c.n;
   if(c.kind==='fish'&&eqRod()&&eqRod().runes){ // VOID ANTENNA: void-runes for 1s, then translates
@@ -2634,6 +2645,7 @@ function renderSet(){
     +(save.aganeCount?' · agane ×'+save.aganeCount+' · ✨ '+fmt(save.aura):'');
   const set=(id,on)=>{const b=$(id);b.textContent=on?'ON':'OFF';b.classList.toggle('on',!!on)};
   set('tSfx',save.set.sfx);set('tMusic',save.set.music);set('tHap',save.set.hap);
+  $('tStyle').textContent=TH().name+' '+TH().emo;$('tStyle').classList.add('on');
   $('setAgane').hidden=!aganeUnlocked();
 }
 const MODALS=['mDex','mShop','mQuest','mZone','mSet','mCatch','mVendy','mTeam','mOpp','mAgane'];
@@ -2677,6 +2689,7 @@ $('oppShare').onclick=()=>{sfx('ui');doShare(shareOppText())};
 $('tSfx').onclick=()=>{initAudio();save.set.sfx=save.set.sfx?0:1;persist();renderSet();sfx('ui')};
 $('tMusic').onclick=()=>{initAudio();save.set.music=save.set.music?0:1;persist();renderSet();sfx('ui')};
 $('tHap').onclick=()=>{save.set.hap=save.set.hap?0:1;persist();renderSet();sfx('ui')};
+$('tStyle').onclick=()=>{initAudio();sfx('ui');const ids=Object.keys(STYLES);save.style=ids[(ids.indexOf(save.style)+1)%ids.length];persist();applyStyle();renderSet();toast('🎨 style: '+TH().name)};
 // ability button: own pointer surface (72px, bottom-left)
 $('abilityBtn').addEventListener('pointerdown',e=>{e.preventDefault();e.stopPropagation();initAudio();abilityUse()});
 $('tauntBtn').addEventListener('pointerdown',e=>{e.preventDefault();e.stopPropagation();initAudio();playerTaunt()});
@@ -2711,8 +2724,130 @@ document.addEventListener('visibilitychange',()=>{
 });
 
 /* =====================================================================
-   RENDER ENGINE — dynamic light, layered parallax, live water reflection
+   ART STYLES — swappable "style packs". Each maps the game's art slots to
+   procedural | emoji | (future) image. Default 'og' = emoji + procedural bg.
+   Add packs here; Makko image packs slot in later via the same interface.
    ===================================================================== */
+const STYLES={
+  og:{name:'OG',emo:'😎',fish:'emoji',
+    ui:{'--gold':'#ffd54a','--aqua':'#3fd8ff','--mint':'#5dffa8','--pink':'#ff6ec7','--card':'#101b2a','--line':'#27364d','--txt':'#eef4ff','--dim':'#7d90ad'},
+    font:'ui-rounded,"Segoe UI",system-ui,-apple-system,sans-serif'},
+  inked:{name:'INKED',emo:'🖊️',fish:'ink',
+    ui:{'--gold':'#ffcf33','--aqua':'#43d0ff','--mint':'#4dffb0','--pink':'#ff5cc8','--card':'#171225','--line':'#3a2f52','--txt':'#f6f1ff','--dim':'#9b8fc0'},
+    font:'"Comic Sans MS","Chalkboard SE",ui-rounded,system-ui,sans-serif'},  // bold hand-drawn vibe
+};
+function TH(){return STYLES[save.style]||STYLES.og}
+function applyStyle(){
+  const st=TH(),r=document.documentElement;
+  for(const k in st.ui)r.style.setProperty(k,st.ui[k]);
+  document.body.style.fontFamily=st.font;
+  fishURLCache={};                                   // invalidate cached fish images
+}
+
+/* ---- INKED: parametric drawn-fish renderer (bold outline + flat color + emoji accessory) ---- */
+function hsl(h,s,l){return 'hsl('+((h%360+360)%360)+','+clamp(s,0,100)+'%,'+clamp(l,0,100)+'%)'}
+function hashStr(s){let h=2166136261;for(let i=0;i<(s||'').length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
+const INK={};                                        // hand-authored overrides: id → partial spec
+function autoInk(sp){
+  const h=hashStr(sp.id),r=sp.r<0?0:sp.r,z=sp.z||0;
+  const zoneHue=[135,205,190,268,300][z]!==undefined?[135,205,190,268,300][z]:200;
+  const spec={
+    hue:(zoneHue+((h%54)-27)+360)%360,
+    sat:[46,54,60,66,70,78][r]||58, light:[60,58,57,55,53,57][r]||57,
+    body:['round','long','chonky','blob','tall','round','long'][h%7],
+    eye:['dot','big','angry','sleepy','wide','dead','googly'][(h>>3)%7],
+    mouth:['smile','flat','smirk','o','frown','teeth'][(h>>6)%6],
+    fin:(h>>9)%3, pattern:['none','none','stripes','spots'][(h>>11)%4],
+    feat:[], glow:r>=4,
+  };
+  if(r===5)spec.feat.push('👑'); else if(r===4)spec.feat.push('🕶️'); else if(r===3&&(h>>13)%2)spec.feat.push('✨');
+  if((h>>16)%6===0)spec.feat.push('💧'); if((h>>18)%7===0)spec.feat.push('❗');
+  return spec;
+}
+function inkSpec(sp){const a=autoInk(sp);return INK[sp.id]?Object.assign(a,INK[sp.id]):a}
+function inkEye(c,ex,ey,S,line){
+  const R=S*0.14;
+  if(c==='dot'){c2fill('#12101a',ex,ey,R*0.55);return}
+  if(c==='dead'){x.strokeStyle=line;x.lineWidth=S*0.05;x.lineCap='round';
+    x.beginPath();x.moveTo(ex-R*0.6,ey-R*0.6);x.lineTo(ex+R*0.6,ey+R*0.6);x.moveTo(ex+R*0.6,ey-R*0.6);x.lineTo(ex-R*0.6,ey+R*0.6);x.stroke();return}
+  // white base
+  c2fill('#fff',ex,ey,R); x.strokeStyle=line;x.lineWidth=S*0.03;x.beginPath();x.arc(ex,ey,R,0,7);x.stroke();
+  let px=ex,py=ey,pr=R*0.5;
+  if(c==='big'){pr=R*0.62}
+  else if(c==='wide'){pr=R*0.34}
+  else if(c==='googly'){px+=R*0.3;py+=R*0.25;pr=R*0.5}
+  else if(c==='sleepy'){x.fillStyle='#12101a';x.fillRect(ex-R,ey-R,R*2,R*0.55);pr=R*0.4}
+  else if(c==='angry'){x.strokeStyle=line;x.lineWidth=S*0.05;x.beginPath();x.moveTo(ex-R,ey-R*1.1);x.lineTo(ex+R*0.8,ey-R*0.4);x.stroke()}
+  c2fill('#12101a',px,py,pr);
+  c2fill('rgba(255,255,255,.9)',px-pr*0.3,py-pr*0.3,pr*0.32);
+}
+function c2fill(col,cx,cy,rr){x.fillStyle=col;x.beginPath();x.arc(cx,cy,rr,0,7);x.fill()}
+function inkMouth(c,mx,my,S,line){
+  x.strokeStyle=line;x.lineWidth=S*0.045;x.lineCap='round';x.fillStyle=line;const w=S*0.16;
+  if(c==='smile'){x.beginPath();x.arc(mx-w*0.4,my,w,-0.2,1.2);x.stroke()}
+  else if(c==='frown'){x.beginPath();x.arc(mx-w*0.4,my+w,w,-1.2,0.2);x.stroke()}
+  else if(c==='flat'){x.beginPath();x.moveTo(mx-w,my);x.lineTo(mx+w*0.3,my);x.stroke()}
+  else if(c==='smirk'){x.beginPath();x.moveTo(mx-w,my);x.quadraticCurveTo(mx,my+w*0.5,mx+w*0.4,my-w*0.3);x.stroke()}
+  else if(c==='o'){x.beginPath();x.arc(mx,my,w*0.5,0,7);x.stroke()}
+  else if(c==='teeth'){x.beginPath();x.arc(mx-w*0.4,my,w,-0.1,1.3);x.stroke();
+    x.fillStyle='#fff';for(let i=0;i<3;i++){x.fillRect(mx-w*0.7+i*w*0.5,my+w*0.2,w*0.28,w*0.4)}}
+}
+function drawInkFish(sp,S,t,o){
+  o=o||{};const spec=inkSpec(sp);
+  const H=spec.hue,sa=spec.sat,L=spec.light;
+  const body=hsl(H,sa,L),belly=hsl(H,sa*0.65,Math.min(93,L+24)),line=hsl(H,Math.min(72,sa+6),Math.max(15,L-36)),finC=hsl(H,sa,Math.max(22,L-14));
+  const R={round:[1,1],long:[1.35,0.78],chonky:[1.02,1.18],blob:[1.16,0.98],tall:[0.82,1.28],eel:[1.7,0.58]}[spec.body]||[1,1];
+  const rx=S*0.40*R[0],ry=S*0.32*R[1],lw=Math.max(1.6,S*0.05);
+  x.save();
+  // tail
+  x.save();x.translate(-rx*0.88,0);const tw=S*0.28,th=S*0.30;
+  x.beginPath();x.moveTo(0,0);x.lineTo(-tw,-th);x.quadraticCurveTo(-tw*0.4,0,-tw,th);x.closePath();
+  x.fillStyle=finC;x.strokeStyle=line;x.lineWidth=lw;x.fill();x.stroke();x.restore();
+  // dorsal fin
+  x.beginPath();
+  if(spec.fin===1){for(let i=0;i<4;i++){x.lineTo(-rx*0.5+i*rx*0.33,-ry*0.9-((i%2)?S*0.16:0))}}
+  else{x.moveTo(-rx*0.5,-ry*0.8);x.quadraticCurveTo(0,-ry*1.5,rx*0.35,-ry*0.85)}
+  x.lineTo(rx*0.3,-ry*0.5);x.lineTo(-rx*0.5,-ry*0.5);x.closePath();
+  x.fillStyle=finC;x.strokeStyle=line;x.lineWidth=lw;x.fill();x.stroke();
+  // body
+  x.beginPath();x.ellipse(0,0,rx,ry,0,0,7);x.fillStyle=body;x.fill();
+  // belly + pattern (clipped)
+  x.save();x.clip();
+  const bg=x.createLinearGradient(0,-ry,0,ry);bg.addColorStop(0,'rgba(255,255,255,0)');bg.addColorStop(0.55,'rgba(255,255,255,0)');bg.addColorStop(1,belly);
+  x.fillStyle=bg;x.fillRect(-rx,-ry,rx*2,ry*2);
+  x.fillStyle='rgba(255,255,255,.16)';x.beginPath();x.ellipse(-rx*0.15,-ry*0.4,rx*0.7,ry*0.4,0,0,7);x.fill();
+  if(spec.pattern==='stripes'){x.strokeStyle='rgba(0,0,0,.16)';x.lineWidth=S*0.09;for(let i=-2;i<=2;i++){x.beginPath();x.moveTo(i*rx*0.4,-ry);x.lineTo(i*rx*0.4-rx*0.2,ry);x.stroke()}}
+  else if(spec.pattern==='spots'){x.fillStyle='rgba(0,0,0,.14)';for(let i=0;i<5;i++){const a=hashStr(sp.id+i);c2fill('rgba(0,0,0,.13)',(a%100/100-0.5)*rx*1.4,((a>>7)%100/100-0.5)*ry*1.4,S*0.06)}}
+  x.restore();
+  // body outline
+  x.beginPath();x.ellipse(0,0,rx,ry,0,0,7);x.strokeStyle=line;x.lineWidth=lw;x.stroke();
+  // pectoral fin
+  x.save();x.translate(rx*0.05,ry*0.35);x.rotate(0.5);
+  x.beginPath();x.ellipse(0,0,S*0.14,S*0.08,0,0,7);x.fillStyle=finC;x.strokeStyle=line;x.lineWidth=lw*0.8;x.fill();x.stroke();x.restore();
+  // eye + mouth (front = right)
+  inkEye(spec.eye,rx*0.48,-ry*0.22,S,line);
+  inkMouth(spec.mouth,rx*0.72,ry*0.3,S,line);
+  // emoji accessories (personality)
+  if(spec.feat&&spec.feat.length){x.font=Math.round(S*0.42)+'px "Segoe UI Emoji",sans-serif';x.textAlign='center';x.textBaseline='middle';
+    spec.feat.forEach((e,i)=>{const pos=e==='👑'||e==='✨'?[0,-ry-S*0.18]:e==='🕶️'?[rx*0.4,-ry*0.22]:[rx*0.9+i*S*0.2,-ry*0.6];x.fillText(e,pos[0],pos[1])})}
+  x.restore();
+}
+/* dispatch: draws the fish for the ACTIVE style, centered at (0,0) in current transform */
+function drawFishArt(sp,S,t,o){
+  if(TH().fish==='ink'){drawInkFish(sp,S,t,o)}
+  else{x.font=Math.round(S)+'px "Segoe UI Emoji",sans-serif';x.textAlign='center';x.textBaseline='middle';x.fillText(sp.e,0,0)}
+}
+/* offscreen render → cached data URL, for HTML contexts (catch card, dex, opp) */
+let fishURLCache={};
+const fishCV=document.createElement('canvas'),fishCX=fishCV.getContext('2d');
+function fishImgURL(sp,px){
+  const key=sp.id+'_'+px;if(fishURLCache[key])return fishURLCache[key];
+  if(TH().fish!=='ink'){return fishURLCache[key]=null}       // emoji styles use text, not an image
+  const P=px*2;fishCV.width=P;fishCV.height=P;
+  const _x=x;x=fishCX;x.clearRect(0,0,P,P);x.save();x.translate(P/2,P/2);
+  drawInkFish(sp,P*0.62,0,{});x.restore();x=_x;
+  return fishURLCache[key]=fishCV.toDataURL();
+}
 /* ---------- color helpers (RGB arrays) ---------- */
 function hx(c){const n=parseInt(c.slice(1),16);return [n>>16&255,n>>8&255,n&255]}
 function lerpA(A,B,t){return [lerp(A[0],B[0],t),lerp(A[1],B[1],t),lerp(A[2],B[2],t)]}
@@ -3360,6 +3495,11 @@ function drawGrade(t,L,golden){
   const vg=x.createRadialGradient(cw/2,ch*0.46,Math.min(cw,ch)*0.42,cw/2,ch*0.5,Math.max(cw,ch)*0.78);
   vg.addColorStop(0,'rgba(2,6,16,0)');vg.addColorStop(1,'rgba(2,6,16,.34)');
   x.fillStyle=vg;x.fillRect(0,0,cw,ch);
+  // v2.7: opaque letterbox bars — the scene is bounded to ONE clean frame (no full-bleed sprawl on wide/tall windows)
+  const gw=W*view.s,gh=H*view.s,gl=view.ox,gt=view.oy;
+  if(gl>0.5||gt>0.5){x.fillStyle='#070d16';
+    if(gl>0.5){x.fillRect(0,0,Math.ceil(gl),ch);x.fillRect(gl+gw,0,cw-gl-gw+1,ch)}
+    if(gt>0.5){x.fillRect(0,0,cw,Math.ceil(gt));x.fillRect(0,gt+gh,cw,ch-gt-gh+1)}}
   x.setTransform(dpr*view.s,0,0,dpr*view.s,dpr*view.ox,dpr*view.oy);
 }
 /* =====================================================================
@@ -3447,8 +3587,7 @@ function drawFight(t){
     x.fillStyle='rgba(255,'+(f.phase>2?60:120)+',60,.18)';
     x.beginPath();x.arc(0,0,sz*0.7,0,7);x.fill();
   }
-  x.font=Math.round(sz)+'px "Segoe UI Emoji",sans-serif';x.textAlign='center';x.textBaseline='middle';
-  x.fillText(f.sp.e,0,0);
+  drawFishArt(f.sp,sz,t,{phase:f.phase,state:f.state});      // active art style (emoji or INKED procedural)
   if(f.fx.flash>0){x.globalAlpha=Math.min(1,f.fx.flash*18);x.globalCompositeOperation='source-atop';
     x.fillStyle='#fff';x.fillRect(-sz,-sz,sz*2,sz*2);x.globalCompositeOperation='source-over';x.globalAlpha=1}
   if(f.fx.gold>0){x.globalAlpha=Math.min(1,f.fx.gold*12);
@@ -3855,6 +3994,7 @@ window.__bfe={
 
 /* ---------- boot ---------- */
 loadSave();
+applyStyle();                                 // apply active art-style pack (UI theme + font)
 ensureQuests();
 resize();
 refreshHUD();
