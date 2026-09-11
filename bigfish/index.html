@@ -3455,8 +3455,10 @@ function drawBobber(px,py,t,tilt){
   x.fillStyle='rgba(255,255,255,.85)';x.beginPath();x.arc(-1.6,-2.2,1.1,0,7);x.fill();
   x.restore();
 }
-function drawMakkoAngler(t){                        // MAKKO: illustrated angler on the live canvas over the backdrop
-  const e=makkoLoad('art/makko/angler.png');
+function drawMakkoAngler(t){                        // MAKKO: illustrated angler — swaps to the EQUIPPED angler (all 14 share the default pose so they drop in the same spot)
+  const aid=save.equipped&&save.equipped.angler;
+  let e=aid?makkoLoad('art/makko/angler/'+aid+'.png'):null;
+  if(!e||e.state!=='ok')e=makkoLoad('art/makko/angler.png');   // default fisherman while the equipped one loads / if none
   if(e.state!=='ok'||!e.img)return;
   const img=e.img,iw=img.naturalWidth||1,ih=img.naturalHeight||1;
   const w=ART_ANGLER.w,h=w*ih/iw;
@@ -3466,9 +3468,22 @@ function drawMakkoAngler(t){                        // MAKKO: illustrated angler
   x.drawImage(img,px,py,w,h);
   x.restore();
 }
+function drawMakkoPet(t){                           // MAKKO: equipped pet companion perched on the dock beside the angler
+  const pid=save.equipped&&save.equipped.pet;
+  if(!pid)return;
+  const e=makkoLoad('art/makko/pet/'+pid+'.png');
+  if(e.state!=='ok'||!e.img)return;
+  const img=e.img,iw=img.naturalWidth||1,ih=img.naturalHeight||1;
+  const w=66,h=w*ih/iw;
+  const px=ART_ANGLER.x+ART_ANGLER.w-52, py=WATER_Y-h+14+Math.sin(t*1.5)*2;
+  x.save();
+  x.shadowColor='rgba(0,0,0,.3)';x.shadowBlur=7;x.shadowOffsetY=4;
+  x.drawImage(img,px,py,w,h);
+  x.restore();
+}
 function drawGameplay(t){
   nibTilt*=0.94;
-  if(TH().fish==='image')drawMakkoAngler(t);       // draw the illustrated angler before the line/bobber so the line sits on top
+  if(TH().fish==='image'){drawMakkoAngler(t);drawMakkoPet(t);}   // illustrated angler + equipped pet, before the line/bobber
   const tip=rodTip(t);
   if(state==='cast'){
     const ct=Math.min(1,castT);
