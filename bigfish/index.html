@@ -243,6 +243,10 @@ button{font-family:inherit}
 #cQuote{font-size:12px;font-weight:700;font-style:italic;color:var(--dim);margin-top:8px;min-height:14px}
 #cFit{font-size:10.5px;font-weight:900;color:var(--aqua);margin-top:4px;letter-spacing:.08em}
 .aganeBtn{background:linear-gradient(100deg,var(--pink),#c14bff)!important;color:#fff!important}
+/* --- CLEAN FISHING: hide the metagame dashboard while casting/fighting; it returns at idle + on the catch card --- */
+#hudTop,#nav,#abilityBtn,#tauntBtn{transition:opacity .3s ease}
+body.fishing #hudTop,body.fishing #nav,body.fishing #abilityBtn,body.fishing #tauntBtn{opacity:0;pointer-events:none}
+body.fishing #hint{display:none}
 </style>
 </head>
 <body>
@@ -3048,6 +3052,7 @@ function rodTip(t){
 }
 let stars=null;
 function drawScene(t){
+  document.body.classList.toggle('fishing',state==='cast'||state==='wait'||state==='bite'||state==='fight');  // clean screen during the fishing flow
   if(lastZone!==save.zone){lastZone=save.zone;genScenery()}
   const L=getLight(),wx=weather(),night=isNight(),golden=goldenActive(),Z=ZP[save.zone];
   const cel=celestialPos();
@@ -3822,14 +3827,8 @@ function drawFightHUD(t,fp){
   x.fillStyle=RCOL[f.r];
   const nm=f.sp.n+(f.shiny?' ✨':'')+(f.enraged?' 🔥ENRAGED':'');
   x.fillText(nm.length>28?nm.slice(0,27)+'…':nm,px+10,py+11);
-  // v2.3/2.4: live mood — reflects the LOWER of HP and morale, so talking shit visibly rattles it
-  const spirit=Math.min(clamp(f.hp/f.hpMax,0,1),f.morale/100);
-  const mt=f.foldT>0?2:(spirit>0.6?0:spirit>0.28?1:2);
-  if(mt!==f.moodTier){f.moodTier=mt;f.moodWord=pickLine([HUM.status.hi,HUM.status.mid,HUM.status.lo][mt])}
-  const moodTxt=f.foldT>0?'😵 FOLDED':f.moodWord;
-  x.textAlign='right';x.font='900 italic 10px system-ui';
-  x.fillStyle=f.foldT>0?'#ff6ec7':['#5dffa8','#ffd54a','#ff6a6a'][mt];
-  x.fillText(moodTxt+(f.morale<100&&f.foldT<=0?' 😤'+Math.round(f.morale):'')+(f.grudged?' 😾':''),px+pw-10,py+11);
+  // clean panel: fish name only (state reads on the strip below); a FOLDED tag only when demoralized
+  if(f.foldT>0){x.textAlign='right';x.font='900 italic 10px system-ui';x.fillStyle='#ff6ec7';x.fillText('😵 FOLDED',px+pw-10,py+11);}
   // HP bar (mythic = 3 bars stacked look: show bar count chip)
   const hx2=px+10,hw=pw-20,hy=py+22,hh=13;
   x.fillStyle='rgba(255,255,255,.08)';
