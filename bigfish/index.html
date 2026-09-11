@@ -3657,7 +3657,7 @@ function drawFight(t){
     x.fillStyle=g;x.fillRect(fp.x-42,fp.y-42,84,84);
   }
   // the fish itself (emoji actor) + hit flashes
-  const sz=(24+f.r*4)*fp.s*(f.fx.zoom>0?1+0.06*Math.sin(f.fx.zoom*Math.PI):1);
+  const sz=(24+f.r*4)*fp.s*(f.fx.zoom>0?1+0.06*Math.sin(f.fx.zoom*Math.PI):1)*(TH().fish==='image'?2.6:1);   // MAKKO sprites are detailed → render the fight fish much larger so the art is showcased (emoji/ink stay original size)
   x.save();x.translate(fp.x,fp.y);x.rotate(fp.rot);
   // phase tint shifts hotter
   if(f.phase>1&&isFishy(f.state)){
