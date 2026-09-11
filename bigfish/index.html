@@ -253,6 +253,7 @@ button{font-family:inherit}
     <div style="display:flex;flex-direction:column;gap:5px;align-items:flex-start">
       <div class="chip" id="chipClams">🪙 0<small>CLAMS</small></div>
       <div class="chip" id="chipTabs">🎫 0<small>TABS</small></div>
+      <div class="chip" id="chipLint">🧶 0<small>LINT</small></div>
       <div class="chip" id="chipAura">✨ 0<small>AURA</small></div>
     </div>
     <div class="chip" id="lvlWrap"><span id="lvlTxt">LVL 1 · Bait Baby</span>
@@ -2028,7 +2029,7 @@ function finishCatch(){
   const dexN=Object.keys(save.dex).length,total=ALLFISH.length;
   if(isNew&&(dexN===Math.ceil(total*0.25)||dexN===Math.ceil(total*0.5)||dexN===Math.ceil(total*0.75)))
     toast('📖 fishdex '+Math.round(dexN/total*100)+'% — collector arc');
-  if(dexN===total)toast('📖 FISHDEX 100% — THE FINAL FISHERMAN 🏆');
+  if(dexN===total&&!save.dex100){save.dex100=1;toast('📖 FISHDEX 100% — THE FINAL FISHERMAN 🏆')}
   const postLvl=levelFor(save.xp);
   for(let l=preLvl+1;l<=postLvl;l++){toast('⬆️ LVL '+l+' — '+titleFor(l));sfx('lvl')}
   lastCatch={kind:'fish',id:sp.id,e:sp.e,n:sp.n,r:f.r,w:f.wgt,shiny:f.shiny,clams,xp,tabs,
@@ -2129,6 +2130,7 @@ setInterval(()=>{
   }
   save.clams+=clams;save.xp+=xpT;
   save.lifetimeRun+=clams;save.lifetimeAll+=clams;
+  if(Object.keys(save.dex).length===ALLFISH.length&&!save.dex100){save.dex100=1;toast('📖 FISHDEX 100% — THE FINAL FISHERMAN 🏆')}  // caddy can complete the dex too
   toast('🤖 auto-caddy bonked '+owed+' commons → +'+fmt(clams)+' 🪙 (no tabs. it keeps those.)');
   persist();refreshHUD();
 },1000);
@@ -2167,6 +2169,9 @@ async function doShare(txt){
 function refreshHUD(){
   $('chipClams').firstChild.textContent='🪙 '+fmt(save.clams);
   $('chipTabs').firstChild.textContent='🎫 '+fmt(save.tabs);
+  const showLint=(save.lint|0)>0;                              // LINT is glanceable now (only shown once you have some)
+  $('chipLint').style.display=showLint?'block':'none';
+  if(showLint)$('chipLint').firstChild.textContent='🧶 '+fmt(save.lint);
   const showAura=save.aganeCount>0;
   $('chipAura').style.display=showAura?'block':'none';
   if(showAura)$('chipAura').firstChild.textContent='✨ '+fmt(save.aura);
@@ -2514,14 +2519,17 @@ function renderTeamDetail(){
   eqB.disabled=isEq;
   eqB.onclick=()=>{save.equipped[it.cat]=it.id;persist();sfx('buy');renderTeam();refreshHUD();abilityBtnShow(state==='fight')};
   act.appendChild(eqB);
-  if(inv.rank<TUNE.RANK_MAX){
+  if(it.cat==='fit'){                                          // FITs are cosmetic titles (no passive) → ranking does nothing, so no RANK UP
+    const c=document.createElement('button');c.className='btn ghost';c.textContent='COSMETIC FIT ✨';c.disabled=true;
+    act.appendChild(c);
+  }else if(inv.rank<TUNE.RANK_MAX){
     const cost=rankCost(inv.rank);
     const rkB=document.createElement('button');rkB.className='btn gold';
     rkB.textContent='RANK UP · '+fmt(cost)+' 🧶';
     rkB.disabled=save.lint<cost;
     rkB.onclick=()=>{if(save.lint<cost)return;
       save.lint-=cost;inv.rank++;persist();sfx('lvl');vib(15);
-      toast('✨ '+it.n+' → AURA RANK '+inv.rank);renderTeam()};
+      toast('✨ '+it.n+' → AURA RANK '+inv.rank);renderTeam();refreshHUD()};
     act.appendChild(rkB);
   }else{
     const mx=document.createElement('button');mx.className='btn ghost';mx.textContent='MAX AURA ✨';mx.disabled=true;
@@ -2576,7 +2584,7 @@ function renderOpp(){
   $('oppName').textContent=opp.sp.n;
   $('oppMods').innerHTML=opp.mods.map(m=>'<span class="badge">'+OPP_MODS[m]+'</span>').join('');
   $('oppGrade').textContent=o.bestGrade||'—';
-  $('oppGrade').className='grade'+(o.bestGrade||'C');
+  $('oppGrade').className=o.bestGrade?'grade'+o.bestGrade:'grade';   // no fight yet → neutral, not a fake "C"
   $('oppScoreLine').textContent=o.bestScore?('best today: '+fmt(o.bestScore)+' pts'+(o.lastParts?' · TIME '+fmt(o.lastParts.TIME)+' · SURV '+fmt(o.lastParts.SURV)+' · STYLE '+fmt(o.lastParts.STYLE):'')):'unfought. it\'s talking wild about you rn.';
   $('oppStreak').textContent='🔥 opp streak: '+o.streak+' day'+(o.streak===1?'':'s')+' (cap +'+TUNE.OPP_STREAK_CAP+' 🎫 · day-7 chest)';
   $('oppClaim').hidden=!(o.bestGrade&&!o.claimed);
