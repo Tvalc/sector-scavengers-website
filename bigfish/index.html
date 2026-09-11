@@ -2382,6 +2382,12 @@ function doPull(n){
   persist();refreshHUD();
   return res;
 }
+function itemArtPath(id){const c={a:'angler',p:'pet',r:'rod',f:'fit'}[id&&id[0]];return c?'art/makko/'+c+'/'+id+'.png':null;}
+function itemIconHTML(item,px){                     // illustrated gacha icon (emoji fallback off-makko / if missing)
+  const p=item&&itemArtPath(item.id);
+  if(p&&TH().fish==='image')return '<span style="display:inline-block;width:'+px+'px;height:'+px+'px;background:url(\''+p+'\') center/contain no-repeat;vertical-align:middle"></span>';
+  return '<span style="font-size:'+Math.round(px*0.82)+'px;line-height:1;vertical-align:middle">'+((item&&item.e)||'🎁')+'</span>';
+}
 function renderVendy(){
   $('vendySub').textContent='🎫 '+fmt(save.tabs)+' · only accepts can tabs. do not ask why.';
   const glass=$('vGlass');glass.innerHTML='';
@@ -2448,7 +2454,7 @@ function revealPull(){
     card.style.display='block';
     card.querySelector('.pr').textContent=RAR[q.r]+(q.isNew?' · NEW':' · DUPE → +'+q.lint+' 🧶');
     card.querySelector('.pr').style.color=RCOL[q.r];
-    card.querySelector('.pe').textContent=q.cat==='fit'?'🧢':q.item.e;
+    card.querySelector('.pe').innerHTML=itemIconHTML(q.item,84);
     card.querySelector('.pn').textContent=q.item.n;
     card.querySelector('.pd').textContent=(q.cat==='fit'?'FIT · '+q.item.d:(q.item.pt||q.item.d||'')+(q.item.an?' · ACTIVE: '+q.item.an:''));
   }else{
@@ -2456,7 +2462,7 @@ function revealPull(){
     res.forEach((q,i)=>{
       const c=document.createElement('div');c.className='pgCell';
       c.style.borderColor=RCOL[q.r];c.style.animationDelay=(i*0.07)+'s';
-      c.innerHTML='<div class="ge">'+(q.cat==='fit'?'🧢':q.item.e)+'</div><div class="gn">'+q.item.n+'</div>'
+      c.innerHTML='<div class="ge">'+itemIconHTML(q.item,44)+'</div><div class="gn">'+q.item.n+'</div>'
         +'<div class="gn" style="color:'+RCOL[q.r]+'">'+(q.isNew?'NEW':'+'+q.lint+'🧶')+'</div>';
       grid.appendChild(c);
     });
@@ -2481,7 +2487,7 @@ function renderTeam(){
     const id=save.equipped[cat],it=id?gItem(id):null;
     const s2=document.createElement('div');
     s2.className='tSlot'+(teamCat===cat?' sel':'');
-    s2.innerHTML='<div class="tk">'+CAT_LABEL[cat]+'</div><div class="te">'+(it?(cat==='fit'?'🧢':it.e):'➕')+'</div>'
+    s2.innerHTML='<div class="tk">'+CAT_LABEL[cat]+'</div><div class="te">'+(it?itemIconHTML(it,40):'➕')+'</div>'
       +'<div class="tn2">'+(it?it.n:'(empty)')+'</div>';
     s2.onclick=()=>{sfx('ui');teamCat=cat;teamSel=null;renderTeam()};
     slots.appendChild(s2);
@@ -2492,7 +2498,7 @@ function renderTeam(){
     const c=document.createElement('div');
     c.className='tItem'+(owned?'':' unk')+(save.equipped[teamCat]===it.id?' eq':'');
     c.style.borderColor=save.equipped[teamCat]===it.id?'var(--mint)':RCOL[it.r];
-    c.innerHTML='<div class="ie">'+(owned?(teamCat==='fit'?'🧢':it.e):'❔')+'</div>'
+    c.innerHTML='<div class="ie">'+(owned?itemIconHTML(it,40):'❔')+'</div>'
       +(owned&&inv.rank>1?'<div class="irk">R'+inv.rank+'</div>':'')
       +'<div class="inm">'+(owned?it.n:'???')+'</div>';
     c.onclick=()=>{sfx('ui');teamSel=it.id;renderTeamDetail()};
