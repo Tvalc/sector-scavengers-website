@@ -704,7 +704,7 @@ function defSave(){return {v:2,clams:0,xp:0,zone:0,zonesOwned:[0],gatePaid:[0],
   secrets:{fails:0,jiggles:0,pending:''},
   vendy:0,hints:{brace:0,cook:0},
   stats:{casts:0,fish:0,junk:0,bigW:0,bigSp:'',wins:0,defeats:0,flawless:0,pulls:0},
-  style:'og',                                   // active art style pack (see STYLES)
+  style:'makko',                                // active art style pack (see STYLES)
   set:{sfx:1,music:1,hap:1}}}
 /* v1 → v2 migration map:
    clams  = v1 clams + Σ sack[i].sell           (sack + SELL button are deleted; auto-award now)
@@ -1656,6 +1656,7 @@ function fightWin(clutch,o){
   const f=fight;if(!f||f.state==='WIN'||f.state==='LOSE')return;
   o=o||{};
   f.state='WIN';f.t=0;f.timeScale=1;f.lc=null;enrageMusic=false;
+  try{CG.happy()}catch(e){}                     // CrazyGames: celebratory moment
   f.clutch=!!clutch;
   f.flawless=f.taken<=0&&f.r>=1;
   if(o.finisher){
@@ -2062,13 +2063,19 @@ function renderCatch(c){
   const bA=hx(rcol),bAl=c.shiny?0.24:(c.r>=3?0.17:0.08);
   card.style.setProperty('--burstc','rgba('+bA[0]+','+bA[1]+','+bA[2]+','+bAl+')');
   const hat=c.kind==='fish'&&eqRod()&&eqRod().sparkle&&Math.random()<0.01;
-  const inkSp=c.kind==='fish'&&TH().fish==='ink'?SPECIES.find(s=>s.id===c.id):null;
+  const artSp=c.kind==='fish'?findSp(c.id):null;             // full species (incl. secrets) for drawn art
+  const artF=artSp?TH().fish:'emoji';                        // junk is always emoji
   const ce=$('cEmoji');
-  if(inkSp){ce.textContent=hat?'🎩':'';ce.style.backgroundImage='url('+fishImgURL(inkSp,150)+')';
-    ce.style.backgroundSize='contain';ce.style.backgroundRepeat='no-repeat';ce.style.backgroundPosition='center';
-    ce.style.width='150px';ce.style.height='150px';ce.style.margin='0 auto'}
-  else{ce.style.backgroundImage='';ce.style.width='';ce.style.height='';ce.style.margin='';ce.textContent=c.e+(hat?'🎩':'')}  // emoji style / junk
-  $('cEmoji').style.filter=c.shiny?'drop-shadow(0 0 18px #fff) saturate(1.6)':'drop-shadow(0 6px 12px rgba(0,0,0,.45))';
+  const asEmoji=()=>{ce.style.backgroundImage='';ce.style.backgroundSize='';ce.style.backgroundRepeat='';ce.style.backgroundPosition='';ce.style.width='';ce.style.height='';ce.style.margin='';ce.textContent=c.e+(hat?'🎩':'')};
+  const asBG=u=>{ce.textContent=hat?'🎩':'';ce.style.backgroundImage='url("'+u+'")';ce.style.backgroundSize='contain';ce.style.backgroundRepeat='no-repeat';ce.style.backgroundPosition='center';ce.style.width='150px';ce.style.height='150px';ce.style.margin='0 auto'};
+  if(artF==='image'){                                        // MAKKO: PNG → ink data-url → emoji
+    const e=makkoFishImg(c.id);
+    if(e.state==='ok')asBG(makkoFishPath(c.id));
+    else{const ink=fishImgURL(artSp,150);ink?asBG(ink):asEmoji();
+      if(e.state==='loading')e.img.addEventListener('load',()=>{if($('cEmoji')===ce&&!$('mCatch').hidden&&TH().fish==='image'&&makkoReady(c.id))asBG(makkoFishPath(c.id))},{once:true});}
+  }else if(artF==='ink'){const ink=fishImgURL(artSp,150);ink?asBG(ink):asEmoji()}
+  else asEmoji();                                            // emoji style / junk
+  $('cEmoji').style.filter=c.shiny?'drop-shadow(0 0 18px #fff) saturate(1.6)':(artF==='image'?'drop-shadow(0 0 8px rgba(150,185,225,.6)) drop-shadow(0 6px 12px rgba(0,0,0,.45))':'drop-shadow(0 6px 12px rgba(0,0,0,.45))');
   const realName=(c.shiny?'✨ ':'')+c.n;
   if(c.kind==='fish'&&eqRod()&&eqRod().runes){ // VOID ANTENNA: void-runes for 1s, then translates
     const RUNE='▚▞◬◮⟁⟒⌖⌑', scram=realName.replace(/[A-Za-z0-9]/g,()=>RUNE[(Math.random()*RUNE.length)|0]);
@@ -2092,7 +2099,7 @@ function renderCatch(c){
 }
 function closeCatch(){
   $('mCatch').hidden=true;
-  if(state==='reveal')state='idle';
+  if(state==='reveal'){state='idle';try{CG.midgameMaybe()}catch(e){}}   // CrazyGames: capped midgame ad on return to fishing
   refreshHUD();
 }
 
@@ -2190,6 +2197,10 @@ function renderDex(){
       c.className='dexCell'+(d?'':' unk');
       c.innerHTML='<div class="de">'+(d?s.e:'❔')+'</div><div class="dn">'+(d?s.n:'???')+'</div>'
         +(d&&d.sh?'<div class="star">✨</div>':'');
+      if(d&&TH().fish==='image'&&makkoReady(s.id)){         // MAKKO: use PNG only if already cached (no extra fetch); else emoji
+        const de=c.querySelector('.de');
+        if(de){de.textContent='';de.style.backgroundImage='url("'+makkoFishPath(s.id)+'")';de.style.backgroundSize='contain';de.style.backgroundRepeat='no-repeat';de.style.backgroundPosition='center';de.style.height='25px'}
+      }
       c.onclick=()=>{sfx('ui');
         const gr=save.grudge[s.id];
         $('dexDetail').innerHTML=d
@@ -2540,17 +2551,28 @@ function ensureOppDay(){
   const o=save.opp;
   if(o.date!==todayKey()){o.date=todayKey();o.bestScore=0;o.bestGrade='';o.claimed=0;o.lastParts=null;persist()}
 }
+/* opp portrait: MAKKO PNG if loaded, else emoji (idempotent, no cssText+=). sp=null → locked icon */
+function setOppArt(sp){
+  const el=$('oppE');
+  const emoji=()=>{el.style.backgroundImage='';el.style.backgroundSize='';el.style.backgroundRepeat='';el.style.backgroundPosition='';el.style.height='';el.textContent=sp?sp.e:'🔒'};
+  if(sp&&TH().fish==='image'){
+    const e=makkoFishImg(sp.id);
+    if(e.state==='ok'){el.textContent='';el.style.backgroundImage='url("'+makkoFishPath(sp.id)+'")';el.style.backgroundSize='contain';el.style.backgroundRepeat='no-repeat';el.style.backgroundPosition='center';el.style.height='56px';return}
+    if(e.state==='loading')e.img.addEventListener('load',()=>{if(TH().fish==='image'&&makkoReady(sp.id)&&!$('mOpp').hidden)setOppArt(sp)},{once:true});
+  }
+  emoji();
+}
 function renderOpp(){
   ensureOppDay();
   const opp=todaysOpp(),o=save.opp;
   if(!save.zonesOwned.includes(1)||!opp){
-    $('oppE').textContent='🔒';$('oppName').textContent='unlock THE RIVER first';
+    setOppArt(null);$('oppName').textContent='unlock THE RIVER first';
     $('oppMods').innerHTML='';$('oppGrade').textContent='';$('oppScoreLine').textContent='the opp doesn\'t fight amateurs';
     $('oppFight').disabled=true;$('oppClaim').hidden=true;$('oppShare').hidden=true;$('oppStreak').textContent='';
     return;
   }
   $('oppFight').disabled=false;
-  $('oppE').textContent=opp.sp.e;
+  setOppArt(opp.sp);
   $('oppName').textContent=opp.sp.n;
   $('oppMods').innerHTML=opp.mods.map(m=>'<span class="badge">'+OPP_MODS[m]+'</span>').join('');
   $('oppGrade').textContent=o.bestGrade||'—';
@@ -2735,14 +2757,49 @@ const STYLES={
   inked:{name:'INKED',emo:'🖊️',fish:'ink',
     ui:{'--gold':'#ffcf33','--aqua':'#43d0ff','--mint':'#4dffb0','--pink':'#ff5cc8','--card':'#171225','--line':'#3a2f52','--txt':'#f6f1ff','--dim':'#9b8fc0'},
     font:'"Comic Sans MS","Chalkboard SE",ui-rounded,system-ui,sans-serif'},  // bold hand-drawn vibe
+  makko:{name:'MAKKO',emo:'🎨',fish:'image',                                  // real PNG art from art/makko/ (falls back to ink → emoji)
+    ui:{'--gold':'#ffd54a','--aqua':'#3fd8ff','--mint':'#5dffa8','--pink':'#ff6ec7','--card':'#101b2a','--line':'#27364d','--txt':'#eef4ff','--dim':'#7d90ad'},
+    font:'ui-rounded,"Segoe UI",system-ui,-apple-system,sans-serif'},
 };
 function TH(){return STYLES[save.style]||STYLES.og}
 function applyStyle(){
   const st=TH(),r=document.documentElement;
   for(const k in st.ui)r.style.setProperty(k,st.ui[k]);
   document.body.style.fontFamily=st.font;
-  fishURLCache={};                                   // invalidate cached fish images
+  const sb=document.getElementById('tStyle'); if(sb){ sb.textContent=st.name+' '+st.emo; sb.classList.add('on'); } // keep toggle label in sync at boot + on cycle
+  fishURLCache={};                                   // invalidate cached fish images (makko img cache is style-independent, kept)
 }
+
+/* =====================================================================
+   MAKKO image pack — real PNG art dropped into art/makko/ (sibling files).
+   Attempt-load-with-fallback: every id is tried once and cached; a missing
+   or broken file falls back to the INKED procedural render, then emoji, so
+   nothing ever shows blank AND new PNGs appear automatically (no manifest
+   to maintain). Naming convention (where Makko exports go):
+       fish → art/makko/fish/<species-id>.png
+       bg   → art/makko/bg/zone<N>.png     (N = 1-based zone number)
+   ===================================================================== */
+const MAKKO_ART={base:'art/makko/',fish:{},bg:{},fitFish:1.15,fitBg:1,
+  // launch manifest — gate requests so we never probe (and 404) files we don't ship. Regenerate by scanning art/makko/ (see tools).
+  have:{fish:new Set(["also-gary","bait","beaver-landlord","biggest-fan","boss-roommate","bread-elder","calcium","commuter-salmon","definitely-a-rock","dolphin-record","don-undertow","eclipse-jr","exchange-shark","eyeball-fins","floor-manager","gary","glowstick","goldzilla","got-away-again","goth-royalty","gravitys-ex","handshake-eel","inflation","kraken-accountant","light-at-end","lil-pinch","literally-him","loading-screen","mid","missing-texture","multitasker","off-brand-omen","omniscient-trout","open-concept","overthinker","participation-star","pity-system","pond-soldier","reply-guy","reverse-abduction","reverse-fisherman","sideways","speedrun-turtle","sturgeon-general","swole-shark","technically-waterfowl","the-333","the-catfish","the-duelist","the-whale","the-yawn","too-many-teeth","unc-gill","union-rep","unknowable-dennis","unpatched","unregistered-gator","vending-mimic","vent-gremlin","void-guppy"]),
+    bg:new Set([])}};                               // bg zones: none shipped yet → procedural scene (no 404s)
+const makkoImgCache={};                             // path → {state:'loading'|'ok'|'err', img:HTMLImageElement, path}
+function makkoMiss(path){let e=makkoImgCache[path];if(e)return e;e={state:'err',img:null,path};makkoImgCache[path]=e;return e}   // manifest says absent → cached err, NO network request
+function makkoLoad(path){
+  let e=makkoImgCache[path];if(e)return e;
+  const img=new Image();
+  e={state:'loading',img,path};
+  makkoImgCache[path]=e;
+  img.onload =()=>{e.state=(img.naturalWidth>0)?'ok':'err'};
+  img.onerror=()=>{e.state='err'};                  // 404 / broken → graceful fallback, requested only once
+  try{img.src=path}catch(err){e.state='err'}
+  return e;
+}
+function makkoFishPath(id){return MAKKO_ART.base+'fish/'+id+'.png'}
+function makkoBgPath(z){return MAKKO_ART.base+'bg/zone'+((z|0)+1)+'.png'}
+function makkoFishImg(id){return MAKKO_ART.have.fish.has(id)?makkoLoad(makkoFishPath(id)):makkoMiss(makkoFishPath(id))}   // {state,img}; lazy-loads on first call (manifest-gated)
+function makkoBgImg(z){return MAKKO_ART.have.bg.has('zone'+((z|0)+1)+'.png')?makkoLoad(makkoBgPath(z)):makkoMiss(makkoBgPath(z))}
+function makkoReady(id){const e=makkoImgCache[makkoFishPath(id)];return !!(e&&e.state==='ok')}   // true only if PNG already loaded (no new request)
 
 /* ---- INKED: parametric drawn-fish renderer (bold outline + flat color + emoji accessory) ---- */
 function hsl(h,s,l){return 'hsl('+((h%360+360)%360)+','+clamp(s,0,100)+'%,'+clamp(l,0,100)+'%)'}
@@ -2834,15 +2891,30 @@ function drawInkFish(sp,S,t,o){
 }
 /* dispatch: draws the fish for the ACTIVE style, centered at (0,0) in current transform */
 function drawFishArt(sp,S,t,o){
-  if(TH().fish==='ink'){drawInkFish(sp,S,t,o)}
-  else{x.font=Math.round(S)+'px "Segoe UI Emoji",sans-serif';x.textAlign='center';x.textBaseline='middle';x.fillText(sp.e,0,0)}
+  const F=TH().fish;
+  if(F==='image'){                                          // MAKKO: PNG if loaded, else ink fallback (never blank)
+    const e=makkoFishImg(sp.id);
+    if(e.state==='ok'){
+      const img=e.img,iw=img.naturalWidth||1,ih=img.naturalHeight||1;
+      const sc=(S*MAKKO_ART.fitFish)/Math.max(iw,ih);       // fit longest side to ~S, centered at (0,0) to match emoji/ink footprint
+      x.save();
+      x.shadowColor='rgba(150,185,225,0.55)';x.shadowBlur=S*0.11;  // soft cool rim halo lifts dark-bodied fish off the dark scene
+      x.drawImage(img,-iw*sc/2,-ih*sc/2,iw*sc,ih*sc);
+      x.restore();
+      return;
+    }
+    drawInkFish(sp,S,t,o);                                  // while loading / on error
+    return;
+  }
+  if(F==='ink'){drawInkFish(sp,S,t,o);return}
+  x.font=Math.round(S)+'px "Segoe UI Emoji",sans-serif';x.textAlign='center';x.textBaseline='middle';x.fillText(sp.e,0,0);
 }
 /* offscreen render → cached data URL, for HTML contexts (catch card, dex, opp) */
 let fishURLCache={};
 const fishCV=document.createElement('canvas'),fishCX=fishCV.getContext('2d');
 function fishImgURL(sp,px){
   const key=sp.id+'_'+px;if(fishURLCache[key])return fishURLCache[key];
-  if(TH().fish!=='ink'){return fishURLCache[key]=null}       // emoji styles use text, not an image
+  if(TH().fish!=='ink'&&TH().fish!=='image'){return fishURLCache[key]=null}  // emoji (og) uses text; ink + image(makko-fallback) render the drawn fish
   const P=px*2;fishCV.width=P;fishCV.height=P;
   const _x=x;x=fishCX;x.clearRect(0,0,P,P);x.save();x.translate(P/2,P/2);
   drawInkFish(sp,P*0.62,0,{});x.restore();x=_x;
@@ -2972,8 +3044,13 @@ function drawScene(t){
   g.addColorStop(0,css(waterTop));g.addColorStop(1,css(waterBot));
   x.fillStyle=g;x.fillRect(0,wy,cw,ch-wy);
   x.setTransform(dpr*view.s,0,0,dpr*view.s,dpr*view.ox,dpr*view.oy);
-  x.drawImage(above,0,0,W*2,WATER_Y*2,0,0,W,WATER_Y);
-  drawWater(t,L,wx,night,golden,Z,cel,waterBot);
+  const mbg=(TH().fish==='image')?makkoBgImg(save.zone):null;   // optional MAKKO per-zone backdrop
+  if(mbg&&mbg.state==='ok'){                                    // full-scene PNG replaces the procedural sky scenery…
+    x.drawImage(mbg.img,0,0,mbg.img.naturalWidth||W,mbg.img.naturalHeight||H,0,0,W,H);
+  }else{
+    x.drawImage(above,0,0,W*2,WATER_Y*2,0,0,W,WATER_Y);        // …default: procedural above-scene backdrop
+  }
+  drawWater(t,L,wx,night,golden,Z,cel,waterBot);               // …water/reflection/particles still draw on top (scene stays alive)
   drawGameplay(t);
   if(state==='fight'&&fight)drawFight(t);
   drawWeatherFG(t,L,wx,golden);
@@ -3987,9 +4064,34 @@ window.__bfe={
   agane:()=>{doAgane()},                                        // force prestige
   opp:()=>{oppStart()},                                         // start today's opp
   taunt:()=>{tauntCd=0;playerTaunt()},                          // v2.4: talk shit at the fish
+  art:id=>{const e=makkoFishImg(id||'gary');return {id:id||'gary',path:e.path,state:e.state,w:e.img?e.img.naturalWidth:0,h:e.img?e.img.naturalHeight:0}},  // force-load-check a MAKKO fish PNG
+  artBg:z=>{const e=makkoBgImg(z==null?save.zone:z);return {path:e.path,state:e.state,w:e.img?e.img.naturalWidth:0,h:e.img?e.img.naturalHeight:0}},        // force-load-check a MAKKO zone bg PNG
+  get artCache(){return makkoImgCache},                         // inspect the whole image cache
   get fight(){return fight},
   get st(){return state},
   get save(){return save},
+};
+
+/* ---------- CrazyGames SDK — required on CrazyGames, safe no-op everywhere else ---------- */
+const CG={sdk:null,ready:false,ads:0,
+  async init(){try{
+    await new Promise((res,rej)=>{const s=document.createElement('script');s.src='https://sdk.crazygames.com/crazygames-sdk-v3.js';s.async=true;s.onload=res;s.onerror=rej;document.head.appendChild(s)});
+    if(window.CrazyGames&&CrazyGames.SDK){await CrazyGames.SDK.init();this.sdk=CrazyGames.SDK;this.ready=true;this.env=this.sdk.environment}
+  }catch(e){/* not on CrazyGames (or blocked) → stay a no-op */}},
+  _c(fn){try{if(this.sdk)fn(this.sdk)}catch(e){}},
+  _mute(m){try{if(typeof AU!=='undefined'&&AU.ctx){m?AU.ctx.suspend():AU.ctx.resume()}}catch(e){}},
+  loadStart(){this._c(s=>s.game.loadingStart())},
+  loadStop(){this._c(s=>s.game.loadingStop())},
+  playStart(){this._c(s=>s.game.gameplayStart())},
+  playStop(){this._c(s=>s.game.gameplayStop())},
+  happy(){this._c(s=>s.game.happytime())},
+  midgameMaybe(){                                // capped, non-intrusive ad between catches; mutes + pauses gameplay around it
+    this.ads++;
+    if(!this.sdk||this.env!=='crazygames'||this.ads<4||this.ads%3!==0)return; // ads only on the real CrazyGames platform; skip first 3 catches, then ~every 3rd
+    this.playStop();this._mute(true);
+    let done=false;const resume=()=>{if(done)return;done=true;this._mute(false);this.playStart()};
+    try{this.sdk.ad.requestAd('midgame',{adStarted:()=>this._mute(true),adFinished:resume,adError:resume})}catch(e){resume()}
+  }
 };
 
 /* ---------- boot ---------- */
@@ -4002,6 +4104,7 @@ $('chipGold').classList.toggle('on',goldenActive());
 if(save.tut===0)$('hint').style.display='block';
 if(save.vendy&&save.tabs>=TUNE.PULL)$('nVendy').classList.add('alert');
 requestAnimationFrame(loop);
+CG.init().then(()=>{CG.loadStart();CG.loadStop();CG.playStart()});   // signal CrazyGames: loaded + gameplay active (no-op off-platform)
 </script>
 </body>
 </html>
