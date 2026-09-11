@@ -2782,7 +2782,7 @@ function applyStyle(){
 const MAKKO_ART={base:'art/makko/',fish:{},bg:{},fitFish:1.15,fitBg:1,
   // launch manifest — gate requests so we never probe (and 404) files we don't ship. Regenerate by scanning art/makko/ (see tools).
   have:{fish:new Set(["also-gary","bait","beaver-landlord","biggest-fan","boss-roommate","bread-elder","calcium","commuter-salmon","definitely-a-rock","dolphin-record","don-undertow","eclipse-jr","exchange-shark","eyeball-fins","floor-manager","gary","glowstick","goldzilla","got-away-again","goth-royalty","gravitys-ex","handshake-eel","inflation","kraken-accountant","light-at-end","lil-pinch","literally-him","loading-screen","mid","missing-texture","multitasker","off-brand-omen","omniscient-trout","open-concept","overthinker","participation-star","pity-system","pond-soldier","reply-guy","reverse-abduction","reverse-fisherman","sideways","speedrun-turtle","sturgeon-general","swole-shark","technically-waterfowl","the-333","the-catfish","the-duelist","the-whale","the-yawn","too-many-teeth","unc-gill","union-rep","unknowable-dennis","unpatched","unregistered-gator","vending-mimic","vent-gremlin","void-guppy"]),
-    bg:new Set([])}};                               // bg zones: none shipped yet → procedural scene (no 404s)
+    bg:new Set(["zone1.png","zone2.png","zone3.png","zone4.png","zone5.png"])}};  // all 5 zone backdrops shipped (1-based: zone1=POND, zone2=RIVER, zone3=OCEAN, zone4=DEEP, zone5=VOID)
 const makkoImgCache={};                             // path → {state:'loading'|'ok'|'err', img:HTMLImageElement, path}
 function makkoMiss(path){let e=makkoImgCache[path];if(e)return e;e={state:'err',img:null,path};makkoImgCache[path]=e;return e}   // manifest says absent → cached err, NO network request
 function makkoLoad(path){
@@ -3012,7 +3012,11 @@ above.width=W*2;above.height=WATER_Y*2;
 const ax=above.getContext('2d');
 
 /* ---------- rod tip by state (fight-aware) ---------- */
+const ART_ANGLER={w:210,x:-20,y:42,tip:{x:182,y:150}};  // illustrated-angler placement (draw width, x/y offset from waterline-left) + rod-tip offset; tuned so the line starts at the art rod tip
 function rodTip(t){
+  if(TH().fish==='image'&&makkoImgCache['art/makko/angler.png']?.state==='ok'){  // MAKKO: line comes from the illustrated angler's rod tip (static sprite, subtle bob)
+    return {x:ART_ANGLER.tip.x,y:WATER_Y-ART_ANGLER.tip.y+Math.sin(t*1.1)*1.5,bend:5};
+  }
   if(state==='fight'&&fight){
     const f=fight;
     if(f.state==='LOSE')return {x:158,y:WATER_Y-38+Math.min(22,f.t*30),bend:36}; // rod droops
@@ -3443,8 +3447,20 @@ function drawBobber(px,py,t,tilt){
   x.fillStyle='rgba(255,255,255,.85)';x.beginPath();x.arc(-1.6,-2.2,1.1,0,7);x.fill();
   x.restore();
 }
+function drawMakkoAngler(t){                        // MAKKO: illustrated angler on the live canvas over the backdrop
+  const e=makkoLoad('art/makko/angler.png');
+  if(e.state!=='ok'||!e.img)return;
+  const img=e.img,iw=img.naturalWidth||1,ih=img.naturalHeight||1;
+  const w=ART_ANGLER.w,h=w*ih/iw;
+  const px=ART_ANGLER.x, py=WATER_Y-h+ART_ANGLER.y+Math.sin(t*0.9)*1.2;
+  x.save();
+  x.shadowColor='rgba(0,0,0,.28)';x.shadowBlur=10;x.shadowOffsetY=5;
+  x.drawImage(img,px,py,w,h);
+  x.restore();
+}
 function drawGameplay(t){
   nibTilt*=0.94;
+  if(TH().fish==='image')drawMakkoAngler(t);       // draw the illustrated angler before the line/bobber so the line sits on top
   const tip=rodTip(t);
   if(state==='cast'){
     const ct=Math.min(1,castT);
