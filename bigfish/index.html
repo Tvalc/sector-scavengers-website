@@ -1315,6 +1315,8 @@ function fightStart(sp,opts){
   state='fight';holding=false;tauntCd=0;
   hitstop(0.12);
   fight.fx.zoom=1;fight.fx.stamp='HOOKED';fight.fx.stampT=0.7;
+  fight.land=0;fight.fishState='calm';fight.stateDur=1.2;fight.runDur=1.4;fight.reeling=false;fight.isFake=false;fight.inDanger=0;
+  fight.tension=TUG.startTen;                                   // THE TUG: start with a little line tension
   sfx('hooked');vib(25);
   splash(bobX,WATER_Y,14);
   if(opts.intro)fight.dlgQ.push(opts.intro);                    // gate retry / opp intro line
@@ -1715,7 +1717,7 @@ function winRewardPreview(f){
   return {clams,xp};
 }
 /* ---- inputs (TAP attacks on press-down; HOLD ≥120ms braces; anti-mash 130ms; buffer 100ms) ---- */
-function fightPress(){
+function fightPress(){                                          // THE TUG: press-and-hold = REEL
   const f=fight;if(!f)return;
   if(f.dlg){ // tap skips typing, second tap dismisses
     if(f.dlg.t*24<f.dlg.txt.length)f.dlg.t=f.dlg.txt.length/24+0.01;
@@ -1723,19 +1725,21 @@ function fightPress(){
     sfx('blip');return;
   }
   if(f.state==='LOSE'){
-    if(f.t>0.8){const px=bobX;fight=null;state='idle';abilityBtnShow(false);startCast(px)} // rage re-cast ≤2.5s
+    if(f.t>0.8){const px=bobX;fight=null;state='idle';abilityBtnShow(false);startCast(px)} // rage re-cast
     return;
   }
   if(f.state==='WIN')return;
-  if(f.state==='LC'){resolveLCtap();return}
-  f.pressed=true;f.pressReal=nowS();
-  if(nowS()-(f.lastTapReal||-9)<0.13){sfx('tick');return}      // anti-mash: dull click, no damage
-  f.lastTapReal=nowS();
-  fightTapAction();
+  f.reeling=true;
 }
-function fightRelease(){
+function fightRelease(){                                        // THE TUG: let go = EASE (and reward a clean ease off a run)
   const f=fight;if(!f)return;
-  f.pressed=false;f.bracing=false;                             // un-brace same frame
+  if(f.state==='TUG'&&f.reeling&&(f.fishState==='tele'||(f.fishState==='run'&&f.stateT<0.35))){
+    f.combo=(f.combo||0)+1;f.comboBest=Math.max(f.comboBest||0,f.combo);
+    f.tension=Math.max(0,f.tension-8);
+    if(f.combo>=2)floater(bobX,WATER_Y-58,'CLEAN ×'+f.combo,12,'#5dffa8');
+    sfx('clink');
+  }
+  f.reeling=false;
 }
 function judgeBeat(){
   const f=fight,d=Math.abs(f.beat-0.5);
@@ -1863,6 +1867,40 @@ function abilityUse(){
   }
 }
 /* ---- master fight update (dt = real seconds, clamped ≤50ms upstream) ---- */
+/* ============ THE TUG — hold-to-reel line-tension tug-of-war ============
+   HOLD = reel (LAND rises, TENSION rises). RELEASE = ease (TENSION falls).
+   The fish makes telegraphed RUNS — reeling into a run spikes tension toward
+   SNAP; you must let go and ride it out, then reel again when it tires.
+   Land the fish (LAND=1) before the line snaps (TENSION=max). */
+const TUG={
+  landBase:[0.150,0.125,0.105,0.088,0.072,0.058],  // LAND/sec while reeling in calm, by rarity
+  calmTen:8,          // tension/sec while reeling in calm (so you still must ease sometimes)
+  ease:26,            // tension/sec relief while easing (not running)
+  runTenReel:56,      // tension/sec while reeling DURING a run (deadly — let go!)
+  runTenPassive:15,   // tension/sec a run adds on its own (the fish pulling hard)
+  runEase:24,         // tension/sec relief while easing during a run (partly counters passive)
+  runLand:0.014,      // LAND/sec while reeling during a run (barely any)
+  teleDur:0.5,        // run telegraph window (react here)
+  startTen:16,
+};
+function tugCalmDur(f){const base=[2.7,2.5,2.3,2.1,2.0,1.8][f.r]||2.2;
+  const s={coward:0.62,berserker:0.85,tank:1.7,trickster:0.9,boss:0.95,none:1}[f.styleKey]||1;
+  const mor=0.75+0.45*(f.morale/100); return rnd(base*0.8,base*1.2)*s*mor;}
+function tugRunDur(f){const base=[1.15,1.3,1.45,1.65,1.85,2.05][f.r]||1.5;
+  const s={coward:0.7,berserker:1.18,tank:1.5,trickster:0.9,boss:1.1,none:1}[f.styleKey]||1;
+  const mor=0.6+0.4*(f.morale/100); return rnd(base*0.85,base*1.15)*s*mor;}
+function startTug(){const f=fight;f.state='TUG';f.fishState='calm';f.stateT=0;f.stateDur=tugCalmDur(f);}
+function startRunTele(){const f=fight;f.fishState='tele';f.stateT=0;f.runDur=tugRunDur(f);
+  f.isFake=(f.styleKey==='trickster')&&Math.random()<0.4;     // tricksters feint the run
+  f.fx.teleP=1;sfx('brace');
+  fishSay(pickLine((HUM.arch[f.styleKey]&&HUM.arch[f.styleKey].taunt)||HUM.hook),{cd:1.6});}
+function startRun(){const f=fight;f.fishState='run';f.stateT=0;sfx('dash');f.fx.runFlash=1;f.fx.zoom=1;
+  fishSay('IT RUNS 💨',{cd:1.1});}
+function cancelRunTug(){const f=fight;f.fishState='calm';f.stateT=0;f.stateDur=rnd(0.6,1.1);fishSay('...psych 😏',{cd:1});}
+function endRunTug(){const f=fight;f.fishState='calm';f.stateT=0;f.stateDur=tugCalmDur(f);}
+function nextPhaseTug(){const f=fight;f.phase++;f.land=0;f.tension=Math.max(0,f.tension*0.55);
+  f.state='PHASE';f.t=0;f.fx.stamp='PHASE '+f.phase+' 🔥';f.fx.stampT=1.2;sfx('fanfare',f.r);enrageMusic=true;f.enraged=true;
+  f.dlgQ=[pickLine(TRASH_BOSS)];}
 function updateFight(dt){
   const f=fight;if(!f)return;
   updateFightFx(dt);
@@ -1878,84 +1916,48 @@ function updateFight(dt){
   if(f.dlgQ.length&&(f.state==='OPENING'||f.state==='PHASE')){f.dlg={txt:f.dlgQ.shift(),t:0};return}
   if(f.state==='WIN'){f.t+=dt;if(f.t>1.5)finishCatch();return}
   if(f.state==='LOSE'){f.t+=dt;if(f.t>2.5){fight=null;state='idle';abilityBtnShow(false)}return}
-  if(f.state==='LC'){
-    const lc=f.lc;
-    if(!lc){startOpening();return}                              // safety (forced via __bfe.fstate)
-    lc.t+=dt;                                                   // LC runs on real time
-    if(((lc.t*2)|0)!==(((lc.t-dt)*2)|0))sfx('heart');
-    if(lc.t>lc.dur&&!lc.tapped)lcFail();
-    return;
-  }
   let fdt=dt*f.timeScale;
   if(f.mods.freeze>0){f.mods.freeze-=dt;fdt=0}
   if(f.mods.stun>0){f.mods.stun-=dt;fdt=0}
-  f.dur+=fdt;
+  f.dur+=fdt;f.t+=fdt;f.stateT=(f.stateT||0)+fdt;
   for(const k of ['bore','squawk','govname','ghost','fear'])if(f.mods[k]>0)f.mods[k]-=dt;
   if(f.graceT>0)f.graceT-=dt;
-  if(f.braceLock>0)f.braceLock-=dt;
-  if(f.pressed&&!f.bracing&&f.braceLock<=0&&nowS()-f.pressReal>=0.12){f.bracing=true;f.braceStart=f.dur;sfx('brace')}
-  if(f.combo>0&&f.dur-f.lastTap>0.7)f.combo=0;                  // chain breaks on gap >700ms
-  // escape bar
-  if(f.state!=='INTRO'&&f.state!=='PHASE'){
-    if(f.escPause>0)f.escPause-=dt;
-    else{
-      let rate=1/f.escMax;
-      if(f.state==='DASH')rate*=3;
-      if(f.gimmick==='reverse'&&f.phase>=2)rate*=1.25;          // DON UNDERTOW: river flows backward
-      f.esc-=rate*fdt;
-      if(f.esc<=0){f.esc=0;startLastChance('esc');return}
-    }
-  }
   petTick(fdt);
-  if(f.state==='OPENING')f.tension=Math.max(0,f.tension-1.0*fdt); // v2.1: low decay so unbraced hits accumulate toward a real loss
-  if(f.state==='STAGGER')f.tension=Math.max(0,f.tension-3*fdt);   // parry reward: bigger vent
-  if(f.state==='OPENING'||f.state==='STAGGER'){                   // v2.2: sweep the strike marker
-    if(f.beatFreeze>0){f.beatFreeze-=fdt;f.beat=0.5}             // v2.3: "free snacks" event parks it on gold
-    else{f.beat+=f.beatDir*f.beatV*fdt;
-      if(f.beat>=1){f.beat=1;f.beatDir=-1}else if(f.beat<=0){f.beat=0;f.beatDir=1}}
-  }
-  // v2.3 humor cadence
   if(f.barkCd>0)f.barkCd-=dt;
-  f.midEvtT-=dt; if(f.midEvtT<=0){f.midEvtT=rnd(4.5,7.5); if(isFishy(f.state))rollEvent('mid')}
+  if(f.foldT>0){f.foldT-=dt;if(f.foldT<=0)f.morale=45}          // recover spirit after a fold
+  if(f.state==='INTRO'){if(f.t>=0.5)startTug();return}
+  if(f.state==='PHASE'){if(f.t>=1.2)startTug();return}
+  if(f.state!=='TUG'){startTug();return}                        // safety: recover from any stray legacy state
+  // --- fish run cycle (calm → telegraph → run → calm) ---
+  if(f.fishState==='calm'){ if(f.stateT>=f.stateDur)startRunTele(); }
+  else if(f.fishState==='tele'){ if(f.stateT>=TUG.teleDur){ f.isFake?cancelRunTug():startRun(); } }
+  else if(f.fishState==='run'){ if(f.stateT>=f.runDur)endRunTug(); }
+  // --- reel / ease → tension + land ---
+  const reeling=f.reeling&&f.mods.freeze<=0&&f.mods.stun<=0;
+  const running=f.fishState==='run';
+  let tenRate,landRate=0;
+  if(running){
+    if(reeling){tenRate=TUG.runTenReel;landRate=TUG.runLand;}   // reeling into a run = deadly tension
+    else{tenRate=TUG.runTenPassive-TUG.runEase;}                // easing rides the run out (slow relief)
+  }else{
+    if(reeling){tenRate=TUG.calmTen;landRate=(TUG.landBase[f.r]||0.1)*(1+teamP('dmg'))*(f.fishState==='tele'?0.7:1);}
+    else{tenRate=-TUG.ease;}
+  }
+  if(f.morale<60)tenRate*=0.85;                                 // demoralized fish pulls softer
+  f.tension=clamp(f.tension+tenRate*fdt,0,f.tenMax);
+  f.land=clamp((f.land||0)+landRate*fdt,0,1);
+  // near-snap = "damage taken" (kills flawless) + breaks combo + cope bark
+  if(f.tension>=f.tenMax*0.85){if(!f.inDanger){f.inDanger=1;f.taken=(f.taken||0)+1;f.combo=0}}
+  else if(f.tension<f.tenMax*0.7)f.inDanger=0;
   if(f.tension>=75&&!f.cookedBarked){f.cookedBarked=1;bark(HUM.onCooked,{cd:2.6})}
   else if(f.tension<58)f.cookedBarked=0;
-  if(f.foldT>0){f.foldT-=dt; if(f.foldT<=0)f.morale=45}         // v2.4: recover spirit after a fold (repeatable)
-  if(f.state==='DASH')addTension(2*fdt,{});
-  f.t+=fdt;
-  switch(f.state){
-    case 'INTRO':
-      if(f.t>=0.5)startOpening();
-      break;
-    case 'OPENING':
-      if(f.t>=f.openDur){
-        if(f.skipAtk>0){f.skipAtk--;fishSay('you saw nothing');startOpening();break} // v2.3: phone-call event skips an attack
-        f.cycle++;                                              // v2.1: commons attack too — finisher now fires on HP<=0 (applyDamage), so they still bonk fast but get one real swing in
-        if(f.st.dash&&f.cycle%2===0)startDash();                // coward bolts every 2nd cycle
-        else startTelegraph();
-      }
-      break;
-    case 'TELEGRAPH':
-      if(f.fakeType===1&&f.t>=f.fakeAt*f.telDur){resolveFakeA();break}
-      if(f.fakeType===2&&!f.swapped&&f.t>=0.5*f.telDur){f.swapped=true;f.icon=pickIcon();sfx('fakeout')}
-      if(f.t>=f.telDur)startAttack();
-      break;
-    case 'ATTACK':
-      if(f.t>=f.impI*f.gap+0.12)resolveImpact();
-      break;
-    case 'FAKEOUT':
-      if(f.t>=0.4)startOpening();
-      break;
-    case 'STAGGER':
-      if(f.t>=f.stagT)startOpening();
-      break;
-    case 'PHASE':
-      if(f.t>=1.2)startOpening();
-      break;
-    case 'DASH':
-      f.dashT-=fdt;
-      if(f.dashT<=0)startOpening();
-      break;
+  f.midEvtT-=dt;if(f.midEvtT<=0){f.midEvtT=rnd(5,8);rollEvent('mid')}
+  // --- resolve ---
+  if(f.land>=1){
+    if(f.boss&&f.phase<f.bars){nextPhaseTug();return}
+    fightWin(f.tension>=f.tenMax*0.78,{});return;               // clutch = landed under high tension
   }
+  if(f.tension>=f.tenMax){fightLose('snap');return;}
 }
 function updateFightFx(dt){ // fx decay runs on REAL time (survives hitstop/slow-mo)
   const f=fight;if(!f)return;
@@ -3631,6 +3633,12 @@ function fishPos(t){
   const f=fight;let px=bobX,py=WATER_Y+2,s=1,rot=0;
   switch(f.state){
     case 'INTRO':{const p=Math.min(1,f.t/0.5);py=WATER_Y+26-24*p;s=0.6+0.4*p;break}
+    case 'TUG':{
+      if(f.fishState==='run'){px+=Math.sin(t*24)*11+Math.sin(t*11)*6;py+=Math.cos(t*19)*6;rot=Math.sin(t*22)*0.35;s=1.05;}   // thrashing
+      else if(f.fishState==='tele'){py-=4;s=1.06;rot=-0.1;}                                                                   // tensing to run
+      else{py+=Math.sin(t*4)*2.6;rot=Math.sin(t*3)*0.08;}                                                                      // tired bob
+      s*=1+0.22*(f.land||0);                                                                                                   // grows as it's reeled in
+      break;}
     case 'OPENING':py+=Math.sin(t*9)*3;rot=Math.sin(t*7)*0.2;break;
     case 'TELEGRAPH':{const p=clamp(f.t/Math.max(0.01,f.telDur),0,1);px+=14*p;py-=6*p;s=1+0.12*p;rot=-0.12*p;break}
     case 'ATTACK':px-=24+Math.sin(t*40)*3;py-=10;s=1.15;break;
@@ -3826,18 +3834,14 @@ function drawFightHUD(t,fp){
   const hx2=px+10,hw=pw-20,hy=py+22,hh=13;
   x.fillStyle='rgba(255,255,255,.08)';
   x.beginPath();if(x.roundRect)x.roundRect(hx2,hy,hw,hh,7);else x.rect(hx2,hy,hw,hh);x.fill();
-  const frac=clamp(f.hp/f.hpMax,0,1);
+  const frac=clamp(f.land||0,0,1);                             // THE TUG: LANDING progress (fills up as you reel it in)
   let dispFrac=frac,barsLeft=1;
-  if(f.bars===3){ // mythic: 3 HP bars — current bar fill + count
-    const per=1/3;
-    barsLeft=Math.min(3,Math.ceil(frac/per));
-    dispFrac=(frac-(barsLeft-1)*per)/per;
-  }
+  if(f.bars>1){barsLeft=Math.max(1,f.bars-(f.phase-1));dispFrac=frac;}  // boss: land bar is per-phase, chip shows phases left
   x.save();
   x.beginPath();if(x.roundRect)x.roundRect(hx2,hy,hw*clamp(dispFrac,0,1),hh,7);else x.rect(hx2,hy,hw*dispFrac,hh);x.clip();
   const hg=x.createLinearGradient(hx2,hy,hx2,hy+hh);
   hg.addColorStop(0,RCOL[f.r]);hg.addColorStop(1,'#7d3040');
-  x.fillStyle=f.bars===3?['#f43f5e','#c026d3','#7c3aed'][3-barsLeft]:RCOL[f.r];
+  x.fillStyle=f.bars>1?['#7c3aed','#c026d3','#f43f5e'][Math.min(2,f.phase-1)]:RCOL[f.r];
   x.fillRect(hx2,hy,hw,hh);
   x.fillStyle='rgba(255,255,255,.22)';x.fillRect(hx2,hy,hw,4);
   x.restore();
@@ -3847,19 +3851,19 @@ function drawFightHUD(t,fp){
     x.fillStyle='rgba(6,13,24,.9)';
     for(const q of th)x.fillRect(hx2+hw*q-1,hy,2,hh);
   }
-  if(f.bars===3){
+  if(f.bars>1){
     x.font='900 9px system-ui';x.textAlign='right';x.fillStyle='#fff';
-    x.fillText('×'+barsLeft+' BARS',hx2+hw-4,hy+hh/2+0.5);
+    x.fillText('PHASE '+f.phase+'/'+f.bars,hx2+hw-4,hy+hh/2+0.5);
   }
   x.font='900 9px system-ui';x.textAlign='left';x.fillStyle='rgba(255,255,255,.85)';
-  x.fillText(fmt(Math.ceil(f.hp)),hx2+5,hy+hh/2+0.5);
-  // ESCAPE bar (thin, drains continuously)
-  const ey=py+41;
+  x.fillText('LANDING '+Math.round(frac*100)+'%',hx2+5,hy+hh/2+0.5);
+  // fish-state strip: tiring (reel) → tensing → RUNNING (let go!)
+  const ey=py+41,run2=(f.fishState==='run'),tel2=(f.fishState==='tele');
   x.fillStyle='rgba(255,255,255,.08)';x.fillRect(hx2,ey,hw,4);
-  x.fillStyle=f.esc<0.25?'#ff6a6a':'#3fd8ff';
-  x.fillRect(hx2,ey,hw*clamp(f.esc,0,1),4);
-  x.font='800 8px system-ui';x.fillStyle='#7d90ad';x.textAlign='left';
-  x.fillText('ESCAPE',hx2,ey+9);
+  x.fillStyle=run2?'#ff4d5e':(tel2?'#ffd54a':'#5dffa8');
+  x.fillRect(hx2,ey,hw*(run2?1:(tel2?0.5:0.16)),4);
+  x.font='800 8px system-ui';x.fillStyle=run2?'#ff8a8a':'#7d90ad';x.textAlign='left';
+  x.fillText(run2?'RUNNING — LET GO!':tel2?"it's about to run…":'tiring — REEL IT IN',hx2,ey+9);
   x.restore();
   /* -- LINE TENSION bar (bottom, above thumb zone) with zone labels -- */
   const tw2=W-130,tx2=108,ty2=H-116,th2=15;
@@ -3885,13 +3889,21 @@ function drawFightHUD(t,fp){
   x.font='900 10px system-ui';x.textAlign='left';x.fillStyle=colT;
   x.fillText('LINE TENSION — '+(rewriting?'□▽◁?!':label),tx2,ty2+th2+12);
   x.textAlign='right';x.fillStyle='#7d90ad';
-  x.fillText(Math.round(ten)+'/'+Math.round(tm)+(f.bracing?' · 🛡️ BRACED':''),tx2+tw2,ty2+th2+12);
+  x.fillText(Math.round(ten)+'/'+Math.round(tm)+(f.reeling?' · ⚙️ REELING':''),tx2+tw2,ty2+th2+12);
   x.restore();
-  // first-time hints (2 shows max, then retired forever — savefile flag)
-  if(ten>=70&&f.showBraceHint&&isFishy(f.state)){
+  // THE TUG: big central guidance — HOLD to reel, LET GO on a run
+  if(f.state==='TUG'&&f.fishState==='run'){
+    x.font='900 italic 22px system-ui';x.textAlign='center';
+    x.fillStyle='rgba(255,77,94,'+(0.75+0.25*Math.sin(t*14)).toFixed(2)+')';
+    x.fillText('LET GO! 🐟💨',W/2,H*0.44);
+  }else if(f.state==='TUG'&&f.fishState==='tele'){
+    x.font='900 italic 15px system-ui';x.textAlign='center';
+    x.fillStyle='rgba(255,213,74,'+(0.6+0.35*Math.sin(t*10)).toFixed(2)+')';
+    x.fillText('it\'s tensing up…',W/2,H*0.44);
+  }else if(f.state==='TUG'&&!f.reeling&&(f.land||0)<0.05&&f.dur<3.5){
     x.font='900 15px system-ui';x.textAlign='center';
-    x.fillStyle='rgba(255,255,255,'+(0.7+0.3*Math.sin(t*6)).toFixed(2)+')';
-    x.fillText('HOLD = BRACE 🛡️',W/2,H*0.5);
+    x.fillStyle='rgba(255,255,255,'+(0.6+0.3*Math.sin(t*6)).toFixed(2)+')';
+    x.fillText('HOLD to REEL 🎣',W/2,H*0.44);
   }
   if(f.state==='OPENING'&&save.hints.cook<=2&&f.r>0){
     x.font='900 17px system-ui';x.textAlign='center';
