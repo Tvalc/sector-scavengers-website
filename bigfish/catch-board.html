@@ -1,0 +1,264 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><title>THE CATCH BOARD — prototype</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<style>
+  :root{--bg:#07131f;--card:#0c1a2b;--line:#1d3450;--txt:#eaf2ff;}
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;user-select:none}
+  html,body{height:100%;background:var(--bg);color:var(--txt);font-family:system-ui,-apple-system,sans-serif;overflow:hidden;touch-action:none}
+  #wrap{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center}
+  canvas{display:block;position:absolute;inset:0;width:100%;height:100%}
+  #hud{position:absolute;top:8px;left:0;right:0;text-align:center;font-weight:900;font-size:13px;color:#9fb6d4;letter-spacing:.5px;z-index:2;pointer-events:none}
+  #again{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:5;display:none;
+    padding:14px 26px;border:0;border-radius:16px;background:linear-gradient(160deg,#3fd8ff,#2a86ff);color:#04121f;
+    font-weight:900;font-size:18px;box-shadow:0 6px 0 #06121e;cursor:pointer}
+</style></head>
+<body>
+<div id="wrap"><canvas id="c"></canvas></div>
+<div id="hud">THE CATCH BOARD · drag a tile to chain matches</div>
+<button id="again">NEXT FISH →</button>
+<script>
+const cv=document.getElementById('c'),x=cv.getContext('2d');
+let W=0,H=0,dpr=1;
+function resize(){dpr=Math.min(2,devicePixelRatio||1);W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0);layout();}
+addEventListener('resize',resize);
+
+// ---- board ----
+const COLS=6, ROWS=5;
+// tile kinds: 0-3 reel colors, 4 = SLACK (reels + drops tension)
+const KINDS=[
+  {c:'#ff5d73', ic:'🪝', n:'hook'},
+  {c:'#ffbf3f', ic:'🪱', n:'bait'},
+  {c:'#5dffa8', ic:'🎣', n:'reel'},
+  {c:'#b78bff', ic:'⚡', n:'jolt'},
+  {c:'#3fd8ff', ic:'🛟', n:'slack'},   // special: also eases tension
+];
+let grid=[];           // grid[r][c] = kind index (or -1 empty)
+let cell=64, ox=0, oy=0, boardY=0;
+function layout(){
+  const pad=10;
+  cell=Math.floor(Math.min((W-pad*2)/COLS, (H*0.62-pad*2)/ROWS));
+  ox=Math.floor((W-cell*COLS)/2);
+  boardY=Math.floor(H - cell*ROWS - 18 - (self.CSS&&CSS.supports&&CSS.supports('bottom','env(safe-area-inset-bottom)')?12:0));
+  oy=boardY;
+}
+function rnd(a,b){return a+Math.random()*(b-a)}
+function randKind(){return Math.random()<0.20?4:(Math.random()*4|0)}   // slack a bit rarer
+
+// tile visual state per cell: {k, y (pixel offset for falling), pop (0..1 clearing)}
+let tiles=[];
+function newTile(k){return {k, dy:0, vy:0, pop:0, spawn:0};}
+function initBoard(){
+  grid=[];tiles=[];
+  for(let r=0;r<ROWS;r++){grid[r]=[];tiles[r]=[];for(let c=0;c<COLS;c++){
+    let k; do{k=randKind()}while(hasMatchAt(r,c,k)); grid[r][c]=k; tiles[r][c]=newTile(k);
+  }}
+}
+function hasMatchAt(r,c,k){
+  return (c>=2&&grid[r][c-1]===k&&grid[r][c-2]===k) || (r>=2&&grid[r-1][c]===k&&grid[r-2][c]===k);
+}
+
+// ---- fight state ----
+let land=0, tension=0, TMAX=100, combo=0, comboShow=0, comboT=0;
+let phase='play'; // play | resolving | win | lose
+let fishName='', fishImg=null, fishReact=0, fishR=0;
+let landGoal=1;
+const FISH=[
+  {id:'goldzilla', n:'THE UNFLUSHABLE', r:5, tenPerMove:15, reelMul:0.85},
+  {id:'bread-elder', n:'ELDER CARP', r:4, tenPerMove:13, reelMul:1.0},
+  {id:'literally-him', n:'LITERALLY HIM', r:2, tenPerMove:11, reelMul:1.2},
+  {id:'unregistered-gator', n:'UNREGISTERED ALLIGATOR', r:3, tenPerMove:12, reelMul:1.1},
+];
+let curFish=FISH[0];
+function loadFish(f){
+  curFish=f; fishName=f.n; fishR=f.r; landGoal=1;
+  land=0; tension=8; combo=0; phase='play'; fishReact=0;
+  const img=new Image(); img.onload=()=>fishImg=img; img.onerror=()=>fishImg=null;
+  img.src='art/makko/fish/'+f.id+'.png'; fishImg=null;
+  initBoard();
+  document.getElementById('again').style.display='none';
+}
+
+// ---- input: P&D drag ----
+let held=null; // {r,c} current cell of the held tile
+let finger={x:0,y:0}, dragT=0, DRAG_MAX=5.5, moved=0;
+function cellAt(px,py){
+  const c=Math.floor((px-ox)/cell), r=Math.floor((py-oy)/cell);
+  if(c<0||c>=COLS||r<0||r>=ROWS)return null; return {r,c};
+}
+cv.addEventListener('pointerdown',e=>{
+  if(phase!=='play')return;
+  const p=cellAt(e.clientX,e.clientY); if(!p)return;
+  held=p; finger={x:e.clientX,y:e.clientY}; dragT=0; moved=0;
+});
+cv.addEventListener('pointermove',e=>{
+  if(!held)return; finger={x:e.clientX,y:e.clientY};
+  const p=cellAt(e.clientX,e.clientY); if(!p)return;
+  // swap held tile toward the finger's cell, one step (orthogonal) at a time
+  const dr=p.r-held.r, dc=p.c-held.c;
+  if(Math.abs(dr)+Math.abs(dc)>=1){
+    let nr=held.r, nc=held.c;
+    if(Math.abs(dc)>=Math.abs(dr))nc+=Math.sign(dc); else nr+=Math.sign(dr);
+    if(nr>=0&&nr<ROWS&&nc>=0&&nc<COLS){
+      // swap grid + tiles, animate the displaced tile from its old spot
+      const t1=tiles[held.r][held.c], t2=tiles[nr][nc];
+      [grid[held.r][held.c],grid[nr][nc]]=[grid[nr][nc],grid[held.r][held.c]];
+      tiles[held.r][held.c]=t2; tiles[nr][nc]=t1;
+      // displaced tile eases from its previous pixel toward new slot
+      const sx=(nc-held.c)*cell, sy=(nr-held.r)*cell;
+      t2.slideX=-sx; t2.slideY=-sy;
+      held={r:nr,c:nc}; moved++;
+      if(navigator.vibrate)try{navigator.vibrate(4)}catch(_){}
+    }
+  }
+});
+function drop(){ if(!held)return; held=null; resolve(); }
+cv.addEventListener('pointerup',drop);
+cv.addEventListener('pointercancel',drop);
+
+// ---- match + resolve ----
+function findMatches(){
+  const m=[]; const mark=Array.from({length:ROWS},()=>Array(COLS).fill(false));
+  for(let r=0;r<ROWS;r++)for(let c=0;c<COLS-2;c++){const k=grid[r][c];if(k<0)continue;let e=c;while(e+1<COLS&&grid[r][e+1]===k)e++;if(e-c>=2)for(let i=c;i<=e;i++)mark[r][i]=true;c=e;}
+  for(let c=0;c<COLS;c++)for(let r=0;r<ROWS-2;r++){const k=grid[r][c];if(k<0)continue;let e=r;while(e+1<ROWS&&grid[e+1][c]===k)e++;if(e-r>=2)for(let i=r;i<=e;i++)mark[i][c]=true;r=e;}
+  for(let r=0;r<ROWS;r++)for(let c=0;c<COLS;c++)if(mark[r][c])m.push({r,c,k:grid[r][c]});
+  return m;
+}
+let popList=[];
+function resolve(){
+  phase='resolving';
+  step();
+}
+function step(){
+  const m=findMatches();
+  if(m.length===0){ endTurn(); return; }
+  combo++; comboShow=combo; comboT=0.9;
+  // score the clear
+  let cnt=m.length, slack=m.filter(t=>t.k===4).length;
+  const reel=(0.028*cnt)*(1+0.35*(combo-1))*curFish.reelMul;   // combo scales the pull
+  land=Math.min(landGoal, land+reel);
+  if(slack>0)tension=Math.max(0, tension-(6*slack)*(1+0.3*(combo-1)));
+  fishReact=0.5;
+  try{beep(320+combo*60,0.06)}catch(_){}
+  if(navigator.vibrate)try{navigator.vibrate(combo>1?[10,20]:8)}catch(_){}
+  // pop them
+  for(const t of m){ tiles[t.r][t.c].pop=0.001; grid[t.r][t.c]=-1; }
+  floatNum(reel);
+  setTimeout(()=>{ collapse(); setTimeout(step,120); }, 220);
+}
+let floats=[];
+function floatNum(reel){ floats.push({txt:'+'+Math.round(reel*100)+'%', y:0, t:0, big:combo>1}); }
+function collapse(){
+  for(let c=0;c<COLS;c++){
+    let write=ROWS-1;
+    for(let r=ROWS-1;r>=0;r--){ if(grid[r][c]>=0){ if(write!==r){ grid[write][c]=grid[r][c]; tiles[write][c]=tiles[r][c]; tiles[write][c].slideY=(r-write)*cell; grid[r][c]=-1; } write--; } }
+    for(let r=write;r>=0;r--){ grid[r][c]=randKind(); const t=newTile(grid[r][c]); t.slideY=-(write-r+1)*cell - cell; tiles[r][c]=t; }
+  }
+}
+function endTurn(){
+  if(land>=landGoal){ win(); return; }
+  // fish's counter-attack
+  tension=Math.min(TMAX, tension + curFish.tenPerMove + fishR*1.2);
+  fishReact=0.6; try{beep(140,0.12,'sawtooth')}catch(_){}
+  if(tension>=TMAX){ lose(); return; }
+  combo=0; phase='play';
+}
+function win(){ phase='win'; combo=0; try{chord([523,659,784],0.5)}catch(_){}
+  if(navigator.vibrate)try{navigator.vibrate([30,40,80])}catch(_){}
+  document.getElementById('again').textContent='LANDED IT — NEXT FISH →'; document.getElementById('again').style.display='block'; }
+function lose(){ phase='lose'; combo=0; try{beep(90,0.5,'sawtooth')}catch(_){}
+  if(navigator.vibrate)try{navigator.vibrate([60,40,120])}catch(_){}
+  document.getElementById('again').textContent='SNAPPED! — TRY AGAIN →'; document.getElementById('again').style.display='block'; }
+document.getElementById('again').onclick=()=>{ let i=(FISH.indexOf(curFish)+ (phase==='win'?1:0))%FISH.length; loadFish(phase==='win'?FISH[i]:curFish); };
+
+// ---- audio (tiny) ----
+let AC=null; function ac(){ if(!AC){try{AC=new (window.AudioContext||window.webkitAudioContext)()}catch(_){}} if(AC&&AC.state==='suspended')AC.resume(); return AC; }
+function beep(f,d,type){ const a=ac(); if(!a)return; const o=a.createOscillator(),g=a.createGain(); o.type=type||'triangle'; o.frequency.value=f; g.gain.value=.05; o.connect(g).connect(a.destination); o.start(); g.gain.exponentialRampToValueAtTime(.0001,a.currentTime+(d||0.1)); o.stop(a.currentTime+(d||0.1)); }
+function chord(fs,d){ fs.forEach((f,i)=>setTimeout(()=>beep(f,d),i*70)); }
+addEventListener('pointerdown',()=>ac(),{once:true});
+
+// ---- render ----
+let last=0;
+function frame(tm){
+  const dt=Math.min(0.05,(tm-last)/1000||0); last=tm;
+  // animate slides/pops
+  for(let r=0;r<ROWS;r++)for(let c=0;c<COLS;c++){const t=tiles[r][c];if(!t)continue;
+    if(t.slideX)t.slideX*=Math.pow(0.001,dt); if(Math.abs(t.slideX)<0.5)t.slideX=0;
+    if(t.slideY)t.slideY*=Math.pow(0.0006,dt); if(Math.abs(t.slideY)<0.5)t.slideY=0;
+    if(t.pop>0)t.pop=Math.min(1,t.pop+dt*5);
+  }
+  if(comboT>0)comboT-=dt; if(fishReact>0)fishReact-=dt*2;
+  if(held){ dragT+=dt; if(dragT>DRAG_MAX)drop(); }
+  for(const f of floats){f.t+=dt;f.y-=dt*60;} floats=floats.filter(f=>f.t<0.9);
+  draw(tm/1000);
+  requestAnimationFrame(frame);
+}
+function roundRect(px,py,w,h,r){x.beginPath();if(x.roundRect)x.roundRect(px,py,w,h,r);else x.rect(px,py,w,h);}
+function draw(t){
+  // bg
+  const g=x.createLinearGradient(0,0,0,H); g.addColorStop(0,'#0a2036'); g.addColorStop(1,'#061019');
+  x.fillStyle=g; x.fillRect(0,0,W,H);
+  // --- fish + bars (top), cleanly stacked ---
+  const topH=boardY, bw=W*0.82, bx=(W-bw)/2;
+  const nameY=26, barTop=44, tenY=topH-30;
+  x.textAlign='center';x.textBaseline='middle';
+  // fish, centered in the space between the two bars, sized to fit
+  const availTop=barTop+24, availBot=tenY-8, availH=availBot-availTop;
+  const fcY=(availTop+availBot)/2 + Math.sin(t*1.5)*4 - (fishReact>0?fishReact*8:0);
+  if(fishImg){ let fw=Math.min(W*0.52, availH*fishImg.width/fishImg.height*0.9), fh=fw*fishImg.height/fishImg.width;
+    x.save(); x.translate(W/2, fcY); const jit=fishReact>0?Math.sin(t*40)*3*fishReact:0; x.translate(jit,0);
+    x.shadowColor='rgba(120,180,255,.4)';x.shadowBlur=18; x.drawImage(fishImg,-fw/2,-fh/2,fw,fh); x.restore();
+  }
+  // name
+  x.font='900 italic 15px system-ui';x.fillStyle='#eaf2ff';
+  x.fillText(fishName.length>26?fishName.slice(0,25)+'…':fishName, W/2, nameY);
+  // LANDING bar
+  bar(bx, barTop, bw, 16, land/landGoal, '#5dffa8', 'LANDING '+Math.round(land/landGoal*100)+'%');
+  // TENSION bar
+  const tcol=tension>=TMAX*0.85?'#ff3b52':tension>=TMAX*0.6?'#ff9a3d':'#3fd8ff';
+  const tp=tension>=TMAX*0.85?(Math.sin(t*16)>0?1:0.5):1;
+  x.globalAlpha=tp; bar(bx, tenY, bw, 14, tension/TMAX, tcol, 'LINE TENSION '+Math.round(tension)+'/'+TMAX); x.globalAlpha=1;
+  // --- board ---
+  // board bg
+  x.fillStyle='rgba(4,12,20,.55)'; roundRect(ox-8,oy-8,cell*COLS+16,cell*ROWS+16,16); x.fill();
+  for(let r=0;r<ROWS;r++)for(let c=0;c<COLS;c++){
+    const k=grid[r][c]; if(k<0)continue; const t2=tiles[r][c];
+    if(held&&held.r===r&&held.c===c)continue; // held drawn on top
+    drawTile(ox+c*cell+(t2.slideX||0), oy+r*cell+(t2.slideY||0), k, t2.pop);
+  }
+  // held tile follows finger
+  if(held){ drawTile(finger.x-cell/2, finger.y-cell/2, grid[held.r][held.c], 0, true);
+    // drag timer ring
+    const rem=1-dragT/DRAG_MAX; x.strokeStyle=rem<0.3?'#ff3b52':'#ffd54a'; x.lineWidth=4; x.globalAlpha=.9;
+    x.beginPath(); x.arc(finger.x,finger.y-cell/2, cell*0.62, -Math.PI/2, -Math.PI/2+rem*Math.PI*2); x.stroke(); x.globalAlpha=1;
+  }
+  // float numbers
+  for(const f of floats){ x.globalAlpha=Math.max(0,1-f.t/0.9); x.font=(f.big?'900 26px':'900 18px')+' system-ui'; x.fillStyle='#ffe28a'; x.textAlign='center'; x.fillText(f.txt, W/2, topH-60+f.y); }
+  x.globalAlpha=1;
+  // combo
+  if(comboT>0&&comboShow>1){ x.globalAlpha=Math.min(1,comboT*3); x.font='900 italic 34px system-ui'; x.fillStyle='#ffd54a'; x.textAlign='center'; x.fillText('COMBO ×'+comboShow, W/2, topH*0.78); x.globalAlpha=1; }
+  // win/lose
+  if(phase==='win'||phase==='lose'){ x.fillStyle='rgba(4,10,18,.72)';x.fillRect(0,0,W,H);
+    x.font='900 italic 40px system-ui';x.textAlign='center';x.fillStyle=phase==='win'?'#5dffa8':'#ff5d73';
+    x.fillText(phase==='win'?'LANDED! 🎣':'SNAPPED! 💔', W/2, H*0.4); }
+}
+function bar(px,py,w,h,frac,col,label){
+  x.fillStyle='rgba(255,255,255,.09)'; roundRect(px,py,w,h,h/2); x.fill();
+  x.save(); roundRect(px,py,w*Math.max(0,Math.min(1,frac)),h,h/2); x.clip(); x.fillStyle=col; x.fillRect(px,py,w,h);
+  x.fillStyle='rgba(255,255,255,.22)';x.fillRect(px,py,w,h*0.4); x.restore();
+  x.font='900 9px system-ui';x.textAlign='center';x.textBaseline='middle';x.fillStyle='#eaf2ff'; x.fillText(label,px+w/2,py+h/2+0.5);
+}
+function drawTile(px,py,k,pop,held){
+  const K=KINDS[k]; const m=held?6:4; let s=1; if(pop>0)s=1-pop; if(s<=0)return;
+  const sz=(cell-m*2)*s, cx=px+cell/2, cy=py+cell/2;
+  x.save(); x.translate(cx,cy); if(held){x.scale(1.16,1.16);x.shadowColor='rgba(0,0,0,.5)';x.shadowBlur=12;x.shadowOffsetY=5;}
+  const gg=x.createLinearGradient(0,-sz/2,0,sz/2); gg.addColorStop(0,K.c); gg.addColorStop(1,shade(K.c,-30));
+  x.fillStyle=gg; roundRect(-sz/2,-sz/2,sz,sz,sz*0.28); x.fill();
+  x.strokeStyle='rgba(4,12,20,.85)';x.lineWidth=Math.max(2,sz*0.06); x.stroke();
+  x.fillStyle='rgba(255,255,255,.28)'; roundRect(-sz/2+sz*0.14,-sz/2+sz*0.12,sz*0.72,sz*0.22,sz*0.14); x.fill();
+  x.globalAlpha=pop>0?1-pop:1; x.font=Math.round(sz*0.5)+'px "Segoe UI Emoji",sans-serif'; x.textAlign='center';x.textBaseline='middle'; x.fillText(K.ic,0,sz*0.04); x.globalAlpha=1;
+  x.restore();
+}
+function shade(hex,d){ const n=parseInt(hex.slice(1),16); let r=(n>>16)+d,g=((n>>8)&255)+d,b=(n&255)+d; r=Math.max(0,Math.min(255,r));g=Math.max(0,Math.min(255,g));b=Math.max(0,Math.min(255,b)); return 'rgb('+r+','+g+','+b+')'; }
+
+resize(); loadFish(FISH[0]); requestAnimationFrame(frame);
+</script></body></html>
