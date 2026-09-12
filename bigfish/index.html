@@ -4097,30 +4097,27 @@ function drawFightHUD(t,fp){
   const px=22,pw=W-44,py=52;
   x.save();
   x.translate(W/2,py+26);x.scale(zoomS,zoomS);x.translate(-W/2,-(py+26));
-  if(f.mode==='board'){                                        // Makko gunmetal contact plate (matches the device)
-    drawPlate(px,py,pw,54);
+  if(f.mode==='board'){
+    // TOP READOUT — mirrors the bottom gauge: fish-name label + REELED IN inside a gunmetal gauge housing
+    const frac=clamp(f.land||0,0,1);
+    const nm='🎯 '+f.sp.n+(f.shiny?' ✨':'');
+    x.font='900 italic 11px system-ui';x.textAlign='left';x.textBaseline='alphabetic';x.fillStyle='#dff2ff';
+    x.fillText(nm.length>26?nm.slice(0,25)+'…':nm,px+8,py+6);
+    x.font='900 10px system-ui';x.textAlign='right';x.fillStyle='#7dffb0';
+    x.fillText('📡 REELED IN '+Math.round(frac*100)+'%',px+pw-8,py+6);
+    const win=drawGaugeFrame(px+2,py+12,pw-4,36);
+    x.save();rr(win.wx,win.wy,win.ww,win.wh,3);x.clip();
+    const segs=30,sw=win.ww/segs;
+    for(let i=0;i<segs;i++){if((i+1)/segs>frac+1/segs)break;x.fillStyle='#3fffb0';x.fillRect(win.wx+i*sw+0.5,win.wy+0.5,sw-1,win.wh-1)}
+    x.restore();
   }else{
     x.fillStyle='rgba(6,13,24,.86)';x.beginPath();if(x.roundRect)x.roundRect(px,py,pw,52,14);else x.rect(px,py,pw,52);x.fill();
     x.strokeStyle=RCOL[f.r]+'99';x.lineWidth=2;x.stroke();
-  }
-  // name row
-  x.font='900 italic 12px system-ui';x.textAlign='left';x.textBaseline='middle';
-  x.fillStyle=f.mode==='board'?'#dff2ff':RCOL[f.r];
-  const nm=(f.mode==='board'?'🎯 ':'')+f.sp.n+(f.shiny?' ✨':'')+(f.enraged?' 🔥ENRAGED':'');
-  x.fillText(nm.length>26?nm.slice(0,25)+'…':nm,px+10,py+11);
-  // clean panel: fish name only (state reads on the strip below); a FOLDED tag only when demoralized
-  if(f.foldT>0){x.textAlign='right';x.font='900 italic 10px system-ui';x.fillStyle='#ff6ec7';x.fillText('😵 FOLDED',px+pw-10,py+11);}
-  const hx2=px+10,hw=pw-20;
-  const frac=clamp(f.land||0,0,1);                             // LANDING / REELED-IN progress
-  if(f.mode==='board'){                                        // REELED IN → recessed LED slot on the gunmetal plate
-    const gy2=py+27,gh2=15;
-    x.fillStyle='#06121c';rr(hx2,gy2,hw,gh2,5);x.fill();
-    const tf=clamp(frac,0,1),segs=30,sw=hw/segs;
-    for(let i=0;i<segs;i++){if((i+1)/segs>tf+1/segs)break;x.fillStyle='#3fffb0';x.fillRect(hx2+i*sw+1,gy2+2,sw-2,gh2-4)}
-    x.font='900 10px system-ui';x.textAlign='right';x.fillStyle='#7dffb0';
-    x.fillText('📡 REELED IN '+Math.round(frac*100)+'%',px+pw-10,py+11);
-  }else{
-    const hy=py+22,hh=13,dispFrac=frac;
+    x.font='900 italic 12px system-ui';x.textAlign='left';x.textBaseline='middle';x.fillStyle=RCOL[f.r];
+    const nm=f.sp.n+(f.shiny?' ✨':'')+(f.enraged?' 🔥ENRAGED':'');
+    x.fillText(nm.length>26?nm.slice(0,25)+'…':nm,px+10,py+11);
+    if(f.foldT>0){x.textAlign='right';x.font='900 italic 10px system-ui';x.fillStyle='#ff6ec7';x.fillText('😵 FOLDED',px+pw-10,py+11);}
+    const hx2=px+10,hw=pw-20,hy=py+22,hh=13,frac=clamp(f.land||0,0,1),dispFrac=frac;
     x.fillStyle='rgba(255,255,255,.08)';x.beginPath();if(x.roundRect)x.roundRect(hx2,hy,hw,hh,7);else x.rect(hx2,hy,hw,hh);x.fill();
     x.save();x.beginPath();if(x.roundRect)x.roundRect(hx2,hy,hw*clamp(dispFrac,0,1),hh,7);else x.rect(hx2,hy,hw*dispFrac,hh);x.clip();
     x.fillStyle=f.bars>1?['#7c3aed','#c026d3','#f43f5e'][Math.min(2,f.phase-1)]:RCOL[f.r];
@@ -4129,16 +4126,12 @@ function drawFightHUD(t,fp){
     if(f.bars>1){x.font='900 9px system-ui';x.textAlign='right';x.fillStyle='#fff';x.fillText('PHASE '+f.phase+'/'+f.bars,hx2+hw-4,hy+hh/2+0.5)}
     x.fillStyle='rgba(150,180,210,.4)';for(let i=1;i<10;i++)x.fillRect(Math.round(hx2+hw*i/10),hy,1,2);
     x.font='900 9px system-ui';x.textAlign='left';x.fillStyle='rgba(255,255,255,.9)';x.fillText('LANDING '+Math.round(frac*100)+'%',hx2+5,hy+hh/2+0.5);
-  }
-  // fish-state strip: tiring (reel) → tensing → RUNNING (let go!) — reel-in only
-  if(f.mode!=='board'){
     const ey=py+41,run2=(f.fishState==='run'),tel2=(f.fishState==='tele');
     x.fillStyle='rgba(255,255,255,.08)';x.fillRect(hx2,ey,hw,4);
-    x.fillStyle=run2?'#ff4d5e':(tel2?'#ffd54a':'#5dffa8');
-    x.fillRect(hx2,ey,hw*(run2?1:(tel2?0.5:0.16)),4);
+    x.fillStyle=run2?'#ff4d5e':(tel2?'#ffd54a':'#5dffa8');x.fillRect(hx2,ey,hw*(run2?1:(tel2?0.5:0.16)),4);
     x.font='800 8px system-ui';x.fillStyle=run2?'#ff8a8a':'#7d90ad';x.textAlign='left';
     x.fillText(run2?'RUNNING — LET GO!':tel2?"it's about to run…":'tiring — REEL IT IN',hx2,ey+9);
-  }                                                            // board: the REELED-IN gauge fills the panel, no caption needed
+  }
   x.restore();
   /* -- LINE TENSION gauge (bottom) — Makko gunmetal instrument -- */
   const ten=f.tension,tm=f.tenMax;
