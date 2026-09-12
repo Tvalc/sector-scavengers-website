@@ -246,6 +246,7 @@ button{font-family:inherit}
 /* --- CLEAN FISHING: hide the metagame dashboard while casting/fighting; it returns at idle + on the catch card --- */
 #hudTop,#nav,#abilityBtn,#tauntBtn{transition:opacity .3s ease}
 body.fishing #hudTop,body.fishing #nav,body.fishing #abilityBtn,body.fishing #tauntBtn{opacity:0;pointer-events:none}
+body.boardfight #abilityBtn{opacity:1;pointer-events:auto}   /* the CATCH BOARD uses the angler ability */
 body.fishing #hint{display:none}
 </style>
 </head>
@@ -1839,10 +1840,33 @@ function abilityBtnShow(on){
   b.style.display=(on&&a)?'block':'none';
   if(a){b.querySelector('.ae').textContent=a.e;b.querySelector('.an').textContent=a.an}
 }
+function boardAbility(a,f){                                     // angler actives, remapped for the CATCH BOARD
+  abilityCd=a.cd;sfx('quest');vib(15);
+  switch(a.fx){
+    case 'heal25':f.tension=Math.max(0,f.tension-25);break;
+    case 'break':f.tension=Math.max(0,f.tension-20);f.skipCounter=1;break;
+    case 'sip':f.tension=Math.max(0,f.tension-15);break;
+    case 'object':case 'ghost':case 'bore':f.skipCounter=1;break;
+    case 'purse':f.nextMatchX5=1;break;
+    case 'squawk':f.boardReelMul=1.5;f.boardReelT=3;break;
+    case 'govname':f.boardReelMul=2;f.boardReelT=2;break;
+    case 'downsize':f.land=Math.min(1,f.land+0.15);break;
+    case 'clip':f.land=Math.min(1,f.land+0.10);break;
+    case 'tantrum':f.land=Math.min(1,f.land+0.12);break;
+    case 'comet':f.land=Math.min(1,f.land+0.20);break;
+    case 'review':f.land=Math.min(1,f.land+0.25);break;
+    default:f.land=Math.min(1,f.land+0.10);
+  }
+  f.fx.zoom=1;f.fx.gold=0.1;hitstop(0.05);
+  const msg={heal25:'-25 💧',break:'🚧 BREAK',sip:'-15 💧',object:'🛡️ NEGATED',ghost:'🛡️ NEGATED',bore:'🛡️ NEGATED',purse:'👵 NEXT MATCH ×5',squawk:'🥸 +50% REEL',govname:'🧜 REEL ×2',downsize:'📉 +15%',clip:'🎬 +10%',tantrum:'👶 +12%',comet:'☄️ +20%',review:'🧞 +25%'}[a.fx]||'✨';
+  fishSay(msg,{cd:0.4});
+  if(f.land>=1)fightWin(f.tension>=f.tenMax*0.78,{});
+}
 function abilityUse(){
   const a=eqAngler();if(!a||!fight)return;
   if(abilityCd>0){sfx('tick');return}
   const f=fight;
+  if(f.mode==='board'){boardAbility(a,f);return}               // board = its own ability mapping
   if(!isFishy(f.state))return;
   abilityCd=a.cd;
   sfx('quest');vib(15);
@@ -1873,17 +1897,30 @@ function abilityUse(){
 }
 /* ---- master fight update (dt = real seconds, clamped ≤50ms upstream) ---- */
 /* ============ THE CATCH BOARD — Puzzle&Dragons match-3, the FINAL FIGHT ============ */
-const BCOLS=6,BROWS=5,REEL_GOAL=0.4;              // reel the fish this close, then the board fight
+const BCOLS=6,BROWS=5,REEL_GOAL=0.3,REEL_MAXT=6;  // short reel-in: land 30% OR ~6s, then the board fight
 const BKINDS=[
  {c:'#ff5d73',art:'tile-hook',ic:'🪝'},{c:'#ffbf3f',art:'tile-bait',ic:'🪱'},
  {c:'#5dffa8',art:'tile-reel',ic:'🎣'},{c:'#b78bff',art:'tile-jolt',ic:'⚡'},{c:'#3fd8ff',art:'tile-slack',ic:'🛟'}];
 let boardPanel=null;
 function boardArt(k){return makkoLoad('art/makko/board/'+BKINDS[k].art+'.png')}
-function boardGeo(){const top=196,bot=H-124,availH=bot-top,cell=Math.floor(Math.min((W-16)/BCOLS,availH/BROWS));return {cell,ox:Math.floor((W-cell*BCOLS)/2),oy:Math.floor(bot-cell*BROWS)}}
+const BINS={IL:0.11,IR:0.10,IT:0.09,IB:0.16,PADX:0.14,PADY:0.12};   // fishfinder screen insets + grid margin (cells)
+function boardGeo(){
+  const {IL,IR,IT,IB,PADX,PADY}=BINS,sW=1-IL-IR,sH=1-IT-IB;
+  const kW=(BCOLS+2*PADX)/sW,kH=(BROWS+2*PADY)/sH;             // whole DEVICE size per cell (so the bezel fits, not just the grid)
+  const sideM=8,topBand=Math.max(150,H*0.23),botBand=H-132;    // band available for the entire device (below fish, above tension gauge)
+  const availW=W-sideM*2,availH=botBand-topBand;
+  const cell=Math.max(24,Math.floor(Math.min(availW/kW,availH/kH)));
+  const PW=kW*cell,PH=kH*cell;
+  const PX=Math.round((W-PW)/2),PY=Math.round(topBand+(availH-PH)/2);
+  const ox=Math.round(PX+IL*PW+PADX*cell),oy=Math.round(PY+IT*PH+PADY*cell);
+  return {cell,ox,oy,PX,PY,PW,PH};
+}
 function bRandKind(){return Math.random()<0.2?4:(Math.random()*4|0)}
 function bHasMatch(g,r,c,k){return (c>=2&&g[r][c-1]===k&&g[r][c-2]===k)||(r>=2&&g[r-1][c]===k&&g[r-2][c]===k)}
 function enterBoard(){
-  const f=fight;f.mode='board';f.bstate='play';f.land=0;f.combo=0;f.comboShow=0;f.comboT=0;f.dragT=0;f.held=null;f.bfloats=[];f.finger={x:W/2,y:H*0.7};
+  const f=fight;f.mode='board';f.bstate='play';f.combo=0;f.comboShow=0;f.comboT=0;f.dragT=0;f.held=null;f.bfloats=[];f.finger={x:W/2,y:H*0.7};
+  f.land=Math.min(0.4,teamP('fishHp')+(save.zone===4?teamP('fishHpVoid'):0));  // gear that weakens fish = a head start
+  f.skipCounter=0;f.nextMatchX5=0;f.boardReelMul=1;f.boardReelT=0;f.squidUsed=0; // gacha-buff state for the board
   f.grid=[];f.btiles=[];
   for(let r=0;r<BROWS;r++){f.grid[r]=[];f.btiles[r]=[];for(let c=0;c<BCOLS;c++){let k;do{k=bRandKind()}while(bHasMatch(f.grid,r,c,k));f.grid[r][c]=k;f.btiles[r][c]={sx:0,sy:0,pop:0}}}
   for(let k=0;k<5;k++)boardArt(k); if(!boardPanel)boardPanel=makkoLoad('art/makko/board/panel.png');
@@ -1899,12 +1936,16 @@ function bStep(){
   if(!m.length){bEndTurn();return}
   f.combo++;f.comboShow=f.combo;f.comboT=0.9;
   const cnt=m.length,slack=m.filter(t=>t.k===4).length;
-  const reel=(0.03*cnt)*(1+0.4*(f.combo-1))*(1+teamP('dmg'));
+  // reel power mirrors the tap-damage family so equipped gear matters on the board
+  let dmgMul=1+teamP('dmg')+(f.r>=2?teamP('dmgRare'):0)+(f.r<=1?teamP('dmgLow'):0)+teamP('dmgPerRar')*f.r+(isNight()?teamP('dmgNight'):0)+Math.min(0.30,teamP('ramp')*f.dur);
+  let reel=(0.03*cnt)*(1+0.4*(f.combo-1))*dmgMul*(f.boardReelMul||1);
+  if(f.nextMatchX5){reel*=5;f.nextMatchX5=0}                    // GRANNY's purse: next match ×5
+  let crit=false;if(Math.random()<critChance()){reel*=critMult();crit=true}
   f.land=Math.min(1,f.land+reel);
   if(slack>0)f.tension=Math.max(0,f.tension-(7*slack)*(1+0.3*(f.combo-1)));
-  sfx('coin');if(f.combo>1)hitstop(0.03);
+  sfx('coin');if(f.combo>1||crit)hitstop(0.03);
   for(const t of m){f.btiles[t.r][t.c].pop=0.001;f.grid[t.r][t.c]=-1}
-  (f.bfloats=f.bfloats||[]).push({txt:'+'+Math.round(reel*100)+'%',y:0,t:0,big:f.combo>1});
+  (f.bfloats=f.bfloats||[]).push({txt:(crit?'✦ ':'')+'+'+Math.round(reel*100)+'%',y:0,t:0,big:f.combo>1||crit});
   setTimeout(()=>{if(fight===f&&f.mode==='board'){bCollapse();setTimeout(()=>{if(fight===f&&f.mode==='board')bStep()},120)}},210);
 }
 function bCollapse(){const f=fight,{cell}=boardGeo();
@@ -1913,8 +1954,18 @@ function bCollapse(){const f=fight,{cell}=boardGeo();
     for(let r=w;r>=0;r--){f.grid[r][c]=bRandKind();f.btiles[r][c]={sx:0,sy:-(w-r+1)*cell-cell,pop:0}}}}
 function bEndTurn(){
   const f=fight;f.combo=0;
+  if(f.boardReelT>0){f.boardReelT--;if(f.boardReelT<=0)f.boardReelMul=1}
+  const pet=eqPet();                                            // pets tick on the board too (were gated off by isFishy)
+  if(pet&&pet.p){const rm=rankMult(pet.id);let bump=0;
+    if(pet.p.crab)bump+=0.02*rm;if(pet.p.notary)bump+=0.03*rm;if(pet.p.eldritch)bump+=0.05*rm;
+    if(bump)f.land=Math.min(1,f.land+bump);
+    if(pet.p.squid&&f.tension>=70&&!f.squidUsed){f.tension=Math.max(0,f.tension-20*rm);f.squidUsed=1;fishSay('🦑 vented',{cd:1})}}
   if(f.land>=1){fightWin(f.tension>=f.tenMax*0.78,{});return}
-  f.tension=Math.min(f.tenMax,f.tension+(11+f.r*2.5));f.fx.zoom=1;sfx('brace');
+  if(f.skipCounter>0){f.skipCounter--;f.bstate='play';return}   // an ability negated this counter-attack
+  let hit=(11+f.r*2.5)*(1+teamP('tenTaken'));                   // LINE upgrade + Lawyer + Trident/Solver all matter
+  if(f.r>=4)hit*=Math.max(0,1-teamP('tensLM'));
+  hit*=Math.max(0.2,1-0.06*save.ups.line);
+  f.tension=Math.min(f.tenMax,f.tension+hit);f.fx.zoom=1;sfx('brace');
   bark(HUM.onCooked,{cd:2});
   if(f.tension>=f.tenMax){fightLose('snap');return}
   f.bstate='play';
@@ -1955,15 +2006,10 @@ function drawBoardWaterBg(t){                                   // deep-water ba
   x.globalAlpha=1;
 }
 function drawBoard(t){
-  const f=fight;if(!f||f.mode!=='board'||!f.grid)return;const {cell,ox,oy}=boardGeo();
+  const f=fight;if(!f||f.mode!=='board'||!f.grid)return;const {cell,ox,oy,PX,PY,PW,PH}=boardGeo();
   const gw=BCOLS*cell,gh=BROWS*cell;
-  if(boardPanel&&boardPanel.state==='ok'&&boardPanel.img){                       // map the fishfinder SCREEN rect onto the tile grid so blips sit on the display
-    const IL=0.11,IR=0.10,IT=0.09,IB=0.16,sW=1-IL-IR,sH=1-IT-IB;                 // measured screen insets within the bezel
-    const padX=cell*0.14,padY=cell*0.12;
-    const PW=(gw+padX*2)/sW,PH=(gh+padY*2)/sH;
-    const PX=(ox-padX)-IL*PW,PY=(oy-padY)-IT*PH;
-    x.drawImage(boardPanel.img,PX,PY,PW,PH);
-  }else{x.fillStyle='rgba(4,16,26,.7)';rr(ox-10,oy-10,gw+20,gh+20,16);x.fill()}
+  if(boardPanel&&boardPanel.state==='ok'&&boardPanel.img)x.drawImage(boardPanel.img,PX,PY,PW,PH);   // whole device fits on screen (sized in boardGeo)
+  else{x.fillStyle='rgba(4,16,26,.7)';rr(ox-10,oy-10,gw+20,gh+20,16);x.fill()}
   for(let r=0;r<BROWS;r++)for(let c=0;c<BCOLS;c++){const k=f.grid[r][c];if(k<0)continue;if(f.held&&f.held.r===r&&f.held.c===c)continue;const tl=f.btiles[r][c];bTile(ox+c*cell+(tl.sx||0),oy+r*cell+(tl.sy||0),cell,k,tl.pop,false)}
   if(f.held){bTile((f.finger.x||0)-cell/2,(f.finger.y||0)-cell/2,cell,f.grid[f.held.r][f.held.c],0,true);
     const rem=1-f.dragT/5.5;x.strokeStyle=rem<0.3?'#ff3b52':'#ffd54a';x.lineWidth=4;x.globalAlpha=.9;x.beginPath();x.arc(f.finger.x,f.finger.y-cell/2,cell*0.62,-Math.PI/2,-Math.PI/2+rem*Math.PI*2);x.stroke();x.globalAlpha=1}
@@ -2058,7 +2104,7 @@ function updateFight(dt){
   else if(f.tension<58)f.cookedBarked=0;
   f.midEvtT-=dt;if(f.midEvtT<=0){f.midEvtT=rnd(5,8);rollEvent('mid')}
   // --- resolve ---
-  if(f.land>=REEL_GOAL){enterBoard();return;}                   // fish is CLOSE → fire into the CATCH BOARD
+  if(f.land>=REEL_GOAL||f.dur>=REEL_MAXT){enterBoard();return;} // fish is CLOSE (or reel timed out) → fire into the CATCH BOARD
   if(f.tension>=f.tenMax){fightLose('snap');return;}
 }
 function updateFightFx(dt){ // fx decay runs on REAL time (survives hitstop/slow-mo)
@@ -3157,6 +3203,7 @@ function rodTip(t){
 let stars=null;
 function drawScene(t){
   document.body.classList.toggle('fishing',state==='cast'||state==='wait'||state==='bite'||state==='fight');  // clean screen during the fishing flow
+  document.body.classList.toggle('boardfight',state==='fight'&&!!fight&&fight.mode==='board');                 // re-show the ability button on the CATCH BOARD
   if(lastZone!==save.zone){lastZone=save.zone;genScenery()}
   const L=getLight(),wx=weather(),night=isNight(),golden=goldenActive(),Z=ZP[save.zone];
   const cel=celestialPos();
@@ -3535,9 +3582,10 @@ function drawWater(t,L,wx,night,golden,Z,cel,waterBot){
     if(Math.random()<(fight.state==='ATTACK'?0.5:0.2))splash(bobX+rnd(-10,10),WATER_Y,1);
   }
   for(const r2 of rips){
+    if(!(r2.r>0))continue;                                      // guard: ellipse throws on a non-positive radius
     const a=1-r2.t/r2.life;
     x.strokeStyle='rgba(215,238,255,'+(0.5*a).toFixed(3)+')';x.lineWidth=1.8;
-    x.beginPath();x.ellipse(r2.x,r2.y||WATER_Y+2,r2.r,r2.r*0.3,0,0,7);x.stroke();
+    x.beginPath();x.ellipse(r2.x,r2.y||WATER_Y+2,r2.r,Math.max(0.1,r2.r*0.3),0,0,7);x.stroke();
   }
   if(Z.reeds)drawReeds(t,L,wx);
 }
@@ -3743,7 +3791,7 @@ function fishPos(t){
   switch(f.state){
     case 'INTRO':{const p=Math.min(1,f.t/0.5);py=WATER_Y+26-24*p;s=0.6+0.4*p;break}
     case 'TUG':{
-      if(f.mode==='board'){px=W/2+Math.sin(t*1.8)*12;py=132+Math.sin(t*3)*5;s=0.58+0.10*(f.land||0);rot=Math.sin(t*2.2)*0.06;break;}  // board fight: fish looms small at the top
+      if(f.mode==='board'){const g=boardGeo();const top=108,bot=g.PY;px=W/2+Math.sin(t*1.8)*10;py=(top+bot)/2+Math.sin(t*3)*4;s=clamp((bot-top)/118,0.32,0.6);rot=Math.sin(t*2.2)*0.06;break;}  // board fight: fish fits the gap above the device
       if(f.fishState==='run'){px+=Math.sin(t*24)*11+Math.sin(t*11)*6;py+=Math.cos(t*19)*6;rot=Math.sin(t*22)*0.35;s=1.05;}   // thrashing
       else if(f.fishState==='tele'){py-=4;s=1.06;rot=-0.1;}                                                                   // tensing to run
       else{py+=Math.sin(t*4)*2.6;rot=Math.sin(t*3)*0.08;}                                                                      // tired bob
@@ -4145,7 +4193,7 @@ function drawFightOver(t){ // screen-space pass: vignette / flashes / letterbox 
 /* ---------- main loop ---------- */
 let lastT=performance.now(),lastGolden=goldenActive(),sessionT=0,stretchDone=false,hbT=0;
 function loop(tm){
-  const dt=Math.min(0.05,(tm-lastT)/1000);lastT=tm;   // dt clamped ≤50ms (headless/bg safe)
+  const dt=Math.max(0,Math.min(0.05,(tm-lastT)/1000));lastT=tm;   // dt clamped to [0,50ms] (headless/bg/clock-skew safe)
   if(state==='cast'){castT+=dt*3;if(castT>=1)landBobber()}
   if(state==='wait'&&nowS()>biteAt)triggerBite();
   if(state==='bite'&&nowS()>biteEnd)missBite();
