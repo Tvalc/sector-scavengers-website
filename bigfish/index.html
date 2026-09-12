@@ -1320,6 +1320,7 @@ function fightStart(sp,opts){
   hitstop(0.12);
   fight.fx.zoom=1;fight.fx.stamp='HOOKED';fight.fx.stampT=0.7;
   fight.land=0;fight.fishState='calm';fight.stateDur=1.2;fight.runDur=1.4;fight.reeling=false;fight.isFake=false;fight.inDanger=0;
+  fight.mode='reel';                                           // reel-in first, then the CATCH BOARD
   fight.tension=TUG.startTen;                                   // THE TUG: start with a little line tension
   sfx('hooked');vib(25);
   splash(bobX,WATER_Y,14);
@@ -1871,7 +1872,87 @@ function abilityUse(){
   }
 }
 /* ---- master fight update (dt = real seconds, clamped ≤50ms upstream) ---- */
-/* ============ THE TUG — hold-to-reel line-tension tug-of-war ============
+/* ============ THE CATCH BOARD — Puzzle&Dragons match-3, the FINAL FIGHT ============ */
+const BCOLS=6,BROWS=5,REEL_GOAL=0.4;              // reel the fish this close, then the board fight
+const BKINDS=[
+ {c:'#ff5d73',art:'tile-hook',ic:'🪝'},{c:'#ffbf3f',art:'tile-bait',ic:'🪱'},
+ {c:'#5dffa8',art:'tile-reel',ic:'🎣'},{c:'#b78bff',art:'tile-jolt',ic:'⚡'},{c:'#3fd8ff',art:'tile-slack',ic:'🛟'}];
+let boardPanel=null;
+function boardArt(k){return makkoLoad('art/makko/board/'+BKINDS[k].art+'.png')}
+function boardGeo(){const top=196,bot=H-124,availH=bot-top,cell=Math.floor(Math.min((W-16)/BCOLS,availH/BROWS));return {cell,ox:Math.floor((W-cell*BCOLS)/2),oy:Math.floor(bot-cell*BROWS)}}
+function bRandKind(){return Math.random()<0.2?4:(Math.random()*4|0)}
+function bHasMatch(g,r,c,k){return (c>=2&&g[r][c-1]===k&&g[r][c-2]===k)||(r>=2&&g[r-1][c]===k&&g[r-2][c]===k)}
+function enterBoard(){
+  const f=fight;f.mode='board';f.bstate='play';f.land=0;f.combo=0;f.comboShow=0;f.comboT=0;f.dragT=0;f.held=null;f.bfloats=[];f.finger={x:W/2,y:H*0.7};
+  f.grid=[];f.btiles=[];
+  for(let r=0;r<BROWS;r++){f.grid[r]=[];f.btiles[r]=[];for(let c=0;c<BCOLS;c++){let k;do{k=bRandKind()}while(bHasMatch(f.grid,r,c,k));f.grid[r][c]=k;f.btiles[r][c]={sx:0,sy:0,pop:0}}}
+  for(let k=0;k<5;k++)boardArt(k); if(!boardPanel)boardPanel=makkoLoad('art/makko/board/panel.png');
+  f.fx.stamp='FINAL FIGHT 🎣';f.fx.stampT=1.3;f.fx.zoom=1;sfx('fanfare',f.r);fishSay('now we FIGHT',{cd:1});
+}
+function bMatches(g){const m=[],mk=Array.from({length:BROWS},()=>Array(BCOLS).fill(false));
+  for(let r=0;r<BROWS;r++)for(let c=0;c<BCOLS-2;c++){const k=g[r][c];if(k<0)continue;let e=c;while(e+1<BCOLS&&g[r][e+1]===k)e++;if(e-c>=2)for(let i=c;i<=e;i++)mk[r][i]=true;c=e}
+  for(let c=0;c<BCOLS;c++)for(let r=0;r<BROWS-2;r++){const k=g[r][c];if(k<0)continue;let e=r;while(e+1<BROWS&&g[e+1][c]===k)e++;if(e-r>=2)for(let i=r;i<=e;i++)mk[i][c]=true;r=e}
+  for(let r=0;r<BROWS;r++)for(let c=0;c<BCOLS;c++)if(mk[r][c])m.push({r,c,k:g[r][c]});return m}
+function boardResolve(){fight.bstate='resolving';bStep()}
+function bStep(){
+  const f=fight;if(!f||f.mode!=='board'||f.state==='WIN'||f.state==='LOSE')return;const m=bMatches(f.grid);
+  if(!m.length){bEndTurn();return}
+  f.combo++;f.comboShow=f.combo;f.comboT=0.9;
+  const cnt=m.length,slack=m.filter(t=>t.k===4).length;
+  const reel=(0.03*cnt)*(1+0.4*(f.combo-1))*(1+teamP('dmg'));
+  f.land=Math.min(1,f.land+reel);
+  if(slack>0)f.tension=Math.max(0,f.tension-(7*slack)*(1+0.3*(f.combo-1)));
+  sfx('coin');if(f.combo>1)hitstop(0.03);
+  for(const t of m){f.btiles[t.r][t.c].pop=0.001;f.grid[t.r][t.c]=-1}
+  (f.bfloats=f.bfloats||[]).push({txt:'+'+Math.round(reel*100)+'%',y:0,t:0,big:f.combo>1});
+  setTimeout(()=>{if(fight===f&&f.mode==='board'){bCollapse();setTimeout(()=>{if(fight===f&&f.mode==='board')bStep()},120)}},210);
+}
+function bCollapse(){const f=fight,{cell}=boardGeo();
+  for(let c=0;c<BCOLS;c++){let w=BROWS-1;
+    for(let r=BROWS-1;r>=0;r--){if(f.grid[r][c]>=0){if(w!==r){f.grid[w][c]=f.grid[r][c];f.btiles[w][c]=f.btiles[r][c];f.btiles[w][c].sy=(r-w)*cell;f.grid[r][c]=-1}w--}}
+    for(let r=w;r>=0;r--){f.grid[r][c]=bRandKind();f.btiles[r][c]={sx:0,sy:-(w-r+1)*cell-cell,pop:0}}}}
+function bEndTurn(){
+  const f=fight;f.combo=0;
+  if(f.land>=1){fightWin(f.tension>=f.tenMax*0.78,{});return}
+  f.tension=Math.min(f.tenMax,f.tension+(11+f.r*2.5));f.fx.zoom=1;sfx('brace');
+  bark(HUM.onCooked,{cd:2});
+  if(f.tension>=f.tenMax){fightLose('snap');return}
+  f.bstate='play';
+}
+function bCellAt(px,py){const {cell,ox,oy}=boardGeo();const c=Math.floor((px-ox)/cell),r=Math.floor((py-oy)/cell);if(c<0||c>=BCOLS||r<0||r>=BROWS)return null;return {r,c}}
+function boardPick(p){const f=fight;if(f.bstate!=='play'||f.state==='WIN'||f.state==='LOSE')return;const cc=bCellAt(p.x,p.y);if(!cc)return;f.held=cc;f.finger=p;f.dragT=0}
+function boardDrag(p){const f=fight;if(!f.held)return;f.finger=p;const cc=bCellAt(p.x,p.y);if(!cc)return;const dr=cc.r-f.held.r,dc=cc.c-f.held.c;
+  if(Math.abs(dr)+Math.abs(dc)>=1){let nr=f.held.r,nc=f.held.c;if(Math.abs(dc)>=Math.abs(dr))nc+=Math.sign(dc);else nr+=Math.sign(dr);
+    if(nr>=0&&nr<BROWS&&nc>=0&&nc<BCOLS){const {cell}=boardGeo();[f.grid[f.held.r][f.held.c],f.grid[nr][nc]]=[f.grid[nr][nc],f.grid[f.held.r][f.held.c]];
+      const t2=f.btiles[nr][nc];f.btiles[nr][nc]=f.btiles[f.held.r][f.held.c];f.btiles[f.held.r][f.held.c]=t2;t2.sx=-(nc-f.held.c)*cell;t2.sy=-(nr-f.held.r)*cell;f.held={r:nr,c:nc};vib(4)}}}
+function boardDrop(){const f=fight;if(!f.held)return;f.held=null;boardResolve()}
+function boardStepAnim(dt){const f=fight;
+  for(let r=0;r<BROWS;r++)for(let c=0;c<BCOLS;c++){const t=f.btiles[r][c];if(!t)continue;if(t.sx)t.sx*=Math.pow(0.001,dt);if(Math.abs(t.sx)<0.5)t.sx=0;if(t.sy)t.sy*=Math.pow(0.0006,dt);if(Math.abs(t.sy)<0.5)t.sy=0;if(t.pop>0)t.pop=Math.min(1,t.pop+dt*5)}
+  if(f.comboT>0)f.comboT-=dt;
+  if(f.held){f.dragT+=dt;if(f.dragT>5.5)boardDrop()}
+  for(const fl of (f.bfloats||[])){fl.t+=dt;fl.y-=dt*60}f.bfloats=(f.bfloats||[]).filter(fl=>fl.t<0.9);
+}
+function rr(px,py,w,h,r){x.beginPath();if(x.roundRect)x.roundRect(px,py,w,h,r);else x.rect(px,py,w,h)}
+function bTile(px,py,cell,k,pop,held){
+  const K=BKINDS[k],m=held?5:4;let s=1;if(pop>0)s=1-pop;if(s<=0)return;const sz=(cell-m*2)*s,cx=px+cell/2,cy=py+cell/2;const e=boardArt(k);
+  x.save();x.translate(cx,cy);if(held){x.scale(1.16,1.16);x.shadowColor='rgba(0,0,0,.5)';x.shadowBlur=12;x.shadowOffsetY=5}
+  x.globalAlpha=pop>0?1-pop:1;
+  if(e&&e.state==='ok'&&e.img)x.drawImage(e.img,-sz/2,-sz/2,sz,sz);
+  else{const gg=x.createLinearGradient(0,-sz/2,0,sz/2);gg.addColorStop(0,K.c);gg.addColorStop(1,'#20303f');x.fillStyle=gg;rr(-sz/2,-sz/2,sz,sz,sz*0.28);x.fill();x.font=Math.round(sz*0.5)+'px "Segoe UI Emoji"';x.textAlign='center';x.textBaseline='middle';x.fillText(K.ic,0,sz*0.04)}
+  x.globalAlpha=1;x.restore();
+}
+function drawBoard(t){
+  const f=fight;if(!f||f.mode!=='board'||!f.grid)return;const {cell,ox,oy}=boardGeo();
+  x.fillStyle='rgba(3,8,15,.24)';x.fillRect(0,0,W,H);          // focus dim so the orbs pop
+  if(boardPanel&&boardPanel.state==='ok'&&boardPanel.img)x.drawImage(boardPanel.img,ox-cell*0.5,oy-cell*0.5,cell*BCOLS+cell,cell*BROWS+cell);
+  else{x.fillStyle='rgba(4,12,20,.6)';rr(ox-8,oy-8,cell*BCOLS+16,cell*BROWS+16,16);x.fill()}
+  for(let r=0;r<BROWS;r++)for(let c=0;c<BCOLS;c++){const k=f.grid[r][c];if(k<0)continue;if(f.held&&f.held.r===r&&f.held.c===c)continue;const tl=f.btiles[r][c];bTile(ox+c*cell+(tl.sx||0),oy+r*cell+(tl.sy||0),cell,k,tl.pop,false)}
+  if(f.held){bTile((f.finger.x||0)-cell/2,(f.finger.y||0)-cell/2,cell,f.grid[f.held.r][f.held.c],0,true);
+    const rem=1-f.dragT/5.5;x.strokeStyle=rem<0.3?'#ff3b52':'#ffd54a';x.lineWidth=4;x.globalAlpha=.9;x.beginPath();x.arc(f.finger.x,f.finger.y-cell/2,cell*0.62,-Math.PI/2,-Math.PI/2+rem*Math.PI*2);x.stroke();x.globalAlpha=1}
+  for(const fl of (f.bfloats||[])){x.globalAlpha=Math.max(0,1-fl.t/0.9);x.font=(fl.big?'900 24px':'900 17px')+' system-ui';x.fillStyle='#ffe28a';x.textAlign='center';x.fillText(fl.txt,W/2,oy-24+fl.y)}x.globalAlpha=1;
+  if(f.comboT>0&&f.comboShow>1){x.globalAlpha=Math.min(1,f.comboT*3);x.font='900 italic 30px system-ui';x.fillStyle='#ffd54a';x.textAlign='center';x.fillText('COMBO ×'+f.comboShow,W/2,oy-52);x.globalAlpha=1}
+}
+/* ============ THE TUG — the SHORT reel-in before the board ============
    HOLD = reel (LAND rises, TENSION rises). RELEASE = ease (TENSION falls).
    The fish makes telegraphed RUNS — reeling into a run spikes tension toward
    SNAP; you must let go and ride it out, then reel again when it tires.
@@ -1932,6 +2013,8 @@ function updateFight(dt){
   if(f.state==='INTRO'){if(f.t>=0.5)startTug();return}
   if(f.state==='PHASE'){if(f.t>=1.2)startTug();return}
   if(f.state!=='TUG'){startTug();return}                        // safety: recover from any stray legacy state
+  if(f.mode==='board'){boardStepAnim(fdt);return}               // final fight = the CATCH BOARD (turn-based)
+  // --- REEL-IN: THE TUG, but only until the fish is close (REEL_GOAL), then the board ---
   // --- fish run cycle (calm → telegraph → run → calm) ---
   if(f.fishState==='calm'){ if(f.stateT>=f.stateDur)startRunTele(); }
   else if(f.fishState==='tele'){ if(f.stateT>=TUG.teleDur){ f.isFake?cancelRunTug():startRun(); } }
@@ -1957,10 +2040,7 @@ function updateFight(dt){
   else if(f.tension<58)f.cookedBarked=0;
   f.midEvtT-=dt;if(f.midEvtT<=0){f.midEvtT=rnd(5,8);rollEvent('mid')}
   // --- resolve ---
-  if(f.land>=1){
-    if(f.boss&&f.phase<f.bars){nextPhaseTug();return}
-    fightWin(f.tension>=f.tenMax*0.78,{});return;               // clutch = landed under high tension
-  }
+  if(f.land>=REEL_GOAL){enterBoard();return;}                   // fish is CLOSE → fire into the CATCH BOARD
   if(f.tension>=f.tenMax){fightLose('snap');return;}
 }
 function updateFightFx(dt){ // fx decay runs on REAL time (survives hitstop/slow-mo)
@@ -2744,10 +2824,16 @@ cv.addEventListener('pointerdown',e=>{
   if(state==='idle'&&p.y>WATER_Y-40)startCast(p.x);
   else if(state==='wait'){state='idle';splash(bobX,WATER_Y,5);sfx('cast')}
   else if(state==='bite')hookFish();
-  else if(state==='fight'){bracePid=e.pointerId;fightPress();} // remember the bracing finger
+  else if(state==='fight'){
+    if(fight&&fight.mode==='board'){bracePid=e.pointerId;boardPick(p);}   // CATCH BOARD: grab a tile
+    else{bracePid=e.pointerId;fightPress();}                              // reel-in: brace/reel
+  }
 });
-addEventListener('pointerup',e=>{holding=false;if(state==='fight'&&e.pointerId===bracePid){bracePid=null;fightRelease()}});
-addEventListener('pointercancel',e=>{holding=false;if(state==='fight'&&e.pointerId===bracePid){bracePid=null;fightRelease()}});
+addEventListener('pointermove',e=>{                                       // CATCH BOARD: drag the held tile
+  if(state==='fight'&&fight&&fight.mode==='board'&&fight.held)boardDrag(toGame(e));
+});
+addEventListener('pointerup',e=>{holding=false;if(state==='fight'&&e.pointerId===bracePid){bracePid=null;if(fight&&fight.mode==='board')boardDrop();else fightRelease()}});
+addEventListener('pointercancel',e=>{holding=false;if(state==='fight'&&e.pointerId===bracePid){bracePid=null;if(fight&&fight.mode==='board')boardDrop();else fightRelease()}});
 addEventListener('keydown',e=>{
   if(e.key===' '){e.preventDefault();
     if(e.repeat)return;                                          // autorepeat ignored
@@ -2756,10 +2842,10 @@ addEventListener('keydown',e=>{
     if(anyModal()){if(!$('mCatch').hidden)closeCatch();return}
     if(state==='idle')startCast(rnd(200,380));
     else if(state==='bite')hookFish();
-    else if(state==='fight')fightPress();
+    else if(state==='fight'&&(!fight||fight.mode!=='board'))fightPress();  // board = touch-drag only
   }
 });
-addEventListener('keyup',e=>{if(e.key===' '){holding=false;if(state==='fight')fightRelease()}});
+addEventListener('keyup',e=>{if(e.key===' '){holding=false;if(state==='fight'&&(!fight||fight.mode!=='board'))fightRelease()}});
 cv.addEventListener('contextmenu',e=>e.preventDefault());
 document.addEventListener('visibilitychange',()=>{
   if(document.hidden){if(AU.ctx)AU.ctx.suspend()}else if(AU.ctx)AU.ctx.resume();
@@ -3639,6 +3725,7 @@ function fishPos(t){
   switch(f.state){
     case 'INTRO':{const p=Math.min(1,f.t/0.5);py=WATER_Y+26-24*p;s=0.6+0.4*p;break}
     case 'TUG':{
+      if(f.mode==='board'){px=W/2+Math.sin(t*1.8)*12;py=132+Math.sin(t*3)*5;s=0.58+0.10*(f.land||0);rot=Math.sin(t*2.2)*0.06;break;}  // board fight: fish looms small at the top
       if(f.fishState==='run'){px+=Math.sin(t*24)*11+Math.sin(t*11)*6;py+=Math.cos(t*19)*6;rot=Math.sin(t*22)*0.35;s=1.05;}   // thrashing
       else if(f.fishState==='tele'){py-=4;s=1.06;rot=-0.1;}                                                                   // tensing to run
       else{py+=Math.sin(t*4)*2.6;rot=Math.sin(t*3)*0.08;}                                                                      // tired bob
@@ -3685,15 +3772,16 @@ function drawFight(t){
   const f=fight;
   const fp=fishPos(t);
   fishSpot.x=fp.x;fishSpot.y=fp.y;                             // anchor trash-talk floaters on the fish
-  // taut line from rod tip to the fish
-  const tip=rodTip(t);
-  x.strokeStyle='rgba(255,255,255,.5)';x.lineWidth=1.2;
-  x.beginPath();x.moveTo(tip.x,tip.y);
-  x.quadraticCurveTo((tip.x+fp.x)/2+Math.sin(t*17)*5,(tip.y+fp.y)/2+10,fp.x,fp.y-4);x.stroke();
-  // rod-item line tint
-  const rod=eqRod();
-  if(rod&&rod.line){x.strokeStyle=rod.line+'55';x.lineWidth=2.6;x.stroke();
-    x.font='12px "Segoe UI Emoji",sans-serif';x.textAlign='center';x.fillText(rod.tip||'',tip.x,tip.y-8)}
+  // taut line from rod tip to the fish (hidden during the board fight)
+  if(f.mode!=='board'){
+    const tip=rodTip(t);
+    x.strokeStyle='rgba(255,255,255,.5)';x.lineWidth=1.2;
+    x.beginPath();x.moveTo(tip.x,tip.y);
+    x.quadraticCurveTo((tip.x+fp.x)/2+Math.sin(t*17)*5,(tip.y+fp.y)/2+10,fp.x,fp.y-4);x.stroke();
+    const rod=eqRod();
+    if(rod&&rod.line){x.strokeStyle=rod.line+'55';x.lineWidth=2.6;x.stroke();
+      x.font='12px "Segoe UI Emoji",sans-serif';x.textAlign='center';x.fillText(rod.tip||'',tip.x,tip.y-8)}
+  }
   // enrage aura
   if(f.enraged){
     const g=x.createRadialGradient(fp.x,fp.y,4,fp.x,fp.y,44);
@@ -3781,6 +3869,7 @@ function drawFight(t){
     for(let i=0;i<f.armor;i++)x.fillText('🛡️',fp.x-8+i*16,fp.y+22);
   }
   if((f.state==='OPENING'&&!f.openFake)||f.state==='STAGGER')drawStrikeBar(t,fp);
+  if(f.mode==='board')drawBoard(t);                            // the CATCH BOARD tiles (under the HUD bars)
   drawFightHUD(t,fp);
   // speech bubbles: dialogue (typed) or quick taunts
   if(f.dlg)drawBubble(fp.x,fp.y-26,f.dlg.txt,f.dlg.t*24);
@@ -3856,13 +3945,18 @@ function drawFightHUD(t,fp){
   }
   x.font='900 9px system-ui';x.textAlign='left';x.fillStyle='rgba(255,255,255,.85)';
   x.fillText('LANDING '+Math.round(frac*100)+'%',hx2+5,hy+hh/2+0.5);
-  // fish-state strip: tiring (reel) → tensing → RUNNING (let go!)
-  const ey=py+41,run2=(f.fishState==='run'),tel2=(f.fishState==='tele');
-  x.fillStyle='rgba(255,255,255,.08)';x.fillRect(hx2,ey,hw,4);
-  x.fillStyle=run2?'#ff4d5e':(tel2?'#ffd54a':'#5dffa8');
-  x.fillRect(hx2,ey,hw*(run2?1:(tel2?0.5:0.16)),4);
-  x.font='800 8px system-ui';x.fillStyle=run2?'#ff8a8a':'#7d90ad';x.textAlign='left';
-  x.fillText(run2?'RUNNING — LET GO!':tel2?"it's about to run…":'tiring — REEL IT IN',hx2,ey+9);
+  // fish-state strip: tiring (reel) → tensing → RUNNING (let go!) — reel-in only
+  if(f.mode!=='board'){
+    const ey=py+41,run2=(f.fishState==='run'),tel2=(f.fishState==='tele');
+    x.fillStyle='rgba(255,255,255,.08)';x.fillRect(hx2,ey,hw,4);
+    x.fillStyle=run2?'#ff4d5e':(tel2?'#ffd54a':'#5dffa8');
+    x.fillRect(hx2,ey,hw*(run2?1:(tel2?0.5:0.16)),4);
+    x.font='800 8px system-ui';x.fillStyle=run2?'#ff8a8a':'#7d90ad';x.textAlign='left';
+    x.fillText(run2?'RUNNING — LET GO!':tel2?"it's about to run…":'tiring — REEL IT IN',hx2,ey+9);
+  }else{
+    x.font='800 8px system-ui';x.fillStyle='#ffd54a';x.textAlign='left';
+    x.fillText('THE CATCH — match orbs to reel it in!',hx2,py+44);
+  }
   x.restore();
   /* -- LINE TENSION bar (bottom, above thumb zone) with zone labels -- */
   const tw2=W-130,tx2=108,ty2=H-116,th2=15;
@@ -3890,27 +3984,27 @@ function drawFightHUD(t,fp){
   x.textAlign='right';x.fillStyle='#7d90ad';
   x.fillText(Math.round(ten)+'/'+Math.round(tm)+(f.reeling?' · ⚙️ REELING':''),tx2+tw2,ty2+th2+12);
   x.restore();
-  // THE TUG: big central guidance — HOLD to reel, LET GO on a run
-  if(f.state==='TUG'&&f.fishState==='run'){
+  // THE TUG: big central guidance — HOLD to reel, LET GO on a run (reel-in only)
+  if(f.mode==='reel'&&f.state==='TUG'&&f.fishState==='run'){
     x.font='900 italic 22px system-ui';x.textAlign='center';
     x.fillStyle='rgba(255,77,94,'+(0.75+0.25*Math.sin(t*14)).toFixed(2)+')';
-    x.fillText('LET GO! 🐟💨',W/2,H*0.44);
-  }else if(f.state==='TUG'&&f.fishState==='tele'){
+    x.fillText('LET GO! 🐟💨',W/2,H*0.30);
+  }else if(f.mode==='reel'&&f.state==='TUG'&&f.fishState==='tele'){
     x.font='900 italic 15px system-ui';x.textAlign='center';
     x.fillStyle='rgba(255,213,74,'+(0.6+0.35*Math.sin(t*10)).toFixed(2)+')';
-    x.fillText('it\'s tensing up…',W/2,H*0.44);
-  }else if(f.state==='TUG'&&!f.reeling&&(f.land||0)<0.05&&f.dur<3.5){
+    x.fillText('it\'s tensing up…',W/2,H*0.30);
+  }else if(f.mode==='reel'&&f.state==='TUG'&&!f.reeling&&(f.land||0)<0.05&&f.dur<3.5){
     x.font='900 15px system-ui';x.textAlign='center';
     x.fillStyle='rgba(255,255,255,'+(0.6+0.3*Math.sin(t*6)).toFixed(2)+')';
-    x.fillText('HOLD to REEL 🎣',W/2,H*0.44);
+    x.fillText('HOLD to REEL IT CLOSE 🎣',W/2,H*0.30);
   }
   if(f.state==='OPENING'&&save.hints.cook<=2&&f.r>0){
     x.font='900 17px system-ui';x.textAlign='center';
     x.fillStyle='rgba(93,255,168,'+(0.6+0.4*Math.sin(t*9)).toFixed(2)+')';
     x.fillText('COOK 🔪',W/2,H*0.44);
   }
-  /* -- combo meter (right edge, vertical) -- */
-  if(f.combo>0){
+  /* -- combo meter (right edge, vertical) -- reel-in only; board shows its own COMBO ×N */
+  if(f.combo>0&&f.mode!=='board'){
     const cy=H*0.34,ch2=150,cx2=W-20;
     const tier=comboTier(f.combo);
     const idx=COMBO_TIERS.indexOf(tier);
@@ -4123,6 +4217,9 @@ window.__bfe={
   art:id=>{const e=makkoFishImg(id||'gary');return {id:id||'gary',path:e.path,state:e.state,w:e.img?e.img.naturalWidth:0,h:e.img?e.img.naturalHeight:0}},  // force-load-check a MAKKO fish PNG
   artBg:z=>{const e=makkoBgImg(z==null?save.zone:z);return {path:e.path,state:e.state,w:e.img?e.img.naturalWidth:0,h:e.img?e.img.naturalHeight:0}},        // force-load-check a MAKKO zone bg PNG
   get artCache(){return makkoImgCache},                         // inspect the whole image cache
+  step:dt=>{if(fight)updateFight(dt||0.1)},                      // manually advance the fight (headless testing)
+  board:()=>{if(fight)enterBoard()},                            // jump straight to the CATCH BOARD
+  bresolve:()=>{if(fight&&fight.mode==='board')boardResolve()}, // resolve the current grid (score matches)
   get fight(){return fight},
   get st(){return state},
   get save(){return save},
