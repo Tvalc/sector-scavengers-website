@@ -1918,7 +1918,7 @@ function boardGeo(){
 function bRandKind(){return Math.random()<0.2?4:(Math.random()*4|0)}
 function bHasMatch(g,r,c,k){return (c>=2&&g[r][c-1]===k&&g[r][c-2]===k)||(r>=2&&g[r-1][c]===k&&g[r-2][c]===k)}
 function enterBoard(){
-  const f=fight;f.mode='board';f.bstate='play';f.combo=0;f.comboShow=0;f.comboT=0;f.dragT=0;f.held=null;f.bfloats=[];f.finger={x:W/2,y:H*0.7};
+  const f=fight;f.mode='board';f.bstate='play';f.combo=0;f.comboShow=0;f.comboT=0;f.held=null;f.sel=null;f.swiped=false;f.bfloats=[];f.finger={x:W/2,y:H*0.7};
   f.land=Math.min(0.4,teamP('fishHp')+(save.zone===4?teamP('fishHpVoid'):0));  // gear that weakens fish = a head start
   f.skipCounter=0;f.nextMatchX5=0;f.boardReelMul=1;f.boardReelT=0;f.squidUsed=0; // gacha-buff state for the board
   f.grid=[];f.btiles=[];
@@ -1971,20 +1971,43 @@ function bEndTurn(){
   f.bstate='play';
 }
 function bCellAt(px,py){const {cell,ox,oy}=boardGeo();const c=Math.floor((px-ox)/cell),r=Math.floor((py-oy)/cell);if(c<0||c>=BCOLS||r<0||r>=BROWS)return null;return {r,c}}
-function boardPick(p){const f=fight;if(f.bstate!=='play'||f.state==='WIN'||f.state==='LOSE')return;const cc=bCellAt(p.x,p.y);if(!cc)return;f.held=cc;f.finger=p;f.dragT=0}
-function boardDrag(p){const f=fight;if(!f.held)return;f.finger=p;const cc=bCellAt(p.x,p.y);if(!cc)return;const dr=cc.r-f.held.r,dc=cc.c-f.held.c;
-  if(Math.abs(dr)+Math.abs(dc)>=1){let nr=f.held.r,nc=f.held.c;if(Math.abs(dc)>=Math.abs(dr))nc+=Math.sign(dc);else nr+=Math.sign(dr);
-    if(nr>=0&&nr<BROWS&&nc>=0&&nc<BCOLS){const {cell}=boardGeo();[f.grid[f.held.r][f.held.c],f.grid[nr][nc]]=[f.grid[nr][nc],f.grid[f.held.r][f.held.c]];
-      const t2=f.btiles[nr][nc];f.btiles[nr][nc]=f.btiles[f.held.r][f.held.c];f.btiles[f.held.r][f.held.c]=t2;t2.sx=-(nc-f.held.c)*cell;t2.sy=-(nr-f.held.r)*cell;f.held={r:nr,c:nc};vib(4)}}}
-function boardDrop(){const f=fight;if(!f.held)return;f.held=null;boardResolve()}
+function boardSwapData(r,c,nr,nc){const f=fight;                 // swap grid + tile-objects for two cells
+  const g=f.grid[r][c];f.grid[r][c]=f.grid[nr][nc];f.grid[nr][nc]=g;
+  const t=f.btiles[r][c];f.btiles[r][c]=f.btiles[nr][nc];f.btiles[nr][nc]=t;}
+function boardTrySwipe(sel,dr,dc){                              // classic match-3: swap with ONE adjacent tile
+  const f=fight,{cell}=boardGeo(),r=sel.r,c=sel.c,nr=r+dr,nc=c+dc;
+  if(nr<0||nr>=BROWS||nc<0||nc>=BCOLS)return;                   // swiped off the edge
+  boardSwapData(r,c,nr,nc);
+  f.btiles[r][c].sx=(nc-c)*cell;f.btiles[r][c].sy=(nr-r)*cell;  // slide the two tiles into their new cells
+  f.btiles[nr][nc].sx=(c-nc)*cell;f.btiles[nr][nc].sy=(r-nr)*cell;
+  if(bMatches(f.grid).length===0){                             // no match → bounce back (invalid move, no turn used)
+    boardSwapData(r,c,nr,nc);
+    f.btiles[r][c].sx=dc*cell*0.34;f.btiles[r][c].sy=dr*cell*0.34;
+    f.btiles[nr][nc].sx=-dc*cell*0.34;f.btiles[nr][nc].sy=-dr*cell*0.34;
+    sfx('tick');vib(4);return;
+  }
+  vib(8);boardResolve();
+}
+function boardPick(p){const f=fight;if(f.bstate!=='play'||f.state==='WIN'||f.state==='LOSE')return;const cc=bCellAt(p.x,p.y);if(!cc)return;
+  if(f.sel){const dr=cc.r-f.sel.r,dc=cc.c-f.sel.c;              // tap-then-tap-adjacent = swap
+    if(Math.abs(dr)+Math.abs(dc)===1){const sel=f.sel;f.sel=null;f.swiped=true;boardTrySwipe(sel,dr,dc);return}
+    if(dr===0&&dc===0){f.sel=null;return}                      // tap the selected tile again = deselect
+  }
+  f.sel=cc;f.selStart={x:p.x,y:p.y};f.finger=p;f.swiped=false;}
+function boardDrag(p){const f=fight;if(!f.sel||f.swiped)return;f.finger=p;
+  const dx=p.x-f.selStart.x,dy=p.y-f.selStart.y,{cell}=boardGeo(),th=cell*0.42;
+  if(Math.abs(dx)<th&&Math.abs(dy)<th)return;                  // haven't swiped far enough to commit a direction
+  let dr=0,dc=0;if(Math.abs(dx)>=Math.abs(dy))dc=Math.sign(dx);else dr=Math.sign(dy);
+  const sel=f.sel;f.sel=null;f.swiped=true;boardTrySwipe(sel,dr,dc);}
+function boardDrop(){}                                          // tap/swipe commit on down/move; keep selection across taps
 function boardStepAnim(dt){const f=fight;
   for(let r=0;r<BROWS;r++)for(let c=0;c<BCOLS;c++){const t=f.btiles[r][c];if(!t)continue;if(t.sx)t.sx*=Math.pow(0.001,dt);if(Math.abs(t.sx)<0.5)t.sx=0;if(t.sy)t.sy*=Math.pow(0.0006,dt);if(Math.abs(t.sy)<0.5)t.sy=0;if(t.pop>0)t.pop=Math.min(1,t.pop+dt*5)}
   if(f.comboT>0)f.comboT-=dt;
-  if(f.held){f.dragT+=dt;if(f.dragT>5.5)boardDrop()}
   for(const fl of (f.bfloats||[])){fl.t+=dt;fl.y-=dt*60}f.bfloats=(f.bfloats||[]).filter(fl=>fl.t<0.9);
 }
 function rr(px,py,w,h,r){x.beginPath();if(x.roundRect)x.roundRect(px,py,w,h,r);else x.rect(px,py,w,h)}
 function bTile(px,py,cell,k,pop,held){
+  if(k==null||k<0||k>=BKINDS.length)return;                     // guard against an invalid tile index
   const K=BKINDS[k],m=held?5:4;let s=1;if(pop>0)s=1-pop;if(s<=0)return;const sz=(cell-m*2)*s,cx=px+cell/2,cy=py+cell/2;const e=boardArt(k);
   x.save();x.translate(cx,cy);if(held){x.scale(1.16,1.16);x.shadowColor='rgba(0,0,0,.5)';x.shadowBlur=12;x.shadowOffsetY=5}
   x.globalAlpha=pop>0?1-pop:1;
@@ -2010,9 +2033,9 @@ function drawBoard(t){
   const gw=BCOLS*cell,gh=BROWS*cell;
   if(boardPanel&&boardPanel.state==='ok'&&boardPanel.img)x.drawImage(boardPanel.img,PX,PY,PW,PH);   // whole device fits on screen (sized in boardGeo)
   else{x.fillStyle='rgba(4,16,26,.7)';rr(ox-10,oy-10,gw+20,gh+20,16);x.fill()}
-  for(let r=0;r<BROWS;r++)for(let c=0;c<BCOLS;c++){const k=f.grid[r][c];if(k<0)continue;if(f.held&&f.held.r===r&&f.held.c===c)continue;const tl=f.btiles[r][c];bTile(ox+c*cell+(tl.sx||0),oy+r*cell+(tl.sy||0),cell,k,tl.pop,false)}
-  if(f.held){bTile((f.finger.x||0)-cell/2,(f.finger.y||0)-cell/2,cell,f.grid[f.held.r][f.held.c],0,true);
-    const rem=1-f.dragT/5.5;x.strokeStyle=rem<0.3?'#ff3b52':'#ffd54a';x.lineWidth=4;x.globalAlpha=.9;x.beginPath();x.arc(f.finger.x,f.finger.y-cell/2,cell*0.62,-Math.PI/2,-Math.PI/2+rem*Math.PI*2);x.stroke();x.globalAlpha=1}
+  for(let r=0;r<BROWS;r++)for(let c=0;c<BCOLS;c++){const k=f.grid[r][c];if(k<0)continue;const tl=f.btiles[r][c];const isSel=f.sel&&f.sel.r===r&&f.sel.c===c;bTile(ox+c*cell+(tl.sx||0),oy+r*cell+(tl.sy||0),cell,k,tl.pop,isSel)}
+  if(f.sel){const px=ox+f.sel.c*cell,py=oy+f.sel.r*cell;   // selection ring on the picked tile
+    x.strokeStyle='#ffe27a';x.lineWidth=3.5;x.globalAlpha=0.7+0.3*Math.sin(t*8);rr(px+3,py+3,cell-6,cell-6,cell*0.34);x.stroke();x.globalAlpha=1}
   for(const fl of (f.bfloats||[])){x.globalAlpha=Math.max(0,1-fl.t/0.9);x.font=(fl.big?'900 24px':'900 17px')+' system-ui';x.fillStyle='#ffe28a';x.textAlign='center';x.fillText(fl.txt,W/2,oy-24+fl.y)}x.globalAlpha=1;
   if(f.comboT>0&&f.comboShow>1){x.globalAlpha=Math.min(1,f.comboT*3);x.font='900 italic 30px system-ui';x.fillStyle='#ffd54a';x.textAlign='center';x.fillText('COMBO ×'+f.comboShow,W/2,oy-52);x.globalAlpha=1}
 }
@@ -2893,8 +2916,8 @@ cv.addEventListener('pointerdown',e=>{
     else{bracePid=e.pointerId;fightPress();}                              // reel-in: brace/reel
   }
 });
-addEventListener('pointermove',e=>{                                       // CATCH BOARD: drag the held tile
-  if(state==='fight'&&fight&&fight.mode==='board'&&fight.held)boardDrag(toGame(e));
+addEventListener('pointermove',e=>{                                       // CATCH BOARD: swipe a tile toward a neighbor
+  if(state==='fight'&&fight&&fight.mode==='board'&&fight.sel)boardDrag(toGame(e));
 });
 addEventListener('pointerup',e=>{holding=false;if(state==='fight'&&e.pointerId===bracePid){bracePid=null;if(fight&&fight.mode==='board')boardDrop();else fightRelease()}});
 addEventListener('pointercancel',e=>{holding=false;if(state==='fight'&&e.pointerId===bracePid){bracePid=null;if(fight&&fight.mode==='board')boardDrop();else fightRelease()}});
