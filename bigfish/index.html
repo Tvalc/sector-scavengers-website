@@ -279,6 +279,25 @@ body.fishing #hint{display:none}
 .psDanger.armed{color:#0a1420;background:#ff5d5d;border-color:#ff5d5d}
 .psTitle{font-weight:900;font-style:italic;font-size:34px;color:#eaf7ff;text-shadow:0 0 22px rgba(63,216,255,.5)}
 body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlayed #tauntBtn,body.overlayed #pauseBtn{display:none!important}
+/* ---- THE MAP (illustrated fishing-spot progression) ---- */
+.mapCard{max-width:min(94vw,420px);width:100%}
+#mapWrap{position:relative;height:min(66vh,560px);aspect-ratio:872/1172;margin:8px auto;background:center/cover no-repeat url(art/makko/ui/map-bg.png);border-radius:12px;overflow:hidden;border:1px solid rgba(120,160,200,.35);box-shadow:inset 0 0 40px rgba(0,0,0,.5)}
+#mapSpots{position:absolute;inset:0}
+.mSpot{position:absolute;transform:translate(-50%,-50%);width:80px;text-align:center;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.mSpot:active{transform:translate(-50%,-50%) scale(.94)}
+.mThumb{width:62px;height:62px;margin:0 auto;position:relative}
+.mThumb .mImg{position:absolute;inset:9px;border-radius:50%;background:center/cover no-repeat}
+.mThumb .mRing{position:absolute;inset:0;background:center/contain no-repeat url(art/makko/ui/map-ring.png)}
+.mThumb .mLock{position:absolute;inset:15px;background:center/contain no-repeat url(art/makko/ui/map-lock.png);filter:drop-shadow(0 2px 3px rgba(0,0,0,.6))}
+.mSpot.locked .mImg{filter:grayscale(1) brightness(.38)}
+.mThumb .mBadge{position:absolute;top:-3px;right:0;font-size:15px;filter:drop-shadow(0 1px 2px #000)}
+.mName{font-weight:900;font-size:10px;margin-top:1px;color:#eaf7ff;text-shadow:0 1px 3px #000,0 0 6px #000;letter-spacing:.02em;line-height:1.1}
+.mProg{font-weight:800;font-size:9px;color:#8fe8ff;text-shadow:0 1px 2px #000}
+.mSpot.cur .mThumb{filter:drop-shadow(0 0 9px #5fe6ff)}
+.mSpot.cur .mProg{color:#5fe6ff}
+.mSpot.gk .mThumb{animation:gkpulse 1.1s infinite}
+.mSpot.gk .mProg{color:#ff7d8f}
+@keyframes gkpulse{0%,100%{filter:drop-shadow(0 0 3px #ff5d73)}50%{filter:drop-shadow(0 0 13px #ff5d73)}}
 </style>
 </head>
 <body>
@@ -382,10 +401,10 @@ body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlay
 </div>
 
 <div class="modal" id="mZone" hidden>
-  <div class="card">
+  <div class="card mapCard">
     <div class="mTitle">THE MAP 🗺️</div>
-    <div class="mSub">every gate has a bouncer. the bouncer is a mythic.</div>
-    <div id="zList"></div>
+    <div class="mSub" id="mapSub">catch every fish in a spot to reach the next</div>
+    <div id="mapWrap"><div id="mapSpots"></div></div>
     <button class="btn ghost" id="zClose">CLOSE</button>
   </div>
 </div>
@@ -799,6 +818,21 @@ function loadSave(){
 }
 function persist(){try{localStorage.setItem(SKEY,JSON.stringify(save))}catch(e){}}
 function maxZone(){return Math.max.apply(null,save.zonesOwned)}
+/* ---------- catch-to-unlock progression: clear a spot's 10 regulars → beat its mythic gatekeeper → next spot opens ---------- */
+function zoneMythic(z){return SPECIES.find(s=>s.z===z&&s.r===5)}
+function zoneCaught(z){return SPECIES.filter(s=>s.z===z&&save.dex[s.id]).length}     // caught count (of 11)
+function zoneTotal(z){return SPECIES.filter(s=>s.z===z).length}                       // 11
+function zoneRegularsDone(z){return SPECIES.filter(s=>s.z===z&&s.r<5).every(s=>save.dex[s.id])}  // all 10 regulars caught
+function zoneConquered(z){const m=zoneMythic(z);return zoneRegularsDone(z)&&m&&!!save.dex[m.id]} // 10 regulars + the mythic
+function gatekeeperReady(z){const m=zoneMythic(z);return zoneRegularsDone(z)&&m&&!save.dex[m.id]} // mythic can be challenged
+function checkZoneUnlock(z){                                                          // conquering spot z opens spot z+1
+  if(z==null||z<0)return null;
+  if(zoneConquered(z)&&z+1<ZONES.length&&!save.zonesOwned.includes(z+1)){
+    save.zonesOwned.push(z+1);if(!save.gatePaid.includes(z+1))save.gatePaid.push(z+1);
+    persist();return z+1;
+  }
+  return null;
+}
 
 /* ---------- team passives (equipped gacha items, scaled by AURA RANK) ---------- */
 function teamP(key){ // summed numeric passive across equipped angler/rod/pet
@@ -1131,8 +1165,9 @@ function pickSpecies(){
   // 3:33 — one judgemental minute a day
   const h=localHour();
   if(h>=3.55&&h<3.5667&&!save.dex['the-333'])return {sp:SECRETS.find(s=>s.id==='the-333'),kind:'fish'};
-  const r=rollRarity();
+  let r=rollRarity();
   if(r===0&&Math.random()<0.10)return {sp:JUNK[(Math.random()*JUNK.length)|0],kind:'junk'};
+  if(r===5&&!zoneRegularsDone(save.zone))r=4;                   // the mythic gatekeeper only surfaces once the 10 regulars are caught
   let pool=SPECIES.filter(s=>s.z===save.zone&&s.r===r);
   if(!pool.length)pool=SPECIES.filter(s=>s.z===save.zone&&s.r===Math.max(0,r-1));
   // GRUDGE: +5% hook luck vs that species per stack (max 3)
@@ -2279,6 +2314,13 @@ function finishCatch(){
     toast('🗺️ '+ZONES[f.gate].n+' unlocked — the bouncer respects you now');
     sfx('lvl');
   }
+  // catch-to-unlock progression: finishing a spot's 10 regulars raises its gatekeeper; conquering the spot opens the next
+  if(sp.z>=0&&sp.r<5&&isNew&&gatekeeperReady(sp.z)){
+    const gk=zoneMythic(sp.z);
+    setTimeout(()=>{toast('🎣 every regular in '+ZONES[sp.z].n+' is caught — the GATEKEEPER '+gk.e+' '+gk.n+' has surfaced. 🗺️ challenge it.');sfx('quest')},1200);
+  }
+  const unlockedZ=checkZoneUnlock(sp.z);
+  if(unlockedZ!=null)setTimeout(()=>{toast('🗺️ NEW SPOT UNLOCKED — '+ZONES[unlockedZ].e+' '+ZONES[unlockedZ].n+'! open 🗺️ THE MAP to travel.');sfx('lvl');vib([40,40,120])},1350);
   // void depth treadmill (post-first-agane)
   if(f.z===4&&save.aganeCount>0&&f.gate===undefined&&!f.opp){
     save.voidWins++;
@@ -2558,40 +2600,40 @@ function renderQuests(){
   $('qSub').textContent='🔥 day '+save.streak+' streak · new quests at midnight UTC';
 }
 
-/* ---------- THE MAP: level gate + fee + GATE BOSS audition ---------- */
+/* ---------- THE MAP: illustrated catch-to-unlock progression ---------- */
+const SPOTPOS=[{x:52,y:85},{x:33,y:66},{x:55,y:47},{x:67,y:29},{x:43,y:13}]; // spot markers along the chart route (bottom→top)
 function renderZones(){
-  const box=$('zList');box.innerHTML='';
-  const lvl=levelFor(save.xp);
+  const box=$('mapSpots');if(!box)return;box.innerHTML='';
   for(const z of ZONES){
     const owned=save.zonesOwned.includes(z.id),cur=save.zone===z.id;
-    const can=lvl>=z.lvl,paid=save.gatePaid.includes(z.id);
-    const boss=z.id>0?SPECIES.find(s=>s.z===z.id-1&&s.r===5):null;
-    let status=cur?'YOU ARE HERE 📍':owned?'tap to travel'
-      :!can?'requires LVL '+z.lvl
-      :!paid?'entry fee: '+fmt(z.fee)+' 🪙'
-      :'FIGHT THE GATE BOSS 💀 ('+boss.n+' — free retries)';
-    const row=document.createElement('div');
-    row.className='zRow'+(cur?' cur':'')+((owned||can)?'':' lock');
-    row.innerHTML='<div class="ze">'+z.e+'</div><div style="flex:1"><div class="zn">'+z.n+'</div>'
-      +'<div class="zd">'+status+' · '+z.d+'</div></div>';
-    row.onclick=()=>{sfx('ui');
-      if(cur)return;
-      if(owned){save.zone=z.id;persist();$('mZone').hidden=true;refreshHUD();toast(z.e+' traveled to '+z.n);return}
-      if(!can){toast('🔒 reach LVL '+z.lvl+' first');return}
-      if(!paid){
-        if(save.clams<z.fee){toast('need '+fmt(z.fee)+' 🪙 — keep farming');return}
-        save.clams-=z.fee;save.gatePaid.push(z.id);persist();refreshHUD();renderZones();
-        sfx('buy');toast('fee paid. now the audition: beat '+boss.n+' at 60% power.');
-        return;
-      }
-      // start the audition — prior zone's mythic at ×0.6 HP
-      $('mZone').hidden=true;
-      bobX=clamp(rnd(220,340),150,W-30);
-      const retry=(save.losses[boss.id]||0)>0;
-      fightStart(boss,{gate:z.id,z:z.id-1,intro:retry?'oh. it\'s you agane.':null});
-    };
-    box.appendChild(row);
+    const caught=zoneCaught(z.id),total=zoneTotal(z.id),conq=zoneConquered(z.id),gk=owned&&gatekeeperReady(z.id);
+    const locked=!owned,p=SPOTPOS[z.id]||{x:50,y:50};
+    const el=document.createElement('div');
+    el.className='mSpot'+(cur?' cur':'')+(locked?' locked':'')+(gk?' gk':'');
+    el.style.left=p.x+'%';el.style.top=p.y+'%';
+    const badge=conq?'<div class="mBadge">✅</div>':gk?'<div class="mBadge">⚔️</div>':'';
+    const prog=locked?'🔒 LOCKED':(cur?'📍 HERE · ':'')+caught+'/'+total+(gk?' · GATEKEEPER!':conq?' ✅':'');
+    el.innerHTML='<div class="mThumb"><div class="mImg" style="background-image:url(art/makko/bg/zone'+(z.id+1)+'.png)"></div>'
+      +'<div class="mRing"></div>'+(locked?'<div class="mLock"></div>':'')+badge+'</div>'
+      +'<div class="mName">'+z.n+'</div><div class="mProg">'+prog+'</div>';
+    el.onclick=()=>spotTap(z.id);
+    box.appendChild(el);
   }
+}
+function spotTap(zid){
+  const z=ZONES[zid],owned=save.zonesOwned.includes(zid);
+  if(!owned){const prev=zid-1;
+    toast('🔒 clear '+(prev>=0?ZONES[prev].n+' ('+zoneCaught(prev)+'/'+zoneTotal(prev)+')':'the previous spot')+' to open '+z.n);
+    sfx('tick');return;}
+  if(gatekeeperReady(zid)){                                      // catch all 10 regulars → the mythic gatekeeper
+    const m=zoneMythic(zid);
+    if(save.zone!==zid){save.zone=zid;persist();refreshHUD()}
+    $('mZone').hidden=true;document.body.classList.remove('overlayed');
+    bobX=clamp(rnd(220,340),150,W-30);sfx('quest');
+    fightStart(m,{z:zid,intro:(save.losses[m.id]||0)>0?"oh. it's you agane.":'so you cleared my pond. cute.'});
+    return;}
+  if(save.zone===zid){sfx('tick');return;}                       // already here
+  save.zone=zid;persist();$('mZone').hidden=true;refreshHUD();sfx('ui');toast(z.e+' traveled to '+z.n);
 }
 
 /* =====================================================================
