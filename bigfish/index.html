@@ -814,14 +814,16 @@ function migrateV1(o){
 }
 function mergeDef(d,s){for(const k in d){if(s[k]===undefined)s[k]=d[k];
   else if(d[k]&&typeof d[k]==='object'&&!Array.isArray(d[k])&&typeof s[k]==='object')mergeDef(d[k],s[k])}return s}
+function store(){try{return(typeof CG!=='undefined'&&CG.data)?CG.data:localStorage}catch(e){return localStorage}}  // CrazyGames cloud save when available, else localStorage
 function loadSave(){
   try{
-    let s=JSON.parse(localStorage.getItem(SKEY));
-    if(!s){const o=JSON.parse(localStorage.getItem(SKEY1));if(o)s=migrateV1(o)}
+    const st=store();
+    let s=JSON.parse(st.getItem(SKEY));
+    if(!s){const o=JSON.parse(st.getItem(SKEY1));if(o)s=migrateV1(o)}
     save=mergeDef(defSave(),s||defSave());
   }catch(e){save=defSave()}
 }
-function persist(){try{localStorage.setItem(SKEY,JSON.stringify(save))}catch(e){}}
+function persist(){try{store().setItem(SKEY,JSON.stringify(save))}catch(e){}}
 function maxZone(){return Math.max.apply(null,save.zonesOwned)}
 /* ---------- catch-to-unlock progression: clear a spot's 10 regulars → beat its mythic gatekeeper → next spot opens ---------- */
 function zoneMythic(z){return SPECIES.find(s=>s.z===z&&s.r===5)}
@@ -1183,6 +1185,7 @@ function pickSpecies(){
 }
 function startCast(px){
   if(state!=='idle')return;
+  try{CG.playStart()}catch(e){}                 // CrazyGames: entering playable state (defines the load-measurement boundary on the first cast)
   state='cast';castT=0;
   castFrom={x:98,y:236};
   castTo={x:clamp(px,150,W-30),y:WATER_Y};
@@ -4461,24 +4464,32 @@ window.__bfe={
 };
 
 /* ---------- CrazyGames SDK — required on CrazyGames, safe no-op everywhere else ---------- */
-const CG={sdk:null,ready:false,ads:0,
+const CG={sdk:null,ready:false,data:null,inPlay:false,plays:0,
   async init(){try{
     await new Promise((res,rej)=>{const s=document.createElement('script');s.src='https://sdk.crazygames.com/crazygames-sdk-v3.js';s.async=true;s.onload=res;s.onerror=rej;document.head.appendChild(s)});
-    if(window.CrazyGames&&CrazyGames.SDK){await CrazyGames.SDK.init();this.sdk=CrazyGames.SDK;this.ready=true;this.env=this.sdk.environment}
+    if(window.CrazyGames&&CrazyGames.SDK){await CrazyGames.SDK.init();this.sdk=CrazyGames.SDK;this.ready=true;this.env=this.sdk.environment;
+      try{const d=this.sdk.data;d.getItem('__probe');this.data=d}catch(e){this.data=null}  // Progress Save (cloud sync + guest localStorage); needs the "Progress Save" toggle in submission
+    }
   }catch(e){/* not on CrazyGames (or blocked) → stay a no-op */}},
   _c(fn){try{if(this.sdk)fn(this.sdk)}catch(e){}},
   _mute(m){try{if(typeof AU!=='undefined'&&AU.ctx){m?AU.ctx.suspend():AU.ctx.resume()}}catch(e){}},
   loadStart(){this._c(s=>s.game.loadingStart())},
   loadStop(){this._c(s=>s.game.loadingStop())},
-  playStart(){this._c(s=>s.game.gameplayStart())},
-  playStop(){this._c(s=>s.game.gameplayStop())},
+  playStart(){if(this.inPlay)return;this.inPlay=true;this._c(s=>s.game.gameplayStart())},  // first call defines the load-measurement boundary
+  playStop(){if(!this.inPlay)return;this.inPlay=false;this._c(s=>s.game.gameplayStop())},
   happy(){this._c(s=>s.game.happytime())},
-  midgameMaybe(){                                // capped, non-intrusive ad between catches; mutes + pauses gameplay around it
-    this.ads++;
-    if(!this.sdk||this.env!=='crazygames'||this.ads<4||this.ads%3!==0)return; // ads only on the real CrazyGames platform; skip first 3 catches, then ~every 3rd
-    this.playStop();this._mute(true);
-    let done=false;const resume=()=>{if(done)return;done=true;this._mute(false);this.playStart()};
+  midgameMaybe(){                                // between-catch interstitial; the SDK auto-enforces ≤1 / 3min, so NO cooldown of our own
+    this.plays++;
+    if(!this.sdk||this.env!=='crazygames'||this.plays<=3)return; // first-session delay only: no midgame until the 3rd catch
+    const wasPlaying=this.inPlay;this.playStop();this._mute(true);
+    let done=false;const resume=()=>{if(done)return;done=true;this._mute(false);if(wasPlaying)this.playStart()};
     try{this.sdk.ad.requestAd('midgame',{adStarted:()=>this._mute(true),adFinished:resume,adError:resume})}catch(e){resume()}
+  },
+  rewarded(cb){                                  // rewarded video: cb(true)=grant, cb(false)=don't. (scaffold for the rewarded-hook suite)
+    if(!this.sdk||this.env!=='crazygames'){cb(false);return}
+    const wasPlaying=this.inPlay;this.playStop();this._mute(true);let done=false;
+    const fin=ok=>{if(done)return;done=true;this._mute(false);if(wasPlaying)this.playStart();cb(!!ok)};
+    try{this.sdk.ad.requestAd('rewarded',{adStarted:()=>this._mute(true),adFinished:()=>fin(true),adError:()=>fin(false)})}catch(e){fin(false)}
   }
 };
 
@@ -4494,7 +4505,7 @@ function startGame(){
   $('titleScreen').classList.remove('on');$('pauseScreen').classList.remove('on');
   paused=false;state='idle';$('pauseBtn').style.display='block';document.body.classList.remove('overlayed');
   refreshHUD();$('hint').style.display=save.tut===0?'block':'none';
-  try{CG.playStart()}catch(e){}
+  // gameplayStart fires on the FIRST CAST (playable state), not on the menu — see startCast
 }
 function togglePause(on){
   if(state==='title'||anyModal())return;
@@ -4525,7 +4536,14 @@ $('chipGold').classList.toggle('on',goldenActive());
 if(save.vendy&&save.tabs>=TUNE.PULL)$('nVendy').classList.add('alert');
 showTitle();                                  // boot into the start screen
 requestAnimationFrame(loop);
-CG.init().then(()=>{CG.loadStart();CG.loadStop()});   // signal CrazyGames: loaded (gameplay starts on PLAY; no-op off-platform)
+addEventListener('touchend',()=>{try{if(typeof AU!=='undefined'&&AU.ctx&&AU.ctx.state==='suspended')AU.ctx.resume()}catch(e){}},{passive:true});  // iOS audio unlock
+CG.init().then(()=>{
+  CG.loadStart();CG.loadStop();                                   // signal CrazyGames: loaded (gameplayStart fires on first cast)
+  if(CG.data){                                                    // cloud save ready → migrate any old local save, then adopt cloud
+    try{if(CG.data.getItem(SKEY)==null&&localStorage.getItem(SKEY)!=null)CG.data.setItem(SKEY,localStorage.getItem(SKEY));}catch(e){}
+    if(state==='title'){loadSave();applyStyle();ensureQuests();refreshHUD();$('chipGold').classList.toggle('on',goldenActive());}
+  }
+});
 </script>
 </body>
 </html>
