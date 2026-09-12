@@ -1903,7 +1903,7 @@ const BKINDS=[
  {c:'#5dffa8',art:'tile-reel',ic:'🎣'},{c:'#b78bff',art:'tile-jolt',ic:'⚡'},{c:'#3fd8ff',art:'tile-slack',ic:'🛟'}];
 let boardPanel=null;
 function boardArt(k){return makkoLoad('art/makko/board/'+BKINDS[k].art+'.png')}
-const BINS={IL:0.11,IR:0.10,IT:0.09,IB:0.16,PADX:0.14,PADY:0.12};   // fishfinder screen insets + grid margin (cells)
+const BINS={IL:0.08,IR:0.12,IT:0.12,IB:0.15,PADX:0.12,PADY:0.10};   // fishfinder screen insets (measured from the art) + grid margin (cells)
 function boardGeo(){
   const {IL,IR,IT,IB,PADX,PADY}=BINS,sW=1-IL-IR,sH=1-IT-IB;
   const kW=(BCOLS+2*PADX)/sW,kH=(BROWS+2*PADY)/sH;             // whole DEVICE size per cell (so the bezel fits, not just the grid)
