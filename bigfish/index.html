@@ -58,16 +58,16 @@ button{font-family:inherit}
 .modal{position:fixed;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;
   background:rgba(4,10,18,.72);backdrop-filter:blur(9px);padding:14px}
 .modal[hidden]{display:none}
-.card{background:var(--card);border:3px solid var(--line);border-radius:22px;padding:18px;
-  width:min(94vw,420px);max-height:min(86vh,700px);overflow-y:auto;box-shadow:0 10px 0 rgba(0,0,0,.5)}
+.card{border:26px solid transparent;border-image:url(art/makko/ui/panel-frame.png) 64 fill / 26px stretch;
+  padding:12px 16px 16px;width:min(94vw,420px);max-height:min(86vh,700px);overflow-y:auto;box-shadow:0 14px 34px rgba(0,0,0,.55)}
 .mTitle{font-size:21px;font-weight:900;font-style:italic;text-align:center;margin-bottom:4px}
+.mTitle .tIco{display:inline-block;width:23px;height:23px;vertical-align:-5px;margin-right:5px;background:center/contain no-repeat}
 .mSub{text-align:center;color:var(--dim);font-weight:700;font-size:12px;margin-bottom:10px}
-.btn{display:block;width:100%;padding:13px;margin-top:10px;border-radius:15px;border:3px solid #06121e;
-  font-weight:900;font-size:15px;cursor:pointer;color:#06121e;background:#e8eeff;box-shadow:0 4px 0 #06121e}
-.btn:active{transform:translateY(3px);box-shadow:0 1px 0 #06121e}
-.btn.aqua{background:linear-gradient(100deg,var(--aqua),#7db9ff)}
-.btn.gold{background:linear-gradient(100deg,var(--gold),#ffb45e)}
-.btn.ghost{background:var(--card);color:var(--txt);border-color:var(--line);box-shadow:0 4px 0 rgba(0,0,0,.4)}
+.btn{display:block;width:100%;margin-top:10px;padding:9px 14px;
+  border:solid transparent;border-width:6px 26px;border-image:url(art/makko/ui/btn-primary.png) 44 204 fill / 6px 26px stretch;
+  background:none;font-weight:900;font-size:15px;cursor:pointer;color:#062028;text-shadow:0 1px 1px rgba(255,255,255,.25)}
+.btn:active{transform:translateY(2px)}
+.btn.ghost{border-image:url(art/makko/ui/btn-ghost.png) 44 204 fill / 6px 26px stretch;color:#e2eef6;text-shadow:0 1px 2px #000}
 .row2{display:flex;gap:8px}.row2 .btn{margin-top:10px}
 
 /* catch card */
@@ -378,7 +378,7 @@ body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlay
 
 <div class="modal" id="mDex" hidden>
   <div class="card">
-    <div class="mTitle">FISHDEX 📖</div>
+    <div class="mTitle"><i class="tIco" style="background-image:url(art/makko/ui/nav-dex.png)"></i>FISHDEX</div>
     <div class="mSub" id="dexSub">the water is full of opps</div>
     <div class="dexDetail" id="dexDetail">tap a fish for the lore</div>
     <div id="dexList"></div>
@@ -389,7 +389,7 @@ body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlay
 
 <div class="modal" id="mShop" hidden>
   <div class="card">
-    <div class="mTitle">UPGRADES 🛒</div>
+    <div class="mTitle"><i class="tIco" style="background-image:url(art/makko/ui/mini-shop.png)"></i>UPGRADES</div>
     <div class="mSub" id="shopClams">🪙 0</div>
     <div id="shopList"></div>
     <button class="btn ghost" id="shopClose">CLOSE</button>
@@ -398,7 +398,7 @@ body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlay
 
 <div class="modal" id="mQuest" hidden>
   <div class="card">
-    <div class="mTitle">QUESTS 📜</div>
+    <div class="mTitle"><i class="tIco" style="background-image:url(art/makko/ui/mini-quest.png)"></i>QUESTS</div>
     <div class="mSub" id="qSub">new quests at midnight UTC</div>
     <div id="qList"></div>
     <button class="btn ghost" id="qClose">CLOSE</button>
@@ -407,7 +407,7 @@ body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlay
 
 <div class="modal" id="mZone" hidden>
   <div class="card mapCard">
-    <div class="mTitle">THE MAP 🗺️</div>
+    <div class="mTitle"><i class="tIco" style="background-image:url(art/makko/ui/mini-map.png)"></i>THE MAP</div>
     <div class="mSub" id="mapSub">catch every fish in a spot to reach the next</div>
     <div id="mapWrap"><div id="mapSpots"></div></div>
     <button class="btn ghost" id="zClose">CLOSE</button>
@@ -416,7 +416,7 @@ body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlay
 
 <div class="modal" id="mVendy" hidden>
   <div class="card">
-    <div class="mTitle">VENDY 🎰</div>
+    <div class="mTitle"><i class="tIco" style="background-image:url(art/makko/ui/nav-vendy.png)"></i>VENDY</div>
     <div class="mSub" id="vendySub">only accepts can tabs. do not ask why.</div>
     <div id="vendy">
       <div id="vGlass"></div>
@@ -435,7 +435,7 @@ body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlay
 
 <div class="modal" id="mTeam" hidden>
   <div class="card">
-    <div class="mTitle">TEAM 🧑‍🤝‍🧑</div>
+    <div class="mTitle"><i class="tIco" style="background-image:url(art/makko/ui/nav-team.png)"></i>TEAM</div>
     <div class="mSub" id="teamSub">🧶 0 lint · one of each, no exceptions</div>
     <div id="teamSlots"></div>
     <div id="teamDetail">tap a slot, then tap the goon you want in it</div>
@@ -447,7 +447,7 @@ body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlay
 
 <div class="modal" id="mOpp" hidden>
   <div class="card">
-    <div class="mTitle">TODAY'S OPP 💀</div>
+    <div class="mTitle"><i class="tIco" style="background-image:url(art/makko/ui/nav-opp.png)"></i>TODAY'S OPP</div>
     <div class="mSub" id="oppSub">one boss a day. it chose violence at midnight UTC.</div>
     <div id="oppCard">
       <div id="oppE">🦈</div>
@@ -466,7 +466,7 @@ body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlay
 
 <div class="modal" id="mSet" hidden>
   <div class="card">
-    <div class="mTitle">BIG FISH ENERGY 🎣</div>
+    <div class="mTitle"><i class="tIco" style="background-image:url(art/makko/ui/nav-more.png)"></i>BIG FISH ENERGY</div>
     <div class="mSub" id="setStats">—</div>
     <div class="tgl">SFX <button id="tSfx">ON</button></div>
     <div class="tgl">MUSIC <button id="tMusic">ON</button></div>
@@ -483,7 +483,7 @@ body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlay
 
 <div class="modal" id="mAgane" hidden>
   <div class="card" style="text-align:center">
-    <div class="mTitle">GO AGANE? 🔁</div>
+    <div class="mTitle"><i class="tIco" style="background-image:url(art/makko/ui/cur-aura.png)"></i>GO AGANE?</div>
     <div class="mSub">you are about to lose EVERYTHING (not everything).<br>the void keeps the receipts.</div>
     <div class="dexDetail" id="aganeInfo" style="min-height:44px"></div>
     <button class="btn aganeBtn" id="aganeYes">GO AGANE 🔁</button>
