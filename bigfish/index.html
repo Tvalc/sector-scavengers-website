@@ -30,6 +30,7 @@ button{font-family:inherit}
 .chip{background:rgba(13,23,38,.82);border:2px solid var(--line);border-radius:14px;padding:7px 11px;
   font-weight:900;font-size:14px;backdrop-filter:blur(6px);white-space:nowrap}
 .chip small{display:block;font-size:9px;letter-spacing:.14em;color:var(--dim);font-weight:800}
+.chip .cico{display:inline-block;width:19px;height:19px;background:center/contain no-repeat;vertical-align:-5px;margin-right:3px}
 #chipGold.on{border-color:var(--gold);box-shadow:0 0 14px rgba(255,213,74,.35);color:var(--gold)}
 #lvlWrap{text-align:center}
 #xpBar{margin-top:4px;height:6px;width:120px;border-radius:99px;background:rgba(255,255,255,.09);overflow:hidden}
@@ -39,6 +40,12 @@ button{font-family:inherit}
 .navBtn{pointer-events:auto;flex:1;max-width:86px;border:2.5px solid var(--line);background:rgba(13,23,38,.85);
   color:var(--txt);border-radius:16px;padding:9px 2px;font-weight:900;font-size:11px;cursor:pointer;backdrop-filter:blur(6px)}
 .navBtn em{display:block;font-style:normal;font-size:19px;margin-bottom:2px}
+.navBtn em.ni{width:26px;height:26px;margin:0 auto 2px;background:center/contain no-repeat;font-size:0}
+.ni-dex{background-image:url(art/makko/ui/nav-dex.png)}
+.ni-vendy{background-image:url(art/makko/ui/nav-vendy.png)}
+.ni-team{background-image:url(art/makko/ui/nav-team.png)}
+.ni-opp{background-image:url(art/makko/ui/nav-opp.png)}
+.ni-more{background-image:url(art/makko/ui/nav-more.png)}
 .navBtn:active{transform:scale(.94)}
 .navBtn .dot{position:absolute;display:none}
 .navBtn.alert{border-color:var(--gold)}
@@ -156,10 +163,10 @@ button{font-family:inherit}
 
 /* ---------- ability button ---------- */
 #abilityBtn{position:fixed;left:calc(var(--gL,0px) + 12px + env(safe-area-inset-left));bottom:calc(var(--gB,0px) + 96px + env(safe-area-inset-bottom));
-  width:72px;height:72px;border-radius:50%;border:3px solid var(--line);z-index:8;display:none;
-  background:rgba(13,23,38,.9);color:var(--txt);cursor:pointer;font-weight:900;touch-action:none}
-#abilityBtn .ae{font-size:26px;display:block;line-height:1.1}
-#abilityBtn .ae.port{width:52px;height:44px;margin:2px auto 0;border-radius:12px;background-size:cover;background-position:center top;font-size:0}
+  width:72px;height:72px;border-radius:50%;border:none;z-index:8;display:none;
+  background:center/100% 100% no-repeat url(art/makko/ui/btn.png);color:var(--txt);cursor:pointer;font-weight:900;touch-action:none}
+#abilityBtn .ae{font-size:24px;display:block;line-height:1.1;padding-top:8px}
+#abilityBtn .ae.port{width:40px;height:40px;margin:6px auto 0;border-radius:50%;background-size:cover;background-position:center top;font-size:0}
 #abilityBtn .an{font-size:7.5px;letter-spacing:.05em;display:block;color:var(--dim)}
 #abilityBtn.ready{border-color:var(--gold);box-shadow:0 0 16px rgba(255,213,74,.5)}
 #abilityBtn:active{transform:scale(.93)}
@@ -167,9 +174,9 @@ button{font-family:inherit}
 
 /* ---------- taunt button (talk shit, demoralize the fish) ---------- */
 #tauntBtn{position:fixed;right:calc(var(--gR,0px) + 12px + env(safe-area-inset-right));bottom:calc(var(--gB,0px) + 96px + env(safe-area-inset-bottom));
-  width:66px;height:66px;border-radius:50%;border:3px solid var(--line);z-index:8;display:none;
-  background:rgba(13,23,38,.9);color:var(--txt);cursor:pointer;font-weight:900;touch-action:none}
-#tauntBtn .te{font-size:24px;display:block;line-height:1.1}
+  width:66px;height:66px;border-radius:50%;border:none;z-index:8;display:none;
+  background:center/100% 100% no-repeat url(art/makko/ui/btn.png);color:var(--txt);cursor:pointer;font-weight:900;touch-action:none}
+#tauntBtn .te{font-size:22px;display:block;line-height:1.1;padding-top:10px}
 #tauntBtn .tn{font-size:7.5px;letter-spacing:.05em;display:block;color:var(--dim)}
 #tauntBtn.ready{border-color:var(--mint);box-shadow:0 0 16px rgba(93,255,168,.45)}
 #tauntBtn:active{transform:scale(.93)}
@@ -251,17 +258,15 @@ body.boardfight #abilityBtn{opacity:1;pointer-events:auto}   /* the CATCH BOARD 
 body.fishing #hint{display:none}
 /* ---- start screen + pause overlay ---- */
 #pauseBtn{position:fixed;z-index:150;top:calc(var(--gT,0px) + 12px + env(safe-area-inset-top));right:calc(var(--gR,0px) + 12px + env(safe-area-inset-right));
-  width:40px;height:40px;border-radius:50%;border:1px solid rgba(160,190,215,.28);background:rgba(6,16,28,.82);
-  color:#cfe0ea;font-size:15px;line-height:40px;text-align:center;cursor:pointer;display:none;padding:0}
+  width:44px;height:44px;border-radius:50%;border:none;background:center/100% 100% no-repeat url(art/makko/ui/btn.png);
+  color:#eaf7ff;font-size:15px;line-height:44px;text-align:center;cursor:pointer;display:none;padding:0}
 #pauseBtn:active{transform:scale(.92)}
 #titleScreen,#pauseScreen{position:fixed;inset:0;z-index:200;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;-webkit-tap-highlight-color:transparent}
 #titleScreen.on,#pauseScreen.on{display:flex}
 #titleScreen{background:radial-gradient(125% 90% at 50% 18%, rgba(24,86,112,.5), rgba(5,18,36,.9) 65%, rgba(2,9,20,.97))}
 #pauseScreen{background:rgba(3,11,22,.8);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
 .tsInner,.psInner{display:flex;flex-direction:column;align-items:center;gap:15px;padding:24px}
-.tsLogo{font-weight:900;font-style:italic;font-size:clamp(40px,12vw,74px);line-height:.9;letter-spacing:.01em;color:#eaf7ff;
-  text-shadow:0 3px 0 #08202e,0 0 30px rgba(63,216,255,.45);transform:rotate(-3deg)}
-.tsLogo span{display:block;color:#3fd8ff}
+.tsLogo{width:min(80vw,340px);height:auto;filter:drop-shadow(0 8px 18px rgba(0,0,0,.55))}
 .tsTag{color:#bfe0ee;font-weight:700;font-size:14px;max-width:290px;opacity:.92;margin-top:4px}
 #tsPlay,#psResume{margin-top:10px;font-weight:900;font-size:22px;letter-spacing:.03em;color:#04202c;
   background:linear-gradient(#82ffd4,#2fd8c0);border:none;border-radius:16px;padding:15px 48px;cursor:pointer;
@@ -282,10 +287,10 @@ body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlay
 <div id="hud">
   <div id="hudTop">
     <div style="display:flex;flex-direction:column;gap:5px;align-items:flex-start">
-      <div class="chip" id="chipClams">🪙 0<small>CLAMS</small></div>
-      <div class="chip" id="chipTabs">🎫 0<small>TABS</small></div>
-      <div class="chip" id="chipLint">🧶 0<small>LINT</small></div>
-      <div class="chip" id="chipAura">✨ 0<small>AURA</small></div>
+      <div class="chip" id="chipClams"><i class="cico" style="background-image:url(art/makko/ui/cur-clams.png)"></i><b>0</b><small>CLAMS</small></div>
+      <div class="chip" id="chipTabs"><i class="cico" style="background-image:url(art/makko/ui/cur-tabs.png)"></i><b>0</b><small>TABS</small></div>
+      <div class="chip" id="chipLint"><i class="cico" style="background-image:url(art/makko/ui/cur-lint.png)"></i><b>0</b><small>LINT</small></div>
+      <div class="chip" id="chipAura"><i class="cico" style="background-image:url(art/makko/ui/cur-aura.png)"></i><b>0</b><small>AURA</small></div>
     </div>
     <div class="chip" id="lvlWrap"><span id="lvlTxt">LVL 1 · Bait Baby</span>
       <div id="xpBar"><div id="xpFill"></div></div></div>
@@ -301,11 +306,11 @@ body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlay
   </div>
   <div id="hudBot">
     <div id="nav">
-      <button class="navBtn" id="nDex"><em>📖</em>DEX</button>
-      <button class="navBtn" id="nVendy"><em>🎰</em>VENDY</button>
-      <button class="navBtn" id="nTeam"><em>🧑‍🤝‍🧑</em>TEAM</button>
-      <button class="navBtn" id="nOpp"><em>💀</em>OPP</button>
-      <button class="navBtn" id="nSet"><em>⚙️</em>MORE</button>
+      <button class="navBtn" id="nDex"><em class="ni ni-dex"></em>DEX</button>
+      <button class="navBtn" id="nVendy"><em class="ni ni-vendy"></em>VENDY</button>
+      <button class="navBtn" id="nTeam"><em class="ni ni-team"></em>TEAM</button>
+      <button class="navBtn" id="nOpp"><em class="ni ni-opp"></em>OPP</button>
+      <button class="navBtn" id="nSet"><em class="ni ni-more"></em>MORE</button>
     </div>
   </div>
 </div>
@@ -316,7 +321,7 @@ body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlay
 
 <div id="titleScreen">
   <div class="tsInner">
-    <div class="tsLogo">BIG FISH<span>ENERGY</span></div>
+    <img class="tsLogo" src="art/makko/ui/logo.png" alt="BIG FISH ENERGY">
     <div class="tsTag">a fish is talking shit in the water. 🎣 go handle it.</div>
     <button id="tsPlay">▶ PLAY</button>
     <button id="tsReset" class="tsGhost">reset progress</button>
@@ -2084,6 +2089,15 @@ function drawGaugeFrame(gx,gy,gw,gh){                            // Makko gunmet
   }else{const g=x.createLinearGradient(0,gy,0,gy+gh);g.addColorStop(0,'#2c3b4a');g.addColorStop(1,'#0c1620');x.fillStyle=g;rr(gx,gy,gw,gh,gh*0.24);x.fill();x.strokeStyle='rgba(130,160,190,.3)';x.lineWidth=1;x.stroke()}
   return {wx:gx+capW*0.85,wy:gy+gh*0.27,ww:gw-capW*1.7,wh:gh*0.46};
 }
+let boardPlate=null;
+function drawPlate(gx,gy,gw,gh){                                 // Makko gunmetal nameplate, 3-sliced (end bolts don't stretch)
+  const e=boardPlate||(boardPlate=makkoLoad('art/makko/ui/plate.png'));
+  if(e&&e.state==='ok'&&e.img){const img=e.img,iw=img.naturalWidth,ih=img.naturalHeight,capI=Math.round(iw*0.16),capW=Math.min(gw*0.42,gh*capI/ih);
+    x.drawImage(img,0,0,capI,ih,gx,gy,capW,gh);
+    x.drawImage(img,iw-capI,0,capI,ih,gx+gw-capW,gy,capW,gh);
+    x.drawImage(img,capI,0,iw-2*capI,ih,gx+capW,gy,gw-2*capW,gh);
+  }else{const pg=x.createLinearGradient(0,gy,0,gy+gh);pg.addColorStop(0,'#33434f');pg.addColorStop(1,'#0d1620');x.fillStyle=pg;rr(gx,gy,gw,gh,13);x.fill();x.strokeStyle='rgba(150,180,205,.4)';x.lineWidth=1.5;x.stroke()}
+}
 function bTile(px,py,cell,k,pop,held){
   if(k==null||k<0||k>=BKINDS.length)return;                     // guard against an invalid tile index
   const K=BKINDS[k],m=held?5:4;let s=1;if(pop>0)s=1-pop;if(s<=0)return;const sz=(cell-m*2)*s,cx=px+cell/2,cy=py+cell/2;const e=boardArt(k);
@@ -2423,14 +2437,14 @@ async function doShare(txt){
 
 /* ---------- HUD ---------- */
 function refreshHUD(){
-  $('chipClams').firstChild.textContent='🪙 '+fmt(save.clams);
-  $('chipTabs').firstChild.textContent='🎫 '+fmt(save.tabs);
+  $('chipClams').querySelector('b').textContent=fmt(save.clams);
+  $('chipTabs').querySelector('b').textContent=fmt(save.tabs);
   const showLint=(save.lint|0)>0;                              // LINT is glanceable now (only shown once you have some)
   $('chipLint').style.display=showLint?'block':'none';
-  if(showLint)$('chipLint').firstChild.textContent='🧶 '+fmt(save.lint);
+  if(showLint)$('chipLint').querySelector('b').textContent=fmt(save.lint);
   const showAura=save.aganeCount>0;
   $('chipAura').style.display=showAura?'block':'none';
-  if(showAura)$('chipAura').firstChild.textContent='✨ '+fmt(save.aura);
+  if(showAura)$('chipAura').querySelector('b').textContent=fmt(save.aura);
   const lvl=levelFor(save.xp);
   $('lvlTxt').textContent='LVL '+lvl+' · '+titleFor(lvl);
   $('xpFill').style.width=(levelProg(save.xp)*100)+'%';
@@ -4083,48 +4097,39 @@ function drawFightHUD(t,fp){
   const px=22,pw=W-44,py=52;
   x.save();
   x.translate(W/2,py+26);x.scale(zoomS,zoomS);x.translate(-W/2,-(py+26));
-  x.fillStyle='rgba(6,13,24,.86)';
-  x.beginPath();if(x.roundRect)x.roundRect(px,py,pw,52,14);else x.rect(px,py,pw,52);x.fill();
-  x.strokeStyle=RCOL[f.r]+'99';x.lineWidth=2;x.stroke();
+  if(f.mode==='board'){                                        // Makko gunmetal contact plate (matches the device)
+    drawPlate(px,py,pw,54);
+  }else{
+    x.fillStyle='rgba(6,13,24,.86)';x.beginPath();if(x.roundRect)x.roundRect(px,py,pw,52,14);else x.rect(px,py,pw,52);x.fill();
+    x.strokeStyle=RCOL[f.r]+'99';x.lineWidth=2;x.stroke();
+  }
   // name row
   x.font='900 italic 12px system-ui';x.textAlign='left';x.textBaseline='middle';
-  x.fillStyle=RCOL[f.r];
-  const nm=f.sp.n+(f.shiny?' ✨':'')+(f.enraged?' 🔥ENRAGED':'');
-  x.fillText(nm.length>28?nm.slice(0,27)+'…':nm,px+10,py+11);
+  x.fillStyle=f.mode==='board'?'#dff2ff':RCOL[f.r];
+  const nm=(f.mode==='board'?'🎯 ':'')+f.sp.n+(f.shiny?' ✨':'')+(f.enraged?' 🔥ENRAGED':'');
+  x.fillText(nm.length>26?nm.slice(0,25)+'…':nm,px+10,py+11);
   // clean panel: fish name only (state reads on the strip below); a FOLDED tag only when demoralized
   if(f.foldT>0){x.textAlign='right';x.font='900 italic 10px system-ui';x.fillStyle='#ff6ec7';x.fillText('😵 FOLDED',px+pw-10,py+11);}
-  // HP bar (mythic = 3 bars stacked look: show bar count chip)
-  const hx2=px+10,hw=pw-20,hy=py+22,hh=13;
-  x.fillStyle='rgba(255,255,255,.08)';
-  x.beginPath();if(x.roundRect)x.roundRect(hx2,hy,hw,hh,7);else x.rect(hx2,hy,hw,hh);x.fill();
-  const frac=clamp(f.land||0,0,1);                             // THE TUG: LANDING progress (fills up as you reel it in)
-  let dispFrac=frac,barsLeft=1;
-  if(f.bars>1){barsLeft=Math.max(1,f.bars-(f.phase-1));dispFrac=frac;}  // boss: land bar is per-phase, chip shows phases left
-  if(f.mode==='board'){                                        // REELED IN: sonar-green LED segments (matches the tension gauge)
-    const tf=clamp(dispFrac,0,1),segs=24,sw=hw/segs;
-    for(let i=0;i<segs;i++){if((i+1)/segs>tf+1/segs)break;x.fillStyle='#3fffb0';x.fillRect(hx2+i*sw+0.5,hy+1,sw-1,hh-2)}
+  const hx2=px+10,hw=pw-20;
+  const frac=clamp(f.land||0,0,1);                             // LANDING / REELED-IN progress
+  if(f.mode==='board'){                                        // REELED IN → recessed LED slot on the gunmetal plate
+    const gy2=py+27,gh2=15;
+    x.fillStyle='#06121c';rr(hx2,gy2,hw,gh2,5);x.fill();
+    const tf=clamp(frac,0,1),segs=30,sw=hw/segs;
+    for(let i=0;i<segs;i++){if((i+1)/segs>tf+1/segs)break;x.fillStyle='#3fffb0';x.fillRect(hx2+i*sw+1,gy2+2,sw-2,gh2-4)}
+    x.font='900 10px system-ui';x.textAlign='right';x.fillStyle='#7dffb0';
+    x.fillText('📡 REELED IN '+Math.round(frac*100)+'%',px+pw-10,py+11);
   }else{
-    x.save();
-    x.beginPath();if(x.roundRect)x.roundRect(hx2,hy,hw*clamp(dispFrac,0,1),hh,7);else x.rect(hx2,hy,hw*dispFrac,hh);x.clip();
+    const hy=py+22,hh=13,dispFrac=frac;
+    x.fillStyle='rgba(255,255,255,.08)';x.beginPath();if(x.roundRect)x.roundRect(hx2,hy,hw,hh,7);else x.rect(hx2,hy,hw,hh);x.fill();
+    x.save();x.beginPath();if(x.roundRect)x.roundRect(hx2,hy,hw*clamp(dispFrac,0,1),hh,7);else x.rect(hx2,hy,hw*dispFrac,hh);x.clip();
     x.fillStyle=f.bars>1?['#7c3aed','#c026d3','#f43f5e'][Math.min(2,f.phase-1)]:RCOL[f.r];
-    x.fillRect(hx2,hy,hw,hh);
-    x.fillStyle='rgba(255,255,255,.22)';x.fillRect(hx2,hy,hw,4);
-    x.restore();
+    x.fillRect(hx2,hy,hw,hh);x.fillStyle='rgba(255,255,255,.22)';x.fillRect(hx2,hy,hw,4);x.restore();
+    if(f.phases>1&&f.bars!==3){const th=f.phases===2?[0.5]:[2/3,1/3];x.fillStyle='rgba(6,13,24,.9)';for(const q of th)x.fillRect(hx2+hw*q-1,hy,2,hh)}
+    if(f.bars>1){x.font='900 9px system-ui';x.textAlign='right';x.fillStyle='#fff';x.fillText('PHASE '+f.phase+'/'+f.bars,hx2+hw-4,hy+hh/2+0.5)}
+    x.fillStyle='rgba(150,180,210,.4)';for(let i=1;i<10;i++)x.fillRect(Math.round(hx2+hw*i/10),hy,1,2);
+    x.font='900 9px system-ui';x.textAlign='left';x.fillStyle='rgba(255,255,255,.9)';x.fillText('LANDING '+Math.round(frac*100)+'%',hx2+5,hy+hh/2+0.5);
   }
-  // phase segment dividers
-  if(f.phases>1&&f.bars!==3){
-    const th=f.phases===2?[0.5]:[2/3,1/3];
-    x.fillStyle='rgba(6,13,24,.9)';
-    for(const q of th)x.fillRect(hx2+hw*q-1,hy,2,hh);
-  }
-  if(f.bars>1){
-    x.font='900 9px system-ui';x.textAlign='right';x.fillStyle='#fff';
-    x.fillText('PHASE '+f.phase+'/'+f.bars,hx2+hw-4,hy+hh/2+0.5);
-  }
-  x.fillStyle='rgba(150,180,210,.4)';                          // gauge ticks (marine)
-  for(let i=1;i<10;i++)x.fillRect(Math.round(hx2+hw*i/10),hy,1,2);
-  x.font='900 9px system-ui';x.textAlign='left';x.fillStyle='rgba(255,255,255,.9)';
-  x.fillText((f.mode==='board'?'📡 REELED IN ':'LANDING ')+Math.round(frac*100)+'%',hx2+5,hy+hh/2+0.5);
   // fish-state strip: tiring (reel) → tensing → RUNNING (let go!) — reel-in only
   if(f.mode!=='board'){
     const ey=py+41,run2=(f.fishState==='run'),tel2=(f.fishState==='tele');
@@ -4133,10 +4138,7 @@ function drawFightHUD(t,fp){
     x.fillRect(hx2,ey,hw*(run2?1:(tel2?0.5:0.16)),4);
     x.font='800 8px system-ui';x.fillStyle=run2?'#ff8a8a':'#7d90ad';x.textAlign='left';
     x.fillText(run2?'RUNNING — LET GO!':tel2?"it's about to run…":'tiring — REEL IT IN',hx2,ey+9);
-  }else{
-    x.font='800 8px system-ui';x.fillStyle='#ffd54a';x.textAlign='left';
-    x.fillText('THE CATCH — match orbs to reel it in!',hx2,py+44);
-  }
+  }                                                            // board: the REELED-IN gauge fills the panel, no caption needed
   x.restore();
   /* -- LINE TENSION gauge (bottom) — Makko gunmetal instrument -- */
   const ten=f.tension,tm=f.tenMax;
@@ -4146,7 +4148,7 @@ function drawFightHUD(t,fp){
   const wob=ten>=40&&ten<70?Math.sin(t*10)*1.0:0;
   const flash=ten>=90?(Math.sin(t*Math.PI*8)>0?1:0.6):1;
   x.save();x.translate(0,wob);
-  const GX=96,GW=W-112,GH=40,GY=H-118;                          // clears the bottom-left ability button
+  const GX=96,GW=W-112,GH=52,GY=H-128;                          // beefier gauge; clears the bottom-left ability button
   const win=drawGaugeFrame(GX,GY,GW,GH);
   x.save();rr(win.wx,win.wy,win.ww,win.wh,3);x.clip();
   x.fillStyle='rgba(255,77,94,.14)';x.fillRect(win.wx+win.ww*0.7,win.wy,win.ww*0.3,win.wh);  // danger zone
