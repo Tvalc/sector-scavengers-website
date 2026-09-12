@@ -1145,6 +1145,7 @@ let bobX=290,bobY=WATER_Y,castT=0,castFrom={x:0,y:0},castTo={x:0,y:0};
 let biteAt=0,biteEnd=0,waitStart=0,nibbleAt=0;
 let hooked=null,lastCatch=null,holding=false,bracePid=null;
 let expo=0;const EXPO_LEN=5;                       // EXPEDITION: a run of catches at one spot; rarity luck climbs each catch, big bonus at the end
+let reelDown=null;                                 // reel-fight: pointer-down pos for tap/swipe classification
 let enrageMusic=false;
 let shadows=[];          // ambient fish silhouettes
 for(let i=0;i<4;i++)shadows.push({x:rnd(0,W),y:rnd(WATER_Y+40,H-80),v:rnd(12,30)*(Math.random()<0.5?-1:1),s:rnd(0.6,1.3)});
@@ -1421,9 +1422,9 @@ function fightStart(sp,opts){
   state='fight';holding=false;tauntCd=0;
   hitstop(0.12);
   fight.fx.zoom=1;fight.fx.stamp='HOOKED';fight.fx.stampT=0.7;
-  fight.land=0;fight.fishState='calm';fight.stateDur=1.2;fight.runDur=1.4;fight.reeling=false;fight.isFake=false;fight.inDanger=0;
-  fight.mode='reel';                                           // reel-in first, then the CATCH BOARD
-  fight.tension=TUG.startTen;                                   // THE TUG: start with a little line tension
+  fight.land=0;fight.depth=0.15;fight.rstate='idle';fight.rTellT=0.8;fight.moveIdx=-1;fight.curMove=null;fight.inDanger=0;
+  fight.mode='reel';                                           // REEL FIGHT (read & counter), then the CATCH BOARD
+  fight.tension=REEL_START_TEN;
   sfx('hooked');vib(25);
   splash(bobX,WATER_Y,14);
   if(opts.intro)fight.dlgQ.push(opts.intro);                    // gate retry / opp intro line
@@ -1824,29 +1825,19 @@ function winRewardPreview(f){
   return {clams,xp};
 }
 /* ---- inputs (TAP attacks on press-down; HOLD ≥120ms braces; anti-mash 130ms; buffer 100ms) ---- */
-function fightPress(){                                          // THE TUG: press-and-hold = REEL
-  const f=fight;if(!f)return;
+function fightTap(){                                            // consume taps that AREN'T reel input: dialogue skip / lose re-cast. returns true if consumed
+  const f=fight;if(!f)return false;
   if(f.dlg){ // tap skips typing, second tap dismisses
     if(f.dlg.t*24<f.dlg.txt.length)f.dlg.t=f.dlg.txt.length/24+0.01;
     else f.dlg=null;
-    sfx('blip');return;
+    sfx('blip');return true;
   }
   if(f.state==='LOSE'){
     if(f.t>0.8){const px=bobX;fight=null;state='idle';abilityBtnShow(false);startCast(px)} // rage re-cast
-    return;
+    return true;
   }
-  if(f.state==='WIN')return;
-  f.reeling=true;
-}
-function fightRelease(){                                        // THE TUG: let go = EASE (and reward a clean ease off a run)
-  const f=fight;if(!f)return;
-  if(f.state==='TUG'&&f.reeling&&(f.fishState==='tele'||(f.fishState==='run'&&f.stateT<0.35))){
-    f.combo=(f.combo||0)+1;f.comboBest=Math.max(f.comboBest||0,f.combo);
-    f.tension=Math.max(0,f.tension-8);
-    if(f.combo>=2)floater(bobX,WATER_Y-58,'CLEAN ×'+f.combo,12,'#5dffa8');
-    sfx('clink');
-  }
-  f.reeling=false;
+  if(f.state==='WIN')return true;
+  return false;
 }
 function judgeBeat(){
   const f=fight,d=Math.abs(f.beat-0.5);
@@ -2002,13 +1993,21 @@ function abilityUse(){
 }
 /* ---- master fight update (dt = real seconds, clamped ≤50ms upstream) ---- */
 /* ============ THE CATCH BOARD — Puzzle&Dragons match-3, the FINAL FIGHT ============ */
-const BCOLS=6,BROWS=5,REEL_GOAL=0.3,REEL_MAXT=6;  // short reel-in: land 30% OR ~6s, then the board fight
+const BCOLS=6,BROWS=5,REEL_GOAL=1,REEL_MAXT=60;   // REEL FIGHT: fill LAND (read-and-counter the fish's moves) → the CATCH BOARD
 const BKINDS=[
  {c:'#ff5d73',art:'tile-hook',ic:'🪝'},{c:'#ffbf3f',art:'tile-bait',ic:'🪱'},
  {c:'#5dffa8',art:'tile-reel',ic:'🎣'},{c:'#b78bff',art:'tile-jolt',ic:'⚡'},{c:'#3fd8ff',art:'tile-slack',ic:'🛟'}];
 let boardPanel=null;
 function boardArt(k){return makkoLoad('art/makko/board/'+BKINDS[k].art+'.png')}
 const BINS={IL:0.08,IR:0.12,IT:0.12,IB:0.15,PADX:0.12,PADY:0.10};   // fishfinder screen insets (measured from the art) + grid margin (cells)
+const BGIM={ // the fish's signature carries into the CATCH BOARD — enemy affects the match-3 too
+  drain:    {hit:1.0, bleed:3.5,reel:1.0, slack:1.0, nm:'HIGH DRAIN',   ic:'🩸'},   // berserker/boss: line bleeds every turn
+  boss:     {hit:1.25,bleed:4.5,reel:1.0, slack:0.85,nm:'APEX PRESSURE',ic:'💀'},   // mythic: hits harder + bleeds
+  murk:     {hit:1.0, bleed:0,  reel:1.0, slack:0.5, nm:'MURKY WATER',  ic:'🌫️'},   // coward: relief (slack) tiles rare
+  junklite: {hit:1.15,bleed:0,  reel:0.85,slack:1.0, nm:'DEAD WEIGHT',  ic:'🪨'},   // tank: heavy, reels slower + hits hard
+  lock:     {hit:1.0, bleed:0,  reel:1.0, slack:0.6, nm:'SLIPPERY',     ic:'🌀'},   // trickster: fewer relief tiles, twitchy
+};
+function bgim(){const f=fight;return (f&&f.boardGim&&BGIM[f.boardGim])||null;}
 function boardGeo(){
   const {IL,IR,IT,IB,PADX,PADY}=BINS,sW=1-IL-IR,sH=1-IT-IB;
   const kW=(BCOLS+2*PADX)/sW,kH=(BROWS+2*PADY)/sH;             // whole DEVICE size per cell (so the bezel fits, not just the grid)
@@ -2020,7 +2019,7 @@ function boardGeo(){
   const ox=Math.round(PX+IL*PW+PADX*cell),oy=Math.round(PY+IT*PH+PADY*cell);
   return {cell,ox,oy,PX,PY,PW,PH};
 }
-function bRandKind(){return Math.random()<0.2?4:(Math.random()*4|0)}
+function bRandKind(){const g=bgim();const sl=0.2*(g?g.slack:1);return Math.random()<sl?4:(Math.random()*4|0)}   // slack (relief) rate bent by the fish's gimmick
 function bHasMatch(g,r,c,k){return (c>=2&&g[r][c-1]===k&&g[r][c-2]===k)||(r>=2&&g[r-1][c]===k&&g[r-2][c]===k)}
 function enterBoard(){
   const f=fight;f.mode='board';f.bstate='play';f.combo=0;f.comboShow=0;f.comboT=0;f.held=null;f.sel=null;f.swiped=false;f.bfloats=[];f.finger={x:W/2,y:H*0.7};
@@ -2032,6 +2031,7 @@ function enterBoard(){
   for(let r=0;r<BROWS;r++){f.grid[r]=[];f.btiles[r]=[];for(let c=0;c<BCOLS;c++){let k;do{k=bRandKind()}while(bHasMatch(f.grid,r,c,k));f.grid[r][c]=k;f.btiles[r][c]={sx:0,sy:0,pop:0}}}
   for(let k=0;k<5;k++)boardArt(k); if(!boardPanel)boardPanel=makkoLoad('art/makko/board/panel.png');
   f.fx.stamp='REELED IN! NOW LAND IT 🎣';f.fx.stampT=1.7;f.fx.zoom=1;   // explains the shift: you reeled it to the boat, now finish it
+  const gm=bgim();if(gm){f.fx.gimStamp=gm.ic+' '+gm.nm;f.fx.gimStampT=2.2;}   // the fish carries its signature onto the board
   splash(bobX,WATER_Y,10);sfx('fanfare',f.r);fishSay("fine. we settle this at the boat.",{cd:1});
 }
 function bMatches(g){const m=[],mk=Array.from({length:BROWS},()=>Array(BCOLS).fill(false));
@@ -2049,7 +2049,7 @@ function bStep(){
   const cnt=m.length,slack=m.filter(t=>t.k===4).length;
   // reel power mirrors the tap-damage family so equipped gear matters on the board
   let dmgMul=1+teamP('dmg')+(f.r>=2?teamP('dmgRare'):0)+(f.r<=1?teamP('dmgLow'):0)+teamP('dmgPerRar')*f.r+(isNight()?teamP('dmgNight'):0)+Math.min(0.30,teamP('ramp')*f.dur);
-  let reel=(0.03*cnt)*(1+0.4*(f.combo-1))*dmgMul*(f.boardReelMul||1);
+  let reel=(0.03*cnt)*(1+0.4*(f.combo-1))*dmgMul*(f.boardReelMul||1)*((bgim()||{}).reel||1);   // gimmick: dead-weight fish reel slower
   if(f.nextMatchX5){reel*=5;f.nextMatchX5=0}                    // GRANNY's purse: next match ×5
   let crit=false;if(Math.random()<critChance()){reel*=critMult();crit=true}
   f.land=Math.min(1,f.land+reel);
@@ -2077,8 +2077,10 @@ function bEndTurn(){
     if(bump)f.land=Math.min(1,f.land+bump);
     if(pet.p.squid&&f.tension>=70&&!f.squidUsed){f.tension=Math.max(0,f.tension-20*rm);f.squidUsed=1;fishSay('🦑 vented',{cd:1})}}
   if(f.land>=1){fightWin(f.tension>=f.tenMax*0.78,{});return}
+  const gm=bgim();
+  if(gm&&gm.bleed){f.tension=Math.min(f.tenMax,f.tension+gm.bleed);if(f.tension>=f.tenMax){fightLose('snap');return}}  // gimmick: line bleeds every turn
   if(f.skipCounter>0){f.skipCounter--;f.bstate='play';return}   // an ability negated this counter-attack
-  let hit=(11+f.r*2.5)*(1+teamP('tenTaken'));                   // LINE upgrade + Lawyer + Trident/Solver all matter
+  let hit=(11+f.r*2.5)*(1+teamP('tenTaken'))*(gm?gm.hit:1);     // LINE upgrade + Lawyer + Trident/Solver all matter + gimmick
   if(f.r>=4)hit*=Math.max(0,1-teamP('tensLM'));
   hit*=Math.max(0.2,1-0.06*save.ups.line);
   f.tension=Math.min(f.tenMax,f.tension+hit);f.fx.zoom=1;sfx('brace');
@@ -2193,40 +2195,83 @@ function drawBoard(t){
   if(f.comboT>0&&f.comboShow>1){x.globalAlpha=Math.min(1,f.comboT*3);x.font='900 italic 30px system-ui';x.fillStyle='#5fe6ff';x.textAlign='center';x.fillText('COMBO ×'+f.comboShow,W/2,oy-52);x.globalAlpha=1}
   x.restore();
 }
-/* ============ THE TUG — the SHORT reel-in before the board ============
-   HOLD = reel (LAND rises, TENSION rises). RELEASE = ease (TENSION falls).
-   The fish makes telegraphed RUNS — reeling into a run spikes tension toward
-   SNAP; you must let go and ride it out, then reel again when it tires.
-   Land the fish (LAND=1) before the line snaps (TENSION=max). */
-const TUG={
-  landBase:[0.150,0.125,0.105,0.088,0.072,0.058],  // LAND/sec while reeling in calm, by rarity
-  calmTen:8,          // tension/sec while reeling in calm (so you still must ease sometimes)
-  ease:26,            // tension/sec relief while easing (not running)
-  runTenReel:56,      // tension/sec while reeling DURING a run (deadly — let go!)
-  runTenPassive:15,   // tension/sec a run adds on its own (the fish pulling hard)
-  runEase:24,         // tension/sec relief while easing during a run (partly counters passive)
-  runLand:0.014,      // LAND/sec while reeling during a run (barely any)
-  teleDur:0.5,        // run telegraph window (react here)
-  startTen:16,
+/* ============ THE REEL FIGHT — read & counter the fish's moves ============
+   The fish DIVES (deep = small) and SURFACES (close = big). It telegraphs signature
+   MOVES; do the shown counter (TAP, or SWIPE ↑ ↓ ← →, or WAIT out a FEINT) inside the
+   window to negate it and gain ground — miss and the LINE TENSION spikes. TAP to REEL
+   when nothing's telegraphed. Fill LAND to haul it to the boat → the CATCH BOARD.
+   Every move is telegraphed with an icon + the required counter, Mega-Man style. */
+const REEL_TAP=0.030,REEL_START_TEN=14;
+const RMOVES={ // ic=telegraph, ctr=required counter, tell=window(s), bad=miss effect, ok=counter reward
+  thrash:{ic:'🌊',nm:'THRASH', ctr:'tap',  tell:1.15,bad:{ten:15},           ok:{land:0.06,ten:-4}},
+  chomp :{ic:'🦷',nm:'CHOMP',  ctr:'tap',  tell:0.70,bad:{ten:22},           ok:{land:0.08,ten:-3}},
+  yank  :{ic:'⬆️',nm:'YANK',   ctr:'up',   tell:1.00,bad:{ten:14,land:-0.03},ok:{land:0.07}},
+  dive  :{ic:'🔻',nm:'DIVE',   ctr:'down', tell:1.05,bad:{ten:8,depth:0.40}, ok:{land:0.05,depth:-0.15}},
+  sound :{ic:'🌀',nm:'SOUND',  ctr:'down', tell:1.25,bad:{ten:6,depth:0.65,land:-0.07},ok:{depth:-0.28,land:0.03}},
+  bolt  :{ic:'⚡',nm:'BOLT-R', ctr:'right',tell:0.85,bad:{ten:12,depth:0.22},ok:{land:0.06}},
+  weave :{ic:'🌀',nm:'WEAVE-L',ctr:'left', tell:0.85,bad:{ten:12,depth:0.22},ok:{land:0.06}},
+  feint :{ic:'❓',nm:'FEINT',  ctr:'wait', tell:1.00,bad:{ten:11},           ok:{land:0.04}},
 };
-function tugCalmDur(f){const base=[2.7,2.5,2.3,2.1,2.0,1.8][f.r]||2.2;
-  const s={coward:0.62,berserker:0.85,tank:1.7,trickster:0.9,boss:0.95,none:1}[f.styleKey]||1;
-  const mor=0.75+0.45*(f.morale/100); return rnd(base*0.8,base*1.2)*s*mor;}
-function tugRunDur(f){const base=[1.15,1.3,1.45,1.65,1.85,2.05][f.r]||1.5;
-  const s={coward:0.7,berserker:1.18,tank:1.5,trickster:0.9,boss:1.1,none:1}[f.styleKey]||1;
-  const mor=0.6+0.4*(f.morale/100); return rnd(base*0.85,base*1.15)*s*mor;}
-function startTug(){const f=fight;f.state='TUG';f.fishState='calm';f.stateT=0;f.stateDur=tugCalmDur(f);}
-function startRunTele(){const f=fight;f.fishState='tele';f.stateT=0;f.runDur=tugRunDur(f);
-  f.isFake=(f.styleKey==='trickster')&&Math.random()<0.4;     // tricksters feint the run
-  f.fx.teleP=1;sfx('brace');
-  fishSay(pickLine((HUM.arch[f.styleKey]&&HUM.arch[f.styleKey].taunt)||HUM.hook),{cd:1.6});}
-function startRun(){const f=fight;f.fishState='run';f.stateT=0;sfx('dash');f.fx.runFlash=1;f.fx.zoom=1;
-  fishSay('IT RUNS 💨',{cd:1.1});}
-function cancelRunTug(){const f=fight;f.fishState='calm';f.stateT=0;f.stateDur=rnd(0.6,1.1);fishSay('...psych 😏',{cd:1});}
-function endRunTug(){const f=fight;f.fishState='calm';f.stateT=0;f.stateDur=tugCalmDur(f);}
-function nextPhaseTug(){const f=fight;f.phase++;f.land=0;f.tension=Math.max(0,f.tension*0.55);
-  f.state='PHASE';f.t=0;f.fx.stamp='PHASE '+f.phase+' 🔥';f.fx.stampT=1.2;sfx('fanfare',f.r);enrageMusic=true;f.enraged=true;
-  f.dlgQ=[pickLine(TRASH_BOSS)];}
+const REEL_SETS={ // by fightStyle archetype
+  none:     ['thrash','dive','yank'],
+  coward:   ['dive','sound','feint','dive','yank'],
+  berserker:['chomp','thrash','bolt','chomp','weave'],
+  tank:     ['yank','thrash','yank','sound'],
+  trickster:['feint','bolt','weave','feint','dive'],
+  boss:     ['thrash','dive','yank','bolt','sound'],
+};
+const BOSS_REEL={ // the 5 mythics — hand-authored signature movesets
+  'goldzilla':          ['thrash','yank','chomp','sound','thrash','yank'],
+  'don-undertow':       ['weave','bolt','dive','weave','sound','bolt'],
+  'kraken-accountant':  ['bolt','weave','chomp','yank','feint','bolt'],
+  'light-at-end':       ['sound','dive','feint','sound','thrash','dive'],
+  'unknowable-dennis':  ['feint','bolt','weave','chomp','feint','sound'],
+};
+const REEL_GIM={ // which board gimmick this fish carries into the match-3 (enemy affects both phases)
+  coward:'murk',berserker:'drain',tank:'junklite',trickster:'lock',boss:'drain',none:''
+};
+function reelMovesFor(f){return BOSS_REEL[f.sp.id]||REEL_SETS[f.styleKey]||REEL_SETS.none;}
+function reelBoardGim(f){return f.sp.r>=5?(BOSS_REEL[f.sp.id]?'boss':'drain'):(REEL_GIM[f.styleKey]||'');}
+function tellScale(f){return ([1.25,1.12,1.0,0.9,0.82,0.72][f.r]||1)*(0.8+0.4*(f.morale/100));}
+function startReel(){const f=fight;f.state='REEL';f.rstate='idle';f.rTellT=rnd(0.5,1.0);f.moveIdx=-1;f.curMove=null;
+  f.combo=0;f.taken=0;f.moves=reelMovesFor(f);f.boardGim=reelBoardGim(f);}
+function startMove(){const f=fight;const seq=f.moves||REEL_SETS.none;f.moveIdx=(f.moveIdx+1)%seq.length;
+  f.curMove=RMOVES[seq[f.moveIdx]]||RMOVES.thrash;f.rstate='tell';f.rTellT=f.curMove.tell*tellScale(f);f.rTellMax=f.rTellT;
+  f.fx.teleP=1;sfx('brace');}
+function resolveMove(success){const f=fight,m=f.curMove;if(!m)return;
+  const e=success?m.ok:m.bad;
+  let ten=(e.ten||0);if(ten>0)ten*=(1+teamP('tenTaken'))*Math.max(0.2,1-0.06*save.ups.line);   // gear affects tension taken
+  f.tension=clamp(f.tension+ten,0,f.tenMax);
+  f.land=clamp(f.land+(e.land||0)*(e.land>0?(1+teamP('dmg')):1),0,1);
+  f.depth=clamp(f.depth+(e.depth||0),0,1);
+  if(success){f.fx.ring=0.4;f.fx.gold=0.1;sfx('parry');vib(10);if(f.combo!=null)f.combo++;fishSay(pickLine(['COUNTERED!','read like a book','nice hands','denied 🙅','not today']),{cd:0.8});}
+  else{f.fx.flash=0.35;f.fx.zoom=1;sfx('snap');vib(24);f.taken=(f.taken||0)+1;f.combo=0;bark(HUM.onCooked,{cd:2.2});}
+  f.rstate='flash';f.rTellT=0.3;
+}
+function reelTap(){const f=fight;const g=REEL_TAP*(1-0.62*(f.depth||0))*(1+teamP('dmg'));
+  f.land=clamp(f.land+g,0,1);f.tension=clamp(f.tension+2,0,f.tenMax);f.depth=clamp((f.depth||0)-0.035,0,1);
+  f.fx.reelPulse=0.18;sfx('tick');}
+function reelInput(kind){const f=fight;if(!f||f.mode!=='reel'||f.state!=='REEL')return;
+  if(f.rstate==='tell'){const m=f.curMove;
+    if(m.ctr==='wait')resolveMove(false);            // any input during a FEINT = punished
+    else resolveMove(kind===m.ctr);                  // right counter = success, wrong/other = miss
+  }else if(f.rstate==='idle'&&kind==='tap')reelTap();
+}
+function updateReel(fdt){const f=fight;
+  if(f.rstate==='idle'){
+    f.depth=clamp((f.depth||0)+0.07*fdt,0,1);         // the fish naturally pulls deeper while you rest
+    f.tension=clamp(f.tension-7*fdt,0,f.tenMax);      // and the line eases a touch
+    f.rTellT-=fdt;if(f.rTellT<=0)startMove();
+  }else if(f.rstate==='tell'){
+    f.rTellT-=fdt;
+    if(f.rTellT<=0)resolveMove(f.curMove.ctr==='wait'); // window expired: WAIT succeeds (you held), others miss
+  }else if(f.rstate==='flash'){
+    f.rTellT-=fdt;if(f.rTellT<=0){f.rstate='idle';f.rTellT=rnd(0.45,0.95);}
+  }
+  f.midEvtT-=fdt;if(f.midEvtT<=0){f.midEvtT=rnd(6,9);}
+  if(f.land>=REEL_GOAL||f.dur>=REEL_MAXT){enterBoard();return}
+  if(f.tension>=f.tenMax){fightLose('snap');return}
+}
 function updateFight(dt){
   const f=fight;if(!f)return;
   updateFightFx(dt);
@@ -2251,38 +2296,11 @@ function updateFight(dt){
   petTick(fdt);
   if(f.barkCd>0)f.barkCd-=dt;
   if(f.foldT>0){f.foldT-=dt;if(f.foldT<=0)f.morale=45}          // recover spirit after a fold
-  if(f.state==='INTRO'){if(f.t>=0.5)startTug();return}
-  if(f.state==='PHASE'){if(f.t>=1.2)startTug();return}
-  if(f.state!=='TUG'){startTug();return}                        // safety: recover from any stray legacy state
+  if(f.state==='INTRO'){if(f.t>=0.5)startReel();return}
+  if(f.state==='PHASE'){if(f.t>=1.2)startReel();return}
   if(f.mode==='board'){boardStepAnim(fdt);return}               // final fight = the CATCH BOARD (turn-based)
-  // --- REEL-IN: THE TUG, but only until the fish is close (REEL_GOAL), then the board ---
-  // --- fish run cycle (calm → telegraph → run → calm) ---
-  if(f.fishState==='calm'){ if(f.stateT>=f.stateDur)startRunTele(); }
-  else if(f.fishState==='tele'){ if(f.stateT>=TUG.teleDur){ f.isFake?cancelRunTug():startRun(); } }
-  else if(f.fishState==='run'){ if(f.stateT>=f.runDur)endRunTug(); }
-  // --- reel / ease → tension + land ---
-  const reeling=f.reeling&&f.mods.freeze<=0&&f.mods.stun<=0;
-  const running=f.fishState==='run';
-  let tenRate,landRate=0;
-  if(running){
-    if(reeling){tenRate=TUG.runTenReel;landRate=TUG.runLand;}   // reeling into a run = deadly tension
-    else{tenRate=TUG.runTenPassive-TUG.runEase;}                // easing rides the run out (slow relief)
-  }else{
-    if(reeling){tenRate=TUG.calmTen;landRate=(TUG.landBase[f.r]||0.1)*(1+teamP('dmg'))*(f.fishState==='tele'?0.7:1);}
-    else{tenRate=-TUG.ease;}
-  }
-  if(f.morale<60)tenRate*=0.85;                                 // demoralized fish pulls softer
-  f.tension=clamp(f.tension+tenRate*fdt,0,f.tenMax);
-  f.land=clamp((f.land||0)+landRate*fdt,0,1);
-  // near-snap = "damage taken" (kills flawless) + breaks combo + cope bark
-  if(f.tension>=f.tenMax*0.85){if(!f.inDanger){f.inDanger=1;f.taken=(f.taken||0)+1;f.combo=0}}
-  else if(f.tension<f.tenMax*0.7)f.inDanger=0;
-  if(f.tension>=75&&!f.cookedBarked){f.cookedBarked=1;bark(HUM.onCooked,{cd:2.6})}
-  else if(f.tension<58)f.cookedBarked=0;
-  f.midEvtT-=dt;if(f.midEvtT<=0){f.midEvtT=rnd(5,8);rollEvent('mid')}
-  // --- resolve ---
-  if(f.land>=REEL_GOAL||f.dur>=REEL_MAXT){enterBoard();return;} // fish is CLOSE (or reel timed out) → fire into the CATCH BOARD
-  if(f.tension>=f.tenMax){fightLose('snap');return;}
+  if(f.state!=='REEL'){startReel();return}                      // safety: recover from any stray legacy state
+  updateReel(fdt);
 }
 function updateFightFx(dt){ // fx decay runs on REAL time (survives hitstop/slow-mo)
   const f=fight;if(!f)return;
@@ -2291,6 +2309,7 @@ function updateFightFx(dt){ // fx decay runs on REAL time (survives hitstop/slow
   fx.ring=Math.max(0,fx.ring-dt);fx.shield=Math.max(0,fx.shield-dt);
   fx.snap=Math.max(0,fx.snap-dt*3);fx.vign=Math.max(0,(fx.vign||0)-dt);
   fx.ink=Math.max(0,fx.ink-dt*0.6);fx.zoom=Math.max(0,fx.zoom-dt*8);
+  fx.teleP=Math.max(0,(fx.teleP||0)-dt*3);fx.reelPulse=Math.max(0,(fx.reelPulse||0)-dt*5);   // reel telegraph flash + tap pulse
   fx.stampT=Math.max(0,fx.stampT-dt);
   if(f.rewriteT>0)f.rewriteT-=dt;
   if(fx.bubble){
@@ -3113,17 +3132,23 @@ cv.addEventListener('pointerdown',e=>{
   else if(state==='wait'){state='idle';splash(bobX,WATER_Y,5);sfx('cast')}
   else if(state==='bite')hookFish();
   else if(state==='fight'){
+    if(fightTap())return;                                                // dialogue skip / lose re-cast
     if(fight&&fight.mode==='board'){bracePid=e.pointerId;boardPick(p);}   // CATCH BOARD: grab a tile
-    else{bracePid=e.pointerId;fightPress();}                              // reel-in: brace/reel
+    else{bracePid=e.pointerId;reelDown={x:p.x,y:p.y};}                    // REEL: record for tap/swipe on release
   }
 });
 addEventListener('pointermove',e=>{                                       // CATCH BOARD: swipe a tile toward a neighbor
   if(state==='fight'&&fight&&fight.mode==='board'&&fight.sel)boardDrag(toGame(e));
 });
-addEventListener('pointerup',e=>{holding=false;if(state==='fight'&&e.pointerId===bracePid){bracePid=null;if(fight&&fight.mode==='board')boardDrop();else fightRelease()}});
-addEventListener('pointercancel',e=>{holding=false;if(state==='fight'&&e.pointerId===bracePid){bracePid=null;if(fight&&fight.mode==='board')boardDrop();else fightRelease()}});
+addEventListener('pointerup',e=>{holding=false;if(state==='fight'&&e.pointerId===bracePid){bracePid=null;
+  if(fight&&fight.mode==='board')boardDrop();
+  else if(reelDown){const p=toGame(e),dx=p.x-reelDown.x,dy=p.y-reelDown.y,ad=Math.abs(dx),ay=Math.abs(dy);reelDown=null;   // REEL: classify tap vs swipe
+    reelInput((ad>28||ay>28)?(ay>ad?(dy<0?'up':'down'):(dx<0?'left':'right')):'tap');}
+}});
+addEventListener('pointercancel',e=>{holding=false;reelDown=null;if(state==='fight'&&e.pointerId===bracePid){bracePid=null;if(fight&&fight.mode==='board')boardDrop()}});
 addEventListener('keydown',e=>{
   if(e.key==='Escape'){e.preventDefault();if(state==='title')return;if(anyModal()){closeAllModals();return}togglePause();return}
+  if(state==='fight'&&fight&&fight.mode==='reel'){const m={ArrowUp:'up',ArrowDown:'down',ArrowLeft:'left',ArrowRight:'right'}[e.key];if(m){e.preventDefault();reelInput(m);return}}  // desktop reel counters
   if(e.key===' '){e.preventDefault();
     if(e.repeat)return;                                          // autorepeat ignored
     initAudio();
@@ -3131,10 +3156,10 @@ addEventListener('keydown',e=>{
     if(anyModal()){if(!$('mCatch').hidden)closeCatch();return}
     if(state==='idle')startCast(rnd(200,380));
     else if(state==='bite')hookFish();
-    else if(state==='fight'&&(!fight||fight.mode!=='board'))fightPress();  // board = touch-drag only
+    else if(state==='fight'){if(!fightTap()&&fight&&fight.mode==='reel')reelInput('tap');}  // reel: space = TAP counter/reel
   }
 });
-addEventListener('keyup',e=>{if(e.key===' '){holding=false;if(state==='fight'&&(!fight||fight.mode!=='board'))fightRelease()}});
+addEventListener('keyup',e=>{if(e.key===' ')holding=false});
 cv.addEventListener('contextmenu',e=>e.preventDefault());
 document.addEventListener('visibilitychange',()=>{
   if(document.hidden){if(AU.ctx)AU.ctx.suspend()}else if(AU.ctx)AU.ctx.resume();
@@ -4025,12 +4050,20 @@ function fishPos(t){
   const f=fight;let px=bobX,py=WATER_Y+2,s=1,rot=0;
   switch(f.state){
     case 'INTRO':{const p=Math.min(1,f.t/0.5);py=WATER_Y+26-24*p;s=0.6+0.4*p;break}
-    case 'TUG':{
+    case 'REEL':{
       if(f.mode==='board'){const g=boardGeo();const top=108,bot=g.PY;px=W/2+Math.sin(t*1.8)*10;py=(top+bot)/2+Math.sin(t*3)*4;s=clamp((bot-top)/118,0.32,0.6);rot=Math.sin(t*2.2)*0.06;break;}  // board fight: fish fits the gap above the device
-      if(f.fishState==='run'){px+=Math.sin(t*24)*11+Math.sin(t*11)*6;py+=Math.cos(t*19)*6;rot=Math.sin(t*22)*0.35;s=1.05;}   // thrashing
-      else if(f.fishState==='tele'){py-=4;s=1.06;rot=-0.1;}                                                                   // tensing to run
-      else{py+=Math.sin(t*4)*2.6;rot=Math.sin(t*3)*0.08;}                                                                      // tired bob
-      s*=1+0.55*clamp((f.land||0)/REEL_GOAL,0,1);                                                                             // grows/nears the boat as it's reeled in
+      const dp=f.depth||0;                                                                                                    // 0 = surfaced (big), 1 = deep (small)
+      py=WATER_Y+6+dp*50+Math.sin(t*(2.4+dp*2.2))*3;                                                                          // dives DOWN + small, surfaces UP + big
+      s=1.16-0.64*dp; rot=Math.sin(t*2.6)*0.08;
+      if(f.rstate==='tell'&&f.curMove){const m=f.curMove,tp=1-clamp(f.rTellT/Math.max(0.01,f.rTellMax||1),0,1);              // winding up the telegraphed move
+        const lg=0.35+0.65*tp;
+        if(m.ctr==='left'){px-=24*lg;rot-=0.2*lg}
+        else if(m.ctr==='right'){px+=24*lg;rot+=0.2*lg}
+        else if(m.ctr==='up'){py-=16*lg;s+=0.06*lg}
+        else if(m.ctr==='down'){py+=18*lg}
+        else{px+=Math.sin(t*34)*7*lg;rot=Math.sin(t*30)*0.32*lg}                                                             // tap / feint = shudder in place
+      }else if(f.rstate==='flash'){px+=Math.sin(t*42)*5;rot=Math.sin(t*38)*0.26;}                                            // just resolved: recoil
+      s*=1+0.18*clamp((f.land||0)/REEL_GOAL,0,1);                                                                            // creeps bigger as it nears the boat
       break;}
     case 'OPENING':py+=Math.sin(t*9)*3;rot=Math.sin(t*7)*0.2;break;
     case 'TELEGRAPH':{const p=clamp(f.t/Math.max(0.01,f.telDur),0,1);px+=14*p;py-=6*p;s=1+0.12*p;rot=-0.12*p;break}
@@ -4240,13 +4273,14 @@ function drawFightHUD(t,fp){
     // "AT THE BOAT" target marker at the end of the reel meter
     if(reeling){x.fillStyle=nearBoat?'#7dffb0':'rgba(255,255,255,.5)';x.font='900 8px system-ui';x.textAlign='right';x.fillText('🎣 BOAT',hx2+hw-2,hy-3);}
     else{x.fillStyle='rgba(150,180,210,.4)';for(let i=1;i<10;i++)x.fillRect(Math.round(hx2+hw*i/10),hy,1,2);}
-    if(f.bars>1){x.font='900 9px system-ui';x.textAlign='right';x.fillStyle='#fff';x.fillText('PHASE '+f.phase+'/'+f.bars,hx2+hw-4,hy+hh/2+0.5)}
     x.font='900 9px system-ui';x.textAlign='left';x.fillStyle='rgba(255,255,255,.9)';x.fillText((reeling?'REELING IN ':'LANDING ')+Math.round(dispFrac*100)+'%',hx2+5,hy+hh/2+0.5);
-    const ey=py+41,run2=(f.fishState==='run'),tel2=(f.fishState==='tele');
+    // reel status sub-bar: how close to the surface the fish is + your counter streak
+    const ey=py+41,dp=clamp(f.depth||0,0,1);
     x.fillStyle='rgba(255,255,255,.08)';x.fillRect(hx2,ey,hw,4);
-    x.fillStyle=run2?'#ff4d5e':(tel2?'#ffd54a':'#5dffa8');x.fillRect(hx2,ey,hw*(run2?1:(tel2?0.5:0.16)),4);
-    x.font='800 8px system-ui';x.fillStyle=run2?'#ff8a8a':'#7d90ad';x.textAlign='left';
-    x.fillText(run2?'RUNNING — LET GO!':tel2?"it's about to run…":'tiring — REEL IT IN',hx2,ey+9);
+    x.fillStyle=dp>0.62?'#5aa0ff':dp>0.3?'#3fd8ff':'#7dffb0';x.fillRect(hx2,ey,hw*(1-dp),4);       // fuller = nearer the surface
+    x.font='800 8px system-ui';x.fillStyle='#7d90ad';x.textAlign='left';
+    x.fillText(dp>0.6?'SOUNDED DEEP — TAP TO REEL UP':dp>0.28?'below the surface':'AT THE SURFACE',hx2,ey+9);
+    if((f.combo||0)>1){x.textAlign='right';x.fillStyle='#ffd54a';x.fillText('COUNTER ×'+f.combo,hx2+hw,ey+9);}
   }
   x.restore();
   /* -- LINE TENSION gauge (bottom) — Makko gunmetal instrument -- */
@@ -4271,25 +4305,39 @@ function drawFightHUD(t,fp){
   x.font='900 10px system-ui';x.textAlign='left';x.fillStyle=colT;
   x.fillText('⚓ LINE TENSION · '+(rewriting?'□▽◁?!':label.toUpperCase()),GX+4,GY+GH+11);
   x.textAlign='right';x.fillStyle='#8fb0cc';
-  x.fillText(Math.round(ten)+'/'+Math.round(tm)+(f.reeling?' · REELING':''),GX+GW-4,GY+GH+11);
+  x.fillText(Math.round(ten)+'/'+Math.round(tm),GX+GW-4,GY+GH+11);
   x.restore();
-  // THE TUG: big central guidance — HOLD to reel it to the boat, LET GO on a run (reel-in only)
-  if(f.mode==='reel'&&f.state==='TUG'&&f.fishState==='run'){
-    x.font='900 italic 22px system-ui';x.textAlign='center';
-    x.fillStyle='rgba(255,77,94,'+(0.75+0.25*Math.sin(t*14)).toFixed(2)+')';
-    x.fillText('LET GO! 🐟💨',W/2,H*0.30);
-  }else if(f.mode==='reel'&&f.state==='TUG'&&clamp((f.land||0)/REEL_GOAL,0,1)>=0.8){
-    x.font='900 italic 17px system-ui';x.textAlign='center';
-    x.fillStyle='rgba(125,255,176,'+(0.7+0.3*Math.sin(t*12)).toFixed(2)+')';
-    x.fillText('ALMOST AT THE BOAT — KEEP REELING! 🎣',W/2,H*0.30);
-  }else if(f.mode==='reel'&&f.state==='TUG'&&f.fishState==='tele'){
-    x.font='900 italic 15px system-ui';x.textAlign='center';
-    x.fillStyle='rgba(255,213,74,'+(0.6+0.35*Math.sin(t*10)).toFixed(2)+')';
-    x.fillText('it\'s tensing up…',W/2,H*0.30);
-  }else if(f.mode==='reel'&&f.state==='TUG'&&!f.reeling&&(f.land||0)<0.05&&f.dur<3.5){
-    x.font='900 15px system-ui';x.textAlign='center';
-    x.fillStyle='rgba(255,255,255,'+(0.6+0.3*Math.sin(t*6)).toFixed(2)+')';
-    x.fillText('HOLD to REEL IT TO THE BOAT 🎣',W/2,H*0.30);
+  // ===== READ & COUNTER — Mega-Man-style telegraph drawn over the fish =====
+  if(f.mode==='reel'&&f.state==='REEL'){
+    const m=f.curMove;
+    if(f.rstate==='tell'&&m){
+      const wf=clamp(f.rTellT/Math.max(0.01,f.rTellMax||1),0,1);   // window 1→0
+      const cx2=fp.x,cy2=clamp(fp.y-4,58,H-150);
+      const rad=20+58*wf;                                          // shrinking window ring closes on the fish
+      x.save();x.lineWidth=5;x.strokeStyle=wf>0.42?'#ffd54a':'#ff5d5d';x.globalAlpha=0.92;
+      x.beginPath();x.arc(cx2,cy2,rad,0,6.283);x.stroke();x.globalAlpha=1;
+      x.fillStyle='rgba(4,10,20,.6)';x.beginPath();x.arc(cx2,cy2,21,0,6.283);x.fill();
+      const cue={tap:'TAP',up:'▲',down:'▼',left:'◀',right:'▶',wait:'✋'}[m.ctr]||'TAP';
+      x.fillStyle='#fff';x.textAlign='center';x.textBaseline='middle';x.font='900 22px system-ui';
+      x.fillText(cue,cx2,cy2+1);x.textBaseline='alphabetic';x.restore();
+      // move label anchored just ABOVE the ring (localized on the fish; clear of the top event ticker)
+      const verb=m.ctr==='wait'?'HOLD STILL — feint!':(m.ctr==='tap'?'TAP! ':'SWIPE '+cue+' ')+m.nm;
+      const label=m.ic+'  '+verb;
+      x.font='900 italic 15px system-ui';x.textAlign='center';
+      const tw=x.measureText(label).width, by=clamp(cy2-rad-14,112,H*0.44);
+      x.fillStyle='rgba(4,10,20,.66)';rr(W/2-tw/2-9,by-15,tw+18,21,8);x.fill();
+      x.fillStyle=m.ctr==='wait'?'#ff8ad0':'#ffe08a';x.fillText(label,W/2,by);
+    }else if(f.rstate==='idle'){
+      const dp=clamp(f.depth||0,0,1);
+      x.font='900 14px system-ui';x.textAlign='center';
+      const msg=dp>0.55?'TAP FAST — REEL IT UP! 🎣':'TAP TO REEL · watch its next move';
+      const tw=x.measureText(msg).width;
+      x.fillStyle='rgba(4,10,20,.5)';rr(W/2-tw/2-9,H*0.30-15,tw+18,21,8);x.fill();
+      x.fillStyle='rgba(255,255,255,'+(0.62+0.28*Math.sin(t*6)).toFixed(2)+')';
+      x.fillText(msg,W/2,H*0.30);
+    }
+    if(save.hints.cook<=2){x.font='800 10px system-ui';x.textAlign='center';x.fillStyle='rgba(210,230,255,.72)';
+      x.fillText('read the fish, do the matching move — miss and the line spikes',W/2,H*0.355);}
   }
   if(f.state==='OPENING'&&save.hints.cook<=2&&f.r>0){
     x.font='900 17px system-ui';x.textAlign='center';
