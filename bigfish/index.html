@@ -159,6 +159,7 @@ button{font-family:inherit}
   width:72px;height:72px;border-radius:50%;border:3px solid var(--line);z-index:8;display:none;
   background:rgba(13,23,38,.9);color:var(--txt);cursor:pointer;font-weight:900;touch-action:none}
 #abilityBtn .ae{font-size:26px;display:block;line-height:1.1}
+#abilityBtn .ae.port{width:52px;height:44px;margin:2px auto 0;border-radius:12px;background-size:cover;background-position:center top;font-size:0}
 #abilityBtn .an{font-size:7.5px;letter-spacing:.05em;display:block;color:var(--dim)}
 #abilityBtn.ready{border-color:var(--gold);box-shadow:0 0 16px rgba(255,213,74,.5)}
 #abilityBtn:active{transform:scale(.93)}
@@ -248,6 +249,31 @@ button{font-family:inherit}
 body.fishing #hudTop,body.fishing #nav,body.fishing #abilityBtn,body.fishing #tauntBtn{opacity:0;pointer-events:none}
 body.boardfight #abilityBtn{opacity:1;pointer-events:auto}   /* the CATCH BOARD uses the angler ability */
 body.fishing #hint{display:none}
+/* ---- start screen + pause overlay ---- */
+#pauseBtn{position:fixed;z-index:150;top:calc(var(--gT,0px) + 12px + env(safe-area-inset-top));right:calc(var(--gR,0px) + 12px + env(safe-area-inset-right));
+  width:40px;height:40px;border-radius:50%;border:1px solid rgba(160,190,215,.28);background:rgba(6,16,28,.82);
+  color:#cfe0ea;font-size:15px;line-height:40px;text-align:center;cursor:pointer;display:none;padding:0}
+#pauseBtn:active{transform:scale(.92)}
+#titleScreen,#pauseScreen{position:fixed;inset:0;z-index:200;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;-webkit-tap-highlight-color:transparent}
+#titleScreen.on,#pauseScreen.on{display:flex}
+#titleScreen{background:radial-gradient(125% 90% at 50% 18%, rgba(24,86,112,.5), rgba(5,18,36,.9) 65%, rgba(2,9,20,.97))}
+#pauseScreen{background:rgba(3,11,22,.8);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.tsInner,.psInner{display:flex;flex-direction:column;align-items:center;gap:15px;padding:24px}
+.tsLogo{font-weight:900;font-style:italic;font-size:clamp(40px,12vw,74px);line-height:.9;letter-spacing:.01em;color:#eaf7ff;
+  text-shadow:0 3px 0 #08202e,0 0 30px rgba(63,216,255,.45);transform:rotate(-3deg)}
+.tsLogo span{display:block;color:#3fd8ff}
+.tsTag{color:#bfe0ee;font-weight:700;font-size:14px;max-width:290px;opacity:.92;margin-top:4px}
+#tsPlay,#psResume{margin-top:10px;font-weight:900;font-size:22px;letter-spacing:.03em;color:#04202c;
+  background:linear-gradient(#82ffd4,#2fd8c0);border:none;border-radius:16px;padding:15px 48px;cursor:pointer;
+  box-shadow:0 6px 0 #178a7e,0 12px 26px rgba(45,216,192,.38)}
+#tsPlay:active,#psResume:active{transform:translateY(3px);box-shadow:0 3px 0 #178a7e}
+.tsGhost,.psAlt,.psDanger{background:rgba(255,255,255,.07);color:#cfe0ea;border:1px solid rgba(160,190,215,.24);
+  border-radius:12px;padding:11px 24px;font-weight:800;font-size:13px;cursor:pointer}
+.tsGhost:active,.psAlt:active,.psDanger:active{transform:scale(.96)}
+.psDanger{color:#ff9a9a;border-color:rgba(255,90,90,.42)}
+.psDanger.armed{color:#0a1420;background:#ff5d5d;border-color:#ff5d5d}
+.psTitle{font-weight:900;font-style:italic;font-size:34px;color:#eaf7ff;text-shadow:0 0 22px rgba(63,216,255,.5)}
+body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlayed #tauntBtn,body.overlayed #pauseBtn{display:none!important}
 </style>
 </head>
 <body>
@@ -286,6 +312,25 @@ body.fishing #hint{display:none}
 <div id="hint">tap the water to cast 🎣</div>
 <button id="abilityBtn"><span class="cdRing"></span><span class="ae">✨</span><span class="an">ABILITY</span></button>
 <button id="tauntBtn"><span class="cdRing"></span><span class="te">🗣️</span><span class="tn">TALK SHIT</span></button>
+<button id="pauseBtn" title="pause (Esc)">⏸</button>
+
+<div id="titleScreen">
+  <div class="tsInner">
+    <div class="tsLogo">BIG FISH<span>ENERGY</span></div>
+    <div class="tsTag">a fish is talking shit in the water. 🎣 go handle it.</div>
+    <button id="tsPlay">▶ PLAY</button>
+    <button id="tsReset" class="tsGhost">reset progress</button>
+  </div>
+</div>
+
+<div id="pauseScreen">
+  <div class="psInner">
+    <div class="psTitle">⏸ PAUSED</div>
+    <button id="psResume">▶ RESUME</button>
+    <button id="psQuit" class="psAlt">⌂ QUIT TO TITLE</button>
+    <button id="psReset" class="psDanger">⟳ RESET PROGRESS</button>
+  </div>
+</div>
 
 <div class="modal" id="mCatch" hidden>
   <div class="card" id="catchCard">
@@ -1836,9 +1881,13 @@ function petTick(fdt){
 }
 /* ---- angler active ability (72px button, own pointer surface) ---- */
 function abilityBtnShow(on){
-  const a=eqAngler(),b=$('abilityBtn');
+  const a=eqAngler(),b=$('abilityBtn'),ae=b.querySelector('.ae');
   b.style.display=(on&&a)?'block':'none';
-  if(a){b.querySelector('.ae').textContent=a.e;b.querySelector('.an').textContent=a.an}
+  if(a){b.querySelector('.an').textContent=a.an;
+    const src='art/makko/angler/'+a.id+'.png';                  // Makko portrait instead of emoji
+    ae.textContent='';ae.classList.add('port');ae.style.backgroundImage="url('"+src+"')";
+    const im=new Image();im.onerror=()=>{if(save.equipped.angler===a.id){ae.classList.remove('port');ae.style.backgroundImage='none';ae.textContent=a.e}};im.src=src;
+  }
 }
 function boardAbility(a,f){                                     // angler actives, remapped for the CATCH BOARD
   abilityCd=a.cd;sfx('quest');vib(15);
@@ -1921,6 +1970,7 @@ function enterBoard(){
   const f=fight;f.mode='board';f.bstate='play';f.combo=0;f.comboShow=0;f.comboT=0;f.held=null;f.sel=null;f.swiped=false;f.bfloats=[];f.finger={x:W/2,y:H*0.7};
   f.land=Math.min(0.4,teamP('fishHp')+(save.zone===4?teamP('fishHpVoid'):0));  // gear that weakens fish = a head start
   f.skipCounter=0;f.nextMatchX5=0;f.boardReelMul=1;f.boardReelT=0;f.squidUsed=0; // gacha-buff state for the board
+  f.bpops=[];f.bparts=[];f.bflash=0;                           // match-clear juice: pop ghosts, burst particles, flash
   f.grid=[];f.btiles=[];
   for(let r=0;r<BROWS;r++){f.grid[r]=[];f.btiles[r]=[];for(let c=0;c<BCOLS;c++){let k;do{k=bRandKind()}while(bHasMatch(f.grid,r,c,k));f.grid[r][c]=k;f.btiles[r][c]={sx:0,sy:0,pop:0}}}
   for(let k=0;k<5;k++)boardArt(k); if(!boardPanel)boardPanel=makkoLoad('art/makko/board/panel.png');
@@ -1930,6 +1980,9 @@ function bMatches(g){const m=[],mk=Array.from({length:BROWS},()=>Array(BCOLS).fi
   for(let r=0;r<BROWS;r++)for(let c=0;c<BCOLS-2;c++){const k=g[r][c];if(k<0)continue;let e=c;while(e+1<BCOLS&&g[r][e+1]===k)e++;if(e-c>=2)for(let i=c;i<=e;i++)mk[r][i]=true;c=e}
   for(let c=0;c<BCOLS;c++)for(let r=0;r<BROWS-2;r++){const k=g[r][c];if(k<0)continue;let e=r;while(e+1<BROWS&&g[e+1][c]===k)e++;if(e-r>=2)for(let i=r;i<=e;i++)mk[i][c]=true;r=e}
   for(let r=0;r<BROWS;r++)for(let c=0;c<BCOLS;c++)if(mk[r][c])m.push({r,c,k:g[r][c]});return m}
+function boardBurst(x,y,col,cell){const f=fight;f.bparts=f.bparts||[];   // spark burst when a tile clears
+  for(let i=0;i<7;i++){const a=(i/7)*6.283+Math.random()*0.6,sp=cell*(1.4+Math.random()*2.2);
+    f.bparts.push({x,y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp-cell*0.8,life:0,max:0.42+Math.random()*0.3,col,r:cell*0.07*(0.7+Math.random())});}}
 function boardResolve(){fight.bstate='resolving';bStep()}
 function bStep(){
   const f=fight;if(!f||f.mode!=='board'||f.state==='WIN'||f.state==='LOSE')return;const m=bMatches(f.grid);
@@ -1943,10 +1996,15 @@ function bStep(){
   let crit=false;if(Math.random()<critChance()){reel*=critMult();crit=true}
   f.land=Math.min(1,f.land+reel);
   if(slack>0)f.tension=Math.max(0,f.tension-(7*slack)*(1+0.3*(f.combo-1)));
-  sfx('coin');if(f.combo>1||crit)hitstop(0.03);
-  for(const t of m){f.btiles[t.r][t.c].pop=0.001;f.grid[t.r][t.c]=-1}
-  (f.bfloats=f.bfloats||[]).push({txt:(crit?'✦ ':'')+'+'+Math.round(reel*100)+'%',y:0,t:0,big:f.combo>1||crit});
-  setTimeout(()=>{if(fight===f&&f.mode==='board'){bCollapse();setTimeout(()=>{if(fight===f&&f.mode==='board')bStep()},120)}},210);
+  sfx('coin',Math.min(6,f.combo-1));if(f.combo>1||crit)hitstop(0.035);
+  const {cell,ox,oy}=boardGeo();                                // spawn clear-juice: pop ghosts + burst particles
+  for(const t of m){const cx=ox+t.c*cell+cell/2,cy=oy+t.r*cell+cell/2;
+    (f.bpops=f.bpops||[]).push({x:cx,y:cy,k:t.k,t:0,sz:cell-8});
+    boardBurst(cx,cy,BKINDS[t.k].c,cell);
+    f.grid[t.r][t.c]=-1;}
+  f.bflash=Math.min(0.5,0.2+0.09*f.combo);                      // board glow, grows with combo
+  (f.bfloats=f.bfloats||[]).push({txt:(crit?'✦ ':'')+'+'+Math.round(reel*100)+'%',y:0,t:0,big:f.combo>1||crit,crit});
+  setTimeout(()=>{if(fight===f&&f.mode==='board'){bCollapse();setTimeout(()=>{if(fight===f&&f.mode==='board')bStep()},130)}},230);
 }
 function bCollapse(){const f=fight,{cell}=boardGeo();
   for(let c=0;c<BCOLS;c++){let w=BROWS-1;
@@ -1994,18 +2052,38 @@ function boardPick(p){const f=fight;if(f.bstate!=='play'||f.state==='WIN'||f.sta
     if(dr===0&&dc===0){f.sel=null;return}                      // tap the selected tile again = deselect
   }
   f.sel=cc;f.selStart={x:p.x,y:p.y};f.finger=p;f.swiped=false;}
-function boardDrag(p){const f=fight;if(!f.sel||f.swiped)return;f.finger=p;
+function boardDrag(p){const f=fight;if(!f.sel||!f.selStart||f.swiped)return;f.finger=p;
   const dx=p.x-f.selStart.x,dy=p.y-f.selStart.y,{cell}=boardGeo(),th=cell*0.42;
   if(Math.abs(dx)<th&&Math.abs(dy)<th)return;                  // haven't swiped far enough to commit a direction
   let dr=0,dc=0;if(Math.abs(dx)>=Math.abs(dy))dc=Math.sign(dx);else dr=Math.sign(dy);
   const sel=f.sel;f.sel=null;f.swiped=true;boardTrySwipe(sel,dr,dc);}
 function boardDrop(){}                                          // tap/swipe commit on down/move; keep selection across taps
-function boardStepAnim(dt){const f=fight;
-  for(let r=0;r<BROWS;r++)for(let c=0;c<BCOLS;c++){const t=f.btiles[r][c];if(!t)continue;if(t.sx)t.sx*=Math.pow(0.001,dt);if(Math.abs(t.sx)<0.5)t.sx=0;if(t.sy)t.sy*=Math.pow(0.0006,dt);if(Math.abs(t.sy)<0.5)t.sy=0;if(t.pop>0)t.pop=Math.min(1,t.pop+dt*5)}
+function boardStepAnim(dt){const f=fight;const cell=boardGeo().cell;
+  for(let r=0;r<BROWS;r++)for(let c=0;c<BCOLS;c++){const t=f.btiles[r][c];if(!t)continue;
+    if(t.sx){t.sx*=Math.pow(0.0009,dt);if(Math.abs(t.sx)<0.5)t.sx=0}                        // swap slide (snappy)
+    if(t.sy||t.vy){t.vy=(t.vy||0)-t.sy*130*dt;t.vy*=Math.pow(0.035,dt);t.sy+=t.vy*dt;       // gravity spring → bouncy drop
+      if(Math.abs(t.sy)<0.5&&Math.abs(t.vy)<8){t.sy=0;t.vy=0}}
+    if(t.pop>0)t.pop=Math.min(1,t.pop+dt*5)}
   if(f.comboT>0)f.comboT-=dt;
+  if(f.bflash>0)f.bflash=Math.max(0,f.bflash-dt*2.4);
+  for(const p of (f.bpops||[]))p.t+=dt*3.2;f.bpops=(f.bpops||[]).filter(p=>p.t<1);            // clear-pop ghosts
+  for(const p of (f.bparts||[])){p.life+=dt;p.vy+=cell*7*dt;p.x+=p.vx*dt;p.y+=p.vy*dt;p.vx*=Math.pow(0.12,dt)}
+  f.bparts=(f.bparts||[]).filter(p=>p.life<p.max);
   for(const fl of (f.bfloats||[])){fl.t+=dt;fl.y-=dt*60}f.bfloats=(f.bfloats||[]).filter(fl=>fl.t<0.9);
 }
 function rr(px,py,w,h,r){x.beginPath();if(x.roundRect)x.roundRect(px,py,w,h,r);else x.rect(px,py,w,h)}
+let boardGauge=null;
+function drawGaugeFrame(gx,gy,gw,gh){                            // Makko gunmetal meter housing, 3-sliced so end-caps don't stretch; returns the inner fill window
+  const e=boardGauge||(boardGauge=makkoLoad('art/makko/board/gauge.png'));
+  let capW=gh*0.6;
+  if(e&&e.state==='ok'&&e.img){const img=e.img,iw=img.naturalWidth,ih=img.naturalHeight,capI=Math.round(iw*0.18);
+    capW=Math.min(gw*0.4,gh*capI/ih);
+    x.drawImage(img,0,0,capI,ih,gx,gy,capW,gh);                  // left cap (bolts)
+    x.drawImage(img,iw-capI,0,capI,ih,gx+gw-capW,gy,capW,gh);    // right cap (bolts)
+    x.drawImage(img,capI,0,iw-2*capI,ih,gx+capW,gy,gw-2*capW,gh);// stretched middle
+  }else{const g=x.createLinearGradient(0,gy,0,gy+gh);g.addColorStop(0,'#2c3b4a');g.addColorStop(1,'#0c1620');x.fillStyle=g;rr(gx,gy,gw,gh,gh*0.24);x.fill();x.strokeStyle='rgba(130,160,190,.3)';x.lineWidth=1;x.stroke()}
+  return {wx:gx+capW*0.85,wy:gy+gh*0.27,ww:gw-capW*1.7,wh:gh*0.46};
+}
 function bTile(px,py,cell,k,pop,held){
   if(k==null||k<0||k>=BKINDS.length)return;                     // guard against an invalid tile index
   const K=BKINDS[k],m=held?5:4;let s=1;if(pop>0)s=1-pop;if(s<=0)return;const sz=(cell-m*2)*s,cx=px+cell/2,cy=py+cell/2;const e=boardArt(k);
@@ -2033,11 +2111,16 @@ function drawBoard(t){
   const gw=BCOLS*cell,gh=BROWS*cell;
   if(boardPanel&&boardPanel.state==='ok'&&boardPanel.img)x.drawImage(boardPanel.img,PX,PY,PW,PH);   // whole device fits on screen (sized in boardGeo)
   else{x.fillStyle='rgba(4,16,26,.7)';rr(ox-10,oy-10,gw+20,gh+20,16);x.fill()}
+  if(f.bflash>0){x.save();x.globalCompositeOperation='lighter';x.globalAlpha=f.bflash*0.5;x.fillStyle='#3fffb0';rr(ox-cell*0.3,oy-cell*0.3,gw+cell*0.6,gh+cell*0.6,cell*0.3);x.fill();x.restore();x.globalAlpha=1}  // sonar match-glow
   for(let r=0;r<BROWS;r++)for(let c=0;c<BCOLS;c++){const k=f.grid[r][c];if(k<0)continue;const tl=f.btiles[r][c];const isSel=f.sel&&f.sel.r===r&&f.sel.c===c;bTile(ox+c*cell+(tl.sx||0),oy+r*cell+(tl.sy||0),cell,k,tl.pop,isSel)}
-  if(f.sel){const px=ox+f.sel.c*cell,py=oy+f.sel.r*cell;   // selection ring on the picked tile
-    x.strokeStyle='#ffe27a';x.lineWidth=3.5;x.globalAlpha=0.7+0.3*Math.sin(t*8);rr(px+3,py+3,cell-6,cell-6,cell*0.34);x.stroke();x.globalAlpha=1}
-  for(const fl of (f.bfloats||[])){x.globalAlpha=Math.max(0,1-fl.t/0.9);x.font=(fl.big?'900 24px':'900 17px')+' system-ui';x.fillStyle='#ffe28a';x.textAlign='center';x.fillText(fl.txt,W/2,oy-24+fl.y)}x.globalAlpha=1;
-  if(f.comboT>0&&f.comboShow>1){x.globalAlpha=Math.min(1,f.comboT*3);x.font='900 italic 30px system-ui';x.fillStyle='#ffd54a';x.textAlign='center';x.fillText('COMBO ×'+f.comboShow,W/2,oy-52);x.globalAlpha=1}
+  for(const p of (f.bpops||[])){const pr=Math.min(1,p.t),e=boardArt(p.k),sc=1+0.55*pr;   // clearing tiles: scale-up + fade + sonar ring
+    if(e&&e.state==='ok'&&e.img){x.save();x.globalAlpha=1-pr;x.translate(p.x,p.y);x.scale(sc,sc);x.drawImage(e.img,-p.sz/2,-p.sz/2,p.sz,p.sz);x.restore()}
+    x.strokeStyle=BKINDS[p.k].c;x.globalAlpha=Math.max(0,0.5*(1-pr));x.lineWidth=3;x.beginPath();x.arc(p.x,p.y,p.sz*0.4+pr*p.sz*0.6,0,7);x.stroke()}x.globalAlpha=1;
+  for(const p of (f.bparts||[])){x.globalAlpha=Math.max(0,1-p.life/p.max);x.fillStyle=p.col;x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill()}x.globalAlpha=1;  // burst sparks
+  if(f.sel){const px=ox+f.sel.c*cell,py=oy+f.sel.r*cell;   // selection ring (sonar cyan)
+    x.strokeStyle='#8fe8ff';x.lineWidth=3.5;x.globalAlpha=0.65+0.35*Math.sin(t*8);rr(px+3,py+3,cell-6,cell-6,cell*0.34);x.stroke();x.globalAlpha=1}
+  for(const fl of (f.bfloats||[])){x.globalAlpha=Math.max(0,1-fl.t/0.9);x.font=(fl.big?'900 24px':'900 17px')+' system-ui';x.fillStyle=fl.crit?'#8ff0ff':'#7dffb0';x.textAlign='center';x.fillText(fl.txt,W/2,oy-24+fl.y)}x.globalAlpha=1;  // reel-gain floaters (sonar)
+  if(f.comboT>0&&f.comboShow>1){x.globalAlpha=Math.min(1,f.comboT*3);x.font='900 italic 30px system-ui';x.fillStyle='#5fe6ff';x.textAlign='center';x.fillText('COMBO ×'+f.comboShow,W/2,oy-52);x.globalAlpha=1}
 }
 /* ============ THE TUG — the SHORT reel-in before the board ============
    HOLD = reel (LAND rises, TENSION rises). RELEASE = ease (TENSION falls).
@@ -2860,6 +2943,7 @@ function renderSet(){
 const MODALS=['mDex','mShop','mQuest','mZone','mSet','mCatch','mVendy','mTeam','mOpp','mAgane'];
 function openModal(id){MODALS.forEach(m=>$(m).hidden=true);$(id).hidden=false}
 function anyModal(){return MODALS.some(m=>!$(m).hidden)||!$('pullFx').hidden}
+function closeAllModals(){if(!$('mCatch').hidden){closeCatch();return}MODALS.forEach(m=>$(m).hidden=true);$('pullFx').hidden=true;sfx('ui')}
 
 /* ---------- wiring ---------- */
 $('nDex').onclick=()=>{initAudio();sfx('ui');renderDex();openModal('mDex')};
@@ -2922,6 +3006,7 @@ addEventListener('pointermove',e=>{                                       // CAT
 addEventListener('pointerup',e=>{holding=false;if(state==='fight'&&e.pointerId===bracePid){bracePid=null;if(fight&&fight.mode==='board')boardDrop();else fightRelease()}});
 addEventListener('pointercancel',e=>{holding=false;if(state==='fight'&&e.pointerId===bracePid){bracePid=null;if(fight&&fight.mode==='board')boardDrop();else fightRelease()}});
 addEventListener('keydown',e=>{
+  if(e.key==='Escape'){e.preventDefault();if(state==='title')return;if(anyModal()){closeAllModals();return}togglePause();return}
   if(e.key===' '){e.preventDefault();
     if(e.repeat)return;                                          // autorepeat ignored
     initAudio();
@@ -4015,14 +4100,17 @@ function drawFightHUD(t,fp){
   const frac=clamp(f.land||0,0,1);                             // THE TUG: LANDING progress (fills up as you reel it in)
   let dispFrac=frac,barsLeft=1;
   if(f.bars>1){barsLeft=Math.max(1,f.bars-(f.phase-1));dispFrac=frac;}  // boss: land bar is per-phase, chip shows phases left
-  x.save();
-  x.beginPath();if(x.roundRect)x.roundRect(hx2,hy,hw*clamp(dispFrac,0,1),hh,7);else x.rect(hx2,hy,hw*dispFrac,hh);x.clip();
-  const hg=x.createLinearGradient(hx2,hy,hx2,hy+hh);
-  hg.addColorStop(0,RCOL[f.r]);hg.addColorStop(1,'#7d3040');
-  x.fillStyle=f.bars>1?['#7c3aed','#c026d3','#f43f5e'][Math.min(2,f.phase-1)]:RCOL[f.r];
-  x.fillRect(hx2,hy,hw,hh);
-  x.fillStyle='rgba(255,255,255,.22)';x.fillRect(hx2,hy,hw,4);
-  x.restore();
+  if(f.mode==='board'){                                        // REELED IN: sonar-green LED segments (matches the tension gauge)
+    const tf=clamp(dispFrac,0,1),segs=24,sw=hw/segs;
+    for(let i=0;i<segs;i++){if((i+1)/segs>tf+1/segs)break;x.fillStyle='#3fffb0';x.fillRect(hx2+i*sw+0.5,hy+1,sw-1,hh-2)}
+  }else{
+    x.save();
+    x.beginPath();if(x.roundRect)x.roundRect(hx2,hy,hw*clamp(dispFrac,0,1),hh,7);else x.rect(hx2,hy,hw*dispFrac,hh);x.clip();
+    x.fillStyle=f.bars>1?['#7c3aed','#c026d3','#f43f5e'][Math.min(2,f.phase-1)]:RCOL[f.r];
+    x.fillRect(hx2,hy,hw,hh);
+    x.fillStyle='rgba(255,255,255,.22)';x.fillRect(hx2,hy,hw,4);
+    x.restore();
+  }
   // phase segment dividers
   if(f.phases>1&&f.bars!==3){
     const th=f.phases===2?[0.5]:[2/3,1/3];
@@ -4050,40 +4138,29 @@ function drawFightHUD(t,fp){
     x.fillText('THE CATCH — match orbs to reel it in!',hx2,py+44);
   }
   x.restore();
-  /* -- LINE TENSION bar (bottom, above thumb zone) with zone labels -- */
-  const tw2=W-130,tx2=108,ty2=H-116,th2=15;
+  /* -- LINE TENSION gauge (bottom) — Makko gunmetal instrument -- */
   const ten=f.tension,tm=f.tenMax;
   const rewriting=f.rewriteT>0;
   const label=ten>=90?'COOKED?':ten>=70?'down bad':ten>=40?'sus':'vibing';
   const colT=ten>=90?'#ff4d5e':ten>=70?'#ff9a3d':ten>=40?'#ffd54a':'#3fd8ff';
-  const wob=ten>=40&&ten<70?Math.sin(t*10)*1.2:0;
-  const flash=ten>=90?(Math.sin(t*Math.PI*8)>0?1:0.55):1;
+  const wob=ten>=40&&ten<70?Math.sin(t*10)*1.0:0;
+  const flash=ten>=90?(Math.sin(t*Math.PI*8)>0?1:0.6):1;
   x.save();x.translate(0,wob);
-  // brushed-metal marine gauge housing
-  const HX=tx2-10,HY=ty2-9,HW=tw2+20,HH=th2+32;
-  const hgT=x.createLinearGradient(0,HY,0,HY+HH);hgT.addColorStop(0,'#2c3b4a');hgT.addColorStop(0.5,'#182531');hgT.addColorStop(1,'#0c1620');
-  x.fillStyle=hgT;x.beginPath();if(x.roundRect)x.roundRect(HX,HY,HW,HH,11);else x.rect(HX,HY,HW,HH);x.fill();
-  x.strokeStyle='rgba(130,160,190,.30)';x.lineWidth=1;x.stroke();
-  x.strokeStyle=colT+'99';x.lineWidth=1.5;x.stroke();
-  // recessed sonar track + danger zone shading (>70%)
-  x.fillStyle='#06121c';x.beginPath();if(x.roundRect)x.roundRect(tx2,ty2,tw2,th2,5);else x.rect(tx2,ty2,tw2,th2);x.fill();
-  x.fillStyle='rgba(255,77,94,.13)';x.fillRect(tx2+tw2*0.7,ty2,tw2*0.3,th2);
-  // segmented LED fill (cyan→amber→red by position, like a real gauge)
-  const tfrac=clamp(ten/tm,0,1),segs=30,segW=tw2/segs;
+  const GX=96,GW=W-112,GH=40,GY=H-118;                          // clears the bottom-left ability button
+  const win=drawGaugeFrame(GX,GY,GW,GH);
+  x.save();rr(win.wx,win.wy,win.ww,win.wh,3);x.clip();
+  x.fillStyle='rgba(255,77,94,.14)';x.fillRect(win.wx+win.ww*0.7,win.wy,win.ww*0.3,win.wh);  // danger zone
+  const tfrac=clamp(ten/tm,0,1),segs=28,segW=win.ww/segs;       // segmented LED fill
   x.globalAlpha=flash;
-  for(let i=0;i<segs;i++){const fp=(i+1)/segs;if(fp>tfrac+1/segs)break;
-    x.fillStyle=fp>=0.9?'#ff4d5e':fp>=0.7?'#ff9a3d':fp>=0.4?'#ffd54a':'#3fd8ff';
-    const xi=rewriting?(tx2+tw2-(i+1)*segW):(tx2+i*segW);
-    x.fillRect(xi+1,ty2+2,segW-2,th2-4);}
-  x.globalAlpha=1;
-  // gauge tick marks every 10%
-  x.fillStyle='rgba(150,180,210,.45)';
-  for(let i=1;i<10;i++)x.fillRect(Math.round(tx2+tw2*i/10),ty2-3,1,3);
-  // marine labels
+  for(let i=0;i<segs;i++){const fr=(i+1)/segs;if(fr>tfrac+1/segs)break;
+    x.fillStyle=fr>=0.9?'#ff4d5e':fr>=0.7?'#ff9a3d':fr>=0.4?'#ffd54a':'#3fd8ff';
+    const xi=rewriting?(win.wx+win.ww-(i+1)*segW):(win.wx+i*segW);
+    x.fillRect(xi+1,win.wy+1,segW-2,win.wh-2);}
+  x.globalAlpha=1;x.restore();
   x.font='900 10px system-ui';x.textAlign='left';x.fillStyle=colT;
-  x.fillText('⚓ LINE TENSION · '+(rewriting?'□▽◁?!':label.toUpperCase()),tx2,ty2+th2+13);
+  x.fillText('⚓ LINE TENSION · '+(rewriting?'□▽◁?!':label.toUpperCase()),GX+4,GY+GH+11);
   x.textAlign='right';x.fillStyle='#8fb0cc';
-  x.fillText(Math.round(ten)+'/'+Math.round(tm)+(f.reeling?' · REELING':''),tx2+tw2,ty2+th2+13);
+  x.fillText(Math.round(ten)+'/'+Math.round(tm)+(f.reeling?' · REELING':''),GX+GW-4,GY+GH+11);
   x.restore();
   // THE TUG: big central guidance — HOLD to reel, LET GO on a run (reel-in only)
   if(f.mode==='reel'&&f.state==='TUG'&&f.fishState==='run'){
@@ -4217,6 +4294,7 @@ function drawFightOver(t){ // screen-space pass: vignette / flashes / letterbox 
 let lastT=performance.now(),lastGolden=goldenActive(),sessionT=0,stretchDone=false,hbT=0;
 function loop(tm){
   const dt=Math.max(0,Math.min(0.05,(tm-lastT)/1000));lastT=tm;   // dt clamped to [0,50ms] (headless/bg/clock-skew safe)
+  if(state==='title'||paused){drawScene(tm/1000);requestAnimationFrame(loop);return}  // start screen / paused: render only, no game logic
   if(state==='cast'){castT+=dt*3;if(castT>=1)landBobber()}
   if(state==='wait'&&nowS()>biteAt)triggerBite();
   if(state==='bite'&&nowS()>biteEnd)missBite();
@@ -4348,6 +4426,39 @@ const CG={sdk:null,ready:false,ads:0,
   }
 };
 
+/* ---------- start screen + pause ---------- */
+let paused=false,resetArm=0;
+function showTitle(){
+  paused=false;state='title';fight=null;abilityBtnShow(false);
+  $('pauseScreen').classList.remove('on');$('titleScreen').classList.add('on');$('pauseBtn').style.display='none';
+  document.body.classList.remove('fishing','boardfight');document.body.classList.add('overlayed');$('hint').style.display='none';
+  try{CG.playStop()}catch(e){}
+}
+function startGame(){
+  $('titleScreen').classList.remove('on');$('pauseScreen').classList.remove('on');
+  paused=false;state='idle';$('pauseBtn').style.display='block';document.body.classList.remove('overlayed');
+  refreshHUD();$('hint').style.display=save.tut===0?'block':'none';
+  try{CG.playStart()}catch(e){}
+}
+function togglePause(on){
+  if(state==='title'||anyModal())return;
+  paused=(on===undefined)?!paused:on;
+  $('pauseScreen').classList.toggle('on',paused);document.body.classList.toggle('overlayed',paused);
+  try{paused?CG.playStop():CG.playStart()}catch(e){}
+}
+function armReset(btn){                        // two-tap confirm so a stray tap can't wipe a save
+  if(resetArm){resetArm=0;save=defSave();persist();applyStyle();ensureQuests();refreshHUD();showTitle();toast('progress reset 🧼');
+    if(btn){btn.textContent=btn.dataset.lbl||btn.textContent;btn.classList.remove('armed')}return;}
+  resetArm=1;if(btn){btn.dataset.lbl=btn.textContent;btn.textContent='TAP AGAIN TO WIPE';btn.classList.add('armed')}
+  setTimeout(()=>{resetArm=0;if(btn&&btn.dataset.lbl){btn.textContent=btn.dataset.lbl;btn.classList.remove('armed')}},3000);
+}
+$('tsPlay').addEventListener('click',()=>{initAudio();startGame()});
+$('tsReset').addEventListener('click',e=>armReset(e.currentTarget));
+$('pauseBtn').addEventListener('click',()=>togglePause(true));
+$('psResume').addEventListener('click',()=>togglePause(false));
+$('psQuit').addEventListener('click',()=>{togglePause(false);showTitle()});
+$('psReset').addEventListener('click',e=>armReset(e.currentTarget));
+
 /* ---------- boot ---------- */
 loadSave();
 applyStyle();                                 // apply active art-style pack (UI theme + font)
@@ -4355,10 +4466,10 @@ ensureQuests();
 resize();
 refreshHUD();
 $('chipGold').classList.toggle('on',goldenActive());
-if(save.tut===0)$('hint').style.display='block';
 if(save.vendy&&save.tabs>=TUNE.PULL)$('nVendy').classList.add('alert');
+showTitle();                                  // boot into the start screen
 requestAnimationFrame(loop);
-CG.init().then(()=>{CG.loadStart();CG.loadStop();CG.playStart()});   // signal CrazyGames: loaded + gameplay active (no-op off-platform)
+CG.init().then(()=>{CG.loadStart();CG.loadStop()});   // signal CrazyGames: loaded (gameplay starts on PLAY; no-op off-platform)
 </script>
 </body>
 </html>
