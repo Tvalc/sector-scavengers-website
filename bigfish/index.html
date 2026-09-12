@@ -33,8 +33,8 @@ button{font-family:inherit}
 .chip .cico{display:inline-block;width:19px;height:19px;background:center/contain no-repeat;vertical-align:-5px;margin-right:3px}
 #chipGold.on{border-color:var(--gold);box-shadow:0 0 14px rgba(255,213,74,.35);color:var(--gold)}
 #lvlWrap{text-align:center}
-#xpBar{margin-top:4px;height:6px;width:120px;border-radius:99px;background:rgba(255,255,255,.09);overflow:hidden}
-#xpFill{height:100%;width:0%;background:linear-gradient(90deg,var(--mint),var(--aqua));border-radius:99px;transition:width .4s}
+#xpBar{margin-top:4px;height:7px;width:120px;border-radius:99px;background:rgba(4,12,20,.7);overflow:hidden;border:1px solid rgba(120,160,200,.28);box-shadow:inset 0 1px 3px rgba(0,0,0,.6)}
+#xpFill{height:100%;width:0%;background:linear-gradient(90deg,var(--mint),var(--aqua));border-radius:99px;transition:width .4s;box-shadow:0 0 6px rgba(93,255,168,.5)}
 #hudBot{padding:0 10px calc(10px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:8px}
 #nav{display:flex;gap:8px;justify-content:center}
 .navBtn{pointer-events:auto;flex:1;max-width:86px;border:2.5px solid var(--line);background:rgba(13,23,38,.85);
@@ -158,6 +158,11 @@ button{font-family:inherit}
   border-radius:12px;width:38px;height:38px;font-size:18px;cursor:pointer;backdrop-filter:blur(6px)}
 .mini:active{transform:scale(.9)}
 .mini.alert{border-color:var(--gold);box-shadow:0 0 10px rgba(255,213,74,.4)}
+.mini.mico{background-repeat:no-repeat;background-position:center;background-size:24px 24px;font-size:0}
+#chipMap{background-image:url(art/makko/ui/mini-map.png)}
+#chipShop{background-image:url(art/makko/ui/mini-shop.png)}
+#chipQuest{background-image:url(art/makko/ui/mini-quest.png)}
+#chipWx .wxico{background-image:url(art/makko/ui/wx-sunny.png)}
 #chipAura{display:none;border-color:var(--pink);color:var(--pink)}
 #chipTabs{color:var(--aqua)}
 
@@ -314,12 +319,12 @@ body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlay
     <div class="chip" id="lvlWrap"><span id="lvlTxt">LVL 1 · Bait Baby</span>
       <div id="xpBar"><div id="xpFill"></div></div></div>
     <div style="display:flex;flex-direction:column;gap:5px;align-items:flex-end">
-      <div class="chip" id="chipWx">☀️<small>WEATHER</small></div>
-      <div class="chip" id="chipGold">🌟 in 00m<small>GOLDEN HOUR</small></div>
+      <div class="chip" id="chipWx"><i class="cico wxico"></i><b>SUNNY</b><small>WEATHER</small></div>
+      <div class="chip" id="chipGold"><i class="cico" style="background-image:url(art/makko/ui/golden.png)"></i><b>in 00m</b><small>GOLDEN HOUR</small></div>
       <div style="display:flex;gap:5px">
-        <button class="mini" id="chipMap" title="map">🗺️</button>
-        <button class="mini" id="chipShop" title="shop">🛒</button>
-        <button class="mini" id="chipQuest" title="quests">📜</button>
+        <button class="mini mico" id="chipMap" title="map"></button>
+        <button class="mini mico" id="chipShop" title="shop"></button>
+        <button class="mini mico" id="chipQuest" title="quests"></button>
       </div>
     </div>
   </div>
@@ -2497,7 +2502,8 @@ function refreshHUD(){
   $('lvlTxt').textContent='LVL '+lvl+' · '+titleFor(lvl);
   $('xpFill').style.width=(levelProg(save.xp)*100)+'%';
   const wx=weather();
-  $('chipWx').firstChild.textContent=wx.e+' '+wx.n;
+  $('chipWx').querySelector('b').textContent=wx.n;
+  $('chipWx').querySelector('.wxico').style.backgroundImage='url(art/makko/ui/wx-'+wx.n.toLowerCase()+'.png)';
   navAlert();
 }
 function showHint(t){$('hint').textContent=t;$('hint').style.display='block'}
@@ -4401,7 +4407,7 @@ function loop(tm){
     if(gNow){toast('🌟 GOLDEN HOUR — luck is UP for 10 min');sfx('golden')}
     $('chipGold').classList.toggle('on',gNow);
   }
-  if(Math.floor(tm/1000)%2===0)$('chipGold').firstChild.textContent=goldenLabel();
+  if(Math.floor(tm/1000)%2===0)$('chipGold').querySelector('b').textContent=goldenLabel();
   $('chipGold').classList.toggle('on',gNow);
   // gentle wellness nudge
   sessionT+=dt;
