@@ -62,6 +62,7 @@ button{font-family:inherit}
   padding:12px 16px 16px;width:min(94vw,420px);max-height:min(86vh,700px);overflow-y:auto;box-shadow:0 14px 34px rgba(0,0,0,.55)}
 .mTitle{font-size:21px;font-weight:900;font-style:italic;text-align:center;margin-bottom:4px}
 .mTitle .tIco{display:inline-block;width:23px;height:23px;vertical-align:-5px;margin-right:5px;background:center/contain no-repeat}
+.adBanner{min-height:0;margin-top:14px;display:flex;justify-content:center}
 .mSub{text-align:center;color:var(--dim);font-weight:700;font-size:12px;margin-bottom:10px}
 .btn{display:block;width:100%;margin-top:10px;padding:9px 14px;
   border:solid transparent;border-width:6px 26px;border-image:url(art/makko/ui/btn-primary.png) 44 204 fill / 6px 26px stretch;
@@ -371,6 +372,7 @@ body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlay
     <div id="cQuote"></div>
     <div id="cFit"></div>
     <div id="cBadges"></div>
+    <button class="btn" id="cDouble" hidden>📺 DOUBLE THE HAUL ×2</button>
     <button class="btn aqua" id="cOk">TAKE THE W 🤝</button>
     <button class="btn gold" id="cShare" hidden>📤 FLEX THIS W</button>
   </div>
@@ -384,6 +386,7 @@ body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlay
     <div id="dexList"></div>
     <button class="btn gold" id="dexShare">📤 SHARE DEX PROGRESS</button>
     <button class="btn ghost" id="dexClose">CLOSE</button>
+    <div id="banDex" class="adBanner"></div>
   </div>
 </div>
 
@@ -393,6 +396,7 @@ body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlay
     <div class="mSub" id="shopClams">🪙 0</div>
     <div id="shopList"></div>
     <button class="btn ghost" id="shopClose">CLOSE</button>
+    <div id="banShop" class="adBanner"></div>
   </div>
 </div>
 
@@ -411,6 +415,7 @@ body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlay
     <div class="mSub" id="mapSub">catch every fish in a spot to reach the next</div>
     <div id="mapWrap"><div id="mapSpots"></div></div>
     <button class="btn ghost" id="zClose">CLOSE</button>
+    <div id="banMap" class="adBanner"></div>
   </div>
 </div>
 
@@ -486,6 +491,7 @@ body.overlayed #hud,body.overlayed #hint,body.overlayed #abilityBtn,body.overlay
     <div class="mTitle"><i class="tIco" style="background-image:url(art/makko/ui/cur-aura.png)"></i>GO AGANE?</div>
     <div class="mSub">you are about to lose EVERYTHING (not everything).<br>the void keeps the receipts.</div>
     <div class="dexDetail" id="aganeInfo" style="min-height:44px"></div>
+    <button class="btn" id="aganeDouble" hidden>📺 GO AGANE — DOUBLE ✨</button>
     <button class="btn aganeBtn" id="aganeYes">GO AGANE 🔁</button>
     <button class="btn ghost" id="aganeNo">nope. still attached to my clams.</button>
   </div>
@@ -1138,6 +1144,7 @@ let state='idle';        // idle | cast | wait | bite | fight | reveal
 let bobX=290,bobY=WATER_Y,castT=0,castFrom={x:0,y:0},castTo={x:0,y:0};
 let biteAt=0,biteEnd=0,waitStart=0,nibbleAt=0;
 let hooked=null,lastCatch=null,holding=false,bracePid=null;
+let expo=0;const EXPO_LEN=5;                       // EXPEDITION: a run of catches at one spot; rarity luck climbs each catch, big bonus at the end
 let enrageMusic=false;
 let shadows=[];          // ambient fish silhouettes
 for(let i=0;i<4;i++)shadows.push({x:rnd(0,W),y:rnd(WATER_Y+40,H-80),v:rnd(12,30)*(Math.random()<0.5?-1:1),s:rnd(0.6,1.3)});
@@ -1145,6 +1152,7 @@ for(let i=0;i<4;i++)shadows.push({x:rnd(0,W),y:rnd(WATER_Y+40,H-80),v:rnd(12,30)
 function luckMult(){
   const wx=weather();
   let m=1+save.ups.chum*0.10;
+  m+=expo*0.09;                                    // EXPEDITION: rarity luck climbs with each catch in the run
   if(save.bait>0)m+=0.5;
   if(goldenActive())m+=0.6;
   m+=teamP('luck');
@@ -2318,9 +2326,10 @@ function finishCatch(){
   if(sp.id==='gary'&&d.n>=10&&!save.dex['also-gary']&&!save.secrets.pending)save.secrets.pending='also-gary';
   if(save.grudge[sp.id])delete save.grudge[sp.id];               // grudge settled
   questEvent('win',{r:f.r,z:f.z,flawless:f.flawless,night:isNight()});
-  // VENDY unlocks after first UNCOMMON+ win
-  if(!save.vendy&&f.r>=1){save.vendy=1;$('nVendy').classList.add('alert');
-    setTimeout(()=>toast('🎰 a vending machine washed up on the dock. it\'s humming.'),700)}
+  // progressive unlocks: reveal systems at first-session milestones (keeps minute one uncluttered)
+  if(isNew&&dexCount()===1)setTimeout(()=>toast('📖 DEX + 🗺️ MAP unlocked — you\'re collecting now'),700);
+  if(!save.vendy&&dexCount()>=3){save.vendy=1;$('nVendy').classList.add('alert');
+    setTimeout(()=>toast('🎰 a vending machine washed up on the dock. it\'s humming. (VENDY)'),700)}
   // gate audition won → zone unlocked
   if(f.gate!==undefined&&f.gate!==null){
     if(!save.zonesOwned.includes(f.gate))save.zonesOwned.push(f.gate);
@@ -2335,6 +2344,13 @@ function finishCatch(){
   }
   const unlockedZ=checkZoneUnlock(sp.z);
   if(unlockedZ!=null)setTimeout(()=>{toast('🗺️ NEW SPOT UNLOCKED — '+ZONES[unlockedZ].e+' '+ZONES[unlockedZ].n+'! open 🗺️ THE MAP to travel.');sfx('lvl');vib([40,40,120])},1350);
+  // EXPEDITION: each catch advances the run; completing it grants an escalating haul bonus (a reason to keep casting)
+  if(sp.z>=0&&f.gate===undefined&&!f.opp){
+    expo++;
+    if(expo>=EXPO_LEN){const bonus=Math.round(clams*2+50*Math.pow(2,save.zone)),gotTab=Math.random()<0.5?2:0;
+      save.clams+=bonus;save.lifetimeRun+=bonus;save.lifetimeAll+=bonus;if(gotTab)save.tabs+=gotTab;expo=0;
+      setTimeout(()=>{toast('🎣 EXPEDITION COMPLETE! +'+fmt(bonus)+' 🪙'+(gotTab?' + '+gotTab+' 🎫':'')+' — the next haul starts now');sfx('lvl');try{coinBurst(W/2,H/2,10)}catch(e){}},900);}
+  }
   // void depth treadmill (post-first-agane)
   if(f.z===4&&save.aganeCount>0&&f.gate===undefined&&!f.opp){
     save.voidWins++;
@@ -2423,6 +2439,8 @@ function renderCatch(c){
   if(c.clutch)b.innerHTML+='<span class="badge">CLUTCHED ⏱️</span>';
   if(c.dbl)b.innerHTML+='<span class="badge" style="background:var(--pink)">DOUBLED ×2</span>';
   $('cShare').hidden=!(c.shiny||c.r>=3||c.isPB||c.flawless);
+  const canDbl=c.kind!=='junk'&&((c.clams>0)||(c.tabs>0))&&typeof CG!=='undefined'&&CG.sdk&&CG.env==='crazygames'&&!c.dbled;  // rewarded: only shown when an ad is actually available (no dead button off-platform)
+  $('cDouble').hidden=!canDbl;
 }
 function closeCatch(){
   $('mCatch').hidden=true;
@@ -2463,6 +2481,24 @@ setInterval(()=>{
 
 /* ---------- share ---------- */
 function dexCount(){return Object.keys(save.dex).length}
+/* progressive unlocks: a cold first-session player sees minimal UI; systems reveal at milestones (existing saves already pass every gate) */
+function unlocked(k){
+  const n=dexCount(),fish=save.stats.fish||0,items=Object.keys(save.items||{}).length;
+  switch(k){
+    case 'dex':case 'map':case 'more': return n>=1||fish>=1;
+    case 'vendy':case 'tabs': return !!save.vendy;
+    case 'team': return items>=1;
+    case 'shop': return n>=3||save.clams>=200;
+    case 'quest': return n>=3||fish>=5;
+    case 'opp': return n>=11||save.aganeCount>0||maxZone()>=1;
+    default: return true;
+  }
+}
+function applyUnlocks(){
+  const S=(id,k)=>{const el=$(id);if(el)el.style.display=unlocked(k)?'':'none'};
+  S('nDex','dex');S('nVendy','vendy');S('nTeam','team');S('nOpp','opp');S('nSet','more');
+  S('chipMap','map');S('chipShop','shop');S('chipQuest','quest');S('chipTabs','tabs');
+}
 function shareCatchText(){
   const c=lastCatch,fit=eqFit();
   const lines=['BIG FISH ENERGY 🎣'+(fit?' — 『 '+fit.n+' 』':''),
@@ -2507,7 +2543,7 @@ function refreshHUD(){
   const wx=weather();
   $('chipWx').querySelector('b').textContent=wx.n;
   $('chipWx').querySelector('.wxico').style.backgroundImage='url(art/makko/ui/wx-'+wx.n.toLowerCase()+'.png)';
-  navAlert();
+  navAlert();applyUnlocks();
 }
 function showHint(t){$('hint').textContent=t;$('hint').style.display='block'}
 function hideHint(){$('hint').style.display='none'}
@@ -2648,7 +2684,8 @@ function spotTap(zid){
     fightStart(m,{z:zid,intro:(save.losses[m.id]||0)>0?"oh. it's you agane.":'so you cleared my pond. cute.'});
     return;}
   if(save.zone===zid){sfx('tick');return;}                       // already here
-  save.zone=zid;persist();$('mZone').hidden=true;refreshHUD();sfx('ui');toast(z.e+' traveled to '+z.n);
+  expo=0;                                                        // a new spot = a fresh expedition
+  save.zone=zid;persist();$('mZone').hidden=true;document.body.classList.remove('overlayed');refreshHUD();sfx('ui');toast(z.e+' traveled to '+z.n);
 }
 
 /* =====================================================================
@@ -2980,13 +3017,14 @@ function aganeGain(){
 }
 function renderAgane(){
   const g=aganeGain();
+  $('aganeDouble').hidden=!(typeof CG!=='undefined'&&CG.sdk&&CG.env==='crazygames');   // rewarded 2× only when ads are available
   $('aganeInfo').innerHTML='this run: '+fmt(save.lifetimeRun)+' lifetime 🪙 → <b style="color:var(--pink)">+'+g+' ✨ AURA</b>'
     +'<br>keeps: dex · gacha + ranks · 🎫 · 🧶 · pity · streaks'
     +'<br>resets: 🪙 · zones · upgrades · level · void depth'
     +'<br>multipliers: 🪙+xp ×'+(Math.pow(TUNE.AURA_CLAM,save.aura+g)).toPrecision(3)+' · dmg ×'+(Math.pow(TUNE.AURA_DMG,save.aura+g)).toPrecision(3);
 }
-function doAgane(){
-  const g=aganeGain();
+function doAgane(mult){
+  const g=aganeGain()*(mult||1);
   save.aura+=g;
   save.bestAuraGain=Math.max(save.bestAuraGain,g);
   save.aganeCount++;
@@ -3012,9 +3050,11 @@ function renderSet(){
   $('setAgane').hidden=!aganeUnlocked();
 }
 const MODALS=['mDex','mShop','mQuest','mZone','mSet','mCatch','mVendy','mTeam','mOpp','mAgane'];
-function openModal(id){MODALS.forEach(m=>$(m).hidden=true);$(id).hidden=false}
+function openModal(id){try{CG.clearBanners()}catch(e){}MODALS.forEach(m=>$(m).hidden=true);$(id).hidden=false;
+  const ban={mDex:'banDex',mShop:'banShop',mZone:'banMap'}[id];  // banners only on these dwell screens
+  if(ban)setTimeout(()=>{try{if(!$(id).hidden)CG.banner(ban)}catch(e){}},150);}
 function anyModal(){return MODALS.some(m=>!$(m).hidden)||!$('pullFx').hidden}
-function closeAllModals(){if(!$('mCatch').hidden){closeCatch();return}MODALS.forEach(m=>$(m).hidden=true);$('pullFx').hidden=true;sfx('ui')}
+function closeAllModals(){try{CG.clearBanners()}catch(e){}if(!$('mCatch').hidden){closeCatch();return}MODALS.forEach(m=>$(m).hidden=true);$('pullFx').hidden=true;sfx('ui')}
 
 /* ---------- wiring ---------- */
 $('nDex').onclick=()=>{initAudio();sfx('ui');renderDex();openModal('mDex')};
@@ -3027,22 +3067,28 @@ $('nSet').onclick=()=>{initAudio();sfx('ui');renderSet();openModal('mSet')};
 $('chipMap').onclick=()=>{initAudio();sfx('ui');renderZones();openModal('mZone')};
 $('chipShop').onclick=()=>{initAudio();sfx('ui');renderShop();openModal('mShop')};
 $('chipQuest').onclick=()=>{initAudio();sfx('ui');renderQuests();openModal('mQuest')};
-$('dexClose').onclick=()=>{sfx('ui');$('mDex').hidden=true};
-$('shopClose').onclick=()=>{sfx('ui');$('mShop').hidden=true};
+$('dexClose').onclick=()=>{sfx('ui');try{CG.clearBanners()}catch(e){}$('mDex').hidden=true};
+$('shopClose').onclick=()=>{sfx('ui');try{CG.clearBanners()}catch(e){}$('mShop').hidden=true};
 $('qClose').onclick=()=>{sfx('ui');$('mQuest').hidden=true};
-$('zClose').onclick=()=>{sfx('ui');$('mZone').hidden=true};
+$('zClose').onclick=()=>{sfx('ui');try{CG.clearBanners()}catch(e){}$('mZone').hidden=true};
 $('setClose').onclick=()=>{sfx('ui');$('mSet').hidden=true};
 $('vendyClose').onclick=()=>{sfx('ui');$('mVendy').hidden=true};
 $('teamClose').onclick=()=>{sfx('ui');$('mTeam').hidden=true};
 $('oppClose').onclick=()=>{sfx('ui');$('mOpp').hidden=true};
 $('cOk').onclick=()=>{sfx('ui');closeCatch()};
 $('cShare').onclick=()=>{sfx('ui');doShare(shareCatchText())};
+$('cDouble').onclick=()=>{const c=lastCatch;if(!c||c.dbled)return;$('cDouble').disabled=true;   // rewarded: double this catch's haul
+  CG.rewarded(ok=>{$('cDouble').disabled=false;if(!ok){toast('ad unavailable — try again later');return}
+    c.dbled=true;save.clams+=c.clams||0;save.xp+=c.xp||0;save.tabs+=c.tabs||0;save.lifetimeRun+=c.clams||0;save.lifetimeAll+=c.clams||0;
+    c.dbl=true;persist();refreshHUD();sfx('coin');coinBurst(W/2,H/2,10);renderCatch(c);toast('💰 haul DOUBLED!')})};
 $('dexShare').onclick=()=>{sfx('ui');doShare(shareDexText())};
 $('setShop').onclick=()=>{sfx('ui');renderShop();openModal('mShop')};
 $('setZone').onclick=()=>{sfx('ui');renderZones();openModal('mZone')};
 $('setAgane').onclick=()=>{sfx('ui');renderAgane();openModal('mAgane')};
 $('aganeYes').onclick=()=>{doAgane()};
 $('aganeNo').onclick=()=>{sfx('ui');$('mAgane').hidden=true};
+$('aganeDouble').onclick=()=>{$('aganeDouble').disabled=true;   // rewarded: 2× prestige currency on this reset
+  CG.rewarded(ok=>{$('aganeDouble').disabled=false;if(!ok){toast('ad unavailable — try again later');return}doAgane(2);toast('✨ DOUBLE AURA banked!')})};
 $('btnPull1').onclick=e=>{e.stopPropagation();initAudio();const r=doPull(1);if(r)startPullAnim(r)};
 $('btnPull10').onclick=e=>{e.stopPropagation();initAudio();const r=doPull(10);if(r)startPullAnim(r)};
 $('vendy').onclick=()=>{initAudio();vendyJiggle()};
@@ -3411,7 +3457,17 @@ function drawScene(t){
   drawWeatherFG(t,L,wx,golden);
   drawParticles();
   if(state==='fight'&&fight)drawFightOver(t);
+  if((state==='idle'||state==='cast'||state==='wait'||state==='bite')&&!anyModal())drawExpo();
   drawGrade(t,L,golden);
+}
+function drawExpo(){                               // EXPEDITION progress pips (the reason to keep casting)
+  const y=126,cx=W/2,n=EXPO_LEN,gap=16,x0=cx-(n-1)*gap/2;
+  x.save();x.textAlign='center';x.font='800 10px system-ui';x.fillStyle='rgba(185,215,240,.92)';
+  x.fillText('🎣 HAUL '+expo+' / '+n+(expo>0?'   luck ↑':''),cx,y-8);
+  for(let i=0;i<n;i++){const px=x0+i*gap;x.beginPath();x.arc(px,y,4,0,7);
+    if(i<expo){x.fillStyle='#5dffa8';x.shadowColor='#5dffa8';x.shadowBlur=7;x.fill();x.shadowBlur=0}
+    else{x.fillStyle='rgba(255,255,255,.16)';x.fill()}}
+  x.restore();
 }
 
 /* ---------- above-water world (rendered @2x, reflected below) ---------- */
@@ -4485,12 +4541,14 @@ const CG={sdk:null,ready:false,data:null,inPlay:false,plays:0,
     let done=false;const resume=()=>{if(done)return;done=true;this._mute(false);if(wasPlaying)this.playStart()};
     try{this.sdk.ad.requestAd('midgame',{adStarted:()=>this._mute(true),adFinished:resume,adError:resume})}catch(e){resume()}
   },
-  rewarded(cb){                                  // rewarded video: cb(true)=grant, cb(false)=don't. (scaffold for the rewarded-hook suite)
+  rewarded(cb){                                  // rewarded video: cb(true)=grant, cb(false)=don't
     if(!this.sdk||this.env!=='crazygames'){cb(false);return}
     const wasPlaying=this.inPlay;this.playStop();this._mute(true);let done=false;
     const fin=ok=>{if(done)return;done=true;this._mute(false);if(wasPlaying)this.playStart();cb(!!ok)};
     try{this.sdk.ad.requestAd('rewarded',{adStarted:()=>this._mute(true),adFinished:()=>fin(true),adError:()=>fin(false)})}catch(e){fin(false)}
-  }
+  },
+  banner(id){this._c(s=>{try{s.banner.requestResponsiveBanner(id)}catch(e){}})},   // dwell screens only (dex/map/shop), never gameplay
+  clearBanners(){this._c(s=>{try{s.banner.clearAllBanners()}catch(e){}})}
 };
 
 /* ---------- start screen + pause ---------- */
