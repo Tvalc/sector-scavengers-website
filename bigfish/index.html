@@ -20,7 +20,7 @@
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
 html,body{height:100%;overflow:hidden;background:#0a1420;color:var(--txt);
   font-family:ui-rounded,"Segoe UI",system-ui,-apple-system,sans-serif;touch-action:none}
-canvas{position:fixed;inset:0;display:block}
+canvas{position:fixed;inset:0;display:block;touch-action:none}  /* none = the browser never steals up/down swipes as scroll/pull-to-refresh */
 button{font-family:inherit}
 
 /* ---------- HUD ---------- */
@@ -1145,7 +1145,7 @@ let bobX=290,bobY=WATER_Y,castT=0,castFrom={x:0,y:0},castTo={x:0,y:0};
 let biteAt=0,biteEnd=0,waitStart=0,nibbleAt=0;
 let hooked=null,lastCatch=null,holding=false,bracePid=null;
 let expo=0;const EXPO_LEN=5;                       // EXPEDITION: a run of catches at one spot; rarity luck climbs each catch, big bonus at the end
-let reelDown=null;                                 // reel-fight: pointer-down pos for tap/swipe classification
+let reelDown=null,reelSwiped=false,reelDownTapped=false;   // reel-fight: pointer tap/swipe classification (swipe fires on move-cross, not on lift)
 let enrageMusic=false;
 let shadows=[];          // ambient fish silhouettes
 for(let i=0;i<4;i++)shadows.push({x:rnd(0,W),y:rnd(WATER_Y+40,H-80),v:rnd(12,30)*(Math.random()<0.5?-1:1),s:rnd(0.6,1.3)});
@@ -2244,8 +2244,12 @@ function resolveMove(success){const f=fight,m=f.curMove;if(!m)return;
   f.tension=clamp(f.tension+ten,0,f.tenMax);
   f.land=clamp(f.land+(e.land||0)*(e.land>0?(1+teamP('dmg')):1),0,1);
   f.depth=clamp(f.depth+(e.depth||0),0,1);
-  if(success){f.fx.ring=0.4;f.fx.gold=0.1;sfx('parry');vib(10);if(f.combo!=null)f.combo++;fishSay(pickLine(['COUNTERED!','read like a book','nice hands','denied 🙅','not today']),{cd:0.8});}
-  else{f.fx.flash=0.35;f.fx.zoom=1;sfx('snap');vib(24);f.taken=(f.taken||0)+1;f.combo=0;bark(HUM.onCooked,{cd:2.2});}
+  if(success){f.fx.ring=0.4;f.fx.gold=0.14;f.fx.flash=0.05;sfx('parry');vib(10);if(f.combo!=null)f.combo++;
+    floater(bobX,WATER_Y-72,'✅ '+(m.ctr==='wait'?'HELD!':'COUNTER')+((f.combo||0)>1?' ×'+f.combo:''),13,'#7dffb0');
+    fishSay(pickLine(['COUNTERED!','read like a book','nice hands','denied 🙅','not today']),{cd:0.8});}
+  else{f.fx.vign=Math.max(f.fx.vign||0,0.55);f.fx.zoom=1;f.missFlash=0.5;sfx('snap');vib(24);f.taken=(f.taken||0)+1;f.combo=0;   // RED cue, not a white box
+    floater(bobX,WATER_Y-72,(m.ctr==='wait'?'⚠️ TOOK THE BAIT':'⚠️ MISSED'),15,'#ff5d5d');bark(HUM.onCooked,{cd:2.2});}
+  f.dockBurst={t:0,ok:success,ctr:m.ctr};   // COMMAND DOCK outcome ring (green/red)
   f.rstate='flash';f.rTellT=0.3;
 }
 function reelTap(){const f=fight;const g=REEL_TAP*(1-0.62*(f.depth||0))*(1+teamP('dmg'));
@@ -2310,6 +2314,8 @@ function updateFightFx(dt){ // fx decay runs on REAL time (survives hitstop/slow
   fx.snap=Math.max(0,fx.snap-dt*3);fx.vign=Math.max(0,(fx.vign||0)-dt);
   fx.ink=Math.max(0,fx.ink-dt*0.6);fx.zoom=Math.max(0,fx.zoom-dt*8);
   fx.teleP=Math.max(0,(fx.teleP||0)-dt*3);fx.reelPulse=Math.max(0,(fx.reelPulse||0)-dt*5);   // reel telegraph flash + tap pulse
+  f.missFlash=Math.max(0,(f.missFlash||0)-dt*2);   // red "you got hit" glow on a missed counter
+  if(f.dockBurst&&f.dockBurst.t<1)f.dockBurst.t=Math.min(1,f.dockBurst.t+dt*3.3);   // COMMAND DOCK outcome ring
   fx.stampT=Math.max(0,fx.stampT-dt);
   if(f.rewriteT>0)f.rewriteT-=dt;
   if(fx.bubble){
@@ -3134,18 +3140,27 @@ cv.addEventListener('pointerdown',e=>{
   else if(state==='fight'){
     if(fightTap())return;                                                // dialogue skip / lose re-cast
     if(fight&&fight.mode==='board'){bracePid=e.pointerId;boardPick(p);}   // CATCH BOARD: grab a tile
-    else{bracePid=e.pointerId;reelDown={x:p.x,y:p.y};}                    // REEL: record for tap/swipe on release
+    else{                                                                // REEL: begin a tap/swipe gesture
+      bracePid=e.pointerId;reelDown={x:p.x,y:p.y};reelSwiped=false;
+      if(fight&&fight.rstate!=='tell'){reelInput('tap');reelDownTapped=true;}  // idle = reel immediately (snappy); during a telegraph we wait to classify tap vs swipe
+      else reelDownTapped=false;
+    }
   }
 });
-addEventListener('pointermove',e=>{                                       // CATCH BOARD: swipe a tile toward a neighbor
-  if(state==='fight'&&fight&&fight.mode==='board'&&fight.sel)boardDrag(toGame(e));
+addEventListener('pointermove',e=>{
+  if(state!=='fight'||!fight)return;
+  if(fight.mode==='board'){if(fight.sel)boardDrag(toGame(e));return;}     // CATCH BOARD: swipe a tile toward a neighbor
+  if(reelDown&&!reelSwiped){                                             // REEL: fire the swipe the INSTANT it crosses the threshold — no finger-lift lag
+    const p=toGame(e),dx=p.x-reelDown.x,dy=p.y-reelDown.y,ad=Math.abs(dx),ay=Math.abs(dy),th=Math.max(16,18/(view.s||1));
+    if(ad>th||ay>th){reelSwiped=true;reelInput(ay>ad?(dy<0?'up':'down'):(dx<0?'left':'right'));}
+  }
 });
 addEventListener('pointerup',e=>{holding=false;if(state==='fight'&&e.pointerId===bracePid){bracePid=null;
   if(fight&&fight.mode==='board')boardDrop();
-  else if(reelDown){const p=toGame(e),dx=p.x-reelDown.x,dy=p.y-reelDown.y,ad=Math.abs(dx),ay=Math.abs(dy);reelDown=null;   // REEL: classify tap vs swipe
-    reelInput((ad>28||ay>28)?(ay>ad?(dy<0?'up':'down'):(dx<0?'left':'right')):'tap');}
+  else if(reelDown){const swiped=reelSwiped,tapped=reelDownTapped;reelDown=null;reelSwiped=false;reelDownTapped=false;
+    if(!swiped&&!tapped)reelInput('tap');}                               // a clean tap (didn't become a swipe, wasn't already reeled on press)
 }});
-addEventListener('pointercancel',e=>{holding=false;reelDown=null;if(state==='fight'&&e.pointerId===bracePid){bracePid=null;if(fight&&fight.mode==='board')boardDrop()}});
+addEventListener('pointercancel',e=>{holding=false;reelDown=null;reelSwiped=false;reelDownTapped=false;if(state==='fight'&&e.pointerId===bracePid){bracePid=null;if(fight&&fight.mode==='board')boardDrop()}});
 addEventListener('keydown',e=>{
   if(e.key==='Escape'){e.preventDefault();if(state==='title')return;if(anyModal()){closeAllModals();return}togglePause();return}
   if(state==='fight'&&fight&&fight.mode==='reel'){const m={ArrowUp:'up',ArrowDown:'down',ArrowLeft:'left',ArrowRight:'right'}[e.key];if(m){e.preventDefault();reelInput(m);return}}  // desktop reel counters
@@ -4055,13 +4070,8 @@ function fishPos(t){
       const dp=f.depth||0;                                                                                                    // 0 = surfaced (big), 1 = deep (small)
       py=WATER_Y+6+dp*50+Math.sin(t*(2.4+dp*2.2))*3;                                                                          // dives DOWN + small, surfaces UP + big
       s=1.16-0.64*dp; rot=Math.sin(t*2.6)*0.08;
-      if(f.rstate==='tell'&&f.curMove){const m=f.curMove,tp=1-clamp(f.rTellT/Math.max(0.01,f.rTellMax||1),0,1);              // winding up the telegraphed move
-        const lg=0.35+0.65*tp;
-        if(m.ctr==='left'){px-=24*lg;rot-=0.2*lg}
-        else if(m.ctr==='right'){px+=24*lg;rot+=0.2*lg}
-        else if(m.ctr==='up'){py-=16*lg;s+=0.06*lg}
-        else if(m.ctr==='down'){py+=18*lg}
-        else{px+=Math.sin(t*34)*7*lg;rot=Math.sin(t*30)*0.32*lg}                                                             // tap / feint = shudder in place
+      if(f.rstate==='tell'&&f.curMove){const tp=1-clamp(f.rTellT/Math.max(0.01,f.rTellMax||1),0,1);                          // winding up: thrash IN PLACE — the counter direction lives in the dock, not on the fish (kills the ambiguity)
+        const lg=0.3+0.7*tp;px+=Math.sin(t*30)*6*lg;py+=Math.sin(t*23)*4*lg;rot=Math.sin(t*26)*0.28*lg;
       }else if(f.rstate==='flash'){px+=Math.sin(t*42)*5;rot=Math.sin(t*38)*0.26;}                                            // just resolved: recoil
       s*=1+0.18*clamp((f.land||0)/REEL_GOAL,0,1);                                                                            // creeps bigger as it nears the boat
       break;}
@@ -4146,8 +4156,14 @@ function drawFight(t){
     x.beginPath();x.arc(0,0,sz*0.7,0,7);x.fill();
   }
   drawFishArt(f.sp,sz,t,{phase:f.phase,state:f.state});      // active art style (emoji or INKED procedural)
-  if(f.fx.flash>0){x.globalAlpha=Math.min(1,f.fx.flash*18);x.globalCompositeOperation='source-atop';
-    x.fillStyle='#fff';x.fillRect(-sz,-sz,sz*2,sz*2);x.globalCompositeOperation='source-over';x.globalAlpha=1}
+  if(f.fx.flash>0){const fa=Math.min(0.8,f.fx.flash*10);          // impact pop — SOFT radial glow (source-atop over an already-painted scene drew a hard white square: the bug)
+    const gg=x.createRadialGradient(0,0,sz*0.1,0,0,sz);
+    gg.addColorStop(0,'rgba(255,255,255,'+fa.toFixed(3)+')');gg.addColorStop(0.7,'rgba(255,255,255,'+(fa*0.4).toFixed(3)+')');gg.addColorStop(1,'rgba(255,255,255,0)');
+    x.fillStyle=gg;x.beginPath();x.arc(0,0,sz,0,7);x.fill()}
+  if(f.missFlash>0){const ma=Math.min(0.6,f.missFlash*0.9);          // missed-counter: RED hit glow on the fish (never a white box)
+    const rg=x.createRadialGradient(0,0,sz*0.1,0,0,sz);
+    rg.addColorStop(0,'rgba(255,60,70,'+ma.toFixed(3)+')');rg.addColorStop(1,'rgba(255,60,70,0)');
+    x.fillStyle=rg;x.beginPath();x.arc(0,0,sz,0,7);x.fill()}
   if(f.fx.gold>0){x.globalAlpha=Math.min(1,f.fx.gold*12);
     x.fillStyle='rgba(255,213,74,.5)';x.beginPath();x.arc(0,0,sz*0.8,0,7);x.fill();x.globalAlpha=1}
   if(f.mods.stun>0){x.font='13px "Segoe UI Emoji",sans-serif';x.fillText('💫',0,-sz*0.8)}
@@ -4236,6 +4252,80 @@ function drawStrikeBar(t,fp){                                   // v2.2 timed-hi
   if(save.hints.cook<=3){x.font='900 9px system-ui';x.textAlign='center';
     x.fillStyle='rgba(255,255,255,.85)';x.fillText('TAP ON THE GOLD',bx+BW/2,by+bh+12)}
 }
+/* ===== THE COMMAND DOCK — a fixed cluster below the fish that MIMES the exact counter gesture.
+   Divorced from the fish sprite (kills the "swipe-down vs fish-diving" ambiguity). Family colors:
+   TAP=white, SWIPE=cyan, WAIT=amber. Green/red are reserved for outcome only. Cuff = time left. */
+const DOCK_FAM={tap:'#ffffff',up:'#22e0ff',down:'#22e0ff',left:'#22e0ff',right:'#22e0ff',wait:'#ffb020'};
+const DOCK_LBL={tap:'TAP',up:'SWIPE ↑',down:'SWIPE ↓',left:'SWIPE ←',right:'SWIPE →',wait:'WAIT'};
+const DOCK_COACH={tap:'just tap',up:'flick up',down:'flick down',left:'flick left',right:'flick right',wait:"don't touch!"};
+const DOCK_DIR={up:[0,-1],down:[0,1],left:[-1,0],right:[1,0]};
+function dockPuck(px,py,col,r){x.fillStyle=col;x.beginPath();x.arc(px,py,r,0,6.283);x.fill();
+  x.fillStyle='rgba(255,255,255,.55)';x.beginPath();x.arc(px-r*0.28,py-r*0.28,r*0.38,0,6.283);x.fill();}
+function dockArrow(px,py,d,s,col,a){x.save();x.globalAlpha=a;x.fillStyle=col;x.translate(px,py);x.rotate(Math.atan2(d[1],d[0]));
+  x.beginPath();x.moveTo(s,0);x.lineTo(-s*0.7,s*0.8);x.lineTo(-s*0.7,-s*0.8);x.closePath();x.fill();x.restore();}
+function dockMime(ctr,cx,cy,fam,t){
+  if(ctr==='wait'){                                             // FEINT: static amber octagon + palm (the only motionless prompt)
+    x.strokeStyle=fam;x.lineWidth=3;x.globalAlpha=0.92;x.beginPath();
+    for(let i=0;i<8;i++){const a=Math.PI/8+i*Math.PI/4,px=cx+Math.cos(a)*30,py=cy+Math.sin(a)*30;i?x.lineTo(px,py):x.moveTo(px,py);}
+    x.closePath();x.stroke();x.globalAlpha=1;
+    x.font='28px "Segoe UI Emoji",sans-serif';x.textAlign='center';x.textBaseline='middle';x.fillText('✋',cx,cy+1);x.textBaseline='alphabetic';return;
+  }
+  if(ctr==='tap'){                                              // TAP: a fingertip dips onto a button + contact ring
+    const loop=(t%0.55)/0.55,dip=Math.sin(loop*Math.PI)*10,hit=loop>0.40&&loop<0.62;
+    x.fillStyle=hit?'#ffffff':'rgba(255,255,255,.9)';x.beginPath();x.arc(cx,cy,15,0,6.283);x.fill();
+    if(hit){const hp=(loop-0.40)/0.22;x.strokeStyle='rgba(255,255,255,'+(0.8*(1-hp)).toFixed(2)+')';x.lineWidth=3;x.beginPath();x.arc(cx,cy,15+hp*18,0,6.283);x.stroke();}
+    dockPuck(cx,cy+16+dip,fam,10);return;
+  }
+  const d=DOCK_DIR[ctr]||[0,-1];                                // SWIPE: a puck slides in the gesture direction, arrowhead leads, fading trail behind
+  const trav=30,loop=(t%0.62)/0.62,e=loop*loop;
+  const sx=cx-d[0]*trav,sy=cy-d[1]*trav,ex=cx+d[0]*trav,ey=cy+d[1]*trav;
+  const px=sx+(ex-sx)*e,py=sy+(ey-sy)*e;
+  dockArrow(cx+d[0]*36,cy+d[1]*36,d,13,fam,0.5);               // faint fixed guide arrow at the destination edge
+  for(let i=1;i<=3;i++){const lp=loop-i*0.10;if(lp<=0)continue;const te=lp*lp,tx=sx+(ex-sx)*te,ty=sy+(ey-sy)*te;
+    x.globalAlpha=[0.32,0.2,0.1][i-1];dockPuck(tx,ty,fam,9);}
+  x.globalAlpha=1;dockPuck(px,py,fam,11);dockArrow(px+d[0]*15,py+d[1]*15,d,12,fam,1);
+}
+function drawReelDock(t){
+  const f=fight,DCX=W/2,DCY=Math.round(H*0.675),HALF=44,CUFF=52,m=f.curMove;
+  // outcome burst (success=green / miss=red) — drawn regardless of rstate, its own channel
+  if(f.dockBurst&&f.dockBurst.t<1){const b=f.dockBurst,p=b.t,col=b.ok?'#2be06a':'#ff3b3b';
+    x.save();x.globalAlpha=(1-p)*0.85;x.strokeStyle=col;x.lineWidth=Math.max(1,5*(1-p));
+    x.beginPath();x.arc(DCX,DCY,CUFF+p*72,0,6.283);x.stroke();x.restore();}
+  if(f.rstate==='tell'&&m){
+    const fam=DOCK_FAM[m.ctr]||'#fff';
+    const wf=clamp(f.rTellT/Math.max(0.01,f.rTellMax||1),0,1);   // time remaining 1→0
+    const pop=clamp(f.fx.teleP||0,0,1);                          // GO pop right at window open
+    const sc=1+0.16*Math.sin(pop*Math.PI);
+    x.save();
+    rr(DCX-74,DCY-60,148,128,16);x.fillStyle='rgba(8,16,30,.5)';x.fill();x.lineWidth=1;x.strokeStyle='rgba(255,255,255,.09)';x.stroke();  // backing (legible on any water)
+    if(pop>0.05){x.globalAlpha=pop*0.7;x.strokeStyle=fam;x.lineWidth=4;x.beginPath();x.arc(DCX,DCY,CUFF+(1-pop)*34,0,6.283);x.stroke();x.globalAlpha=1;}
+    const urg=wf<0.32,up=urg?(0.55+0.45*Math.abs(Math.sin(t*11))):1;
+    // stage (with GO-pop scale)
+    x.save();x.translate(DCX,DCY);x.scale(sc,sc);x.translate(-DCX,-DCY);
+    rr(DCX-HALF,DCY-HALF,HALF*2,HALF*2,13);x.fillStyle='#12203a';x.fill();
+    x.lineWidth=urg?4:3;x.globalAlpha=up;x.strokeStyle=fam;x.stroke();x.globalAlpha=1;
+    x.save();rr(DCX-HALF+2,DCY-HALF+2,HALF*2-4,HALF*2-4,11);x.clip();dockMime(m.ctr,DCX,DCY,fam,t);x.restore();
+    x.restore();
+    // depleting CUFF = time left (from top, clockwise) over a faint full track
+    x.save();x.lineCap='round';
+    x.globalAlpha=0.16;x.lineWidth=urg?7:5;x.strokeStyle=fam;x.beginPath();x.arc(DCX,DCY,CUFF,0,6.283);x.stroke();
+    x.globalAlpha=up;x.lineWidth=urg?7:5;x.beginPath();x.arc(DCX,DCY,CUFF,-Math.PI/2,-Math.PI/2+6.283*wf);x.stroke();x.restore();
+    // label + coach (black-stroked for contrast)
+    const lbl=DOCK_LBL[m.ctr]||'TAP';
+    x.font='900 16px system-ui';x.textAlign='center';x.textBaseline='alphabetic';
+    x.lineWidth=3.5;x.strokeStyle='#0a0a0a';x.strokeText(lbl,DCX,DCY+HALF+22);x.fillStyle=fam;x.fillText(lbl,DCX,DCY+HALF+22);
+    if(save.hints.cook<=3){const c=DOCK_COACH[m.ctr]||'';x.font='800 11px system-ui';
+      x.lineWidth=2.5;x.strokeStyle='#0a0a0a';x.strokeText(c,DCX,DCY-HALF-10);x.fillStyle='#cfe0f5';x.fillText(c,DCX,DCY-HALF-10);}
+    x.restore();
+  }else if(f.rstate!=='flash'){
+    // IDLE: deliberately WEAK slate reel hint — no stage, no cuff, no family color (never confused with a counter)
+    const dp=clamp(f.depth||0,0,1),pr=0.5+0.5*Math.sin(t*3);
+    x.save();x.globalAlpha=0.45+0.25*pr;x.strokeStyle='#64748b';x.lineWidth=3;
+    x.beginPath();x.arc(DCX,DCY,15+8*pr,0,6.283);x.stroke();x.globalAlpha=1;
+    x.font='900 12px system-ui';x.textAlign='center';x.fillStyle='rgba(141,160,184,.8)';
+    x.fillText(dp>0.5?'tap fast — reel it up':'tap to reel',DCX,DCY+34);x.restore();
+  }
+}
 function drawFightHUD(t,fp){
   const f=fight;
   const zoomS=1+0.06*(f.fx.zoom>0?Math.sin(Math.min(1,f.fx.zoom)*Math.PI):0);
@@ -4307,38 +4397,8 @@ function drawFightHUD(t,fp){
   x.textAlign='right';x.fillStyle='#8fb0cc';
   x.fillText(Math.round(ten)+'/'+Math.round(tm),GX+GW-4,GY+GH+11);
   x.restore();
-  // ===== READ & COUNTER — Mega-Man-style telegraph drawn over the fish =====
-  if(f.mode==='reel'&&f.state==='REEL'){
-    const m=f.curMove;
-    if(f.rstate==='tell'&&m){
-      const wf=clamp(f.rTellT/Math.max(0.01,f.rTellMax||1),0,1);   // window 1→0
-      const cx2=fp.x,cy2=clamp(fp.y-4,58,H-150);
-      const rad=20+58*wf;                                          // shrinking window ring closes on the fish
-      x.save();x.lineWidth=5;x.strokeStyle=wf>0.42?'#ffd54a':'#ff5d5d';x.globalAlpha=0.92;
-      x.beginPath();x.arc(cx2,cy2,rad,0,6.283);x.stroke();x.globalAlpha=1;
-      x.fillStyle='rgba(4,10,20,.6)';x.beginPath();x.arc(cx2,cy2,21,0,6.283);x.fill();
-      const cue={tap:'TAP',up:'▲',down:'▼',left:'◀',right:'▶',wait:'✋'}[m.ctr]||'TAP';
-      x.fillStyle='#fff';x.textAlign='center';x.textBaseline='middle';x.font='900 22px system-ui';
-      x.fillText(cue,cx2,cy2+1);x.textBaseline='alphabetic';x.restore();
-      // move label anchored just ABOVE the ring (localized on the fish; clear of the top event ticker)
-      const verb=m.ctr==='wait'?'HOLD STILL — feint!':(m.ctr==='tap'?'TAP! ':'SWIPE '+cue+' ')+m.nm;
-      const label=m.ic+'  '+verb;
-      x.font='900 italic 15px system-ui';x.textAlign='center';
-      const tw=x.measureText(label).width, by=clamp(cy2-rad-14,112,H*0.44);
-      x.fillStyle='rgba(4,10,20,.66)';rr(W/2-tw/2-9,by-15,tw+18,21,8);x.fill();
-      x.fillStyle=m.ctr==='wait'?'#ff8ad0':'#ffe08a';x.fillText(label,W/2,by);
-    }else if(f.rstate==='idle'){
-      const dp=clamp(f.depth||0,0,1);
-      x.font='900 14px system-ui';x.textAlign='center';
-      const msg=dp>0.55?'TAP FAST — REEL IT UP! 🎣':'TAP TO REEL · watch its next move';
-      const tw=x.measureText(msg).width;
-      x.fillStyle='rgba(4,10,20,.5)';rr(W/2-tw/2-9,H*0.30-15,tw+18,21,8);x.fill();
-      x.fillStyle='rgba(255,255,255,'+(0.62+0.28*Math.sin(t*6)).toFixed(2)+')';
-      x.fillText(msg,W/2,H*0.30);
-    }
-    if(save.hints.cook<=2){x.font='800 10px system-ui';x.textAlign='center';x.fillStyle='rgba(210,230,255,.72)';
-      x.fillText('read the fish, do the matching move — miss and the line spikes',W/2,H*0.355);}
-  }
+  // ===== READ & COUNTER — THE COMMAND DOCK (fixed cluster below the fish; mimes the exact gesture) =====
+  if(f.mode==='reel'&&f.state==='REEL')drawReelDock(t);
   if(f.state==='OPENING'&&save.hints.cook<=2&&f.r>0){
     x.font='900 17px system-ui';x.textAlign='center';
     x.fillStyle='rgba(93,255,168,'+(0.6+0.4*Math.sin(t*9)).toFixed(2)+')';
