@@ -2201,16 +2201,16 @@ function drawBoard(t){
    window to negate it and gain ground — miss and the LINE TENSION spikes. TAP to REEL
    when nothing's telegraphed. Fill LAND to haul it to the boat → the CATCH BOARD.
    Every move is telegraphed with an icon + the required counter, Mega-Man style. */
-const REEL_TAP=0.030,REEL_START_TEN=14;
-const RMOVES={ // ic=telegraph, ctr=required counter, tell=window(s), bad=miss effect, ok=counter reward
-  thrash:{ic:'🌊',nm:'THRASH', ctr:'tap',  tell:1.15,bad:{ten:15},           ok:{land:0.06,ten:-4}},
-  chomp :{ic:'🦷',nm:'CHOMP',  ctr:'tap',  tell:0.70,bad:{ten:22},           ok:{land:0.08,ten:-3}},
-  yank  :{ic:'⬆️',nm:'YANK',   ctr:'up',   tell:1.00,bad:{ten:14,land:-0.03},ok:{land:0.07}},
-  dive  :{ic:'🔻',nm:'DIVE',   ctr:'down', tell:1.05,bad:{ten:8,depth:0.40}, ok:{land:0.05,depth:-0.15}},
-  sound :{ic:'🌀',nm:'SOUND',  ctr:'down', tell:1.25,bad:{ten:6,depth:0.65,land:-0.07},ok:{depth:-0.28,land:0.03}},
-  bolt  :{ic:'⚡',nm:'BOLT-R', ctr:'right',tell:0.85,bad:{ten:12,depth:0.22},ok:{land:0.06}},
-  weave :{ic:'🌀',nm:'WEAVE-L',ctr:'left', tell:0.85,bad:{ten:12,depth:0.22},ok:{land:0.06}},
-  feint :{ic:'❓',nm:'FEINT',  ctr:'wait', tell:1.00,bad:{ten:11},           ok:{land:0.04}},
+const REEL_TAP=0.022,REEL_START_TEN=14,REEL_TAP_CD=0.13,REEL_TAP_CAP=0.42,REEL_TAP_TEN=1.4;   // taps: rate-limited, strain the line, and can fill AT MOST 42% of the reel — the rest must be countered
+const RMOVES={ // ic=telegraph, ctr=required counter, tell=window(s), bad=miss effect, ok=counter reward. Counters are the MAIN land source; misses spike tension hard so nothing is skippable.
+  thrash:{ic:'🌊',nm:'THRASH', ctr:'left', tell:1.15,bad:{ten:20},            ok:{land:0.13,ten:-4}},   // was 'tap' — tap is reel-only now (mash-proof: every move needs a swipe/wait)
+  chomp :{ic:'🦷',nm:'CHOMP',  ctr:'right',tell:0.70,bad:{ten:26},            ok:{land:0.15,ten:-3}},
+  yank  :{ic:'⬆️',nm:'YANK',   ctr:'up',   tell:1.00,bad:{ten:20,land:-0.05}, ok:{land:0.14}},
+  dive  :{ic:'🔻',nm:'DIVE',   ctr:'down', tell:1.05,bad:{ten:16,depth:0.40}, ok:{land:0.11,depth:-0.15}},
+  sound :{ic:'🌀',nm:'SOUND',  ctr:'down', tell:1.25,bad:{ten:15,depth:0.65,land:-0.08},ok:{depth:-0.28,land:0.10}},
+  bolt  :{ic:'⚡',nm:'BOLT-R', ctr:'right',tell:0.85,bad:{ten:18,depth:0.22}, ok:{land:0.13}},
+  weave :{ic:'🌀',nm:'WEAVE-L',ctr:'left', tell:0.85,bad:{ten:18,depth:0.22}, ok:{land:0.13}},
+  feint :{ic:'❓',nm:'FEINT',  ctr:'wait', tell:1.00,bad:{ten:18},            ok:{land:0.11}},
 };
 const REEL_SETS={ // by fightStyle archetype
   none:     ['thrash','dive','yank'],
@@ -2234,7 +2234,7 @@ function reelMovesFor(f){return BOSS_REEL[f.sp.id]||REEL_SETS[f.styleKey]||REEL_
 function reelBoardGim(f){return f.sp.r>=5?(BOSS_REEL[f.sp.id]?'boss':'drain'):(REEL_GIM[f.styleKey]||'');}
 function tellScale(f){return ([1.25,1.12,1.0,0.9,0.82,0.72][f.r]||1)*(0.8+0.4*(f.morale/100));}
 function startReel(){const f=fight;f.state='REEL';f.rstate='idle';f.rTellT=rnd(0.5,1.0);f.moveIdx=-1;f.curMove=null;
-  f.combo=0;f.taken=0;f.moves=reelMovesFor(f);f.boardGim=reelBoardGim(f);}
+  f.combo=0;f.taken=0;f.tapLand=0;f.tapCd=0;f.moves=reelMovesFor(f);f.boardGim=reelBoardGim(f);}
 function startMove(){const f=fight;const seq=f.moves||REEL_SETS.none;f.moveIdx=(f.moveIdx+1)%seq.length;
   f.curMove=RMOVES[seq[f.moveIdx]]||RMOVES.thrash;f.rstate='tell';f.rTellT=f.curMove.tell*tellScale(f);f.rTellMax=f.rTellT;
   f.fx.teleP=1;sfx('brace');}
@@ -2252,8 +2252,15 @@ function resolveMove(success){const f=fight,m=f.curMove;if(!m)return;
   f.dockBurst={t:0,ok:success,ctr:m.ctr};   // COMMAND DOCK outcome ring (green/red)
   f.rstate='flash';f.rTellT=0.3;
 }
-function reelTap(){const f=fight;const g=REEL_TAP*(1-0.62*(f.depth||0))*(1+teamP('dmg'));
-  f.land=clamp(f.land+g,0,1);f.tension=clamp(f.tension+2,0,f.tenMax);f.depth=clamp((f.depth||0)-0.035,0,1);
+function reelTap(){const f=fight;
+  if((f.tapCd||0)>0)return;                                     // rate-limited — no frame-perfect spam
+  f.tapCd=REEL_TAP_CD;
+  if((f.tapLand||0)<REEL_TAP_CAP){                              // taps alone can NEVER finish the reel — you must counter the fish's moves
+    const g=Math.min(REEL_TAP*(1-0.5*(f.depth||0))*(1+teamP('dmg')),REEL_TAP_CAP-(f.tapLand||0));
+    f.tapLand=(f.tapLand||0)+g;f.land=clamp(f.land+g,0,1);
+  }
+  f.tension=clamp(f.tension+REEL_TAP_TEN,0,f.tenMax);           // reeling strains the line a little (can't free-reel forever)
+  f.depth=clamp((f.depth||0)-0.03,0,1);
   f.fx.reelPulse=0.18;sfx('tick');}
 function reelInput(kind){const f=fight;if(!f||f.mode!=='reel'||f.state!=='REEL')return;
   if(f.rstate==='tell'){const m=f.curMove;
@@ -2262,6 +2269,7 @@ function reelInput(kind){const f=fight;if(!f||f.mode!=='reel'||f.state!=='REEL')
   }else if(f.rstate==='idle'&&kind==='tap')reelTap();
 }
 function updateReel(fdt){const f=fight;
+  if(f.tapCd>0)f.tapCd-=fdt;                                    // tap rate-limit cooldown
   if(f.rstate==='idle'){
     f.depth=clamp((f.depth||0)+0.07*fdt,0,1);         // the fish naturally pulls deeper while you rest
     f.tension=clamp(f.tension-7*fdt,0,f.tenMax);      // and the line eases a touch
@@ -4323,7 +4331,8 @@ function drawReelDock(t){
     x.save();x.globalAlpha=0.45+0.25*pr;x.strokeStyle='#64748b';x.lineWidth=3;
     x.beginPath();x.arc(DCX,DCY,15+8*pr,0,6.283);x.stroke();x.globalAlpha=1;
     x.font='900 12px system-ui';x.textAlign='center';x.fillStyle='rgba(141,160,184,.8)';
-    x.fillText(dp>0.5?'tap fast — reel it up':'tap to reel',DCX,DCY+34);x.restore();
+    const capped=(f.tapLand||0)>=REEL_TAP_CAP-0.001;
+    x.fillText(capped?'counter its moves to land it!':(dp>0.5?'tap fast — reel it up':'tap to reel'),DCX,DCY+34);x.restore();
   }
 }
 function drawFightHUD(t,fp){
